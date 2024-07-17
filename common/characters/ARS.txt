@@ -1,0 +1,15 @@
+characters = {
+	ARS_supreme_soviet = {
+		name = ARS_supreme_soviet
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/portrait_SOV_supreme_soviet.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}

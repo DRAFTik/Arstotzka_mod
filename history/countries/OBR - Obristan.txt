@@ -1,6 +1,6 @@
 ﻿capital = 1
 
-oob = "ARS_1936"
+oob = "OBR_1936"
 
 
 # Starting tech
@@ -12,6 +12,7 @@ set_technology = {
 set_war_support = 0.1
 set_convoys = 5
 
+recruit_character = OBR_elijah_michelson
 
 set_politics = {
 	ruling_party = democratic

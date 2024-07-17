@@ -1,0 +1,16 @@
+characters = {
+	REP_persius_lestrade = {
+		name = REP_persius_lestrade
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/portrait_ita_palmiro_togliatti.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ }
+			expire="1950.1.1.1"
+			id=-1
+		}
+	}
+}

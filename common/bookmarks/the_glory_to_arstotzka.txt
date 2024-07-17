@@ -9,7 +9,7 @@ bookmarks = {
 		
 		"ARS" = {
 			history = "ARS_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = communism
 			ideas = {
 			}
 			focuses = {
@@ -17,7 +17,7 @@ bookmarks = {
 		}
 		"KOL" = {
 			history = "KOL_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = neutrality
 			ideas = {
 			}
 			focuses = {
@@ -33,7 +33,7 @@ bookmarks = {
 		}
 		"ANT" = {
 			history = "ANT_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = fascism
 			ideas = {
 			}
 			focuses = {
@@ -41,7 +41,7 @@ bookmarks = {
 		}
 		"REP" = {
 			history = "REP_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = neutrality
 			ideas = {
 			}
 			focuses = {

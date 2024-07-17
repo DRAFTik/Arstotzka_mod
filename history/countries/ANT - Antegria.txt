@@ -1,6 +1,6 @@
-﻿capital = 1
+﻿capital = 4
 
-oob = "ARS_1936"
+oob = "ANT_1936"
 
 
 # Starting tech
@@ -12,13 +12,12 @@ set_technology = {
 set_war_support = 0.1
 set_convoys = 5
 
+recruit_character = ANT_roman_sukhov
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = fascism
 	last_election = "1933.12.15"
-	election_frequency = 84
-	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 100
+	fascism = 100
 }

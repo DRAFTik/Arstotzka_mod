@@ -1,0 +1,16 @@
+characters = {
+	IMP_naoki_takano = {
+		name = IMP_naoki_takano
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Generic_land_2.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={ financial_expert }
+			expire="1950.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,4 @@
+continents = {
+	protocont
+	test
+}

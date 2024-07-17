@@ -1,0 +1,15 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_ai_bonus1"
+		modifier = diff_strong_ai_bonus1 
+		countries = { ARS KOL OBR ANT REP IMP UFR }
+		multiplier = 0.35
+	}
+	
+	difficulty_setting = {
+		key = "custom_diff_strong_ai_bonus2"
+		modifier = diff_strong_ai_bonus2 
+		countries = { ARS KOL OBR ANT REP IMP UFR }
+		multiplier = 0.5
+	}
+}

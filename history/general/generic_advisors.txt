@@ -1,0 +1,1024 @@
+# For minor countries where advisors are not defined
+# Generate them from a generic template
+
+# Political advisors
+every_possible_country = {
+	generate_character = {
+		token_base = generic_communist_revolutionary # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { communist_revolutionary }
+			available = {
+
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_communist_revolutionary }
+		}
+	}
+}
+
+every_possible_country = {
+	generate_character = {
+		token_base = generic_democratic_reformer # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { democratic_reformer }
+			available = {
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_democratic_reformer }
+		}
+	}
+}
+
+every_possible_country = {
+	generate_character = {
+		token_base = generic_fascist_demagogue # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { fascist_demagogue }
+			available = {				
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_fascist_demagogue }
+		}
+	}
+}
+
+every_possible_country = {
+	generate_character = {
+		token_base = generic_head_of_intelligence # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { head_of_intelligence }
+			available = {
+				has_intelligence_agency = yes
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					has_intelligence_agency = no
+					factor = 0
+				}
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_head_of_intelligence }
+		}
+	}
+}
+
+# Military advisors
+every_possible_country = {
+	generate_character = {
+		token_base = generic_captain_of_industry1 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { dictator }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry2 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { warrior_code }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry3 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { underage_monarch }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry4 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { legitimate_heir }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry5 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { collaborator_king }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry6 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { popular_queen }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry7 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { face_licker }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry8 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { british_bulldog }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry9 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { rearmer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry10 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { conservative_grandee }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry11 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { famous_aviator }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry12 # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { indomitable_perseverance }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry13 #13 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { political_dancer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry14 #14 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { first_lady }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry15 #15 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { hawk }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry16 #16 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { cornered_fox }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry17 #17 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { strongman_of_san_luis_potosi }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry18 #18 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { fascist_militia_leader }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry19 #19 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { cristero_general }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry20 #20 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { primate_of_mexico }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry21 #21 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { el_jefe_maximo }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry22 #22 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { protector_of_the_campesinos }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry23 #23 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { conservative_nationalist_lar }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry24 #24 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { the_dean_of_mexican_marxism }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry25 #25 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { staunch_stalinist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry26 #26 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { appeaser }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry27 #27 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { national_integralist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry28 #28 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { retired_officer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry29 #29 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { constitutional_monarch }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry30 #30 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { kaiserin_of_the_people }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry31 #31 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { incognito }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry32 #32 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { nationalist_symbol }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry33 #33 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { red_army_organizer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry34 #34 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { wilhelmina }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry35 #35 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { veteran_communist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry36 #36 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { indecisive }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry37 #37 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { figurehead_president }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry38 #38 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { great_survivor }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry39 #39 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { the_director }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry40 #40 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { jefe }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry41 #41 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { caudillo_2 }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry42 #42 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { the_lion_of_the_rif }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry43 #43 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { divided_interests }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry44 #44 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { our_right_to_survive }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry45 #45 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { maresal }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry46 #46 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { the_statist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry47 #47 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { marxist_academic }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry48 #48 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { marxist_priest }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry49 #49 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { prime_minister_peker }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry50 #50 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { prime_minister_menderes }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry51 #51 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { hardened_officer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry52 #52 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { hardened_officer_regency_council }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry53 #53 token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { tsars_puppet }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	# generic political advisors
+	generate_character = {
+		token_base = generic_captain_of_industry # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { captain_of_industry }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_fortification_engineer # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { fortification_engineer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_fortification_engineer }
+		}
+	}
+	generate_character = {
+		token_base = generic_war_industrialist # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { war_industrialist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	# generic army chiefs
+	generate_character = {
+		token_base = generic_army_chief_off # token will be TAG_token_base
+		advisor = {
+			slot = army_chief
+			traits = { army_chief_offensive_1 }
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_chief_off }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_chief_def # token will be TAG_token_base
+		advisor = {
+			slot = army_chief
+			traits = { army_chief_defensive_1 }
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_chief_def }
+		}
+	}
+	# generic navy chiefs
+	generate_character = {
+		token_base = generic_navy_chief_decisive_bat # token will be TAG_token_base
+		advisor = {
+			slot = navy_chief
+			traits = { navy_chief_decisive_battle_2 }
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_navy_chief_decisive_bat }
+		}
+	}
+	generate_character = {
+		token_base = generic_navy_anti_submarine # token will be TAG_token_base
+		advisor = {
+			slot = navy_chief
+			traits = { navy_anti_submarine_2 }
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_navy_anti_submarine }
+		}
+	}
+	# generic air chiefs
+	generate_character = {
+		token_base = generic_air_close_air_sup # token will be TAG_token_base
+		advisor = {
+			slot = air_chief
+			traits = { air_close_air_support_2 }
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_air_close_air_sup }
+		}
+	}
+	generate_character = {
+		token_base = generic_air_chief_all_weather # token will be TAG_token_base
+		advisor = {
+			slot = air_chief
+			traits = { air_chief_all_weather_2 }
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_air_chief_all_weather }
+		}
+	}
+	# generic high command
+	generate_character = {
+		token_base = generic_army_art # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_artillery_1 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_art }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_chief_offensive_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log1 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_chief_reform_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log2 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_chief_planning_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log3 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_chief_defensive_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log4 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_chief_maneuver_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}	
+	generate_character = {
+		token_base = generic_army_log5 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_chief_organizational_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log6 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_chief_drill_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}	
+	generate_character = {
+		token_base = generic_army_log7 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_regrouping_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log8 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_cavalry_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}	
+	generate_character = {
+		token_base = generic_army_log9 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_infantry_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log10 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_logistics_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log11 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_entrenchment_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}	
+	generate_character = {
+		token_base = generic_army_log12 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_armored_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log13 # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_commando_2 }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_navy_fleet_log # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { navy_fleet_logistics_1 }
+			ledger = navy
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_navy_fleet_log }
+		}
+	}
+	generate_character = {
+		token_base = generic_air_air_combat_trainer # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { air_air_combat_training_2 }
+			ledger = air
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_air_air_combat_trainer }
+		}
+	}
+	# generic theorists
+	generate_character = {
+		token_base = generic_military_theorist # token will be TAG_token_base
+		advisor = {
+			slot = theorist
+			traits = { military_theorist }
+			ledger = army
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_military_theorist }
+		}
+	}
+	generate_character = {
+		token_base = generic_naval_theorist # token will be TAG_token_base
+		advisor = {
+			slot = theorist
+			traits = { naval_theorist }
+			ledger = navy
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_naval_theorist }
+		}
+	}
+	generate_character = {
+		token_base = generic_air_warfare_theorist # token will be TAG_token_base
+		advisor = {
+			slot = theorist
+			traits = { air_warfare_theorist }
+			ledger = air
+			cost = 150
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_air_warfare_theorist }
+		}
+	}
+}
+
+every_possible_country = {
+	generate_character = {
+		token_base = generic_captain_of_industry # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { captain_of_industry }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+	generate_character = {
+		token_base = generic_fortification_engineer # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { fortification_engineer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_fortification_engineer }
+		}
+	}
+	generate_character = {
+		token_base = generic_war_industrialist # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { war_industrialist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = { #Apparently MAN needs this to get an Illusive Gentleman with the new character sytem
+		token_base = generic_head_of_intelligence # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { head_of_intelligence }
+			available = {
+				has_intelligence_agency = yes
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					has_intelligence_agency = no
+					factor = 0
+				}
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_head_of_intelligence }
+		}
+	}
+}

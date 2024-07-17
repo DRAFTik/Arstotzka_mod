@@ -5,3 +5,8 @@ ANT = "countries/_western_european.txt"
 REP = "countries/_western_european.txt"
 IMP = "countries/_western_european.txt"
 UFR = "countries/_western_european.txt"
+
+
+
+#Buffer // всегда на дне
+SAI = "countries/_western_european.txt"

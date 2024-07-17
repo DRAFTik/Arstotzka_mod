@@ -1,0 +1,16 @@
+characters = {
+	ANT_roman_sukhov = {
+		name = ANT_roman_sukhov
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Germany_Generic_navy_2.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ }
+			expire="1950.1.1.1"
+			id=-1
+		}
+	}
+}
