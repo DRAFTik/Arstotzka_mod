@@ -1,0 +1,28 @@
+ARS = {
+	color = rgb { 67 101 51 }
+	color_ui = rgb { 67 101 51 }
+}
+KOL = {
+	color = rgb { 134 78 113 }
+	color_ui = rgb { 134 78 113 }
+}
+OBR = {
+	color = rgb { 127 47 48 }
+	color_ui = rgb { 127 47 48 }
+}
+ANT = {
+	color = rgb { 105 158 86 }
+	color_ui = rgb { 105 158 86 }
+}
+REP = {
+	color = rgb { 146 100 74 }
+	color_ui = rgb { 146 100 74 }
+}
+IMP = {
+	color = rgb { 160 45 42 }
+	color_ui = rgb { 160 45 42 }
+}
+UFR = {
+	color = rgb { 60 95 163 }
+	color_ui = rgb { 60 95 163 }
+}

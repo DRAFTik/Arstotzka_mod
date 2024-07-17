@@ -1,0 +1,25 @@
+state={
+	id=5
+	name="STATE_5"
+	state_category = town
+	resources = {
+		tungsten = 128
+		steel = 50
+	}
+	
+	history={
+		owner = UFR
+		victory_points = {
+			481 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = UFR
+	}
+	provinces={
+		11 45 109 382 433 481 524 535 573 610 622 914 966 975 982 991 1071 1094 1104 1178 1271 1383 1537 1583 1612 1624 1783 1812 1817 1964 2118 2166 2199 2212 2223 2343 2371 2455 2481 2498 2503 2554 2648 2795 2839 3721 3741 3774 3853 3856 3883 3896 3917 3957 3959 4003 4027 4034 
+	}
+	manpower=10586223
+	buildings_max_level_factor=1.000
+}

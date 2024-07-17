@@ -1,0 +1,33 @@
+state={
+	id=12
+	name="STATE_12"
+	state_category = town
+	resources = {
+		rubber = 150
+		oil = 12
+		aluminium = 28
+		chromium = 40
+	}
+	
+	history={
+		owner = IMP
+		victory_points = {
+			926 1
+		}
+		buildings = {
+			infrastructure = 1
+			926 = {
+				naval_base = 1
+			}
+			1938 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = IMP
+	}
+	provinces={
+		926 1068 1361 1411 1426 1597 1710 1938 2048 2881 2971 4519 4524 4525 4530 4535 4539 4543 4552 4571 
+	}
+	manpower=3176400
+	buildings_max_level_factor=1.000
+}
