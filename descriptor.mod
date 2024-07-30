@@ -56,6 +56,7 @@ replace_path="map/strategicregions"
 replace_path="map/supplyareas"
 replace_path="music"
 replace_path="tests"
+replace_path="tutorial"
 replace_path="portraits"
 tags={
 	"Alternative History"
@@ -64,6 +65,6 @@ tags={
 	"Technologies"
 }
 picture="thumbnail.png"
-name="Glory to Arstotzka!"
+name="[Glory to Arstotzka!]"
 supported_version="1.14.*"
 path="mod/_glory_to_arstotzka"

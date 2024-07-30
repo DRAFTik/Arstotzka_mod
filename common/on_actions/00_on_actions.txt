@@ -1,69 +1,25 @@
 on_actions = { 
-    on_startup = { # Действия на старте игры
-        effect = { # Эффект
-		    hidden_effect = {
-			    every_other_country = {
-			    	limit = { NOT = { original_tag = VER original_tag = SVE original_tag = SVD }}
-			    	add_opinion_modifier = { target = ROOT modifier = embargo }
-			    	add_opinion_modifier = { target = ROOT modifier = embargo_2 }
-			    	add_opinion_modifier = { target = ROOT modifier = sanctions }
-			    	add_opinion_modifier = { target = ROOT modifier = hostile_status }
-			    	ROOT = {
-			    		add_opinion_modifier = { target = PREV modifier = embargo }
-			    		add_opinion_modifier = { target = PREV modifier = embargo_2 }
-			    		add_opinion_modifier = { target = PREV modifier = sanctions }
-			    		add_opinion_modifier = { target = PREV modifier = hostile_status }
-			    	}
-			    }
-		    }	            
+    on_startup = {
+        effect = {
+			
         }
-    }		
-    on_daily = { 	
-		effect = { 
-		    add_to_variable = { var_game_loadings = -1 } 
-            clamp_variable = { var = var_game_loadings min = 0 max = 2000000}	
-            if = { 
-                limit = { check_variable = { var_game_loadings = 0 } NOT = { original_tag = VER original_tag = SVE original_tag = SVD } check_variable = { var_battle = 0 }}              
-				every_other_country = {
-			    	limit = { 
-                        NOT = { original_tag = VER original_tag = SVE original_tag = SVD }
-						NOT = { is_subject_of = ROOT is_in_faction_with = ROOT has_war_with = ROOT }
-                    }                        
-					ROOT = { declare_war_on = { target = PREV type = annex_everything }}
-                }                    
-		    }
-		
-            if = { 
-                limit = { has_war = no  check_variable = { var_game_loadings = 0 } NOT = { original_tag = VER original_tag = SVE original_tag = SVD } check_variable = { var_battle = 1 }}              
-				random_neighbor_country = {                   
-			    	limit = {  
-                        has_war = no                    
-                        NOT = { original_tag = VER original_tag = SVE original_tag = SVD }
-						NOT = { is_subject_of = ROOT is_in_faction_with = ROOT has_war_with = ROOT }
-                    }                        
-					ROOT = { declare_war_on = { target = PREV type = annex_everything }}
-                }                    
-		    }
-            if = { 
-                limit = { has_war = no  check_variable = { var_game_loadings = 0 } NOT = { original_tag = VER original_tag = SVE original_tag = SVD } check_variable = { var_battle = 2 }}              
-				random_neighbor_country = {                   
-			    	limit = {                     
-                        NOT = { original_tag = VER original_tag = SVE original_tag = SVD }
-						NOT = { is_subject_of = ROOT is_in_faction_with = ROOT}
-                    }                        
-					ROOT = { declare_war_on = { target = PREV type = annex_everything }}
-                }                    
-		    }              
+    }
+	
+    on_daily = {
+		effect = {
+			
         }    
 	}
-    on_monthly = { # Действия которые происходят ежемесячно 
-	  effect = { # Эффект
 	
+    on_monthly = {
+	  effect = {
+			
 	    }
 	}
-	on_capitulation = { # Действия которые происходят при капитуляции
+	
+	on_capitulation = {
        effect = {
-       
+			
        }
     }   
 	

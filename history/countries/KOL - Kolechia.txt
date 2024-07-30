@@ -1,25 +1,51 @@
 ﻿capital = 19
 
-oob = "KOL_1936"
+oob = "KOL_start"
 
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-	early_fighter = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_trucks = 1
+	basic_train = 1
+	gw_artillery = 1
 	fuel_silos = 1
 }
+
+
 set_war_support = 0.1
 set_convoys = 5
 
+starting_train_buffer = 0.25
+set_fuel_ratio = 0.1
+starting_truck_buffer = 0.5
+
+
+add_ideas = {
+	isolation
+	export_focus
+	volunteer_only
+}
+
+
 recruit_character = KOL_kordon_kallo
 
+
 set_politics = {
-	ruling_party = neutrality
-	last_election = "1933.12.15"
-	election_frequency = 84
-	elections_allowed = yes
+	ruling_party = paternal_autocrat
 }
 set_popularities = {
-	neutrality = 100
+	totalist				= 0
+	syndicalist				= 0
+	radical_socialist		= 13
+	social_democrat			= 0
+	social_liberal			= 0
+	market_liberal			= 0
+	social_conservative		= 0
+	authoritarian_democrat	= 20
+	paternal_autocrat		= 52
+	national_populist		= 15
 }

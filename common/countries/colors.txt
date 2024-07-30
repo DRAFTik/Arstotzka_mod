@@ -22,7 +22,11 @@ IMP = {
 	color = rgb { 160 45 42 }
 	color_ui = rgb { 160 45 42 }
 }
-UFR = {
+UNF = {
 	color = rgb { 60 95 163 }
 	color_ui = rgb { 60 95 163 }
+}
+SKO = {
+	color = rgb { 87 0 127 }
+	color_ui = rgb { 87 0 127 }
 }

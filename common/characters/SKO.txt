@@ -1,0 +1,16 @@
+characters = {
+	SKO_deon_kaffer = {
+		name = SKO_deon_kaffer
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/INS/portrait_ins_at_van_starkenborgh.dds"
+			}
+		}
+		country_leader={
+			ideology=social_conservative_subtype
+			traits={ }
+			expire="1950.1.1.1"
+			id=-1
+		}
+	}
+}

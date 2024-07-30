@@ -7,7 +7,7 @@ characters = {
 			}
 		}
 		country_leader={
-			ideology=fascism_ideology
+			ideology=national_populist_subtype
 			traits={ }
 			expire="1950.1.1.1"
 			id=-1

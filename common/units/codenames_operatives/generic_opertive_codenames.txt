@@ -1,9 +1,9 @@
 ﻿#Generic Operative list
-GENERIC_UFR_OPERATIVE_CODENAME = {
+GENERIC_UNF_OPERATIVE_CODENAME = {
 	name = NAME_THEME_HISTORICAL_OPERATIVES
 
 	# for all English speaking countries
-	for_countries = { UFR }
+	for_countries = { UNF }
 
 	type = codename
 

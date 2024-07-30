@@ -16,11 +16,17 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 2
+			industrial_complex = 2
+			dockyard = 5
 			926 = {
-				naval_base = 1
+				naval_base = 2
 			}
 			1938 = {
-				naval_base = 1
+				naval_base = 2
+			}
+			4552 = {
+				naval_base = 2
 			}
 		}
 		add_core_of = IMP

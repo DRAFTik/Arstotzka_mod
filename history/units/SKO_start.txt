@@ -1,0 +1,161 @@
+﻿## notes ##
+# priority = 0 #low priority
+# priority = 1 #med priority
+# priority = 2 #high priority
+
+## Units stuff ##
+# start_equipment_factor = 0.00 - 1.00	#(percentage of equipment unit has in begining)
+# start_manpower_factor = 0.00 - 1.00 	#(percentage of manpower unit has in begining)
+# start_experience_factor = 0.000 -1.000	#(level of experience unit has in begining (in percentage))
+
+### training percentage ###
+## 0.000 - 0.099						#green (percentage from 0% #0.000 to 99% #0.099)		#add 1% training with 0.001
+## 0.100 - 0.298						#trained (percentage from 0% #0.100 to 99% #0.298)		#add 1% training with 0.002
+## 0.300 - 0.746  						#regular (percentage from 0% #0.300 to 99% #0.746)		#add 2% training with 0.009
+## 0.750 - 0.899						#experient (percentage from 0% #0.750 to 99% #0.899)	#add 2% training with 0.003
+## 0.900 - 1.000						#veteran (percentage from 0% #0.900 to 99% #1.000)		#add 1% training with 0.001
+
+
+division_template = {
+	name = "National Defense Guards"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Militia"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	
+	support = {
+	}
+	
+	priority = 0
+}
+
+
+### unit positions ###
+units = {
+	division = {
+		name = "1st National Defense Guards regiment"
+		location = 4254
+		division_template = "National Defense Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd National Defense Guards regiment"
+		location = 4250
+		division_template = "National Defense Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3rd National Defense Guards regiment"
+		location = 4214
+		division_template = "National Defense Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "4th National Defense Guards regiment"
+		location = 4079
+		division_template = "National Defense Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "5th National Defense Guards regiment"
+		location = 4038
+		division_template = "National Defense Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "6th National Defense Guards regiment"
+		location = 4023
+		division_template = "National Defense Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Militia regiment"
+		location = 4009
+		division_template = "Militia"
+		start_experience_factor = 0.100
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd Militia regiment"
+		location = 4009
+		division_template = "Militia"
+		start_experience_factor = 0.100
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3rd Militia regiment"
+		location = 3971
+		division_template = "Militia"
+		start_experience_factor = 0.100
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SKO"
+		}
+		requested_factories = 2
+		progress = 0.5
+		efficiency = 100
+		industrial_manufacturer = mio:generic_infantry_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "SKO"
+		}
+		requested_factories = 1
+		progress = 0.6
+		efficiency = 100
+		industrial_manufacturer = mio:generic_support_equipment_organization
+	}
+}

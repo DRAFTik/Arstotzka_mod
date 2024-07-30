@@ -1,0 +1,238 @@
+﻿## notes ##
+# priority = 0 #low priority
+# priority = 1 #med priority
+# priority = 2 #high priority
+
+## Units stuff ##
+# start_equipment_factor = 0.00 - 1.00	#(percentage of equipment unit has in begining)
+# start_manpower_factor = 0.00 - 1.00 	#(percentage of manpower unit has in begining)
+# start_experience_factor = 0.000 -1.000	#(level of experience unit has in begining (in percentage))
+
+### training percentage ###
+## 0.000 - 0.099						#green (percentage from 0% #0.000 to 99% #0.099)		#add 1% training with 0.001
+## 0.100 - 0.298						#trained (percentage from 0% #0.100 to 99% #0.298)		#add 1% training with 0.002
+## 0.300 - 0.746  						#regular (percentage from 0% #0.300 to 99% #0.746)		#add 2% training with 0.009
+## 0.750 - 0.899						#experient (percentage from 0% #0.750 to 99% #0.899)	#add 2% training with 0.003
+## 0.900 - 1.000						#veteran (percentage from 0% #0.900 to 99% #1.000)		#add 1% training with 0.001
+
+
+division_template = {
+	name = "Imperial Guards"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Imperial Militia"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	
+	support = {
+	}
+	
+	priority = 0
+}
+
+division_template = {
+	name = "Imperial Artillery Brigade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }
+		artillery_brigade = { x = 1 y = 4 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+	
+	priority = 2
+}
+
+division_template = {
+	name = "Imperial Armor Brigade"
+
+	regiments = {
+		armored_car = { x = 0 y = 0 }
+		armored_car = { x = 0 y = 1 }
+		armored_car = { x = 0 y = 2 }
+		armored_car = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+		motorized = { x = 1 y = 4 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+	
+	priority = 2
+}
+
+
+### unit positions ###
+units = {
+	division = {
+		name = "1st Imperial Guards regiment"
+		location = 2881
+		division_template = "Imperial Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd Imperial Guards regiment"
+		location = 339
+		division_template = "Imperial Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3rd Imperial Guards regiment"
+		location = 2265
+		division_template = "Imperial Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "4th Imperial Guards regiment"
+		location = 2589
+		division_template = "Imperial Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "5th Imperial Guards regiment"
+		location = 2716
+		division_template = "Imperial Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "6th Imperial Guards regiment"
+		location = 341
+		division_template = "Imperial Guards"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Imperial artillery regiment"
+		location = 723
+		division_template = "Imperial Artillery Brigade"
+		start_experience_factor = 0.100
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "2nd Imperial artillery regiment"
+		location = 723
+		division_template = "Imperial Artillery Brigade"
+		start_experience_factor = 0.100
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Imperial armor regiment"
+		location = 166
+		division_template = "Imperial Armor Brigade"
+		start_experience_factor = 0.100
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "2nd Imperial armor regiment"
+		location = 166
+		division_template = "Imperial Armor Brigade"
+		start_experience_factor = 0.100
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "IMP"
+		}
+		requested_factories = 2
+		progress = 0.45
+		efficiency = 100
+		industrial_manufacturer = mio:generic_infantry_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "IMP"
+		}
+		requested_factories = 1
+		progress = 0.6
+		efficiency = 100
+		industrial_manufacturer = mio:generic_support_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "IMP"
+		}
+		requested_factories = 2
+		progress = 0.8
+		efficiency = 100
+		industrial_manufacturer = mio:generic_motorized_mechanized_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = gw_armored_car_equipment
+			creator = "IMP"
+		}
+		requested_factories = 2
+		progress = 0.9
+		efficiency = 100
+		industrial_manufacturer = mio:generic_armored_car_organization
+	}
+}

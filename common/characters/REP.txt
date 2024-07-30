@@ -7,7 +7,7 @@ characters = {
 			}
 		}
 		country_leader={
-			ideology=despotism
+			ideology=social_liberal_subtype
 			traits={ }
 			expire="1950.1.1.1"
 			id=-1

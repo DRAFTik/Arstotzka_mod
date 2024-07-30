@@ -23,7 +23,19 @@ state={
 			3487 1
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
+			arms_factory = 8
+			industrial_complex = 4
+			dockyard = 2
+			963 = {
+				naval_base = 1
+			}
+			3194 = {
+				naval_base = 1
+			}
+			3198 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = OBR
 	}

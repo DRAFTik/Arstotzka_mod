@@ -4,7 +4,10 @@ OBR = "countries/_western_european.txt"
 ANT = "countries/_western_european.txt"
 REP = "countries/_western_european.txt"
 IMP = "countries/_western_european.txt"
-UFR = "countries/_western_european.txt"
+UNF = "countries/_western_european.txt"
+
+# non classic countrys
+SKO = "countries/_western_european.txt"
 
 
 

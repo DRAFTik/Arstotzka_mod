@@ -7,22 +7,6 @@ bookmarks = {
 		default_country = "ARS"
 		default = yes
 		
-		"ARS" = {
-			history = "ARS_GATHERING_STORM_DESC"
-			ideology = communism
-			ideas = {
-			}
-			focuses = {
-			}
-		}
-		"KOL" = {
-			history = "KOL_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-			}
-			focuses = {
-			}
-		}
 		"OBR" = {
 			history = "OBR_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -47,6 +31,22 @@ bookmarks = {
 			focuses = {
 			}
 		}
+		"ARS" = {
+			history = "ARS_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"KOL" = {
+			history = "KOL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
 		"IMP" = {
 			history = "IMP_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -55,8 +55,8 @@ bookmarks = {
 			focuses = {
 			}
 		}
-		"UFR" = {
-			history = "UFR_GATHERING_STORM_DESC"
+		"UNF" = {
+			history = "UNF_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
 			}
@@ -64,11 +64,25 @@ bookmarks = {
 			}
 		}
 		
+		
+		
 		"---" = {
 			history = "OTHER_GATHERING_STORM_DESC"
 		}
 		
 		
+		
+#### MINORS ####
+
+		"SKO"={
+			minor = yes
+			history = "SKO_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
 
 
 

@@ -1,0 +1,585 @@
+﻿## notes ##
+# priority = 0 #low priority
+# priority = 1 #med priority
+# priority = 2 #high priority
+
+## Units stuff ##
+# start_equipment_factor = 0.00 - 1.00	#(percentage of equipment unit has in begining)
+# start_manpower_factor = 0.00 - 1.00 	#(percentage of manpower unit has in begining)
+# start_experience_factor = 0.000 -1.000	#(level of experience unit has in begining (in percentage))
+
+### training percentage ###
+## 0.000 - 0.099					#green (percentage from 0% #0.000 to 99% #0.099)		#add 1% training with 0.001
+## 0.100 - 0.298					#trained (percentage from 0% #0.100 to 99% #0.298)		#add 1% training with 0.002
+## 0.300 - 0.746  					#regular (percentage from 0% #0.300 to 99% #0.746)		#add 2% training with 0.009
+## 0.750 - 0.899					#experient (percentage from 0% #0.750 to 99% #0.899)	#add 2% training with 0.003
+## 0.900 - 1.000					#veteran (percentage from 0% #0.900 to 99% #1.000)		#add 1% training with 0.001
+
+
+division_template = {
+	name = "Obristanian Infantry Brigade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Obristanian Artillery Brigade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }
+		artillery_brigade = { x = 1 y = 4 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+	
+	priority = 2
+}
+
+division_template = {
+	name = "Militia"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 0
+}
+
+division_template = {
+	name = "Motorized batalion"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+	}
+	
+	support = {
+		mot_recon = { x = 0 y = 0 }
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Tank Brigade"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+	
+	priority = 1
+}
+
+
+
+### unit positions ###
+units = {
+	division = {
+		name = "1st Obristanian Infantry Brigade"
+		location = 131
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd Obristanian Infantry Brigade"
+		location = 131
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3rd Obristanian Infantry Brigade"
+		location = 131
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "4th Obristanian Infantry Brigade"
+		location = 230
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "5th Obristanian Infantry Brigade"
+		location = 230
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "6th Obristanian Infantry Brigade"
+		location = 153
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "7th Obristanian Infantry Brigade"
+		location = 156
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "8th Obristanian Infantry Brigade"
+		location = 1016
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "9th Obristanian Infantry Brigade"
+		location = 1200
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "10th Obristanian Infantry Brigade"
+		location = 2205
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "11th Obristanian Infantry Brigade"
+		location = 452
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "12th Obristanian Infantry Brigade"
+		location = 504
+		division_template = "Obristanian Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Obristanian artillery Brigade"
+		location = 595
+		division_template = "Obristanian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd Obristanian artillery Brigade"
+		location = 1376
+		division_template = "Obristanian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3th Obristanian artillery Brigade"
+		location = 1382
+		division_template = "Obristanian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "4th Obristanian artillery Brigade"
+		location = 1434
+		division_template = "Obristanian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "5th Obristanian artillery Brigade"
+		location = 3368
+		division_template = "Obristanian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "6th Obristanian artillery Brigade"
+		location = 3413
+		division_template = "Obristanian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "7th Obristanian artillery Brigade"
+		location = 3438
+		division_template = "Obristanian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Obristani Militia regiment"
+		location = 120
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd Obristani Militia regiment"
+		location = 56
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3rd Obristani Militia regiment"
+		location = 470
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "4th Obristani Militia regiment"
+		location = 788
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "5th Obristani Militia regiment"
+		location = 1280
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "6th Obristani Militia regiment"
+		location = 3599
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "7th Obristani Militia regiment"
+		location = 2415
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "8th Obristani Militia regiment"
+		location = 3664
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "9th Obristani Militia regiment"
+		location = 3493
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "10th Obristani Militia regiment"
+		location = 3418
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "11th Obristani Militia regiment"
+		location = 3578
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "12th Obristani Militia regiment"
+		location = 3526
+		division_template = "Militia"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Obristani Motorized batalion"
+		location = 3357
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd Obristani Motorized batalion"
+		location = 3348
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3rd Obristani Motorized batalion"
+		location = 3345
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "4th Obristani Motorized batalion"
+		location = 3343
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "5th Obristani Motorized batalion"
+		location = 3334
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "6th Obristani Motorized batalion"
+		location = 3327
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "7th Obristani Motorized batalion"
+		location = 3257
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "8th Obristani Motorized batalion"
+		location = 3252
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "9th Obristani Motorized batalion"
+		location = 3248
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "10th Obristani Motorized batalion"
+		location = 2277
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "11th Obristani Motorized batalion"
+		location = 2243
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "12th Obristani Motorized batalion"
+		location = 2225
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "13th Obristani Motorized batalion"
+		location = 2336
+		division_template = "Motorized batalion"
+		start_experience_factor = 0.43
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "OBR"
+		}
+		requested_factories = 4
+		progress = 0.7
+		efficiency = 100
+		industrial_manufacturer = mio:generic_infantry_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_2
+			creator = "OBR"
+		}
+		requested_factories = 3
+		progress = 0.7
+		efficiency = 100
+		industrial_manufacturer = mio:generic_artillery_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "OBR"
+		}
+		requested_factories = 3
+		progress = 0.4
+		efficiency = 100
+		industrial_manufacturer = mio:generic_support_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "OBR"
+		}
+		requested_factories = 3
+		progress = 0.8
+		efficiency = 100
+		industrial_manufacturer = mio:generic_motorized_mechanized_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_chassis_1
+			creator = "OBR"
+			version_name = "GtO-1"
+		}
+		requested_factories = 1
+		progress = 1.0
+		efficiency = 100
+		industrial_manufacturer = mio:generic_tank_organization
+	}
+}

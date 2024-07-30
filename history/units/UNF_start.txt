@@ -1,0 +1,422 @@
+﻿## notes ##
+# priority = 0 #low priority
+# priority = 1 #med priority
+# priority = 2 #high priority
+
+## Units stuff ##
+# start_equipment_factor = 0.00 - 1.00	#(percentage of equipment unit has in begining)
+# start_manpower_factor = 0.00 - 1.00 	#(percentage of manpower unit has in begining)
+# start_experience_factor = 0.000 -1.000	#(level of experience unit has in begining (in percentage))
+
+### training percentage ###
+## 0.000 - 0.099						#green (percentage from 0% #0.000 to 99% #0.099)		#add 1% training with 0.001
+## 0.100 - 0.298						#trained (percentage from 0% #0.100 to 99% #0.298)		#add 1% training with 0.002
+## 0.300 - 0.746  						#regular (percentage from 0% #0.300 to 99% #0.746)		#add 2% training with 0.009
+## 0.750 - 0.899						#experient (percentage from 0% #0.750 to 99% #0.899)	#add 2% training with 0.003
+## 0.900 - 1.000						#veteran (percentage from 0% #0.900 to 99% #1.000)		#add 1% training with 0.001
+
+
+division_template = {
+	name = "Infantry Brigade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "United elite"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	
+	priority = 0
+}
+
+division_template = {
+	name = "United Artillery Brigade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }
+		artillery_brigade = { x = 1 y = 4 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+	
+	priority = 2
+}
+
+division_template = {
+	name = "United Armor Brigade"
+
+	regiments = {
+		armored_car = { x = 0 y = 0 }
+		armored_car = { x = 0 y = 1 }
+		armored_car = { x = 0 y = 2 }
+		armored_car = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+		motorized = { x = 1 y = 4 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+	
+	priority = 2
+}
+
+
+### unit positions ###
+units = {
+	division = {
+		name = "1st Infantry Brigade regiment"
+		location = 4553
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd Infantry Brigade regiment"
+		location = 4551
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3rd Infantry Brigade regiment"
+		location = 4541
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "4th Infantry Brigade regiment"
+		location = 1071
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "5th Infantry Brigade regiment"
+		location = 1271
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "6th Infantry Brigade regiment"
+		location = 1537
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "7th Infantry Brigade regiment"
+		location = 725
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "8th Infantry Brigade regiment"
+		location = 755
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "9th Infantry Brigade regiment"
+		location = 780
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "10th Infantry Brigade regiment"
+		location = 4491
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "11th Infantry Brigade regiment"
+		location = 4478
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "12th Infantry Brigade regiment"
+		location = 481
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "13th Infantry Brigade regiment"
+		location = 1964
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "14th Infantry Brigade regiment"
+		location = 4178
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1.0
+	}
+	
+	
+	
+	division = {
+		name = "1st United elite regiment"
+		location = 4553
+		division_template = "United elite"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd United elite regiment"
+		location = 4551
+		division_template = "United elite"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3rd United elite regiment"
+		location = 4541
+		division_template = "United elite"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "4th United elite regiment"
+		location = 1071
+		division_template = "United elite"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "5th United elite regiment"
+		location = 1271
+		division_template = "United elite"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "1st United artillery regiment"
+		location = 1537
+		division_template = "United Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd United artillery regiment"
+		location = 725
+		division_template = "United Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3th United artillery regiment"
+		location = 755
+		division_template = "United Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "4th United artillery regiment"
+		location = 780
+		division_template = "United Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "1st United armor regiment"
+		location = 4491
+		division_template = "United Armor Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd United armor regiment"
+		location = 4478
+		division_template = "United Armor Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "3th United armor regiment"
+		location = 481
+		division_template = "United Armor Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "4th United armor regiment"
+		location = 1964
+		division_template = "United Armor Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1.0
+	}
+	
+	division = {
+		name = "5th United armor regiment"
+		location = 4178
+		division_template = "United Armor Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1.0
+	}
+}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "UNF"
+		}
+		requested_factories = 3
+		progress = 0.5
+		efficiency = 100
+		industrial_manufacturer = mio:generic_infantry_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_2
+			creator = "UNF"
+		}
+		requested_factories = 3
+		progress = 0.65
+		efficiency = 100
+		industrial_manufacturer = mio:generic_artillery_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "UNF"
+		}
+		requested_factories = 2
+		progress = 0.6
+		efficiency = 100
+		industrial_manufacturer = mio:generic_support_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "UNF"
+		}
+		requested_factories = 2
+		progress = 0.8
+		efficiency = 100
+		industrial_manufacturer = mio:generic_motorized_mechanized_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = gw_armored_car_equipment
+			creator = "UNF"
+		}
+		requested_factories = 2
+		progress = 0.9
+		efficiency = 100
+		industrial_manufacturer = mio:generic_armored_car_organization
+	}
+}

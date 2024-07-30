@@ -6766,7 +6766,6 @@ generic_infantry_equipment_organization = {
 
 		}
 	}
-
 }
 
 
@@ -6778,7 +6777,7 @@ generic_support_equipment_organization = {
 	icon = GFX_idea_generic_infantry_equipment_manufacturer_1
 
 	allowed = {
-		always = no # Archetype only - countries using it have their own verisons
+		has_dlc = "Arms Against Tyranny"
 	}
 
 	equipment_type = { infantry_equipment support_equipment }

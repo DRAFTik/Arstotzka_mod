@@ -1,0 +1,16 @@
+characters = {
+	UNF_stiv_kempbell = {
+		name = UNF_stiv_kempbell
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=social_conservative_subtype
+			traits={ }
+			expire="1950.1.1.1"
+			id=-1
+		}
+	}
+}
