@@ -1,0 +1,33 @@
+
+state={
+	id=22
+	name="STATE_22"
+	resources={
+		tungsten=20.000
+		steel=14.000
+		chromium=25.000
+	}
+	history={
+		victory_points = {
+			3056 2 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 3
+			dockyard = 1
+			3056 = {
+				naval_base = 3
+			}
+		}
+		owner = OBR
+		add_core_of = OBR
+	}
+	provinces={
+		82 768 784 883 1208 1335 1822 1887 1934 2341 2453 2802 2887 3056 3062 3069 3070 3088 3090 3094 3099 3111 3112 3113 3131 3135 3140 3143 
+	}
+	manpower=652899
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

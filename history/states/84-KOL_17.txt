@@ -1,0 +1,19 @@
+state={
+	id=84
+	name="STATE_84"
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 2
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		15 440 532 604 978 1147 1327 1619 1625 2033 2294 2539 2689 2846 3791 3816 3831 3844 3872 3884 3886 3913 3961 
+	}
+	manpower=3569841
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

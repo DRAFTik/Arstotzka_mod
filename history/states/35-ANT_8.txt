@@ -1,0 +1,18 @@
+state={
+	id=35
+	name="STATE_35"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = ANT
+		add_core_of = ANT
+	}
+	provinces={
+		493 520 627 632 722 794 818 1039 1107 1293 1438 1752 1845 1936 1998 2586 2917 3638 3679 3697 3708 3730 3736 3756 3813 
+	}
+	manpower=985623
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

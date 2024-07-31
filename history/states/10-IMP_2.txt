@@ -1,0 +1,25 @@
+
+state={
+	id=10
+	name="STATE_10"
+	resources={
+		steel=86.000
+		aluminium=25.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		owner = IMP
+		add_core_of = IMP
+	}
+
+	provinces={
+		30 69 135 292 339 814 855 952 1034 1136 1349 1353 1480 1848 1862 1970 2215 2472 2609 2614 2633 2849 2897 2965 2985 2995 3006 4325 4326 4331 4335 4360 4378 4380 4388 4397 4404 4417 4418 4426 
+	}
+	manpower=1050402
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

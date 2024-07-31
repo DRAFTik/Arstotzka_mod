@@ -1,0 +1,29 @@
+
+state={
+	id=5
+	name="STATE_5"
+	resources={
+		tungsten=90.000
+		steel=44.000
+	}
+	history={
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 1
+			1612 = {
+				naval_base = 1
+			}
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		11 45 109 382 433 524 573 610 622 982 991 1071 1094 1178 1271 1383 1537 1612 1783 1817 1964 2118 2199 2212 2455 2481 2839 3721 3741 3774 3853 3856 3883 3896 3917 3959 
+	}
+	manpower=1569887
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,22 @@
+
+state={
+	id=19
+	name="STATE_19"
+	resources={
+		steel=10.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		183 219 826 942 1084 1315 1414 1578 1649 1705 1718 1759 1785 2281 2383 2573 2607 2644 2680 2683 2761 3297 3339 3353 3374 3384 3387 3399 3414 3420 3427 3446 3459 
+	}
+	manpower=3045862
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

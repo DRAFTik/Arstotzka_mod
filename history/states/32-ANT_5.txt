@@ -1,0 +1,23 @@
+state={
+	id=32
+	name="STATE_32"
+	resources={
+		steel=4.000
+		tungsten=23.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		owner = ANT
+		add_core_of = ANT
+	}
+	provinces={
+		25 184 242 307 355 618 675 810 941 944 977 1054 1106 1440 1460 1528 1638 1793 1835 1906 2066 2121 2256 2369 2532 2543 2681 2759 2861 2908 3025 3838 3894 3897 3915 3922 3933 4017 
+	}
+	manpower=3382365
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

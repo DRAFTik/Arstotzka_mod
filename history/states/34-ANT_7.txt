@@ -1,0 +1,23 @@
+state={
+	id=34
+	name="STATE_34"
+	resources = {
+		aluminium = 5
+		steel = 3
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		owner = ANT
+		add_core_of = ANT
+	}
+	provinces={
+		75 116 322 369 545 781 834 853 937 1127 1166 1230 1320 1372 1374 1405 1429 1562 1566 1709 1805 1853 1872 1896 1898 1982 2105 2306 2314 2408 2446 2464 2557 2635 2641 2770 2803 2808 2877 2884 2923 2959 3716 3749 3761 3784 3820 3821 3837 3843 3858 3874 3910 3911 3941 3960 4004 
+	}
+	manpower=2404411
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

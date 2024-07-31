@@ -1,0 +1,25 @@
+state={
+	id=66
+	name="STATE_66"
+	resources={
+		steel=12.000
+		aluminium=9.000
+		tungsten=38.000
+	}
+	history={
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		34 947 1078 1109 1129 1143 1354 1825 1837 2035 2181 2691 2946 3004 4472 4478 4479 4485 4488 4497 
+	}
+	manpower=4896532
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

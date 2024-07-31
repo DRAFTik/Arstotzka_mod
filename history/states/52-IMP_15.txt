@@ -1,0 +1,23 @@
+state={
+	id=52
+	name="STATE_52"
+	resources={
+		rubber=48.000
+		tungsten=55.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+			dockyard = 1
+		}
+		owner = IMP
+		add_core_of = IMP
+	}
+	provinces={
+		133 296 836 917 1067 1577 2207 2860 4605 4607 4608 4611 4615 4618 4620 4621 
+	}
+	manpower=1158773
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

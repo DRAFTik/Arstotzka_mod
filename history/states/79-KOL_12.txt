@@ -1,0 +1,20 @@
+state={
+	id=79
+	name="STATE_79"
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		112 182 340 490 508 782 804 1007 1314 1402 1576 3659 3686 3701 3737 3780 3786 3817 
+	}
+	manpower=2598740
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

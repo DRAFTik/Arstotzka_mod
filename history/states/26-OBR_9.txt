@@ -1,0 +1,27 @@
+
+state={
+	id=26
+	name="STATE_26"
+	history={
+		victory_points = {
+			1581 4 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			3198 = {
+				naval_base = 1
+			}
+		}
+		owner = OBR
+		add_core_of = OBR
+	}
+	provinces={
+		421 501 504 576 979 1205 1437 1497 1581 1586 1730 1778 2089 2373 2435 2525 3184 3185 3188 3198 3199 3203 3209 3228 3238 3255 3260 3281 3305 3320 
+	}
+	manpower=1873791
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

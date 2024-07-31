@@ -31,17 +31,17 @@ add_ideas = {
 recruit_character = REP_persius_lestrade
 
 set_politics = {
-	ruling_party = social_liberal
+	ruling_party = authoritarian_democrat
 }
 set_popularities = {
 	totalist				= 0
 	syndicalist				= 0
 	radical_socialist		= 0
 	social_democrat			= 8
-	social_liberal			= 42
+	social_liberal			= 13
 	market_liberal			= 5
 	social_conservative		= 22
-	authoritarian_democrat	= 13
+	authoritarian_democrat	= 42
 	paternal_autocrat		= 10
 	national_populist		= 0
 }

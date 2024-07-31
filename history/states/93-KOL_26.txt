@@ -1,0 +1,26 @@
+state={
+	id=93
+	name="STATE_93"
+	history={
+		victory_points = {
+			4361 1 
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			dockyard = 1
+			4361 = {
+				naval_base = 1
+			}
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		121 214 298 308 558 693 1253 1843 1870 2300 2634 2658 2780 3002 4336 4358 4361 4368 4369 4389 
+	}
+	manpower=6598852
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

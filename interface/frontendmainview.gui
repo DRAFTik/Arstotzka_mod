@@ -446,12 +446,12 @@ guiTypes = {
 		}
 	}
 	
-#	containerWindowType = {
-#		name = "mainmenu_social_buttons"
-#		position = { x=-50 y=25 }	
-#		size = { width = 240 height = 90 }
-#		Orientation = center	
-#		origo = center
+	containerWindowType = {
+		name = "mainmenu_social_buttons"
+		position = { x=-50 y=25 }	
+		size = { width = 240 height = 90 }
+		Orientation = center	
+		origo = center
 #		
 #		positionType = {
 #			name = "position_without_social_gui"
@@ -584,7 +584,7 @@ guiTypes = {
 #			pdx_tooltip = "MENU_PRIVACY_POLICY"
 #			scale = 0.9
 #		}
-#	}
+	}
 
 	## This position needs updated
 	containerWindowType = {

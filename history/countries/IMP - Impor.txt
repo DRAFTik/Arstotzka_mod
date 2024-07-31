@@ -1,4 +1,4 @@
-﻿capital = 13
+﻿capital = 47
 
 oob = "IMP_start"
 

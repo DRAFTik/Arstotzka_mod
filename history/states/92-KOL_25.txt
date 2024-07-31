@@ -1,0 +1,19 @@
+state={
+	id=92
+	name="STATE_92"
+	history={
+		buildings = {
+			infrastructure = 1
+			dockyard = 1
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		188 317 343 515 891 957 1273 1359 1604 1617 1699 2266 2423 2502 2541 2763 2765 2875 2978 4245 4265 4276 4308 4312 4327 4328 4340 
+	}
+	manpower=8088916
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

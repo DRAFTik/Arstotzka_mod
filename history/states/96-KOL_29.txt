@@ -1,0 +1,21 @@
+state={
+	id=96
+	name="STATE_96"
+	resources={
+		aluminium=16.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		378 647 745 1156 1378 1589 1614 1679 1884 2038 2360 2585 4206 4232 4244 4247 4248 4274 4281 4285 4292 
+	}
+	manpower=4526987
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

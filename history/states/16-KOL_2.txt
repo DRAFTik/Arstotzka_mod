@@ -1,0 +1,23 @@
+state={
+	id=16
+	name="STATE_16"
+	resources={
+		tungsten=4.000
+		steel=37.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 2
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		233 256 447 640 1028 1074 1142 1210 1894 1992 2021 2036 2334 2776 2962 3512 3514 3538 3564 3568 3574 3620 3628 
+	}
+	manpower=2150336
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

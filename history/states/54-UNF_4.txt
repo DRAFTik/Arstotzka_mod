@@ -1,0 +1,21 @@
+state={
+	id=54
+	name="STATE_54"
+	resources={
+		steel=64.000
+	}
+	history={
+		buildings = {
+			infrastructure = 2
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		64 76 487 645 682 763 851 1012 1041 1195 1285 1512 1568 2192 2478 2505 2565 2856 4135 4154 4178 4187 4200 4238 4255 4258 4273 4284 4287 4313 4315 
+	}
+	manpower=409835
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

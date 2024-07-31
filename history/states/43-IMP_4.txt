@@ -1,0 +1,22 @@
+state={
+	id=43
+	name="STATE_43"
+	resources={
+		steel=23.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 2
+		}
+		owner = IMP
+		add_core_of = IMP
+	}
+	provinces={
+		386 387 630 662 887 1248 1343 1609 2146 2315 2337 4424 4447 4448 4453 4458 4464 4469 4474 
+	}
+	manpower=799533
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

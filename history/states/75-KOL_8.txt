@@ -1,0 +1,19 @@
+
+state={
+	id=75
+	name="STATE_75"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		541 602 636 1646 1682 1756 2083 2200 2321 2345 2456 2559 3612 3642 3648 3676 3714 3728 3739 3744 
+	}
+	manpower=2563142
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

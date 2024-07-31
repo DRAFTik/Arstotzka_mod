@@ -1,0 +1,22 @@
+
+state={
+	id=23
+	name="STATE_23"
+	history={
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 3
+			dockyard = 1
+		}
+		owner = OBR
+		add_core_of = OBR
+	}
+	provinces={
+		124 167 281 356 631 637 838 860 1038 1209 1222 1449 1550 1582 1618 1621 1695 1701 1753 1911 1987 2062 2108 2116 2292 2368 2729 3066 3074 3079 3080 3087 3098 3102 3120 3127 3128 3133 
+	}
+	manpower=1873791
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

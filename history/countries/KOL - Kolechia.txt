@@ -1,4 +1,4 @@
-﻿capital = 19
+﻿capital = 82
 
 oob = "KOL_start"
 

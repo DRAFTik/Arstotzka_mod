@@ -1,0 +1,29 @@
+
+state={
+	id=6
+	name="STATE_6"
+	resources={
+		tungsten=77.000
+		steel=30.000
+	}
+
+	history={
+		owner = REP
+		victory_points = {
+			775 1 
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 2
+		}
+		add_core_of = REP
+	}
+
+	provinces={
+		170 180 196 212 321 385 463 499 549 569 634 650 775 795 877 908 1140 1281 1388 1398 1456 1513 1517 1594 2070 2391 2404 2452 2578 2657 2703 3018 4099 4107 4118 4127 4136 4152 4155 4159 4163 4177 4179 4185 4239 4241 4263 4278 
+	}
+	manpower=3115236
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

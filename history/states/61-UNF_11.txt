@@ -1,0 +1,23 @@
+state={
+	id=61
+	name="STATE_61"
+	resources={
+		steel=64.000
+	}
+	history={
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 3
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		150 217 428 453 516 785 936 986 1637 1961 2077 2084 2283 2889 4376 4400 4403 4416 4423 4430 4434 4451 
+	}
+	manpower=3569874
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

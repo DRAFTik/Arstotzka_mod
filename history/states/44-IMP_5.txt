@@ -1,0 +1,22 @@
+state={
+	id=44
+	name="STATE_44"
+	resources={
+		oil=320.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		owner = IMP
+		add_core_of = IMP
+	}
+	provinces={
+		313 365 420 903 933 943 992 1409 1687 1790 2148 2702 2786 2806 4427 4431 4445 4446 4454 4456 4473 
+	}
+	manpower=1158773
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

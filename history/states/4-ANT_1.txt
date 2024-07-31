@@ -1,0 +1,27 @@
+
+state={
+	id=4
+	name="STATE_4"
+	resources={
+		oil=70.000
+		steel=10.000
+	}
+
+	history={
+		owner = ANT
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = ANT
+	}
+
+	provinces={
+		72 91 288 377 419 461 709 922 940 1164 1296 1471 1521 1590 1776 1929 2278 2350 2399 2422 2533 2547 2595 2766 2772 2903 3524 3540 3551 3572 3580 3601 3609 3633 3637 3678 3689 3704 
+	}
+	manpower=3115236
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

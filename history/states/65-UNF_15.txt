@@ -1,0 +1,18 @@
+state={
+	id=65
+	name="STATE_65"
+	history={
+		buildings = {
+			infrastructure = 2
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		73 300 456 566 780 973 1046 1258 1410 2135 2140 2271 2507 2732 2950 4495 4500 4503 4508 4512 4515 4520 4522 4527 4533 4537 4553 4558 4573 
+	}
+	manpower=3157851
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

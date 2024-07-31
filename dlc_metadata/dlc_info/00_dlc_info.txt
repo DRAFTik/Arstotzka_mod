@@ -91,7 +91,7 @@ dlcs = {
 		career_profile_background_owned = "GFX_bg_dlc023_owned"
 		localization_key = "MAN_THE_GUNS"
 		description = "DLC_DESCRIPTION_dlc023"
-		major = yes
+		major = no
 		# category = "expansion"
 		web_link = "https://store.steampowered.com/app/815460/Expansion__Hearts_of_Iron_IV_Man_the_Guns/"
 	}
@@ -121,7 +121,7 @@ dlcs = {
 		career_profile_background_owned = "GFX_bg_dlc028_owned"
 		localization_key = "LA_RESISTANCE"
 		description = "DLC_DESCRIPTION_dlc028"
-		major = yes
+		major = no
 		# category = "expansion"
 		web_link = "https://store.steampowered.com/app/1158100/Expansion__Hearts_of_Iron_IV_La_Rsistance/"
 	}
@@ -169,7 +169,7 @@ dlcs = {
 		career_profile_background_owned = "GFX_bg_dlc034_owned"
 		localization_key = "NO_STEP_BACK"
 		description = "DLC_DESCRIPTION_dlc034"
-		major = yes
+		major = no
 		# category = "expansion"
 		web_link = "https://store.steampowered.com/app/1348661/Expansion__Hearts_of_Iron_IV_No_Step_Back/"
 	}
@@ -181,7 +181,7 @@ dlcs = {
 		career_profile_background_owned = "GFX_bg_dlc036_owned"
 		localization_key = "BY_BLOOD_ALONE"
 		description = "DLC_DESCRIPTION_dlc036"
-		major = yes
+		major = no
 		# category = "expansion"
 		web_link = "https://store.steampowered.com/app/1880650/Expansion__Hearts_of_Iron_IV_By_Blood_Alone/"
 	}
@@ -193,7 +193,7 @@ dlcs = {
 		career_profile_background_owned = "GFX_bg_dlc038_owned"
 		localization_key = "ARMS_AGAINST_TYRANNY"
 		description = "DLC_DESCRIPTION_dlc038"
-		major = yes
+		major = no
 		# category = "expansion"
 		web_link = "https://store.steampowered.com/app/2183930/Expansion__Hearts_of_Iron_IV_Arms_Against_Tyranny/"
 	}

@@ -1,0 +1,29 @@
+
+state={
+	id=9
+	name="STATE_9"
+	resources={
+		steel=21.000
+		aluminium=45.000
+	}
+	history={
+		victory_points = {
+			481 1 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 1
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		44 481 535 608 914 924 966 975 1104 1196 1473 1583 1624 1706 1712 1729 1812 2129 2166 2223 2343 2371 2421 2498 2503 2554 2648 2666 2674 2730 2795 2924 2925 3017 3957 4003 4027 4034 4058 4080 4086 4096 4102 4103 4104 4125 
+	}
+	manpower=2150336
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

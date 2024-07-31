@@ -1,0 +1,23 @@
+state={
+	id=82
+	name="STATE_82"
+	history={
+		victory_points = {
+			379 4 
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 3
+			arms_factory = 3
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		210 247 269 379 656 737 811 1066 1158 1214 1556 1871 1880 1977 2037 2393 3700 3755 3766 3775 3781 3789 3893 
+	}
+	manpower=4095950
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

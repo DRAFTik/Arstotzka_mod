@@ -1,0 +1,25 @@
+state={
+	id=70
+	name="STATE_70"
+	resources={
+		oil=12.000
+	}
+	history={
+		buildings = {
+			infrastructure = 2
+			dockyard = 2
+			4582 = {
+				naval_base = 1
+			}
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		407 580 971 1162 1330 1899 1949 1962 2022 2040 2583 2612 2619 2750 2966 4555 4557 4564 4567 4570 4574 4582 4590 
+	}
+	manpower=1095950
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

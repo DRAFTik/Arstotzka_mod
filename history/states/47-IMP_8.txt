@@ -1,0 +1,32 @@
+state={
+	id=47
+	name="STATE_47"
+	resources={
+		steel=22.000
+	}
+	history={
+		victory_points = {
+			1112 2 
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			dockyard = 3
+			465 = {
+				naval_base = 2
+			}
+			1112 = {
+				naval_base = 2
+			}
+		}
+		owner = IMP
+		add_core_of = IMP
+	}
+	provinces={
+		134 166 260 465 1112 1366 1823 2015 2123 2289 2414 3021 4484 4487 4505 4506 4511 4518 4531 4538 4546 4550 
+	}
+	manpower=10158773
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}
