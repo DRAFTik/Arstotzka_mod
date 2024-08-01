@@ -1,0 +1,19 @@
+
+state={
+	id=141
+	name="STATE_141"
+
+	history={
+		owner = ANT
+		add_core_of = ANT
+
+	}
+
+	provinces={
+		554 675 941 1106 2286 2759 4032 
+	}
+	manpower=5623
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

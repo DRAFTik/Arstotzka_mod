@@ -192,7 +192,7 @@ units = {
 	
 	division = {
 		name = "8th Obristanian Infantry Brigade"
-		location = 1016
+		location = 2034
 		division_template = "Obristanian Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -201,7 +201,7 @@ units = {
 	
 	division = {
 		name = "9th Obristanian Infantry Brigade"
-		location = 1200
+		location = 1762
 		division_template = "Obristanian Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -210,7 +210,7 @@ units = {
 	
 	division = {
 		name = "10th Obristanian Infantry Brigade"
-		location = 2205
+		location = 962
 		division_template = "Obristanian Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -273,7 +273,7 @@ units = {
 	
 	division = {
 		name = "5th Obristanian artillery Brigade"
-		location = 3368
+		location = 2608
 		division_template = "Obristanian Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -282,7 +282,7 @@ units = {
 	
 	division = {
 		name = "6th Obristanian artillery Brigade"
-		location = 3413
+		location = 3471
 		division_template = "Obristanian Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -291,7 +291,7 @@ units = {
 	
 	division = {
 		name = "7th Obristanian artillery Brigade"
-		location = 3438
+		location = 2574
 		division_template = "Obristanian Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -300,7 +300,7 @@ units = {
 	
 	division = {
 		name = "1st Obristani Militia regiment"
-		location = 120
+		location = 2725
 		division_template = "Militia"
 		start_experience_factor = 0.75
 		start_equipment_factor = 1.0
@@ -309,7 +309,7 @@ units = {
 	
 	division = {
 		name = "2nd Obristani Militia regiment"
-		location = 56
+		location = 3262
 		division_template = "Militia"
 		start_experience_factor = 0.75
 		start_equipment_factor = 1.0
@@ -318,7 +318,7 @@ units = {
 	
 	division = {
 		name = "3rd Obristani Militia regiment"
-		location = 470
+		location = 1645
 		division_template = "Militia"
 		start_experience_factor = 0.75
 		start_equipment_factor = 1.0
@@ -327,7 +327,7 @@ units = {
 	
 	division = {
 		name = "4th Obristani Militia regiment"
-		location = 788
+		location = 3246
 		division_template = "Militia"
 		start_experience_factor = 0.75
 		start_equipment_factor = 1.0
@@ -336,7 +336,7 @@ units = {
 	
 	division = {
 		name = "5th Obristani Militia regiment"
-		location = 1280
+		location = 3511
 		division_template = "Militia"
 		start_experience_factor = 0.75
 		start_equipment_factor = 1.0
@@ -372,7 +372,7 @@ units = {
 	
 	division = {
 		name = "9th Obristani Militia regiment"
-		location = 3493
+		location = 3487
 		division_template = "Militia"
 		start_experience_factor = 0.75
 		start_equipment_factor = 1.0
@@ -381,7 +381,7 @@ units = {
 	
 	division = {
 		name = "10th Obristani Militia regiment"
-		location = 3418
+		location = 1530
 		division_template = "Militia"
 		start_experience_factor = 0.75
 		start_equipment_factor = 1.0

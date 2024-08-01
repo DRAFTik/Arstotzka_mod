@@ -1,25 +1,23 @@
+
 state={
 	id=30
 	name="STATE_30"
 	history={
 		victory_points = {
-			2527 2 
-		}
-		victory_points = {
 			3618 1 
 		}
 		buildings = {
 			infrastructure = 1
-			arms_factory = 2
-			industrial_complex = 2
+			arms_factory = 1
+			industrial_complex = 1
 		}
 		owner = ANT
 		add_core_of = ANT
 	}
 	provinces={
-		104 335 478 643 705 729 895 1020 1170 1218 1243 1252 1524 1631 1819 2119 2316 2527 2669 2800 3618 3661 3669 3698 3731 3757 3762 3778 3785 3788 3804 3825 3830 3850 3857 
+		335 478 705 729 1170 1252 1524 1631 3618 3661 3669 3698 3731 
 	}
-	manpower=1652899
+	manpower=874512
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

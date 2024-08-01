@@ -1,0 +1,23 @@
+state={
+	id=139
+	name="STATE_139"
+	history={
+		victory_points = {
+			2527 2 
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		owner = ANT
+		add_core_of = ANT
+	}
+	provinces={
+		104 643 895 1020 1218 1243 1819 2119 2316 2527 2669 2800 3757 3762 3778 3785 3788 3804 3830 3850 3857 
+	}
+	manpower=778387
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

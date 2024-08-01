@@ -1,0 +1,18 @@
+state={
+	id=138
+	name="STATE_138"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = ANT
+		add_core_of = ANT
+	}
+	provinces={
+		493 520 794 818 1107 1438 1752 1845 1998 2586 3730 3736 3756 3813 3825 
+	}
+	manpower=533254
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

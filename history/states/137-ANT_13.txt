@@ -1,0 +1,19 @@
+state={
+	id=137
+	name="STATE_137"
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		owner = ANT
+		add_core_of = ANT
+	}
+	provinces={
+		88 130 677 695 791 928 1250 1834 2144 2249 2708 2970 3028 3866 3899 3916 3980 
+	}
+	manpower=1785321
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

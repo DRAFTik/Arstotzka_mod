@@ -1,22 +1,27 @@
+
 state={
 	id=31
 	name="STATE_31"
 	resources={
 		steel=14.000
 	}
+
 	history={
 		buildings = {
 			infrastructure = 1
-			arms_factory = 2
+			arms_factory = 1
 			industrial_complex = 2
+
 		}
 		owner = ANT
 		add_core_of = ANT
+
 	}
+
 	provinces={
-		28 88 103 130 486 677 695 791 796 928 1076 1250 1292 1311 1397 1427 1531 1761 1834 2144 2249 2429 2708 2790 2853 2868 2970 3027 3028 3796 3828 3862 3866 3899 3916 3920 3976 3980 4005 4010 4024 4036 
+		796 1076 1292 1311 1531 1761 2790 2868 3027 3796 3828 3862 3920 3976 
 	}
-	manpower=4873791
+	manpower=3088470
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

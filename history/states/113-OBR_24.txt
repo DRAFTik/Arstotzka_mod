@@ -1,9 +1,15 @@
 state={
 	id=113
 	name="STATE_113"
+	resources={
+		tungsten=8.000
+		steel=4.000
+		chromium=10.000
+	}
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
 		}
 		owner = OBR
 		add_core_of = OBR
@@ -11,7 +17,7 @@ state={
 	provinces={
 		368 519 528 988 1049 1483 1726 2028 2034 2358 2725 2972 2983 3152 3159 3163 3180 3191 3197 3221 3244 3262 
 	}
-	manpower=1
+	manpower=2088916
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 	state_category=town

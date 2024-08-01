@@ -1,0 +1,19 @@
+state={
+	id=126
+	name="STATE_126"
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		owner = SKO
+		add_core_of = SKO
+	}
+	provinces={
+		354 472 517 690 1788 1850 1927 1995 2010 2056 2059 2356 2542 2588 2988 3005 3800 3847 3848 3849 3852 3870 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

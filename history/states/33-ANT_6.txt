@@ -1,24 +1,26 @@
+
 state={
 	id=33
 	name="STATE_33"
 	resources={
 		chromium=11.000
 	}
+
 	history={
-		victory_points = {
-			2103 1 
-		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+
 		}
 		owner = ANT
 		add_core_of = ANT
+
 	}
+
 	provinces={
-		80 383 526 554 671 718 844 888 1146 1176 1247 1294 1298 1692 1750 1860 1915 1941 2016 2103 2216 2286 2480 2529 2951 3878 3882 3907 3919 3926 3937 3966 3973 3983 3988 3992 3996 4020 4032 4054 4081 4088 
+		383 718 844 888 1247 1294 1692 1750 1860 2016 2480 3878 3882 3919 3937 3992 
 	}
-	manpower=1017567
+	manpower=585563
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -1,0 +1,26 @@
+
+state={
+	id=135
+	name="STATE_135"
+
+	history={
+		victory_points = {
+			2103 1 
+		}
+		buildings = {
+			infrastructure = 1
+
+		}
+		owner = ANT
+		add_core_of = ANT
+
+	}
+
+	provinces={
+		80 526 1146 1176 1915 1941 2103 2529 3907 3926 3966 3973 3983 3988 3996 4020 
+	}
+	manpower=432004
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

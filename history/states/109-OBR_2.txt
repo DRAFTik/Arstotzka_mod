@@ -1,6 +1,11 @@
 state={
 	id=109
 	name="STATE_109"
+	resources={
+		tungsten=40.000
+		aluminium=15.000
+		chromium=7.000
+	}
 	history={
 		buildings = {
 			infrastructure = 1
@@ -11,7 +16,7 @@ state={
 	provinces={
 		746 1135 1377 1392 1509 1603 1645 1762 1836 1867 1997 2068 2298 2318 2328 2388 2412 2494 2673 2892 3010 3212 3231 3250 3273 3280 3323 3327 3348 3352 3362 3367 3381 
 	}
-	manpower=1
+	manpower=2123658
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 	state_category=town

@@ -163,7 +163,7 @@ units = {
 	
 	division = {
 		name = "7th Infantry Brigade regiment"
-		location = 725
+		location = 1441
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -291,7 +291,7 @@ units = {
 	
 	division = {
 		name = "2nd United artillery regiment"
-		location = 725
+		location = 1441
 		division_template = "United Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7

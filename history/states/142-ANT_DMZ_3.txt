@@ -1,0 +1,15 @@
+state={
+	id=142
+	name="STATE_142"
+	history={
+		owner = ANT
+		add_core_of = ANT
+	}
+	provinces={
+		28 103 486 977 2853 4017 4024 
+	}
+	manpower=3253
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=wasteland
+}

@@ -1,6 +1,11 @@
+
 state={
 	id=35
 	name="STATE_35"
+	resources={
+		oil=70.000
+		steel=10.000
+	}
 	history={
 		buildings = {
 			infrastructure = 1
@@ -9,9 +14,9 @@ state={
 		add_core_of = ANT
 	}
 	provinces={
-		493 520 627 632 722 794 818 1039 1107 1293 1438 1752 1845 1936 1998 2586 2917 3638 3679 3697 3708 3730 3736 3756 3813 
+		627 632 722 1039 1293 1936 2917 3638 3679 3697 3708 
 	}
-	manpower=985623
+	manpower=452369
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

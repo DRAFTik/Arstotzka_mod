@@ -45,3 +45,9 @@ set_popularities = {
 	paternal_autocrat		= 10
 	national_populist		= 73
 }
+
+
+140 = { set_demilitarized_zone = yes }
+141 = { set_demilitarized_zone = yes }
+142 = { set_demilitarized_zone = yes }
+143 = { set_demilitarized_zone = yes }
