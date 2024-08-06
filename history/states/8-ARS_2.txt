@@ -1,0 +1,25 @@
+state={
+	id=8
+	name="STATE_8"
+	resources={
+		tungsten=11.000
+		steel=12.000
+		chromium=5.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		46 563 1159 1481 1549 1644 1670 1714 1777 1844 1904 1940 1972 1975 2090 2347 2719 2775 3351 3363 3376 3385 3396 3402 3409 3421 3439 
+	}
+	manpower=1150336
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

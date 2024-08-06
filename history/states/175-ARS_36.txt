@@ -1,0 +1,15 @@
+state={
+	id=175
+	name="STATE_175"
+	history={
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		480 514 702 1207 1490 1654 2130 2153 2387 2486 2577 3504 3529 
+	}
+	manpower=741552
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=pastoral
+}

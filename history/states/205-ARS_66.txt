@@ -1,0 +1,27 @@
+
+state={
+	id=205
+	name="STATE_205"
+	resources={
+		steel=3.000
+		chromium=2.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+			dockyard = 1
+			4627 = {
+				naval_base = 1
+			}
+		}
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		49 388 446 687 848 1199 1789 2390 2413 2570 2895 2986 4352 4353 4366 4370 4385 4394 4627 
+	}
+	manpower=2564889
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

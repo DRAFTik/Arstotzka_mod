@@ -1,0 +1,30 @@
+state={
+	id=185
+	name="STATE_185"
+	history={
+		victory_points = {
+			2019 4 
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 2
+			industrial_complex = 2
+			dockyard = 1
+			641 = {
+				naval_base = 1
+			}
+			4266 = {
+				naval_base = 1
+			}
+		}
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		97 287 358 641 801 1014 1275 1813 1839 2019 2145 2987 4224 4266 4269 4272 4290 4294 4314 4317 
+	}
+	manpower=7541256
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

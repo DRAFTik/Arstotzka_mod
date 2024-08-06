@@ -18,7 +18,8 @@ set_technology = {
 }
 
 
-set_war_support = 0.1
+set_stability = 0.5
+set_war_support = 0.5
 set_convoys = 5
 
 starting_train_buffer = 2
@@ -36,17 +37,17 @@ recruit_character = IMP_naoki_takano
 
 
 set_politics = {
-	ruling_party = market_liberal
+	ruling_party = paternal_autocrat
 }
 set_popularities = {
 	totalist				= 0
 	syndicalist				= 0
 	radical_socialist		= 0
-	social_democrat			= 14
+	social_democrat			= 0
 	social_liberal			= 10
-	market_liberal			= 47
+	market_liberal			= 19
 	social_conservative		= 12
 	authoritarian_democrat	= 8
-	paternal_autocrat		= 5
+	paternal_autocrat		= 47
 	national_populist		= 4
 }

@@ -1,0 +1,21 @@
+
+state={
+	id=182
+	name="STATE_182"
+	history={
+		buildings = {
+			1690 = {
+				naval_base = 1
+			}
+		}
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		398 413 430 649 1263 1690 1816 2896 2945 4199 4233 4243 4253 4300 4304 
+	}
+	manpower=785123
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

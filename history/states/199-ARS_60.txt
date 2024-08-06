@@ -1,0 +1,23 @@
+state={
+	id=199
+	name="STATE_199"
+	resources={
+		aluminium=20.000
+		steel=72.000
+	}
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 2
+		}
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		370 512 757 858 1060 1091 1168 1224 1476 1525 1540 1558 1575 1758 1827 2269 2406 2445 2556 2874 3869 3954 3958 3964 3969 3991 3995 4002 4022 4059 
+	}
+	manpower=852210
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

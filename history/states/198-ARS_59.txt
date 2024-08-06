@@ -1,0 +1,15 @@
+state={
+	id=198
+	name="STATE_198"
+	history={
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		239 374 578 812 912 1131 1189 1239 1365 1865 2106 2131 2261 2326 2462 2590 2867 2901 3799 3806 3809 3836 3841 3930 3936 3953 
+	}
+	manpower=1541256
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

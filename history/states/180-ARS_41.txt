@@ -1,0 +1,18 @@
+state={
+	id=180
+	name="STATE_180"
+	victory_points = {
+			588 1 
+		}
+	history={
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		197 304 551 588 915 1072 1579 1757 1959 2202 2470 3539 3610 3614 3639 3640 3643 3674 
+	}
+	manpower=1204455
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}
