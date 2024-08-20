@@ -9,6 +9,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			arms_factory = 1
+			thermal_power_plant = 1
 		}
 		owner = SKO
 		add_core_of = SKO
@@ -16,7 +17,7 @@ state={
 	provinces={
 		21 27 89 220 688 869 902 1053 1261 1634 1820 1980 2263 3597 3655 3692 3703 3706 3720 
 	}
-	manpower=0
+	manpower=1517896
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 	state_category=rural

@@ -1,30 +1,76 @@
+is_democratic_ideology = {
+	OR = {
+		has_government = social_democrat
+		has_government = social_liberal
+		has_government = market_liberal
+		has_government = social_conservative
+		has_government = authoritarian_democrat
+	}
+}
+
+is_fascism_ideology = {
+	OR = {
+		has_government = paternal_autocrat
+		has_government = national_populist
+	}
+}
+
+is_communism_ideology = {
+	OR = {
+		has_government = totalist
+		has_government = syndicalist
+		has_government = radical_socialist
+	}
+}
+
+is_neighbor_ideology = {
+	OR = {
+		AND = {
+			is_communism_ideology = yes
+			FROM = { has_government = social_democrat }
+		}
+		AND = {
+			has_government = social_democrat
+			FROM = { is_communism_ideology = yes }
+		}
+		AND = {
+			is_fascism_ideology = yes
+			FROM = { has_government = authoritarian_democrat }
+		}
+		AND = {
+			has_government = authoritarian_democrat
+			FROM = { is_fascism_ideology = yes }
+		}
+	}
+}
+
 
 is_enemy_ideology = {
 	OR = {
 		AND = {
-			has_government = communism
+			is_democratic_ideology = yes
 			ROOT = {
 				OR = {
-					has_government = fascism
-					has_government = democratic
+					is_fascism_ideology = yes
+					is_communism_ideology = yes
 				}
 			}
 		}
 		AND = {
-			has_government = democratic
+			is_fascism_ideology = yes
 			ROOT = {
 				OR = {
-					has_government = communism
-					has_government = fascism
+					is_democratic_ideology = yes
+					is_communism_ideology = yes
 				}
 			}
 		}
 		AND = {
-			has_government = fascism
+			is_communism_ideology = yes
 			ROOT = {
 				OR = {
-					has_government = democratic
-					has_government = communism
+					is_democratic_ideology = yes
+					is_fascism_ideology = yes
 				}
 			}
 		}

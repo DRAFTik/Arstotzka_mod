@@ -27,53 +27,12 @@ has_large_ally_not_pick_closed_economy = {
 has_same_ideology = {
 	custom_trigger_tooltip = {
 		tooltip = has_same_ideology_tt
-		OR = {
-			AND = {
-				has_government = democratic
-				ROOT = { has_government = democratic }
-			}
-			AND = {
-				has_government = fascism
-				ROOT = { has_government = fascism }
-			}
-			AND = {
-				has_government = communism
-				ROOT = { has_government = communism }
-			}
-			AND = {
-				has_government = neutrality
-				ROOT = { has_government = neutrality }
-			}
-		}
+		has_government = var:ROOT.current_party_ideology_group
 	}
 }
 
 anti_submarine_strategy_required_trigger = {
 	OR = {
-		AND = {
-			tag = ENG
-			not = { is_in_faction_with = GER }
-			GER = {
-				has_navy_size = {
-					type = submarine
-					size > 30
-				}
-			}
-		}
-		AND = {
-			tag = USA
-			not = { is_in_faction_with = GER }
-			GER = {
-				has_navy_size = {
-					type = submarine
-					size > 30
-				}
-			}
-		}
-		AND = {
-			tag = JAP
-			not = { is_in_faction_with = USA }
-		}
 		AND = {
 			has_war = yes
 			any_enemy_country = {
@@ -94,6 +53,7 @@ ai_air_doctrine_tier_1_trigger = {
 		has_tech = naval_strike_tactics
 		has_tech = direct_ground_support
 		has_tech = low_echelon_support
+		has_tech = pathfinder_groups
 	}
 }
 
@@ -102,6 +62,7 @@ ai_air_doctrine_tier_2_trigger = {
 		has_tech = multialtitude_flying
 		has_tech = hunt_and_destroy
 		has_tech = operational_destruction
+		has_tech = air_defence
 	}
 }
 ai_air_doctrine_tier_3_trigger = {
@@ -109,6 +70,7 @@ ai_air_doctrine_tier_3_trigger = {
 		has_tech = flying_fortress
 		has_tech = naval_strike_torpedo_tactics
 		has_tech = infiltration_bombing
+		has_tech = dead_reckoning_bombing
 	}
 }
 
@@ -118,6 +80,8 @@ ai_land_doctrine_tier_1_trigger = {
 		has_tech = mobile_defence
 		has_tech = grand_assault
 		has_tech = defence_in_depth
+		has_tech = use_of_terrain
+		has_tech = total_mobilization
 	}
 }
 
@@ -129,6 +93,10 @@ ai_land_doctrine_tier_2_trigger = {
 		has_tech = infiltration_assault
 		has_tech = vast_offensives
 		has_tech = large_front_offensive
+		has_tech = air_disguise_detachments
+		has_tech = tyranny_of_technique
+		has_tech = coercion_and_retention
+		has_tech = unbending_will
 	}
 }
 

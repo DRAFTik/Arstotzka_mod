@@ -1,0 +1,21 @@
+scripted_gui = {
+
+	provisions = {
+		parent_window_token = top_bar
+		window_name = "provisions_container"
+		visible = {
+		}
+		ai_enabled = {
+			always = no
+		}
+	}
+	electric_power = {
+		parent_window_token = top_bar
+		window_name = "electric_power_container"
+		visible = {
+		}
+		ai_enabled = {
+			always = no
+		}
+	}
+}

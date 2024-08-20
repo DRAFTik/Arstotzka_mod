@@ -9,6 +9,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 2
+			thermal_power_plant = 1
 		}
 		owner = KOL
 		add_core_of = KOL

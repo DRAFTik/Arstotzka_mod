@@ -11,6 +11,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 3
+			thermal_power_plant = 1
 		}
 		owner = REP
 		add_core_of = REP

@@ -1,6 +1,6 @@
 -- BASE
---NDefines.NGame.START_DATE = "1982.1.1.12"
---NDefines.NGame.END_DATE = "2000.1.1.12"
+NDefines.NGame.START_DATE = "1983.1.1.12"
+NDefines.NGame.END_DATE = "2003.1.1.12"
 
 
 -- Spot Optimizations

@@ -1,0 +1,35 @@
+ add_namespace = arstotzka
+country_event = {
+	id = arstotzka.1
+	title = arstotzka.1.t
+	desc = arstotzka.1.d
+	picture = GFX_report_event_defense_or_attack
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 60
+		}
+		name = arstotzka.1.a
+		add_timed_idea = { idea = ARS_attack_kolechia days = 450 }
+	}
+	option = {
+		ai_chance = {
+			base = 40
+		}
+		name = arstotzka.1.b
+		add_timed_idea = { idea = ARS_defense_kolechia days = 450 }
+	}
+}
+
+country_event = {
+	id = arstotzka.3
+	title = arstotzka.3.t
+	desc = arstotzka.3.d
+	picture = GFX_report_event_Politic
+	is_triggered_only = yes
+
+	option = {
+		name = arstotzka.3.a
+	}
+}

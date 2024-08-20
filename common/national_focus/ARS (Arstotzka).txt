@@ -1,0 +1,1993 @@
+focus_tree = {
+	id = arstotzka_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ARS
+		}
+	}
+	
+	
+	
+	focus = {
+		id = ARS_politics_in_the_motherland
+		icon = GFX_goal_ars_politics
+		x = 5
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    country_event = arstotzka.3
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = ARS_fortify_the_border
+		icon = GFX_goal_generic_construct_military
+		x = 33
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					any_neighbor_state = {
+						controller = {
+							OR = {
+								original_tag = KOL
+								is_subject_of = KOL
+								is_in_faction_with = KOL
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ARS_trust_the_state
+		icon = GFX_goal_ars_trust_state
+		prerequisite = { focus = ARS_politics_in_the_motherland }
+		mutually_exclusive = { focus = ARS_trust_the_people }
+		available = {
+		}
+		x = 6
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_ideas = totalist_influence
+			add_ideas = national_populist_influence
+		}
+	}
+	
+	focus = {
+		id = ARS_trust_the_people
+		icon = GFX_goal_ars_trust_people
+		prerequisite = { focus = ARS_politics_in_the_motherland }
+		mutually_exclusive = { focus = ARS_trust_the_state }
+		available = {
+		}
+		x = 4
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = ARS_ezic_star
+		}
+	}
+	
+	focus = {
+		id = ARS_east_grestin_border_checkpoint
+		icon = GFX_goal_ars_terrorism
+		prerequisite = { focus = ARS_politics_in_the_motherland }
+		x = 2
+		y = 1
+		cost = 5
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = ARS_illegal_immigration
+		}
+	}
+	
+	focus = {
+		id = ARS_arstotzkan_nationals_return
+		icon = GFX_goal_ars_patriot
+		prerequisite = { focus = ARS_politics_in_the_motherland }
+		x = 8
+		y = 1
+		cost = 5
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = ARS_papers_please
+		}
+	}
+	
+	focus = {
+		id = ARS_arstotzkan_liberalization
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = ARS_east_grestin_border_checkpoint }
+		prerequisite = { focus = ARS_trust_the_people }
+		prerequisite = { focus = ARS_arstotzkan_nationals_return }
+		mutually_exclusive = { focus = ARS_back_to_old_traditions focus = ARS_national_socialism focus = ARS_secure_the_motherland }
+		x = 4
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_ideas = ARS_ezic_rises1
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
+		}	
+	}
+	
+	focus = {
+		id = ARS_arstotzka_for_the_people
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = ARS_arstotzkan_liberalization }
+		x = 4
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARS_ezic_rises1
+				add_idea = ARS_ezic_rises2
+			}
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.2 }
+		}
+	}
+	
+	focus = {
+		id = ARS_arstotzkan_freedom
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = ARS_arstotzka_for_the_people }
+		x = 4
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARS_ezic_rises2
+				add_idea = ARS_ezic_triumphant
+			}
+			set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes }	
+		}
+	}
+	
+	focus = {
+		id = ARS_with_open_arms
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = ARS_arstotzkan_freedom }
+		x = 4
+		y = 5
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			remove_ideas = ARS_illegal_immigration
+			remove_ideas = ARS_papers_please
+			add_ideas = ARS_immigration_amnesty
+		}
+	}
+	
+#	focus = {
+#		id = ARS_kolechian_reproachment
+#		icon = GFX_focus_generic_diplomatic_treaty
+#		prerequisite = { focus = ARS_with_open_arms }
+#		x = 5
+#		y = 6
+#		cost = 10
+#	
+#		available_if_capitulated = no
+#	
+#		completion_reward = {
+#		}
+#	}
+	
+	focus = {
+		id = ARS_back_to_old_traditions
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = ARS_east_grestin_border_checkpoint }
+		prerequisite = { focus = ARS_trust_the_people }
+		prerequisite = { focus = ARS_arstotzkan_nationals_return }
+		mutually_exclusive { focus = ARS_arstotzkan_liberalization focus = ARS_national_socialism focus = ARS_secure_the_motherland }
+		x = 2
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = ARS_glory_of_old1
+			add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
+		}
+	}
+	
+	focus = {
+		id = ARS_the_peoples_king
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		prerequisite = { focus = ARS_back_to_old_traditions }
+		x = 2
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARS_glory_of_old1
+				add_idea = ARS_glory_of_old2
+			}
+			add_popularity = { ideology = paternal_autocrat popularity = 0.15 }
+		}
+	}
+	
+	focus = {
+		id = ARS_the_king_is_with_us
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = ARS_the_peoples_king }
+		x = 2
+		y = 4
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARS_glory_of_old2
+				add_idea = ARS_glory_of_old3
+			}
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = no
+			}
+		}
+	}
+	
+	focus = {
+		id = ARS_the_king_reaches_out
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = ARS_the_king_is_with_us }
+		x = 2
+		y = 5
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARS_glory_of_old3
+				add_idea = ARS_glory_of_old4
+			}
+		}
+	}
+	
+	focus = {
+		id = ARS_from_one_monarch_to_another
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = ARS_the_king_reaches_out }
+		x = -1
+		y = 1
+		relative_position_id = ARS_the_king_reaches_out
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_state_claim = 120
+			add_state_claim = 119
+			add_state_claim = 118
+			add_state_claim = 117
+			add_state_claim = 23
+			add_state_claim = 21
+			add_state_claim = 121
+		}
+	}
+	
+	focus = {
+		id = ARS_to_the_north
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = ARS_the_king_reaches_out }
+		x = 1
+		y = 1
+		relative_position_id = ARS_the_king_reaches_out
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			every_state = {
+				limit = { is_owned_by = SKO }
+				add_claim_by = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = SKO
+				generator = { 130 }
+			}
+		}
+	}
+	
+	focus = {
+		id = ARS_national_socialism
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = ARS_east_grestin_border_checkpoint }
+		prerequisite = { focus = ARS_trust_the_state }
+		prerequisite = { focus = ARS_arstotzkan_nationals_return }
+		mutually_exclusive = { focus = ARS_back_to_old_traditions focus = ARS_arstotzkan_liberalization focus = ARS_secure_the_motherland }
+		x = 7
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			remove_ideas = totalist_influence
+			add_ideas = national_populist_influence
+			add_popularity = { ideology = national_populist popularity = 0.1 }
+		}
+	}
+	focus = {
+		id = ARS_arstotzkan_militarism
+		icon = GFX_goal_ars_army_arstotzka
+		prerequisite = { focus = ARS_national_socialism }
+		x = 6
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = generic_militarism_focus
+			add_popularity = { ideology = national_populist popularity = 0.1 }
+		}
+	}
+	focus = {
+		id = ARS_propaganda_ministry
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = ARS_arstotzkan_militarism }
+		x = 6
+		y = 4
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = ARS_state_media
+		}
+	}
+	focus = {
+		id = ARS_preparations_for_revenge
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = ARS_national_socialism }
+		x = 8
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = ARS_war_preparations
+			add_war_support = 0.1
+			every_state = {
+				limit = { is_owned_by = KOL }
+				add_claim_by = ROOT
+			}
+			every_controlled_state = {
+				limit = {
+					any_neighbor_state = {
+						controller = {
+							OR = {
+								original_tag = KOL
+								is_subject_of = KOL
+								is_in_faction_with = KOL
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			154 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = 2147
+				}
+			}
+			164 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = 555
+				}
+			}
+			KOL = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_provocation }
+			}
+		}
+	}
+	
+	focus = {
+		id = ARS_kolechias_downfall
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = ARS_preparations_for_revenge }
+		x = 8
+		y = 4
+		cost = 2
+		
+		available_if_capitulated = yes
+		
+		available = {
+			KOL = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = ARS_arstotzkan_revenge
+				days = 60
+			}
+			add_state_core = 120
+			add_state_core = 121
+			add_state_core = 21
+			add_state_core = 23
+			add_state_core = 119
+			add_state_core = 118
+			add_state_core = 117
+			OBR = {
+				add_state_core = 99
+				add_state_core = 98
+				add_state_core = 2
+				add_state_core = 86
+				add_state_core = 87
+			}
+			OBR = {
+				add_opinion_modifier = { target = ARS modifier = ARS_doorstep_threat }
+			}
+		}
+	}
+	
+	focus = {
+		id = ARS_intimidate_the_neighbours
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = ARS_kolechias_downfall }
+		x = 8
+		y = 5
+		cost = 15
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_state_claim = 31
+			add_state_claim = 30
+			add_state_claim = 137
+			add_state_claim = 139
+			add_state_claim = 143
+
+			army_experience = 25
+			
+			if = {
+				limit = {
+					31 = {
+						owner = {
+							NOT = {
+								tag = ANT
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 31
+			}
+			if = {
+				limit = {
+					30 = {
+						owner = {
+							NOT = {
+								tag = ANT
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 30
+			}
+			if = {
+				limit = {
+					137 = {
+						owner = {
+							NOT = {
+								tag = ANT
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 137
+			}
+			if = {
+				limit = {
+					139 = {
+						owner = {
+							NOT = {
+								tag = ANT
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 139
+			}
+			if = {
+				limit = {
+					143 = {
+						owner = {
+							NOT = {
+								tag = ANT
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 143
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = IMP
+				generator = { 12 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = REP
+				generator = { 37 }
+			}
+			IMP = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_provocation }
+			}
+			REP = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_provocation }
+			}
+			ANT = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_provocation }
+			}
+			OBR = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_provocation }
+			}
+			UNF = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_provocation }
+			}
+		}
+	}
+	
+	focus = {
+		id = ARS_dominate_the_plains
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = ARS_intimidate_the_neighbours }
+		x = 8
+		y = 6
+		cost = 15
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = UNF
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = OBR
+			}
+		}
+	}
+	
+#	focus = {
+#		id = ARS_demand_the_baltic_states
+#		icon = GFX_goal_ars_domination_baltics
+#		prerequisite = { focus = ARS_dominate_the_plains }
+#		x = 8
+#		y = 7
+#		cost = 10
+#		
+#		available_if_capitulated = no
+#		
+#		completion_reward = {
+#			add_state_claim = 13
+#			add_state_claim = 191
+#			add_state_claim = 190
+#			add_state_claim = 12
+#			add_state_claim = 188
+#			add_state_claim = 189
+#			add_state_claim = 11
+#		}
+#	}
+
+	focus = {
+		id = ARS_secure_the_motherland
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = ARS_east_grestin_border_checkpoint }
+		prerequisite = { focus = ARS_trust_the_state }
+		prerequisite = { focus = ARS_arstotzkan_nationals_return }
+		mutually_exclusive = { focus = ARS_back_to_old_traditions focus = ARS_arstotzkan_liberalization focus = ARS_national_socialism }
+		x = 11
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			country_event =arstotzka.1
+			remove_ideas = national_populist_influence
+			add_ideas = ARS_workers_of_the_world_unite
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = ARS_ban_free_speech
+		icon = GFX_goal_ars_ban_free_speech
+		prerequisite = { focus = ARS_secure_the_motherland }
+		x = 10
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = ARS_police_commandos
+		}
+	}
+	focus = {
+		id = ARS_empower_the_state
+		icon = GFX_goal_support_fourth_int
+		prerequisite = { focus = ARS_ban_free_speech }
+		x = 10
+		y = 4
+		cost = 5
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = ARS_arstotzkan_union
+		}
+	}
+	focus = {
+		id = ARS_patriotic_volunteers
+		icon = GFX_goal_ars_volunteers
+		prerequisite = { focus = ARS_secure_the_motherland }
+		x = 12
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    add_manpower = 30000
+			add_ideas = ARS_arstotzkan_youth
+		}
+	}	
+	focus = {
+		id = ARS_political_officers
+		icon = GFX_goal_ars_political_officers
+		prerequisite = { focus = ARS_patriotic_volunteers }
+		x = 12
+		y = 4
+		cost = 5
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = ARS_arstotzkan_zampolit
+		}
+	}
+	focus = {
+		id = ARS_incite_the_kolechians
+		icon = GFX_goal_ars_incite_kolechians
+		prerequisite = { focus = ARS_political_officers }
+		x = 12
+		y = 5
+		cost = 5
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = ARS_kolechian_agitators_discovered
+			KOL = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_provocation }
+			}
+			IMP = {
+				add_opinion_modifier = { target = ARS modifier = ARS_police_crackdowns }
+			}
+			REP = {
+				add_opinion_modifier = { target = ARS modifier = ARS_police_crackdowns }
+			}
+			ANT = {
+				add_opinion_modifier = { target = ARS modifier = ARS_police_crackdowns }
+			}
+			OBR = {
+				add_opinion_modifier = { target = ARS modifier = ARS_police_crackdowns }
+			}
+			UNF = {
+				add_opinion_modifier = { target = ARS modifier = ARS_police_crackdowns }
+			}
+		}
+	}
+	focus = {
+		id = ARS_death_to_kolechia
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = ARS_incite_the_kolechians }
+		x = 12
+		y = 6
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			remove_ideas = ARS_kolechian_agitators_discovered
+			every_state = {
+				limit = {
+					is_controlled_by = KOL
+					any_neighbor_state = {
+						controller = {
+							OR = {
+								original_tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_claim_by = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = KOL
+				generator = { 80 }
+			}
+		}
+	}
+	focus = {
+		id = ARS_glorious_liberation
+		icon = GFX_goal_ars_great_ars
+		prerequisite = { focus = ARS_death_to_kolechia }
+		x = 12
+		y = 7
+		cost = 15
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_controlled_by = IMP
+						is_controlled_by = REP
+						is_controlled_by = ANT
+						is_controlled_by = UNF
+						is_controlled_by = OBR
+					}
+					any_neighbor_state = {
+						controller = {
+							OR = {
+								original_tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_claim_by = ROOT
+			}
+			IMP = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_expansionism }
+			}
+			REP = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_expansionism }
+			}
+			ANT = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_expansionism }
+			}
+			OBR = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_expansionism }
+			}
+			UNF = {
+				add_opinion_modifier = { target = ARS modifier = ARS_arstotzkan_expansionism }
+			}
+		}
+	}
+	focus = {
+		id = ARS_kolechia_annexed
+		icon = GFX_goal_generic_propaganda
+		available = {
+			is_subject = no
+			all_of_scopes = {
+				array = KOL.core_states
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				tooltip = KOL_all_core_states_trigger_tt
+			}
+		}
+		x = 16
+		y = 0
+		cost = 5
+		
+		completion_reward = {
+			remove_ideas = ARS_war_with_kolechia
+			add_ideas = ARS_kolechia_vanquished
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = ARS_glory_to_arstotzka
+		icon = GFX_goal_ars_great_arstotzka
+		prerequisite = { focus = ARS_kolechia_annexed }
+		available = {
+			is_subject = no
+			all_of_scopes = {
+				array = SKO.core_states
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				tooltip = SKO_all_core_states_trigger_tt
+			}
+		}
+		x = 22
+		y = 0
+		cost = 5
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = ARS_arstotzkan_glory
+		}
+	}
+	focus = {
+		id = ARS_Proclaim_Greater_Arstotzka
+		icon = GFX_focus_ger_great_red_menace
+		prerequisite = { focus = ARS_kolechia_annexed }
+		prerequisite = { focus = ARS_glory_to_arstotzka }
+		available = {
+			is_subject = no
+			all_of_scopes = {
+				array = OBR.core_states
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				tooltip = OBR_all_core_states_trigger_tt
+			}
+		}
+		x = 22
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARS_occupation_instability
+			every_state = {
+				tooltip = OBR_all_core_states_trigger_tt
+				limit = {
+					NOT = { is_core_of = ROOT }
+					is_core_of = OBR
+				}
+				add_core_of = ROOT
+			}
+			add_research_slot = 1
+			army_experience = -25
+		}
+	}
+	focus = {
+		id = ARS_Consolidate_Greater_Arstotzka
+		icon = GFX_goal_ars_great_arstotzka
+		prerequisite = { focus = ARS_Proclaim_Greater_Arstotzka }
+		x = 22
+		y = 2
+		cost = 15
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARS_occupation_instability
+				add_idea = ARS_entrenched_occupation
+			}
+		}
+	}
+	focus = {
+		id = ARS_Formalize_Greater_Arstotzka
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = ARS_Consolidate_Greater_Arstotzka }
+		x = 22
+		y = 3
+		cost = 15
+		
+		available_if_capitulated = yes
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARS_entrenched_occupation
+				add_idea = ARS_accepted_occupation
+			}
+		}
+	}
+	focus = {
+		id = ARS_mobilize_the_people
+		icon = GFX_focus_generic_little_entente
+		x = 35
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			mobilization_laws_up = yes
+			economy_law_up = yes
+		}
+	}
+	focus = {
+		id = ARS_the_truth_of_arstotzka
+		icon = GFX_goal_generic_propaganda
+		x = 37
+		y = 0
+		cost = 5
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = ARS_the_truth_of_arstotzka
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = ARS_the_fardesto_mine
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = ARS_fortify_the_border focus = ARS_mobilize_the_people focus = ARS_the_truth_of_arstotzka }
+		x = 32
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_nirsk_petrochemical
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = ARS_the_fardesto_mine }
+		x = 32
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = rubber
+					amount = 16
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 16
+				}
+			}
+			add_tech_bonus = {
+				name = ARS_nirsk_petrochemical
+				bonus = 0.5
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+	focus = {
+		id = ARS_ears_of_the_nation
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = ARS_fortify_the_border focus = ARS_mobilize_the_people focus = ARS_the_truth_of_arstotzka }
+		x = 38
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = ARS_the_ears_of_the_nation
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_develop_the_south
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ARS_fortify_the_border focus = ARS_mobilize_the_people focus = ARS_the_truth_of_arstotzka }
+		x = 34
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			204 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			205 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			206 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			185 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			186 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			187 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			184 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			183 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			182 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			188 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			192 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			193 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			202 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_develop_the_north
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ARS_develop_the_south }
+		x = 34
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			172 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			171 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			168 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			167 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			165 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			3 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_state_run_education
+		icon = GFX_goal_ars_education
+		prerequisite = { focus = ARS_fortify_the_border focus = ARS_mobilize_the_people focus = ARS_the_truth_of_arstotzka }
+		x = 36
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = ARS_state_education1
+		}
+	}
+	focus = {
+		id = ARS_state_sponsored_engineers
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = ARS_state_run_education }
+		x = 36
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = ARS_state_education2
+		}
+	}
+	focus = {
+		id = ARS_state_controlled_manufacturing
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = ARS_ears_of_the_nation }
+		x = 38
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = ARS_state_education3
+		}
+	}
+	focus = {
+		id = ARS_first_three_years_plan
+		icon = GFX_goal_three_years_plan
+		prerequisite = { focus = ARS_nirsk_petrochemical focus = ARS_develop_the_north focus = ARS_state_sponsored_engineers focus = ARS_state_controlled_manufacturing }
+		x = 35
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				every_neighbor_state = {
+					limit = {
+						controller = {
+							OR = {
+								original_tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_second_three_years_plan
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = ARS_first_three_years_plan }
+		x = 35
+		y = 4
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 151 152 146 158 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				every_neighbor_state = {
+					limit = {
+						controller = {
+							OR = {
+								original_tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_the_six_year_plan
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = ARS_second_three_years_plan }
+		x = 35
+		y = 5
+		cost = 15
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 197 198 199 200 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				every_neighbor_state = {
+					limit = {
+						controller = {
+							OR = {
+								original_tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_self_sufficient_motherland
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = ARS_the_six_year_plan }
+		x = 35
+		y = 6
+		cost = 15
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = ARS_patriotic_workers
+			random_owned_controlled_state = {
+				prioritize = { 194 201 203 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				every_neighbor_state = {
+					limit = {
+						controller = {
+							OR = {
+								original_tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 165 17 169 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				every_neighbor_state = {
+					limit = {
+						controller = {
+							OR = {
+								original_tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_kolechian_consolidation
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = ARS_kolechia_annexed }
+		x = 16
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		available = {
+			KOL = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = KOL
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_kolechian_exploitation
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = ARS_kolechian_consolidation }
+		x = 16
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_state = {
+				limit = {
+					is_core_of = KOL
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+			random_state = {
+				limit = {
+					is_core_of = KOL
+				}
+				add_resource = {
+					type = rubber
+					amount = 10
+				}
+			}
+		}
+	}
+	focus = {	
+		id = ARS_kolechian_development
+		icon = GFX_goal_ars_fabrics
+		prerequisite = { focus = ARS_kolechian_exploitation }
+		x = 16
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_state = {
+				limit = {
+					is_core_of = KOL
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					is_core_of = KOL
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_develop_the_neighbours
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ARS_kolechia_annexed }
+		available = {
+			is_subject = no
+			any_controlled_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		x = 18
+		y = 1
+		cost = 15
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_develop_the_nothern_plains
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = ARS_kolechia_annexed }
+		available = {
+			is_subject = no
+			all_of_scopes = {
+				array = OBR.core_states
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				tooltip = OBR_all_core_states_trigger_tt
+			}
+		}
+		x = 19
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = OBR }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = OBR }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = OBR }
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_develop_the_western_plains
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = ARS_kolechia_annexed }
+		available = {
+			is_subject = no
+			all_of_scopes = {
+				array = UNF.core_states
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				tooltip = UNF_all_core_states_trigger_tt
+			}
+		}
+		x = 20
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = UNF }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = UNF }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = UNF }
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ARS_neighbour_volunteers
+		icon = GFX_goal_ars_volunteers
+		prerequisite = { focus = ARS_develop_the_neighbours }
+		x = 18
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_manpower = 23000
+		}
+	}
+	focus = {
+		id = ARS_obristan_volunteers
+		icon = GFX_goal_ars_volunteers
+		prerequisite = { focus = ARS_develop_the_nothern_plains }
+		x = 19
+		y = 4
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_manpower = 24500
+		}
+	}
+	focus = {
+		id = ARS_united_federation_volunteers
+		icon = GFX_goal_ars_volunteers
+		prerequisite = { focus = ARS_develop_the_western_plains }
+		x = 20
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_manpower = 15700
+		}
+	}
+	focus = {
+		id = ARS_arstotzkan_valor
+		icon = GFX_goal_ars_ars
+		prerequisite = { focus = ARS_kolechian_development }
+		prerequisite = { focus = ARS_neighbour_volunteers }
+		prerequisite = { focus = ARS_obristan_volunteers }
+		prerequisite = { focus = ARS_united_federation_volunteers }
+		prerequisite = { focus = ARS_Formalize_Greater_Arstotzka }
+		x = 19
+		y = 5
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = ARS_arstotzkan_devotion
+		}
+	}
+}

@@ -1,7 +1,7 @@
 ideas = {
 	academy_spirit = {
 		
-		nepotism_academy_spirit = {		#NW
+		nepotism_academy_spirit = {		# GtA
 			ledger = army
 			allowed = {
 				has_dlc = "No Step Back"
@@ -482,7 +482,7 @@ ideas = {
 			}
 		}
 
-		excessive_parade_drill_spirit = {		#NW
+		excessive_parade_drill_spirit = {		# GtA
 			ledger = army
 			allowed = {
 				has_dlc = "No Step Back"
@@ -508,7 +508,7 @@ ideas = {
 			}
 		}
 
-		political_connections_spirit = {		#NW
+		political_connections_spirit = {		# GtA
 			ledger = army
 			allowed = {
 				has_dlc = "No Step Back"
@@ -695,7 +695,7 @@ ideas = {
 			}
 		}
 
-		peoples_army_asy_army_spirit = {	#NW
+		peoples_army_asy_army_spirit = {	# GtA
 			ledger = army
 			allowed = {
 				has_dlc = "No Step Back"
@@ -729,7 +729,7 @@ ideas = {
 			}
 		}
 
-		armed_people_army_spirit = {		#NW
+		armed_people_army_spirit = {		# GtA
 			ledger = army
 			allowed = {
 				has_dlc = "No Step Back"
@@ -765,7 +765,7 @@ ideas = {
 
 	division_command_spirit = {
 
-		intercommand_rivalries_spirit = {		#NW
+		intercommand_rivalries_spirit = {		# GtA
 			ledger = army
 			allowed = {
 				has_dlc = "No Step Back"
@@ -897,7 +897,7 @@ ideas = {
 			}
 		}
 
-		upbeat_command_spirit_nw = {		#NW
+		upbeat_command_spirit_nw = {		# GtA
 			ledger = army
 			allowed = {
 				has_dlc = "No Step Back"
@@ -925,7 +925,7 @@ ideas = {
 			}
 		}
 
-		expeditionary_spirit = {			#NW
+		expeditionary_spirit = {			# GtA
 			ledger = army
 			allowed = {
 				has_dlc = "No Step Back"
@@ -1106,7 +1106,7 @@ ideas = {
 			}
 		}
 
-		peoples_army_asy_division_command_spirit_nw = {		#NW
+		peoples_army_asy_division_command_spirit_nw = {		# GtA
 			ledger = army
 			allowed = {
 				has_dlc = "No Step Back"
@@ -1131,7 +1131,7 @@ ideas = {
 			}
 		}
 
-		traditionalism_academy_spirit_nw = {		#NW
+		traditionalism_academy_spirit_nw = {		# GtA
 			ledger = army
 			allowed = {
 				has_dlc = "No Step Back"
@@ -1152,6 +1152,69 @@ ideas = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
 				}
+			}
+		}
+	}
+	
+	
+	division_tank_school_spirit = {			# GtA
+		
+		own_tank_school_spirit = {
+			allowed = {
+				has_dlc = "No Step Back"
+				NOT = { tag = SAI }
+			}
+			ledger = army
+			cost = 50
+			available = {
+				has_tech = gwtank_chassis
+				num_of_military_factories > 19
+			}
+			visible = {
+				AND = {
+					NOT = { has_tech = own_tank_school_tech }
+					NOT = { has_idea = own_tank_school_spirit }
+				}
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			on_add = {
+				if = {
+					limit = { check_variable = { global.num_of_extra_tank_school_var > 0 } }
+					hidden_effect = {
+						meta_effect = {
+							text = {
+								save_global_event_target_as = tank_school_owner_[NUM_OF_EXTRA_TANK_SCHOOL]
+								swap_ideas = {
+									remove_idea = own_tank_school_spirit
+									add_idea = tank_school_[NUM_OF_EXTRA_TANK_SCHOOL]_spirit
+								}
+							}
+							NUM_OF_EXTRA_TANK_SCHOOL = "[?global.num_of_extra_tank_school_var]"
+						}
+						add_to_variable = { global.num_of_extra_tank_school_var = -1 }
+					}
+					custom_effect_tooltip = own_tank_school_spirit_tt
+				}
+				else = {
+					set_technology = {
+						own_tank_school_tech = 1
+					}
+				}
+			}
+			modifier = {
+				experience_gain_army = 0.1
+				custom_modifier_tooltip = tank_school_modifier_tt
+			}
+			picture = man_five_year_plan_tank
+			ai_will_do = {
+				factor = 5
+				modifier = { factor = 15	is_major = yes }
+				modifier = { factor = 5		has_war = yes }
+				modifier = { factor = 1.5	date > 1937.1.1 }
+				modifier = { factor = 1.5	date > 1938.1.1 }
+				modifier = { factor = 1.5	date > 1939.1.1 }
 			}
 		}
 	}

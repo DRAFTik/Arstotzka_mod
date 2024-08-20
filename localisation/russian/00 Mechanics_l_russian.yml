@@ -1,0 +1,15 @@
+﻿l_russian:
+
+##################
+### PROVISIONS ###
+##################
+
+    gta_provisions_tooltip: "§HПродовольственная обеспеченность (тонн)§!\n\nТекущий запас провианта: [?ROOT.provision_total_var]"
+    gta_provisions_delayed_tooltip: "Продовольственная обеспеченность отображает потребность в продуктах питания вашей страны."
+    
+    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\n\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.modifier@num_generation_electric_power|1+]\n    - ТЭС: [?electric_power_thermal_generation_var|1+]\n    - ГЭС: [?electric_power_hydro_generation_var|1+]\n    - АЭС: [?electric_power_nuclear_generation_var|1+]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Инфраструктура (вкл. социальную): [?electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?electric_power_cost_army_var|1-]\n    - Другие: [?electric_power_cost_other_var|1-]"
+    gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии."
+    
+    num_generation_electric_power: "Производство электроэнергии (МВт*ч)"
+    num_use_electric_power: "Потребление электроэнергии (МВт*ч)"
+    num_use_electric_power_4_tt: "Потребление электроэнергии (МВт*ч): +4"

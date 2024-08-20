@@ -2,6 +2,9 @@ state={
 	id=200
 	name="STATE_200"
 	history={
+		buildings = {
+			thermal_power_plant = 1
+		}
 		owner = ARS
 		add_core_of = ARS
 	}

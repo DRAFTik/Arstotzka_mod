@@ -1,0 +1,122 @@
+calculate_electric_power_effect = {
+#	clear_variable = infrastructure
+#	clear_variable = hospital
+#	clear_variable = arms_factory
+#	clear_variable = industrial_complex
+#	clear_variable = dockyard
+#	clear_variable = supply_node
+#	clear_variable = naval_base
+#	
+#	clear_variable = anti_air_building
+#	clear_variable = air_base
+#	clear_variable = bunker
+#	clear_variable = coastal_bunker
+#	clear_variable = radar_station
+#	clear_variable = rocket_site
+#	
+#	clear_variable = synthetic_refinery
+#	clear_variable = fuel_silo
+#	clear_variable = nuclear_reactor
+
+
+### ПРОИЗВОДСТВО ###
+	while_loop_effect = { limit = { thermal_power_plant > var:thermal_power_plant }	add_to_temp_variable = { thermal_power_plant = 1 } }
+	while_loop_effect = { limit = { hydro_power_plant > var:hydro_power_plant }		add_to_temp_variable = { hydro_power_plant = 1 } }
+	while_loop_effect = { limit = { nuclear_power_plant > var:nuclear_power_plant }	add_to_temp_variable = { nuclear_power_plant = 1 } }
+	set_variable = { electric_power_thermal_generation_var = thermal_power_plant }
+	multiply_variable = { electric_power_thermal_generation_var = 60 }
+	set_variable = { electric_power_hydro_generation_var = hydro_power_plant }
+	multiply_variable = { electric_power_hydro_generation_var = 150 }
+	set_variable = { electric_power_nuclear_generation_var = nuclear_power_plant }
+	multiply_variable = { electric_power_nuclear_generation_var = 500 }
+
+
+
+
+### ЗАТРАТЫ ###
+
+# Инфра
+	while_loop_effect = { limit = { infrastructure > var:infrastructure }			add_to_temp_variable = { infrastructure = 1 } }
+	while_loop_effect = { limit = { hospital > var:hospital }						add_to_temp_variable = { hospital = 1 } }
+	set_variable = { electric_power_cost_infrastructure_var = infrastructure }
+	add_to_variable = { electric_power_cost_infrastructure_var = hospital }
+
+# Фабрики
+	while_loop_effect = { limit = { arms_factory > var:arms_factory }				add_to_temp_variable = { arms_factory = 1 } }
+	while_loop_effect = { limit = { industrial_complex > var:industrial_complex }	add_to_temp_variable = { industrial_complex = 1 } }
+	while_loop_effect = { limit = { dockyard > var:dockyard }						add_to_temp_variable = { dockyard = 1 } }
+	set_temp_variable = { arms_factory_temp = arms_factory }
+	multiply_temp_variable = { arms_factory_temp = 6 }
+	set_temp_variable = { industrial_complex_temp = industrial_complex }
+	multiply_temp_variable = { industrial_complex_temp = 5 }
+	set_temp_variable = { dockyard_temp = dockyard }
+	multiply_temp_variable = { dockyard_temp = 7 }
+	
+	set_variable = { electric_power_cost_factory_var = arms_factory_temp }
+	add_to_variable = { electric_power_cost_factory_var = industrial_complex_temp }
+	add_to_variable = { electric_power_cost_factory_var = dockyard_temp }
+	
+# Снабжение	
+	while_loop_effect = { limit = { supply_node > var:supply_node }					add_to_temp_variable = { supply_node = 1 } }
+	while_loop_effect = { limit = { naval_base > var:naval_base }					add_to_temp_variable = { naval_base = 1 } }
+	set_temp_variable = { supply_node_temp = supply_node }
+	multiply_temp_variable = { supply_node_temp = 2 }
+	set_temp_variable = { naval_base_temp = naval_base }
+	multiply_temp_variable = { naval_base_temp = 0.5 }
+	
+	set_variable = { electric_power_cost_supply_var = supply_node_temp }
+	add_to_variable = { electric_power_cost_supply_var = naval_base_temp }
+
+# Сооружения военного назначения
+	while_loop_effect = { limit = { anti_air_building > var:anti_air_building }		add_to_temp_variable = { anti_air_building = 1 } }
+	while_loop_effect = { limit = { air_base > var:air_base }						add_to_temp_variable = { air_base = 1 } }
+	while_loop_effect = { limit = { bunker > var:bunker }							add_to_temp_variable = { bunker = 1 } }
+	while_loop_effect = { limit = { coastal_bunker > var:coastal_bunker }			add_to_temp_variable = { coastal_bunker = 1 } }
+	while_loop_effect = { limit = { radar_station > var:radar_station }				add_to_temp_variable = { radar_station = 1 } }
+	while_loop_effect = { limit = { rocket_site > var:rocket_site }					add_to_temp_variable = { rocket_site = 1 } }
+	set_temp_variable = { anti_air_building_temp = anti_air_building }
+	add_to_temp_variable = { anti_air_building_temp = air_base }
+	multiply_temp_variable = { anti_air_building_temp = 0.5 }
+	set_temp_variable = { bunker_temp = bunker }
+	add_to_temp_variable = { bunker_temp = coastal_bunker }
+	multiply_temp_variable = { bunker_temp = 0.1 }
+	set_temp_variable = { radar_station_temp = radar_station }
+	add_to_temp_variable = { radar_station_temp = rocket_site }
+	multiply_temp_variable = { radar_station_temp = 1.5 }
+	
+	set_variable = { electric_power_cost_army_var = anti_air_building }
+	add_to_variable = { electric_power_cost_army_var = anti_air_building_temp }
+	add_to_variable = { electric_power_cost_army_var = bunker_temp }
+	add_to_variable = { electric_power_cost_army_var = radar_station_temp }
+
+# Другие
+	while_loop_effect = { limit = { synthetic_refinery > var:synthetic_refinery }	add_to_temp_variable = { synthetic_refinery = 1 } }
+	while_loop_effect = { limit = { fuel_silo > var:fuel_silo }						add_to_temp_variable = { fuel_silo = 1 } }
+	while_loop_effect = { limit = { nuclear_reactor > var:nuclear_reactor }			add_to_temp_variable = { nuclear_reactor = 1 } }
+	set_temp_variable = { synthetic_refinery_temp = synthetic_refinery }
+	multiply_temp_variable = { synthetic_refinery_temp = 4 }
+	set_temp_variable = { fuel_silo_temp = fuel_silo }
+	multiply_temp_variable = { fuel_silo_temp = 0.5 }
+	set_temp_variable = { nuclear_reactor_temp = nuclear_reactor }
+	multiply_temp_variable = { nuclear_reactor_temp = 15 }
+	
+	set_variable = { electric_power_cost_other_var = synthetic_refinery_temp }
+	add_to_variable = { electric_power_cost_other_var = fuel_silo_temp }
+	add_to_variable = { electric_power_cost_other_var = nuclear_reactor_temp }
+	
+	
+	
+# Баланс энергии
+	set_variable = { electric_power_cost_var = electric_power_cost_infrastructure_var }
+	add_to_variable = { electric_power_cost_var = electric_power_cost_factory_var }
+	add_to_variable = { electric_power_cost_var = electric_power_cost_supply_var }
+	add_to_variable = { electric_power_cost_var = electric_power_cost_army_var }
+	add_to_variable = { electric_power_cost_var = electric_power_cost_other_var }
+	
+	set_variable = { electric_power_total_var = electric_power_cost_var }
+	
+	set_variable = { electric_power_percent_var = modifier@num_generation_electric_power }
+	divide_variable = { electric_power_percent_var = electric_power_total_var }
+	multiply_variable = { electric_power_total_var = -1 }
+	add_to_variable = { electric_power_total_var = modifier@num_generation_electric_power }
+}

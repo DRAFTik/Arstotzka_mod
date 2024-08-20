@@ -1,0 +1,36 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			set_variable = { global.num_of_extra_tank_school_var = 5 }
+			
+			every_country = {
+				calculate_electric_power_effect = yes
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): infrastructure: [?infrastructure]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): arms_factory: [?arms_factory]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): industrial_complex: [?industrial_complex]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): dockyard: [?dockyard]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): anti_air_building: [?anti_air_building]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): air_base: [?air_base]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): supply_node: [?supply_node]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): naval_base: [?naval_base]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): bunker: [?bunker]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): coastal_bunker: [?coastal_bunker]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): synthetic_refinery: [?synthetic_refinery]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): fuel_silo: [?fuel_silo]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): radar_station: [?radar_station]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): rocket_site: [?rocket_site]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): nuclear_reactor: [?nuclear_reactor]"
+			}
+			log = "============================================"
+		}
+	}
+
+
+
+	on_daily = {
+		effect = {
+			calculate_electric_power_effect = yes
+		}
+	}
+}

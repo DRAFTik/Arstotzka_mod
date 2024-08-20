@@ -9,6 +9,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			thermal_power_plant = 1
 		}
 		owner = ANT
 		add_core_of = ANT

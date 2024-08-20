@@ -29,6 +29,8 @@ add_ideas = {
 	isolation
 	export_focus
 	volunteer_only
+	
+	KOL_war_with_Arstotzka
 }
 
 
