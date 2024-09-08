@@ -5,17 +5,14 @@ state={
 	resources={
 		steel=44.000
 	}
-
 	history={
 		buildings = {
 			infrastructure = 1
-
+			agro_complex = 1
 		}
 		owner = IMP
 		add_core_of = IMP
-
 	}
-
 	provinces={
 		179 426 593 599 727 765 841 864 1527 1653 1697 2137 2190 2501 2528 2664 2937 4462 4465 4476 4480 4486 4489 4492 4494 4496 4504 4514 
 	}

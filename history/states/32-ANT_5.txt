@@ -11,13 +11,10 @@ state={
 		buildings = {
 			infrastructure = 1
 			arms_factory = 1
-
 		}
 		owner = ANT
 		add_core_of = ANT
-
 	}
-
 	provinces={
 		184 242 618 810 1460 1528 1638 1793 1835 1906 2066 2121 2861 2908 3838 3897 3915 3933 
 	}

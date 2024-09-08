@@ -9,11 +9,10 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
-
+			livestock_complex = 1
 		}
 		owner = ANT
 		add_core_of = ANT
-
 	}
 
 	provinces={

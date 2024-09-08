@@ -1,0 +1,14 @@
+# this is a check to see if a major is an actual major due to its number of factories
+# meaning it's the top 7 in the world or has at least 70% of the average of those 7
+# we're also including a number of tags which should act like majors even if they're not in that category
+
+
+is_valid_state_for_development = {
+	impassable = no
+	NOT = {
+		has_state_category = wasteland
+		has_state_category = enclave
+		has_state_category = tiny_island
+	}
+}
+

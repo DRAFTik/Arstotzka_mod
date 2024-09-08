@@ -1,0 +1,157 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+# building_target
+
+
+
+### ЭНЕРГИЯ ###
+
+we_dont_need_thermal_power_plant = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		OR = {
+			check_variable = { var = electric_power_total_var value = 20 compare = greater_than_or_equals }
+			NOT = { check_variable = { thermal_power_plant_ok = thermal_power_plant_total } }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = thermal_power_plant	value = -1 }
+}
+
+we_dont_need_hydro_power_plant = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		check_variable = { var = electric_power_total_var value = 20 compare = greater_than_or_equals }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = hydro_power_plant	value = -1 }
+}
+
+
+
+
+
+we_need_thermal_power_plant = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		date > 1983.1.2
+		check_variable = { var = electric_power_total_var value = 8 compare = less_than_or_equals }
+		check_variable = { thermal_power_plant_ok = thermal_power_plant_total }
+		fuel_ratio > 0.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = thermal_power_plant	value = 1 }
+}
+
+we_need_hydro_power_plant = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		date > 1983.1.2
+		OR = {
+			num_of_civilian_factories_available_for_projects > 30
+			NOT = { check_variable = { thermal_power_plant_ok = thermal_power_plant_total } }
+		}
+		check_variable = { var = electric_power_total_var value = 8 compare = less_than_or_equals }
+		any_owned_state = { is_coastal = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = hydro_power_plant	value = 1 }
+}
+
+we_need_nuclear_power_plant = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_civilian_factories_available_for_projects > 30
+		check_variable = { var = electric_power_total_var value = 0 compare = less_than_or_equals }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = nuclear_power_plant	value = 1 }
+}
+
+
+
+
+
+
+we_need_hospital = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_civilian_factories_available_for_projects > 15
+		set_temp_variable = { hospital_upper_limit = num_owned_states }
+		if = {
+			limit = {
+				num_of_civilian_factories_available_for_projects > 30
+				num_of_civilian_factories_available_for_projects < 46
+			}
+			multiply_temp_variable = { hospital_upper_limit = 2 }
+			subtract_from_temp_variable = { hospital_upper_limit = 1 }
+		}
+		if = {
+			limit = {
+				num_of_civilian_factories_available_for_projects > 45
+				num_of_civilian_factories_available_for_projects < 61
+			}
+			multiply_temp_variable = { hospital_upper_limit = 3 }
+			subtract_from_temp_variable = { hospital_upper_limit = 1 }
+		}
+		if = {
+			limit = {
+				num_of_civilian_factories_available_for_projects > 60
+				num_of_civilian_factories_available_for_projects < 91
+			}
+			multiply_temp_variable = { hospital_upper_limit = 4 }
+			subtract_from_temp_variable = { hospital_upper_limit = 1 }
+		}
+		if = {
+			limit = {
+				num_of_civilian_factories_available_for_projects > 90
+			}
+			multiply_temp_variable = { hospital_upper_limit = 5 }
+			subtract_from_temp_variable = { hospital_upper_limit = 1 }
+		}
+		hospital < hospital_upper_limit
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target		id = hospital		value = 1 }
+}

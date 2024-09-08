@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			agro_complex = 1
 		}
 		owner = ANT
 		add_core_of = ANT

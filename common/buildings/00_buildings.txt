@@ -210,7 +210,7 @@ buildings = {
 		show_modifier = yes
 		fuel_gain_from_states = 2.0 #per hour
 		hidden_modifier = { num_use_electric_power = 4.0 }
-		custom_modifier_tooltip = num_use_electric_power_4_tt
+#		custom_modifier_tooltip = num_use_electric_power_4_tt
 		allied_build = yes
 	}
 
@@ -273,11 +273,14 @@ buildings = {
 		num_use_electric_power = 15
 		infrastructure_construction_effect = yes
 	}
-	
+
+
+
+
 	universal_factory = {
 		show_on_map = 0
 		base_cost = 12000
-		icon_frame = 18
+		icon_frame = 13
 		max_level = 40
 		shares_slots = yes
 		value = 11
@@ -286,26 +289,72 @@ buildings = {
 		universal_factory_modifier = 1
 		num_use_electric_power = 11
 	}
+
+
+### ЕДА
+
+	agro_complex = {			# ЕЖЕГОДНО // ПОСЕВНАЯ
+		show_on_map = 0
+		base_cost = 5000
+		per_level_extra_cost = 500
+		icon_frame = 13
+		max_level = 5
+		shares_slots = yes
+		value = 11
+		infrastructure_construction_effect = yes
+		show_modifier = yes
+		num_use_electric_power = 0.25
+		num_generation_provision_yearly = 300
+	}
 	
+	livestock_complex = {		# ЕЖЕНЕДЕЛЬНО
+		show_on_map = 0
+		base_cost = 5000
+		per_level_extra_cost = 500
+		icon_frame = 13
+		max_level = 5
+		shares_slots = yes
+		value = 11
+		infrastructure_construction_effect = yes
+		show_modifier = yes
+		num_use_electric_power = 0.5
+		num_generation_provision_weekly = 3.8
+	}
 	
-	
-	
+	agro_silo = {
+		show_on_map = 0
+		base_cost = 5000
+		per_level_extra_cost = 500
+		icon_frame = 13
+		max_level = 5
+		shares_slots = yes
+		value = 11
+		infrastructure_construction_effect = yes
+		show_modifier = yes
+		num_use_electric_power = 0.1
+	}
+
+
+### ЭЛЕКТРИЧЕСТВО
+
 	thermal_power_plant = {
 		show_on_map = 0
-		base_cost = 8000
-		icon_frame = 18
+		base_cost = 10000
+		icon_frame = 13
 		max_level = 5
 		shares_slots = yes
 		value = 11
 		infrastructure_construction_effect = yes
 		show_modifier = yes
 		num_generation_electric_power = 60
-		fuel_cost = 1		#per hour
+		fake_fuel_cost = 24
+#		fuel_cost = 1		#per hour
 	}
+	
 	hydro_power_plant = {
 		show_on_map = 0
-		base_cost = 15000
-		icon_frame = 18
+		base_cost = 18000
+		icon_frame = 13
 		max_level = 5
 		only_costal = yes
 		shares_slots = yes
@@ -314,10 +363,11 @@ buildings = {
 		show_modifier = yes
 		num_generation_electric_power = 150
 	}
+	
 	nuclear_power_plant = {
 		show_on_map = 0
 		base_cost = 35000
-		icon_frame = 18
+		icon_frame = 13
 		max_level = 1
 		shares_slots = yes
 		value = 11

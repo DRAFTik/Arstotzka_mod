@@ -1,3 +1,12 @@
+GtA_debug_decisions = {
+	icon = generic_propaganda
+
+	allowed = {
+		is_debug = yes
+	}
+	visible_when_empty = yes
+}
+
 propaganda_efforts = {
 	icon = generic_propaganda
 

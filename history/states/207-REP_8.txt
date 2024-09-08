@@ -1,0 +1,28 @@
+state={
+	id=207
+	name="STATE_207"
+	resources={
+		tungsten=33.000
+		steel=10.000
+	}
+	history={
+		victory_points = {
+			775 1 
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			agro_complex = 1
+			livestock_complex = 1
+		}
+		owner = REP
+		add_core_of = REP
+	}
+	provinces={
+		170 180 212 385 463 634 775 908 1140 1388 2070 2404 2452 2578 2657 2703 4099 4118 4127 4152 4155 4159 4177 4185 4239 4263 4278 
+	}
+	manpower=756238
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

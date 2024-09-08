@@ -50,3 +50,24 @@ num_use_electric_power = {
 	precision = 1
 	category = country
 }
+
+fake_fuel_cost = {
+	color_type = bad
+	value_type = number
+	precision = 1
+	category = country
+}
+
+num_generation_provision_weekly = {
+	color_type = good
+	value_type = number
+	precision = 1
+	category = country
+}
+
+num_generation_provision_yearly = {
+	color_type = good
+	value_type = number
+	precision = 1
+	category = country
+}

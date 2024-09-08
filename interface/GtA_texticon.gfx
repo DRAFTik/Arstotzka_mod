@@ -9,6 +9,22 @@ spriteTypes = {
 		noOfFrames = 2		
 	}
 	
+	spriteType = {
+		name = "GFX_provisions_icon"
+		texturefile = "gfx/texticons/provisions_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_electric_power_icon"
+		texturefile = "gfx/texticons/light_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_electric_power_pure_icon"
+		texturefile = "gfx/texticons/light_pure_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	
 	
 	
 ### FOR TECHNOLOGY

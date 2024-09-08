@@ -1,0 +1,15 @@
+state={
+	id=208
+	name="STATE_208"
+	history={
+		owner = REP
+		add_core_of = REP
+	}
+	provinces={
+		1456 1513 1594 4107 
+	}
+	manpower=6512
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=wasteland
+}

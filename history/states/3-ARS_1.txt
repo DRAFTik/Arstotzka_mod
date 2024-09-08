@@ -13,6 +13,7 @@ state={
 			infrastructure = 1
 			industrial_complex = 1
 			dockyard = 1
+			agro_complex = 1
 		}
 		owner = ARS
 		add_core_of = ARS

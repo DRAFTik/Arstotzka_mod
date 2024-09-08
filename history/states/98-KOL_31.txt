@@ -5,6 +5,10 @@ state={
 		steel=25.000
 	}
 	history={
+		buildings = {
+			agro_complex = 1
+			livestock_complex = 1
+		}
 		owner = KOL
 		add_core_of = KOL
 	}

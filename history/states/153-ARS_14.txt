@@ -2,6 +2,9 @@ state={
 	id=153
 	name="STATE_153"
 	history={
+		buildings = {
+			livestock_complex = 1
+		}
 		owner = ARS
 		add_core_of = ARS
 	}

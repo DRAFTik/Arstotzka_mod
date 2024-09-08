@@ -1,0 +1,44 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = {
+	name = GET_THERMAL_POWER_PLANT_OK
+	text = {
+		trigger = {
+			check_variable = { thermal_power_plant_ok = thermal_power_plant_total }
+		}
+		localization_key = GET_THERMAL_POWER_PLANT_GREEN
+	}
+	text = {
+		localization_key = GET_THERMAL_POWER_PLANT_RED
+	}
+}
+
+defined_text = {
+	name = GET_CROP_LOC
+	text = {
+		trigger = {
+			has_country_flag = crop_failure_flag
+		}
+		localization_key = GET_BAD_HARVEST_LOC
+	}
+	text = {
+		trigger = {
+			has_country_flag = record_harvest_flag
+		}
+		localization_key = GET_RECORD_HARVEST_LOC
+	}
+	text = {
+		trigger = {
+			has_country_flag = normal_harvest_flag
+		}
+		localization_key = GET_NORMAL_HARVEST_LOC
+	}
+}

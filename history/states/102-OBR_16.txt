@@ -11,6 +11,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			thermal_power_plant = 1
+			agro_complex = 1
 		}
 		owner = OBR
 		add_core_of = OBR

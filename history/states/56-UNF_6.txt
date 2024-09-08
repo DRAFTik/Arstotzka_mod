@@ -4,6 +4,9 @@ state={
 	history={
 		buildings = {
 			infrastructure = 2
+			agro_complex = 1
+			livestock_complex = 3
+			agro_silo = 1
 		}
 		owner = UNF
 		add_core_of = UNF

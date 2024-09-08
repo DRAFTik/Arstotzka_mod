@@ -8,6 +8,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 2
+			agro_complex = 1
 			3194 = {
 				naval_base = 1
 			}

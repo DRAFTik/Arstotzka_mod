@@ -6,6 +6,7 @@ on_actions = {
 			
 			every_country = {
 				calculate_electric_power_effect = yes
+				calculate_electric_power_LOG_effect = yes
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): infrastructure: [?infrastructure]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): arms_factory: [?arms_factory]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): industrial_complex: [?industrial_complex]"
@@ -23,6 +24,11 @@ on_actions = {
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): nuclear_reactor: [?nuclear_reactor]"
 			}
 			log = "============================================"
+			every_country = {
+				calculate_provision_start_effect = yes
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): provision_total_var: [?provision_total_var]"
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): max_manpower_k: [?max_manpower_k]"
+			}
 		}
 	}
 
@@ -31,6 +37,32 @@ on_actions = {
 	on_daily = {
 		effect = {
 			calculate_electric_power_effect = yes
+			calculate_provision_daily_effect = yes			# стата
+		}
+	}
+
+	on_weekly = {
+		effect = {
+			calculate_electric_power_LOG_effect = yes
+			calculate_provision_weekly_effect = yes			# животнаводство
+		}
+	}
+
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					meta_trigger = {
+						text = {
+							date > [YEAR].7.31
+							date < [YEAR].8.2
+						}
+						YEAR = "[?global.year]"
+					}
+				}
+				calculate_provision_yearly_effect = yes		# урожай культур
+			}
+			calculate_provision_monthly_effect = yes		# порча еды
 		}
 	}
 }

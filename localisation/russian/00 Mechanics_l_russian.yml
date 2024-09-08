@@ -1,15 +1,38 @@
 ﻿l_russian:
 
+    GtA_debug_decisions: "DEBUG"
+    GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]"
+
 ##################
 ### PROVISIONS ###
 ##################
 
-    gta_provisions_tooltip: "§HПродовольственная обеспеченность (тонн)§!\n\nТекущий запас провианта: [?ROOT.provision_total_var]"
+    gta_provisions_tooltip: "§HПродовольственная обеспеченность (тыс. тонн)§!\n\nТекущий запас провианта: [?ROOT.provision_total_var|+1*]\nТекущий баланс провианта: [?ROOT.provision_balance_var|+1*] в день\nТекущее потребление провианта: [?ROOT.provision_need_var|-1*] в день\n\nПроизводство провианта:\n    - в неделю: [?ROOT.weekly_income_provision|+1*] от [?ROOT.livestock_complex_total|+0] шт.\n    - в год: [?ROOT.yearly_income_provision|+1*] от [?ROOT.agro_complex_total|+0] шт.[GET_CROP_LOC]\n\nУровень сохранения провизии: [?ROOT.monthly_save_provision|+0%]\nВ этом месяце ожидается порча: [?ROOT.bad_provision_var|-1*]"
     gta_provisions_delayed_tooltip: "Продовольственная обеспеченность отображает потребность в продуктах питания вашей страны."
-    
-    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\n\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.modifier@num_generation_electric_power|1+]\n    - ТЭС: [?electric_power_thermal_generation_var|1+]\n    - ГЭС: [?electric_power_hydro_generation_var|1+]\n    - АЭС: [?electric_power_nuclear_generation_var|1+]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Инфраструктура (вкл. социальную): [?electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?electric_power_cost_army_var|1-]\n    - Другие: [?electric_power_cost_other_var|1-]"
+    GET_BASE_HARVEST_LOC: "\nУрожайность текущего года:"
+    GET_BAD_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §RНЕУРОЖАЙ§!"
+    GET_RECORD_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §GРЕКОРД§!"
+    GET_NORMAL_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §YОБЫЧНЫЙ§!"
+
+
+######################
+### ELECTRIC POWER ###
+######################
+
+    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\n\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.modifier@num_generation_electric_power|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|+0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]"
     gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии."
     
+    GET_THERMAL_POWER_PLANT_RED: "[?ROOT.thermal_power_plant_ok|0-]"
+    GET_THERMAL_POWER_PLANT_GREEN: "[?ROOT.thermal_power_plant_ok|0+]"
+    thermal_power_plant_fuel_cost_dyn: "Потребление ТЭС"
+
+
+
+### MODIFIERS ###
+
+    fake_fuel_cost: "Потребление топлива"
     num_generation_electric_power: "Производство электроэнергии (МВт*ч)"
     num_use_electric_power: "Потребление электроэнергии (МВт*ч)"
     num_use_electric_power_4_tt: "Потребление электроэнергии (МВт*ч): +4"
+    num_generation_provision_weekly: "Провиант еженедельно"
+    num_generation_provision_yearly: "Провиант ежегодно"

@@ -9,6 +9,8 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			livestock_complex = 2
+			agro_silo = 1
 		}
 		owner = OBR
 		add_core_of = OBR

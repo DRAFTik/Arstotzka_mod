@@ -8,6 +8,8 @@ state={
 		buildings = {
 			infrastructure = 1
 			arms_factory = 2
+			agro_complex = 1
+			livestock_complex = 1
 		}
 		owner = IMP
 		add_core_of = IMP

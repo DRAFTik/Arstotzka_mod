@@ -5,7 +5,9 @@ state={
 
 	history={
 		buildings = {
-
+			agro_complex = 1
+			livestock_complex = 3
+			agro_silo = 1
 		}
 		owner = SKO
 		add_core_of = SKO

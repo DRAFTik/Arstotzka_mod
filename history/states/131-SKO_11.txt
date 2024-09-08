@@ -6,6 +6,8 @@ state={
 			3575 1 
 		}
 		buildings = {
+			agro_complex = 1
+			livestock_complex = 3
 		}
 		owner = SKO
 		add_core_of = SKO

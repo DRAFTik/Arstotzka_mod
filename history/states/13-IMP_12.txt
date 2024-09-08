@@ -8,7 +8,6 @@ state={
 		tungsten=75.000
 		aluminium=10.000
 	}
-
 	history={
 		owner = IMP
 		victory_points = {
@@ -22,18 +21,13 @@ state={
 			thermal_power_plant = 1
 			833 = {
 				naval_base = 4
-
 			}
 			1587 = {
 				naval_base = 2
-
 			}
-
 		}
 		add_core_of = IMP
-
 	}
-
 	provinces={
 		105 152 204 418 574 833 847 881 1587 2120 4578 4580 4587 4591 4593 4594 4600 4604 4609
 	}

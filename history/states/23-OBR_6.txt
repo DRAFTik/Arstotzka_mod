@@ -11,6 +11,7 @@ state={
 			infrastructure = 2
 			arms_factory = 1
 			industrial_complex = 2
+			livestock_complex = 1
 		}
 		owner = OBR
 		add_core_of = OBR

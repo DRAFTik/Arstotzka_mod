@@ -10,6 +10,8 @@ state={
 			infrastructure = 1
 			arms_factory = 1
 			thermal_power_plant = 1
+			agro_complex = 1
+			agro_silo = 1
 		}
 		owner = SKO
 		add_core_of = SKO

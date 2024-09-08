@@ -1,3 +1,4 @@
+
 state={
 	id=36
 	name="STATE_36"
@@ -5,12 +6,14 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+			agro_complex = 1
+			livestock_complex = 1
 		}
 		owner = REP
 		add_core_of = REP
 	}
 	provinces={
-		139 371 376 527 616 691 710 939 1036 1088 1245 1297 1623 1908 2239 2348 2448 2850 2949 3019 4047 4048 4068 4145 4151 4167 4186 
+		139 371 376 616 691 710 939 1036 1245 1297 1623 1908 2239 2348 2949 3019 4068 4145 4151 4167 4186 
 	}
 	manpower=2130110
 	buildings_max_level_factor=1.000
