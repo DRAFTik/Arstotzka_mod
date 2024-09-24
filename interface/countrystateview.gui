@@ -59,8 +59,8 @@ guiTypes = {
 				position = { x = 155 y = 45 }
 				size = { width = 480 height = 105 }
 				format = "UPPER_LEFT"
-				slotsize = { width = 60 height = 52 }
-				max_slots_horizontal = 5
+				slotsize = { width = 50 height = 52 }	#60*52
+				max_slots_horizontal = 6
 			}
 			
 			instantTextboxType = {
@@ -77,10 +77,10 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "state_shared_slot_building_entries"
-				position = { x = 153 y = 170 }
+				position = { x = 153 y = 168 }
 				size = { width = 480 height = 90%% }
 				format = "UPPER_LEFT"
-				slotsize = { width = 46 height = 39 }		# 58*46 // 46*39
+				slotsize = { width = 49 height = 39 }		# 58*46 // 46*39
 				max_slots_horizontal = 6					# 5
 			}
 
@@ -451,6 +451,7 @@ guiTypes = {
 		position = { x=0 y=0 }
 		size = { width=140 height= 70 }
 		clipping = no
+		scale = 0.95
 		
 		background = {
 			name = "Background"
@@ -459,7 +460,7 @@ guiTypes = {
 		
 		iconType = {
 			name = "level_bg"
-			position = { x=5 y=60 }	
+			position = { x=5 y=60 }		#5/60
 			spriteType = "GFX_generic_text_bg_48"
 		}
 		
@@ -475,14 +476,14 @@ guiTypes = {
 		
 		buttonType = {
 			name = "building_picture"
-			position = { x = 12 y = 5 }
+			position = { x = 16 y = 8 }		#12/5
 			quadTextureSprite ="GFX_buildings_strip"
 		}
 		
 		iconType = {
 			name = "damage_bar"
 			spriteType = "GFX_damage_bar"
-			position = { x=10 y=41 }
+			position = { x=10 y=43 }	#10/41
 			rotation = 1.5708		
 		}	
 	}

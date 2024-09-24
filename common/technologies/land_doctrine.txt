@@ -61,7 +61,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20 
+			factor = 25 
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -1055,7 +1055,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -1952,7 +1952,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 25
 			modifier = {
 				NOT = {
 					has_army_experience > 120
@@ -2882,7 +2882,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -4926,7 +4926,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 120

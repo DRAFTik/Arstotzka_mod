@@ -18,6 +18,7 @@ technologies = {
 
 		enable_equipments = {
 			infantry_equipment_0
+			provision_equipment_1
 		}
 		
 		enable_equipment_modules = {

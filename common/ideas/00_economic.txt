@@ -27,6 +27,8 @@ ideas = {
 				max_fuel_factor = -0.45
 				fuel_gain_factor = -0.6
 				agency_upgrade_time = 1.0
+				consumption_of_provisions_modifier = 0.25
+				provision_income_modifier = 0.2
 			}
 
 			allowed_to_remove = {
@@ -62,6 +64,8 @@ ideas = {
 				max_fuel_factor = -0.35
 				fuel_gain_factor = -0.5
 				agency_upgrade_time = 0.8
+				consumption_of_provisions_modifier = 0.2
+				provision_income_modifier = 0.2
 			}
 
 			allowed_to_remove = {
@@ -93,6 +97,8 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = 0.3
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
+				consumption_of_provisions_modifier = 0.15
+				provision_income_modifier = 0.1
 			}
 
 			default = yes
@@ -122,6 +128,7 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.1
 				production_speed_arms_factory_factor = -0.1
 				fuel_gain_factor = -0.25
+				consumption_of_provisions_modifier = 0.1
 			}
 
 			ai_will_do = { factor = 600 }
@@ -152,6 +159,8 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
 				fuel_gain_factor = -0.1
+				consumption_of_provisions_modifier = 0.05
+				provision_income_modifier = -0.1
 			}
 
 			ai_will_do = {
@@ -183,6 +192,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.2
 				conversion_cost_civ_to_mil_factor = -0.2
 				conversion_cost_mil_to_civ_factor = -0.2
+				provision_income_modifier = -0.2
 			}
 
 			ai_will_do = {
@@ -220,6 +230,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.3
 				conversion_cost_civ_to_mil_factor = -0.3
 				conversion_cost_mil_to_civ_factor = -0.3
+				provision_income_modifier = -0.3
 			}
 
 			ai_will_do = {

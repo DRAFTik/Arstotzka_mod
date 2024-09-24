@@ -8,6 +8,14 @@ scripted_gui = {
 		ai_enabled = {
 			always = no
 		}
+		properties = {
+			provisions_ratio_bar = {
+				frame = provision_ratio_var
+			}
+			provisions_icon = {
+				frame = provision_frame_var
+			}
+        }
 	}
 	electric_power = {
 		parent_window_token = top_bar

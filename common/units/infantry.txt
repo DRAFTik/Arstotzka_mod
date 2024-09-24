@@ -44,8 +44,12 @@ sub_units = {
 		weight = 0.5
 		
 		supply_consumption = 0.06
-	
+		
+		essential = {
+#			provision_equipment
+		}
 		need = {
+#			provision_equipment = 1
 			infantry_equipment = 100
 		}
 	}

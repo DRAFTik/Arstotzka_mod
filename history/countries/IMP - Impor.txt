@@ -30,6 +30,7 @@ add_ideas = {
 	civilian_economy
 	free_trade
 	disarmed_nation
+	self_regulation_of_consumption
 }
 
 

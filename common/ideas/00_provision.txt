@@ -1,0 +1,183 @@
+ideas = {
+
+	provision_laws = {
+		law = yes
+		use_list_view = yes
+	
+		introduction_of_card_system = {
+			picture = hunger
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea introduction_of_card_system"
+				calculate_provision_need_effect = yes
+			}
+			on_remove = { set_variable = { previous_provision_law = token:introduction_of_card_system } }
+			level = 5
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+			allowed = {
+				NOT = { tag = SAI }
+			}
+			modifier = {
+				consumption_of_provisions_modifier = -0.5
+				political_power_factor = -0.5
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.15
+				stability_factor = -0.15
+				MONTHLY_POPULATION = -0.5
+				conscription_factor = -0.25
+				training_time_army_factor = 0.2
+			}
+			ai_will_do = {
+   				base = 0
+				modifier = {
+					add = 50
+					AND = {
+						check_variable = { var = provision_delta_var value = 0 compare = less_than_or_equals }
+						check_variable = { var = provision_days_var value = 30 compare = less_than_or_equals }
+					}
+				}
+			}
+		}
+		
+		promotion_of_economy = {
+			picture = hungry_demonstrations
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea promotion_of_economy"
+				calculate_provision_need_effect = yes
+			}
+			on_remove = { set_variable = { previous_provision_law = token:promotion_of_economy } }
+			level = 4
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = yes
+			allowed = {
+				NOT = { tag = SAI }
+			}
+			available = {
+			}
+			modifier = {
+				consumption_of_provisions_modifier = -0.25
+				political_power_factor = -0.25
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.075
+				stability_factor = -0.1
+				MONTHLY_POPULATION = -0.25
+				conscription_factor = -0.15
+				training_time_army_factor = 0.1
+			}
+			ai_will_do = {
+   				base = 10
+				modifier = {
+					add = 50
+					AND = {
+						check_variable = { var = provision_delta_var value = 0 compare = less_than_or_equals }
+						check_variable = { var = provision_days_var value = 60 compare = less_than_or_equals }
+					}
+				}
+			}
+		}
+		
+		self_regulation_of_consumption = {
+			picture = export_of_food_idea
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea self_regulation_of_consumption"
+				calculate_provision_need_effect = yes
+			}
+			on_remove = { set_variable = { previous_provision_law = token:self_regulation_of_consumption } }
+			level = 3
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = yes
+			default = yes
+			allowed = {
+				NOT = { tag = SAI }
+			}
+			available = {
+			}
+			modifier = {
+			}
+			ai_will_do = {
+   				base = 20
+			}
+		}
+		
+		increase_nutrition_standards = {
+			picture = food_up
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea increase_nutrition_standards"
+				calculate_provision_need_effect = yes
+			}
+			on_remove = { set_variable = { previous_provision_law = token:increase_nutrition_standards } }
+			level = 2
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+			allowed = {
+				NOT = { tag = SAI }
+			}
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = provision_total_var_trigger_more_0
+						check_variable = { provision_total_var > 0 }
+					}
+					custom_trigger_tooltip = {
+						tooltip = provision_balance_var_trigger_more_0
+						check_variable = { provision_balance_var > 0 }
+					}
+				}
+			}
+			modifier = {
+				consumption_of_provisions_modifier = 0.5
+				political_power_factor = -0.1
+				production_factory_max_efficiency_factor = 0.025
+				stability_factor = 0.05
+				MONTHLY_POPULATION = 0.25
+				training_time_army_factor = -0.06
+			}
+			ai_will_do = {
+   				base = 30
+			}
+		}
+		
+		subsidies_for_provisions = {
+			picture = ROM_king_carol_ii_hedonist
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea subsidies_for_provisions"
+				calculate_provision_need_effect = yes
+			}
+			on_remove = { set_variable = { previous_provision_law = token:subsidies_for_provisions } }
+			level = 1
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+			allowed = {
+				NOT = { tag = SAI }
+			}
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = provision_total_var_trigger_more_0
+						check_variable = { provision_total_var > 0 }
+					}
+					custom_trigger_tooltip = {
+						tooltip = provision_balance_var_trigger_more_0
+						check_variable = { provision_balance_var > 0 }
+					}
+				}
+			}
+			modifier = {
+				consumption_of_provisions_modifier = 1
+				political_power_factor = -0.2
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = 0.1
+				MONTHLY_POPULATION = 0.5
+				training_time_army_factor = -0.12
+			}
+			ai_will_do = {
+   				base = 40
+			}
+		}
+	}
+}

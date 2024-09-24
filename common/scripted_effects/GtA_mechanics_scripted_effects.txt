@@ -17,7 +17,21 @@
 #	clear_variable = fuel_silo
 #	clear_variable = nuclear_reactor
 
+
+#	modifier@fake_fuel_cost
+#	modifier@universal_factory_modifier
+
 #	modifier@num_generation_electric_power
+#	modifier@num_use_electric_power
+
+#	modifier@consumption_of_provisions_modifier
+#	modifier@provision_income_modifier
+#	modifier@max_provision
+#	modifier@num_generation_provision_weekly
+#	modifier@num_generation_provision_yearly
+#	modifier@monthly_save_provision_modifier
+
+#	modifier@num_change_population_weekly
 
 
 calculate_electric_power_effect = {
@@ -50,15 +64,17 @@ calculate_electric_power_effect = {
 #			log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL SHORTAGE // thermal_power_plant OK: [?thermal_power_plant_ok]"
 		}
 	}
-	multiply_variable = { electric_power_thermal_generation_var = 60 }
+	multiply_variable = { electric_power_thermal_generation_var = 60 }					# для текста ТЭС
 	set_variable = { electric_power_hydro_generation_var = hydro_power_plant }
-	multiply_variable = { electric_power_hydro_generation_var = 150 }
+	multiply_variable = { electric_power_hydro_generation_var = 150 }					# для текста ГЭС
 	set_variable = { electric_power_nuclear_generation_var = nuclear_power_plant }
-	multiply_variable = { electric_power_nuclear_generation_var = 500 }
-	
-	set_variable = { electric_power_total_generation_var = electric_power_thermal_generation_var }
-	add_to_variable = { electric_power_total_generation_var = electric_power_hydro_generation_var }
-	add_to_variable = { electric_power_total_generation_var = electric_power_nuclear_generation_var }
+	multiply_variable = { electric_power_nuclear_generation_var = 500 }					# для текста АЭС
+
+
+	set_variable = { electric_power_total_generation_var = modifier@num_generation_electric_power }		# РЕАЛЬНЫЕ ВЫЧИСЛЕНИЯ
+#	set_variable = { electric_power_total_generation_var = electric_power_thermal_generation_var }
+#	add_to_variable = { electric_power_total_generation_var = electric_power_hydro_generation_var }
+#	add_to_variable = { electric_power_total_generation_var = electric_power_nuclear_generation_var }
 	
 	if = {
 		limit = { NOT = { has_dynamic_modifier = { modifier = thermal_power_plant_fuel_cost_dyn } } }
@@ -69,8 +85,14 @@ calculate_electric_power_effect = {
 
 
 
-### ЗАТРАТЫ ###
+### ЗАТРАТЫ ### (для текста)
 
+# Госаппарат
+	set_temp_variable = { state_power_cost_temp = num_controlled_states }
+	multiply_temp_variable = { state_power_cost_temp = 1 }
+	set_variable = { electric_power_cost_state_var = state_power_cost_temp }
+	add_to_variable = { electric_power_cost_state_var = 3 }
+	
 # Инфра
 	while_loop_effect = { limit = { infrastructure > var:infrastructure }			add_to_temp_variable = { infrastructure = 1 } }
 	while_loop_effect = { limit = { hospital > var:hospital }						add_to_temp_variable = { hospital = 1 } }
@@ -81,18 +103,22 @@ calculate_electric_power_effect = {
 	while_loop_effect = { limit = { arms_factory > var:arms_factory }				add_to_temp_variable = { arms_factory = 1 } }
 	while_loop_effect = { limit = { industrial_complex > var:industrial_complex }	add_to_temp_variable = { industrial_complex = 1 } }
 	while_loop_effect = { limit = { dockyard > var:dockyard }						add_to_temp_variable = { dockyard = 1 } }
+	while_loop_effect = { limit = { dockyard > var:universal_factory }				add_to_temp_variable = { universal_factory = 1 } }
 	set_temp_variable = { arms_factory_temp = arms_factory }
 	multiply_temp_variable = { arms_factory_temp = 6 }
 	set_temp_variable = { industrial_complex_temp = industrial_complex }
 	multiply_temp_variable = { industrial_complex_temp = 5 }
 	set_temp_variable = { dockyard_temp = dockyard }
 	multiply_temp_variable = { dockyard_temp = 7 }
+	set_temp_variable = { universal_factory_temp = universal_factory }
+	multiply_temp_variable = { universal_factory_temp = 11 }
 	
 	set_variable = { electric_power_cost_factory_var = arms_factory_temp }
 	add_to_variable = { electric_power_cost_factory_var = industrial_complex_temp }
 	add_to_variable = { electric_power_cost_factory_var = dockyard_temp }
-	
-# Снабжение	
+	add_to_variable = { electric_power_cost_factory_var = universal_factory_temp }
+
+# Снабжение
 	while_loop_effect = { limit = { supply_node > var:supply_node }					add_to_temp_variable = { supply_node = 1 } }
 	while_loop_effect = { limit = { naval_base > var:naval_base }					add_to_temp_variable = { naval_base = 1 } }
 	set_temp_variable = { supply_node_temp = supply_node }
@@ -129,27 +155,74 @@ calculate_electric_power_effect = {
 	while_loop_effect = { limit = { synthetic_refinery > var:synthetic_refinery }	add_to_temp_variable = { synthetic_refinery = 1 } }
 	while_loop_effect = { limit = { fuel_silo > var:fuel_silo }						add_to_temp_variable = { fuel_silo = 1 } }
 	while_loop_effect = { limit = { nuclear_reactor > var:nuclear_reactor }			add_to_temp_variable = { nuclear_reactor = 1 } }
+	while_loop_effect = { limit = { agro_complex > var:agro_complex }				add_to_temp_variable = { agro_complex = 1 } }
 	while_loop_effect = { limit = { livestock_complex > var:livestock_complex }		add_to_temp_variable = { livestock_complex = 1 } }
 	set_temp_variable = { synthetic_refinery_temp = synthetic_refinery }
 	multiply_temp_variable = { synthetic_refinery_temp = 4 }
 	set_temp_variable = { fuel_silo_temp = fuel_silo }
 	add_to_temp_variable = { fuel_silo_temp = livestock_complex }
 	multiply_temp_variable = { fuel_silo_temp = 0.5 }
+	set_temp_variable = { agro_complex_temp = agro_complex }
+	multiply_temp_variable = { agro_complex_temp = 0.25 }
 	set_temp_variable = { nuclear_reactor_temp = nuclear_reactor }
 	multiply_temp_variable = { nuclear_reactor_temp = 15 }
 	
 	set_variable = { electric_power_cost_other_var = synthetic_refinery_temp }
 	add_to_variable = { electric_power_cost_other_var = fuel_silo_temp }
+	add_to_variable = { electric_power_cost_other_var = agro_complex_temp }
 	add_to_variable = { electric_power_cost_other_var = nuclear_reactor_temp }
+
+# Сталь
+	while_loop_effect = { limit = { steel_mill > var:steel_mill }	add_to_temp_variable = { steel_mill = 1 } }
+	set_variable = { steel_mill_total = steel_mill }
+	set_variable = { steel_mill_ok = steel_mill }
+	set_temp_variable = { steel_mill_temp = steel_mill }
+	multiply_temp_variable = { steel_mill_temp = 3.5 }
 	
+	set_variable = { electric_power_cost_mill_var = steel_mill_temp }
+	add_to_variable = { electric_power_cost_mill_var = steel_return_electric_power_var }
+
+# Ресурсы
+	set_temp_variable = { resource_produced_power_cost_temp = 0 }
+	if = {
+		limit = { check_variable = { resource_produced@aluminium > 0 } }
+		add_to_temp_variable = { resource_produced_power_cost_temp = resource_produced@aluminium }
+	}
+	if = {
+		limit = { check_variable = { resource_produced@oil > 0 } }
+		add_to_temp_variable = { resource_produced_power_cost_temp = resource_produced@oil }
+	}
+	if = {
+		limit = { check_variable = { resource_produced@tungsten > 0 } }
+		add_to_temp_variable = { resource_produced_power_cost_temp = resource_produced@tungsten }
+	}
+	if = {
+		limit = { check_variable = { resource_produced@rubber > 0 } }
+		add_to_temp_variable = { resource_produced_power_cost_temp = resource_produced@rubber }
+	}
+	if = {
+		limit = { check_variable = { resource_produced@chromium > 0 } }
+		add_to_temp_variable = { resource_produced_power_cost_temp = resource_produced@chromium }
+	}
+	if = {
+		limit = { check_variable = { resource_produced@iron > 0 } }
+		add_to_temp_variable = { resource_produced_power_cost_temp = resource_produced@iron }
+	}
+#	add_to_temp_variable = { resource_produced_power_cost_temp = resource_produced@steel }
+	multiply_temp_variable = { resource_produced_power_cost_temp = 0.1 }
+	set_variable = { electric_power_cost_resource_produced_var = resource_produced_power_cost_temp }
 	
 	
 # Баланс энергии
-	set_variable = { electric_power_cost_var = electric_power_cost_infrastructure_var }
-	add_to_variable = { electric_power_cost_var = electric_power_cost_factory_var }
-	add_to_variable = { electric_power_cost_var = electric_power_cost_supply_var }
-	add_to_variable = { electric_power_cost_var = electric_power_cost_army_var }
-	add_to_variable = { electric_power_cost_var = electric_power_cost_other_var }
+	set_variable = { electric_power_cost_var = modifier@num_use_electric_power }
+	add_to_variable = { electric_power_cost_var = electric_power_cost_state_var }
+	add_to_variable = { electric_power_cost_var = electric_power_cost_resource_produced_var }
+	
+#	set_variable = { electric_power_cost_var = electric_power_cost_infrastructure_var }
+#	add_to_variable = { electric_power_cost_var = electric_power_cost_factory_var }
+#	add_to_variable = { electric_power_cost_var = electric_power_cost_supply_var }
+#	add_to_variable = { electric_power_cost_var = electric_power_cost_army_var }
+#	add_to_variable = { electric_power_cost_var = electric_power_cost_other_var }
 	
 	set_variable = { electric_power_total_var = electric_power_cost_var }
 	
@@ -193,65 +266,118 @@ calculate_electric_power_LOG_effect = {
 
 
 
+
+
 calculate_provision_start_effect = {
+	set_variable = { max_provision_base_var = 1000 }										# БАЗА МАКСИМУМА ПРОВИЗИИ
+	set_variable = { provision_need_base_var = 0.254 }										# БАЗА ПОТРЕБЛЕНИЯ ПРОВИЗИИ = 254 кг в год на человека
+	
 	while_loop_effect = { limit = { agro_complex > var:agro_complex }			add_to_temp_variable = { agro_complex = 1 } }
 	while_loop_effect = { limit = { livestock_complex > var:livestock_complex }	add_to_temp_variable = { livestock_complex = 1 } }
-	set_temp_variable = { temp1 = agro_complex }
-	multiply_temp_variable = { temp1 = 300 }
-	set_temp_variable = { temp2 = livestock_complex }
-	multiply_temp_variable = { temp2 = 15.2 }
+
+# НАЧАЛЬНАЯ ПРОВИЗИЯ
+#	set_temp_variable = { temp1 = agro_complex }
+#	multiply_temp_variable = { temp1 = 300 }
+#	set_temp_variable = { temp2 = livestock_complex }
+#	multiply_temp_variable = { temp2 = 15.2 }
+#	set_variable = { provision_total_var = temp1 }
+#	add_to_variable = { provision_total_var = temp2 }
+	
+	set_temp_variable = { temp1 = modifier@num_generation_provision_yearly }
+	set_temp_variable = { temp2 = modifier@num_generation_provision_weekly }
+	multiply_temp_variable = { temp2 = 4 }
 	set_variable = { provision_total_var = temp1 }
 	add_to_variable = { provision_total_var = temp2 }
 	
+	
+# ЗАТРАТЫ ПРОВИЗИИ
 	set_temp_variable = { provision_need_temp = max_manpower_k }
-	multiply_temp_variable = { provision_need_temp = 0.254 }
+	multiply_temp_variable = { provision_need_temp = provision_need_base_var }
 	divide_temp_variable = { provision_need_temp = 4800 }
-	set_variable = { provision_need_var = provision_need_temp }						# для текста
-	subtract_from_variable = { provision_total_var = provision_need_temp }
+	### БАФЫ
+	set_temp_variable = { consumption_of_provisions_temp = provision_need_temp }
+	multiply_temp_variable = { consumption_of_provisions_temp = modifier@consumption_of_provisions_modifier }
+	add_to_temp_variable = { provision_need_temp = consumption_of_provisions_temp }
+	###
+	set_variable = { provision_need_var = provision_need_temp }								# для текста
+#	subtract_from_variable = { provision_total_var = provision_need_temp }					# не нужно вычитать потребление в 0 день
 
 # ЖИВОТНАВОДСТВО
-	set_temp_variable = { weekly_income_provision_temp = livestock_complex_total }
-	multiply_temp_variable = { weekly_income_provision_temp = 3.8 }
-	### ДЕБАФ !!!
-	set_variable = { weekly_income_provision = weekly_income_provision_temp }		# для текста
-	
+#	set_temp_variable = { weekly_income_provision_temp = livestock_complex_total }
+#	multiply_temp_variable = { weekly_income_provision_temp = 3.8 }
+	set_variable = { weekly_income_provision = modifier@num_generation_provision_weekly }	# для текста
+
+	set_temp_variable = { income_temp1 = weekly_income_provision }
+	set_temp_variable = { weekly_income_delta = modifier@provision_income_modifier }
+	multiply_temp_variable = { weekly_income_delta = weekly_income_provision }
+	subtract_from_variable = { weekly_income_delta = income_temp1 }
+	add_to_variable = { weekly_income_provision = weekly_income_delta }						# БАФ/ДЕБАФ
+
 # ПОЛЯ
-	set_temp_variable = { yearly_income_provision_temp = agro_complex_total }
-	multiply_temp_variable = { yearly_income_provision_temp = 300 }
-	set_variable = { yearly_income_provision = yearly_income_provision_temp }		# для текста
+#	set_temp_variable = { yearly_income_provision_temp = agro_complex_total }
+#	multiply_temp_variable = { yearly_income_provision_temp = 300 }
+	set_variable = { yearly_income_provision = modifier@num_generation_provision_yearly }	# для текста
+	
+	set_temp_variable = { income_temp1 = yearly_income_provision }
+	set_temp_variable = { yearly_income_delta = modifier@provision_income_modifier }
+	multiply_temp_variable = { yearly_income_delta = yearly_income_provision }
+	subtract_from_variable = { yearly_income_delta = income_temp1 }
+	add_to_variable = { yearly_income_provision = yearly_income_delta }						# БАФ/ДЕБАФ
 
 # ЭЛЕВАТОРЫ
-	set_temp_variable = { monthly_save_provision_temp = agro_silo_total }
-	multiply_temp_variable = { monthly_save_provision_temp = 0.01 }
+#	set_temp_variable = { monthly_save_provision_temp = agro_silo_total }
+#	multiply_temp_variable = { monthly_save_provision_temp = 0.01 }
+	set_temp_variable = { monthly_save_provision_temp = modifier@monthly_save_provision_modifier }
 	add_to_temp_variable = { monthly_save_provision_temp = 0.7 }
 	if = {
 		limit = { check_variable = { monthly_save_provision_temp > 0.99 } }
 		set_temp_variable = { monthly_save_provision_temp = 0.99 }
 	}
-	set_variable = { monthly_save_provision = monthly_save_provision_temp }			# для текста
+	set_variable = { monthly_save_provision = monthly_save_provision_temp }					# для текста
+	
+	set_variable = { max_provision_total_var = max_provision_base_var }
+	add_to_variable = { max_provision_total_var = modifier@max_provision }
+	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
+	add_equipment_to_stockpile = { type = provision_equipment amount = provision_total_var }
 	
 # ПАРАМЕТР ТОПБАРА
 	set_variable = { provision_balance_var = weekly_income_provision }
 	divide_variable = { provision_balance_var = 7 }
-	subtract_from_variable = { provision_balance_var = provision_need_temp }		# для текста
+	subtract_from_variable = { provision_balance_var = provision_need_temp }				# для текста
 	
 	if = {
 		limit = { check_variable = { provision_total_var < 0 } }
 		set_variable = { provision_total_var = 0 }
 		
 		set_variable = { provision_percent_var = provision_balance_var }
-		divide_variable = { provision_percent_var = provision_need_temp }			# для текста
+		divide_variable = { provision_percent_var = provision_need_temp }					# для текста
 		else = {
 			set_variable = { provision_percent_var = provision_total_var }
-			divide_variable = { provision_percent_var = provision_need_temp }		# для текста
+			divide_variable = { provision_percent_var = provision_need_temp }				# для текста
 		}
 	}
+	
+	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
+	set_variable = { provision_percent_to_max_var = provision_total_var }
+	divide_variable = { provision_percent_to_max_var = max_provision_total_var }			# для текста
+	
+	set_variable = { provision_ratio_var = provision_percent_to_max_var }
+	multiply_variable = { provision_ratio_var = 100 }										# для ГУИ
 	
 	if = {
 		limit = { check_variable = { provision_percent_var < 0 } }
 		set_variable = { provision_percent_var = 0 }
 	}
 	
+	set_variable = { provision_delta_var = provision_total_var }
+	subtract_from_variable = { provision_delta_var = provision_ex_delta_var }				# для текста
+	set_variable = { provision_ex_delta_var = provision_total_var }
+	
+	set_variable = { provision_days_var = provision_percent_var }							# для текста
+	set_variable = { provision_month_var = provision_days_var }
+	divide_variable = { provision_month_var = 30 }											# для текста
+	set_variable = { provision_year_var = provision_month_var }
+	divide_variable = { provision_year_var = 12 }											# для текста
 	
 	set_variable = { provision_goal_var = provision_total_var }
 	if = {
@@ -265,14 +391,32 @@ calculate_provision_start_effect = {
 	}
 	
 	set_variable = { chance_of_crop_failure_var = 33 }
+	
+### ГОЛОД БАЗА
+	set_variable = { hunger_stability_weekly_var = -0.025 }
+	set_variable = { hunger_monthly_population_var = -1 }
+	set_variable = { hunger_change_population_weekly_var = -0.005 }
+	set_variable = { hunger_industrial_capacity_var = -0.025 }
+	set_variable = { hunger_production_factory_efficiency_gain_factor_var = -0.05 }
+	set_variable = { hunger_production_speed_buildings_factor_var = -0.035 }
+	set_variable = { hunger_research_speed_factor_var = -0.04 }
 }
 
 calculate_provision_daily_effect = {
 	set_temp_variable = { provision_need_temp = max_manpower_k }
-	multiply_temp_variable = { provision_need_temp = 0.254 }
+	multiply_temp_variable = { provision_need_temp = provision_need_base_var }
 	divide_temp_variable = { provision_need_temp = 4800 }
-	set_variable = { provision_need_var = provision_need_temp }						# для текста
+	### БАФЫ
+	set_temp_variable = { consumption_of_provisions_temp = provision_need_temp }
+	multiply_temp_variable = { consumption_of_provisions_temp = modifier@consumption_of_provisions_modifier }
+	add_to_temp_variable = { provision_need_temp = consumption_of_provisions_temp }
+	###
+	set_variable = { provision_need_var = provision_need_temp }								# для текста
 	subtract_from_variable = { provision_total_var = provision_need_temp }
+	
+	set_temp_variable = { provision_need_eq_temp = provision_need_temp }
+	multiply_temp_variable = { provision_need_eq_temp = -1 }
+	add_equipment_to_stockpile = { type = provision_equipment amount = provision_need_eq_temp }
 
 # ПОДСЧЕТ ДЛЯ СТАТЫ
 	while_loop_effect = { limit = { agro_complex > var:agro_complex }			add_to_temp_variable = { agro_complex = 1 } }
@@ -283,52 +427,114 @@ calculate_provision_daily_effect = {
 	set_variable = { agro_silo_total = agro_silo }
 
 # ЖИВОТНАВОДСТВО
-	set_temp_variable = { weekly_income_provision_temp = livestock_complex_total }
-	multiply_temp_variable = { weekly_income_provision_temp = 3.8 }
-	### ДЕБАФ !!!
-	set_variable = { weekly_income_provision = weekly_income_provision_temp }		# для текста
+#	set_temp_variable = { weekly_income_provision_temp = livestock_complex_total }
+#	multiply_temp_variable = { weekly_income_provision_temp = 3.8 }
+	set_variable = { weekly_income_provision = modifier@num_generation_provision_weekly }	# для текста
+	
+	set_temp_variable = { income_temp1 = weekly_income_provision }
+	set_temp_variable = { weekly_income_delta = modifier@provision_income_modifier }
+	multiply_temp_variable = { weekly_income_delta = weekly_income_provision }
+	subtract_from_variable = { weekly_income_delta = income_temp1 }
+	add_to_variable = { weekly_income_provision = weekly_income_delta }						# БАФ/ДЕБАФ
 
 # ПОЛЯ
-	set_temp_variable = { yearly_income_provision_temp = agro_complex_total }
-	multiply_temp_variable = { yearly_income_provision_temp = 300 }
-	set_variable = { yearly_income_provision = yearly_income_provision_temp }		# для текста
+#	set_temp_variable = { yearly_income_provision_temp = agro_complex_total }
+#	multiply_temp_variable = { yearly_income_provision_temp = 300 }
+	set_variable = { yearly_income_provision = modifier@num_generation_provision_yearly }	# для текста
+	
+	set_temp_variable = { income_temp1 = yearly_income_provision }
+	set_temp_variable = { yearly_income_delta = modifier@provision_income_modifier }
+	multiply_temp_variable = { yearly_income_delta = yearly_income_provision }
+	subtract_from_variable = { yearly_income_delta = income_temp1 }
+	add_to_variable = { yearly_income_provision = yearly_income_delta }						# БАФ/ДЕБАФ
 
 # ЭЛЕВАТОРЫ
-	set_temp_variable = { monthly_save_provision_temp = agro_silo_total }
-	multiply_temp_variable = { monthly_save_provision_temp = 0.01 }
+#	set_temp_variable = { monthly_save_provision_temp = agro_silo_total }
+#	multiply_temp_variable = { monthly_save_provision_temp = 0.01 }
+	set_temp_variable = { monthly_save_provision_temp = modifier@monthly_save_provision_modifier }
 	add_to_temp_variable = { monthly_save_provision_temp = 0.7 }
 	if = {
 		limit = { check_variable = { monthly_save_provision_temp > 0.99 } }
 		set_temp_variable = { monthly_save_provision_temp = 0.99 }
 	}
-	set_variable = { monthly_save_provision = monthly_save_provision_temp }			# для текста
+	set_variable = { monthly_save_provision = monthly_save_provision_temp }					# для текста
+	
+	set_variable = { max_provision_total_var = max_provision_base_var }
+	add_to_variable = { max_provision_total_var = modifier@max_provision }
+	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
 	
 # ПАРАМЕТР ТОПБАРА
 	set_variable = { provision_balance_var = weekly_income_provision }
 	divide_variable = { provision_balance_var = 7 }
-	subtract_from_variable = { provision_balance_var = provision_need_temp }		# для текста
+	subtract_from_variable = { provision_balance_var = provision_need_temp }				# для текста
 	
 	if = {
 		limit = { check_variable = { provision_total_var < 0 } }
 		set_variable = { provision_total_var = 0 }
 		
 		set_variable = { provision_percent_var = provision_balance_var }
-		divide_variable = { provision_percent_var = provision_need_temp }			# для текста
+		divide_variable = { provision_percent_var = provision_need_temp }					# для текста
 		else = {
 			set_variable = { provision_percent_var = provision_total_var }
-			divide_variable = { provision_percent_var = provision_need_temp }		# для текста
+			divide_variable = { provision_percent_var = provision_need_temp }				# для текста
 		}
 	}
+	
+	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
 	
 	if = {
 		limit = { check_variable = { provision_percent_var < 0 } }
 		set_variable = { provision_percent_var = 0 }
+	}
+	
+	set_variable = { provision_delta_var = provision_total_var }
+	subtract_from_variable = { provision_delta_var = provision_ex_delta_var }				# для текста
+	set_variable = { provision_ex_delta_var = provision_total_var }
+	
+	if = {
+		limit = { check_variable = { provision_delta_var < 0 } }
+		set_variable = { provision_frame_var = 3 }
+		else_if = {
+			limit = { check_variable = { provision_delta_var > 0 } }
+			set_variable = { provision_frame_var = 2 }
+		}
+		else = { set_variable = { provision_frame_var = 1 } }
+	}
+	
+	set_variable = { provision_percent_to_max_var = provision_total_var }
+	divide_variable = { provision_percent_to_max_var = max_provision_total_var }			# для текста
+	
+	set_variable = { provision_ratio_var = provision_percent_to_max_var }
+	multiply_variable = { provision_ratio_var = 100 }										# для ГУИ
+	
+	set_variable = { provision_days_var = provision_percent_var }							# для текста
+	set_variable = { provision_month_var = provision_days_var }
+	divide_variable = { provision_month_var = 30 }											# для текста
+	set_variable = { provision_year_var = provision_month_var }
+	divide_variable = { provision_year_var = 12 }											# для текста
+	
+### ЧЕК ЗАКОНОВ
+	if = {
+		limit = {
+			check_variable = { var = provision_total_var	value = 0 compare = less_than_or_equals }
+			check_variable = { var = provision_balance_var	value = 0 compare = less_than_or_equals }
+		}
+		if = {
+			limit = { has_idea = increase_nutrition_standards }
+			add_ideas = self_regulation_of_consumption
+			else_if = {
+				limit = { has_idea = subsidies_for_provisions }
+				add_ideas = increase_nutrition_standards
+			}
+		}
 	}
 }
 
 calculate_provision_weekly_effect = {
 	log = "[GetDateText]: [This.GetName] ([This.GetTag]): provision_need_var: [?provision_need_var]"
 	add_to_variable = { provision_total_var = weekly_income_provision }
+	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
+	add_equipment_to_stockpile = { type = provision_equipment amount = weekly_income_provision }
 }
 
 calculate_provision_monthly_effect = {		# порча еды
@@ -345,7 +551,12 @@ calculate_provision_monthly_effect = {		# порча еды
 			limit = { check_variable = { provision_total_var < 0 } }
 			set_variable = { provision_total_var = 0 }
 		}
+		
+		set_temp_variable = { monthly_bad_provision_eq_temp = monthly_bad_provision_temp }
+		multiply_temp_variable = { monthly_bad_provision_eq_temp = -1 }
+		add_equipment_to_stockpile = { type = provision_equipment amount = monthly_bad_provision_eq_temp }
 	}
+	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
 	set_variable = { provision_goal_var = provision_total_var }
 	
 	if = {
@@ -370,7 +581,7 @@ calculate_provision_yearly_effect = {
 	}
 	random_list = {
 		chance_of_crop_failure_var = {		# НЕУРОЖАЙ
-			set_variable = { chance_of_crop_failure_var = 0 }
+			set_variable = { chance_of_crop_failure_var = 15 }
 			set_temp_variable = { yearly_income_provision_temp = yearly_income_provision }
 			multiply_temp_variable = { yearly_income_provision_temp = 0.25 }
 			set_country_flag = { flag = crop_failure_flag days = 150 value = 1 }
@@ -391,9 +602,193 @@ calculate_provision_yearly_effect = {
 		}
 	}
 	add_to_variable = { provision_total_var = yearly_income_provision_temp }
+	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
+	add_equipment_to_stockpile = { type = provision_equipment amount = yearly_income_provision_temp }
+}
+
+calculate_provision_need_effect = {
+	# ЗАТРАТЫ ПРОВИЗИИ
+	set_temp_variable = { provision_need_temp = max_manpower_k }
+	multiply_temp_variable = { provision_need_temp = provision_need_base_var }
+	divide_temp_variable = { provision_need_temp = 4800 }
+	### БАФЫ
+	set_temp_variable = { consumption_of_provisions_temp = provision_need_temp }
+	multiply_temp_variable = { consumption_of_provisions_temp = modifier@consumption_of_provisions_modifier }
+	add_to_temp_variable = { provision_need_temp = consumption_of_provisions_temp }
+	###
+	set_variable = { provision_need_var = provision_need_temp }	
+}
+
+calculate_hunger_dyn_effect = {
+	if = {
+		limit = {
+			OR = {
+				check_variable = { var = provision_total_var	value = 0	compare = less_than_or_equals }
+				check_variable = { var = provision_days_var		value = 7	compare = less_than_or_equals }
+			}
+		}
+		set_variable = { hunger_stability_weekly_var = -0.025 }
+		set_variable = { hunger_monthly_population_var = -1 }
+		if = {
+			limit = { NOT = { has_variable = hunger_dyn_var } }
+			set_variable = { hunger_dyn_var = 1 }
+			else = {
+				add_to_variable = { hunger_dyn_var = 1 }
+				clamp_variable = { var = hunger_dyn_var min = 0 max = 10 }
+				set_variable = { hunger_change_population_weekly_var = -0.005 }
+				multiply_variable = { hunger_change_population_weekly_var = hunger_dyn_var }
+				set_variable = { hunger_industrial_capacity_var = -0.025 }
+				multiply_variable = { hunger_industrial_capacity_var = hunger_dyn_var }
+				set_variable = { hunger_production_factory_efficiency_gain_factor_var = -0.05 }
+				multiply_variable = { hunger_production_factory_efficiency_gain_factor_var = hunger_dyn_var }
+				set_variable = { hunger_production_speed_buildings_factor_var = -0.035 }
+				multiply_variable = { hunger_production_speed_buildings_factor_var = hunger_dyn_var }
+				set_variable = { hunger_research_speed_factor_var = -0.04 }
+				multiply_variable = { hunger_research_speed_factor_var = hunger_dyn_var }
+			}
+		}
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = hunger_dyn } } }
+			add_dynamic_modifier = { modifier = hunger_dyn }
+		}
+	}
+	else = {
+		add_to_variable = { hunger_dyn_var = -1 }
+		clamp_variable = { var = hunger_dyn_var min = 0 max = 10 }
+		set_variable = { hunger_change_population_weekly_var = -0.005 }
+		multiply_variable = { hunger_change_population_weekly_var = hunger_dyn_var }
+		set_variable = { hunger_industrial_capacity_var = -0.025 }
+		multiply_variable = { hunger_industrial_capacity_var = hunger_dyn_var }
+		set_variable = { hunger_production_factory_efficiency_gain_factor_var = -0.05 }
+		multiply_variable = { hunger_production_factory_efficiency_gain_factor_var = hunger_dyn_var }
+		set_variable = { hunger_production_speed_buildings_factor_var = -0.035 }
+		multiply_variable = { hunger_production_speed_buildings_factor_var = hunger_dyn_var }
+		set_variable = { hunger_research_speed_factor_var = -0.04 }
+		multiply_variable = { hunger_research_speed_factor_var = hunger_dyn_var }
+		if = {
+			limit = { check_variable = { var = hunger_dyn_var	value = 0 compare = equals } }
+			clear_variable = hunger_dyn_var
+			clear_variable = hunger_stability_weekly_var
+			clear_variable = hunger_monthly_population_var
+		}
+	}
+}
+
+calculate_change_population_weekly_effect = {
+	if = {
+		limit = { check_variable = { var = modifier@num_change_population_weekly	value = 0 compare = not_equals } }
+		set_temp_variable = { hunger_change_population_temp = max_manpower_k }
+		multiply_temp_variable = { hunger_change_population_temp = modifier@num_change_population_weekly }
+		set_variable = { hunger_change_population_total_var = hunger_change_population_temp }				# для текста
+		round_variable = hunger_change_population_total_var													# для текста
+		divide_temp_variable = { hunger_change_population_temp = num_controlled_states }
+		multiply_temp_variable = { hunger_change_population_temp = 1000 }
+		round_temp_variable = hunger_change_population_temp
+		set_variable = { hunger_change_population_per_state_var = hunger_change_population_temp }			# для текста
+		every_controlled_state = {
+			add_manpower = var:hunger_change_population_temp
+		}
+	}
+	
+#	set_temp_variable = { num_change_population_weekly_temp = weekly_income_provision }					# вычисление % голодающих от общего населения
+#	set_temp_variable = { t1 = provision_need_var }
+#	multiply_temp_variable = { t1 = 7 }
+#	divide_temp_variable = { num_change_population_weekly_temp = t1 }
+#	subtract_from_temp_variable = { num_change_population_weekly_temp = 1 }
+#	set_variable = { percent_change_population_weekly = num_change_population_weekly_temp }
+}
+
+
+calculate_steel_mill_effect = {
+	if = {
+		limit = {
+			check_variable = { var = resource@iron	value = 0	compare = less_than }
+			check_variable = { var = steel_mill		value = 0	compare = greater_than }
+		}
+		set_temp_variable = { steel_temp = resource@iron }
+		divide_temp_variable = { steel_temp = -8 }
+		set_temp_variable = { steel_temp2 = steel_temp }	# десятичное
+		round_temp_variable = steel_temp					# целое
+		subtract_from_temp_variable = { steel_temp2 = steel_temp }
+		if = {
+			limit = { check_variable = { var = steel_temp2	value = 0	compare = greater_than } }
+			add_to_temp_variable = { steel_temp = 1 }
+		}
+#		multiply_temp_variable = { steel_temp = -1 }
+		set_temp_variable = { steel_mill_minus_temp = steel_temp }									# (+ число)
+		every_controlled_state = {
+			add_to_temp_variable = { ecs_temp = num_of_deactivated_mill_var }
+		}
+		set_variable = { steel_minus_var = ecs_temp }												# сколько уже отрублено сталелитеек (+ число)
+		log = "[GetDateText]: [This.GetName] ([This.GetTag]): steel_minus_var [?steel_minus_var]			// TOTAL DEACTIVATED STEEL MILL"
+		log = "[GetDateText]: [This.GetName] ([This.GetTag]): steel_mill_minus_temp [?steel_mill_minus_temp]	// TOTAL NEED DEACTIVATED STEEL MILL"
+		
+		if = {			# сталелитейни надо включать
+			limit = { check_variable = { var = steel_minus_var	value = steel_mill_minus_temp	compare = greater_than } }
+			every_controlled_state = {
+				limit = { has_variable = steel_minus_state_var }
+				clear_variable = steel_minus_state_var
+				clear_variable = num_of_deactivated_mill_var
+			}
+			set_variable = { steel_minus_var = 0 }													# сколько уже отрублено сталелитеек (+ число)
+			log = "[GetDateText]: [This.GetName] ([This.GetTag]): // DROP steel_minus_var"
+		}
+		else_if = {		# сталелитейни надо отключать
+			limit = { check_variable = { var = steel_minus_var	value = steel_mill_minus_temp	compare = less_than } }
+			set_variable = { steel_minus_temp = steel_mill_minus_temp }								# число сталелитеек, которые необходимо отключить (+ число)
+			if = {
+				limit = { check_variable = { var = steel_minus_temp	value = 0	compare = not_equals } }
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): steel_minus_temp [?steel_minus_temp] // START while_loop_effect"
+				while_loop_effect = {
+					limit = { check_variable = { var = steel_minus_temp	value = 0	compare = greater_than } }
+					random_controlled_state = {
+						limit = {
+							steel_mill > 0
+							check_variable = { var = num_of_deactivated_mill_var	value = building_level@steel_mill	compare = less_than }
+						}
+						if = {
+							limit = { check_variable = { var = ROOT.steel_minus_temp	value = building_level@steel_mill	compare = greater_than_or_equals } }
+							subtract_from_variable = { ROOT.steel_minus_temp = building_level@steel_mill }
+							add_to_variable = { num_of_deactivated_mill_var = building_level@steel_mill }
+							set_temp_variable = { st1 = THIS.resource@steel }
+							set_variable = { steel_minus_state_var = st1 }
+							log = "[GetDateText]: [This.GetName] ([This.GetTag]): steel_minus_temp [?ROOT.steel_minus_temp] GREATER_THAN_OR_EQUALS building_level@steel_mill [?building_level@steel_mill] // steel_minus_state_var: [?steel_minus_state_var]"
+							
+							else = {
+								set_temp_variable = { st1 = building_level@steel_mill }	
+								subtract_from_temp_variable = { st1 = ROOT.steel_minus_temp }
+								subtract_from_temp_variable = { st1 = building_level@steel_mill }
+								multiply_temp_variable = { st1 = -1 }								# (+ число)
+								subtract_from_variable = { ROOT.steel_minus_temp = st1 }
+								add_to_variable = { num_of_deactivated_mill_var = st1 }
+								
+								multiply_temp_variable = { st1 = 4 }								# (+ число)
+								set_variable = { steel_minus_state_var = st1 }
+								log = "[GetDateText]: [This.GetName] ([This.GetTag]): steel_minus_temp [?ROOT.steel_minus_temp] LESS_THAN building_level@steel_mill [?building_level@steel_mill] // steel_minus_state_var: [?steel_minus_state_var]"
+							}
+						}
+						if = {
+							limit = { NOT = { has_dynamic_modifier = { modifier = steel_mill_minus_state_dyn } } }
+							add_dynamic_modifier = { modifier = steel_mill_minus_state_dyn }
+						}
+					}
+				}
+			}
+		}
+		set_variable = { steel_mill_ok = steel_mill }
+		subtract_from_variable = { steel_mill_ok = steel_mill_minus_temp }
+		set_variable = { steel_return_electric_power_var = steel_mill_minus_temp }
+		multiply_variable = { steel_return_electric_power_var = -3.5 }
+		
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = steel_mill_minus_dyn } } }
+			add_dynamic_modifier = { modifier = steel_mill_minus_dyn }
+		}
+	}
 }
 
 effect_1 = {
+	add_offsite_building = { type = livestock_complex level = 10 }
 	every_country = {
 		log = "[GetDateText]: [This.GetName] ([This.GetTag]): max_manpower_k: [?max_manpower_k]"
 	}

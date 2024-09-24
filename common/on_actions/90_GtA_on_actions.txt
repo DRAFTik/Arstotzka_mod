@@ -37,14 +37,17 @@ on_actions = {
 	on_daily = {
 		effect = {
 			calculate_electric_power_effect = yes
-			calculate_provision_daily_effect = yes			# стата
+			calculate_provision_daily_effect = yes				# стата
+			calculate_steel_mill_effect = yes					# сталь
 		}
 	}
 
 	on_weekly = {
 		effect = {
 			calculate_electric_power_LOG_effect = yes
-			calculate_provision_weekly_effect = yes			# животнаводство
+			calculate_provision_weekly_effect = yes				# животнаводство
+			calculate_hunger_dyn_effect = yes					# голод
+			calculate_change_population_weekly_effect = yes		# изменение населения в регионах
 		}
 	}
 

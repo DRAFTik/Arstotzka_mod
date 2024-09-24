@@ -40,6 +40,20 @@
 		production_speed_universal_factory_factor = production_speed_universal_factory_factor_var
 	}
 	
+	steel_mill_minus_dyn = {
+		icon = GFX_hunger
+		enable = { always = yes }
+		# list of modifiers
+		num_use_electric_power = steel_return_electric_power_var
+	}
+	
+	steel_mill_minus_state_dyn = {
+		icon = GFX_modifiers_increased_metal_production
+		enable = { always = yes }
+		# list of modifiers
+		state_resource_cost_steel = steel_minus_state_var
+	}
+	
 	
 	volunteer_only_dyn = {
 		enable = {
@@ -59,6 +73,22 @@
 		
 		# list of modifiers
 		operative_slot = operative_slot_var
+	}
+	
+	hunger_dyn = {
+#		icon = GFX_hunger
+		enable = {
+		}
+		
+		# list of modifiers
+		stability_weekly = hunger_stability_weekly_var
+		MONTHLY_POPULATION = hunger_monthly_population_var
+		num_change_population_weekly = hunger_change_population_weekly_var
+		industrial_capacity_factory = hunger_industrial_capacity_var
+		industrial_capacity_dockyard = hunger_industrial_capacity_var
+		production_factory_efficiency_gain_factor = hunger_production_factory_efficiency_gain_factor_var
+		production_speed_buildings_factor = hunger_production_speed_buildings_factor_var
+		research_speed_factor = hunger_research_speed_factor_var
 	}
 	
 	

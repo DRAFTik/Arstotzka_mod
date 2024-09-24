@@ -3,7 +3,7 @@ state={
 	id=22
 	name="STATE_22"
 	resources={
-		steel=2.000
+		iron=2.000
 	}
 	history={
 		victory_points = {

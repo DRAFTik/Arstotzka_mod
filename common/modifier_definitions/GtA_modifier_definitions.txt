@@ -58,6 +58,13 @@ fake_fuel_cost = {
 	category = country
 }
 
+max_provision = {
+	color_type = good
+	value_type = number
+	precision = 1
+	category = country
+}
+
 num_generation_provision_weekly = {
 	color_type = good
 	value_type = number
@@ -69,5 +76,33 @@ num_generation_provision_yearly = {
 	color_type = good
 	value_type = number
 	precision = 1
+	category = country
+}
+
+monthly_save_provision_modifier = {
+	color_type = good
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
+consumption_of_provisions_modifier = {
+	color_type = bad
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
+provision_income_modifier = {
+	color_type = good
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
+num_change_population_weekly = {
+	color_type = good
+	value_type = percentage
+	precision = 2
 	category = country
 }

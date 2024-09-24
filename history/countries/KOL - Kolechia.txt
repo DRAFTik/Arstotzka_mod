@@ -29,6 +29,7 @@ add_ideas = {
 	isolation
 	export_focus
 	volunteer_only
+	self_regulation_of_consumption
 	
 	KOL_war_with_Arstotzka
 }

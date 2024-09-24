@@ -22,6 +22,57 @@ defined_text = {
 }
 
 defined_text = {
+	name = GET_STEEL_MILL_OK
+	text = {
+		trigger = {
+			check_variable = { steel_mill_ok = steel_mill_total }
+		}
+		localization_key = GET_STEEL_MILL_GREEN
+	}
+	text = {
+		localization_key = GET_STEEL_MILL_RED
+	}
+}
+
+defined_text = {
+	name = GET_PROVISIONS_TEXT				# включая GET_PROVISIONS_FORMAT_TEXT
+	text = {
+		trigger = {
+			check_variable = { provision_delta_var < 0 }
+		}
+		localization_key = GET_BAD_PROVISIONS_LOC
+	}
+	text = {
+		trigger = {
+			check_variable = { provision_delta_var > 0 }
+		}
+		localization_key = GET_GOOD_PROVISIONS_LOC
+	}
+	text = {
+		localization_key = GET_NORMAL_PROVISIONS_LOC
+	}
+}
+
+defined_text = {
+	name = GET_PROVISIONS_FORMAT_TEXT
+	text = {
+		trigger = {
+			check_variable = { var = provision_month_var value = 96 compare = greater_than_or_equals }
+		}
+		localization_key = GET_PROVISIONS_IN_YEARS_TEXT
+	}
+	text = {
+		trigger = {
+			check_variable = { var = provision_days_var value = 365 compare = greater_than_or_equals }
+		}
+		localization_key = GET_PROVISIONS_IN_MONTH_TEXT
+	}
+	text = {
+		localization_key = GET_PROVISIONS_IN_DAYS_TEXT
+	}
+}
+
+defined_text = {
 	name = GET_CROP_LOC
 	text = {
 		trigger = {
@@ -40,5 +91,15 @@ defined_text = {
 			has_country_flag = normal_harvest_flag
 		}
 		localization_key = GET_NORMAL_HARVEST_LOC
+	}
+}
+
+defined_text = {
+	name = GET_HUNGER_LOC
+	text = {
+		trigger = {
+			has_variable = hunger_dyn_var
+		}
+		localization_key = GET_HUNGER_TEXT
 	}
 }

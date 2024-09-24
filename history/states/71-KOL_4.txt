@@ -4,7 +4,7 @@ state={
 	name="STATE_71"
 	resources={
 		aluminium=14.000
-		steel=19.000
+		iron=19.000
 	}
 	history={
 		victory_points = {

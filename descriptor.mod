@@ -1,4 +1,15 @@
 version="0.0.1"
+tags={
+	"Alternative History"
+	"Map"
+	"Events"
+	"Technologies"
+}
+picture="thumbnail.png"
+name="[Glory to Arstotzka!]"
+supported_version="1.14.*"
+path="mod/_glory_to_arstotzka"
+
 replace_path="common/ai_areas"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
@@ -58,13 +69,3 @@ replace_path="music"
 replace_path="tests"
 replace_path="tutorial"
 replace_path="portraits"
-tags={
-	"Alternative History"
-	"Map"
-	"Events"
-	"Technologies"
-}
-picture="thumbnail.png"
-name="[Glory to Arstotzka!]"
-supported_version="1.14.*"
-path="mod/_glory_to_arstotzka"

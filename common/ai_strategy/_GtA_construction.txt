@@ -15,7 +15,35 @@
 
 
 
+### СТАЛЬ ###
+
+
+we_need_steel_mill = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_available_military_factories > 2
+		num_of_civilian_factories_available_for_projects > 2
+		check_variable = { var = resource@steel					value = 0	compare = less_than_or_equals }
+		OR = {
+			check_variable = { var = resource@iron				value = 0	compare = greater_than_or_equals }
+			any_other_country = {
+				check_variable = { var = resource_exported@iron	value = 0	compare = greater_than_or_equals }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = steel_mill	value = 2 }
+}
+
+
+
 ### ЭНЕРГИЯ ###
+
 
 we_dont_need_thermal_power_plant = {
 	allowed = {
@@ -59,7 +87,6 @@ we_need_thermal_power_plant = {
 		}
 	}
 	enable = {
-		date > 1983.1.2
 		check_variable = { var = electric_power_total_var value = 8 compare = less_than_or_equals }
 		check_variable = { thermal_power_plant_ok = thermal_power_plant_total }
 		fuel_ratio > 0.1
@@ -109,6 +136,124 @@ we_need_nuclear_power_plant = {
 
 
 
+### ПРОВИЗИЯ ###
+
+
+we_need_agro_complex = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_civilian_factories_available_for_projects > 10
+		check_variable = { var = yearly_income_provision		value = max_provision_total_var	compare = less_than }
+		check_variable = { var = provision_percent_to_max_var	value = 0.5		compare = less_than_or_equals }
+		OR = {
+			check_variable = { var = provision_balance_var		value = 1.5		compare = less_than_or_equals }
+			AND = {
+				check_variable = { var = provision_delta_var	value = 0		compare = less_than_or_equals }
+				check_variable = { var = provision_days_var		value = 180		compare = less_than_or_equals }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = agro_complex	value = 1 }
+}
+
+we_need_livestock_complex = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_civilian_factories_available_for_projects > 2
+		check_variable = { var = provision_percent_to_max_var	value = 0.25	compare = less_than_or_equals }
+		check_variable = { var = provision_balance_var			value = 2		compare = less_than_or_equals }
+		check_variable = { var = provision_delta_var			value = 0		compare = less_than_or_equals }
+		check_variable = { var = provision_days_var				value = 60		compare = less_than_or_equals }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = livestock_complex	value = 1 }
+}
+
+we_need_agro_silo = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_civilian_factories_available_for_projects > 2
+		set_temp_variable = { total_income_provision_temp = weekly_income_provision }
+		multiply_temp_variable = { total_income_provision_temp = 4 }
+		add_to_temp_variable = { total_income_provision_temp = yearly_income_provision }
+		
+		set_temp_variable = { agro_silo_upper_limit = max_provision_total_var }
+		multiply_temp_variable = { agro_silo_upper_limit = 0.9 }
+		check_variable = { var = total_income_provision_temp	value = agro_silo_upper_limit	compare = greater_than_or_equals }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = agro_silo	value = 1 }
+}
+
+
+
+
+
+we_need_radar_station = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_civilian_factories_available_for_projects > 15
+		check_variable = { var = electric_power_total_var value = 10 compare = greater_than_or_equals }
+		all_controlled_state = {
+			free_building_slots = {
+				building = industrial_complex
+				size < 1
+				include_locked = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = radar_station	value = 999 }
+}
+
+we_need_infrastructure = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		all_controlled_state = {
+			free_building_slots = {
+				building = industrial_complex
+				size < 1
+				include_locked = no
+			}
+		}
+		any_controlled_state = {
+			free_building_slots = {
+				building = industrial_complex
+				size > 1
+				include_locked = yes
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = infrastructure	value = 999 }
+}
+
 we_need_hospital = {
 	allowed = {
 		NOT = {
@@ -153,5 +298,130 @@ we_need_hospital = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = building_target		id = hospital		value = 1 }
+	ai_strategy = { type = building_target	id = hospital	value = 1 }
+}
+
+
+
+
+
+
+
+
+### DOCKYARDS ###
+
+we_dont_need_dockyards = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_military_factories < 30
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = dockyard_to_military_factory_ratio		value = -1000 }
+}
+
+
+we_need_dockyards_1 = {
+	allowed = {
+		tag = IMP
+	}
+	enable = {
+		tag = IMP
+		num_of_military_factories > 9
+		surrender_progress < 0.1
+		set_temp_variable = { mil_fact = num_of_naval_factories }
+		divide_temp_variable = { mil_fact = num_of_military_factories }
+		check_variable = { var = mil_fact	value = 0.50	compare = less_than }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = dockyard_to_military_factory_ratio		value = 1000 }
+}
+we_need_dockyards_2 = {
+	allowed = {
+		OR = {
+			tag = ARS
+			tag = OBR
+			tag = UNF
+		}
+	}
+	enable = {
+		OR = {
+			AND = {
+				num_of_factories > 49
+				date < 1987.1.1
+			}
+			AND = {
+				num_of_factories > 74
+				NOT = { date < 1987.1.1 }
+				date < 1989.1.1
+			}
+			AND = {
+				num_of_factories > 99
+				NOT = { date < 1989.1.1 }
+				date < 1991.1.1
+			}
+			AND = {
+				num_of_factories > 124
+				NOT = { date < 1991.1.1 }
+				date < 1993.1.1
+			}
+			num_of_factories > 149
+		}
+		num_of_military_factories > 9
+		surrender_progress < 0.1
+		set_temp_variable = { mil_fact = num_of_naval_factories }
+		divide_temp_variable = { mil_fact = num_of_military_factories }
+		check_variable = { var = mil_fact	value = 0.30	compare = less_than }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = dockyard_to_military_factory_ratio		value = 1000 }
+}
+we_need_dockyards_3 = {
+	allowed = {
+		NOT = {
+			tag = IMP
+			tag = ARS
+			tag = OBR
+			tag = UNF
+			tag = SAI
+		}
+	}
+	enable = {
+		OR = {
+			AND = {
+				num_of_factories > 49
+				date < 1987.1.1
+			}
+			AND = {
+				num_of_factories > 74
+				NOT = { date < 1987.1.1 }
+				date < 1989.1.1
+			}
+			AND = {
+				num_of_factories > 99
+				NOT = { date < 1989.1.1 }
+				date < 1991.1.1
+			}
+			AND = {
+				num_of_factories > 124
+				NOT = { date < 1991.1.1 }
+				date < 1993.1.1
+			}
+			num_of_factories > 149
+		}
+		num_of_military_factories > 9
+		surrender_progress < 0.1
+		set_temp_variable = { mil_fact = num_of_naval_factories }
+		divide_temp_variable = { mil_fact = num_of_military_factories }
+		check_variable = { var = mil_fact	value = 0.10	compare = less_than }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = dockyard_to_military_factory_ratio		value = 1000 }
 }

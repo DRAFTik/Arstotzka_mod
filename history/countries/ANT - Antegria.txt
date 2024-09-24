@@ -26,6 +26,7 @@ add_ideas = {
 	low_economic_mobilisation
 	limited_exports
 	volunteer_only
+	self_regulation_of_consumption
 }
 
 

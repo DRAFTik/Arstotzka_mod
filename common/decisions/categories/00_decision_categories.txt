@@ -1,6 +1,6 @@
 GtA_debug_decisions = {
 	icon = generic_propaganda
-
+	priority = -1000
 	allowed = {
 		is_debug = yes
 	}

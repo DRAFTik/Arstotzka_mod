@@ -589,6 +589,7 @@ intel_network_state_level_penalty = {
 created_intelligence_agency = {
 	operative_slot = 1
 	new_operative_slot_bonus = 3
+	num_use_electric_power = 1
 }
 
 # Modifiers enabled at state level when an operative is assigned to the root out resistance mission

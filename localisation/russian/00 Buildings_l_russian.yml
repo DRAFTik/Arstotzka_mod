@@ -6,6 +6,10 @@
     universal_factory: "Унифицированная фабрика"
     universal_factory_desc: "Это сооружение совмещает в себе функции §YВоенного завода§! и §YФабрики§!."
     universal_factory_plural: "Унифицированные фабрики"
+    
+    steel_mill: "Сталеплавильня"
+    steel_mill_desc: "$synthetic_refinery_desc$"
+    steel_mill_plural: "Сталеплавильни"
     universal_factory_dyn: "$universal_factory_plural$"
     
     agro_complex: "Агрокомплекс"
