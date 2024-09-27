@@ -28,3 +28,44 @@ ANT_start_wants_thermal_power_plant = {
 }
 
 ######## END CONSTRUCTIONS ########
+
+
+KOL_help_ANT_win_war = {
+	reversed = yes
+	allowed = {
+		tag = KOL
+	}
+	enable_reverse = {
+		KOL = {
+			NOT = { is_communism_ideology = yes }
+		}
+	}
+	enable = {
+		tag = ANT
+		exists = yes
+		has_war_with = REP
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = { type = send_volunteers_desire	id = "KOL"	value = 75	}
+	ai_strategy = { type = diplo_action_desire		id = "KOL"	target = send_attache	value = 40000 }
+}
+
+IMP_help_ANT_win_war = {
+	reversed = yes
+	allowed = {
+		tag = IMP
+	}
+	enable_reverse = {
+		IMP = {
+			NOT = { is_communism_ideology = yes }
+		}
+	}
+	enable = {
+		tag = ANT
+		exists = yes
+		has_war_with = REP
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = { type = send_volunteers_desire	id = "IMP"	value = 75	}
+	ai_strategy = { type = diplo_action_desire		id = "IMP"	target = send_attache	value = 40000 }
+}

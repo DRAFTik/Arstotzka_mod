@@ -10,6 +10,7 @@ state={
 			infrastructure = 1
 			dockyard = 1
 			livestock_complex = 1
+			steel_mill = 1
 		}
 		owner = IMP
 		add_core_of = IMP

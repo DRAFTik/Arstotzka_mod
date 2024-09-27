@@ -9,6 +9,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			arms_factory = 2
+			steel_mill = 1
 		}
 		owner = ARS
 		add_core_of = ARS

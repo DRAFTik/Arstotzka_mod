@@ -4,7 +4,6 @@ ideas = {
 		GER_autarky_idea = {
 
 			allowed = {
-				original_tag = GER
 				always = no
 			}
 
@@ -73,12 +72,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				fascism_drift = -0.20
-				communism_drift = -0.20
+				totalist_drift = -0.20
+				syndicalist_drift = -0.20
+				radical_socialist_drift = -0.20
 				master_ideology_drift = 0.05
-			}
-			rule = {
-				can_create_factions = yes
 			}
 		}
 		GER_brotherrival = {
@@ -243,7 +240,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				totalist_drift = 0.50
+				national_populist_drift = 0.15
 			}
 		}
 		ger_increased_army_training_idea = {
@@ -434,7 +431,7 @@ ideas = {
 			modifier = {
 				encryption_factor = 0.25
 				enemy_partisan_effect = -0.3
-				war_support_weekly = 0.05
+				war_support_weekly = 0.005
 				stability_weekly = 0.005
 			}		
 		}		

@@ -5,6 +5,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			agro_complex = 1
+			steel_mill = 1
 		}
 		owner = KOL
 		add_core_of = KOL

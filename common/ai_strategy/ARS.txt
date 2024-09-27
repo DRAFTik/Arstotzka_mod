@@ -1,0 +1,51 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+# building_target
+
+
+
+######## CONSTRUCTIONS ########
+
+ARS_start_wants_thermal_power_plant = {
+	allowed = { tag = ARS }
+	enable = {
+		date < 1983.2.1
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = building_target		id = thermal_power_plant		value = 2 }
+}
+
+######## END CONSTRUCTIONS ########
+
+
+REP_help_ARS_win_war = {
+	reversed = yes
+	allowed = {
+		tag = REP
+	}
+	enable_reverse = {
+		REP = {
+			NOT = { has_government = national_populist }
+		}
+	}
+	enable = {
+		tag = ARS
+		exists = yes
+		has_war_with = KOL
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = { type = send_volunteers_desire	id = "REP"	value = 75	}
+	ai_strategy = { type = diplo_action_desire		id = "REP"	target = send_attache	value = 40000 }
+}

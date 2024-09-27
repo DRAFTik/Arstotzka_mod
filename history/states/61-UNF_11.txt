@@ -10,6 +10,7 @@ state={
 			arms_factory = 1
 			industrial_complex = 3
 			agro_complex = 1
+			steel_mill = 1
 		}
 		owner = UNF
 		add_core_of = UNF

@@ -11,6 +11,7 @@ state={
 			infrastructure = 1
 			industrial_complex = 1
 			agro_complex = 1
+			steel_mill = 1
 		}
 		owner = REP
 		add_core_of = REP

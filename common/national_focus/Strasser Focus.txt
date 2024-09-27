@@ -1,12 +1,12 @@
 focus_tree = {
-	id = arstotzka_ST_focus
+	id = Strasser_focus
 	
 	country = {
 		factor = 0
 		
 		modifier = {
-			add = 0
-			tag = ARS
+			add = 10
+			tag = ANT
 		}
 	}
 
@@ -240,7 +240,7 @@ focus_tree = {
 		id = GER_strassers_university
 		icon = GFX_focus_ger_strassers_university
 		x = -2
-		y = 4
+		y = 3
 		relative_position_id = GER_issues_of_the_table
 		cost = 5
 		prerequisite = {
@@ -370,52 +370,34 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = GER_art_and_architecture
-		icon = GFX_focus_ger_art_and_architecture
-		x = -6
-		y = 1
-		relative_position_id = GER_strasser_nuremburg_rally
-		cost = 5
-		prerequisite = {
-			focus = GER_strasser_nuremburg_rally
-		}
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_art_and_architecture"
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = speer
-		}
-	}
-	focus = {
-		id = GER_posters
-		icon = GFX_focus_ger_posters
-		x = -4
-		y = 1
-		relative_position_id = GER_strasser_nuremburg_rally
-		cost = 5
-		prerequisite = {
-			focus = GER_strasser_nuremburg_rally
-		}
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_posters"
-			add_stability = 0.1
-		}
-	}
+#	focus = {
+#		id = GER_art_and_architecture
+#		icon = GFX_focus_ger_art_and_architecture
+#		x = -6
+#		y = 1
+#		relative_position_id = GER_strasser_nuremburg_rally
+#		cost = 5
+#		prerequisite = {
+#			focus = GER_strasser_nuremburg_rally
+#		}
+#		ai_will_do = {
+#			factor = 10
+#		}	
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus GER_art_and_architecture"
+#			custom_effect_tooltip = available_political_advisor
+#			show_ideas_tooltip = speer
+#		}
+#	}
 	focus = {
 		id = GER_radios
 		icon = GFX_focus_ger_radios
-		x = -2
+		x = 0
 		y = 1
-		relative_position_id = GER_strasser_nuremburg_rally
+		relative_position_id = GER_strassers_university
 		cost = 5
 		prerequisite = {
-			focus = GER_strasser_nuremburg_rally
+			focus = GER_strassers_university
 		}
 		ai_will_do = {
 			factor = 10
@@ -427,6 +409,24 @@ focus_tree = {
 		    	uses = 1
 		    	category = electronics
 			}			
+		}
+	}
+	focus = {
+		id = GER_posters
+		icon = GFX_focus_ger_posters
+		x = -2
+		y = 1
+		relative_position_id = GER_strasser_nuremburg_rally
+		cost = 5
+		prerequisite = {
+			focus = GER_strasser_nuremburg_rally
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_posters"
+			add_war_support = 0.1
 		}
 	}
 	focus = {
@@ -447,45 +447,45 @@ focus_tree = {
 			add_stability = 0.1
 		}
 	}
-	focus = {
-		id = GER_literature_and_music
-		icon = GFX_focus_ger_literature_and_music
-		x = 4
-		y = 1
-		relative_position_id = GER_strasser_nuremburg_rally
-		cost = 5
-		prerequisite = {
-			focus = GER_strasser_nuremburg_rally
-		}
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_literature_and_music"
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_artur_dinter
-		}
-	}
-	
-	focus = {
-		id = GER_cinema
-		icon = GFX_focus_ger_cinema
-		x = 6
-		y = 1
-		relative_position_id = GER_strasser_nuremburg_rally
-		cost = 5
-		prerequisite = {
-			focus = GER_strasser_nuremburg_rally
-		}
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_cinema"
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = leni
-		}
-	}
+#	focus = {
+#		id = GER_literature_and_music
+#		icon = GFX_focus_ger_literature_and_music
+#		x = 4
+#		y = 1
+#		relative_position_id = GER_strasser_nuremburg_rally
+#		cost = 5
+#		prerequisite = {
+#			focus = GER_strasser_nuremburg_rally
+#		}
+#		ai_will_do = {
+#			factor = 10
+#		}	
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus GER_literature_and_music"
+#			custom_effect_tooltip = available_political_advisor
+#			show_ideas_tooltip = GER_artur_dinter
+#		}
+#	}
+#	
+#	focus = {
+#		id = GER_cinema
+#		icon = GFX_focus_ger_cinema
+#		x = 6
+#		y = 1
+#		relative_position_id = GER_strasser_nuremburg_rally
+#		cost = 5
+#		prerequisite = {
+#			focus = GER_strasser_nuremburg_rally
+#		}
+#		ai_will_do = {
+#			factor = 10
+#		}	
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus GER_cinema"
+#			custom_effect_tooltip = available_political_advisor
+#			show_ideas_tooltip = leni
+#		}
+#	}
 	
 	
 	focus = {
@@ -564,8 +564,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_three_year_plan"
 			add_timed_idea = {
-		    idea = GER_three_year_plan_idea
-		    days = 1096
+				idea = GER_three_year_plan_idea
+				days = 1096
 			}
 		}
 	}
@@ -582,7 +582,7 @@ focus_tree = {
 		available = {
 			AND = {
 				has_tech = basic_machine_tools
-				num_of_factories > 70
+#				num_of_factories > 70
 			}
 		}
 		ai_will_do = {
@@ -594,6 +594,14 @@ focus_tree = {
 		    	bonus = 0.5
 		    	uses = 1
 		    	category = construction_tech
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -619,8 +627,14 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_white_steel"
 			random_owned_controlled_state = {
 				add_resource = {
-					type = steel
+					type = iron
 					amount = 85
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = steel_mill
+					level = 3
+					instant_build = yes
 				}
 			}
 		}
@@ -650,6 +664,7 @@ focus_tree = {
 					type = oil
 					amount = 30
 				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 2
@@ -671,7 +686,7 @@ focus_tree = {
 		available = {
 			AND = {
 				has_tech = construction3
-				num_of_factories > 90
+				num_of_factories > 49
 			}
 		}
 		ai_will_do = {
@@ -683,6 +698,14 @@ focus_tree = {
 		    	bonus = 0.5
 		    	uses = 2
 		    	category = industry
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -711,6 +734,7 @@ focus_tree = {
 				set_fuel_ratio = 1.3
 			}
 			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = fuel_silo
 					level = 2
@@ -789,15 +813,14 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				has_full_control_of_state = 185
-				has_full_control_of_state = 202
-				has_full_control_of_state = 201
-				has_full_control_of_state = 200
-				has_full_control_of_state = 196
-				has_full_control_of_state = 170
-				has_full_control_of_state = 166
-				has_full_control_of_state = 165
-				has_full_control_of_state = 3
+				has_full_control_of_state = 137
+				has_full_control_of_state = 136
+				has_full_control_of_state = 139
+				has_full_control_of_state = 138
+				has_full_control_of_state = 134
+				has_full_control_of_state = 4
+				has_full_control_of_state = 34
+				has_full_control_of_state = 133
 			}
 		}
 		ai_will_do = {
@@ -807,7 +830,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_volksreichsautobahn"
 			custom_effect_tooltip = GER_autobahn_tt
 			hidden_effect = {
-				185 = {
+				137 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
@@ -817,7 +840,7 @@ focus_tree = {
 						}
 					}
 				}
-				202 = {
+				136 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
@@ -827,7 +850,7 @@ focus_tree = {
 						}
 					}
 				}
-				201 = {
+				139 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
@@ -837,7 +860,7 @@ focus_tree = {
 						}
 					}
 				}
-				200 = {
+				138 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
@@ -847,7 +870,7 @@ focus_tree = {
 						}
 					}
 				}
-				196 = {
+				134 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
@@ -857,7 +880,7 @@ focus_tree = {
 						}
 					}
 				}
-				170 = {
+				4 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
@@ -877,7 +900,7 @@ focus_tree = {
 						}
 					}
 				}
-				165 = {
+				34 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
@@ -887,7 +910,7 @@ focus_tree = {
 						}
 					}
 				}
-				3 = {
+				133 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
@@ -942,9 +965,9 @@ focus_tree = {
 				any_neighbor_state = {
 					controller = {
 						OR = {
-							original_tag = KOL
-							is_subject_of = KOL
-							is_in_faction_with = KOL
+							original_tag = UNF
+							is_subject_of = UNF
+							is_in_faction_with = UNF
 						}
 					}
 				}
@@ -962,9 +985,9 @@ focus_tree = {
 					any_neighbor_state = {
 						controller = {
 							OR = {
-								original_tag = KOL
-								is_subject_of = KOL
-								is_in_faction_with = KOL
+								original_tag = UNF
+								is_subject_of = UNF
+								is_in_faction_with = UNF
 							}
 						}
 					}
@@ -1042,6 +1065,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_prussia"
 			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -1049,6 +1073,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -1056,6 +1081,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -1119,8 +1145,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_rheingold"
 			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
+					type = agro_complex
 					level = 1
 					instant_build = yes
 				}
@@ -1140,31 +1167,39 @@ focus_tree = {
 		available = {
 			AND = {
 				OR = {
-					has_full_control_of_state = 17
-					any_other_country = {
-						is_subject_of = ARS
-						has_full_control_of_state = 17
+					has_full_control_of_state = 31
+					any_subject_country = {
+						has_full_control_of_state = 31
 					}
 				}
 				OR = {
-					has_full_control_of_state = 20
-					any_other_country = {
-						is_subject_of = ARS
-						has_full_control_of_state = 20
+					has_full_control_of_state = 137
+					any_subject_country = {
+						has_full_control_of_state = 137
 					}
 				}
 				OR = {
-					has_full_control_of_state = 144
-					any_other_country = {
-						is_subject_of = ARS
-						has_full_control_of_state = 144
+					has_full_control_of_state = 136
+					any_subject_country = {
+						has_full_control_of_state = 136
 					}
 				}
 				OR = {
-					has_full_control_of_state = 145
-					any_other_country = {
-						is_subject_of = ARS
-						has_full_control_of_state = 145
+					has_full_control_of_state = 135
+					any_subject_country = {
+						has_full_control_of_state = 135
+					}
+				}
+				OR = {
+					has_full_control_of_state = 32
+					any_subject_country = {
+						has_full_control_of_state = 32
+					}
+				}
+				OR = {
+					has_full_control_of_state = 33
+					any_subject_country = {
+						has_full_control_of_state = 33
 					}
 				}
 			}
@@ -1174,28 +1209,42 @@ focus_tree = {
 		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_bavaria"
-			17 = {
+			31 = {
 				set_building_level = {
 				    type = anti_air_building
 				    level = 3
 				    instant_build = yes
 				}
 			}
-			20 = {
+			137 = {
 				set_building_level = {
 				    type = anti_air_building
 				    level = 3
 				    instant_build = yes
 				}
 			}
-			144 = {
+			136 = {
 				set_building_level = {
 				    type = anti_air_building
 				    level = 3
 				    instant_build = yes
 				}
 			}
-			145 = {
+			135 = {
+				set_building_level = {
+				    type = anti_air_building
+				    level = 3
+				    instant_build = yes
+				}
+			}
+			32 = {
+				set_building_level = {
+				    type = anti_air_building
+				    level = 3
+				    instant_build = yes
+				}
+			}
+			33 = {
 				set_building_level = {
 				    type = anti_air_building
 				    level = 3
@@ -1215,15 +1264,15 @@ focus_tree = {
 			focus = GER_the_vines_blossom_on_the_rhine
 		}
 		available = {
-			SKO = {
+			KOL = {
 				exists = yes
 				has_capitulated = no
 			}
-			130 = {
+			87 = {
 				controller = {
 					OR = {
-						tag = SKO
-						is_subject_of = SKO
+						tag = KOL
+						is_subject_of = KOL
 					}
 				}
 			}
@@ -1233,9 +1282,9 @@ focus_tree = {
 		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_styria"
-			130 = {
+			87 = {
 				if = {
-					limit = { is_controlled_by = SKO }
+					limit = { is_controlled_by = KOL }
 					add_building_construction = {
 						type = infrastructure
 						level = 5
@@ -1243,9 +1292,9 @@ focus_tree = {
 					}
 				}
 			}
-			131 = {
+			88 = {
 				if = {
-					limit = { is_controlled_by = SKO }
+					limit = { is_controlled_by = KOL }
 					add_building_construction = {
 						type = infrastructure
 						level = 5
@@ -1253,9 +1302,9 @@ focus_tree = {
 					}
 				}
 			}
-			127 = {
+			90 = {
 				if = {
-					limit = { is_controlled_by = SKO }
+					limit = { is_controlled_by = KOL }
 					add_building_construction = {
 						type = infrastructure
 						level = 5
@@ -1263,7 +1312,7 @@ focus_tree = {
 					}
 				}
 			}
-			SKO = {
+			KOL = {
 				add_popularity = { ideology = var:ROOT.current_party_ideology_group popularity = 0.2 }
 			}
 		}
@@ -1285,7 +1334,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_the_citizens_of_the_mark_mold_iron"
 			create_import = {
-			    resource = steel
+			    resource = iron
     			amount = 50
     			exporter = IMP
 			}
@@ -1305,11 +1354,11 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				SKO = {
-					has_war_with = ARS
+				KOL = {
+					has_war_with = ROOT
 				}
-				ARS = {
-					has_war_with = SKO
+				ROOT = {
+					has_war_with = KOL
 					has_capitulated = yes
 				}
 			}
@@ -1319,10 +1368,10 @@ focus_tree = {
 		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_the_place_where_cattle_of_the_marsi_roam"
-			custom_effect_tooltip = GER_marsi_tt
-			hidden_effect = {
-				add_offsite_building = { type = industrial_complex level = 2 }		
-			}
+#			custom_effect_tooltip = GER_marsi_tt
+#			hidden_effect = {
+				add_offsite_building = { type = livestock_complex level = 2 }		
+#			}
 		}
 	}
 	focus = {
@@ -1343,7 +1392,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_where_the_danube_rushes_along"
 			custom_effect_tooltip = GER_danube_tt
 			hidden_effect = {
-				SKO = {
+				REP = {
 					country_event = strasser.16
 				}
 			}
@@ -1417,10 +1466,9 @@ focus_tree = {
 		available = {
 			AND = {
 				OR = {
-					has_full_control_of_state = 206
-					any_other_country = {
-						is_subject_of = ARS
-						has_full_control_of_state = 206
+					has_full_control_of_state = 101
+					any_subject_country = {
+						has_full_control_of_state = 101
 					}
 				}
 			}
@@ -1430,9 +1478,10 @@ focus_tree = {
 		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_pommerania"
-			206 = {
+			101 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
 						level = 3
@@ -1458,7 +1507,7 @@ focus_tree = {
 				IMP = {
 					exists = yes
 				}
-				ARS = {
+				ROOT = {
 					has_capitulated = no
 				}
 			}
@@ -1468,11 +1517,11 @@ focus_tree = {
 		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_tyrol"	
-			add_state_core = 51
+			add_state_core = 12
 			create_wargoal = {
 				type = take_state_focus
 				target = IMP
-				generator = { 51 }
+				generator = { 12 }
 			}
 		}
 	} 
@@ -1491,7 +1540,7 @@ focus_tree = {
 				OBR = {
 					exists = yes
 				}
-				ARS = {
+				ROOT = {
 					has_capitulated = no
 				}
 			}
@@ -1509,12 +1558,13 @@ focus_tree = {
 		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_the_swiss"
-			add_state_core = 120
-			add_state_core = 121
+			add_state_core = 101
+			add_state_core = 100
+			add_state_core = 110
 			create_wargoal = {
 				type = take_state_focus
 				target = OBR
-				generator = { 120 121 }
+				generator = { 100 101 110 }
 			}
 		}
 	}
@@ -1532,12 +1582,11 @@ focus_tree = {
 			focus = GER_is_it_the_swiss 
 		}
 		bypass = {
-			SKO = {
+			REP = {
 				exists = no
 			}
 		}
 		available = {
-			threat > 0.15
 			has_army_manpower = { size > 549999 }
 		}
 		ai_will_do = {
@@ -1549,8 +1598,8 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
-						SKO = {
-							is_puppet_of = ARS
+						REP = {
+							is_puppet_of = ROOT
 						}
 					}
 					country_event = strasser.18
@@ -1577,7 +1626,10 @@ focus_tree = {
 		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_as_far_as_the_German_tongue_speaks"
-			custom_effect_tooltip = GER_as_far_as_the_German_tongue_speaks_tt
+			every_state = {
+				limit = { is_core_of = REP NOT = { is_core_of = ROOT } }
+				add_core_of = ROOT
+			}
 		}
 	}
 	focus = {
@@ -1595,26 +1647,17 @@ focus_tree = {
 			factor = 10
 		}	
 		available = {
-			AND = {
+			OR = {
 				OR = {
-					has_full_control_of_state = 204
-					any_other_country = {
-						is_subject_of = ARS
-						has_full_control_of_state = 204
+					has_full_control_of_state = 101
+					any_subject_country = {
+						has_full_control_of_state = 101
 					}
 				}
 				OR = {
-					has_full_control_of_state = 205
-					any_other_country = {
-						is_subject_of = ARS
-						has_full_control_of_state = 205
-					}
-				}
-				OR = {
-					has_full_control_of_state = 206
-					any_other_country = {
-						is_subject_of = ARS
-						has_full_control_of_state = 206
+					has_full_control_of_state = 5
+					any_subject_country = {
+						has_full_control_of_state = 5
 					}
 				}
 			}
@@ -1622,7 +1665,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_the_sand_of_dunes_blows"
-			204 = {
+			101 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
@@ -1637,22 +1680,7 @@ focus_tree = {
 					
 				}
 			}
-			205 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = {
-							all_provinces = yes
-							limit_to_coastal = yes
-						}
-						instant_build = yes
-					}
-					
-				}
-			}
-			206 = {
+			5 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
@@ -1686,10 +1714,10 @@ focus_tree = {
 				OR = {
 					date < 1986.1.1
 					any_neighbor_country = {
-						has_war_with = ARS
+						has_war_with = ROOT
 						NOT = { has_capitulated = yes }
 						strength_ratio = {
-							tag = ARS
+							tag = ROOT
 							ratio > 0.6
 						}
 					}
@@ -1698,9 +1726,9 @@ focus_tree = {
 		}
 		available = {
 			is_puppet = no
-			has_army_manpower = { size > 949999 } #100 div			
+			has_army_manpower = { size > 749999 } #80 div			
 			#Make custom trigger tooltip here
-			80 = {
+			87 = {
 				owner = {
 					original_tag = KOL
 				}
@@ -1721,7 +1749,7 @@ focus_tree = {
 							OR = {
 								is_in_faction_with = ROOT
 								has_volunteers_amount_from = {
-									tag = ARS
+									tag = ROOT
 									count > 0
 								}
 							}
@@ -1735,7 +1763,7 @@ focus_tree = {
 				has_war_with = KOL
 				is_in_faction_with = KOL
 				NOT = {
-					80 = {
+					87 = {
 						controller = {
 							original_tag = KOL 
 						}
@@ -1802,13 +1830,25 @@ focus_tree = {
 					modifier = medium_decrease
 				}
 			}
-			ANT = {
+			ARS = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = medium_decrease
+				}
+			}
+			UNF = {
 				add_opinion_modifier = { 
 					target = ROOT
 					modifier = huge_increase
 				}
 			}
 			IMP = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = huge_increase
+				}
+			}
+			KOL = {
 				add_opinion_modifier = { 
 					target = ROOT
 					modifier = huge_increase
@@ -1834,6 +1874,12 @@ focus_tree = {
 		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_stand_with_the_reds"
+			ARS = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = huge_increase
+				}
+			}
 			OBR = {
 				add_opinion_modifier = { 
 					target = ROOT
@@ -1843,16 +1889,16 @@ focus_tree = {
 			REP = {
 				add_opinion_modifier = { 
 					target = ROOT
-					modifier = huge_increase
+					modifier = medium_decrease
 				}
 			}
-			ANT = {
+			IMP = {
 				add_opinion_modifier = { 
 					target = ROOT
 					modifier = medium_decrease
 				}
 			}
-			IMP = {
+			UNF = {
 				add_opinion_modifier = { 
 					target = ROOT
 					modifier = medium_decrease
@@ -1875,26 +1921,36 @@ focus_tree = {
 		}	
 
 		bypass = {
-			ANT = {
+			KOL = {
 				exists = no
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_seeking_for_the_black_shirts"
 			diplomatic_relation = {
-				country = ANT
+				country = KOL
 				relation = non_aggression_pact
 				active = yes
 			}
 			diplomatic_relation = {
-				country = ANT
+				country = KOL
 				relation = guarantee
 				active = yes
 			}
-			ANT = {
+			diplomatic_relation = {
+				country = KOL
+				relation = military_access
+				active = yes
+			}
+			KOL = {
 				diplomatic_relation = {
-					country = ARS
+					country = ROOT
 					relation = guarantee
+					active = yes
+				}
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
 					active = yes
 				}
 			}
@@ -1930,10 +1986,20 @@ focus_tree = {
 				relation = guarantee
 				active = yes
 			}
+			diplomatic_relation = {
+				country = IMP
+				relation = military_access
+				active = yes
+			}
 			IMP = {
 				diplomatic_relation = {
-					country = ARS
+					country = ROOT
 					relation = guarantee
+					active = yes
+				}
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
 					active = yes
 				}
 			}
@@ -1951,15 +2017,12 @@ focus_tree = {
 		}
 		available = {
 			is_puppet = no
-			has_government = totalist
-			has_army_manpower = { size > 849999 } #ca 90 div
-			country_exists = OBR
-			OBR = { NOT = { has_war_with = ROOT } }
-			NOT = { has_completed_focus = GER_bulwark_against_bolshevism }
-			NOT = { has_completed_focus = GER_the_great_red_menace }
+			has_army_manpower = { size > 749999 } #ca 80 div
+			country_exists = ARS
+			NOT = { has_war_with = ARS }
 		}
 		bypass = {
-			OBR = {
+			ARS = {
 				exists = no
 			}
 		}
@@ -1968,7 +2031,7 @@ focus_tree = {
 		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_molotov_strasser_pact"
-			OBR = {
+			ARS = {
 				country_event = { id = strasser.29 days = 1 }
 				custom_effect_tooltip = needs_approval
 			}
@@ -2011,17 +2074,10 @@ focus_tree = {
 			focus = GER_seeking_for_the_red_sun
 		}
 		available = {
-			is_in_faction = no
-			ANT = {
+			IMP = {
 				NOT = { has_war_with = ROOT }
 				exists = yes
 				has_capitulated = no
-			}
-			NOT = {
-				any_other_country = {
-					is_in_faction_with = ANT
-					has_war_with = ARS
-				}
 			}
 		}
 		ai_will_do = {
@@ -2031,18 +2087,22 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_red_and_black"
 			if = {
 				limit = {
-					ANT = {
+					KOL = {
 						exists = yes
 						is_faction_leader = yes
 					}
 				}
-				ANT = {
+				KOL = {
 					country_event = generic.2
 				}
 			}
 			else = {
-				create_faction = "Восточный Пакт"
-				ANT = {
+				if = {
+					limit = { is_faction_leader = yes }
+					set_faction_name = "Центральный Пакт"
+				}
+				else = { create_faction = "Центральный Пакт" }
+				KOL = {
 					country_event = generic.5
 				}
 				IMP = {
@@ -2068,41 +2128,38 @@ focus_tree = {
 			factor = 10
 		}	
 		bypass = {
-			is_in_faction_with = OBR
+			is_in_faction_with = ARS
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		available = {
-			is_in_faction = no
-			OBR = {
+			ARS = {
 				NOT = { has_war_with = ROOT }
 				exists = yes
 				has_capitulated = no
-			}
-			NOT = {
-				any_other_country = {
-					is_in_faction_with = OBR
-					has_war_with = ARS
-				}
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_red_and_red"
 			if = {
 				limit = {
-					OBR = {
+					ARS = {
 						exists = yes
 						is_faction_leader = yes
 					}
 				}
-				OBR = {
+				ARS = {
 					country_event = generic.2
 				}
 			}
 			else = {
-				create_faction = "Восточный Пакт"
-				OBR = {
+				if = {
+					limit = { is_faction_leader = yes }
+					set_faction_name = "Центральный Пакт"
+				}
+				else = { create_faction = "Центральный Пакт" }
+				ARS = {
 					country_event = generic.5
 				}
 			}
@@ -2127,6 +2184,7 @@ focus_tree = {
 			create_wargoal = {
 			    type = annex_everything
 			    target = UNF
+				expire = 0
 			}
 		}
 	}
@@ -2339,6 +2397,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_stettin_schutzgruppe_center"
 			add_war_support = 0.1
 			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
     				type = arms_factory
 				    level = 2
@@ -2842,6 +2901,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_strasserreich
 		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -2862,14 +2924,15 @@ focus_tree = {
 			focus = GER_wehrmarine
 		}
 		available = {
-			has_full_control_of_state = 3
+			any_owned_state = { is_coastal = yes }
 		}
 		ai_will_do = {
 			factor = 10
 		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_hamburger_dock"
-			3 = {
+			random_owned_controlled_state = {
+				limit = { is_coastal = yes }
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
@@ -3135,6 +3198,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_nationalise_the_flight_production"
 			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
     				type = arms_factory
 				    level = 2

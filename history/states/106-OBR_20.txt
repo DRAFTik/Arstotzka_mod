@@ -6,6 +6,7 @@ state={
 			infrastructure = 1
 			livestock_complex = 1
 			agro_silo = 1
+			steel_mill = 1
 		}
 		owner = OBR
 		add_core_of = OBR

@@ -199,6 +199,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			remove_ideas = ARS_ezic_star
 			swap_ideas = {
 				remove_idea = ARS_ezic_rises2
 				add_idea = ARS_ezic_triumphant
@@ -874,15 +875,26 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		available = {
 			is_subject = no
-			all_of_scopes = {
-				array = KOL.core_states
-				controller = {
+			OR = {
+				all_of_scopes = {
+					array = KOL.core_states
+					controller = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					tooltip = KOL_all_core_states_trigger_tt
+				}
+				any_controlled_state = { is_core_of = KOL }
+				KOL = {
 					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
+						is_subject = yes
+						is_in_faction_with = ROOT
+						exists = no
+						has_capitulated = yes
 					}
 				}
-				tooltip = KOL_all_core_states_trigger_tt
 			}
 		}
 		x = 16

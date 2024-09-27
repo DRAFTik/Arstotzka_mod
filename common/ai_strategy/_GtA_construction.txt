@@ -15,7 +15,7 @@
 
 
 
-### СТАЛЬ ###
+#####################   СТАЛЬ   #####################
 
 
 we_need_steel_mill = {
@@ -25,27 +25,73 @@ we_need_steel_mill = {
 		}
 	}
 	enable = {
-		num_of_available_military_factories > 2
-		num_of_civilian_factories_available_for_projects > 2
-		check_variable = { var = resource@steel					value = 0	compare = less_than_or_equals }
+		num_of_military_factories > 2
+		num_of_civilian_factories_available_for_projects > 5
+		check_variable = { var = resource@steel					value = 0					compare = less_than_or_equals }
+		set_temp_variable = { need_iron_imported = resource@iron }
+		multiply_temp_variable = { need_iron_imported = -1 }
 		OR = {
-			check_variable = { var = resource@iron				value = 0	compare = greater_than_or_equals }
-			any_other_country = {
-				check_variable = { var = resource_exported@iron	value = 0	compare = greater_than_or_equals }
-			}
+			check_variable = { var = global.total_iron_exported	value = need_iron_imported	compare = greater_than_or_equals }
+			check_variable = { var = resource@iron				value = 0					compare = greater_than_or_equals }
 		}
+		check_variable = { var = electric_power_total_var		value = 10					compare = greater_than_or_equals }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = steel_mill	value = 1 }
+}
+we_need_steel_mill_2 = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_civilian_factories_available_for_projects > 29
+		set_temp_variable = { need_iron_imported = resource@iron }
+		multiply_temp_variable = { need_iron_imported = -1 }
+		OR = {
+			check_variable = { var = global.total_iron_exported	value = need_iron_imported	compare = greater_than_or_equals }
+			check_variable = { var = resource@iron				value = 0					compare = greater_than_or_equals }
+		}
+		check_variable = { var = electric_power_total_var		value = 10					compare = greater_than_or_equals }
+		set_temp_variable = { steel_fact = resource@steel }
+		divide_temp_variable = { steel_fact = num_of_military_factories }
+		check_variable = { var = steel_fact	value = 1.5	compare = less_than }
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = building_target	id = steel_mill	value = 2 }
 }
+we_need_steel_mill_3 = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_military_factories > 40
+		num_of_civilian_factories_available_for_projects > 59
+		check_variable = { var = resource@steel					value = -40					compare = less_than_or_equals }
+		set_temp_variable = { need_iron_imported = resource@iron }
+		multiply_temp_variable = { need_iron_imported = -1 }
+		OR = {
+			check_variable = { var = global.total_iron_exported	value = need_iron_imported	compare = greater_than_or_equals }
+			check_variable = { var = resource@iron				value = 0					compare = greater_than_or_equals }
+		}
+		check_variable = { var = electric_power_total_var		value = 10					compare = greater_than_or_equals }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = steel_mill	value = 10 }
+}
 
 
 
-### ЭНЕРГИЯ ###
+#####################   ЭНЕРГИЯ   #####################
 
 
-we_dont_need_thermal_power_plant = {
+we_DONT_need_thermal_power_plant = {
 	allowed = {
 		NOT = {
 			tag = SAI
@@ -55,6 +101,21 @@ we_dont_need_thermal_power_plant = {
 		OR = {
 			check_variable = { var = electric_power_total_var value = 20 compare = greater_than_or_equals }
 			NOT = { check_variable = { thermal_power_plant_ok = thermal_power_plant_total } }
+			AND = {
+				num_of_civilian_factories_available_for_projects > 60
+				check_variable = { var = electric_power_total_var value = -50 compare = less_than_or_equals }
+				OR = {
+					any_owned_state = {
+						is_coastal = yes
+						free_building_slots = {
+							building = hydro_power_plant
+							size > 0
+							include_locked = no
+						}
+					}
+					has_tech = nuclear_reactor
+				}
+			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -62,7 +123,7 @@ we_dont_need_thermal_power_plant = {
 	ai_strategy = { type = building_target	id = thermal_power_plant	value = -1 }
 }
 
-we_dont_need_hydro_power_plant = {
+we_DONT_need_hydro_power_plant = {
 	allowed = {
 		NOT = {
 			tag = SAI
@@ -90,10 +151,61 @@ we_need_thermal_power_plant = {
 		check_variable = { var = electric_power_total_var value = 8 compare = less_than_or_equals }
 		check_variable = { thermal_power_plant_ok = thermal_power_plant_total }
 		fuel_ratio > 0.1
+		if = {
+			limit = {
+				num_of_civilian_factories_available_for_projects > 60
+				check_variable = { var = electric_power_total_var value = -50 compare = less_than_or_equals }
+			}
+			NOT = {
+				any_owned_state = {
+					is_coastal = yes
+					free_building_slots = {
+						building = hydro_power_plant
+						size > 0
+						include_locked = no
+					}
+				}
+				has_tech = nuclear_reactor
+			}
+		}
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = building_target	id = thermal_power_plant	value = 1 }
+}
+
+we_need_thermal_power_plant_2 = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_civilian_factories_available_for_projects > 15
+		check_variable = { var = electric_power_total_var value = -20 compare = less_than_or_equals }
+		check_variable = { thermal_power_plant_ok = thermal_power_plant_total }
+		fuel_ratio > 0.1
+		if = {
+			limit = {
+				num_of_civilian_factories_available_for_projects > 60
+				check_variable = { var = electric_power_total_var value = -50 compare = less_than_or_equals }
+			}
+			NOT = {
+				any_owned_state = {
+					is_coastal = yes
+					free_building_slots = {
+						building = hydro_power_plant
+						size > 0
+						include_locked = no
+					}
+				}
+				has_tech = nuclear_reactor
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = thermal_power_plant	value = 2 }
 }
 
 we_need_hydro_power_plant = {
@@ -104,16 +216,50 @@ we_need_hydro_power_plant = {
 	}
 	enable = {
 		date > 1983.1.2
+		num_of_civilian_factories_available_for_projects > 60
+		set_temp_variable = { hpp = num_of_civilian_factories_available_for_projects }
+		divide_temp_variable = { hpp = electric_power_total_var }
 		OR = {
-			num_of_civilian_factories_available_for_projects > 30
+			check_variable = { hpp < 2.5 }
 			NOT = { check_variable = { thermal_power_plant_ok = thermal_power_plant_total } }
 		}
 		check_variable = { var = electric_power_total_var value = 8 compare = less_than_or_equals }
-		any_owned_state = { is_coastal = yes }
+		any_owned_state = {
+			is_coastal = yes
+			free_building_slots = {
+				building = hydro_power_plant
+				size > 0
+				include_locked = no
+			}
+		}
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = building_target	id = hydro_power_plant	value = 1 }
+	ai_strategy = { type = building_target	id = hydro_power_plant	value = 2 }
+}
+
+we_need_hydro_power_plant_2 = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		date > 1983.1.2
+		num_of_civilian_factories_available_for_projects > 60
+		check_variable = { var = electric_power_total_var value = -100 compare = less_than_or_equals }
+		any_owned_state = {
+			is_coastal = yes
+			free_building_slots = {
+				building = hydro_power_plant
+				size > 0
+				include_locked = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = hydro_power_plant	value = 2 }
 }
 
 we_need_nuclear_power_plant = {
@@ -123,44 +269,27 @@ we_need_nuclear_power_plant = {
 		}
 	}
 	enable = {
-		num_of_civilian_factories_available_for_projects > 30
+		has_tech = nuclear_reactor
+		num_of_civilian_factories_available_for_projects > 60
+		set_temp_variable = { hpp = num_of_civilian_factories_available_for_projects }
+		divide_temp_variable = { hpp = electric_power_total_var }
+		OR = {
+			check_variable = { hpp < 2.5 }
+			NOT = { check_variable = { thermal_power_plant_ok = thermal_power_plant_total } }
+		}
 		check_variable = { var = electric_power_total_var value = 0 compare = less_than_or_equals }
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = building_target	id = nuclear_power_plant	value = 1 }
+	ai_strategy = { type = building_target	id = nuclear_power_plant	value = 2 }
 }
 
 
 
 
 
+#####################   ПРОВИЗИЯ   #####################
 
-### ПРОВИЗИЯ ###
-
-
-we_need_agro_complex = {
-	allowed = {
-		NOT = {
-			tag = SAI
-		}
-	}
-	enable = {
-		num_of_civilian_factories_available_for_projects > 10
-		check_variable = { var = yearly_income_provision		value = max_provision_total_var	compare = less_than }
-		check_variable = { var = provision_percent_to_max_var	value = 0.5		compare = less_than_or_equals }
-		OR = {
-			check_variable = { var = provision_balance_var		value = 1.5		compare = less_than_or_equals }
-			AND = {
-				check_variable = { var = provision_delta_var	value = 0		compare = less_than_or_equals }
-				check_variable = { var = provision_days_var		value = 180		compare = less_than_or_equals }
-			}
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = { type = building_target	id = agro_complex	value = 1 }
-}
 
 we_need_livestock_complex = {
 	allowed = {
@@ -169,15 +298,38 @@ we_need_livestock_complex = {
 		}
 	}
 	enable = {
-		num_of_civilian_factories_available_for_projects > 2
-		check_variable = { var = provision_percent_to_max_var	value = 0.25	compare = less_than_or_equals }
-		check_variable = { var = provision_balance_var			value = 2		compare = less_than_or_equals }
+		num_of_civilian_factories_available_for_projects > 4
+		check_variable = { var = provision_percent_to_max_var	value = 0.25	compare = less_than_or_equals }		# Текущий запас провианта
+		check_variable = { var = provision_balance_var			value = 2		compare = less_than_or_equals }		# Текущий баланс провианта (ежедневн)
 		check_variable = { var = provision_delta_var			value = 0		compare = less_than_or_equals }
-		check_variable = { var = provision_days_var				value = 60		compare = less_than_or_equals }
+		check_variable = { var = provision_days_var				value = 60		compare = less_than_or_equals }		# Остаток провизии в днях
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = building_target	id = livestock_complex	value = 1 }
+}
+
+we_need_agro_complex = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_civilian_factories_available_for_projects > 14
+		check_variable = { var = yearly_income_provision		value = max_provision_total_var	compare = less_than }		# Производство провианта в год
+		check_variable = { var = provision_percent_to_max_var	value = 0.5		compare = less_than_or_equals }				# Текущий запас провианта
+		OR = {
+			check_variable = { var = provision_balance_var		value = 1.5		compare = less_than_or_equals }				# Текущий баланс провианта (ежедневн)
+			AND = {
+				check_variable = { var = provision_delta_var	value = 0		compare = less_than_or_equals }
+				check_variable = { var = provision_days_var		value = 180		compare = less_than_or_equals }				# Остаток провизии в днях
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = building_target	id = agro_complex	value = 1 }
 }
 
 we_need_agro_silo = {
@@ -187,7 +339,7 @@ we_need_agro_silo = {
 		}
 	}
 	enable = {
-		num_of_civilian_factories_available_for_projects > 2
+		num_of_civilian_factories_available_for_projects > 14
 		set_temp_variable = { total_income_provision_temp = weekly_income_provision }
 		multiply_temp_variable = { total_income_provision_temp = 4 }
 		add_to_temp_variable = { total_income_provision_temp = yearly_income_provision }
@@ -203,7 +355,7 @@ we_need_agro_silo = {
 
 
 
-
+#####################   ДРУГОЕ   #####################
 
 we_need_radar_station = {
 	allowed = {
@@ -295,6 +447,7 @@ we_need_hospital = {
 			subtract_from_temp_variable = { hospital_upper_limit = 1 }
 		}
 		hospital < hospital_upper_limit
+		check_variable = { var = electric_power_total_var value = 5 compare = greater_than_or_equals }
 	}
 	abort_when_not_enabled = yes
 
@@ -305,12 +458,88 @@ we_need_hospital = {
 
 
 
+#####################   ФАБРИКИ   #####################
+
+we_DONT_need_civ_factories = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		num_of_civilian_factories > 200
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = building_target		id = industrial_complex		value = -999 }
+}
+
+we_need_civ_factories_1 = {
+	allowed = {
+		OR = {
+			tag = ARS
+			tag = UNF
+			tag = OBR
+		}
+	}
+	enable = {
+		date < 1988.1.1
+		num_of_civilian_factories < 50
+		has_war = no
+		check_variable = { var = electric_power_total_var value = 10 compare = greater_than_or_equals }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = added_military_to_civilian_factory_ratio		value = -500 }
+	ai_strategy = { type = building_target		id = industrial_complex		value = 100 }
+}
+we_need_civ_factories_2 = {
+	allowed = {
+		NOT = {
+			tag = SAI
+			tag = ARS
+			tag = UNF
+			tag = OBR
+		}
+	}
+	enable = {
+		date < 1988.1.1
+		num_of_civilian_factories < 15
+		has_war = no
+		check_variable = { var = electric_power_total_var value = 10 compare = greater_than_or_equals }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = added_military_to_civilian_factory_ratio		value = -1000 }
+	ai_strategy = { type = building_target		id = industrial_complex		value = 20 }
+}
+we_need_civ_factories_3 = {
+	allowed = {
+		NOT = {
+			tag = SAI
+		}
+	}
+	enable = {
+		date > 1988.1.1
+		num_of_civilian_factories > 15
+		num_of_civilian_factories < 200
+		has_war = no
+		check_variable = { var = electric_power_total_var value = 10 compare = greater_than_or_equals }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = added_military_to_civilian_factory_ratio		value = -20	}
+	ai_strategy = { type = building_target		id = industrial_complex		value = 3 }
+}
 
 
 
-### DOCKYARDS ###
 
-we_dont_need_dockyards = {
+
+
+#####################   ВЕРФИ   #####################
+
+we_DONT_need_dockyards = {
 	allowed = {
 		NOT = {
 			tag = SAI
@@ -331,7 +560,7 @@ we_need_dockyards_1 = {
 	}
 	enable = {
 		tag = IMP
-		num_of_military_factories > 9
+		num_of_military_factories > 15
 		surrender_progress < 0.1
 		set_temp_variable = { mil_fact = num_of_naval_factories }
 		divide_temp_variable = { mil_fact = num_of_military_factories }
@@ -372,7 +601,7 @@ we_need_dockyards_2 = {
 			}
 			num_of_factories > 149
 		}
-		num_of_military_factories > 9
+		num_of_military_factories > 15
 		surrender_progress < 0.1
 		set_temp_variable = { mil_fact = num_of_naval_factories }
 		divide_temp_variable = { mil_fact = num_of_military_factories }
@@ -415,7 +644,7 @@ we_need_dockyards_3 = {
 			}
 			num_of_factories > 149
 		}
-		num_of_military_factories > 9
+		num_of_military_factories > 15
 		surrender_progress < 0.1
 		set_temp_variable = { mil_fact = num_of_naval_factories }
 		divide_temp_variable = { mil_fact = num_of_military_factories }

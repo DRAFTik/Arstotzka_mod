@@ -1,0 +1,80 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+# building_target
+
+
+
+######## CONSTRUCTIONS ########
+
+
+######## END CONSTRUCTIONS ########
+
+
+ARS_help_REP_win_war = {
+	reversed = yes
+	allowed = {
+		tag = ARS
+	}
+	enable_reverse = {
+		ARS = {
+			NOT = { has_government = national_populist }
+		}
+	}
+	enable = {
+		tag = REP
+		exists = yes
+		has_war_with = ANT
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = { type = send_volunteers_desire	id = "ARS"	value = 75	}
+	ai_strategy = { type = diplo_action_desire		id = "ARS"	target = send_attache	value = 40000 }
+}
+OBR_help_REP_win_war = {
+	reversed = yes
+	allowed = {
+		tag = OBR
+	}
+	enable_reverse = {
+		OBR = {
+			NOT = { has_government = national_populist }
+		}
+	}
+	enable = {
+		tag = REP
+		exists = yes
+		has_war_with = ANT
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = { type = send_volunteers_desire	id = "OBR"	value = 75	}
+	ai_strategy = { type = diplo_action_desire		id = "OBR"	target = send_attache	value = 40000 }
+}
+UNF_help_REP_win_war = {
+	reversed = yes
+	allowed = {
+		tag = UNF
+	}
+	enable_reverse = {
+		UNF = {
+			NOT = { has_government = national_populist }
+		}
+	}
+	enable = {
+		tag = REP
+		exists = yes
+		has_war_with = ANT
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = { type = send_volunteers_desire	id = "UNF"	value = 75	}
+	ai_strategy = { type = diplo_action_desire		id = "UNF"	target = send_attache	value = 40000 }
+}

@@ -9,7 +9,7 @@ on_actions = {
 	on_startup = {
 		effect = {
 			random_country  = {
-				limit = { has_focus_tree = arstotzka_ST_focus }
+				limit = { has_focus_tree = Strasser_focus }
 				country_event = cp.1
 				country_event = { id = strasser.1 hours = 1 }
 			}

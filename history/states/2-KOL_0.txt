@@ -11,6 +11,7 @@ state={
 		buildings = {
 			agro_complex = 1
 			livestock_complex = 1
+			steel_mill = 1
 		}
 		owner = KOL
 		add_core_of = KOL

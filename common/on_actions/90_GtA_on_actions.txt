@@ -44,10 +44,20 @@ on_actions = {
 
 	on_weekly = {
 		effect = {
+			add_to_variable = { global.total_iron_exported = resource_exported@iron }
 			calculate_electric_power_LOG_effect = yes
 			calculate_provision_weekly_effect = yes				# животнаводство
 			calculate_hunger_dyn_effect = yes					# голод
 			calculate_change_population_weekly_effect = yes		# изменение населения в регионах
+		}
+	}
+
+	on_weekly_ARS = {
+		effect = {
+			every_country = {
+				add_to_variable = { total_iron_exported_temp = resource_exported@iron }
+			}
+			add_to_variable = { global.total_iron_exported = total_iron_exported_temp }
 		}
 	}
 

@@ -28,7 +28,7 @@
 	thermal_power_plant_fuel_cost_dyn = {
 		
 		# list of modifiers
-		fuel_cost = fuel_cost_var
+		fuel_cost = fuel_cost_var		# в час
 	}
 	
 	

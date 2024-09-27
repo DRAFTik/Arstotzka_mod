@@ -8,6 +8,7 @@ state={
 		buildings = {
 			infrastructure = 2
 			agro_complex = 2
+			steel_mill = 2
 		}
 		owner = UNF
 		add_core_of = UNF

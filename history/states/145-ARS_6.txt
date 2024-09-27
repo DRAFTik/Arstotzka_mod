@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			livestock_complex = 1
+			steel_mill = 1
 		}
 		owner = ARS
 		add_core_of = ARS

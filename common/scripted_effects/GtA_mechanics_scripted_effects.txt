@@ -81,7 +81,7 @@ calculate_electric_power_effect = {
 		add_dynamic_modifier = { modifier = thermal_power_plant_fuel_cost_dyn }
 	}
 	set_variable = { fuel_cost_var = thermal_power_plant_ok }
-	multiply_temp_variable = { fuel_cost_var = 24 }
+	multiply_variable = { fuel_cost_var = 1 }	# в час = 24 в сутки
 
 
 
@@ -370,7 +370,7 @@ calculate_provision_start_effect = {
 	}
 	
 	set_variable = { provision_delta_var = provision_total_var }
-	subtract_from_variable = { provision_delta_var = provision_ex_delta_var }				# для текста
+	subtract_from_variable = { provision_delta_var = provision_ex_delta_var }				# для текста ?
 	set_variable = { provision_ex_delta_var = provision_total_var }
 	
 	set_variable = { provision_days_var = provision_percent_var }							# для текста
@@ -677,26 +677,41 @@ calculate_hunger_dyn_effect = {
 calculate_change_population_weekly_effect = {
 	if = {
 		limit = { check_variable = { var = modifier@num_change_population_weekly	value = 0 compare = not_equals } }
-		set_temp_variable = { hunger_change_population_temp = max_manpower_k }
-		multiply_temp_variable = { hunger_change_population_temp = modifier@num_change_population_weekly }
-		set_variable = { hunger_change_population_total_var = hunger_change_population_temp }				# для текста
-		round_variable = hunger_change_population_total_var													# для текста
-		divide_temp_variable = { hunger_change_population_temp = num_controlled_states }
-		multiply_temp_variable = { hunger_change_population_temp = 1000 }
-		round_temp_variable = hunger_change_population_temp
-		set_variable = { hunger_change_population_per_state_var = hunger_change_population_temp }			# для текста
 		every_controlled_state = {
-			add_manpower = var:hunger_change_population_temp
+			set_temp_variable = { state_hunger_change_population_temp = state_population_k }
+			multiply_temp_variable = { state_hunger_change_population_temp = ROOT.modifier@num_change_population_weekly }
+			multiply_temp_variable = { state_hunger_change_population_temp = 1000 }
+			round_temp_variable = state_hunger_change_population_temp
+			add_manpower = var:state_hunger_change_population_temp
+			
+			add_to_temp_variable = { ecs_population = state_hunger_change_population_temp }
 		}
+		divide_temp_variable = { ecs_population = 1000 }
+		
+		set_variable = { hunger_change_population_total_var = ecs_population }								# для текста
+		divide_temp_variable = { ecs_population = num_controlled_states }
+		multiply_temp_variable = { ecs_population = 1000 }
+		round_temp_variable = ecs_population
+		set_variable = { hunger_change_population_per_state_var = ecs_population }							# для текста
 	}
-	
-#	set_temp_variable = { num_change_population_weekly_temp = weekly_income_provision }					# вычисление % голодающих от общего населения
-#	set_temp_variable = { t1 = provision_need_var }
-#	multiply_temp_variable = { t1 = 7 }
-#	divide_temp_variable = { num_change_population_weekly_temp = t1 }
-#	subtract_from_temp_variable = { num_change_population_weekly_temp = 1 }
-#	set_variable = { percent_change_population_weekly = num_change_population_weekly_temp }
 }
+
+#calculate_change_population_weekly_old_effect = {	# здесь некоторые регионы становились безлюдными т.к. не учитывалась неравномерность их заселения
+#	if = {
+#		limit = { check_variable = { var = modifier@num_change_population_weekly	value = 0 compare = not_equals } }
+#		set_temp_variable = { hunger_change_population_temp = max_manpower_k }
+#		multiply_temp_variable = { hunger_change_population_temp = modifier@num_change_population_weekly }
+#		set_variable = { hunger_change_population_total_var = hunger_change_population_temp }				# для текста
+#		round_variable = hunger_change_population_total_var													# для текста
+#		divide_temp_variable = { hunger_change_population_temp = num_controlled_states }
+#		multiply_temp_variable = { hunger_change_population_temp = 1000 }
+#		round_temp_variable = hunger_change_population_temp
+#		set_variable = { hunger_change_population_per_state_var = hunger_change_population_temp }			# для текста
+#		every_controlled_state = {
+#			add_manpower = var:hunger_change_population_temp
+#		}
+#	}
+#}
 
 
 calculate_steel_mill_effect = {
@@ -788,8 +803,8 @@ calculate_steel_mill_effect = {
 }
 
 effect_1 = {
-	add_offsite_building = { type = livestock_complex level = 10 }
-	every_country = {
-		log = "[GetDateText]: [This.GetName] ([This.GetTag]): max_manpower_k: [?max_manpower_k]"
+	all_country = {
+		add_to_temp_variable = { global.total_iron_exported = resource_exported@iron }
 	}
+	log = "[GetDateText]: [This.GetName] ([This.GetTag]): total_iron_exported: [?global.total_iron_exported]"
 }

@@ -8,6 +8,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			livestock_complex = 2
+			steel_mill = 1
 		}
 		owner = OBR
 		add_core_of = OBR
