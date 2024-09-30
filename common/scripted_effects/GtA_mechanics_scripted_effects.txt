@@ -34,6 +34,21 @@
 #	modifier@num_change_population_weekly
 
 
+default_party_popularity_PP_gain = {
+	if = {
+		limit = {
+			NOT = {
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+			}
+		}
+		clear_variable = political_power_ideology
+		hidden_effect = {
+			add_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+			force_update_dynamic_modifier = yes
+		}
+	}
+}
+
 calculate_electric_power_effect = {
 
 ### ПРОИЗВОДСТВО ###

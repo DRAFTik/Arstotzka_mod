@@ -3,6 +3,21 @@
     GtA_debug_decisions: "DEBUG"
     GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]\n\nprovision_total_var: [?ROOT.provision_total_var]\nprovision_delta_var:[?ROOT.provision_delta_var]\nprovision_percent_to_max_var: [?provision_percent_to_max_var]\n\nprovision_total_var: [?ROOT.provision_total_var|+1]\nprovision_equipment: [?ROOT.num_equipment@provision_equipment]\n\nhunger_dyn: [?hunger_dyn]\n\nГОЛОД\nnum_change_population_weekly: [?modifier@num_change_population_weekly]\nmax_manpower_k: [?max_manpower_k]\nnum_controlled_states: [?num_controlled_states]\npercent_change_population_weekly: [?percent_change_population_weekly]\n\n resource iron: [?resource@iron]\n resource_produced iron: [?resource_produced@iron]\n resource_exported iron: [?resource_exported@iron]\n\n steel_minus_var!!!: [?steel_minus_var]\n steel_return_electric_power_var: [?steel_return_electric_power_var]\n steel_minus_state_total_1: [?steel_minus_state_total_1]\n\n state_hunger_change_population_temp: [?32.state_hunger_change_population_temp]"
 
+
+########################
+### PARTY POPULARITY ###
+########################
+
+    gta_popularity_ideology_tooltip: "Ваша текущая правящая партия - §H[?current_party_ideology_group.GetTokenLocalizedKey]§!"
+    gta_popularity_ideology_desc: "§L[GetPopularityTooltipDesc]§!"
+    gta_party_popularity_delayed_tooltip: "Популярность партии представляет собой контроль текущего правительства над страной и его поддержку в народе. Политические партии с высокой популярностью имеют больше возможностей для продвижения своей политической программы и стабилизации нации."
+
+    gta_party_popularity_tooltip: "§HПопулярность партии§![GetPopularityPPGain]"
+    gta_party_popularity_tooltip_long: "§H\n\nЭффекты от нашей нынешней Популярности партии:§!\nЕжедневный прирост Политической силы: [GetPopularityPPGainValue]"
+
+    party_popularity_dynamic_modifier: "Популярность партии"
+
+
 ##################
 ### PROVISIONS ###
 ##################

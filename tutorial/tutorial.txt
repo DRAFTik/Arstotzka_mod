@@ -33,7 +33,7 @@ tutorial = {
 
     highlight_states_trigger = { 1 }
 
-    direction_pointer = 5091
+    direction_pointer = 1460
 
     move_camera_to = {
         textbox = "obj_1"
@@ -75,11 +75,11 @@ tutorial = {
     show_objects_in_window = { "draw_offense_tutorial_glow" }
     offensive_order = {
         textbox = "obj_1"
-        target = 5010 #Ethiopian Capital
+        target = 1460 #Ethiopian Capital
     }
 
-    highlight_provinces = { 12856 7980 }
-    direction_pointer = 5010
+    highlight_provinces = { 1460 }
+    direction_pointer = 1460
 }
 
 tutorial = {
@@ -91,8 +91,8 @@ tutorial = {
         state = 1 #Eritrea
     }
 
-    highlight_provinces = { 5091 }
-    direction_pointer = 5091
+    highlight_provinces = { 1460 }
+    direction_pointer = 1460
 }
 
 tutorial = {
@@ -201,8 +201,8 @@ tutorial = {
         state = 1 #Eritrea
         units = 4
     }
-    highlight_provinces = { 12766 }
-    direction_pointer = 12766
+    highlight_provinces = { 1460 }
+    direction_pointer = 1460
 }
 
 tutorial = {
@@ -214,7 +214,7 @@ tutorial = {
         units = 4
     }
 
-    highlight_provinces = { 11837 4014 11735 6793 11833 11846 }
+    highlight_provinces = { 1460 }
 
 }
 

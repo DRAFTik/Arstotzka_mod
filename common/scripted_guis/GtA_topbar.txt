@@ -1,6 +1,22 @@
 scripted_gui = {
-
+	
+	party_popularity_number = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "party_popularity_number_container"
+		visible = {
+		}
+		ai_enabled = {
+			always = no
+		}
+		properties = {
+			popularity_ideology_icon = {
+				image = "GFX_[?current_party_ideology_group.GetTokenKey]_small"
+			}
+		}
+	}
 	provisions = {
+		context_type = player_context
 		parent_window_token = top_bar
 		window_name = "provisions_container"
 		visible = {
@@ -18,6 +34,7 @@ scripted_gui = {
         }
 	}
 	electric_power = {
+		context_type = player_context
 		parent_window_token = top_bar
 		window_name = "electric_power_container"
 		visible = {

@@ -24,6 +24,10 @@
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 
+	
+	party_popularity_dynamic_modifier = {
+		political_power_gain = ROOT.party_popularity@ruling_party
+	}
 
 	thermal_power_plant_fuel_cost_dyn = {
 		

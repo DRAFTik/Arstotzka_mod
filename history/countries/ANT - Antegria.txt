@@ -49,7 +49,7 @@ set_popularities = {
 }
 
 
-140 = { set_demilitarized_zone = yes }
-141 = { set_demilitarized_zone = yes }
-142 = { set_demilitarized_zone = yes }
-143 = { set_demilitarized_zone = yes }
+#140 = { set_demilitarized_zone = yes }
+#141 = { set_demilitarized_zone = yes }
+#142 = { set_demilitarized_zone = yes }
+#143 = { set_demilitarized_zone = yes }

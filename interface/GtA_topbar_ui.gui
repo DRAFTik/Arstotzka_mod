@@ -1,8 +1,41 @@
 guiTypes = {
+	
+	containerWindowType = {
+		name = "party_popularity_number_container"
+		position = { x = 100 y = 37 }		# шаг х+73, первый = 100; шаг у+32, первый = 5
+		
+		iconType = {
+			name ="popularity_ideology_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name ="party_pop_text"
+			position = { x= 3 y = 4 }
+			font = "hoi_18mbs"
+			text = "[?party_popularity@ruling_party|%0]"
+			format = right
+			maxWidth = 60
+			maxHeight = 24
+			fixedsize = yes
 
+			pdx_tooltip = "gta_party_popularity_tooltip"
+			pdx_tooltip_delayed = "gta_party_popularity_delayed_tooltip"
+		}
+		
+		iconType = {
+			name = "popularity_ideology_icon"
+
+			pdx_tooltip = "gta_popularity_ideology_tooltip"
+			pdx_tooltip_delayed = "gta_popularity_ideology_desc"
+		}
+	}
+	
 	containerWindowType = {
 		name = "provisions_container"
-		position = { x = 100 y = 37 }		# шаг х+73, первый = 100; шаг у+32, первый = 5
+		position = { x = 173 y = 37 }		# шаг х+73, первый = 100; шаг у+32, первый = 5
 		
 		iconType = {
 			name ="provisions_bg"
@@ -44,7 +77,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "electric_power_container"
-		position = { x = 173 y = 37 }		# шаг х+73, первый = 100; шаг у+32, первый = 5
+		position = { x = 246 y = 37 }		# шаг х+73, первый = 100; шаг у+32, первый = 5
 		
 		iconType = {
 			name ="electric_power_bg"
