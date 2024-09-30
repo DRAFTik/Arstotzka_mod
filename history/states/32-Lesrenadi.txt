@@ -1,0 +1,32 @@
+
+state={
+	id=32
+	name="STATE_32"
+
+	history={
+		victory_points = {
+			724 3
+		}
+		victory_points = {
+			629 1
+		}
+		victory_points = {
+			668 1
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		owner = REP
+		add_core_of = REP
+
+	}
+
+	provinces={
+		30 43 44 69 123 276 421 424 514 574 597 629 668 679 724 792 794 829 1089 1098 1100 1168 1177 1255 1351 1979 1981 1987 1988 1991 1995 1997 2000 2001 2005 2006 2007 2008 2009 2014 2025 2026 2030 2036 2043 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

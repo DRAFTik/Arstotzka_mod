@@ -1,0 +1,21 @@
+state={
+	id=48
+	name="STATE_48"
+	history={
+		victory_points = {
+			14 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		owner = IMP
+		add_core_of = IMP
+	}
+	provinces={
+		14 88 101 222 230 275 453 546 563 565 614 625 664 666 861 887 929 974 1018 1184 1224 1289 2135 2137 2138 2140 2143 2144 2145 2146 2148 2149 2150 2151 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

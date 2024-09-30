@@ -1,0 +1,21 @@
+state={
+	id=45
+	name="STATE_45"
+	history={
+		victory_points = {
+			253 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		39 66 201 253 272 346 350 407 492 567 568 868 1023 1082 1162 1236 1356 1377 2115 2117 2120 2124 2127 2130 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

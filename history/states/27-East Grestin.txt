@@ -1,0 +1,26 @@
+
+state={
+	id=27
+	name="STATE_27"
+
+	history={
+		victory_points = {
+			1364 2 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		owner = ARS
+		add_core_of = ARS
+
+	}
+
+	provinces={
+		70 119 504 536 612 613 673 776 779 912 1104 1173 1187 1364 1370 1860 1869 1878 1880 1889 1894 1903 1913 1919 1943 1944 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

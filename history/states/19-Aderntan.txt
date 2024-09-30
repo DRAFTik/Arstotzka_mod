@@ -1,0 +1,24 @@
+state={
+	id=19
+	name="STATE_19"
+	history={
+		victory_points = {
+			298 2
+		}
+		victory_points = {
+			529 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		90 191 193 207 298 388 426 459 529 578 737 780 791 840 989 1028 1087 1111 1159 1169 1202 1264 1337 1730 1744 1747 1765 1770 1788 1800 1814 1831 1832 1838 1846 1879 1881 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

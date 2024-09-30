@@ -1,0 +1,26 @@
+
+state={
+	id=25
+	name="STATE_25"
+
+	history={
+		victory_points = {
+			1871 1
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		owner = UNF
+		add_core_of = UNF
+
+	}
+
+	provinces={
+		13 22 493 619 732 1061 1139 1407 1823 1840 1871 2027 2037 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

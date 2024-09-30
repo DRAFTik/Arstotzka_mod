@@ -1,4 +1,4 @@
-﻿capital = 6
+﻿capital = 32
 
 oob = "REP_start"
 

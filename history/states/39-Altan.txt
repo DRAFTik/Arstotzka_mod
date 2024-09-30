@@ -1,0 +1,26 @@
+
+state={
+	id=39
+	name="STATE_39"
+
+	history={
+		victory_points = {
+			405 1
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		owner = ARS
+		add_core_of = ARS
+
+	}
+
+	provinces={
+		296 360 404 405 473 715 815 1044 2081 2084 2152 2153 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

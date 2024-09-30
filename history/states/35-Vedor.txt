@@ -1,0 +1,21 @@
+state={
+	id=35
+	name="STATE_35"
+	history={
+		victory_points = {
+			2063 2
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		95 103 165 171 247 279 540 688 761 785 798 844 885 925 1148 1229 1990 2002 2020 2022 2032 2034 2041 2042 2045 2053 2056 2060 2063 2071 2079 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

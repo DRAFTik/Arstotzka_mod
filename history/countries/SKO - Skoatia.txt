@@ -1,4 +1,4 @@
-﻿capital = 128
+﻿capital = 2
 
 oob = "SKO_start"
 

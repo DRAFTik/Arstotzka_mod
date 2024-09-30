@@ -1,0 +1,21 @@
+state={
+	id=10
+	name="STATE_10"
+	history={
+		victory_points = {
+			1631 1 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		owner = SKO
+		add_core_of = SKO
+	}
+	provinces={
+		25 32 35 92 251 274 283 341 359 487 496 642 678 738 808 886 950 1084 1254 1394 1401 1597 1603 1610 1616 1626 1631 1648 1657 1666 1680 1703 1705 1718 1720 1753 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}
