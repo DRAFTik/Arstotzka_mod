@@ -1,0 +1,20 @@
+state={
+	id=13
+	name="STATE_13"
+	history={
+		victory_points = {
+			1335 1 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = SKO
+		add_core_of = SKO
+	}
+	provinces={
+		87 94 376 661 873 921 1043 1074 1335 1438 1454 1461 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

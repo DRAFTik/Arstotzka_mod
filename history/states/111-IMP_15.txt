@@ -1,0 +1,17 @@
+state={
+	id=111
+	name="STATE_111"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = IMP
+		add_core_of = IMP
+	}
+	provinces={
+		270 652 824 2126 2129 2134 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=small_island
+}

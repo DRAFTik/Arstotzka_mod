@@ -1,0 +1,14 @@
+state={
+	id=24
+	name="STATE_24"
+	history={
+		owner = SKO
+		add_core_of = SKO
+	}
+	provinces={
+		341 487 642 678 808 950 1394 1680 1703 1705 1718 1720 1753 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=rural
+}

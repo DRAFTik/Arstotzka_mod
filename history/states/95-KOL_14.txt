@@ -1,0 +1,19 @@
+state={
+	id=95
+	name="STATE_95"
+
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		146 188 771 834 992 993 1360 1714 1729 1736 1763 1766 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

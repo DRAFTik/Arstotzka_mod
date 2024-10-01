@@ -1,0 +1,17 @@
+state={
+	id=149
+	name="STATE_149"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		334 476 849 951 1047 1218 1291 2018 2023 2024 2035 2039 2050 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

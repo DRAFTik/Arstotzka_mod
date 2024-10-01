@@ -1,0 +1,9 @@
+	
+		buildings = {
+			infrastructure = 1
+		}
+		
+		
+		victory_points = {
+			14 1
+		}

@@ -1,0 +1,17 @@
+state={
+	id=141
+	name="STATE_141"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		114 244 261 701 778 837 1096 1269 1842 1874 1882 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

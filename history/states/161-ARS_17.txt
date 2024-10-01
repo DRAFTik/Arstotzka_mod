@@ -1,0 +1,17 @@
+state={
+	id=161
+	name="STATE_161"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		56 357 465 490 611 698 1048 1876 1890 1906 1924 1931 1938 1939 1954 1968 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

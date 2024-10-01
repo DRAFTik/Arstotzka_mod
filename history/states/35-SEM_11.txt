@@ -1,0 +1,20 @@
+state={
+	id=35
+	name="STATE_35"
+	history={
+		victory_points = {
+			898 1 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = SEM
+		add_core_of = SEM
+	}
+	provinces={
+		61 126 186 231 436 610 651 777 898 1008 1182 1259 1588 1602 1628 1679 1682 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

@@ -1,0 +1,16 @@
+state={
+	id=151
+	name="STATE_151"
+	history={
+		buildings = {
+		}
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		21 27 475 524 533 592 746 960 1277 1308 1984 2003 2004 2011 2021 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=rural
+}

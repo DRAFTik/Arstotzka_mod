@@ -1,0 +1,17 @@
+state={
+	id=97
+	name="STATE_97"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = IMP
+		add_core_of = IMP
+	}
+	provinces={
+		230 453 614 929 1018 1224 2135 2143 2144 2149 2150 2151 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

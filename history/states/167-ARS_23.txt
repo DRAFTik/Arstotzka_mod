@@ -1,0 +1,20 @@
+state={
+	id=167
+	name="STATE_167"
+	history={
+		victory_points = {
+			521 2 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		257 438 521 711 730 944 1006 1010 1066 1133 1784 1795 1810 1815 1830 1854 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

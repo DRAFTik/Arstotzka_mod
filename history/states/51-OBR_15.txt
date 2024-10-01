@@ -1,0 +1,21 @@
+
+state={
+	id=51
+	name="STATE_51"
+	history={
+		victory_points = {
+			598 1 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = OBR
+		add_core_of = OBR
+	}
+	provinces={
+		8 109 211 378 598 605 624 663 906 976 1071 1131 1741 1745 1757 1769 1786 1826 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

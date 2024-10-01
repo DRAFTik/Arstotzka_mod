@@ -1,0 +1,16 @@
+characters = {
+	SEM_leo_rush = {
+		name = SEM_leo_rush
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/COS/portrait_cos_ricardo_jiminez_oreamuno.dds"
+			}
+		}
+		country_leader={
+			ideology=social_liberal_subtype
+			traits={ }
+			expire="1950.1.1.1"
+			id=-1
+		}
+	}
+}

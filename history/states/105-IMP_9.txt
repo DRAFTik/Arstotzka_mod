@@ -1,0 +1,20 @@
+state={
+	id=105
+	name="STATE_105"
+	history={
+		victory_points = {
+			427 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = IMP
+		add_core_of = IMP
+	}
+	provinces={
+		77 312 427 477 729 810 1113 2044 2054 2064 2065 2067 2073 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

@@ -1,0 +1,20 @@
+state={
+	id=145
+	name="STATE_145"
+	history={
+		victory_points = {
+			405 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = ARS
+		add_core_of = ARS
+	}
+	provinces={
+		296 360 404 405 473 715 815 1044 2081 2084 2152 2153 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=small_island
+}

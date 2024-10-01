@@ -1,0 +1,17 @@
+state={
+	id=52
+	name="STATE_52"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = OBR
+		add_core_of = OBR
+	}
+	provinces={
+		81 344 380 621 954 1230 1378 1634 1668 1687 1708 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

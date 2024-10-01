@@ -1,0 +1,16 @@
+state={
+	id=28
+	name="STATE_28"
+	history={
+		buildings = {
+		}
+		owner = SEM
+		add_core_of = SEM
+	}
+	provinces={
+		60 107 190 213 216 626 979 1373 1474 1486 1488 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=rural
+}

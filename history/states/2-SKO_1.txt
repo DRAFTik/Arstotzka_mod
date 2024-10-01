@@ -1,0 +1,17 @@
+state={
+	id=2
+	name="STATE_2"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = SKO
+		add_core_of = SKO
+	}
+	provinces={
+		12 564 684 707 866 1051 1225 1414 1418 1424 
+	}
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=rural
+}

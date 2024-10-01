@@ -1,0 +1,15 @@
+state={
+	id=1
+	name="SAI"
+	history={
+		owner = SAI
+		add_core_of = SAI
+	}
+	provinces={
+		3035 
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=tiny_island
+	local_supplies=0.000
+}

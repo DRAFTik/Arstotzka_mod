@@ -1,0 +1,20 @@
+state={
+	id=65
+	name="STATE_65"
+	history={
+		victory_points = {
+			99 1 
+		}
+		buildings = {
+		}
+		owner = ANT
+		add_core_of = ANT
+	}
+	provinces={
+		99 609 1238 
+	}
+	manpower=14678
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=wasteland
+}

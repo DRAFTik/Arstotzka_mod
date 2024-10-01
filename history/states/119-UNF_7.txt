@@ -1,0 +1,21 @@
+
+state={
+	id=119
+	name="STATE_119"
+	history={
+		victory_points = {
+			744 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		197 744 852 936 1080 1095 1368 1380 1797 1886 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

@@ -1,0 +1,21 @@
+state={
+	id=113
+	name="STATE_113"
+	history={
+		victory_points = {
+			1871 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		619 732 1407 1823 1840 1871 
+	}
+	manpower=356841
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=small_island
+}

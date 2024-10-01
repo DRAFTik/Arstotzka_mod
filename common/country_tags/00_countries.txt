@@ -8,6 +8,7 @@ UNF = "countries/_western_european.txt"
 
 # non classic countrys
 SKO = "countries/_western_european.txt"
+SEM = "countries/_western_european.txt"
 
 
 

@@ -1,0 +1,17 @@
+state={
+	id=114
+	name="STATE_114"
+	history={
+		buildings = {
+		}
+		owner = UNF
+		add_core_of = UNF
+	}
+	provinces={
+		13 1139 
+	}
+	manpower=126874
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=tiny_island
+}

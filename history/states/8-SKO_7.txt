@@ -1,0 +1,17 @@
+state={
+	id=8
+	name="STATE_8"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = SKO
+		add_core_of = SKO
+	}
+	provinces={
+		498 587 1132 1787 1796 1804 1819 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

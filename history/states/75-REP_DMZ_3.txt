@@ -1,0 +1,20 @@
+state={
+	id=75
+	name="STATE_75"
+	history={
+		victory_points = {
+			570 1
+		}
+		buildings = {
+		}
+		owner = REP
+		add_core_of = REP
+	}
+	provinces={
+		570 870 1409 
+	}
+	manpower=23654
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=wasteland
+}

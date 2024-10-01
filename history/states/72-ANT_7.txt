@@ -1,0 +1,17 @@
+state={
+	id=72
+	name="STATE_72"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = ANT
+		add_core_of = ANT
+	}
+	provinces={
+		67 719 874 1077 1200 1918 1925 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

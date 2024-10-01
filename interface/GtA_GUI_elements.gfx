@@ -5,7 +5,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/GUI/provision/provision_icon.dds"
 		noOfFrames = 3
 	}
-	
 	progressbartype = {
 		name = "GFX_topbar_provisions_bar"
 		color = { 0.0 0.5 0.0 }

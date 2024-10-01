@@ -30,3 +30,7 @@ SKO = {
 	color = rgb { 87 0 127 }
 	color_ui = rgb { 87 0 127 }
 }
+SEM = {
+	color = rgb { 200 150 100 }
+	color_ui = rgb { 200 150 100 }
+}

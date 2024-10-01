@@ -1,0 +1,20 @@
+state={
+	id=78
+	name="STATE_78"
+	history={
+		victory_points = {
+			668 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = REP
+		add_core_of = REP
+	}
+	provinces={
+		43 421 668 794 829 1351 1981 1995 1997 2005 2008 2014 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}

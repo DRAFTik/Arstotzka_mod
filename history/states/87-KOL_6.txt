@@ -1,0 +1,20 @@
+state={
+	id=87
+	name="STATE_87"
+	history={
+		victory_points = {
+			1971 5
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		315 323 335 361 575 695 1233 1245 1941 1947 1957 1971 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000	state_category=town
+}
