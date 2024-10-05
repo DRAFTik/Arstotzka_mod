@@ -2,9 +2,6 @@ state={
 	id=65
 	name="STATE_65"
 	history={
-		victory_points = {
-			99 1 
-		}
 		buildings = {
 		}
 		owner = ANT

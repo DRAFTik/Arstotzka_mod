@@ -1,8 +1,12 @@
 state={
 	id=166
 	name="STATE_166"
+	resources={
+		aluminium = 25
+	}
 	history={
 		buildings = {
+			industrial_complex = 1
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -10,7 +14,7 @@ state={
 	provinces={
 		241 423 491 901 1005 1383 1920 1921 1935 1946 
 	}
-	manpower=0
+	manpower=3662451
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=rural
 }

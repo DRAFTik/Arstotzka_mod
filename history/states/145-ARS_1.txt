@@ -1,12 +1,22 @@
 state={
 	id=145
 	name="STATE_145"
+	resources={
+		oil = 5
+	}
 	history={
 		victory_points = {
 			405 1
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 2
+			404 = {
+				naval_base = 1
+			}
+			405 = {
+				naval_base = 1
+			}
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -14,7 +24,7 @@ state={
 	provinces={
 		296 360 404 405 473 715 815 1044 2081 2084 2152 2153 
 	}
-	manpower=0
+	manpower=1447148
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=small_island
 }

@@ -1,12 +1,19 @@
 state={
 	id=79
 	name="STATE_79"
+	resources={
+		iron = 22
+		tungsten = 36
+	}
 	history={
 		victory_points = {
 			629 1
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
+			steel_mill = 1
+			thermal_power_plant = 1
 		}
 		owner = REP
 		add_core_of = REP
@@ -14,7 +21,7 @@ state={
 	provinces={
 		44 69 424 629 792 2030 2036 2043 
 	}
-	manpower=0
+	manpower=5228393
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

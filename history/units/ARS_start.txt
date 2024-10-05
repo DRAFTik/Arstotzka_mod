@@ -107,7 +107,7 @@ division_template = {
 units = {
 	division = {
 		name = "1st Infantry Elite regiment"
-		location = 92
+		location = 405
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -116,7 +116,7 @@ units = {
 	
 	division = {
 		name = "2nd Infantry Elite regiment"
-		location = 92
+		location = 405
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -125,7 +125,7 @@ units = {
 	
 	division = {
 		name = "3rd Infantry Elite regiment"
-		location = 255
+		location = 476
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -134,7 +134,7 @@ units = {
 	
 	division = {
 		name = "4th Infantry Elite regiment"
-		location = 255
+		location = 476
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -161,7 +161,7 @@ units = {
 	
 	division = {
 		name = "7th Infantry Elite regiment"
-		location = 2413
+		location = 1839
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
@@ -170,7 +170,7 @@ units = {
 	
 	division = {
 		name = "8th Infantry Elite regiment"
-		location = 2413
+		location = 1839
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
@@ -179,7 +179,7 @@ units = {
 	
 	division = {
 		name = "9th Infantry Elite regiment"
-		location = 4370
+		location = 532
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
@@ -188,7 +188,7 @@ units = {
 	
 	division = {
 		name = "10th Infantry Elite regiment"
-		location = 4370
+		location = 532
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
@@ -197,7 +197,7 @@ units = {
 	
 	division = {
 		name = "11th Infantry Elite regiment"
-		location = 654
+		location = 1042
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
@@ -206,7 +206,7 @@ units = {
 	
 	division = {
 		name = "12th Infantry Elite regiment"
-		location = 654
+		location = 1042
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -215,7 +215,7 @@ units = {
 	
 	division = {
 		name = "13th Infantry Elite regiment"
-		location = 1000
+		location = 960
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -224,7 +224,7 @@ units = {
 	
 	division = {
 		name = "14th Infantry Elite regiment"
-		location = 1000
+		location = 960
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -233,7 +233,7 @@ units = {
 	
 	division = {
 		name = "15th Infantry Elite regiment"
-		location = 2159
+		location = 358
 		division_template = "Infantry Elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -242,7 +242,7 @@ units = {
 	
 	division = {
 		name = "1st Arstotzkian artillery regiment"
-		location = 2159
+		location = 358
 		division_template = "Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -251,7 +251,7 @@ units = {
 	
 	division = {
 		name = "2nd Arstotzkian artillery regiment"
-		location = 2467
+		location = 1253
 		division_template = "Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -260,7 +260,7 @@ units = {
 	
 	division = {
 		name = "3th Arstotzkian artillery regiment"
-		location = 2467
+		location = 1253
 		division_template = "Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -287,7 +287,7 @@ units = {
 	
 	division = {
 		name = "National Militia"
-		location = 342
+		location = 192
 		division_template = "National Militia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -296,7 +296,7 @@ units = {
 	
 	division = {
 		name = "National Militia"
-		location = 342
+		location = 192
 		division_template = "National Militia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -323,7 +323,7 @@ units = {
 	
 	division = {
 		name = "1st Arstotzkian Guards Armor Brigade regiment"
-		location = 1274
+		location = 1364
 		division_template = "Guards Armor Brigade"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
@@ -332,7 +332,7 @@ units = {
 	
 	division = {
 		name = "2nd Arstotzkian Guards Armor Brigade regiment"
-		location = 1274
+		location = 1364
 		division_template = "Guards Armor Brigade"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
@@ -341,7 +341,7 @@ units = {
 	
 	division = {
 		name = "3rd Arstotzkian Guards Armor Brigade regiment"
-		location = 2110
+		location = 784
 		division_template = "Guards Armor Brigade"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
@@ -350,7 +350,7 @@ units = {
 	
 	division = {
 		name = "4th Arstotzkian Guards Armor Brigade regiment"
-		location = 2110
+		location = 784
 		division_template = "Guards Armor Brigade"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0

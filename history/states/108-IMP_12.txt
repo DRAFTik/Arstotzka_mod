@@ -1,12 +1,22 @@
 state={
 	id=108
 	name="STATE_108"
+	resources={
+		oil = 55
+		aluminium = 30
+	}
 	history={
 		victory_points = {
 			2119 1
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 2
+			agro_complex = 1
+			livestock_complex = 1
+			2119 = {
+				naval_base = 1
+			}
 		}
 		owner = IMP
 		add_core_of = IMP
@@ -14,7 +24,7 @@ state={
 	provinces={
 		63 217 479 947 2119 2154 
 	}
-	manpower=0
+	manpower=4204443
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=small_island
 }

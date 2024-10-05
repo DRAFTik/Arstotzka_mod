@@ -1,4 +1,4 @@
-﻿capital = 24
+﻿capital = 70
 
 oob = "ANT_start"
 

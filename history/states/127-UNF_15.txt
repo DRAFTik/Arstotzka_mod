@@ -1,12 +1,18 @@
 state={
 	id=127
 	name="STATE_127"
+	resources={
+		aluminium = 27
+		tungsten = 18
+	}
 	history={
 		victory_points = {
 			253 1
 		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
+			thermal_power_plant = 1
 		}
 		owner = UNF
 		add_core_of = UNF
@@ -14,7 +20,7 @@ state={
 	provinces={
 		39 253 375 492 568 856 1356 2097 2103 2108 2111 2124 2127 
 	}
-	manpower=0
+	manpower=3578849
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

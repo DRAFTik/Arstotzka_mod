@@ -1,9 +1,15 @@
 state={
 	id=50
 	name="STATE_50"
+	resources={
+		oil = 5
+	}
 	history={
 		buildings = {
 			infrastructure = 1
+			agro_complex = 2
+			livestock_complex = 1
+			agro_silo = 1
 		}
 		owner = OBR
 		add_core_of = OBR
@@ -11,7 +17,7 @@ state={
 	provinces={
 		136 365 367 595 953 1033 1723 1756 1767 1768 1781 1806 3031 
 	}
-	manpower=0
+	manpower=1046826
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

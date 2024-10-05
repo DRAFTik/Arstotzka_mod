@@ -3,6 +3,11 @@ state={
 	name="STATE_115"
 	history={
 		buildings = {
+			agro_complex = 2
+			agro_silo = 1
+			22 = {
+				naval_base = 1
+			}
 		}
 		owner = UNF
 		add_core_of = UNF
@@ -10,7 +15,7 @@ state={
 	provinces={
 		22 493 1061 2027 2037 
 	}
-	manpower=369854
+	manpower=1655931
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 	state_category=small_island

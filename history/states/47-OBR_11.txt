@@ -4,6 +4,9 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			arms_factory = 2
+			agro_complex = 1
+			agro_silo = 1
 		}
 		owner = OBR
 		add_core_of = OBR
@@ -11,7 +14,7 @@ state={
 	provinces={
 		170 185 292 319 403 606 631 709 753 875 1129 1622 1638 1665 
 	}
-	manpower=0
+	manpower=1886829
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

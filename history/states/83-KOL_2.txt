@@ -7,6 +7,12 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
+			dockyard = 2
+			agro_complex = 1
+			844 = {
+				naval_base = 1
+			}
 		}
 		owner = KOL
 		add_core_of = KOL
@@ -14,7 +20,7 @@ state={
 	provinces={
 		95 103 165 688 798 844 925 2060 2063 2071 2079 
 	}
-	manpower=0
+	manpower=1208422
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

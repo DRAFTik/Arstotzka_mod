@@ -4,6 +4,8 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			livestock_complex = 1
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -11,7 +13,7 @@ state={
 	provinces={
 		15 269 288 911 1031 1288 1316 1375 1998 2010 
 	}
-	manpower=0
+	manpower=2080208
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

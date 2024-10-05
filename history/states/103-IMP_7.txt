@@ -4,6 +4,8 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
+			agro_silo = 1
 		}
 		owner = IMP
 		add_core_of = IMP
@@ -11,7 +13,7 @@ state={
 	provinces={
 		221 391 620 721 1116 1294 2085 2086 2096 2100 
 	}
-	manpower=0
+	manpower=2871269
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

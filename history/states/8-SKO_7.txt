@@ -3,6 +3,9 @@ state={
 	name="STATE_8"
 	history={
 		buildings = {
+			agro_complex = 2
+		}
+		buildings = {
 			infrastructure = 1
 		}
 		owner = SKO
@@ -11,7 +14,7 @@ state={
 	provinces={
 		498 587 1132 1787 1796 1804 1819 
 	}
-	manpower=0
+	manpower=730971
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

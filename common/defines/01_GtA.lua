@@ -62,13 +62,6 @@ NDefines.NAI.BUILDING_TARGETS_BUILDING_PRIORITIES = {						 -- buildings in orde
 -- Operatives
 NDefines.NOperatives.MAX_RECRUITED_OPERATIVES = 500
 
--- Flag fix
-NDefines.NGraphics.COUNTRY_FLAG_TEX_MAX_SIZE = 2048
-NDefines.NGraphics.COUNTRY_FLAG_SMALL_TEX_MAX_SIZE = 512
-NDefines.NGraphics.COUNTRY_FLAG_STRIPE_TEX_MAX_WIDTH = 10
-NDefines.NGraphics.COUNTRY_FLAG_STRIPE_TEX_MAX_HEIGHT = 8196
-NDefines.NGraphics.COUNTRY_FLAG_LARGE_STRIPE_MAX_WIDTH = 41
-NDefines.NGraphics.COUNTRY_FLAG_LARGE_STRIPE_MAX_HEIGHT = 24000
 
 --------------
 -- AI FIX
@@ -433,17 +426,4 @@ NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {
 	0.0, -- NAVAL_MINES_PLANTING
 	0.0, -- NAVAL_MINES_SWEEPING
 	0.0, -- MISSION_RECON
-}
-
--- Graphics
-NDefines_Graphics.NGraphics.COMMANDGROUP_PRESET_COLORS_HSV = {
-	0.0/360.0, 1.0, 0.75,		--red
-	24.0/360.0, 1.0, 1.0,		--orange
-	60.0/360.0, 1.0, 0.75,		--yellow
-	120.0/360.0, 0.85, 0.75,	--green
-	155.0/360.0, 1.0, 0.75,		--greenish
-	180.0/360.0, 1.0, 0.75,		--turq
-	220.0/360.0, 1.0, 1.0,		--blue
-	260.0/360.0, 0.5, 0.85,		--purple
-	330.0/360.0, 0, 0.75,		--white
 }

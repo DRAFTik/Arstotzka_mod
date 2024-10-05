@@ -96,9 +96,6 @@ technologies = {
 		camelry = {
 			soft_attack = 0.05
 		}
-		ikhwan = {
-			soft_attack = 0.05
-		}
 		
 		motorized = {
 			soft_attack = 0.05
@@ -192,9 +189,6 @@ technologies = {
 			soft_attack = 0.05
 		}
 		camelry = {
-			soft_attack = 0.05
-		}
-		ikhwan = {
 			soft_attack = 0.05
 		}
 		
@@ -383,9 +377,6 @@ technologies = {
 			soft_attack = 0.1
 		}
 		camelry = {
-			soft_attack = 0.1
-		}
-		ikhwan = {
 			soft_attack = 0.1
 		}
 
@@ -2045,10 +2036,6 @@ technologies = {
 		camelry = {
 			defense = 0.02
 			breakthrough = 0.02
-		}
-		ikhwan = {
-			defense = 0.02
-			breakthrough = 0.02
 		}		
 		mountaineers = {
 			defense = 0.03
@@ -2153,10 +2140,6 @@ technologies = {
 			breakthrough = 0.02
 		}
 		camelry = {
-			defense = 0.02
-			breakthrough = 0.02
-		}
-		ikhwan = {
 			defense = 0.02
 			breakthrough = 0.02
 		}
@@ -2271,10 +2254,6 @@ technologies = {
 			defense = 0.02
 			breakthrough = 0.02
 		}
-		ikhwan = {
-			defense = 0.02
-			breakthrough = 0.02
-		}
 		mountaineers = {
 			defense = 0.03
 			breakthrough = 0.03
@@ -2380,10 +2359,6 @@ technologies = {
 			breakthrough = 0.02
 		}
 		camelry = {
-			defense = 0.02
-			breakthrough = 0.02
-		}
-		ikhwan = {
 			defense = 0.02
 			breakthrough = 0.02
 		}

@@ -38,10 +38,10 @@ division_template = {
 	name = "Militia"
 
 	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
 	}
 	
 	support = {
@@ -55,7 +55,7 @@ division_template = {
 units = {
 	division = {
 		name = "1st National Defense Guards regiment"
-		location = 4254
+		location = 53
 		division_template = "National Defense Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "2nd National Defense Guards regiment"
-		location = 4250
+		location = 53
 		division_template = "National Defense Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -73,7 +73,7 @@ units = {
 	
 	division = {
 		name = "3rd National Defense Guards regiment"
-		location = 4214
+		location = 73
 		division_template = "National Defense Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -82,7 +82,7 @@ units = {
 	
 	division = {
 		name = "4th National Defense Guards regiment"
-		location = 4079
+		location = 73
 		division_template = "National Defense Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -91,7 +91,7 @@ units = {
 	
 	division = {
 		name = "5th National Defense Guards regiment"
-		location = 4038
+		location = 1787
 		division_template = "National Defense Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -100,7 +100,7 @@ units = {
 	
 	division = {
 		name = "6th National Defense Guards regiment"
-		location = 4023
+		location = 1787
 		division_template = "National Defense Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -109,7 +109,7 @@ units = {
 	
 	division = {
 		name = "1st Militia regiment"
-		location = 4009
+		location = 94
 		division_template = "Militia"
 		start_experience_factor = 0.100
 		start_equipment_factor = 0.6
@@ -118,7 +118,7 @@ units = {
 	
 	division = {
 		name = "2nd Militia regiment"
-		location = 4009
+		location = 1461
 		division_template = "Militia"
 		start_experience_factor = 0.100
 		start_equipment_factor = 0.6
@@ -127,7 +127,7 @@ units = {
 	
 	division = {
 		name = "3rd Militia regiment"
-		location = 3971
+		location = 376
 		division_template = "Militia"
 		start_experience_factor = 0.100
 		start_equipment_factor = 0.6

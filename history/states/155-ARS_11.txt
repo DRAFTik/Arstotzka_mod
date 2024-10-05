@@ -1,8 +1,16 @@
 state={
 	id=155
 	name="STATE_155"
+	resources={
+		iron = 32
+		aluminium = 11
+		tungsten = 7
+	}
 	history={
 		buildings = {
+			thermal_power_plant = 1
+			industrial_complex = 1
+			steel_mill = 1
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -10,7 +18,7 @@ state={
 	provinces={
 		133 235 281 516 617 635 784 869 908 1789 1803 1818 
 	}
-	manpower=0
+	manpower=2758549
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=rural
 }

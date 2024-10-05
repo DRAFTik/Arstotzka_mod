@@ -1,9 +1,15 @@
 state={
 	id=101
 	name="STATE_101"
+	resources={
+		iron = 31
+		tungsten = 11
+	}
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
 		}
 		owner = IMP
 		add_core_of = IMP
@@ -11,7 +17,7 @@ state={
 	provinces={
 		101 275 563 565 625 664 861 887 1184 2137 2138 2140 2146 
 	}
-	manpower=0
+	manpower=2926947
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

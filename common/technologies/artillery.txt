@@ -66,9 +66,6 @@ technologies = {
 		artillery = {
 			soft_attack = 0.1
 		}
-		elephant_art_support = {
-			soft_attack = 0.1
-		}
 		artillery_brigade = {
 			soft_attack = 0.1
 		}
@@ -201,9 +198,6 @@ technologies = {
 		artillery = {
 			soft_attack = 0.1
 		}
-		elephant_art_support = {
-			soft_attack = 0.1
-		}
 		artillery_brigade = {
 			soft_attack = 0.1
 		}
@@ -278,9 +272,6 @@ technologies = {
 	artillery3 = {
 
 		artillery = {
-			soft_attack = 0.1
-		}
-		elephant_art_support = {
 			soft_attack = 0.1
 		}
 		artillery_brigade = {
@@ -404,9 +395,6 @@ technologies = {
 	artillery5 = {
 
 		artillery = {
-			soft_attack = 0.1
-		}
-		elephant_art_support = {
 			soft_attack = 0.1
 		}
 		artillery_brigade = {

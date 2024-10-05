@@ -1,12 +1,16 @@
 state={
 	id=30
 	name="STATE_30"
+	resources={
+		rubber = 42
+	}
 	history={
 		victory_points = {
 			1506 1 
 		}
 		buildings = {
 			infrastructure = 1
+			agro_complex = 1
 		}
 		owner = SEM
 		add_core_of = SEM
@@ -14,7 +18,7 @@ state={
 	provinces={
 		116 149 155 263 265 466 494 495 519 541 759 789 805 1347 1367 1464 1470 1478 1484 1506 3032 
 	}
-	manpower=0
+	manpower=1854367
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

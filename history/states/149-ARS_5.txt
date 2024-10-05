@@ -2,8 +2,17 @@ state={
 	id=149
 	name="STATE_149"
 	history={
+		victory_points = {
+			476 10 
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			1218 = {
+				naval_base = 1
+			}
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -11,7 +20,7 @@ state={
 	provinces={
 		334 476 849 951 1047 1218 1291 2018 2023 2024 2035 2039 2050 
 	}
-	manpower=0
+	manpower=4700024
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

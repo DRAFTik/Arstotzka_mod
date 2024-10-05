@@ -82,7 +82,7 @@ division_template = {
 units = {
 	division = {
 		name = "1st National Guards regiment"
-		location = 4334
+		location = 1987
 		division_template = "National Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -91,7 +91,7 @@ units = {
 	
 	division = {
 		name = "2nd National Guards regiment"
-		location = 4334
+		location = 1987
 		division_template = "National Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -100,7 +100,7 @@ units = {
 	
 	division = {
 		name = "3rd National Guards regiment"
-		location = 4334
+		location = 1991
 		division_template = "National Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -109,7 +109,7 @@ units = {
 	
 	division = {
 		name = "4th National Guards regiment"
-		location = 4241
+		location = 724
 		division_template = "National Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -118,7 +118,7 @@ units = {
 	
 	division = {
 		name = "5th National Guards regiment"
-		location = 4241
+		location = 724
 		division_template = "National Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -127,7 +127,7 @@ units = {
 	
 	division = {
 		name = "6th National Guards regiment"
-		location = 4234
+		location = 2001
 		division_template = "National Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -136,7 +136,7 @@ units = {
 	
 	division = {
 		name = "7th National Guards regiment"
-		location = 4263
+		location = 2001
 		division_template = "National Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -145,7 +145,7 @@ units = {
 	
 	division = {
 		name = "8th National Guards regiment"
-		location = 4283
+		location = 69
 		division_template = "National Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -154,7 +154,7 @@ units = {
 	
 	division = {
 		name = "9th National Guards regiment"
-		location = 4283
+		location = 69
 		division_template = "National Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -163,7 +163,7 @@ units = {
 	
 	division = {
 		name = "1st National artillery regiment"
-		location = 4099
+		location = 1987
 		division_template = "National Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -172,7 +172,7 @@ units = {
 	
 	division = {
 		name = "2nd National artillery regiment"
-		location = 4061
+		location = 1991
 		division_template = "National Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -181,7 +181,7 @@ units = {
 	
 	division = {
 		name = "3th National artillery regiment"
-		location = 4045
+		location = 724
 		division_template = "National Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5

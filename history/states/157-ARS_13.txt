@@ -1,12 +1,17 @@
 state={
 	id=157
 	name="STATE_157"
+	resources={
+		iron = 47
+	}
 	history={
 		victory_points = {
 			422 1 
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
+			livestock_complex = 1
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -14,7 +19,7 @@ state={
 	provinces={
 		192 329 331 422 474 485 500 559 704 731 760 1029 1171 1700 1732 1740 1748 1760 1762 
 	}
-	manpower=0
+	manpower=2202820
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

@@ -1,4 +1,4 @@
-﻿capital = 8
+﻿capital = 60
 
 oob = "OBR_start"
 

@@ -7,6 +7,10 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 1
+			1871 = {
+				naval_base = 1
+			}
 		}
 		owner = UNF
 		add_core_of = UNF
@@ -14,7 +18,7 @@ state={
 	provinces={
 		619 732 1407 1823 1840 1871 
 	}
-	manpower=356841
+	manpower=1085643
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 	state_category=small_island

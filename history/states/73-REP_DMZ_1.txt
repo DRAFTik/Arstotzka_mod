@@ -1,6 +1,9 @@
 state={
 	id=73
 	name="STATE_73"
+	resources={
+		aluminium = 13
+	}
 	history={
 		buildings = {
 		}

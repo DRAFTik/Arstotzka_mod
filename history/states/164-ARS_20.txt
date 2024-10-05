@@ -3,6 +3,8 @@ state={
 	name="STATE_164"
 	history={
 		buildings = {
+			industrial_complex = 1
+			livestock_complex = 1
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -10,7 +12,7 @@ state={
 	provinces={
 		52 368 522 607 618 864 994 1013 1053 1154 1306 1783 1821 1855 1866 
 	}
-	manpower=0
+	manpower=2605391
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=rural
 }

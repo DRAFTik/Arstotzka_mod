@@ -7,6 +7,11 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 3
+			hydro_power_plant = 1
+			212 = {
+				naval_base = 1
+			}
 		}
 		owner = UNF
 		add_core_of = UNF
@@ -14,7 +19,7 @@ state={
 	provinces={
 		212 382 525 862 893 1207 1239 1300 1353 2049 2062 2066 
 	}
-	manpower=0
+	manpower=3278067
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

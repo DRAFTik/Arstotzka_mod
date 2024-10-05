@@ -3,6 +3,9 @@ state={
 	name="STATE_27"
 	history={
 		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
 		}
 		owner = SEM
 		add_core_of = SEM
@@ -10,7 +13,7 @@ state={
 	provinces={
 		1 354 461 890 1040 1247 1359 1489 1496 1503 1508 1514 
 	}
-	manpower=0
+	manpower=2733639
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=rural
 }

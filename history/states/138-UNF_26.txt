@@ -4,6 +4,9 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 2
+			livestock_complex = 1
 		}
 		owner = UNF
 		add_core_of = UNF
@@ -11,7 +14,7 @@ state={
 	provinces={
 		237 243 503 790 942 1324 1357 1898 
 	}
-	manpower=0
+	manpower=2366345
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

@@ -1,12 +1,17 @@
 state={
 	id=94
 	name="STATE_94"
+	resources={
+		iron = 36
+		chromium = 18
+		tungsten = 10
+		aluminium = 16
+	}
 	history={
-		victory_points = {
-			969 1
-		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			livestock_complex = 2
 		}
 		owner = KOL
 		add_core_of = KOL
@@ -14,8 +19,8 @@ state={
 	provinces={
 		301 627 681 769 969 990 1109 1393 1724 1746 1759 1778 
 	}
-	manpower=0
+	manpower=1170996
 	buildings_max_level_factor=1.000
-	state_category=town
 	local_supplies=0.000
+	state_category=town
 }

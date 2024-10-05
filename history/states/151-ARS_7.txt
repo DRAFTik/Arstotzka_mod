@@ -3,6 +3,11 @@ state={
 	name="STATE_151"
 	history={
 		buildings = {
+			arms_factory = 1
+			livestock_complex = 1
+			960 = {
+				naval_base = 1
+			}
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -10,7 +15,7 @@ state={
 	provinces={
 		21 27 475 524 533 592 746 960 1277 1308 1984 2003 2004 2011 2021 
 	}
-	manpower=0
+	manpower=3335964
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=rural
 }

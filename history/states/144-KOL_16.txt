@@ -2,8 +2,15 @@ state={
 	id=144
 	name="STATE_144"
 	history={
+		victory_points = {
+			1059 2
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
+			arms_factory = 1
+			livestock_complex = 1
+			thermal_power_plant = 1
 		}
 		owner = KOL
 		add_core_of = KOL
@@ -11,7 +18,7 @@ state={
 	provinces={
 		406 573 1059 1281 1396 1774 1775 1782 1794 1805 1807 1809 
 	}
-	manpower=0
+	manpower=2351028
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 	state_category=town

@@ -1,9 +1,14 @@
 state={
 	id=126
 	name="STATE_126"
+	resources={
+		tungsten = 34
+	}
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			agro_complex = 1
 		}
 		owner = UNF
 		add_core_of = UNF
@@ -11,7 +16,7 @@ state={
 	provinces={
 		66 272 350 567 1023 1082 1162 1236 2130 
 	}
-	manpower=0
+	manpower=2066313
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

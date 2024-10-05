@@ -83,7 +83,7 @@ division_template = {
 units = {
 	division = {
 		name = "1st Antegrian Guard regiment"
-		location = 116
+		location = 287
 		division_template = "Antegrian Guard"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -92,7 +92,7 @@ units = {
 	
 	division = {
 		name = "2nd Antegrian Guard regiment"
-		location = 116
+		location = 252
 		division_template = "Antegrian Guard"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -101,7 +101,7 @@ units = {
 	
 	division = {
 		name = "3rd Antegrian Guard regiment"
-		location = 355
+		location = 1213
 		division_template = "Antegrian Guard"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -110,7 +110,7 @@ units = {
 	
 	division = {
 		name = "4th Antegrian Guard regiment"
-		location = 355
+		location = 1213
 		division_template = "Antegrian Guard"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -119,7 +119,7 @@ units = {
 	
 	division = {
 		name = "5th Antegrian Guard regiment"
-		location = 461
+		location = 75
 		division_template = "Antegrian Guard"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -128,7 +128,7 @@ units = {
 	
 	division = {
 		name = "6th Antegrian Guard regiment"
-		location = 461
+		location = 1362
 		division_template = "Antegrian Guard"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -137,7 +137,7 @@ units = {
 	
 	division = {
 		name = "7th Antegrian Guard regiment"
-		location = 1298
+		location = 410
 		division_template = "Antegrian Guard"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -146,7 +146,7 @@ units = {
 	
 	division = {
 		name = "8th Antegrian Guard regiment"
-		location = 1298
+		location = 669
 		division_template = "Antegrian Guard"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -155,7 +155,7 @@ units = {
 	
 	division = {
 		name = "9th Antegrian Guard regiment"
-		location = 1405
+		location = 499
 		division_template = "Antegrian Guard"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -164,7 +164,7 @@ units = {
 	
 	division = {
 		name = "10th Antegrian Guard regiment"
-		location = 1405
+		location = 256
 		division_template = "Antegrian Guard"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -173,7 +173,7 @@ units = {
 	
 	division = {
 		name = "1st Antegrian artillery regiment"
-		location = 1982
+		location = 287
 		division_template = "Antegrian Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -182,7 +182,7 @@ units = {
 	
 	division = {
 		name = "2nd Antegrian artillery regiment"
-		location = 1982
+		location = 425
 		division_template = "Antegrian Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -191,7 +191,7 @@ units = {
 	
 	division = {
 		name = "3th Antegrian artillery regiment"
-		location = 2121
+		location = 1398
 		division_template = "Antegrian Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -200,7 +200,7 @@ units = {
 	
 	division = {
 		name = "4th Antegrian artillery regiment"
-		location = 2121
+		location = 881
 		division_template = "Antegrian Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -209,7 +209,7 @@ units = {
 	
 	division = {
 		name = "5th Antegrian artillery regiment"
-		location = 2121
+		location = 1861
 		division_template = "Antegrian Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.4

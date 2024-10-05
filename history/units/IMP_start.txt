@@ -102,7 +102,7 @@ division_template = {
 units = {
 	division = {
 		name = "1st Imperial Guards regiment"
-		location = 2881
+		location = 2068
 		division_template = "Imperial Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -111,7 +111,7 @@ units = {
 	
 	division = {
 		name = "2nd Imperial Guards regiment"
-		location = 339
+		location = 2068
 		division_template = "Imperial Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -120,7 +120,7 @@ units = {
 	
 	division = {
 		name = "3rd Imperial Guards regiment"
-		location = 2265
+		location = 1124
 		division_template = "Imperial Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -129,7 +129,7 @@ units = {
 	
 	division = {
 		name = "4th Imperial Guards regiment"
-		location = 2589
+		location = 2119
 		division_template = "Imperial Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -138,7 +138,7 @@ units = {
 	
 	division = {
 		name = "5th Imperial Guards regiment"
-		location = 2716
+		location = 839
 		division_template = "Imperial Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -147,7 +147,7 @@ units = {
 	
 	division = {
 		name = "6th Imperial Guards regiment"
-		location = 341
+		location = 2126
 		division_template = "Imperial Guards"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -156,7 +156,7 @@ units = {
 	
 	division = {
 		name = "1st Imperial artillery regiment"
-		location = 723
+		location = 1124
 		division_template = "Imperial Artillery Brigade"
 		start_experience_factor = 0.100
 		start_equipment_factor = 0.5
@@ -164,7 +164,7 @@ units = {
 	}
 	division = {
 		name = "2nd Imperial artillery regiment"
-		location = 723
+		location = 546
 		division_template = "Imperial Artillery Brigade"
 		start_experience_factor = 0.100
 		start_equipment_factor = 0.5
@@ -173,7 +173,7 @@ units = {
 	
 	division = {
 		name = "1st Imperial armor regiment"
-		location = 166
+		location = 1124
 		division_template = "Imperial Armor Brigade"
 		start_experience_factor = 0.100
 		start_equipment_factor = 0.5
@@ -181,7 +181,7 @@ units = {
 	}
 	division = {
 		name = "2nd Imperial armor regiment"
-		location = 166
+		location = 565
 		division_template = "Imperial Armor Brigade"
 		start_experience_factor = 0.100
 		start_equipment_factor = 0.5

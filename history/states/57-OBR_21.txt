@@ -7,6 +7,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			livestock_complex = 3
 		}
 		owner = OBR
 		add_core_of = OBR
@@ -14,7 +16,7 @@ state={
 	provinces={
 		68 141 249 273 345 383 443 520 633 686 728 843 939 1326 1408 1492 1493 1501 1504 1516 1519 1520 1528 1532 1540 
 	}
-	manpower=0
+	manpower=2269782
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

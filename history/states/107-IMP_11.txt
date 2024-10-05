@@ -7,6 +7,9 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			steel_mill = 1
+			livestock_complex = 1
 		}
 		owner = IMP
 		add_core_of = IMP
@@ -14,7 +17,7 @@ state={
 	provinces={
 		29 218 538 552 580 904 909 2061 2068 
 	}
-	manpower=0
+	manpower=6239163
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

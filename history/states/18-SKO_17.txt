@@ -1,14 +1,21 @@
 state={
 	id=18
 	name="STATE_18"
+	resources={
+		iron = 20
+		aluminium = 8
+	}
 	history={
+		buildings = {
+			agro_complex = 1
+		}
 		owner = SKO
 		add_core_of = SKO
 	}
 	provinces={
 		53 108 205 305 408 501 948 1297 1371 1498 1538 1574 1589 
 	}
-	manpower=0
+	manpower=113908
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=rural
 }

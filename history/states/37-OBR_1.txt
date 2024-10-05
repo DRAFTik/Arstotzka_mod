@@ -1,10 +1,13 @@
-
 state={
 	id=37
 	name="STATE_37"
 	history={
 		buildings = {
 			infrastructure = 1
+			dockyard = 2
+			971 = {
+				naval_base = 1
+			}
 		}
 		owner = OBR
 		add_core_of = OBR
@@ -12,7 +15,7 @@ state={
 	provinces={
 		147 196 260 311 428 470 634 832 857 923 971 1125 1144 1425 1428 1429 
 	}
-	manpower=0
+	manpower=696972
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

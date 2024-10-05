@@ -1,9 +1,15 @@
 state={
 	id=92
 	name="STATE_92"
+	resources={
+		iron = 36
+		tungsten = 14
+	}
 	history={
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
+			livestock_complex = 2
 		}
 		owner = KOL
 		add_core_of = KOL
@@ -11,7 +17,7 @@ state={
 	provinces={
 		191 242 459 665 737 780 1159 1727 1730 1743 1744 1747 1765 1770 
 	}
-	manpower=0
+	manpower=1019192
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

@@ -818,8 +818,4 @@ calculate_steel_mill_effect = {
 }
 
 effect_1 = {
-	all_country = {
-		add_to_temp_variable = { global.total_iron_exported = resource_exported@iron }
-	}
-	log = "[GetDateText]: [This.GetName] ([This.GetTag]): total_iron_exported: [?global.total_iron_exported]"
 }

@@ -10,7 +10,7 @@ bookmarks = {
 		
 		"OBR" = {
 			history = "OBR_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = social_democrat
 			ideas = {
 			}
 			focuses = {
@@ -18,7 +18,7 @@ bookmarks = {
 		}
 		"ANT" = {
 			history = "ANT_GATHERING_STORM_DESC"
-			ideology = fascism
+			ideology = national_populist
 			ideas = {
 			}
 			focuses = {
@@ -26,7 +26,7 @@ bookmarks = {
 		}
 		"REP" = {
 			history = "REP_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = authoritarian_democrat
 			ideas = {
 			}
 			focuses = {
@@ -34,7 +34,7 @@ bookmarks = {
 		}
 		"ARS" = {
 			history = "ARS_GATHERING_STORM_DESC"
-			ideology = communism
+			ideology = totalist
 			ideas = {
 			}
 			focuses = {
@@ -42,7 +42,7 @@ bookmarks = {
 		}
 		"KOL" = {
 			history = "KOL_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = paternal_autocrat
 			ideas = {
 			}
 			focuses = {
@@ -50,7 +50,7 @@ bookmarks = {
 		}
 		"IMP" = {
 			history = "IMP_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = paternal_autocrat
 			ideas = {
 			}
 			focuses = {
@@ -58,7 +58,7 @@ bookmarks = {
 		}
 		"UNF" = {
 			history = "UNF_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = social_conservative
 			ideas = {
 			}
 			focuses = {
@@ -77,8 +77,18 @@ bookmarks = {
 
 		"SKO"={
 			minor = yes
-			history = "SKO_BLITZKRIEG_DESC"
-			ideology = neutrality
+			history = "SKO_GATHERING_STORM_DESC"
+			ideology = social_conservative
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"SEM"={
+			minor = yes
+			history = "SEM_GATHERING_STORM_DESC"
+			ideology = social_liberal
 			ideas = {
 			}
 			focuses = {

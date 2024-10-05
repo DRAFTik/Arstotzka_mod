@@ -4,6 +4,8 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			agro_complex = 1
+			livestock_complex = 2
 		}
 		owner = SKO
 		add_core_of = SKO
@@ -11,7 +13,7 @@ state={
 	provinces={
 		12 564 684 707 866 1051 1225 1414 1418 1424 
 	}
-	manpower=1000000
+	manpower=483482 
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=rural
 }

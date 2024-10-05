@@ -109,7 +109,7 @@ division_template = {
 units = {
 	division = {
 		name = "1st Infantry Brigade regiment"
-		location = 4553
+		location = 2046
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -118,7 +118,7 @@ units = {
 	
 	division = {
 		name = "2nd Infantry Brigade regiment"
-		location = 4551
+		location = 2090
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -127,7 +127,7 @@ units = {
 	
 	division = {
 		name = "3rd Infantry Brigade regiment"
-		location = 4541
+		location = 212
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -136,7 +136,7 @@ units = {
 	
 	division = {
 		name = "4th Infantry Brigade regiment"
-		location = 1071
+		location = 478
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
@@ -145,7 +145,7 @@ units = {
 	
 	division = {
 		name = "5th Infantry Brigade regiment"
-		location = 1271
+		location = 1651
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -154,7 +154,7 @@ units = {
 	
 	division = {
 		name = "6th Infantry Brigade regiment"
-		location = 1537
+		location = 304
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -163,7 +163,7 @@ units = {
 	
 	division = {
 		name = "7th Infantry Brigade regiment"
-		location = 1441
+		location = 708
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -172,7 +172,7 @@ units = {
 	
 	division = {
 		name = "8th Infantry Brigade regiment"
-		location = 755
+		location = 2013
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -181,7 +181,7 @@ units = {
 	
 	division = {
 		name = "9th Infantry Brigade regiment"
-		location = 780
+		location = 280
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -190,7 +190,7 @@ units = {
 	
 	division = {
 		name = "10th Infantry Brigade regiment"
-		location = 4491
+		location = 2076
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -199,7 +199,7 @@ units = {
 	
 	division = {
 		name = "11th Infantry Brigade regiment"
-		location = 4478
+		location = 2094
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -208,7 +208,7 @@ units = {
 	
 	division = {
 		name = "12th Infantry Brigade regiment"
-		location = 481
+		location = 375
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -226,7 +226,7 @@ units = {
 	
 	division = {
 		name = "14th Infantry Brigade regiment"
-		location = 4178
+		location = 2117
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.4
@@ -237,7 +237,7 @@ units = {
 	
 	division = {
 		name = "1st United elite regiment"
-		location = 4553
+		location = 2046
 		division_template = "United elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -246,7 +246,7 @@ units = {
 	
 	division = {
 		name = "2nd United elite regiment"
-		location = 4551
+		location = 2090
 		division_template = "United elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -255,7 +255,7 @@ units = {
 	
 	division = {
 		name = "3rd United elite regiment"
-		location = 4541
+		location = 212
 		division_template = "United elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -264,7 +264,7 @@ units = {
 	
 	division = {
 		name = "4th United elite regiment"
-		location = 1071
+		location = 478
 		division_template = "United elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
@@ -273,7 +273,7 @@ units = {
 	
 	division = {
 		name = "5th United elite regiment"
-		location = 1271
+		location = 1651
 		division_template = "United elite"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -282,7 +282,7 @@ units = {
 	
 	division = {
 		name = "1st United artillery regiment"
-		location = 1537
+		location = 304
 		division_template = "United Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -291,7 +291,7 @@ units = {
 	
 	division = {
 		name = "2nd United artillery regiment"
-		location = 1441
+		location = 708
 		division_template = "United Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -300,7 +300,7 @@ units = {
 	
 	division = {
 		name = "3th United artillery regiment"
-		location = 755
+		location = 2013
 		division_template = "United Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -309,7 +309,7 @@ units = {
 	
 	division = {
 		name = "4th United artillery regiment"
-		location = 780
+		location = 280
 		division_template = "United Artillery Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -318,7 +318,7 @@ units = {
 	
 	division = {
 		name = "1st United armor regiment"
-		location = 4491
+		location = 2076
 		division_template = "United Armor Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -327,7 +327,7 @@ units = {
 	
 	division = {
 		name = "2nd United armor regiment"
-		location = 4478
+		location = 2094
 		division_template = "United Armor Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -336,7 +336,7 @@ units = {
 	
 	division = {
 		name = "3th United armor regiment"
-		location = 481
+		location = 375
 		division_template = "United Armor Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -354,7 +354,7 @@ units = {
 	
 	division = {
 		name = "5th United armor regiment"
-		location = 4178
+		location = 2117
 		division_template = "United Armor Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.4

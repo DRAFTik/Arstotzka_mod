@@ -3,13 +3,17 @@ state={
 	id=4
 	name="STATE_4"
 	history={
+		buildings = {
+			agro_complex = 1
+			livestock_complex = 1
+		}
 		owner = SKO
 		add_core_of = SKO
 	}
 	provinces={
 		97 120 224 306 339 1039 1081 1118 1234 1265 1458 1465 1466 1472 
 	}
-	manpower=0
+	manpower=1237454
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=rural
 }

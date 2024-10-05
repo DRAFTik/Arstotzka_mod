@@ -1,13 +1,18 @@
-
 state={
 	id=158
 	name="STATE_158"
+	resources={
+		iron = 63
+		chromium = 14
+	}
 	history={
 		victory_points = {
 			532 1 
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
+			agro_complex = 1
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -15,7 +20,7 @@ state={
 	provinces={
 		40 72 228 234 415 464 532 594 653 858 1019 1152 1304 1314 1696 1704 1715 1721 1777 1790 1793 1799 
 	}
-	manpower=0
+	manpower=4080235
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

@@ -1,9 +1,18 @@
 state={
 	id=70
 	name="STATE_70"
+	resources={
+		chromium = 11
+		tungsten = 5
+	}
 	history={
+		victory_points = {
+			287 5
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
 		}
 		owner = ANT
 		add_core_of = ANT
@@ -11,7 +20,7 @@ state={
 	provinces={
 		252 256 287 348 499 527 640 658 1226 1320 1376 1888 1899 1936 
 	}
-	manpower=0
+	manpower=2029810
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

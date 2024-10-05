@@ -1,9 +1,17 @@
 state={
 	id=106
 	name="STATE_106"
+	resources={
+		iron = 62
+		aluminium = 52
+		chromium = 16
+	}
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			steel_mill = 1
+			livestock_complex = 1
 		}
 		owner = IMP
 		add_core_of = IMP
@@ -11,7 +19,7 @@ state={
 	provinces={
 		49 332 964 1137 1222 1333 2052 2070 
 	}
-	manpower=0
+	manpower=4282901
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

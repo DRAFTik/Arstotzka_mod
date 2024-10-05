@@ -4,6 +4,12 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
+			dockyard = 1
+			agro_complex = 1
+			2045 = {
+				naval_base = 1
+			}
 		}
 		owner = KOL
 		add_core_of = KOL
@@ -11,7 +17,7 @@ state={
 	provinces={
 		279 885 1229 2022 2041 2045 2053 2056 
 	}
-	manpower=0
+	manpower=2323476
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

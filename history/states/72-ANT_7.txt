@@ -4,6 +4,9 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+			livestock_complex = 1
 		}
 		owner = ANT
 		add_core_of = ANT
@@ -11,7 +14,7 @@ state={
 	provinces={
 		67 719 874 1077 1200 1918 1925 
 	}
-	manpower=0
+	manpower=2929332
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

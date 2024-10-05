@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -11,7 +12,7 @@ state={
 	provinces={
 		566 677 775 783 820 1079 1179 1185 1258 1332 1927 1965 
 	}
-	manpower=0
+	manpower=3169484
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

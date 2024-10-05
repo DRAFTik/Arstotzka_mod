@@ -1,12 +1,18 @@
 state={
 	id=45
 	name="STATE_45"
+	resources={
+		iron = 13
+		tungsten = 17
+	}
 	history={
 		victory_points = {
 			1697 2
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 2
+			livestock_complex = 1
 		}
 		owner = OBR
 		add_core_of = OBR
@@ -14,7 +20,7 @@ state={
 	provinces={
 		20 41 55 98 121 788 1156 1293 1685 1697 1702 1706 1717 1719 1722 1726 1734 1739 1750 
 	}
-	manpower=0
+	manpower=4407531
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

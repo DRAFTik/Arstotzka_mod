@@ -1,8 +1,12 @@
 state={
 	id=31
 	name="STATE_31"
+	resources={
+		iron = 8
+	}
 	history={
 		buildings = {
+			livestock_complex = 1
 		}
 		owner = SEM
 		add_core_of = SEM
@@ -10,7 +14,7 @@ state={
 	provinces={
 		26 168 271 432 447 682 801 884 952 1157 1217 1268 1282 1515 1522 1529 1534 1535 1536 1537 1570 
 	}
-	manpower=0
+	manpower=2734057
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=rural
 }

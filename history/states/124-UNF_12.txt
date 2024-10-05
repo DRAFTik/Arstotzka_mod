@@ -3,11 +3,9 @@ state={
 	id=124
 	name="STATE_124"
 	history={
-		victory_points = {
-			593 2
-		}
 		buildings = {
 			infrastructure = 1
+			agro_complex = 2
 		}
 		owner = UNF
 		add_core_of = UNF
@@ -15,7 +13,7 @@ state={
 	provinces={
 		166 593 706 1231 2083 2093 2095 
 	}
-	manpower=0
+	manpower=3354729
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

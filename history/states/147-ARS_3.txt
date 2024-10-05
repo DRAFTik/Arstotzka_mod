@@ -7,6 +7,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 1
+			livestock_complex = 1
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -14,7 +16,7 @@ state={
 	provinces={
 		362 386 550 1270 1349 1915 1932 1961 1975 
 	}
-	manpower=0
+	manpower=3499313
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

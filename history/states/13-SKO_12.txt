@@ -7,6 +7,9 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			agro_silo = 1
 		}
 		owner = SKO
 		add_core_of = SKO
@@ -14,7 +17,7 @@ state={
 	provinces={
 		87 94 376 661 873 921 1043 1074 1335 1438 1454 1461 
 	}
-	manpower=0
+	manpower=891746
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=town
 }

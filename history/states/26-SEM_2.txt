@@ -3,6 +3,7 @@ state={
 	name="STATE_26"
 	history={
 		buildings = {
+			thermal_power_plant = 1
 		}
 		owner = SEM
 		add_core_of = SEM
@@ -10,7 +11,7 @@ state={
 	provinces={
 		7 214 433 582 615 712 800 819 1262 1467 1473 1482 1495 1505 
 	}
-	manpower=0
+	manpower=1004633
 	buildings_max_level_factor=1.000
 	local_supplies=0.000	state_category=rural
 }
