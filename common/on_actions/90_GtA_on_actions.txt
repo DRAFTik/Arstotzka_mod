@@ -34,34 +34,31 @@ on_actions = {
 
 
 
-	on_daily = {
-		effect = {
-			calculate_electric_power_effect = yes
-			calculate_provision_daily_effect = yes				# стата
-			calculate_steel_mill_effect = yes					# сталь
-		}
-	}
-
-	on_weekly = {
-		effect = {
-			add_to_variable = { global.total_iron_exported = resource_exported@iron }
-			calculate_electric_power_LOG_effect = yes
-			calculate_provision_weekly_effect = yes				# животнаводство
-			calculate_hunger_dyn_effect = yes					# голод
-			calculate_change_population_weekly_effect = yes		# изменение населения в регионах
-		}
-	}
-
-	on_weekly_ARS = {
+	on_daily_SAI = {
 		effect = {
 			every_country = {
-				add_to_variable = { total_iron_exported_temp = resource_exported@iron }
+				calculate_electric_power_effect = yes
+				calculate_provision_daily_effect = yes				# стата
+				calculate_steel_mill_effect = yes					# сталь
+			}
+		}
+	}
+
+	on_weekly_SAI = {
+		effect = {
+			add_to_variable = { global.total_iron_exported = resource_exported@iron }
+			every_country = {
+				calculate_electric_power_LOG_effect = yes
+				calculate_provision_weekly_effect = yes				# животнаводство
+				calculate_hunger_dyn_effect = yes					# голод
+				calculate_change_population_weekly_effect = yes		# изменение населения в регионах
+				add_to_temp_variable = { total_iron_exported_temp = resource_exported@iron }
 			}
 			add_to_variable = { global.total_iron_exported = total_iron_exported_temp }
 		}
 	}
 
-	on_monthly = {
+	on_monthly_SAI = {
 		effect = {
 			if = {
 				limit = {
@@ -73,9 +70,13 @@ on_actions = {
 						YEAR = "[?global.year]"
 					}
 				}
-				calculate_provision_yearly_effect = yes		# урожай культур
+				every_country = {
+					calculate_provision_yearly_effect = yes		# урожай культур
+				}
 			}
-			calculate_provision_monthly_effect = yes		# порча еды
+			every_country = {
+				calculate_provision_monthly_effect = yes		# порча еды
+			}
 		}
 	}
 }

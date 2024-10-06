@@ -1,6 +1,6 @@
 characters={
 	SAI_universal_leader={
-		name="NW Counsil"
+		name="Dev Counsil"
 		portraits={
 			civilian={
 				large="gfx/leaders/SAI/Portrait_SAI_universal_leader.dds"
