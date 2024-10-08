@@ -93,6 +93,10 @@
 		production_factory_efficiency_gain_factor = hunger_production_factory_efficiency_gain_factor_var
 		production_speed_buildings_factor = hunger_production_speed_buildings_factor_var
 		research_speed_factor = hunger_research_speed_factor_var
+		army_attack_factor = hunger_industrial_capacity_var
+		army_defence_factor = hunger_industrial_capacity_var
+		army_org_regain = hunger_industrial_capacity_var
+		army_speed_factor = hunger_production_speed_buildings_factor_var
 	}
 	
 	

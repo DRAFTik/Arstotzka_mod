@@ -30,10 +30,10 @@ we_need_steel_mill = {
 		check_variable = { var = resource@steel					value = 0					compare = less_than_or_equals }
 		set_temp_variable = { need_iron_imported = resource@iron }
 		multiply_temp_variable = { need_iron_imported = -1 }
-		OR = {
-			check_variable = { var = global.total_iron_exported	value = need_iron_imported	compare = greater_than_or_equals }
+#		OR = {
+#			check_variable = { var = global.total_iron_exported	value = need_iron_imported	compare = greater_than_or_equals }
 			check_variable = { var = resource@iron				value = 0					compare = greater_than_or_equals }
-		}
+#		}
 		check_variable = { var = electric_power_total_var		value = 10					compare = greater_than_or_equals }
 	}
 	abort_when_not_enabled = yes
@@ -50,10 +50,10 @@ we_need_steel_mill_2 = {
 		num_of_civilian_factories_available_for_projects > 29
 		set_temp_variable = { need_iron_imported = resource@iron }
 		multiply_temp_variable = { need_iron_imported = -1 }
-		OR = {
-			check_variable = { var = global.total_iron_exported	value = need_iron_imported	compare = greater_than_or_equals }
+#		OR = {
+#			check_variable = { var = global.total_iron_exported	value = need_iron_imported	compare = greater_than_or_equals }
 			check_variable = { var = resource@iron				value = 0					compare = greater_than_or_equals }
-		}
+#		}
 		check_variable = { var = electric_power_total_var		value = 10					compare = greater_than_or_equals }
 		set_temp_variable = { steel_fact = resource@steel }
 		divide_temp_variable = { steel_fact = num_of_military_factories }
@@ -75,10 +75,10 @@ we_need_steel_mill_3 = {
 		check_variable = { var = resource@steel					value = -40					compare = less_than_or_equals }
 		set_temp_variable = { need_iron_imported = resource@iron }
 		multiply_temp_variable = { need_iron_imported = -1 }
-		OR = {
-			check_variable = { var = global.total_iron_exported	value = need_iron_imported	compare = greater_than_or_equals }
+#		OR = {
+#			check_variable = { var = global.total_iron_exported	value = need_iron_imported	compare = greater_than_or_equals }
 			check_variable = { var = resource@iron				value = 0					compare = greater_than_or_equals }
-		}
+#		}
 		check_variable = { var = electric_power_total_var		value = 10					compare = greater_than_or_equals }
 	}
 	abort_when_not_enabled = yes

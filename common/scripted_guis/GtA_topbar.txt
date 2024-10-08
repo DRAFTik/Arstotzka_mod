@@ -42,5 +42,192 @@ scripted_gui = {
 		ai_enabled = {
 			always = no
 		}
+		effects = {
+			electric_power_bg_click = {
+				if = {
+					limit = { NOT = { has_variable = electric_panel } }
+					set_variable = { electric_panel = 1 }
+				}
+				else = { clear_variable = electric_panel }
+				if = {
+					limit = { NOT = { has_variable = electric_power_tumbler_icon_1_frame } }
+					set_variable = { electric_power_tumbler_icon_1_frame = 1 }
+				}
+				if = {
+					limit = { NOT = { has_variable = electric_power_tumbler_icon_2_frame } }
+					set_variable = { electric_power_tumbler_icon_2_frame = 1 }
+				}
+				if = {
+					limit = { NOT = { has_variable = electric_power_tumbler_icon_3_frame } }
+					set_variable = { electric_power_tumbler_icon_3_frame = 1 }
+				}
+				if = {
+					limit = { NOT = { has_variable = electric_power_tumbler_icon_4_frame } }
+					set_variable = { electric_power_tumbler_icon_4_frame = 1 }
+				}
+				if = {
+					limit = { NOT = { has_variable = electric_power_tumbler_icon_5_frame } }
+					set_variable = { electric_power_tumbler_icon_5_frame = 1 }
+				}
+				if = {
+					limit = { NOT = { has_variable = electric_power_tumbler_icon_6_frame } }
+					set_variable = { electric_power_tumbler_icon_6_frame = 1 }
+				}
+				if = {
+					limit = { NOT = { has_variable = electric_power_tumbler_icon_7_frame } }
+					set_variable = { electric_power_tumbler_icon_7_frame = 1 }
+				}
+			}
+		}
+	}
+	
+	electric_panel_main = {
+		parent_window_token = top_bar
+		window_name = "electric_panel_main_container"
+		visible = {
+			has_variable = electric_panel
+		}
+		ai_enabled = {
+			always = no
+		}
+		effects = {
+			close_button_click = { clear_variable = electric_panel }
+			red_button_click = {
+				set_variable = { electric_power_tumbler_icon_1_frame = 1 }
+				set_variable = { electric_power_tumbler_icon_2_frame = 1 }
+				set_variable = { electric_power_tumbler_icon_3_frame = 1 }
+				set_variable = { electric_power_tumbler_icon_4_frame = 1 }
+				set_variable = { electric_power_tumbler_icon_5_frame = 1 }
+				set_variable = { electric_power_tumbler_icon_6_frame = 1 }
+				set_variable = { electric_power_tumbler_icon_7_frame = 1 }
+			}
+			electric_power_tumbler_icon_1_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_1_frame < 7 } }
+					add_to_variable = { electric_power_tumbler_icon_1_frame = 1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_1_frame = 1 } }
+			}
+			electric_power_tumbler_icon_1_right_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_1_frame > 1 } }
+					add_to_variable = { electric_power_tumbler_icon_1_frame = -1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_1_frame = 7 } }
+			}
+			
+			electric_power_tumbler_icon_2_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_2_frame < 7 } }
+					add_to_variable = { electric_power_tumbler_icon_2_frame = 1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_2_frame = 1 } }
+			}
+			electric_power_tumbler_icon_2_right_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_2_frame > 1 } }
+					add_to_variable = { electric_power_tumbler_icon_2_frame = -1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_2_frame = 7 } }
+			}
+			
+			electric_power_tumbler_icon_3_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_3_frame < 7 } }
+					add_to_variable = { electric_power_tumbler_icon_3_frame = 1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_3_frame = 1 } }
+			}
+			electric_power_tumbler_icon_3_right_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_3_frame > 1 } }
+					add_to_variable = { electric_power_tumbler_icon_3_frame = -1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_3_frame = 7 } }
+			}
+			
+			electric_power_tumbler_icon_4_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_4_frame < 7 } }
+					add_to_variable = { electric_power_tumbler_icon_4_frame = 1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_4_frame = 1 } }
+			}
+			electric_power_tumbler_icon_4_right_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_4_frame > 1 } }
+					add_to_variable = { electric_power_tumbler_icon_4_frame = -1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_4_frame = 7 } }
+			}
+			
+			electric_power_tumbler_icon_5_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_5_frame < 7 } }
+					add_to_variable = { electric_power_tumbler_icon_5_frame = 1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_5_frame = 1 } }
+			}
+			electric_power_tumbler_icon_5_right_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_5_frame > 1 } }
+					add_to_variable = { electric_power_tumbler_icon_5_frame = -1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_5_frame = 7 } }
+			}
+			
+			electric_power_tumbler_icon_6_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_6_frame < 7 } }
+					add_to_variable = { electric_power_tumbler_icon_6_frame = 1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_6_frame = 1 } }
+			}
+			electric_power_tumbler_icon_6_right_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_6_frame > 1 } }
+					add_to_variable = { electric_power_tumbler_icon_6_frame = -1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_6_frame = 7 } }
+			}
+			
+			electric_power_tumbler_icon_7_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_7_frame < 7 } }
+					add_to_variable = { electric_power_tumbler_icon_7_frame = 1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_7_frame = 1 } }
+			}
+			electric_power_tumbler_icon_7_right_click = {
+				if = {
+					limit = { check_variable = { electric_power_tumbler_icon_7_frame > 1 } }
+					add_to_variable = { electric_power_tumbler_icon_7_frame = -1 }
+				}
+				else = { set_variable = { electric_power_tumbler_icon_7_frame = 7 } }
+			}
+		}
+		properties = {
+			electric_power_tumbler_icon_1 = {
+				frame = electric_power_tumbler_icon_1_frame
+			}
+			electric_power_tumbler_icon_2 = {
+				frame = electric_power_tumbler_icon_2_frame
+			}
+			electric_power_tumbler_icon_3 = {
+				frame = electric_power_tumbler_icon_3_frame
+			}
+			electric_power_tumbler_icon_4 = {
+				frame = electric_power_tumbler_icon_4_frame
+			}
+			electric_power_tumbler_icon_5 = {
+				frame = electric_power_tumbler_icon_5_frame
+			}
+			electric_power_tumbler_icon_6 = {
+				frame = electric_power_tumbler_icon_6_frame
+			}
+			electric_power_tumbler_icon_7 = {
+				frame = electric_power_tumbler_icon_7_frame
+			}
+		}
 	}
 }

@@ -14,4 +14,30 @@ spriteTypes = {
 		size = { x = 45 y = 8 }
 		effectFile = "gfx/FX/progress_startend.lua"
 	}
+	
+	spriteType = {
+		name = "GFX_electric_panel_main_bg"
+		texturefile = "gfx/interface/GUI/electric_panel/electric_panel_main_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_electric_panel_volt"
+		texturefile = "gfx/interface/GUI/electric_panel/electric_panel_main_volt.dds"
+	}
+	spriteType = {
+		name = "GFX_electric_panel_amper"
+		texturefile = "gfx/interface/GUI/electric_panel/electric_panel_main_amper.dds"
+	}
+	spriteType = {
+		name = "GFX_meter_base"
+		texturefile = "gfx/interface/GUI/electric_panel/meter_base.dds"
+	}
+	spriteType = {
+		name = "GFX_red_button"
+		texturefile = "gfx/interface/GUI/electric_panel/red_button.dds"
+	}
+	spriteType = {
+		name = "GFX_tumbler_strip"
+		texturefile = "gfx/interface/GUI/electric_panel/tumbler_strip.dds"
+		noOfFrames = 7
+	}
 }
