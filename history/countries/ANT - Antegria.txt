@@ -52,3 +52,6 @@ set_popularities = {
 63 = { set_demilitarized_zone = yes }
 64 = { set_demilitarized_zone = yes }
 65 = { set_demilitarized_zone = yes }
+
+give_market_access = KOL
+give_market_access = IMP

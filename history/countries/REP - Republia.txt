@@ -53,3 +53,11 @@ set_popularities = {
 73 = { set_demilitarized_zone = yes }
 74 = { set_demilitarized_zone = yes }
 75 = { set_demilitarized_zone = yes }
+
+give_market_access = UNF
+give_market_access = IMP
+give_market_access = OBR
+give_market_access = SEM
+give_market_access = SKO
+give_market_access = KOL
+give_market_access = ARS

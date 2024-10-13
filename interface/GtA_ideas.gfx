@@ -18,7 +18,10 @@ spriteTypes = {
 		name = "GFX_idea_hunger"
 		texturefile = "gfx/interface/ideas/hunger.dds"
 	}
-	
+	spriteType = {
+		name = "GFX_idea_generic_improved_repair"
+		texturefile = "gfx/interface/ideas/generic_improved_repair.dds"
+	}
 	
 	
 	

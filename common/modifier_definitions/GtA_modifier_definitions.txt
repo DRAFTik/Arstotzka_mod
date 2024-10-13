@@ -72,6 +72,13 @@ num_generation_provision_weekly = {
 	category = country
 }
 
+provision_weekly_factor = {
+	color_type = good
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
 num_generation_provision_yearly = {
 	color_type = good
 	value_type = number

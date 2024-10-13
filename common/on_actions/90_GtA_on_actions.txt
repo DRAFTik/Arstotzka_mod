@@ -4,9 +4,9 @@ on_actions = {
 		effect = {
 			set_variable = { global.num_of_extra_tank_school_var = 5 }
 			every_possible_country = {
-				default_party_popularity_PP_gain = yes
-				calculate_electric_power_effect = yes
-				calculate_electric_power_LOG_effect = yes
+				default_party_popularity_PP_gain	= yes
+				calculate_electric_power_effect		= yes
+				calculate_electric_power_LOG_effect	= yes
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): infrastructure: [?infrastructure]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): arms_factory: [?arms_factory]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): industrial_complex: [?industrial_complex]"
@@ -37,9 +37,31 @@ on_actions = {
 	on_daily_SAI = {
 		effect = {
 			every_country = {
-				calculate_electric_power_effect = yes
-				calculate_provision_daily_effect = yes				# стата
-				calculate_steel_mill_effect = yes					# сталь
+				calculate_electric_power_effect		= yes
+				calculate_electric_power_dyn		= yes		# дебаф электричества
+				calculate_provision_daily_effect	= yes		# стата
+				calculate_steel_mill_effect			= yes		# сталь
+				
+### ОБЩЕМЕХАНЫ // generic_building_organization
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					set_temp_variable = { num_of_build_exp_temp = 0.5 }
+					add_to_temp_variable = { num_of_build_exp_temp = generic_building_organization_add_money }
+					multiply_temp_variable = { num_of_build_exp_temp = num_of_civilian_factories_available_for_projects }
+					clamp_temp_variable = { var = num_of_build_exp_temp min = 0.0 max = 100.0 }
+					set_variable = { ROOT.num_of_build_exp = num_of_build_exp_temp }
+#					every_military_industrial_organization = {	# mio:generic_building_organization
+					mio:generic_building_organization = {	# mio:generic_building_organization
+						limit = {
+							is_mio_available = yes
+#							has_mio_equipment_type = mio_cat_eq_build
+						}
+						add_mio_funds = ROOT.num_of_build_exp
+						set_variable = { num_of_build_exp = num_of_build_exp_temp }
+					}
+				}
 			}
 		}
 	}
@@ -48,10 +70,10 @@ on_actions = {
 		effect = {
 			add_to_variable = { global.total_iron_exported = resource_exported@iron }
 			every_country = {
-				calculate_electric_power_LOG_effect = yes
-				calculate_provision_weekly_effect = yes				# животнаводство
-				calculate_hunger_dyn_effect = yes					# голод
-				calculate_change_population_weekly_effect = yes		# изменение населения в регионах
+				calculate_electric_power_LOG_effect			= yes
+				calculate_provision_weekly_effect			= yes		# животнаводство
+				calculate_hunger_dyn_effect					= yes		# голод
+				calculate_change_population_weekly_effect	= yes		# изменение населения в регионах
 				add_to_temp_variable = { total_iron_exported_temp = resource_exported@iron }
 			}
 			add_to_variable = { global.total_iron_exported = total_iron_exported_temp }
@@ -71,11 +93,11 @@ on_actions = {
 					}
 				}
 				every_country = {
-					calculate_provision_yearly_effect = yes		# урожай культур
+					calculate_provision_yearly_effect	= yes		# урожай культур
 				}
 			}
 			every_country = {
-				calculate_provision_monthly_effect = yes		# порча еды
+				calculate_provision_monthly_effect		= yes		# порча еды
 			}
 		}
 	}

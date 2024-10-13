@@ -80,8 +80,12 @@
  
  
  
- ### LAWS ###
- 
+### IDEA CATEGORIES ###
+ laws: "Законы"
+ political_advisors: "Правительство"
+
+
+### LAWS ###
  volunteer_only_dyn: "£manpower_texticon  Военнообязанные добровольцы"
  volunteer_only_tt: "£manpower_texticon  Военнообязанные добровольцы: §Y[?THIS.volunteer_only_var|%]§!\n\n§HЧисленность предоставляемых §Gлюдских ресурсов§! будет зависеть от §Gпопулярности правящей партии§! и §Gподдержки войны§!.§!\n\n§gЧисленность добровольцев определяется по формуле:\n§HПопулярность правящей партии*Поддержка войны*4.5-1.5§!\n\nПопулярность правящей партии: [?THIS.party_popularity@ruling_party]\nПоддержка войны: [?THIS.has_war_support]§!"
  

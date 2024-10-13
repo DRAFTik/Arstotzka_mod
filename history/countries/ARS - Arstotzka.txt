@@ -55,3 +55,7 @@ set_popularities = {
 	paternal_autocrat		= 0
 	national_populist		= 0
 }
+
+give_market_access = OBR
+give_market_access = SKO
+give_market_access = REP

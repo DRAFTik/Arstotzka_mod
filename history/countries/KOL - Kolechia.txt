@@ -51,3 +51,8 @@ set_popularities = {
 	paternal_autocrat		= 52
 	national_populist		= 15
 }
+
+give_market_access = UNF
+give_market_access = IMP
+give_market_access = REP
+give_market_access = ANT

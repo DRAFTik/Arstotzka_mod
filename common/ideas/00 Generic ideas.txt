@@ -3,6 +3,111 @@
 ##############
 
 ideas = {
+
+	hidden_ideas = {
+	
+		homemade_weapons_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_country_flag = homemade_weapons_flag
+				has_tech = homemade_weapons
+			}
+			cancel = {
+				NOT = { has_country_flag = homemade_weapons_flag }
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+					reliability = -0.25
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+					reliability = -0.25
+				}
+			}
+		}
+
+		
+		generic_mio_trait_instructions_in_foreign_languages_free_trade_idea = {
+			name = generic_building_organization
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				cic_construction_boost = 0.05
+				cic_construction_boost_factor = 0.2
+			}
+			do_effect = {
+				has_idea = free_trade
+			}
+		}
+		generic_mio_trait_instructions_in_foreign_languages_export_focus_idea = {
+			name = generic_building_organization
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				cic_construction_boost_factor = 0.15
+			}
+			do_effect = {
+				has_idea = export_focus
+			}
+		}
+		generic_mio_trait_instructions_in_foreign_languages_limited_exports_idea = {
+			name = generic_building_organization
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				cic_construction_boost = 0.1
+				cic_construction_boost_factor = 0.05
+			}
+			do_effect = {
+				has_idea = limited_exports
+			}
+		}
+		generic_mio_trait_instructions_in_foreign_languages_closed_economy_idea = {
+			name = generic_building_organization
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				cic_construction_boost = 0.12
+			}
+			do_effect = {
+				has_idea = closed_economy
+			}
+		}
+	}
+}
+
+
+
+
+
+
+ideas = {
 	### DO NOT REMOVE - these empty entries are needed for amount_taken_ideas to work correctly
 	second_in_command = { }
 	political_advisor = { }
@@ -18,15 +123,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_industrial_company" }
 			picture = generic_industrial_concern_1
 			allowed = {
-				OR = {
-					uses_all_generic_companies = yes
-					original_tag = CUB
-					original_tag = NIR
-					original_tag = WIF
-				}
 			}
 			traits = {
-				industrial_manufacturer
+				industrial_concern
 			}
 			modifier = {
 				production_speed_arms_factory_factor = 0.05
@@ -36,191 +135,142 @@ ideas = {
 				industry = 0.1
 			}
 		}
-	}
-
-	### Materiel Manufacturers ###
-	materiel_manufacturer = {
-		designer = yes
-
-		generic_arms_company = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_arms_company" }
-			picture = generic_infantry_equipment_manufacturer_2
+		generic_electronics_concern = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_electronics_concern" }
+			picture = generic_electronics_concern_1
 			allowed = {
-				has_dlc_aat = no
-				OR = {
-					uses_all_generic_companies = yes
-					original_tag = ARM
-					original_tag = CUB
-					original_tag = NIR
-					original_tag = PRU
-					original_tag = PUE
-				}
 			}
 			traits = {
-				infantry_equipment_producer_offense_0
+				electronics_concern
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.05
 			}
 			research_bonus = {
-				infantry_weapons = 0.1
+				electronics = 0.1
 			}
 		}
-
-		generic_artillery_company = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_artillery_company" }
-			picture = generic_infantry_equipment_manufacturer_3
+		generic_radio_concern = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_radio_concern" }
+			picture = generic_radio_concern
 			allowed = {
-				has_dlc_aat = no
-				OR = {
-					uses_all_generic_companies = yes
-					original_tag = ALB
-					original_tag = ARM
-					original_tag = BAT
-					original_tag = COL
-					original_tag = CRO
-					original_tag = CUB
-					original_tag = HND
-					original_tag = MEX
-					original_tag = PRU
-					original_tag = WIF
-					original_tag = PUE
-				}
 			}
 			traits = {
-				artillery_producer_offense_0
+				radio_concern
+			}
+			modifier = {
+				land_reinforce_rate = 0.02
+				coordination_bonus = 0.04
 			}
 			research_bonus = {
-				artillery = 0.1
+				radar_tech = 0.1
 			}
 		}
-
-		generic_car_company = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_car_company" }
-			picture = generic_motorized_equipment_manufacturer_2
+		generic_energetic_concern = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_energetic_concern" }
+			picture = ETH_ethiopian_electric_power
 			allowed = {
-				has_dlc_aat = no
-				OR = {
-					uses_all_generic_companies = yes
-					original_tag = ANQ
-					original_tag = ARM
-					original_tag = BOL
-					original_tag = BUL
-					original_tag = CUB
-					original_tag = GAL
-					original_tag = HNN
-					original_tag = NIR
-					original_tag = PRU
-					original_tag = SOM
-					original_tag = SQI
-					original_tag = VEN
-					original_tag = WIF
-					original_tag = XSM
-					original_tag = PUE
-				}
 			}
 			traits = {
-				motorised_equipment_producer_offense_0
+				energetic_concern
+			}
+			modifier = {
+				production_speed_thermal_power_plant_factor = 0.05
+				production_speed_hydro_power_plant_factor = 0.05
 			}
 			research_bonus = {
-				motorized_equipment = 0.1
+				electronics = 0.05
 			}
 		}
-	}
-
-	### Heavy Equipment Manufacturer ###
-	tank_manufacturer = {
-		designer = yes
-
-		generic_tank_company = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_tank_company" }
-			picture = generic_tank_manufacturer_2
+		generic_nuclear_concern = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_nuclear_concern" }
+			picture = SOV_atomic_bomb_project
 			allowed = {
-				has_dlc_aat = no
-				OR = {
-					uses_all_generic_companies = yes
-					original_tag = ANQ
-					original_tag = ARM
-					original_tag = BOL
-					original_tag = COL
-					original_tag = CUB
-					original_tag = DEI
-					original_tag = EMI
-					original_tag = EST
-					original_tag = HNN
-					original_tag = PRF
-					original_tag = PRU
-					original_tag = SQI
-					original_tag = NIR
-					original_tag = VNC
-					original_tag = XSM
-					original_tag = YUN
-					original_tag = PUE
-				}
 			}
 			traits = {
-				small_tank_producer_offense_0
+				nuclear_concern
+			}
+			modifier = {
+				nuclear_production_factor = 0.05
+				production_speed_nuclear_reactor_factor = 0.05
+				production_speed_nuclear_power_plant_factor = 0.05
 			}
 			research_bonus = {
-				armor = 0.1
+				nuclear = 0.1
+			}
+			modifier = {
+				base = 0
+				factor = {
+					add = 5
+					date > 2000.1.1
+				}
 			}
 		}
-	}
-
-	### Naval Manufacturer ###
-	naval_manufacturer = {
-		designer = yes
-
-		generic_naval_company = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_naval_company" }
-			picture = generic_naval_manufacturer_3
+		generic_logistic_concern = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_logistic_concern" }
+			picture = generic_build_infrastructure
 			allowed = {
-				has_dlc_aat = no
-				OR = {
-					uses_all_generic_companies = yes
-					original_tag = ANQ
-					original_tag = COL
-					original_tag = HNN
-					original_tag = SQI
-					original_tag = XSM
-					original_tag = YUN
-					original_tag = PUE
-				}
 			}
 			traits = {
-				small_ship_producer_offense_0
+				railway_company
+			}
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+				production_speed_supply_node_factor = 0.15
 			}
 			research_bonus = {
-				naval_equipment = 0.1
+				train_tech = 0.1
 			}
 		}
-	}
-
-	### Aircraft Manufacturer ###
-	aircraft_manufacturer = {
-		designer = yes
-
-		generic_fighter_company = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_fighter_company" }
-			picture = generic_air_manufacturer_3
+		generic_construction_concern = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_construction_concern" }
+			picture = ARG_invest_in_roads
 			allowed = {
-				has_dlc_aat = no
-				OR = {
-					uses_all_generic_companies = yes
-					original_tag = ANQ
-					original_tag = ARM
-					original_tag = COL
-					original_tag = HNN
-					original_tag = SQI
-					original_tag = NIR
-					original_tag = VNC
-					original_tag = XSM
-					original_tag = YUN
-					original_tag = PUE
-				}
 			}
 			traits = {
-				fighter_producer_offense_0
+				construction_company
+			}
+			modifier = {
+				industry_repair_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.05
 			}
 			research_bonus = {
-				air_equipment = 0.1
+				excavation_tech = 0.05
+				construction_tech = 0.1
+			}
+		}
+		generic_refining_concern = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_refining_concern" }
+			picture = generic_refining_concern_1
+			allowed = {
+			}
+			traits = {
+				refining_concern
+			}
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.05
+				production_speed_fuel_silo_factor = 0.05
+			}
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.1
+			}
+		}
+		generic_mining_concern = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea generic_mining_concern" }
+			picture = generic_exploit_mines
+			allowed = {
+			}
+			traits = {
+				mining_company
+			}
+			modifier = {
+				production_speed_steel_mill_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+			research_bonus = {
+				excavation_tech = 0.1
 			}
 		}
 	}

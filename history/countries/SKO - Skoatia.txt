@@ -48,3 +48,12 @@ set_popularities = {
 	paternal_autocrat		= 10
 	national_populist		= 15
 }
+
+give_guarantee = SEM
+
+give_market_access = UNF
+give_market_access = IMP
+give_market_access = REP
+give_market_access = OBR
+give_market_access = SEM
+give_market_access = ARS

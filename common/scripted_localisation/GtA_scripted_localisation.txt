@@ -197,3 +197,16 @@ defined_text = {
 		localization_key = GET_HUNGER_TEXT
 	}
 }
+
+defined_text = {
+	name = GET_PLUS_MIO_FUNDS
+	text = {
+		trigger = {
+			NOT = { check_variable = { generic_building_organization_add_money = 0.0 } }
+		}
+		localization_key = GET_PLUS_MIO_FUNDS_TEXT
+	}
+	text = {
+		localization_key = empty_text
+	}
+}

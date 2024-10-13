@@ -2,7 +2,7 @@
 
     GtA_debug_decisions: "DEBUG"
     GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]\n\nprovision_total_var: [?ROOT.provision_total_var]\nprovision_delta_var:[?ROOT.provision_delta_var]\nprovision_percent_to_max_var: [?provision_percent_to_max_var]\n\nprovision_total_var: [?ROOT.provision_total_var|+1]\nprovision_equipment: [?ROOT.num_equipment@provision_equipment]\n\nhunger_dyn: [?hunger_dyn]\n\nГОЛОД\nnum_change_population_weekly: [?modifier@num_change_population_weekly]\nmax_manpower_k: [?max_manpower_k]\nnum_controlled_states: [?num_controlled_states]\npercent_change_population_weekly: [?percent_change_population_weekly]\n\n resource iron: [?resource@iron]\n resource_produced iron: [?resource_produced@iron]\n resource_exported iron: [?resource_exported@iron]\n\n steel_minus_var!!!: [?steel_minus_var]\n steel_return_electric_power_var: [?steel_return_electric_power_var]\n steel_minus_state_total_1: [?steel_minus_state_total_1]\n\n state_hunger_change_population_temp: [?32.state_hunger_change_population_temp]"
-
+    empty_text: ""
 
 ########################
 ### PARTY POPULARITY ###
@@ -60,13 +60,13 @@
     
     ### ПАНЕЛЬ УПРАВЛЕНИЯ ЭЛЕКТРИЧЕСТВОМ
     red_button_text: "СБРОС"
-    electric_power_text_1: "Военные сооружения"
+    electric_power_text_1: "Армия"
     electric_power_text_2: "Провизия"
     electric_power_text_3: "Исследования"
     electric_power_text_4: "Фабрики"
     electric_power_text_5: "Строительство"
     electric_power_text_6: "Переработка нефти"
-    electric_power_text_7: "Выплавка стали"
+    electric_power_text_7: "Добыча ресурсов"
     electric_power_tumbler_tt: "Нажмите §Hлевой кнопкой мыши§!, чтобы §Gувеличить§! значение приоритета на §H1§!.\n§HПравая кнопка мыши§! §Rуменьшает§! значение приоритета на §H1§!."
     red_button_tt: "Нажмите, чтобы §Rсбросить§! настройки приоритета."
 
@@ -85,6 +85,7 @@
     num_use_electric_power_4_tt: "£electric_power_pure_icon Потребление электроэнергии (МВт*ч): +4"
     max_provision: "£provisions_icon Максимум провизии (K)"
     num_generation_provision_weekly: "£provisions_icon Провиант еженедельно"
+    provision_weekly_factor: "$num_generation_provision_weekly$"
     num_generation_provision_yearly: "£provisions_icon Провиант ежегодно"
     monthly_save_provision_modifier: "£provisions_icon Сохранение провианта"
     consumption_of_provisions_modifier: "£provisions_icon Потребление провианта"

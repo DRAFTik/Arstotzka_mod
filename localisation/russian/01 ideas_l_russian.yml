@@ -1,0 +1,9 @@
+﻿l_russian:
+    generic_industrial_company: "Компания, промышленность"
+    generic_radio_concern: "Компания, радио"
+    generic_energetic_concern: "Компания, энергетика"
+    generic_nuclear_concern: "Компания, ядерные технологии"
+    generic_logistic_concern: "Компания, логистика"
+    generic_construction_concern: "Компания, строительство"
+    generic_refining_concern: "Компания, переработка"
+    generic_mining_concern: "Компания, добыча"

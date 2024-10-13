@@ -1,0 +1,43 @@
+equipments = {
+
+### ========== PROVISION ========== ###
+	
+	build_equipment = {
+		year = 1983
+		picture = archetype_infantry_equipment
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		active = no
+		can_be_produced = {
+			always = no
+		}
+		can_be_lend_leased = {
+			always = no
+		}
+		type = {
+			infantry
+		}
+		group_by = archetype
+
+		interface_category = interface_category_land
+
+		reliability		= 0.5	# inf 0.9	# moto 0.8
+
+		#Space taken in convoy
+		lend_lease_cost	= 1
+		build_cost_ic	= 1
+	}
+
+	build_equipment_1 = {
+		year = 1965
+
+		archetype = build_equipment
+		priority = 1
+		
+		is_buildable = no
+		active = no
+		is_convertable = no
+		can_license = no
+	}
+}
