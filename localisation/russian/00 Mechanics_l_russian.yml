@@ -59,7 +59,7 @@
     GET_STEEL_MILL_GREEN: "[?ROOT.steel_mill_ok|0+]"
     
     ### ПАНЕЛЬ УПРАВЛЕНИЯ ЭЛЕКТРИЧЕСТВОМ
-    red_button_text: "СБРОС"
+    red_button_text: "§RСБРОС§!"
     electric_power_text_1: "Армия"
     electric_power_text_2: "Провизия"
     electric_power_text_3: "Исследования"
@@ -69,6 +69,10 @@
     electric_power_text_7: "Добыча ресурсов"
     electric_power_tumbler_tt: "Нажмите §Hлевой кнопкой мыши§!, чтобы §Gувеличить§! значение приоритета на §H1§!.\n§HПравая кнопка мыши§! §Rуменьшает§! значение приоритета на §H1§!."
     red_button_tt: "Нажмите, чтобы §Rсбросить§! настройки приоритета."
+    electric_panel_title_text: "£electric_power_pure_icon §YПАНЕЛЬ РАСПРЕДЕЛЕНИЯ ЭЛЕКТРОЭНЕРГИИ§! £electric_power_pure_icon "
+    electric_power_title_good_text: "§GПРОБЛЕМЫ СО СНАБЖЕНИЕМ ЭЛЕКТРОЭНЕРГИЕЙ ОТСУТСТВУЮТ§!"
+    electric_power_title_bad_debuff_text: "§HТекущие эффекты от нехватки электроэнергии:§!"
+    electric_power_debuff_text: "\n$MODIFIER_ENCRYPTION_FACTOR$: [?electric_power_planning_cryption_factor_var|+=%2]\n$MODIFIER_DECRYPTION_FACTOR$: [?electric_power_planning_cryption_factor_var|+=%2]\n$MODIFIER_COORDINATION_BONUS$: [?electric_power_coordination_bonus_var|+=%1]\n$MODIFIER_PLANNING_SPEED$: [?electric_power_planning_cryption_factor_var|+=%1]\n$MODIFIER_MOBILIZATION_SPEED$: [?electric_power_mobilization_speed_var|+=%1]\n$provision_weekly_factor$: [?electric_power_provision_weekly_factor_var|+=%1]\n$MODIFIER_RESEARCH_SPEED_FACTOR$: [?electric_power_research_speed_factor_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?electric_power_industrial_capacity_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: [?electric_power_industrial_capacity_var|+=%2]\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: [?electric_power_production_speed_buildings_factor_var|+=%2]\n$MODIFIER_FUEL_GAIN_FACTOR$: [?electric_power_fuel_gain_factor_var|+=%2]\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?electric_power_local_resources_factor_var|+=%2]"
 
 ######################
 ### ELECTRIC POWER ###

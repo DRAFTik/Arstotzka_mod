@@ -114,7 +114,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "electric_panel_main_container"
 		position = { x = -1200 y = 108 }
-		size = { width = 1054 height = 800 }
+		size = { width = 1054 height = 850 }
 		margin = { top = 15 left = 15 bottom = 15 right = 15 }
 		Orientation = UPPER_LEFT
 		
@@ -129,16 +129,16 @@ guiTypes = {
 			spriteType = "GFX_tiled_bg"
 		}
 		
-		iconType = {
+		iconType = {						# везде ниже y+50
 			name ="electric_panel_bg"
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = 50 }
 			spriteType = "GFX_electric_panel_main_bg"
 			alwaystransparent = yes
 		}
 		
 		buttonType = {
 			name = "close_button"
-			position = { x = -30 y = -2 }
+			position = { x = -30 y = -2 }	# кроме тебя
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
@@ -147,18 +147,93 @@ guiTypes = {
 			pdx_tooltip = "CLOSE"
 		}
 		
+		instantTextBoxType = {
+			name ="electric_panel_title_text"
+			position = { x = 250 y = 12 }
+			font = "hoi_36header"
+			text = "electric_panel_title_text"
+			maxWidth = 500
+			maxHeight = 50
+			Orientation = "UPPER_LEFT"
+		}
+
+		containerWindowType = {
+			name = "electric_power_debuff_text_container"
+			position = { x = 10 y = 55 }
+			size = { width = 400 height = 265 }
+			
+			background = {
+				name = "Background"
+				spriteType = "GFX_tiled_bg"
+			}
+			
+			instantTextBoxType = {
+				name ="electric_power_title_good_text"
+				position = { x = -50 y = 90 }
+				font = "hoi_36header"
+				text = "electric_power_title_good_text"
+				format = center
+				maxWidth = 500
+				maxHeight = 240
+			}
+			
+			instantTextBoxType = {
+				name ="electric_power_title_bad_debuff_text"
+				position = { x = 20 y = 12 }
+				font = "hoi_24header"
+				text = "electric_power_title_bad_debuff_text"
+				maxWidth = 500
+				maxHeight = 24
+			}
+			instantTextBoxType = {
+				name ="electric_power_debuff_text"
+				position = { x = 20 y = 15 }
+				font = "hoi_18mbs"
+				text = "electric_power_debuff_text"
+				maxWidth = 330
+				maxHeight = 540
+			}
+		}
+		
+		
+		iconType = {
+			name ="electric_panel_main_volt_plus_strip"
+			position = { x = 470 y = 50 }
+			spriteType = "GFX_electric_panel_main_volt_plus_strip"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="electric_panel_main_volt_minus_strip"
+			position = { x = 470 y = 50 }
+			spriteType = "GFX_electric_panel_main_volt_minus_strip"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="electric_panel_main_ammeter_plus_strip"
+			position = { x = 730 y = 50 }
+			spriteType = "GFX_electric_panel_main_ammeter_plus_strip"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="electric_panel_main_ammeter_minus_strip"
+			position = { x = 730 y = 50 }
+			spriteType = "GFX_electric_panel_main_ammeter_minus_strip"
+			alwaystransparent = yes
+		}
+
+# СБРОС
 		containerWindowType = {
 			name = "red_button_container"
-			position = { x = 30 y = 60 }
+			position = { x = 30 y = 315 }
 
 			iconType = {
 				name ="electric_power_bg"
-				position = { x = -10 y = -40 }
+				position = { x = -17 y = 195 }
 				spriteType = "GFX_hotjoinrequest_bg"
 			}
 			instantTextBoxType = {
 				name ="electric_power_text"
-				position = { x = -10 y = -30 }		#y+10 от bg текста
+				position = { x = -17 y = 205 }		#y+10 от bg текста
 				font = "hoi_36header"
 				text = "red_button_text"
 				format = center
@@ -168,7 +243,7 @@ guiTypes = {
 			}
 			buttonType = {
 				name = "red_button"
-				position = { x = 55 y = 10 }
+				position = { x = 50 y = 50 }
 				quadTextureSprite ="GFX_red_button"
 				buttonFont = "Main_14_black"
 				shortcut = ""
@@ -177,23 +252,10 @@ guiTypes = {
 			}
 		}
 		
-		iconType = {
-			name ="electric_panel_volt"
-			position = { x = 470 y = 0 }
-			spriteType = "GFX_electric_panel_volt"
-			alwaystransparent = yes
-		}
-		iconType = {
-			name ="electric_panel_amper"
-			position = { x = 730 y = 0 }
-			spriteType = "GFX_electric_panel_amper"
-			alwaystransparent = yes
-		}
-		
-# ВОЕНКА		
+# ВОЕНКА
 		containerWindowType = {
 			name = "meter_1_container"
-			position = { x = 145 y = 265 }
+			position = { x = 280 y = 315 }
 
 			iconType = {
 				name ="meter_base"
@@ -226,7 +288,7 @@ guiTypes = {
 # ПРОВИЗИЯ
 		containerWindowType = {
 			name = "meter_2_container"
-			position = { x = 395 y = 265 }
+			position = { x = 530 y = 315 }
 
 			iconType = {
 				name ="meter_base"
@@ -259,7 +321,7 @@ guiTypes = {
 # ИССЛЕДОВАНИЯ
 		containerWindowType = {
 			name = "meter_3_container"
-			position = { x = 645 y = 265 }
+			position = { x = 780 y = 315 }
 
 			iconType = {
 				name ="meter_base"
@@ -293,11 +355,11 @@ guiTypes = {
 # ФАБРИКИ // ВТОРОЙ РЯД
 		containerWindowType = {
 			name = "meter_4_container"
-			position = { x = 30 y = 555 }
+			position = { x = 30 y = 605 }
 
 			iconType = {
 				name ="meter_base"
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 5 }
 				spriteType = "GFX_meter_base"
 			}
 			iconType = {
@@ -317,7 +379,7 @@ guiTypes = {
 			}
 			buttonType = {
 				name ="electric_power_tumbler_icon_4"
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 5 }
 				spriteType = "GFX_tumbler_strip"
 				pdx_tooltip = "electric_power_tumbler_tt"
 			}
@@ -326,11 +388,11 @@ guiTypes = {
 # СТРОИТЕЛЬСТВО // ВТОРОЙ РЯД
 		containerWindowType = {
 			name = "meter_5_container"
-			position = { x = 280 y = 555 }
+			position = { x = 280 y = 605 }
 
 			iconType = {
 				name ="meter_base"
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 5 }
 				spriteType = "GFX_meter_base"
 			}
 			iconType = {
@@ -350,7 +412,7 @@ guiTypes = {
 			}
 			buttonType = {
 				name ="electric_power_tumbler_icon_5"
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 5 }
 				spriteType = "GFX_tumbler_strip"
 				pdx_tooltip = "electric_power_tumbler_tt"
 			}
@@ -359,11 +421,11 @@ guiTypes = {
 # ПЕРЕРАБОТКА НЕФТИ // ВТОРОЙ РЯД
 		containerWindowType = {
 			name = "meter_6_container"
-			position = { x = 530 y = 555 }
+			position = { x = 530 y = 605 }
 
 			iconType = {
 				name ="meter_base"
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 5 }
 				spriteType = "GFX_meter_base"
 			}
 			iconType = {
@@ -383,7 +445,7 @@ guiTypes = {
 			}
 			buttonType = {
 				name ="electric_power_tumbler_icon_6"
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 5 }
 				spriteType = "GFX_tumbler_strip"
 				pdx_tooltip = "electric_power_tumbler_tt"
 			}
@@ -392,11 +454,11 @@ guiTypes = {
 # ВЫПЛАВКА СТАЛИ // ВТОРОЙ РЯД
 		containerWindowType = {
 			name = "meter_7_container"
-			position = { x = 780 y = 555 }
+			position = { x = 780 y = 605 }
 
 			iconType = {
 				name ="meter_base"
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 5 }
 				spriteType = "GFX_meter_base"
 			}
 			iconType = {
@@ -416,7 +478,7 @@ guiTypes = {
 			}
 			buttonType = {
 				name ="electric_power_tumbler_icon_7"
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 5 }
 				spriteType = "GFX_tumbler_strip"
 				pdx_tooltip = "electric_power_tumbler_tt"
 			}

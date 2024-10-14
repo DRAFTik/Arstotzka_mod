@@ -1,4 +1,14 @@
 spriteTypes = {
+	frameAnimatedSpriteType = {
+		name = "GFX_GtA_logo" 
+		texturefile = "gfx/interface/GtA_logo.dds"
+		noOfFrames = 29
+		animation_rate_fps = 16
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.5
+	}
+	
 	
 	spriteType = {
 		name = "GFX_provision_icon"
@@ -24,8 +34,44 @@ spriteTypes = {
 		texturefile = "gfx/interface/GUI/electric_panel/electric_panel_main_volt.dds"
 	}
 	spriteType = {
-		name = "GFX_electric_panel_amper"
-		texturefile = "gfx/interface/GUI/electric_panel/electric_panel_main_amper.dds"
+		name = "GFX_electric_panel_ammeter"
+		texturefile = "gfx/interface/GUI/electric_panel/electric_panel_main_ammeter.dds"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_electric_panel_main_ammeter_plus_strip" 
+		texturefile = "gfx/interface/GUI/electric_panel/electric_panel_main_ammeter_plus_strip.dds"
+		noOfFrames = 23
+		animation_rate_fps = 23
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_electric_panel_main_ammeter_minus_strip" 
+		texturefile = "gfx/interface/GUI/electric_panel/electric_panel_main_ammeter_minus_strip.dds"
+		noOfFrames = 20
+		animation_rate_fps = 20
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_electric_panel_main_volt_plus_strip" 
+		texturefile = "gfx/interface/GUI/electric_panel/electric_panel_main_volt_plus_strip.dds"
+		noOfFrames = 23
+		animation_rate_fps = 23
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_electric_panel_main_volt_minus_strip" 
+		texturefile = "gfx/interface/GUI/electric_panel/electric_panel_main_volt_minus_strip.dds"
+		noOfFrames = 25
+		animation_rate_fps = 25
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
 	}
 	spriteType = {
 		name = "GFX_meter_base"

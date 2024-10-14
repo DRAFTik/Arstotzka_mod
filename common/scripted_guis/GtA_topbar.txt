@@ -100,6 +100,7 @@ scripted_gui = {
 				set_variable = { electric_power_tumbler_icon_5_frame = 1 }
 				set_variable = { electric_power_tumbler_icon_6_frame = 1 }
 				set_variable = { electric_power_tumbler_icon_7_frame = 1 }
+				calculate_electric_power_dyn = yes
 			}
 			electric_power_tumbler_icon_1_click = {
 				if = {
@@ -107,6 +108,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_1_frame = 1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_1_frame = 1 } }
+				calculate_electric_power_dyn = yes
 			}
 			electric_power_tumbler_icon_1_right_click = {
 				if = {
@@ -114,6 +116,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_1_frame = -1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_1_frame = 7 } }
+				calculate_electric_power_dyn = yes
 			}
 			
 			electric_power_tumbler_icon_2_click = {
@@ -122,6 +125,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_2_frame = 1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_2_frame = 1 } }
+				calculate_electric_power_dyn = yes
 			}
 			electric_power_tumbler_icon_2_right_click = {
 				if = {
@@ -129,6 +133,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_2_frame = -1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_2_frame = 7 } }
+				calculate_electric_power_dyn = yes
 			}
 			
 			electric_power_tumbler_icon_3_click = {
@@ -137,6 +142,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_3_frame = 1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_3_frame = 1 } }
+				calculate_electric_power_dyn = yes
 			}
 			electric_power_tumbler_icon_3_right_click = {
 				if = {
@@ -144,6 +150,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_3_frame = -1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_3_frame = 7 } }
+				calculate_electric_power_dyn = yes
 			}
 			
 			electric_power_tumbler_icon_4_click = {
@@ -152,6 +159,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_4_frame = 1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_4_frame = 1 } }
+				calculate_electric_power_dyn = yes
 			}
 			electric_power_tumbler_icon_4_right_click = {
 				if = {
@@ -159,6 +167,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_4_frame = -1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_4_frame = 7 } }
+				calculate_electric_power_dyn = yes
 			}
 			
 			electric_power_tumbler_icon_5_click = {
@@ -167,6 +176,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_5_frame = 1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_5_frame = 1 } }
+				calculate_electric_power_dyn = yes
 			}
 			electric_power_tumbler_icon_5_right_click = {
 				if = {
@@ -174,6 +184,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_5_frame = -1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_5_frame = 7 } }
+				calculate_electric_power_dyn = yes
 			}
 			
 			electric_power_tumbler_icon_6_click = {
@@ -182,6 +193,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_6_frame = 1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_6_frame = 1 } }
+				calculate_electric_power_dyn = yes
 			}
 			electric_power_tumbler_icon_6_right_click = {
 				if = {
@@ -189,6 +201,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_6_frame = -1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_6_frame = 7 } }
+				calculate_electric_power_dyn = yes
 			}
 			
 			electric_power_tumbler_icon_7_click = {
@@ -197,6 +210,7 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_7_frame = 1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_7_frame = 1 } }
+				calculate_electric_power_dyn = yes
 			}
 			electric_power_tumbler_icon_7_right_click = {
 				if = {
@@ -204,6 +218,30 @@ scripted_gui = {
 					add_to_variable = { electric_power_tumbler_icon_7_frame = -1 }
 				}
 				else = { set_variable = { electric_power_tumbler_icon_7_frame = 7 } }
+				calculate_electric_power_dyn = yes
+			}
+		}
+		triggers = {
+			electric_power_title_good_text_visible = {
+				check_variable = { var = electric_power_percent_var	value = 1	compare = greater_than_or_equals }
+			}
+			electric_panel_main_volt_plus_strip_visible = {
+				check_variable = { var = electric_power_percent_var	value = 1	compare = greater_than_or_equals }
+			}
+			electric_panel_main_ammeter_plus_strip_visible = {
+				check_variable = { var = electric_power_percent_var	value = 1	compare = greater_than_or_equals }
+			}
+			electric_power_title_bad_debuff_text_visible = {
+				check_variable = { electric_power_percent_var < 1 }
+			}
+			electric_power_debuff_text_visible = {
+				check_variable = { electric_power_percent_var < 1 }
+			}
+			electric_panel_main_volt_minus_strip_visible = {
+				check_variable = { electric_power_percent_var < 1 }
+			}
+			electric_panel_main_ammeter_minus_strip_visible = {
+				check_variable = { electric_power_percent_var < 1 }
 			}
 		}
 		properties = {

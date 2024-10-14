@@ -127,7 +127,12 @@ guiTypes = {
 			spriteType = "GFX_frontend_game_logo"
 			position = { x= 20 y = 20 }
 		}
-		
+		iconType = {
+			name ="frontend_game_GtA_logo"
+			spriteType = "GFX_GtA_logo"
+			position = { x = 100 y = 200 }
+			scale = 0.75
+		}
 	}
 
 	#containerWindowType = {
@@ -175,8 +180,7 @@ guiTypes = {
 			name ="pdx_int_logo"
 			spriteType = "GFX_pdx_int_logo"
 			position = { x= 135 y = 15 }
-		}		
-		
+		}
 	}
 
 	### SINGLE PLAYER MENU

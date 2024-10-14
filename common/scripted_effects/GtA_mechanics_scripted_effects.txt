@@ -280,6 +280,113 @@ calculate_electric_power_LOG_effect = {
 }
 
 
+calculate_electric_power_dyn = {
+	if = {
+		limit = { check_variable = { electric_power_percent_var < 1 } }
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = electric_power_dyn } } }
+			add_dynamic_modifier = { modifier = electric_power_dyn }
+		}
+	
+		set_temp_variable			= { electric_power_debuff = -1 }
+		add_to_temp_variable		= { electric_power_debuff = electric_power_percent_var }
+
+		set_temp_variable			= { summ_tumbler_temp = electric_power_tumbler_icon_1_frame }	# АРМИЯ
+		add_to_temp_variable		= { summ_tumbler_temp = electric_power_tumbler_icon_2_frame }	# ПРОВИЗИЯ
+		add_to_temp_variable		= { summ_tumbler_temp = electric_power_tumbler_icon_3_frame }	# ИССЛЕДОВАНИЯ
+		add_to_temp_variable		= { summ_tumbler_temp = electric_power_tumbler_icon_4_frame }	# ФАБРИКИ
+		add_to_temp_variable		= { summ_tumbler_temp = electric_power_tumbler_icon_5_frame }	# СТРОИТЕЛЬСТВО
+		add_to_temp_variable		= { summ_tumbler_temp = electric_power_tumbler_icon_6_frame }	# ПЕРЕРАБОТКА НЕФТИ
+		add_to_temp_variable		= { summ_tumbler_temp = electric_power_tumbler_icon_7_frame }	# ДОБЫЧА РЕСУРСОВ
+# 1 АРМИЯ // ARMY
+		set_temp_variable			= { ARMY_tumbler_1_debuff_temp	= 1 }
+		set_temp_variable			= { ARMY_tumbler_1_debuff_temp2	= electric_power_tumbler_icon_1_frame }
+		divide_temp_variable		= { ARMY_tumbler_1_debuff_temp2	= summ_tumbler_temp }
+		subtract_from_temp_variable	= { ARMY_tumbler_1_debuff_temp	= ARMY_tumbler_1_debuff_temp2 }
+		multiply_temp_variable		= { ARMY_tumbler_1_debuff_temp	= electric_power_debuff }							# ИТОГОВЫЙ ДЕБАФ (-число)
+		
+		set_variable				= { electric_power_planning_cryption_factor_var	= ARMY_tumbler_1_debuff_temp }
+		set_variable				= { electric_power_coordination_bonus_var		= 0.175 }							# БАЗА КООРДИНАЦИИ = 35%*0,5
+		multiply_variable			= { electric_power_coordination_bonus_var		= ARMY_tumbler_1_debuff_temp }
+		set_variable				= { electric_power_mobilization_speed_var		= ARMY_tumbler_1_debuff_temp }
+		multiply_variable			= { electric_power_mobilization_speed_var		= 0.25 }
+# 2 ПРОВИЗИЯ // PROVISION
+		set_temp_variable			= { PROVISION_tumbler_2_debuff_temp		= 1 }
+		set_temp_variable			= { PROVISION_tumbler_2_debuff_temp2	= electric_power_tumbler_icon_2_frame }
+		divide_temp_variable		= { PROVISION_tumbler_2_debuff_temp2	= summ_tumbler_temp }
+		subtract_from_temp_variable	= { PROVISION_tumbler_2_debuff_temp		= PROVISION_tumbler_2_debuff_temp2 }
+		multiply_temp_variable		= { PROVISION_tumbler_2_debuff_temp		= electric_power_debuff }					# ИТОГОВЫЙ ДЕБАФ (-число)
+		
+		set_variable				= { electric_power_provision_weekly_factor_var	= PROVISION_tumbler_2_debuff_temp }
+		multiply_variable			= { electric_power_provision_weekly_factor_var	= 0.5 }
+# 3 ИССЛЕДОВАНИЯ // RESEARCH
+		set_temp_variable			= { RESEARCH_tumbler_3_debuff_temp		= 1 }
+		set_temp_variable			= { RESEARCH_tumbler_3_debuff_temp2		= electric_power_tumbler_icon_3_frame }
+		divide_temp_variable		= { RESEARCH_tumbler_3_debuff_temp2		= summ_tumbler_temp }
+		subtract_from_temp_variable	= { RESEARCH_tumbler_3_debuff_temp		= RESEARCH_tumbler_3_debuff_temp2 }
+		multiply_temp_variable		= { RESEARCH_tumbler_3_debuff_temp		= electric_power_debuff }					# ИТОГОВЫЙ ДЕБАФ (-число)
+		
+		set_variable				= { electric_power_research_speed_factor_var	= RESEARCH_tumbler_3_debuff_temp }
+# 4 ФАБРИКИ // INDUSTRIAL
+		set_temp_variable			= { INDUSTRIAL_tumbler_4_debuff_temp	= 1 }
+		set_temp_variable			= { INDUSTRIAL_tumbler_4_debuff_temp2	= electric_power_tumbler_icon_4_frame }
+		divide_temp_variable		= { INDUSTRIAL_tumbler_4_debuff_temp2	= summ_tumbler_temp }
+		subtract_from_temp_variable	= { INDUSTRIAL_tumbler_4_debuff_temp	= INDUSTRIAL_tumbler_4_debuff_temp2 }
+		multiply_temp_variable		= { INDUSTRIAL_tumbler_4_debuff_temp	= electric_power_debuff }					# ИТОГОВЫЙ ДЕБАФ (-число)
+		
+		set_variable				= { electric_power_industrial_capacity_var	= INDUSTRIAL_tumbler_4_debuff_temp }
+# 5 СТРОИТЕЛЬСТВО // BUILDING
+		set_temp_variable			= { BUILDING_tumbler_5_debuff_temp	= 1 }
+		set_temp_variable			= { BUILDING_tumbler_5_debuff_temp2	= electric_power_tumbler_icon_5_frame }
+		divide_temp_variable		= { BUILDING_tumbler_5_debuff_temp2	= summ_tumbler_temp }
+		subtract_from_temp_variable	= { BUILDING_tumbler_5_debuff_temp	= BUILDING_tumbler_5_debuff_temp2 }
+		multiply_temp_variable		= { BUILDING_tumbler_5_debuff_temp	= electric_power_debuff }						# ИТОГОВЫЙ ДЕБАФ (-число)
+		
+		set_variable				= { electric_power_production_speed_buildings_factor_var	= BUILDING_tumbler_5_debuff_temp }
+# 6 ПЕРЕРАБОТКА НЕФТИ // FUEL
+		set_temp_variable			= { FUEL_tumbler_6_debuff_temp	= 1 }
+		set_temp_variable			= { FUEL_tumbler_6_debuff_temp2	= electric_power_tumbler_icon_6_frame }
+		divide_temp_variable		= { FUEL_tumbler_6_debuff_temp2	= summ_tumbler_temp }
+		subtract_from_temp_variable	= { FUEL_tumbler_6_debuff_temp	= FUEL_tumbler_6_debuff_temp2 }
+		multiply_temp_variable		= { FUEL_tumbler_6_debuff_temp	= electric_power_debuff }							# ИТОГОВЫЙ ДЕБАФ (-число)
+		
+		set_variable				= { electric_power_fuel_gain_factor_var	= FUEL_tumbler_6_debuff_temp }
+# 7 ДОБЫЧА РЕСУРСОВ // RESOURCE
+		set_temp_variable			= { RESOURCE_tumbler_7_debuff_temp	= 1 }
+		set_temp_variable			= { RESOURCE_tumbler_7_debuff_temp2	= electric_power_tumbler_icon_7_frame }
+		divide_temp_variable		= { RESOURCE_tumbler_7_debuff_temp2	= summ_tumbler_temp }
+		subtract_from_temp_variable	= { RESOURCE_tumbler_7_debuff_temp	= RESOURCE_tumbler_7_debuff_temp2 }
+		multiply_temp_variable		= { RESOURCE_tumbler_7_debuff_temp	= electric_power_debuff }							# ИТОГОВЫЙ ДЕБАФ (-число)
+		
+		set_variable				= { electric_power_local_resources_factor_var	= RESOURCE_tumbler_7_debuff_temp }
+		multiply_variable			= { electric_power_local_resources_factor_var	= 0.5 }
+	}
+	else = {
+		clear_variable = electric_power_planning_cryption_factor_var
+		clear_variable = electric_power_coordination_bonus_var
+		clear_variable = electric_power_mobilization_speed_var
+		clear_variable = electric_power_provision_weekly_factor_var
+		clear_variable = electric_power_research_speed_factor_var
+		clear_variable = electric_power_industrial_capacity_var
+		clear_variable = electric_power_production_speed_buildings_factor_var
+		clear_variable = electric_power_fuel_gain_factor_var
+		clear_variable = electric_power_local_resources_factor_var
+	}
+	force_update_dynamic_modifier = yes
+}
+
+AI_set_electric_panel_effect = {
+	if = {
+		limit = { is_ai = yes }
+		set_variable = { electric_power_tumbler_icon_1_frame = 1 }
+		set_variable = { electric_power_tumbler_icon_2_frame = 1 }
+		set_variable = { electric_power_tumbler_icon_3_frame = 1 }
+		set_variable = { electric_power_tumbler_icon_4_frame = 1 }
+		set_variable = { electric_power_tumbler_icon_5_frame = 1 }
+		set_variable = { electric_power_tumbler_icon_6_frame = 1 }
+		set_variable = { electric_power_tumbler_icon_7_frame = 1 }
+	}
+}
 
 
 

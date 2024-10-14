@@ -56,6 +56,9 @@ set_popularities = {
 	national_populist		= 0
 }
 
+152 = { set_demilitarized_zone = yes }
+153 = { set_demilitarized_zone = yes }
+
 give_market_access = OBR
 give_market_access = SKO
 give_market_access = REP
