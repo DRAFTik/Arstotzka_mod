@@ -100,7 +100,7 @@
 	}
 	
 	electric_power_dyn = {
-		icon = GFX_hunger
+#		icon = GFX_hunger
 		enable = {
 		}
 		

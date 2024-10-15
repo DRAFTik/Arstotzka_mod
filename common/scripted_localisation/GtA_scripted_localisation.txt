@@ -199,6 +199,16 @@ defined_text = {
 }
 
 defined_text = {
+	name = GET_ELECTRIC_POWER_CRISIS_LOC
+	text = {
+		trigger = {
+			check_variable = { electric_power_percent_var < 1 }
+		}
+		localization_key = GET_ELECTRIC_POWER_CRISIS_TEXT
+	}
+}
+
+defined_text = {
 	name = GET_PLUS_MIO_FUNDS
 	text = {
 		trigger = {

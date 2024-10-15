@@ -8,6 +8,19 @@ spriteTypes = {
 		play_on_show = yes
 		pause_on_loop = 0.5
 	}
+	spriteType = {
+		name = "GFX_tv_icon"
+		texturefile = "gfx/interface/tv_icon.dds"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_vhs_gluch" 
+		texturefile = "gfx/interface/vhs_gluch.dds"
+		noOfFrames = 7
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
 	
 	
 	spriteType = {

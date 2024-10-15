@@ -49,3 +49,69 @@ REP_help_ARS_win_war = {
 	ai_strategy = { type = send_volunteers_desire	id = "REP"	value = 75	}
 	ai_strategy = { type = diplo_action_desire		id = "REP"	target = send_attache	value = 40000 }
 }
+
+ARS_KOL_war_preparation = {
+	allowed = { tag = ARS }
+	enable = {
+		focus_progress = { focus = ARS_preparations_for_revenge progress > 0.01 }
+		NOT = { owns_state = 90 }
+		country_exists = KOL
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = KOL }
+			has_war_with = KOL
+			owns_state = 90 
+		}
+	}
+	ai_strategy = {
+		type = conquer
+		id = "KOL"
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war 
+		id = "KOL"
+		value = 200
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "KOL"
+		value = 100
+	}
+}
+
+ARS_SKO_war_preparation = {
+	allowed = { tag = ARS }
+	enable = {
+		date > 1987.1.1
+		NOT = { has_war_with = KOL }
+		OR = {
+			has_completed_focus = ARS_national_socialism
+			has_completed_focus = ARS_secure_the_motherland
+			has_completed_focus = ARS_the_king_is_with_us
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = KOL
+			NOT = { country_exists = SKO }
+			has_war_with = SKO
+		}
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SKO"
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war 
+		id = "SKO"
+		value = 200
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "SKO"
+		value = 100
+	}
+}

@@ -49,7 +49,8 @@
 ######################
 
     gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\n\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.modifier@num_generation_electric_power|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-]"
-    gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!."
+    gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!.[GET_ELECTRIC_POWER_CRISIS_LOC]"
+    GET_ELECTRIC_POWER_CRISIS_TEXT: "\n$SEPARATION_LINE$$electric_power_title_bad_debuff_text$$electric_power_debuff_text$"
     
     GET_THERMAL_POWER_PLANT_RED: "[?ROOT.thermal_power_plant_ok|0-]"
     GET_THERMAL_POWER_PLANT_GREEN: "[?ROOT.thermal_power_plant_ok|0+]"
@@ -73,10 +74,11 @@
     electric_power_title_good_text: "§GПРОБЛЕМЫ СО СНАБЖЕНИЕМ ЭЛЕКТРОЭНЕРГИЕЙ ОТСУТСТВУЮТ§!"
     electric_power_title_bad_debuff_text: "§HТекущие эффекты от нехватки электроэнергии:§!"
     electric_power_debuff_text: "\n$MODIFIER_ENCRYPTION_FACTOR$: [?electric_power_planning_cryption_factor_var|+=%2]\n$MODIFIER_DECRYPTION_FACTOR$: [?electric_power_planning_cryption_factor_var|+=%2]\n$MODIFIER_COORDINATION_BONUS$: [?electric_power_coordination_bonus_var|+=%1]\n$MODIFIER_PLANNING_SPEED$: [?electric_power_planning_cryption_factor_var|+=%1]\n$MODIFIER_MOBILIZATION_SPEED$: [?electric_power_mobilization_speed_var|+=%1]\n$provision_weekly_factor$: [?electric_power_provision_weekly_factor_var|+=%1]\n$MODIFIER_RESEARCH_SPEED_FACTOR$: [?electric_power_research_speed_factor_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?electric_power_industrial_capacity_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: [?electric_power_industrial_capacity_var|+=%2]\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: [?electric_power_production_speed_buildings_factor_var|+=%2]\n$MODIFIER_FUEL_GAIN_FACTOR$: [?electric_power_fuel_gain_factor_var|+=%2]\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?electric_power_local_resources_factor_var|+=%2]"
-
-######################
-### ELECTRIC POWER ###
-######################
+    electric_power_dyn: "§RНехватка электроэнергии§!"
+    
+##################
+### STEEL MILL ###
+##################
 
     steel_mill_minus_dyn: "Отключенные сталеплавильни"
     steel_mill_minus_state_dyn: "Отключенные сталеплавильни"

@@ -127,12 +127,6 @@ guiTypes = {
 			spriteType = "GFX_frontend_game_logo"
 			position = { x= 20 y = 20 }
 		}
-		iconType = {
-			name ="frontend_game_GtA_logo"
-			spriteType = "GFX_GtA_logo"
-			position = { x = 100 y = 200 }
-			scale = 0.75
-		}
 	}
 
 	#containerWindowType = {
@@ -180,6 +174,25 @@ guiTypes = {
 			name ="pdx_int_logo"
 			spriteType = "GFX_pdx_int_logo"
 			position = { x= 135 y = 15 }
+		}
+		
+		iconType = {
+			name ="frontend_game_GtA_logo"
+			spriteType = "GFX_GtA_logo"
+			position = { x = -220 y = 220 }
+			scale = 0.75
+		}
+		iconType = {
+			name ="frontend_game_vhs_gluch"
+			spriteType = "GFX_vhs_gluch"
+			position = { x = -220 y = 200 }
+			scale = 0.65
+			
+		}
+		iconType = {
+			name ="frontend_game_tv_icon"
+			spriteType = "GFX_tv_icon"
+			position = { x = -250 y = 200 }
 		}
 	}
 
