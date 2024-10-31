@@ -3,7 +3,8 @@ ideas = {
 	provision_laws = {
 		law = yes
 		use_list_view = yes
-	
+
+
 		introduction_of_card_system = {
 			picture = hunger
 			on_add = {

@@ -176,23 +176,29 @@ guiTypes = {
 			position = { x= 135 y = 15 }
 		}
 		
-		iconType = {
-			name ="frontend_game_GtA_logo"
-			spriteType = "GFX_GtA_logo"
-			position = { x = -220 y = 220 }
-			scale = 0.75
-		}
-		iconType = {
-			name ="frontend_game_vhs_gluch"
-			spriteType = "GFX_vhs_gluch"
-			position = { x = -220 y = 200 }
-			scale = 0.65
+		## TV
+		containerWindowType = {
+			name = "mainmenu_gta_tv_container"
+			position = { x=-210 y =140}
 			
-		}
-		iconType = {
-			name ="frontend_game_tv_icon"
-			spriteType = "GFX_tv_icon"
-			position = { x = -250 y = 200 }
+			iconType = {
+				name ="frontend_game_GtA_logo"
+				spriteType = "GFX_GtA_logo"
+				position = { x = 0 y = 20 }
+				scale = 0.75
+			}
+			iconType = {
+				name ="frontend_game_vhs_gluch"
+				spriteType = "GFX_vhs_gluch"
+				position = { x = 0 y = 0 }
+				scale = 0.65
+				
+			}
+			iconType = {
+				name ="frontend_game_tv_icon"
+				spriteType = "GFX_tv_icon"
+				position = { x = -30 y = 0 }
+			}
 		}
 	}
 

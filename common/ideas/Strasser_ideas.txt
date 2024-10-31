@@ -74,7 +74,6 @@ ideas = {
 			modifier = {
 				totalist_drift = -0.20
 				syndicalist_drift = -0.20
-				radical_socialist_drift = -0.20
 				master_ideology_drift = 0.05
 			}
 		}

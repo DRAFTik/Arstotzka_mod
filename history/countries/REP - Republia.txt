@@ -38,15 +38,11 @@ set_politics = {
 }
 set_popularities = {
 	totalist				= 0
-	syndicalist				= 0
-	radical_socialist		= 0
-	social_democrat			= 8
-	social_liberal			= 13
-	market_liberal			= 5
-	social_conservative		= 22
-	authoritarian_democrat	= 42
-	paternal_autocrat		= 10
-	national_populist		= 0
+	syndicalist				= 3
+	market_liberal			= 20
+	mysticist				= 0
+	authoritarian_democrat	= 61
+	national_populist		= 16
 }
 
 

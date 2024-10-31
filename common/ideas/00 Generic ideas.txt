@@ -341,18 +341,6 @@ ideas = {
 		}
 
 		### Drift ideas ###
-		radical_socialist_influence = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea radical_socialist_influence" }
-			picture = generic_syndicalism_drift_bonus
-			allowed_civil_war = {
-				has_government = radical_socialist
-			}
-			modifier = {
-				radical_socialist_drift = 0.1
-				radical_socialist_acceptance = 85
-			}
-		}
-
 		syndicalist_influence = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea syndicalist_influence" }
 			picture = generic_syndicalism_drift_bonus

@@ -26,6 +26,7 @@ idea_categories = {
 	laws = {
 		slot = mobilization_laws
 		slot = trade_laws
+		slot = proletariat_laws
 		slot = economy
 		slot = provision_laws
 		

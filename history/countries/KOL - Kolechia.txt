@@ -37,19 +37,15 @@ recruit_character = KOL_kordon_kallo
 
 
 set_politics = {
-	ruling_party = paternal_autocrat
+	ruling_party = authoritarian_democrat
 }
 set_popularities = {
-	totalist				= 0
-	syndicalist				= 0
-	radical_socialist		= 13
-	social_democrat			= 0
-	social_liberal			= 0
-	market_liberal			= 0
-	social_conservative		= 0
-	authoritarian_democrat	= 20
-	paternal_autocrat		= 52
-	national_populist		= 15
+	totalist				= 5
+	syndicalist				= 24
+	market_liberal			= 11
+	mysticist				= 0
+	authoritarian_democrat	= 39
+	national_populist		= 21
 }
 
 86 = { set_demilitarized_zone = yes }

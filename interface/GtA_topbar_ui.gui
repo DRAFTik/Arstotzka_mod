@@ -27,7 +27,7 @@ guiTypes = {
 		
 		iconType = {
 			name = "popularity_ideology_icon"
-
+			position = { x = 2 y = 0 }
 			pdx_tooltip = "gta_popularity_ideology_tooltip"
 			pdx_tooltip_delayed = "gta_popularity_ideology_desc"
 		}
@@ -109,7 +109,41 @@ guiTypes = {
 		}
 	}
 	
-# РАСКРЫВАЕМОЕ ОКНО КНОПКИ
+	containerWindowType = {
+		name = "proletariat_container"
+		position = { x = 319 y = 37 }		# шаг х+73, первый = 100; шаг у+32, первый = 5
+		
+		iconType = {
+			name ="proletariat_bg"
+			spriteType = "GFX_generic_box_96"
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			
+			pdx_tooltip = "gta_proletariat_tooltip"
+			pdx_tooltip_delayed = "gta_proletariat_delayed_tooltip"
+		}
+		
+		instantTextBoxType = {
+			name ="proletariat_text"
+			position = { x = 21 y = 4 }	#3*4
+			font = "hoi_18mbs"
+			text = "[GET_PROLETARIAT_FORMAT_TEXT]"
+			format = right
+			maxWidth = 60
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="proletariat_icon"
+			position = { x = 0 y = -2 }
+			spriteType = "GFX_proletariat_icon"
+			alwaystransparent = yes
+		}
+	}
+	
+# РАСКРЫВАЕМОЕ ОКНО КНОПКИ ЭЛЕКТРИЧЕСТВА
 
 	containerWindowType = {
 		name = "electric_panel_main_container"

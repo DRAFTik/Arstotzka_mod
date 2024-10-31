@@ -113,3 +113,31 @@ num_change_population_weekly = {
 	precision = 2
 	category = country
 }
+
+num_change_population_weekly = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+num_proletariat_k = {
+	color_type = good
+	value_type = number
+	precision = 1
+	category = country
+}
+
+proletariat_factor = {
+	color_type = neutral
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+mobilization_speed_proletariat = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}

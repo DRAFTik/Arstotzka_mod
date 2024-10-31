@@ -1,7 +1,7 @@
 ﻿l_russian:
 
     GtA_debug_decisions: "DEBUG"
-    GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]\n\nprovision_total_var: [?ROOT.provision_total_var]\nprovision_delta_var:[?ROOT.provision_delta_var]\nprovision_percent_to_max_var: [?provision_percent_to_max_var]\n\nprovision_total_var: [?ROOT.provision_total_var|+1]\nprovision_equipment: [?ROOT.num_equipment@provision_equipment]\n\nhunger_dyn: [?hunger_dyn]\n\nГОЛОД\nnum_change_population_weekly: [?modifier@num_change_population_weekly]\nmax_manpower_k: [?max_manpower_k]\nnum_controlled_states: [?num_controlled_states]\npercent_change_population_weekly: [?percent_change_population_weekly]\n\n resource iron: [?resource@iron]\n resource_produced iron: [?resource_produced@iron]\n resource_exported iron: [?resource_exported@iron]\n\n steel_minus_var!!!: [?steel_minus_var]\n steel_return_electric_power_var: [?steel_return_electric_power_var]\n steel_minus_state_total_1: [?steel_minus_state_total_1]\n\n state_hunger_change_population_temp: [?32.state_hunger_change_population_temp]"
+    GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]\n\nprovision_total_var: [?ROOT.provision_total_var]\nprovision_delta_var:[?ROOT.provision_delta_var]\nprovision_percent_to_max_var: [?provision_percent_to_max_var]\n\nprovision_total_var: [?ROOT.provision_total_var|+1]\nprovision_equipment: [?ROOT.num_equipment@provision_equipment]\n\nhunger_dyn: [?hunger_dyn]\n\nГОЛОД\nnum_change_population_weekly: [?modifier@num_change_population_weekly]\nmax_manpower_k: [?max_manpower_k]\nnum_controlled_states: [?num_controlled_states]\npercent_change_population_weekly: [?percent_change_population_weekly]\n\n resource iron: [?resource@iron]\n resource_produced iron: [?resource_produced@iron]\n resource_exported iron: [?resource_exported@iron]\n\n steel_minus_var!!!: [?steel_minus_var]\n steel_return_electric_power_var: [?steel_return_electric_power_var]\n steel_minus_state_total_1: [?steel_minus_state_total_1]\n\n mobilization_speed_proletariat_var: [?mobilization_speed_proletariat_var|4]\n modifier_mobilization_speed_proletariat: [?modifier@mobilization_speed_proletariat]\n\n target_proletariat: [?target_proletariat]\n target_proletariat_percent_var: [?target_proletariat_percent_var|4]\n num_of_days_mobilization_proletariat: [?num_of_days_mobilization_proletariat|5]\n TOTAL_num_proletariat_add_k: [?TOTAL_num_proletariat_add_k]\n SUM_check_min_pulse_proletariat: [?SUM_check_min_pulse_proletariat]\n target_min_pulse_proletariat: [?target_min_pulse_proletariat]\n\n max_manpower_k: [?max_manpower_k]"
     empty_text: ""
 
 ########################
@@ -83,6 +83,34 @@
     steel_mill_minus_dyn: "Отключенные сталеплавильни"
     steel_mill_minus_state_dyn: "Отключенные сталеплавильни"
 
+###################
+### PROLETARIAT ###
+###################
+
+    gta_proletariat_tooltip: "§HТрудовые ресурсы§!\nТекущие трудовые ресурсы: §H[GET_PROLETARIAT_FORMAT_TEXT]§!\n\nВсего трудовых ресурсов: §H[GET_ALL_PROLETARIAT_FORMAT_TEXT]§!\n[GET_PROLETARIAT_PROCESS_STATUS_TEXT] от общего населения страны (§H[GET_MAX_MANPOWER_FORMAT_TEXT]§!)\nНеобходимые трудовые ресурсы: §H[GET_USE_PROLETARIAT_FORMAT_TEXT]§!"
+    gta_proletariat_delayed_tooltip: "Трудовые ресурсы отображает количество трудоспособного населения вашей страны."
+    
+    GET_PROLETARIAT_IN_PROCESS_TEXT: "[?ROOT.current_proletariat_percent_var|2H%] (примерно [?ROOT.mobilization_speed_proletariat_var|4%+] проходят мобилизацию труда ежедневно)"
+    GET_PROLETARIAT_STABLE_TEXT: "Доступно [?ROOT.modifier@proletariat_factor|2H%]"
+    
+    GET_PROLETARIAT_IN_NUM_TEXT: "[?ROOT.TOTAL_num_proletariat|0]"
+    GET_PROLETARIAT_IN_K_TEXT: "[?ROOT.TOTAL_num_proletariat_k|2]K"
+    GET_PROLETARIAT_IN_M_TEXT: "[?ROOT.TOTAL_num_proletariat_m|2]M"
+    
+    GET_ALL_PROLETARIAT_IN_NUM_TEXT: "[?ROOT.TOTAL_num_ALL_proletariat|0]"
+    GET_ALL_PROLETARIAT_IN_K_TEXT: "[?ROOT.TOTAL_num_ALL_proletariat_k|2]K"
+    GET_ALL_PROLETARIAT_IN_M_TEXT: "[?ROOT.TOTAL_num_ALL_proletariat_m|2]M"
+    
+    GET_USE_PROLETARIAT_IN_NUM_TEXT: "[?ROOT.TOTAL_num_USE_proletariat_pozitiv|0]"
+    GET_USE_PROLETARIAT_IN_K_TEXT: "[?ROOT.TOTAL_num_USE_proletariat_k_pozitiv|2]K"
+    GET_USE_PROLETARIAT_IN_M_TEXT: "[?ROOT.TOTAL_num_USE_proletariat_m_pozitiv|2]M"
+    
+    GET_MAX_MANPOWER_IN_NUM_TEXT: "[?ROOT.max_manpower_var|0]"
+    GET_MAX_MANPOWER_IN_K_TEXT: "[?ROOT.max_manpower_k|2]K"
+    GET_MAX_MANPOWER_IN_M_TEXT: "[?ROOT.max_manpower_m_var|2]M"
+
+
+
 ### MODIFIERS ###
 
     fake_fuel_cost: "£fuel_texticon Потребление топлива"
@@ -97,6 +125,9 @@
     consumption_of_provisions_modifier: "£provisions_icon Потребление провианта"
     provision_income_modifier: "£provisions_icon Производство провианта"
     num_change_population_weekly: "£population_texticon Еженедельное изменение населения"
+    num_proletariat_k: "£proletariat_texticon Изменение трудовых ресурсов (K)"
+    proletariat_factor: "£proletariat_texticon Трудовые ресурсы"
+    mobilization_speed_proletariat: "£proletariat_texticon Мобилизация труда"
     
     state_resource_cost_iron: "Расход железа"
     

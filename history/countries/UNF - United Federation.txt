@@ -56,19 +56,15 @@ recruit_character = UNF_stiv_kempbell
 
 
 set_politics = {
-	ruling_party = social_conservative
+	ruling_party = market_liberal
 }
 set_popularities = {
 	totalist				= 0
-	syndicalist				= 0
-	radical_socialist		= 0
-	social_democrat			= 0
-	social_liberal			= 10
-	market_liberal			= 15
-	social_conservative		= 75
-	authoritarian_democrat	= 0
-	paternal_autocrat		= 0
-	national_populist		= 0
+	syndicalist				= 6
+	market_liberal			= 70
+	mysticist				= 0
+	authoritarian_democrat	= 21
+	national_populist		= 3
 }
 
 diplomatic_relation = {

@@ -34,18 +34,14 @@ add_ideas = {
 recruit_character = SKO_deon_kaffer
 
 set_politics = {
-	ruling_party = social_conservative
+	ruling_party = market_liberal
 }
 set_popularities = {
 	totalist				= 0
-	syndicalist				= 0
-	radical_socialist		= 0
-	social_democrat			= 0
-	social_liberal			= 0
-	market_liberal			= 0
-	social_conservative		= 70
-	authoritarian_democrat	= 5
-	paternal_autocrat		= 10
+	syndicalist				= 5
+	market_liberal			= 62
+	mysticist				= 0
+	authoritarian_democrat	= 18
 	national_populist		= 15
 }
 

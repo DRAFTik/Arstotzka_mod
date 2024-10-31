@@ -55,19 +55,15 @@ recruit_character = OBR_elijah_michelson
 
 
 set_politics = {
-	ruling_party = social_democrat
+	ruling_party = authoritarian_democrat
 }
 set_popularities = {
 	totalist				= 0
-	syndicalist				= 0
-	radical_socialist		= 11
-	social_democrat			= 40
-	social_liberal			= 17
-	market_liberal			= 7
-	social_conservative		= 15
-	authoritarian_democrat	= 10
-	paternal_autocrat		= 0
-	national_populist		= 0
+	syndicalist				= 35
+	market_liberal			= 6
+	mysticist				= 0
+	authoritarian_democrat	= 46
+	national_populist		= 13
 }
 
 give_guarantee = SEM

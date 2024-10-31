@@ -22,35 +22,7 @@ characters={
 		}
 		country_leader={
 			desc="POLITICS_SAI_LEADER_DESC"
-			ideology=radical_socialist_subtype
-			traits={ we_are_modders }
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			desc="POLITICS_SAI_LEADER_DESC"
-			ideology=social_democrat_subtype
-			traits={ we_are_modders }
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			desc="POLITICS_SAI_LEADER_DESC"
-			ideology=social_liberal_subtype
-			traits={ we_are_modders }
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			desc="POLITICS_SAI_LEADER_DESC"
 			ideology=market_liberal_subtype
-			traits={ we_are_modders }
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			desc="POLITICS_SAI_LEADER_DESC"
-			ideology=social_conservative_subtype
 			traits={ we_are_modders }
 			expire="1965.1.1.1"
 			id=-1
@@ -64,7 +36,7 @@ characters={
 		}
 		country_leader={
 			desc="POLITICS_SAI_LEADER_DESC"
-			ideology=paternal_autocrat_subtype
+			ideology=mysticist_subtype
 			traits={ we_are_modders }
 			expire="1965.1.1.1"
 			id=-1

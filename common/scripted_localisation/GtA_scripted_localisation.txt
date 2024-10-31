@@ -24,12 +24,6 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_government = radical_socialist
-		}
-		localization_key = radical_socialist_subtype_desc
-	}
-	text = {
-		trigger = {
 			has_government = social_democrat
 		}
 		localization_key = social_democrat_subtype_desc
@@ -218,5 +212,118 @@ defined_text = {
 	}
 	text = {
 		localization_key = empty_text
+	}
+}
+
+defined_text = {
+	name = GET_PROLETARIAT_FORMAT_TEXT
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { var = TOTAL_num_proletariat_m value = 1 compare = greater_than_or_equals }
+				check_variable = { var = TOTAL_num_proletariat_m value = -1 compare = less_than_or_equals }
+			}
+		}
+		localization_key = GET_PROLETARIAT_IN_M_TEXT
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { var = TOTAL_num_proletariat_k value = 1 compare = greater_than_or_equals }
+				check_variable = { var = TOTAL_num_proletariat_k value = -1 compare = less_than_or_equals }
+			}
+		}
+		localization_key = GET_PROLETARIAT_IN_K_TEXT
+	}
+	text = {
+		localization_key = GET_PROLETARIAT_IN_NUM_TEXT
+	}
+}
+
+defined_text = {
+	name = GET_ALL_PROLETARIAT_FORMAT_TEXT
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { var = TOTAL_num_ALL_proletariat_m value = 1 compare = greater_than_or_equals }
+				check_variable = { var = TOTAL_num_ALL_proletariat_m value = -1 compare = less_than_or_equals }
+			}
+		}
+		localization_key = GET_ALL_PROLETARIAT_IN_M_TEXT
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { var = TOTAL_num_ALL_proletariat_k value = 1 compare = greater_than_or_equals }
+				check_variable = { var = TOTAL_num_ALL_proletariat_k value = -1 compare = less_than_or_equals }
+			}
+		}
+		localization_key = GET_ALL_PROLETARIAT_IN_K_TEXT
+	}
+	text = {
+		localization_key = GET_ALL_PROLETARIAT_IN_NUM_TEXT
+	}
+}
+
+defined_text = {
+	name = GET_USE_PROLETARIAT_FORMAT_TEXT
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { var = TOTAL_num_USE_proletariat_m_pozitiv value = 1 compare = greater_than_or_equals }
+				check_variable = { var = TOTAL_num_USE_proletariat_m_pozitiv value = -1 compare = less_than_or_equals }
+			}
+		}
+		localization_key = GET_USE_PROLETARIAT_IN_M_TEXT
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { var = TOTAL_num_USE_proletariat_k_pozitiv value = 1 compare = greater_than_or_equals }
+				check_variable = { var = TOTAL_num_USE_proletariat_k_pozitiv value = -1 compare = less_than_or_equals }
+			}
+		}
+		localization_key = GET_USE_PROLETARIAT_IN_K_TEXT
+	}
+	text = {
+		localization_key = GET_USE_PROLETARIAT_IN_NUM_TEXT
+	}
+}
+
+defined_text = {
+	name = GET_MAX_MANPOWER_FORMAT_TEXT
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { var = max_manpower_m_var value = 1 compare = greater_than_or_equals }
+				check_variable = { var = max_manpower_m_var value = -1 compare = less_than_or_equals }
+			}
+		}
+		localization_key = GET_MAX_MANPOWER_IN_M_TEXT
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { var = max_manpower_k value = 1 compare = greater_than_or_equals }
+				check_variable = { var = max_manpower_k value = -1 compare = less_than_or_equals }
+			}
+		}
+		localization_key = GET_MAX_MANPOWER_IN_K_TEXT
+	}
+	text = {
+		localization_key = GET_MAX_MANPOWER_IN_NUM_TEXT
+	}
+}
+
+defined_text = {
+	name = GET_PROLETARIAT_PROCESS_STATUS_TEXT
+	text = {
+		trigger = {
+			check_variable = { var = current_proletariat_percent_var	value = modifier@proletariat_factor	compare = not_equals }
+		}
+		localization_key = GET_PROLETARIAT_IN_PROCESS_TEXT
+	}
+	text = {
+		localization_key = GET_PROLETARIAT_STABLE_TEXT
 	}
 }

@@ -34,19 +34,15 @@ add_ideas = {
 recruit_character = SEM_leo_rush
 
 set_politics = {
-	ruling_party = social_liberal
+	ruling_party = authoritarian_democrat
 }
 set_popularities = {
-	totalist				= 0
-	syndicalist				= 0
-	radical_socialist		= 0
-	social_democrat			= 30
-	social_liberal			= 70
-	market_liberal			= 0
-	social_conservative		= 0
-	authoritarian_democrat	= 0
-	paternal_autocrat		= 0
-	national_populist		= 0
+	totalist				= 5
+	syndicalist				= 12
+	market_liberal			= 44
+	mysticist				= 0
+	authoritarian_democrat	= 35
+	national_populist		= 4
 }
 
 give_guarantee = OBR

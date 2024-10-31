@@ -33,6 +33,10 @@
 
 #	modifier@num_change_population_weekly
 
+#	modifier@mobilization_speed_proletariat
+#	modifier@proletariat_factor
+#	modifier@num_proletariat_k
+
 
 default_party_popularity_PP_gain = {
 	if = {
@@ -920,6 +924,159 @@ calculate_steel_mill_effect = {
 		if = {
 			limit = { NOT = { has_dynamic_modifier = { modifier = steel_mill_minus_dyn } } }
 			add_dynamic_modifier = { modifier = steel_mill_minus_dyn }
+		}
+	}
+}
+
+calculate_proletariat_start_effect = {
+	set_temp_variable		= { TOTAL_num_proletariat_goal_k_temp = max_manpower_k }
+	multiply_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = modifier@proletariat_factor }
+	set_variable			= { TOTAL_num_ALL_proletariat_k = TOTAL_num_proletariat_goal_k_temp }
+	set_variable			= { TOTAL_num_USE_proletariat_k = modifier@num_proletariat_k }
+	add_to_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = TOTAL_num_USE_proletariat_k }
+	
+	set_variable			= { TOTAL_num_USE_proletariat_k_pozitiv = modifier@num_proletariat_k }
+	multiply_variable		= { TOTAL_num_USE_proletariat_k_pozitiv = -1 }
+	
+	set_variable			= { TOTAL_num_proletariat	= TOTAL_num_proletariat_goal_k_temp }
+	multiply_variable		= { TOTAL_num_proletariat	= 1000 }
+	set_variable			= { TOTAL_num_proletariat_k	= TOTAL_num_proletariat_goal_k_temp }
+	set_variable			= { TOTAL_num_proletariat_m	= TOTAL_num_proletariat_goal_k_temp }
+	divide_variable			= { TOTAL_num_proletariat_m	= 1000 }
+	
+	# Сколько есть/должно быть от modifier@proletariat_factor
+	set_variable			= { TOTAL_num_ALL_proletariat	= TOTAL_num_ALL_proletariat_k }
+	multiply_variable		= { TOTAL_num_ALL_proletariat	= 1000 }
+	set_variable			= { TOTAL_num_ALL_proletariat_m	= TOTAL_num_ALL_proletariat_k }
+	divide_variable			= { TOTAL_num_ALL_proletariat_m	= 1000 }
+	
+	# Сколько есть от modifier@num_proletariat_k
+	set_variable			= { TOTAL_num_USE_proletariat_pozitiv	= TOTAL_num_USE_proletariat_k_pozitiv }
+	multiply_variable		= { TOTAL_num_USE_proletariat_pozitiv	= 1000 }
+	set_variable			= { TOTAL_num_USE_proletariat_m_pozitiv	= TOTAL_num_USE_proletariat_k_pozitiv }
+	divide_variable			= { TOTAL_num_USE_proletariat_m_pozitiv	= 1000 }
+	
+	# Фикс max_manpower_k
+	set_variable			= { max_manpower_var	= max_manpower_k }
+	multiply_variable		= { max_manpower_var	= 1000 }
+	set_variable			= { max_manpower_m_var	= max_manpower_k }
+	divide_variable			= { max_manpower_m_var	= 1000 }
+	
+	
+	set_temp_variable		= { t1 = TOTAL_num_proletariat_k }
+	add_to_temp_variable	= { t1 = TOTAL_num_USE_proletariat_k_pozitiv }
+	divide_temp_variable	= { t1 = max_manpower_k }
+	set_variable			= { current_proletariat_percent_var = t1 }
+}
+
+calculate_proletariat_effect = {
+	set_temp_variable		= { TOTAL_num_proletariat_goal_k_temp = max_manpower_k }
+	multiply_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = modifier@proletariat_factor }
+	set_variable			= { TOTAL_num_ALL_proletariat_k = TOTAL_num_proletariat_goal_k_temp }
+	set_variable			= { TOTAL_num_USE_proletariat_k = modifier@num_proletariat_k }
+	add_to_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = TOTAL_num_USE_proletariat_k }
+	
+	set_variable			= { TOTAL_num_USE_proletariat_k_pozitiv = modifier@num_proletariat_k }
+	multiply_variable		= { TOTAL_num_USE_proletariat_k_pozitiv = -1 }
+	
+	set_temp_variable		= { TOTAL_num_proletariat_k_temp = TOTAL_num_proletariat_k }
+	
+	calculate_mobilization_speed_proletariat_effect = yes
+	
+	set_variable			= { TOTAL_num_proletariat	= TOTAL_num_proletariat_k_temp }
+	multiply_variable		= { TOTAL_num_proletariat	= 1000 }
+	set_variable			= { TOTAL_num_proletariat_k	= TOTAL_num_proletariat_k_temp }
+	set_variable			= { TOTAL_num_proletariat_m	= TOTAL_num_proletariat_k_temp }
+	divide_variable			= { TOTAL_num_proletariat_m	= 1000 }
+	
+	# Сколько есть/должно быть от modifier@proletariat_factor
+	set_variable			= { TOTAL_num_ALL_proletariat	= TOTAL_num_ALL_proletariat_k }
+	multiply_variable		= { TOTAL_num_ALL_proletariat	= 1000 }
+	set_variable			= { TOTAL_num_ALL_proletariat_m	= TOTAL_num_ALL_proletariat_k }
+	divide_variable			= { TOTAL_num_ALL_proletariat_m	= 1000 }
+	
+	# Сколько есть от modifier@num_proletariat_k
+	set_variable			= { TOTAL_num_USE_proletariat_pozitiv	= TOTAL_num_USE_proletariat_k_pozitiv }
+	multiply_variable		= { TOTAL_num_USE_proletariat_pozitiv	= 1000 }
+	set_variable			= { TOTAL_num_USE_proletariat_m_pozitiv	= TOTAL_num_USE_proletariat_k_pozitiv }
+	divide_variable			= { TOTAL_num_USE_proletariat_m_pozitiv	= 1000 }
+	
+	# Фикс max_manpower_k
+	set_variable			= { max_manpower_var	= max_manpower_k }
+	multiply_variable		= { max_manpower_var	= 1000 }
+	set_variable			= { max_manpower_m_var	= max_manpower_k }
+	divide_variable			= { max_manpower_m_var	= 1000 }
+	
+	set_temp_variable		= { t1 = TOTAL_num_proletariat_k }
+	add_to_temp_variable	= { t1 = TOTAL_num_USE_proletariat_k_pozitiv }
+	divide_temp_variable	= { t1 = max_manpower_k }
+	set_variable			= { current_proletariat_percent_var = t1 }
+}
+
+calculate_mobilization_speed_proletariat_effect = {
+	if = {
+		limit = {
+#			check_variable		= { var = TOTAL_num_proletariat_goal_k_temp	value = TOTAL_num_proletariat_k	compare = not_equals }
+			check_variable = { var = current_proletariat_percent_var	value = modifier@proletariat_factor	compare = not_equals }
+		}
+		set_temp_variable		= { mobilization_speed_proletariat_temp = 0.01 }
+		multiply_temp_variable	= { mobilization_speed_proletariat_temp = modifier@mobilization_speed_proletariat }
+		add_to_temp_variable	= { mobilization_speed_proletariat_temp = 0.01 }											# итоговое значение ежедневного прироста пролов в %
+		set_variable			= { mobilization_speed_proletariat_var = mobilization_speed_proletariat_temp }
+		
+		# определение дельты законов в %
+		set_temp_variable		= { target_proletariat_percent = modifier@proletariat_factor }
+		set_temp_variable		= { ex_proletariat_percent = TOTAL_num_proletariat_k }
+		divide_temp_variable	= { ex_proletariat_percent = max_manpower_k }
+		subtract_from_temp_variable = { target_proletariat_percent = ex_proletariat_percent }
+		set_variable			= { target_proletariat_percent_var = target_proletariat_percent }
+		
+		# число дней
+		set_temp_variable		= { num_of_days_mobilization_proletariat_temp = target_proletariat_percent }
+		multiply_temp_variable	= { num_of_days_mobilization_proletariat_temp = 100 }
+		divide_temp_variable	= { num_of_days_mobilization_proletariat_temp = mobilization_speed_proletariat_temp }
+		if = {
+			limit = { check_variable = { num_of_days_mobilization_proletariat_temp < 0 } }
+			multiply_temp_variable	= { num_of_days_mobilization_proletariat_temp = -1 }											# для текст
+		}
+		set_variable			= { num_of_days_mobilization_proletariat = num_of_days_mobilization_proletariat_temp }
+		
+		# количество пролов
+		set_temp_variable		= { target_delta_proletariat_temp = target_proletariat_percent }
+		multiply_temp_variable	= { target_delta_proletariat_temp = max_manpower_k }
+		add_to_temp_variable	= { target_delta_proletariat_temp = TOTAL_num_USE_proletariat_k }						# итоговое значение ДЕЛЬТЫ пролов в чел.
+		set_variable			= { target_proletariat = target_delta_proletariat_temp }
+		
+		set_temp_variable		= { target_min_pulse_proletariat_temp = target_delta_proletariat_temp }
+		multiply_temp_variable	= { target_min_pulse_proletariat_temp = 0.01 }												# минимальное количество пролов для срабатывания эффекта
+		set_variable			= { target_min_pulse_proletariat = target_min_pulse_proletariat_temp }
+		
+		set_temp_variable		= { TOTAL_num_proletariat_add_k_temp = target_delta_proletariat_temp }
+		divide_temp_variable	= { TOTAL_num_proletariat_add_k_temp = num_of_days_mobilization_proletariat_temp }			# число прироста пролов в день
+		set_variable			= { TOTAL_num_proletariat_add_k = TOTAL_num_proletariat_add_k_temp }
+		
+		# проверка накопления пролов до минимального количества
+		add_to_variable			= { SUM_check_min_pulse_proletariat = TOTAL_num_proletariat_add_k_temp }
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						check_variable	= { target_min_pulse_proletariat_temp < 0 }
+						check_variable	= { var = SUM_check_min_pulse_proletariat	value = target_min_pulse_proletariat_temp	compare = less_than_or_equals }
+					}
+					AND = {
+						check_variable	= { target_min_pulse_proletariat_temp > 0 }
+						check_variable	= { var = SUM_check_min_pulse_proletariat	value = target_min_pulse_proletariat_temp	compare = greater_than_or_equals }
+					}
+				}
+			}
+			add_to_temp_variable = { TOTAL_num_proletariat_k_temp = SUM_check_min_pulse_proletariat }
+			clear_variable		= SUM_check_min_pulse_proletariat
+		}
+		
+		if = {
+			limit = { check_variable = { target_proletariat < 0 } }
+			multiply_variable	= { mobilization_speed_proletariat_var = -1 }												# для текст
 		}
 	}
 }

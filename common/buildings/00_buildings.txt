@@ -15,6 +15,7 @@ buildings = {
 		show_modifier = yes
 		max_fuel_building = 1.5 #k
 		local_building_slots = 1
+		num_proletariat_k = -1
 		num_use_electric_power = 1
 		allied_build = yes
 		
@@ -34,6 +35,7 @@ buildings = {
 		mobilization_speed = 0.001
 		local_supplies_for_controller = 0.05
 		compliance_growth = 0.005
+		num_proletariat_k = -1
 		num_use_electric_power = 1
 		allied_build = yes
 	}
@@ -49,6 +51,7 @@ buildings = {
 		value = 8
 		infrastructure_construction_effect = yes
 		show_modifier = yes
+		num_proletariat_k = -13.25
 		num_use_electric_power = 6
 		allied_build = yes
 	}
@@ -64,6 +67,7 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 		show_modifier = yes
+		num_proletariat_k = -22.5
 		num_use_electric_power = 5
 		allied_build = yes
 	}
@@ -77,6 +81,7 @@ buildings = {
 		value = 1
 		damage_factor = 0.5
 		show_modifier = yes
+		num_proletariat_k = -0.25
 		num_use_electric_power = 0.5
 		allied_build = yes
 		infrastructure_construction_effect = yes
@@ -93,6 +98,7 @@ buildings = {
 		supply_node = yes
 		show_modifier = yes
 		damage_factor = 0.1
+		num_proletariat_k = -1.5
 		num_use_electric_power = 2
 		allied_build = yes
 		always_shown = yes
@@ -123,6 +129,7 @@ buildings = {
 		max_level = 10
 		value = 1
 		show_modifier = yes
+		num_proletariat_k = -0.25
 		num_use_electric_power = 0.5
 		allied_build = yes
 		infrastructure_construction_effect = yes
@@ -140,6 +147,7 @@ buildings = {
 		max_level = 10
 		value = 1
 		show_modifier = yes
+		num_proletariat_k = -0.1
 		num_use_electric_power = 0.1
 		infrastructure_construction_effect = yes
 	}
@@ -157,6 +165,7 @@ buildings = {
 		max_level = 10
 		value = 1
 		show_modifier = yes
+		num_proletariat_k = -0.1
 		num_use_electric_power = 0.1
 		infrastructure_construction_effect = yes
 	}
@@ -173,6 +182,7 @@ buildings = {
 		shares_slots = yes
 		value = 5
 		show_modifier = yes
+		num_proletariat_k = -17.63
 		num_use_electric_power = 7
 		infrastructure_construction_effect = yes
 		allied_build = yes
@@ -190,6 +200,7 @@ buildings = {
 		damage_factor = 0.1
 		value = 1
 		show_modifier = yes
+		num_proletariat_k = -0.1
 		num_use_electric_power = 0.5
 		allied_build = yes
 		infrastructure_construction_effect = yes
@@ -211,6 +222,7 @@ buildings = {
 		fuel_gain_from_states = 2.0 #per hour
 		hidden_modifier = { num_use_electric_power = 4.0 }
 #		custom_modifier_tooltip = num_use_electric_power_4_tt
+		num_proletariat_k = -8.5
 		allied_build = yes
 	}
 
@@ -226,6 +238,7 @@ buildings = {
 		
 		show_modifier = yes
 		max_fuel_building = 100.0 #k
+		num_proletariat_k = -1
 		num_use_electric_power = 0.5
 		allied_build = yes
 	}
@@ -240,6 +253,7 @@ buildings = {
 		damage_factor = 0.5
 		value = 4
 		show_modifier = yes
+		num_proletariat_k = -0.5
 		num_use_electric_power = 1.5
 		centered = yes
 		allied_build = yes
@@ -256,6 +270,7 @@ buildings = {
 		shares_slots = yes
 		value = 1
 		show_modifier = yes
+		num_proletariat_k = -1.5
 		num_use_electric_power = 1.5
 		infrastructure_construction_effect = yes
 	}
@@ -270,6 +285,7 @@ buildings = {
 		shares_slots = yes
 		value = 10
 		show_modifier = yes
+		num_proletariat_k = -2
 		num_use_electric_power = 15
 		infrastructure_construction_effect = yes
 	}
@@ -286,6 +302,7 @@ buildings = {
 		infrastructure_construction_effect = yes
 		allied_build = yes
 		show_modifier = yes
+		num_proletariat_k = -16.23
 		num_use_electric_power = 3.5
 		state_resource_cost_iron = 8
 		state_resource_steel = 4
@@ -301,6 +318,7 @@ buildings = {
 		infrastructure_construction_effect = yes
 		show_modifier = yes
 		universal_factory_modifier = 1
+		num_proletariat_k = -30.4
 		num_use_electric_power = 11
 	}
 
@@ -317,6 +335,7 @@ buildings = {
 		value = 4
 		infrastructure_construction_effect = yes
 		show_modifier = yes
+		num_proletariat_k = -10.2
 		num_use_electric_power = 0.25
 		num_generation_provision_yearly = 300
 	}
@@ -331,6 +350,7 @@ buildings = {
 		value = 2
 		infrastructure_construction_effect = yes
 		show_modifier = yes
+		num_proletariat_k = -7.6
 		num_use_electric_power = 0.5
 		num_generation_provision_weekly = 3.8
 	}
@@ -345,6 +365,7 @@ buildings = {
 		value = 3
 		infrastructure_construction_effect = yes
 		show_modifier = yes
+		num_proletariat_k = -1
 		num_use_electric_power = 0.1
 		max_provision = 450
 #		monthly_save_provision_modifier = 0.01
@@ -362,6 +383,7 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 		show_modifier = yes
+		num_proletariat_k = -0.75
 		num_generation_electric_power = 60
 		fake_fuel_cost = 24
 #		fuel_cost = 1		#per hour
@@ -377,6 +399,7 @@ buildings = {
 		value = 7
 		infrastructure_construction_effect = yes
 		show_modifier = yes
+		num_proletariat_k = -0.15
 		num_generation_electric_power = 150
 	}
 	
@@ -389,6 +412,7 @@ buildings = {
 		value = 10
 		infrastructure_construction_effect = yes
 		show_modifier = yes
+		num_proletariat_k = -2
 		num_generation_electric_power = 500
 	}
 }

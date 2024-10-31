@@ -99,4 +99,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/GUI/electric_panel/tumbler_strip.dds"
 		noOfFrames = 7
 	}
+	
+	spriteType = {
+		name = "GFX_proletariat_icon"
+		texturefile = "gfx/interface/GUI/proletariat/proletariat_icon.dds"
+	}
 }
