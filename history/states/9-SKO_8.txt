@@ -2,6 +2,9 @@ state={
 	id=9
 	name="STATE_9"
 	history={
+		victory_points = {
+			1417 2
+		}
 		buildings = {
 			livestock_complex = 2
 		}

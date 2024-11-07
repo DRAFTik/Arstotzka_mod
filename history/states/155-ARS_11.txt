@@ -7,6 +7,9 @@ state={
 		tungsten = 7
 	}
 	history={
+		victory_points = {
+			516 2
+		}
 		buildings = {
 			thermal_power_plant = 1
 			industrial_complex = 1

@@ -1,0 +1,172 @@
+﻿
+units= {
+
+	##### Naval OOB #####
+	fleet = {
+		name = "Imperial Navy"
+		naval_base = 1124
+
+		task_force = {
+			name = "Imperial main fleet"
+			location = 1124
+			
+			# Cruisers #
+			ship = { name = "1st Haihan Imperial Cruiser"	start_experience_factor = 0.3   definition = light_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Haihan" } } }
+			ship = { name = "2nd Haihan Imperial Cruiser"	start_experience_factor = 0.3   definition = light_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Haihan" } } }
+			ship = { name = "3rd Haihan Imperial Cruiser"   start_experience_factor = 0.3   definition = light_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Haihan" } } }
+			ship = { name = "4th Haihan Imperial Cruiser"   start_experience_factor = 0.3   definition = light_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Haihan" } } }
+			ship = { name = "5th Haihan Imperial Cruiser"   start_experience_factor = 0.3   definition = light_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Haihan" } } }
+			ship = { name = "6th Haihan Imperial Cruiser"   start_experience_factor = 0.3   definition = light_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Haihan" } } }
+			ship = { name = "7th Haihan Imperial Cruiser"   start_experience_factor = 0.3   definition = light_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Haihan" } } }
+			ship = { name = "8th Haihan Imperial Cruiser"   start_experience_factor = 0.3   definition = light_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Haihan" } } }
+			
+			# Heavy Cruisers #
+			ship = { name = "1st class Nyoshima Heavy Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Nyoshima" } } }
+			ship = { name = "2nd class Nyoshima Heavy Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Nyoshima" } } }
+			ship = { name = "3rd class Nyoshima Heavy Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Nyoshima" } } }
+			ship = { name = "4th class Nyoshima Heavy Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Nyoshima" } } }
+			ship = { name = "5th class Nyoshima Heavy Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Nyoshima" } } }
+			ship = { name = "6th class Nyoshima Heavy Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Nyoshima" } } }
+			
+			# (super heavy) Battleships #
+			ship = { name = "1st class Enkyo Battleship"   pride_of_the_fleet = yes   start_experience_factor = 1.0   definition = battleship   equipment = { ship_hull_super_heavy_1 = { amount = 1   owner = IMP   version_name = "Enkyo" } } }
+			ship = { name = "2nd class Enkyo Battleship"   start_experience_factor = 1.0   definition = battleship   equipment = { ship_hull_super_heavy_1 = { amount = 1   owner = IMP   version_name = "Enkyo" } } }
+			ship = { name = "3nd class Enkyo Battleship"   start_experience_factor = 1.0   definition = battleship   equipment = { ship_hull_super_heavy_1 = { amount = 1   owner = IMP   version_name = "Enkyo" } } }
+		}
+	}
+	
+	fleet = {
+		name = "Imperial Submarine Navy"
+		naval_base = 2119
+		
+		task_force = {
+			name = "Imperial Submarine Fleet"
+			location = 2119
+			
+			# Subs #
+			ship = { name = "1st Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "2nd Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "3rd Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "4th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "5th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "6th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "7th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "8th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "9th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "10th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "11th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "12th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "13th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "14th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "15th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "16th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "17th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "18th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "19th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			
+		}
+	}
+	
+	fleet = {
+		name = "Imperial Navy"
+		naval_base = 2126
+
+		task_force = {				
+			name = "Imperial colony fleet"
+			location = 2126
+			
+			# (super heavy) Battleships #
+			ship = { name = "4nd class Enkyo Battleship"   start_experience_factor = 1.0   definition = battleship   equipment = { ship_hull_super_heavy_1 = { amount = 1   owner = IMP   version_name = "Enkyo" } } }
+			
+			# Cruisers #
+			ship = { name = "9th Haihan Imperial Cruiser"   start_experience_factor = 0.3   definition = light_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Haihan" } } }
+			ship = { name = "10th Haihan Imperial Cruiser"   start_experience_factor = 0.3   definition = light_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = IMP   version_name = "Haihan" } } }
+			
+			# Destroyers #
+			ship = { name = "1st Keotai Imperial Destroyer"   start_experience_factor = 0.3   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = IMP   version_name = "Keotai" } } }
+			ship = { name = "2nd Keotai Imperial Destroyer"   start_experience_factor = 0.3   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = IMP   version_name = "Keotai" } } }
+			ship = { name = "3rd Keotai Imperial Destroyer"   start_experience_factor = 0.3   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = IMP   version_name = "Keotai" } } }
+			ship = { name = "4th Keotai Imperial Destroyer"   start_experience_factor = 0.3   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = IMP   version_name = "Keotai" } } }
+			
+			# Subs #
+			ship = { name = "20th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "21th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "22th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "23th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+			ship = { name = "24th Tsunkeido Imperial Submarine"   start_experience_factor = 0.3   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = IMP   version_name = "Tsunkeido" } } }
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	### Ships Under Contruction ###
+	
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "IMP"
+			version_name = "Tsunkeido"
+		}
+		name = "25th Tsunkeido Imperial Submarine"
+		requested_factories = 2
+		progress = 0.5
+		amount = 1
+		industrial_manufacturer = mio:generic_submarine_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "IMP"
+			version_name = "Keotai"
+		}
+		name = "5th Keotai Imperial Destroyer"
+		requested_factories = 2
+		progress = 0.85
+		amount = 1
+		industrial_manufacturer = mio:generic_escort_ship_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IMP"
+			version_name = "Haihan"
+		}
+		name = "11th Haihan Imperial Cruiser"
+		requested_factories = 3
+		progress = 0.85
+		amount = 1
+		industrial_manufacturer = mio:generic_battle_line_ship_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IMP"
+			version_name = "Nyoshima"
+		}
+		name = "7th class Nyoshima Heavy Cruiser"
+		requested_factories = 3
+		progress = 0.85
+		amount = 1
+		industrial_manufacturer = mio:generic_battle_line_ship_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_super_heavy_1
+			creator = "IMP"
+			version_name = "Enkyo"
+		}
+		name = "5th class Enkyo Battleship"
+		requested_factories = 5
+		progress = 0.85
+		amount = 1
+		industrial_manufacturer = mio:generic_battle_line_ship_organization
+	}
+}
+

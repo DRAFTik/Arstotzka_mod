@@ -3,6 +3,7 @@ state={
 	name="STATE_14"
 	history={
 		buildings = {
+			industrial_complex = 1
 			livestock_complex = 1
 		}
 		owner = SKO

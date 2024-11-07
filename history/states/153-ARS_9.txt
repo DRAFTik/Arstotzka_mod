@@ -2,21 +2,18 @@ state={
 	id=153
 	name="STATE_153"
 	history={
-		victory_points = {
-			1364 2 
-		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
-			steel_mill = 1
 		}
 		owner = ARS
 		add_core_of = ARS
 	}
 	provinces={
-		456 504 511 536 612 673 776 779 912 1173 1181 1187 1286 1364 1903 1913 1919 1943 1944 
+		456 504 511 536 612 776 779 912 1181 1187 1286 1903 1913 1919 1944 
 	}
-	manpower=2897635
+	manpower=1506524
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	state_category=town
+	local_supplies=0.000
 }

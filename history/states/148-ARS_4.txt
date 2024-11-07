@@ -2,10 +2,16 @@ state={
 	id=148
 	name="STATE_148"
 	history={
+		victory_points = {
+			2010 10 
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
 			livestock_complex = 1
+			2010 = {
+				naval_base = 3
+			}
 		}
 		owner = ARS
 		add_core_of = ARS

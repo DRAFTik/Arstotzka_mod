@@ -35,7 +35,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Militia"
+	name = "Shepherd Division"
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -90,45 +90,51 @@ units = {
 	}
 	
 	division = {
-		name = "5th National Defense Guards regiment"
-		location = 1787
-		division_template = "National Defense Guards"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-		start_manpower_factor = 1.0
-	}
-	
-	division = {
-		name = "6th National Defense Guards regiment"
-		location = 1787
-		division_template = "National Defense Guards"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-		start_manpower_factor = 1.0
-	}
-	
-	division = {
-		name = "1st Militia regiment"
+		name = "1st Shepherd Division"
 		location = 94
-		division_template = "Militia"
+		division_template = "Shepherd Division"
 		start_experience_factor = 0.100
 		start_equipment_factor = 0.6
 		start_manpower_factor = 1.0
 	}
 	
 	division = {
-		name = "2nd Militia regiment"
+		name = "2nd Shepherd Division"
 		location = 1461
-		division_template = "Militia"
+		division_template = "Shepherd Division"
 		start_experience_factor = 0.100
 		start_equipment_factor = 0.6
 		start_manpower_factor = 1.0
 	}
 	
 	division = {
-		name = "3rd Militia regiment"
-		location = 376
-		division_template = "Militia"
+		name = "3rd Shepherd Division"
+		location = 537
+		division_template = "Shepherd Division"
+		start_experience_factor = 0.100
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "4rd Shepherd Division"
+		location = 1605
+		division_template = "Shepherd Division"
+		start_experience_factor = 0.100
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "5rd Shepherd Division"
+		location = 1411
+		division_template = "Shepherd Division"
+		start_experience_factor = 0.100
+		start_equipment_factor = 0.6
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "6rd Shepherd Division"
+		location = 1371
+		division_template = "Shepherd Division"
 		start_experience_factor = 0.100
 		start_equipment_factor = 0.6
 		start_manpower_factor = 1.0
@@ -150,12 +156,12 @@ instant_effect = {
 	
 	add_equipment_production = {
 		equipment = {
-			type = support_equipment_1
+			type = artillery_equipment_1
 			creator = "SKO"
 		}
 		requested_factories = 1
 		progress = 0.6
 		efficiency = 100
-		industrial_manufacturer = mio:generic_support_equipment_organization
+		industrial_manufacturer = mio:generic_artillery_organization
 	}
 }

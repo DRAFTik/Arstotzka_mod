@@ -1,0 +1,113 @@
+﻿
+units= {
+
+	##### Naval OOB #####
+	fleet = {
+		name = "National Defense Navy"			
+		naval_base = 593
+		
+		task_force = {
+			name = "Submarine Fleet"
+			location = 212
+			
+			# Subs #
+			ship = { name = "1st SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "2nd SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "3rd SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "4th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "5th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "6th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "7th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "8th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "9th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "10th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "11th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "12th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "13th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "14th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+			ship = { name = "15th SS class Torpedoes Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = UNF   version_name = "SS Torpedoes" } } }
+		}
+		
+		task_force = {				
+			name = "Destroyer fleet"
+			location = 478
+			
+			ship = { name = "1st SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "2nd SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "3rd SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "4th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "5th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "6th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "7th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "8th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "9th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "10th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "11th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "12th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "13th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "14th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "15th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "16th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "17th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "18th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "19th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			ship = { name = "20th SS class Anihilator of Seas Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = UNF   version_name = "SS Anihilator of Seas" } } }
+			
+		}
+		
+		task_force = {
+			name = "Main fleet"
+			location = 593
+			
+			# Cruisers #
+			ship = { name = "1st SS class Shingleton Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = UNF   version_name = "SS Shingleton" } } }
+			ship = { name = "2nd SS class Shingleton Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = UNF   version_name = "SS Shingleton" } } }
+			ship = { name = "3rd SS class Shingleton Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = UNF   version_name = "SS Shingleton" } } }
+			ship = { name = "4th SS class Shingleton Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = UNF   version_name = "SS Shingleton" } } }
+			ship = { name = "5th SS class Shingleton Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = UNF   version_name = "SS Shingleton" } } }
+			ship = { name = "6th SS class Shingleton Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = UNF   version_name = "SS Shingleton" } } }
+			ship = { name = "7th SS class Shingleton Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = UNF   version_name = "SS Shingleton" } } }
+			ship = { name = "8th SS class Shingleton Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = UNF   version_name = "SS Shingleton" } } }
+			
+			# (super heavy) Battleships #
+			ship = { name = "1st SS class Great Rapid Battleship"   pride_of_the_fleet = yes   start_experience_factor = 1.0   definition = battleship   equipment = { ship_hull_super_heavy_1 = { amount = 1   owner = UNF   version_name = "SS Great Rapid" } } }
+			ship = { name = "2nd SS class Great Rapid Battleship"   start_experience_factor = 1.0   definition = battleship   equipment = { ship_hull_super_heavy_1 = { amount = 1   owner = UNF   version_name = "SS Great Rapid" } } }
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	### Ships Under Contruction ###
+	
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "UNF"
+			version_name = "SS Torpedoes"
+		}
+		name = "16th SS class Torpedoes Submarine"
+		requested_factories = 5
+		progress = 0.8
+		amount = 1
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_super_heavy_1
+			creator = "UNF"
+			version_name = "SS Great Rapid"
+		}
+		name = "3rd SS class Great Rapid Battleship"
+		requested_factories = 4
+		progress = 0.98
+		amount = 1
+	}
+}
+

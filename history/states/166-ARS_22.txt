@@ -5,6 +5,9 @@ state={
 		aluminium = 25
 	}
 	history={
+		victory_points = {
+			1921 2 
+		}
 		buildings = {
 			industrial_complex = 1
 		}

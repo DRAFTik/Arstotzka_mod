@@ -24,39 +24,21 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_government = social_democrat
-		}
-		localization_key = social_democrat_subtype_desc
-	}
-	text = {
-		trigger = {
-			has_government = social_liberal
-		}
-		localization_key = social_liberal_subtype_desc
-	}
-	text = {
-		trigger = {
 			has_government = market_liberal
 		}
 		localization_key = market_liberal_subtype_desc
 	}
 	text = {
 		trigger = {
-			has_government = social_conservative
+			has_government = mysticist
 		}
-		localization_key = social_conservative_subtype_desc
+		localization_key = mysticist_subtype_desc
 	}
 	text = {
 		trigger = {
 			has_government = authoritarian_democrat
 		}
 		localization_key = authoritarian_democrat_subtype_desc
-	}
-	text = {
-		trigger = {
-			has_government = paternal_autocrat
-		}
-		localization_key = paternal_autocrat_subtype_desc
 	}
 	text = {
 		trigger = {
@@ -319,7 +301,7 @@ defined_text = {
 	name = GET_PROLETARIAT_PROCESS_STATUS_TEXT
 	text = {
 		trigger = {
-			check_variable = { var = current_proletariat_percent_var	value = modifier@proletariat_factor	compare = not_equals }
+			check_variable = { var = current_proletariat_percent_var	value = ACTUAL_proletariat_factor_var	compare = not_equals }
 		}
 		localization_key = GET_PROLETARIAT_IN_PROCESS_TEXT
 	}

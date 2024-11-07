@@ -5,6 +5,9 @@ state={
 		oil = 5
 	}
 	history={
+		victory_points = {
+			1723 2
+		}
 		buildings = {
 			infrastructure = 1
 			agro_complex = 2

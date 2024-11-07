@@ -1,7 +1,7 @@
 ﻿l_russian:
 
     GtA_debug_decisions: "DEBUG"
-    GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]\n\nprovision_total_var: [?ROOT.provision_total_var]\nprovision_delta_var:[?ROOT.provision_delta_var]\nprovision_percent_to_max_var: [?provision_percent_to_max_var]\n\nprovision_total_var: [?ROOT.provision_total_var|+1]\nprovision_equipment: [?ROOT.num_equipment@provision_equipment]\n\nhunger_dyn: [?hunger_dyn]\n\nГОЛОД\nnum_change_population_weekly: [?modifier@num_change_population_weekly]\nmax_manpower_k: [?max_manpower_k]\nnum_controlled_states: [?num_controlled_states]\npercent_change_population_weekly: [?percent_change_population_weekly]\n\n resource iron: [?resource@iron]\n resource_produced iron: [?resource_produced@iron]\n resource_exported iron: [?resource_exported@iron]\n\n steel_minus_var!!!: [?steel_minus_var]\n steel_return_electric_power_var: [?steel_return_electric_power_var]\n steel_minus_state_total_1: [?steel_minus_state_total_1]\n\n mobilization_speed_proletariat_var: [?mobilization_speed_proletariat_var|4]\n modifier_mobilization_speed_proletariat: [?modifier@mobilization_speed_proletariat]\n\n target_proletariat: [?target_proletariat]\n target_proletariat_percent_var: [?target_proletariat_percent_var|4]\n num_of_days_mobilization_proletariat: [?num_of_days_mobilization_proletariat|5]\n TOTAL_num_proletariat_add_k: [?TOTAL_num_proletariat_add_k]\n SUM_check_min_pulse_proletariat: [?SUM_check_min_pulse_proletariat]\n target_min_pulse_proletariat: [?target_min_pulse_proletariat]\n\n max_manpower_k: [?max_manpower_k]"
+    GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]\n\nprovision_total_var: [?ROOT.provision_total_var]\nprovision_delta_var:[?ROOT.provision_delta_var]\nprovision_percent_to_max_var: [?provision_percent_to_max_var]\n\nprovision_total_var: [?ROOT.provision_total_var|+1]\nprovision_equipment: [?ROOT.num_equipment@provision_equipment]\n\nhunger_dyn: [?hunger_dyn]\n\nГОЛОД\nnum_change_population_weekly: [?modifier@num_change_population_weekly]\nmax_manpower_k: [?max_manpower_k]\nnum_controlled_states: [?num_controlled_states]\npercent_change_population_weekly: [?percent_change_population_weekly]\n\n resource iron: [?resource@iron]\n resource_produced iron: [?resource_produced@iron]\n resource_exported iron: [?resource_exported@iron]\n\n steel_minus_var!!!: [?steel_minus_var]\n steel_return_electric_power_var: [?steel_return_electric_power_var]\n steel_minus_state_total_1: [?steel_minus_state_total_1]\n\n mobilization_speed_proletariat_var: [?mobilization_speed_proletariat_var|4]\n modifier_mobilization_speed_proletariat: [?modifier@mobilization_speed_proletariat]\n\n target_proletariat: [?target_proletariat]\n target_proletariat_percent_var: [?target_proletariat_percent_var|4]\n num_of_days_mobilization_proletariat: [?num_of_days_mobilization_proletariat|5]\n TOTAL_num_proletariat_add_k: [?TOTAL_num_proletariat_add_k]\n SUM_check_min_pulse_proletariat: [?SUM_check_min_pulse_proletariat]\n target_min_pulse_proletariat: [?target_min_pulse_proletariat]\n\n max_manpower_k: [?max_manpower_k]\n\n num_of_factories: [?num_of_factories]"
     empty_text: ""
 
 ########################
@@ -23,7 +23,7 @@
 ##################
 
     gta_provisions_tooltip: "§HПродовольственная обеспеченность (тыс. тонн)§!\n\n§HУровень обеспеченности:§! [?ROOT.provision_percent_var|+1%%]\n\nТекущий запас провианта: [?ROOT.provision_total_var|+1*] из [?ROOT.max_provision_total_var|H1*] | [?ROOT.provision_percent_to_max_var|+1%]\nТекущий баланс провианта: [?ROOT.provision_balance_var|+1*]/день\nТекущее потребление провианта: [?ROOT.provision_need_var|-1*]/день\n\nПроизводство провианта:\n    - в неделю: [?ROOT.weekly_income_provision|+1*] от [?ROOT.livestock_complex_total|H0] шт.\n    - в год: [?ROOT.yearly_income_provision|+1*] от [?ROOT.agro_complex_total|H0] шт.[GET_CROP_LOC]\n\nУровень сохранения провизии: [?ROOT.monthly_save_provision|+0%]\nВ этом месяце ожидается порча: [?ROOT.bad_provision_var|-1*]\n\nМаксимальный запас провианта: [?ROOT.max_provision_total_var|H1*]\nБазовое значение: [?ROOT.max_provision_base_var|H1*]\nВ регионах: [?ROOT.modifier@max_provision|H1*][GET_HUNGER_LOC]"
-    gta_provisions_delayed_tooltip: "Продовольственная обеспеченность отображает потребность в продуктах питания вашей страны."
+    gta_provisions_delayed_tooltip: "Продовольственная обеспеченность отображает потребность в продуктах питания вашей страны.\n\nНерегулярные поступления провианта от §HАгрокомплексов§! не учитываются в расчете значения §Hбаланса провианта§!."
     GET_BASE_HARVEST_LOC: "\nУрожай текущего года:"
     GET_BAD_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §RНЕУРОЖАЙ§!"
     GET_RECORD_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §GРЕКОРД§!"
@@ -37,8 +37,8 @@
     GET_GOOD_PROVISIONS_LOC: "§G[GET_PROVISIONS_FORMAT_TEXT]§!"
     GET_NORMAL_PROVISIONS_LOC: "§H[GET_PROVISIONS_FORMAT_TEXT]§!"
     
-    provision_total_var_trigger_more_0: "Запасы провольствия §Hне пусты§!"
-    provision_balance_var_trigger_more_0: "Баланс провольствия §Hположительный§!"
+    provision_total_var_trigger_more_0: "£provisions_icon Запасы провольствия §Hне пусты§!"
+    provision_balance_var_trigger_more_0: "£provisions_icon Баланс провольствия §Hположительный§!"
     
     hunger_dyn: "§RГолод§!"
     GET_HUNGER_TEXT: "\n\n§RПОСЛЕДСТВИЯ ГОЛОДА§!\n$MODIFIER_STABILITY_WEEKLY$: [?hunger_stability_weekly_var|+=%2]\n$MODIFIER_GLOBAL_MONTHLY_POPULATION$: [?hunger_monthly_population_var|+=%1]\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?hunger_industrial_capacity_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: [?hunger_industrial_capacity_var|+=%2]\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: [?hunger_production_factory_efficiency_gain_factor_var|+=%2]\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: [?hunger_production_speed_buildings_factor_var|+=%2]\n$MODIFIER_RESEARCH_SPEED_FACTOR$: [?hunger_research_speed_factor_var|+=%2]\n$MODIFIERS_ARMY_ATTACK_FACTOR$: [?hunger_industrial_capacity_var|+=%1]\n$MODIFIERS_ARMY_DEFENCE_FACTOR$: [?hunger_industrial_capacity_var|+=%1]\n$MODIFIER_ARMY_ORG_REGAIN$: [?hunger_industrial_capacity_var|+=%1]\n$MODIFIER_ARMY_SPEED_FACTOR$: [?hunger_production_speed_buildings_factor_var|+=%1]\n\nКроме того, ожидается еженедельное изменение населения на [?hunger_change_population_weekly_var|+=%2], что в §Hсреднем§! равняется [?hunger_change_population_total_var|+0] §Hтыс. человек§! ([?hunger_change_population_per_state_var|+0*] на §Hрегион§!)."
@@ -74,7 +74,7 @@
     electric_power_title_good_text: "§GПРОБЛЕМЫ СО СНАБЖЕНИЕМ ЭЛЕКТРОЭНЕРГИЕЙ ОТСУТСТВУЮТ§!"
     electric_power_title_bad_debuff_text: "§HТекущие эффекты от нехватки электроэнергии:§!"
     electric_power_debuff_text: "\n$MODIFIER_ENCRYPTION_FACTOR$: [?electric_power_planning_cryption_factor_var|+=%2]\n$MODIFIER_DECRYPTION_FACTOR$: [?electric_power_planning_cryption_factor_var|+=%2]\n$MODIFIER_COORDINATION_BONUS$: [?electric_power_coordination_bonus_var|+=%1]\n$MODIFIER_PLANNING_SPEED$: [?electric_power_planning_cryption_factor_var|+=%1]\n$MODIFIER_MOBILIZATION_SPEED$: [?electric_power_mobilization_speed_var|+=%1]\n$provision_weekly_factor$: [?electric_power_provision_weekly_factor_var|+=%1]\n$MODIFIER_RESEARCH_SPEED_FACTOR$: [?electric_power_research_speed_factor_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?electric_power_industrial_capacity_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: [?electric_power_industrial_capacity_var|+=%2]\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: [?electric_power_production_speed_buildings_factor_var|+=%2]\n$MODIFIER_FUEL_GAIN_FACTOR$: [?electric_power_fuel_gain_factor_var|+=%2]\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?electric_power_local_resources_factor_var|+=%2]"
-    electric_power_dyn: "§RНехватка электроэнергии§!"
+    electric_power_dyn: "£electric_power_pure_icon §RНехватка электроэнергии§!"
     
 ##################
 ### STEEL MILL ###
@@ -87,11 +87,11 @@
 ### PROLETARIAT ###
 ###################
 
-    gta_proletariat_tooltip: "§HТрудовые ресурсы§!\nТекущие трудовые ресурсы: §H[GET_PROLETARIAT_FORMAT_TEXT]§!\n\nВсего трудовых ресурсов: §H[GET_ALL_PROLETARIAT_FORMAT_TEXT]§!\n[GET_PROLETARIAT_PROCESS_STATUS_TEXT] от общего населения страны (§H[GET_MAX_MANPOWER_FORMAT_TEXT]§!)\nНеобходимые трудовые ресурсы: §H[GET_USE_PROLETARIAT_FORMAT_TEXT]§!"
-    gta_proletariat_delayed_tooltip: "Трудовые ресурсы отображает количество трудоспособного населения вашей страны."
+    gta_proletariat_tooltip: "§HТрудовые ресурсы§!\nТекущие трудовые ресурсы: §H[GET_PROLETARIAT_FORMAT_TEXT]§!\n\nВсего трудовых ресурсов: §H[GET_ALL_PROLETARIAT_FORMAT_TEXT]§! ([?ROOT.ACTUAL_proletariat_factor_var|2%H])\n[GET_PROLETARIAT_PROCESS_STATUS_TEXT] от общего населения страны (§H[GET_MAX_MANPOWER_FORMAT_TEXT]§!)\nИспользуемые трудовые ресурсы: §H[GET_USE_PROLETARIAT_FORMAT_TEXT]§!\n\nЗаинтересованность в экономическом развитии: [?ROOT.interest_in_economic_development_base|2%H]"
+    gta_proletariat_delayed_tooltip: "Трудовые ресурсы отображает количество трудоспособного населения вашей страны.\n\nПараметр §HЗаинтересованность в экономическом развитии§! косвенно влияет на количество доступных §Hтрудовых ресурсов§! страны и §Hуменьшается§! по мере роста §Hпромышленности§!."
     
     GET_PROLETARIAT_IN_PROCESS_TEXT: "[?ROOT.current_proletariat_percent_var|2H%] (примерно [?ROOT.mobilization_speed_proletariat_var|4%+] проходят мобилизацию труда ежедневно)"
-    GET_PROLETARIAT_STABLE_TEXT: "Доступно [?ROOT.modifier@proletariat_factor|2H%]"
+    GET_PROLETARIAT_STABLE_TEXT: "Доступно [?ROOT.ACTUAL_proletariat_factor_var|2H%]"
     
     GET_PROLETARIAT_IN_NUM_TEXT: "[?ROOT.TOTAL_num_proletariat|0]"
     GET_PROLETARIAT_IN_K_TEXT: "[?ROOT.TOTAL_num_proletariat_k|2]K"
@@ -128,6 +128,7 @@
     num_proletariat_k: "£proletariat_texticon Изменение трудовых ресурсов (K)"
     proletariat_factor: "£proletariat_texticon Трудовые ресурсы"
     mobilization_speed_proletariat: "£proletariat_texticon Мобилизация труда"
+    interest_in_economic_development_factor: "£ETH_imperial_treasury Заинтересованность в экономическом развитии"
     
     state_resource_cost_iron: "Расход железа"
     

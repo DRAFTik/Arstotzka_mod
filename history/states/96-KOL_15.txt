@@ -2,6 +2,9 @@ state={
 	id=96
 	name="STATE_96"
 	history={
+		victory_points = {
+			448 5
+		}
 		buildings = {
 			infrastructure = 1
 			arms_factory = 2
@@ -11,10 +14,10 @@ state={
 		add_core_of = KOL
 	}
 	provinces={
-		58 139 429 448 572 675 700 723 768 988 991 1232 1816 1844 
+		58 139 429 448 572 723 768 988 991 1816 1844 
 	}
 	manpower=1259141
 	buildings_max_level_factor=1.000
-	local_supplies=0.000
 	state_category=town
+	local_supplies=0.000
 }

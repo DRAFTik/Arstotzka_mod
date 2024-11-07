@@ -4,11 +4,11 @@ on_actions = {
 		effect = {
 			set_variable = { global.num_of_extra_tank_school_var = 5 }
 			every_possible_country = {
-				default_party_popularity_PP_gain	= yes
-				calculate_electric_power_effect		= yes
-				calculate_electric_power_LOG_effect	= yes
-				calculate_electric_power_dyn		= yes
-				calculate_proletariat_start_effect	= yes
+				default_party_popularity_PP_gain			= yes
+				calculate_electric_power_effect				= yes
+				calculate_electric_power_LOG_effect			= yes
+				calculate_electric_power_dyn				= yes
+				calculate_proletariat_start_effect			= yes
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): infrastructure: [?infrastructure]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): arms_factory: [?arms_factory]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): industrial_complex: [?industrial_complex]"
@@ -39,11 +39,11 @@ on_actions = {
 	on_daily_SAI = {
 		effect = {
 			every_country = {
-				calculate_electric_power_effect		= yes
-				calculate_electric_power_dyn		= yes		# дебаф электричества
-				calculate_provision_daily_effect	= yes		# стата
-				calculate_steel_mill_effect			= yes		# сталь
-				calculate_proletariat_effect		= yes		# рабсила
+				calculate_electric_power_effect				= yes
+				calculate_electric_power_dyn				= yes		# дебаф электричества
+				calculate_provision_daily_effect			= yes		# стата
+				calculate_steel_mill_effect					= yes		# сталь
+				calculate_proletariat_effect				= yes		# рабсила
 				
 ### ОБЩЕМЕХАНЫ // generic_building_organization
 				if = {

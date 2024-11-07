@@ -36,6 +36,7 @@
 #	modifier@mobilization_speed_proletariat
 #	modifier@proletariat_factor
 #	modifier@num_proletariat_k
+#	modifier@interest_in_economic_development_factor
 
 
 default_party_popularity_PP_gain = {
@@ -929,8 +930,11 @@ calculate_steel_mill_effect = {
 }
 
 calculate_proletariat_start_effect = {
+	calculate_in_economic_development_factor	= yes
+	calculate_ACTUAL_proletariat_factor_effect	= yes
+	
 	set_temp_variable		= { TOTAL_num_proletariat_goal_k_temp = max_manpower_k }
-	multiply_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = modifier@proletariat_factor }
+	multiply_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = ACTUAL_proletariat_factor_var }
 	set_variable			= { TOTAL_num_ALL_proletariat_k = TOTAL_num_proletariat_goal_k_temp }
 	set_variable			= { TOTAL_num_USE_proletariat_k = modifier@num_proletariat_k }
 	add_to_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = TOTAL_num_USE_proletariat_k }
@@ -938,13 +942,15 @@ calculate_proletariat_start_effect = {
 	set_variable			= { TOTAL_num_USE_proletariat_k_pozitiv = modifier@num_proletariat_k }
 	multiply_variable		= { TOTAL_num_USE_proletariat_k_pozitiv = -1 }
 	
+#	multiply_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = interest_in_economic_development_base }
+	
 	set_variable			= { TOTAL_num_proletariat	= TOTAL_num_proletariat_goal_k_temp }
 	multiply_variable		= { TOTAL_num_proletariat	= 1000 }
 	set_variable			= { TOTAL_num_proletariat_k	= TOTAL_num_proletariat_goal_k_temp }
 	set_variable			= { TOTAL_num_proletariat_m	= TOTAL_num_proletariat_goal_k_temp }
 	divide_variable			= { TOTAL_num_proletariat_m	= 1000 }
 	
-	# Сколько есть/должно быть от modifier@proletariat_factor
+	# Сколько есть/должно быть от calculate_ACTUAL_proletariat_factor_effect
 	set_variable			= { TOTAL_num_ALL_proletariat	= TOTAL_num_ALL_proletariat_k }
 	multiply_variable		= { TOTAL_num_ALL_proletariat	= 1000 }
 	set_variable			= { TOTAL_num_ALL_proletariat_m	= TOTAL_num_ALL_proletariat_k }
@@ -969,9 +975,15 @@ calculate_proletariat_start_effect = {
 	set_variable			= { current_proletariat_percent_var = t1 }
 }
 
+calculate_ACTUAL_proletariat_factor_effect = {
+	set_temp_variable		= { proletariat_factor_temp = modifier@proletariat_factor }
+	multiply_temp_variable	= { proletariat_factor_temp = interest_in_economic_development_base }
+	set_variable			= { ACTUAL_proletariat_factor_var = proletariat_factor_temp }				# Целевой % пролов при перемноженных факторах
+}
+
 calculate_proletariat_effect = {
 	set_temp_variable		= { TOTAL_num_proletariat_goal_k_temp = max_manpower_k }
-	multiply_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = modifier@proletariat_factor }
+	multiply_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = ACTUAL_proletariat_factor_var }
 	set_variable			= { TOTAL_num_ALL_proletariat_k = TOTAL_num_proletariat_goal_k_temp }
 	set_variable			= { TOTAL_num_USE_proletariat_k = modifier@num_proletariat_k }
 	add_to_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = TOTAL_num_USE_proletariat_k }
@@ -981,7 +993,8 @@ calculate_proletariat_effect = {
 	
 	set_temp_variable		= { TOTAL_num_proletariat_k_temp = TOTAL_num_proletariat_k }
 	
-	calculate_mobilization_speed_proletariat_effect = yes
+	calculate_ACTUAL_proletariat_factor_effect		= yes
+	calculate_mobilization_speed_proletariat_effect	= yes
 	
 	set_variable			= { TOTAL_num_proletariat	= TOTAL_num_proletariat_k_temp }
 	multiply_variable		= { TOTAL_num_proletariat	= 1000 }
@@ -989,7 +1002,7 @@ calculate_proletariat_effect = {
 	set_variable			= { TOTAL_num_proletariat_m	= TOTAL_num_proletariat_k_temp }
 	divide_variable			= { TOTAL_num_proletariat_m	= 1000 }
 	
-	# Сколько есть/должно быть от modifier@proletariat_factor
+	# Сколько есть/должно быть от calculate_ACTUAL_proletariat_factor_effect
 	set_variable			= { TOTAL_num_ALL_proletariat	= TOTAL_num_ALL_proletariat_k }
 	multiply_variable		= { TOTAL_num_ALL_proletariat	= 1000 }
 	set_variable			= { TOTAL_num_ALL_proletariat_m	= TOTAL_num_ALL_proletariat_k }
@@ -1010,6 +1023,10 @@ calculate_proletariat_effect = {
 	set_temp_variable		= { t1 = TOTAL_num_proletariat_k }
 	add_to_temp_variable	= { t1 = TOTAL_num_USE_proletariat_k_pozitiv }
 	divide_temp_variable	= { t1 = max_manpower_k }
+	
+	# учет заинтересованности в развитии
+#	multiply_temp_variable	= { t1 = interest_in_economic_development_base }
+	
 	set_variable			= { current_proletariat_percent_var = t1 }
 }
 
@@ -1017,18 +1034,23 @@ calculate_mobilization_speed_proletariat_effect = {
 	if = {
 		limit = {
 #			check_variable		= { var = TOTAL_num_proletariat_goal_k_temp	value = TOTAL_num_proletariat_k	compare = not_equals }
-			check_variable = { var = current_proletariat_percent_var	value = modifier@proletariat_factor	compare = not_equals }
+#			check_variable = { var = current_proletariat_percent_var	value = modifier@proletariat_factor	compare = not_equals }
+			check_variable = { var = current_proletariat_percent_var	value = ACTUAL_proletariat_factor_var	compare = not_equals }
 		}
 		set_temp_variable		= { mobilization_speed_proletariat_temp = 0.01 }
 		multiply_temp_variable	= { mobilization_speed_proletariat_temp = modifier@mobilization_speed_proletariat }
 		add_to_temp_variable	= { mobilization_speed_proletariat_temp = 0.01 }											# итоговое значение ежедневного прироста пролов в %
 		set_variable			= { mobilization_speed_proletariat_var = mobilization_speed_proletariat_temp }
 		
+		calculate_in_economic_development_factor	= yes
 		# определение дельты законов в %
 		set_temp_variable		= { target_proletariat_percent = modifier@proletariat_factor }
 		set_temp_variable		= { ex_proletariat_percent = TOTAL_num_proletariat_k }
 		divide_temp_variable	= { ex_proletariat_percent = max_manpower_k }
 		subtract_from_temp_variable = { target_proletariat_percent = ex_proletariat_percent }
+			# учет заинтересованности в развитии
+		multiply_temp_variable	= { target_proletariat_percent = interest_in_economic_development_base }
+	
 		set_variable			= { target_proletariat_percent_var = target_proletariat_percent }
 		
 		# число дней
@@ -1079,6 +1101,17 @@ calculate_mobilization_speed_proletariat_effect = {
 			multiply_variable	= { mobilization_speed_proletariat_var = -1 }												# для текст
 		}
 	}
+}
+
+calculate_in_economic_development_factor = {
+	set_temp_variable			= { interest_in_economic_development_base_temp = 1 }
+	set_temp_variable			= { t1 = num_of_factories }
+	set_temp_variable			= { t2 = t1 }
+	add_to_temp_variable		= { t2 = 100 }
+	divide_temp_variable		= { t1 = t2 }
+	subtract_from_temp_variable	= { interest_in_economic_development_base_temp = t1 }
+	add_to_temp_variable		= { interest_in_economic_development_base_temp = modifier@interest_in_economic_development_factor }
+	set_variable				= { interest_in_economic_development_base = interest_in_economic_development_base_temp }
 }
 
 effect_1 = {

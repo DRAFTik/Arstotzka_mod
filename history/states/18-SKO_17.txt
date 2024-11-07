@@ -6,6 +6,9 @@ state={
 		aluminium = 8
 	}
 	history={
+		victory_points = {
+			1371 2
+		}
 		buildings = {
 			agro_complex = 1
 		}

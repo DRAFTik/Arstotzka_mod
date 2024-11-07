@@ -141,3 +141,10 @@ mobilization_speed_proletariat = {
 	precision = 2
 	category = country
 }
+
+interest_in_economic_development_factor = {
+	color_type = neutral
+	value_type = percentage
+	precision = 2
+	category = country
+}

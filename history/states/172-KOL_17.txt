@@ -1,0 +1,22 @@
+state={
+	id=172
+	name="STATE_172"
+	history={
+		victory_points = {
+			298 2 
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		owner = KOL
+		add_core_of = KOL
+	}
+	provinces={
+		298 690 989 1261 1881 
+	}
+	manpower=603796
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

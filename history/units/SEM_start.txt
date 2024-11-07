@@ -150,12 +150,12 @@ instant_effect = {
 	
 	add_equipment_production = {
 		equipment = {
-			type = support_equipment_1
+			type = artillery_equipment_1
 			creator = "SEM"
 		}
 		requested_factories = 1
 		progress = 0.6
 		efficiency = 100
-		industrial_manufacturer = mio:generic_support_equipment_organization
+		industrial_manufacturer = mio:generic_artillery_organization
 	}
 }

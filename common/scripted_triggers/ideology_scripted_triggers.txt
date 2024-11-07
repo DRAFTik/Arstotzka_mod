@@ -1,16 +1,13 @@
 is_democratic_ideology = {
 	OR = {
-		has_government = social_democrat
-		has_government = social_liberal
 		has_government = market_liberal
-		has_government = social_conservative
+		has_government = mysticist
 		has_government = authoritarian_democrat
 	}
 }
 
 is_fascism_ideology = {
 	OR = {
-		has_government = paternal_autocrat
 		has_government = national_populist
 	}
 }
@@ -24,14 +21,6 @@ is_communism_ideology = {
 
 is_neighbor_ideology = {
 	OR = {
-		AND = {
-			is_communism_ideology = yes
-			FROM = { has_government = social_democrat }
-		}
-		AND = {
-			has_government = social_democrat
-			FROM = { is_communism_ideology = yes }
-		}
 		AND = {
 			is_fascism_ideology = yes
 			FROM = { has_government = authoritarian_democrat }

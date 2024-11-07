@@ -1,0 +1,121 @@
+﻿
+units= {
+
+	##### Naval OOB #####
+	fleet = {
+		name = "National Defense Navy"
+		naval_base = 2010
+		
+		task_force = {
+			name = "1st Submarine Fleet"
+			location = 405
+			
+			# Subs #
+			ship = { name = "1st Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "2nd Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "3rd Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "4th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "5th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "6th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "7th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "8th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+		}
+		
+		
+		task_force = {
+			name = "2nd Submarine Fleet"
+			location = 404
+			
+			# Subs #
+			ship = { name = "9th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "10th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "11th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "12th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "13th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "14th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+			ship = { name = "15th Altan class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = ARS   version_name = "Altan" } } }
+		}
+		
+		task_force = {
+			name = "Destroyer fleet"
+			location = 1218
+			
+			ship = { name = "1st Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "2nd Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "3rd Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "4th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "5th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "6th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "7th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "8th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "9th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "10th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "11th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "12th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "13th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "14th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "15th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "16th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "17th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "18th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "19th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			ship = { name = "20th Ferdzing class Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = ARS   version_name = "Ferdzing" } } }
+			
+		}
+		
+		task_force = {
+			name = "Main fleet"
+			location = 2010
+			
+			# Cruisers #
+			ship = { name = "1st ATSS class Nirsk Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = ARS   version_name = "ATSS Nirsk" } } }
+			ship = { name = "2nd ATSS class Nirsk Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = ARS   version_name = "ATSS Nirsk" } } }
+			ship = { name = "3rd ATSS class Nirsk Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = ARS   version_name = "ATSS Nirsk" } } }
+			ship = { name = "4th ATSS class Nirsk Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = ARS   version_name = "ATSS Nirsk" } } }
+			ship = { name = "5th ATSS class Nirsk Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = ARS   version_name = "ATSS Nirsk" } } }
+			ship = { name = "6th ATSS class Nirsk Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = ARS   version_name = "ATSS Nirsk" } } }
+			ship = { name = "7th ATSS class Nirsk Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = ARS   version_name = "ATSS Nirsk" } } }
+			ship = { name = "8th ATSS class Nirsk Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = ARS   version_name = "ATSS Nirsk" } } }
+			
+			# (super heavy) Battleships #
+			ship = { name = "1st ATSS class Paradizna Battleship"   pride_of_the_fleet = yes   start_experience_factor = 1.0   definition = battleship   equipment = { ship_hull_heavy_1 = { amount = 1   owner = ARS   version_name = "ATSS Paradizna" } } }
+			ship = { name = "2nd ATSS class Paradizna Battleship"   start_experience_factor = 1.0   definition = battleship   equipment = { ship_hull_heavy_1 = { amount = 1   owner = ARS   version_name = "ATSS Paradizna" } } }
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	### Ships Under Contruction ###
+	
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "ARS"
+			version_name = "Altan"
+		}
+		name = "16th Altan class Submarine"
+		requested_factories = 2
+		progress = 0.9
+		amount = 1
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_1
+			creator = "ARS"
+			version_name = "ATSS Paradizna"
+		}
+		name = "3rd ATSS class Paradizna Battleship"
+		requested_factories = 3
+		progress = 0.98
+		amount = 1
+	}
+}
+

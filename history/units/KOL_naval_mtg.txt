@@ -1,0 +1,120 @@
+﻿
+units= {
+
+	##### Naval OOB #####
+	fleet = {
+		name = "Kolechian Navy"			
+		naval_base = 844
+		
+		task_force = {
+			name = "Submarine Fleet"
+			location = 2045
+			
+			# Subs #
+			ship = { name = "1st Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "2nd Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "3rd Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "4th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "5th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "6th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "7th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "8th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "9th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "10th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "11th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "12th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "13th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+			ship = { name = "14th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+		}
+		
+		task_force = {
+			name = "Spy Submarine Fleet"
+			location = 2540
+			
+			# Subs #
+			ship = { name = "15th Starfish class Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = KOL   version_name = "Starfish" } } }
+		}
+		
+		task_force = {				
+			name = "Destroyer fleet"
+			location = 844
+			
+			ship = { name = "1st Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "2nd Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "3rd Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "4th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "5th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "6th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "7th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "8th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "9th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "10th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "11th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "12th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "13th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "14th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "15th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "16th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "17th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "18th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "19th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			ship = { name = "20th Swordfish Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = KOL   version_name = "Swordfish" } } }
+			
+		}
+		
+		task_force = {				
+			name = "Main fleet"
+			location = 2939
+			
+			# Cruisers #
+			ship = { name = "1st ISS Verilla Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = KOL   version_name = "ISS Verilla" } } }
+			ship = { name = "2nd ISS Verilla Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = KOL   version_name = "ISS Verilla" } } }
+			ship = { name = "3rd ISS Verilla Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = KOL   version_name = "ISS Verilla" } } }
+			ship = { name = "4th ISS Verilla Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = KOL   version_name = "ISS Verilla" } } }
+			ship = { name = "5th ISS Verilla Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = KOL   version_name = "ISS Verilla" } } }
+			ship = { name = "6th ISS Verilla Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = KOL   version_name = "ISS Verilla" } } }
+			ship = { name = "7th ISS Verilla Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = KOL   version_name = "ISS Verilla" } } }
+			ship = { name = "8th ISS Verilla Cruiser"   start_experience_factor = 0.3   definition = heavy_cruiser   equipment = { ship_hull_cruiser_2 = { amount = 1   owner = KOL   version_name = "ISS Verilla" } } }
+			
+			# (super heavy) Battleships #
+			ship = { name = "1st ISS Class Yurko Battleship"   pride_of_the_fleet = yes   start_experience_factor = 1.0   definition = battleship   equipment = { ship_hull_heavy_1 = { amount = 1   owner = KOL   version_name = "ISS Class Yurko" } } }
+			ship = { name = "2nd ISS Class Yurko Battleship"   start_experience_factor = 1.0   definition = battleship   equipment = { ship_hull_heavy_1 = { amount = 1   owner = KOL   version_name = "ISS Class Yurko" } } }
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	### Ships Under Contruction ###
+	
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "KOL"
+			version_name = "Starfish"
+		}
+		name = "16th Starfish class Submarine"
+		requested_factories = 1
+		progress = 0.9
+		amount = 1
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_1
+			creator = "KOL"
+			version_name = "ISS Class Yurko"
+		}
+		name = "3rd ISS Class Yurko Battleship"
+		requested_factories = 2
+		progress = 0.98
+		amount = 1
+	}
+}
+
