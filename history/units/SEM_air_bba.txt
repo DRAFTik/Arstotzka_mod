@@ -1,0 +1,54 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Drewlon
+	32 = {
+		medium_plane_airframe_0 = {
+			owner = "SEM" 
+			amount = 10
+			version_name = "DR-I"
+		}
+	}
+	# Agunate
+	35 = {
+		small_plane_airframe_0 = {
+			owner = "SEM" 
+			amount = 15
+			version_name = "AG-I"
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "SEM" 
+			version_name = "AG-I"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "SEM" 
+			version_name = "DR-I"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+}

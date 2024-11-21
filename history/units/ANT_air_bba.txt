@@ -1,0 +1,64 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Glorian
+	70 = { 
+		small_plane_airframe_0 = {
+			owner = "ANT" 
+			amount = 25
+			version_name = "GL-2"
+		}
+		medium_plane_airframe_0 = {
+			owner = "ANT" 
+			amount = 15
+			version_name = "MR-1"
+		}
+	}
+	# Marmero
+	72 = { 
+		small_plane_airframe_0 = {
+			owner = "ANT" 
+			amount = 15
+			version_name = "GL-2"
+		}
+		medium_plane_airframe_0 = {
+			owner = "ANT" 
+			amount = 10
+			version_name = "MR-1"
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "ANT" 
+			version_name = "GL-2"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "ANT" 
+			version_name = "MR-1"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+}

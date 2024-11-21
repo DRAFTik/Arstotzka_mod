@@ -1,7 +1,7 @@
 guiTypes = {
 	containerWindowType = {
 		name = "countrydoctrineview"
-		position = { x=-3 y=78 }
+		position = { x=-3 y=108 }					#-3/78
 		size = { width = 100%% height = 100%% }
 		fade_time = 400
 		fade_type = linear
@@ -31,30 +31,38 @@ guiTypes = {
 				position = { x=0 y=0 }
 				size = { width = 2100 height = 100% }
 			}
-	
+
+
+### BGs
+
+			iconType = {
+				name ="cls_warfare_bg"
+				spriteType = "GFX_cls_warfare_bg"
+				position = { x=85 y=13 }
+			}
 	
 			iconType = {
 				name ="mob_warfare_bg"
 				spriteType = "GFX_mob_warfare_bg"
-				position = { x=85 y=33 }
+				position = { x=85 y=357 }			# 85*33 // y=+202+122=324
 			}			
 				
 			iconType = {
 				name ="sup_firepower_bg"
 				spriteType = "GFX_sup_firepower_bg"
-				position = { x=575 y=33 }
+				position = { x=575 y=357 }			# 575*33
 			}	
 	
 			iconType = {
 				name ="grand_battleplan_bg"
 				spriteType = "GFX_grand_battleplan_bg"
-				position = { x=1050 y=33 }
+				position = { x=1050 y=357 }			# 1050*33
 			}
 
 			iconType = {
 				name = "highlight_grand_battle_plan"
 				spriteType = "GFX_tutorial_research_small_item_icon_glow"
-				position = { x=1245 y=291}
+				position = { x=1245 y=615}			# 1245*291
 				hide = yes
 				alwaystransparent = yes
 			}
@@ -62,12 +70,40 @@ guiTypes = {
 			iconType = {
 				name ="mass_assault_bg"
 				spriteType = "GFX_mass_assault_bg"
-				position = { x=1535 y=33 }
-			}		
+				position = { x=1535 y=357 }			# 1535*33
+			}
+			
+			iconType = {
+				name ="asymmetric_warfare_bg"
+				spriteType = "GFX_asymmetric_warfare_bg"
+				position = { x=2010 y=357 }			# 2010*33
+			}
+			
+			iconType = {
+				name ="war_of_attrition_bg"
+				spriteType = "GFX_war_of_attrition_bg"
+				position = { x=2485 y=357 }			# 2485*33
+			}
+
+
+### TITLEs
+			
+			instantTextBoxType = {
+				name = "cls_warfare_title"
+				position = { x = 840 y = 25 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "CLS_WARFARE_DOCTRINE_LABEL"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
 			
 			instantTextBoxType = {
 				name = "mob_warfare_title"
-				position = { x = 120 y = 35 }
+				position = { x = 120 y = 359 }		# 120*35 // y=+202+122=324
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -80,7 +116,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "superior_firepower_title"
-				position = { x = 600 y = 35 }
+				position = { x = 600 y = 359 }		# 600*35
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -93,7 +129,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "grand_battleplan_title"
-				position = { x = 1080 y = 35 }
+				position = { x = 1080 y = 359 }		# 1080*35
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -106,7 +142,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "mass_assault_title"
-				position = { x = 1560 y = 35 }
+				position = { x = 1560 y = 359 }		# 1560*35
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -117,15 +153,9 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
-			iconType = {
-				name ="asymmetric_warfare_bg"
-				spriteType = "GFX_asymmetric_warfare_bg"
-				position = { x=2010 y=33 }
-			}
-			
 			instantTextBoxType = {
 				name = "asymmetric_warfare_title"
-				position = { x = 2040 y = 35 }
+				position = { x = 2040 y = 359 }		# 2040*35
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -136,15 +166,9 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
-			iconType = {
-				name ="war_of_attrition_bg"
-				spriteType = "GFX_war_of_attrition_bg"
-				position = { x=2485 y=33 }
-			}
-			
 			instantTextBoxType = {
 				name = "war_of_attrition_title"
-				position = { x = 2605 y = 35 }
+				position = { x = 2605 y = 359 }		# 2605*35
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -155,9 +179,25 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 
+
+### DESCs
+			
+			instantTextBoxType = {
+				name = "cls_warfare_desc"
+				position = { x = 750 y = 62 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "CLS_WARFARE_DOCTRINE_DESC"
+				maxWidth = 600
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			
 			instantTextBoxType = {
 				name = "mob_warfare_desc"
-				position = { x = 140 y = 90 }
+				position = { x = 140 y = 414 }		# 140*90 // y=+202+122=324
 				textureFile = ""
 				font = "hoi_20b"
 				borderSize = {x = 0 y = 4}
@@ -170,7 +210,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "superior_firepower_desc"
-				position = { x = 600 y = 90 }
+				position = { x = 600 y = 414 }		# 600*90
 				textureFile = ""
 				font = "hoi_20b"
 				borderSize = {x = 0 y = 4}
@@ -183,7 +223,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "grand_battleplan_desc"
-				position = { x = 1100 y = 90 }
+				position = { x = 1100 y = 414 }		# 1100*90
 				textureFile = ""
 				font = "hoi_20b"
 				borderSize = {x = 0 y = 4}
@@ -195,8 +235,8 @@ guiTypes = {
 			}
 			
 			instantTextBoxType = {
-				name = "mass assault_desc"
-				position = { x = 1606 y = 90 }
+				name = "mass_assault_desc"
+				position = { x = 1606 y = 414 }		# 1606*90
 				textureFile = ""
 				font = "hoi_20b"
 				borderSize = {x = 0 y = 4}
@@ -209,7 +249,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "asymmetric_warfare_desc"
-				position = { x = 2100 y = 90 }
+				position = { x = 2100 y = 414 }		# 2100*90
 				textureFile = ""
 				font = "hoi_20b"
 				borderSize = {x = 0 y = 4}
@@ -222,7 +262,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "war_of_attrition_desc"
-				position = { x = 2660 y = 90 }
+				position = { x = 2660 y = 414 }		# 2660*90
 				textureFile = ""
 				font = "hoi_20b"
 				borderSize = {x = 0 y = 4}
@@ -232,10 +272,13 @@ guiTypes = {
 				format = center
 				Orientation = "UPPER_LEFT"
 			}
-			
+
+
+### SUBTITLE1s
+
 			instantTextBoxType = {
 				name = "mob_warfare_subtitle1"
-				position = { x = 110 y = 435 }
+				position = { x = 110 y = 759 }		# 110*435 // y=+202+122=324
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -249,7 +292,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "mob_warfare_subtitle2"
-				position = { x = 355 y = 455 }
+				position = { x = 355 y = 759 }		# 355*455
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -263,7 +306,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "mob_warfare_subtitle3"
-				position = { x = 110 y = 919 }
+				position = { x = 110 y = 1243 }		# 110*919
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -277,7 +320,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "mob_warfare_subtitle4"
-				position = { x = 360 y = 919 }
+				position = { x = 360 y = 1243 }		# 360*919
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -291,7 +334,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "sup_firepower_subtitle1"
-				position = { x = 600 y = 435 }
+				position = { x = 600 y = 750 }		# 600*435
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -305,7 +348,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "sup_firepower_subtitle2"
-				position = { x = 850 y = 435 }
+				position = { x = 850 y = 750 }		# 850*435
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -319,7 +362,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "sup_firepower_subtitle3"
-				position = { x = 600 y = 795 }
+				position = { x = 600 y = 1119 }		# 600*795
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -333,7 +376,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "sup_firepower_subtitle4"
-				position = { x = 840 y = 795 }
+				position = { x = 840 y = 1119 }		# 840*795
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -347,7 +390,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "grand_battleplan_subtitle1"
-				position = { x = 1070 y = 575 }
+				position = { x = 1070 y = 899 }		# 1070*575
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -361,7 +404,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "grand_battleplan_subtitle2"
-				position = { x = 1310 y = 575 }
+				position = { x = 1310 y = 899 }		# 1310*575
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -375,7 +418,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "mass_assault_subtitle1"
-				position = { x = 1560 y = 435 }
+				position = { x = 1560 y = 759 }		# 1560*435
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -389,7 +432,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "mass_assault_subtitle2"
-				position = { x = 1816 y = 435 }
+				position = { x = 1816 y = 759 }		# 1816*435
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -403,7 +446,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "asymmetric_warfare_subtitle1"
-				position = { x = 2040 y = 435 }
+				position = { x = 2040 y = 759 }		# 2040*435
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -417,7 +460,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "asymmetric_warfare_subtitle2"
-				position = { x = 2296 y = 445 }
+				position = { x = 2296 y = 769 }		# 2296*445
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -431,7 +474,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "war_of_attrition_subtitle1"
-				position = { x = 2530 y = 555 }
+				position = { x = 2530 y = 879 }		# 2530*555
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -445,7 +488,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "war_of_attrition_subtitle2"
-				position = { x = 2790 y = 555 }
+				position = { x = 2790 y = 879 }		# 2790*555
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -459,7 +502,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "war_of_attrition_subtitle3"
-				position = { x = 2876 y = 435 }
+				position = { x = 2876 y = 759 }		# 2876*435
 				textureFile = ""
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
@@ -471,9 +514,26 @@ guiTypes = {
 				pdx_tooltip = "ABSOLUTE_SELF_SACRIFICE_LABEL_TT"
 			}
 
+
+### GRIDBOXTYPEs
+			
+			gridboxtype = {
+				name = "linar_infantry_tree"
+				position = { x=30 y=-20 }
+				size = { width = 1920 height = 353 }
+				slotsize = { width = 60 height = 60 }
+				format = "LEFT"
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_fullborder_tiled"
+					position = { x=50 y=20 }
+				}
+			}
+			
 			gridboxtype = {
 				name = "mobile_warfare_tree"
-				position = { x=80 y=172 }
+				position = { x=80 y=496 }				# 80*172 // y=+202+122=324
 				size = { width = 478 height = 1350 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
@@ -487,7 +547,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "superior_firepower_tree"
-				position = { x=560 y=172 }
+				position = { x=560 y=496 }				# 560*172
 				size = { width = 480 height = 1350 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
@@ -501,7 +561,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "trench_warfare_tree"
-				position = { x=1040 y=172 }
+				position = { x=1040 y=496 }				# 1040*172
 				size = { width = 480 height = 1350 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
@@ -516,7 +576,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "mass_assault_tree"
-				position = { x=1520 y=172 }
+				position = { x=1520 y=496 }				# 1520*172
 				size = { width = 480 height = 1350 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
@@ -531,7 +591,7 @@ guiTypes = {
 			
 			gridboxtype = {
 				name = "peoples_army_asy_tree"
-				position = { x=2000 y=172 }
+				position = { x=2000 y=496 }				# 2000*172
 				size = { width = 480 height = 1350 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
@@ -546,9 +606,9 @@ guiTypes = {
 			
 			gridboxtype = {
 				name = "armed_people_tree"
-				position = { x=2480 y=172 }
-				size = { width = 660 height = 1350 }	#480*1350
-				slotsize = { width=65 height= 60 }		#60*60
+				position = { x=2480 y=496 }				# 2480*172
+				size = { width = 660 height = 1350 }	# 480*1350
+				slotsize = { width=65 height= 60 }		# 60*60
 				format = "UP"
 				
 				background = {
@@ -559,6 +619,9 @@ guiTypes = {
 				
 			}
 		}
+
+
+### NAVAL_DOCTRINE
 
 		containerWindowType = {
 			name = "naval_doctrine_folder"
@@ -720,6 +783,9 @@ guiTypes = {
 				}
 			}
 		}
+
+
+### AIR_DOCTRINE
 
 		containerWindowType = {
 			name = "air_doctrine_folder"
@@ -947,7 +1013,9 @@ guiTypes = {
 			}
 		}
 		
-		
+
+### SPECIAL_FORCES_DOCTRINE
+
 		containerWindowType = {
 			name = "special_forces_doctrine_folder"
 			position = { x=0 y=47 }

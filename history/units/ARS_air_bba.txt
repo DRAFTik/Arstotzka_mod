@@ -1,0 +1,107 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Paradizna
+	148 = { 
+		small_plane_airframe_0 = {
+			owner = "ARS" 
+			amount = 35
+			version_name = "PAR-3"
+		}
+		medium_plane_airframe_0 = {
+			owner = "ARS" 
+			amount = 25
+			version_name = "TRE-2"
+		}
+		large_plane_airframe_0 = {
+			owner = "ARS" 
+			amount = 5
+			version_name = "ORV-5"
+		}
+	}
+	# Trevven
+	150 = { 
+		small_plane_airframe_0 = {
+			owner = "ARS" 
+			amount = 25
+			version_name = "PAR-3"
+		}
+		medium_plane_airframe_0 = {
+			owner = "ARS" 
+			amount = 25
+			version_name = "TRE-2"
+		}
+	}
+	# Orvech Vonor
+	166 = { 
+		small_plane_airframe_0 = {
+			owner = "ARS" 
+			amount = 20
+			version_name = "PAR-3"
+		}
+		large_plane_airframe_0 = {
+			owner = "ARS" 
+			amount = 15
+			version_name = "ORV-5"
+		}
+	}
+	# Hardovi
+	157 = { 
+		small_plane_airframe_0 = {
+			owner = "ARS" 
+			amount = 14
+			version_name = "PAR-3"
+		}
+		medium_plane_airframe_0 = {
+			owner = "ARS" 
+			amount = 10
+			version_name = "TRE-2"
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "ARS" 
+			version_name = "PAR-3"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "ARS" 
+			version_name = "TRE-2"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_airframe_0
+			creator = "ARS"
+			version_name = "ORV-5"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+		industrial_manufacturer = mio:generic_heavy_aircraft_organization
+	}
+}

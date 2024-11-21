@@ -1,17 +1,970 @@
 technologies = {
 	
 	
-	############## МОБИЛКА
+############## БАЗА №1
+	
+	linar_infantry = {
+		
+		doctrine_name = "CLS_WARFARE_DOCTRINE"
+
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		path = {
+			leads_to_tech = battlefield_fortifications
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = barricades
+			research_cost_coeff = 1
+		}
+		
+		org_loss_when_moving = 0.05
+		category_light_infantry = {
+			max_organisation = 4
+			breakthrough = -0.15
+		}
+
+		doctrine = yes
+		research_cost = 2.25
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 1 y = 2 }
+		}
+		
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		ai_will_do = {
+			factor = 20 
+		}
+		
+		ai_research_weights = {
+			artillery = 1.0
+			air_doctrine = -150.0
+		}
+	}
+	
+	battlefield_fortifications = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		xor = { barricades }
+		
+		max_dig_in = 2
+		dig_in_speed_factor = 0.05
+
+		path = {
+			leads_to_tech = battle_column
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = flank_coverage
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	battle_column = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		category_light_infantry = {
+			breakthrough = 0.05
+		}
+		org_loss_when_moving = -0.05
+		
+		path = {
+			leads_to_tech = riflemans_chain_or_skirmish_line
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 1 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	riflemans_chain_or_skirmish_line = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		category_light_infantry = {
+			breakthrough = 0.1
+		}
+		
+		path = {
+			leads_to_tech = flank_coverage
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = extensive_use_of_supply
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 1 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	flank_coverage = {
+		dependencies = {
+			battlefield_fortifications = 1
+			riflemans_chain_or_skirmish_line = 1
+		}
+		
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		planning_speed = 0.10
+		max_planning = 0.05
+		
+		path = {
+			leads_to_tech = trench_system
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	trench_system = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		max_dig_in = 10
+		dig_in_speed_factor = 0.1
+		dont_lose_dig_in_on_attack = 1.0
+		
+		category_light_infantry = {
+			defense = 0.15
+		}
+		
+		engineer = {
+			entrenchment = 5
+		}
+		
+		path = {
+			leads_to_tech = intermediate_warehouses
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	intermediate_warehouses = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		supply_consumption_factor = -0.1
+		
+		path = {
+			leads_to_tech = layered_defense
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	layered_defense = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		max_dig_in = 5
+
+		category_light_infantry = {
+			defense = 0.15
+		}
+		
+		path = {
+			leads_to_tech = artillery_preparation
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		ai_research_weights = {
+			artillery = 1.0
+		}
+	}
+	
+	artillery_preparation = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		category_artillery = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+		
+		path = {
+			leads_to_tech = wave_offensive
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 18 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		ai_research_weights = {
+			artillery = 1.0
+		}
+	}
+	
+	wave_offensive = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		infantry = {
+			breakthrough = 0.05
+			combat_width = -0.3
+		}
+		
+		path = {
+			leads_to_tech = defense_of_strong_points
+			research_cost_coeff = 1
+		}
+
+		enable_tactic = tactic_human_wave_tactics
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		ai_research_weights = {
+			artillery = 1.0
+		}
+	}
+	
+	defense_of_strong_points = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		max_dig_in = 5
+		dig_in_speed_factor = 0.1
+
+		category_light_infantry = {
+			defense = 0.15
+		}
+		
+		path = {
+			leads_to_tech = infantry_group_tactics
+			research_cost_coeff = 1
+		}
+
+		enable_tactic = tactic_strong_fire_system
+		
+		doctrine = yes
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	infantry_group_tactics = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		org_loss_when_moving = -0.1
+
+		category_light_infantry = {
+			breakthrough = 0.1
+		}
+		
+		path = {
+			leads_to_tech = tank_infantry_breakthrough
+			research_cost_coeff = 1
+		}
+		
+		enable_tactic = tactic_infiltration
+		
+		doctrine = yes
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 24 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		ai_research_weights = {
+			air_doctrine = 150.0
+		}
+	}
+	
+	tank_infantry_breakthrough = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		category_all_infantry = {
+			max_organisation = 3
+			breakthrough = 0.1
+			default_morale = 0.1
+		}
+		category_all_armor = {
+			max_organisation = 2
+			breakthrough = 0.1
+		}
+		armored_car = {
+			max_organisation = 2
+			breakthrough = 0.1
+		}
+		
+		path = {
+			leads_to_tech = barrage_fire
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 26 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	barrage_fire = {
+		
+		xp_research_type = army
+		xp_unlock_cost = 75
+
+		category_artillery = {
+			soft_attack = 0.05
+			breakthrough = 0.1
+		}
+		category_line_artillery = {
+			max_organisation = 5
+		}
+		
+		enable_tactic = tactic_barrage
+		
+		path = {
+			leads_to_tech = doctrine_reform
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 28 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			armor = 10.0
+		}
+	}
+	
+
+
+############## БАЗА №2
+
+	barricades = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		xor = { battlefield_fortifications }
+		
+		max_dig_in = 2
+		dig_in_speed_factor = 0.05
+
+		path = {
+			leads_to_tech = battle_column
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = extensive_use_of_supply
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	extensive_use_of_supply = {
+		dependencies = {
+			barricades = 1
+			riflemans_chain_or_skirmish_line = 1
+		}
+		
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		max_dig_in = 2
+
+		path = {
+			leads_to_tech = cavalry_raids
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	cavalry_raids = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		max_dig_in = 2
+
+		path = {
+			leads_to_tech = machine_gun_squadrons
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	machine_gun_squadrons = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		max_dig_in = 2
+
+		path = {
+			leads_to_tech = self_sufficiency_strategy
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	self_sufficiency_strategy = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		max_dig_in = 2
+
+		path = {
+			leads_to_tech = artillery_groups
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	artillery_groups = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		max_dig_in = 2
+
+		path = {
+			leads_to_tech = tactics_of_urban_battles
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 18 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	tactics_of_urban_battles = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		max_dig_in = 2
+
+		path = {
+			leads_to_tech = exploration_of_strong_points
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	exploration_of_strong_points = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		max_dig_in = 2
+
+		path = {
+			leads_to_tech = rolling_tactics
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	rolling_tactics = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		max_dig_in = 2
+
+		path = {
+			leads_to_tech = tactics_of_building_in_square
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 24 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	tactics_of_building_in_square = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		max_dig_in = 2
+
+		path = {
+			leads_to_tech = artillery_escort
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 26 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	artillery_escort = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		max_dig_in = 2
+		
+		path = {
+			leads_to_tech = doctrine_reform
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 28 }
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+	
+	doctrine_reform = {
+		xp_research_type = army
+		xp_unlock_cost = 75
+		
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+		categories = {
+			land_doctrine
+			cat_classic_warfare
+		}
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 1 y = 30 }
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		ai_research_weights = {
+			infantry_weapons = 2.0
+		}
+	}
+
+	
+	
+############## МОБИЛКА
 	
 	mobile_warfare = {
 		
 		doctrine_name = "MOBILE_WARFARE_DOCTRINE"
 		
+		dependencies = {
+			doctrine_reform = 1
+		}
+		
 		xp_research_type = army
 		xp_unlock_cost = 100
 		
 		
-		xor = { superior_firepower trench_warfare mass_assault peoples_army_asy armed_people } 
+		xor = { superior_firepower trench_warfare mass_assault peoples_army_asy armed_people }
 
 		path = {
 			leads_to_tech = delay 
@@ -998,10 +1951,14 @@ technologies = {
 	
 	
 	
-	############## АРТА
+############## АРТА
 	
 	superior_firepower = {
 		doctrine_name = "SUPERIOR_FIREPOWER_DOCTRINE"
+		
+		dependencies = {
+			doctrine_reform = 1
+		}
 		
 		xp_research_type = army
 		xp_unlock_cost = 100
@@ -1898,10 +2855,14 @@ technologies = {
 	
 	
 	
-	############## ПЛАНЫ
+############## ПЛАНЫ
 	
 	trench_warfare = {
 		doctrine_name = "GRAND_BATTLEPLAN_DOCTRINE"
+		
+		dependencies = {
+			doctrine_reform = 1
+		}
 
 		xp_research_type = army
 		xp_unlock_cost = 100
@@ -2823,10 +3784,14 @@ technologies = {
 	}
 	
 	
-	############## МЯСО
+############## МЯСО
 	
 	mass_assault = {
 		doctrine_name = "MASS_ASSAULT_DOCTRINE"
+		
+		dependencies = {
+			doctrine_reform = 1
+		}
 		
 		xp_research_type = army
 		xp_unlock_cost = 100
@@ -3661,10 +4626,14 @@ technologies = {
 	
 	
 	
-	############## АССИМЕТРИЯ
+############## АССИМЕТРИЯ
 	
 	peoples_army_asy = {
 		doctrine_name = "ASYMMETRIC_WARFARE_DOCTRINE"
+		
+		dependencies = {
+			doctrine_reform = 1
+		}
 		
 		xp_research_type = army
 		xp_unlock_cost = 100
@@ -4892,10 +5861,14 @@ technologies = {
 	}
 	
 	
-	############## ИСТОЩЕНИЕ
+############## ИСТОЩЕНИЕ
 	
 	armed_people = {
 		doctrine_name = "WAR_OF_ATTRITION_DOCTRINE"
+		
+		dependencies = {
+			doctrine_reform = 1
+		}
 		
 		xp_research_type = army
 		xp_unlock_cost = 100

@@ -13,21 +13,27 @@ set_technology = {
 	fuel_silos = 1
 }
 if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "SKO_air_bba"
 	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-		early_submarine = 1
-		transport = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		bba_early_transport_plane = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_transport_plane = 1
+		}
 	}
 }
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
 	}
+	set_naval_oob = "SKO_naval_mtg"
 	set_technology = {
 		basic_torpedo = 1
 		mtg_transport = 1
@@ -50,7 +56,15 @@ if = {
 		basic_secondary_battery = 1
 		improved_secondary_battery = 1
 	}
-	set_naval_oob = "SKO_naval_mtg"
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_submarine = 1
+			transport = 1
+		}
+	}
 }
 
 
@@ -96,6 +110,7 @@ give_market_access = ARS
 
 
 
+### FLEET ###
 
 if = {
     limit = { has_dlc = "Man the Guns" }
@@ -112,10 +127,6 @@ if = {
         }
         obsolete = no
     }
-}
-
-if = {
-    limit = { has_dlc = "Man the Guns" }
     create_equipment_variant = {
         name = "SK Class Sea Monster"
         type = ship_hull_light_1
@@ -134,4 +145,24 @@ if = {
         }
         obsolete = no
     }
+}
+
+
+
+### AIR ###
+
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "GRD I"
+		type = small_plane_airframe_0
+		design_team = mio:generic_light_aircraft_organization
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
 }

@@ -128,7 +128,7 @@ instant_effect = {
 		}
 		name = "5th Keotai Imperial Destroyer"
 		requested_factories = 2
-		progress = 0.85
+		progress = 0.75
 		amount = 1
 		industrial_manufacturer = mio:generic_escort_ship_organization
 	}
@@ -140,7 +140,7 @@ instant_effect = {
 		}
 		name = "11th Haihan Imperial Cruiser"
 		requested_factories = 3
-		progress = 0.85
+		progress = 0.75
 		amount = 1
 		industrial_manufacturer = mio:generic_battle_line_ship_organization
 	}
@@ -152,7 +152,7 @@ instant_effect = {
 		}
 		name = "7th class Nyoshima Heavy Cruiser"
 		requested_factories = 3
-		progress = 0.85
+		progress = 0.80
 		amount = 1
 		industrial_manufacturer = mio:generic_battle_line_ship_organization
 	}

@@ -8,16 +8,17 @@ state={
 	}
 	history={
 		victory_points = {
-			115 2
+			115 25
 		}
 		victory_points = {
-			787 2
+			787 30
 		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
 			steel_mill = 1
 			livestock_complex = 1
+			air_base = 3
 		}
 		owner = ARS
 		add_core_of = ARS

@@ -8,12 +8,13 @@ state={
 	}
 	history={
 		victory_points = {
-			1523 3
+			1523 50
 		}
 		buildings = {
 			arms_factory = 1
 			livestock_complex = 2
 			agro_silo = 1
+			air_base = 3
 		}
 		owner = SEM
 		add_core_of = SEM

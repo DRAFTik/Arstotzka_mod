@@ -8,6 +8,7 @@ technology_categories = {
 	all_resources_category
 	
 	cat_professional_pilots
+	cat_classic_warfare
 	cat_asymmetric_warfare
 	cat_war_of_attrition
 	armored_car_tech

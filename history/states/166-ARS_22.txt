@@ -6,10 +6,11 @@ state={
 	}
 	history={
 		victory_points = {
-			1921 2 
+			1921 40
 		}
 		buildings = {
 			industrial_complex = 1
+			air_base = 2
 		}
 		owner = ARS
 		add_core_of = ARS

@@ -184,3 +184,13 @@ economy_law_up = {
 		add_political_power = 150
 	}
 }
+
+
+drop_all_major = {
+	every_country = { set_major = no }
+}
+set_standart_major = {
+	drop_all_major = yes
+	OBR = { set_major = yes }
+	UNF = { set_major = yes }
+}

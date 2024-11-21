@@ -1,6 +1,11 @@
 spriteTypes = {
 	
 	SpriteType = {
+		name = "GFX_cls_warfare_bg"
+		texturefile = "gfx/interface/technologies/technologies/doctrines/cls_warfare_bg.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_asymmetric_warfare_bg"
 		texturefile = "gfx/interface/technologies/technologies/doctrines/asymmetric_warfare_bg.dds"
 		alwaystransparent = yes

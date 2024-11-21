@@ -1,0 +1,42 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Gerdia
+	13 = {
+		small_plane_airframe_0 = {
+			owner = "SKO" 
+			amount = 13
+			version_name = "GRD I"
+		}
+	}
+	# Ireniea
+	18 = {
+		small_plane_airframe_0 = {
+			owner = "SKO" 
+			amount = 10
+			version_name = "GRD I"
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "SKO" 
+			version_name = "GRD I"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+}

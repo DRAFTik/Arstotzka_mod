@@ -3,10 +3,11 @@ state={
 	name="STATE_150"
 	history={
 		victory_points = {
-			1980 2
+			1980 40
 		}
 		buildings = {
 			dockyard = 1
+			air_base = 2
 		}
 		owner = ARS
 		add_core_of = ARS

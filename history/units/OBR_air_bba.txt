@@ -1,0 +1,112 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Skal
+	60 = { 
+		small_plane_airframe_0 = {
+			owner = "OBR" 
+			amount = 25
+			version_name = "SKA-2"
+		}
+		medium_plane_airframe_0 = {
+			owner = "OBR" 
+			amount = 10
+			version_name = "LOR-2"
+		}
+	}
+	# Lorndaz
+	62 = { 
+		small_plane_airframe_0 = {
+			owner = "OBR" 
+			amount = 14
+			version_name = "SKA-2"
+		}
+		medium_plane_airframe_0 = {
+			owner = "OBR" 
+			amount = 5
+			version_name = "LOR-2"
+		}
+	}
+	# Arben
+	37 = { 
+		small_plane_airframe_0 = {
+			owner = "OBR" 
+			amount = 20
+			version_name = "SKA-2"
+		}
+		medium_plane_airframe_0 = {
+			owner = "OBR" 
+			amount = 10
+			version_name = "LOR-2"
+		}
+		large_plane_airframe_0 = {
+			owner = "OBR" 
+			amount = 7
+			version_name = "ARB-1"
+		}
+	}
+	# Dorz
+	51 = { 
+		small_plane_airframe_0 = {
+			owner = "OBR" 
+			amount = 15
+			version_name = "SKA-2"
+		}
+		medium_plane_airframe_0 = {
+			owner = "OBR" 
+			amount = 8
+			version_name = "LOR-2"
+		}
+		large_plane_airframe_0 = {
+			owner = "OBR" 
+			amount = 5
+			version_name = "ARB-1"
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "OBR" 
+			version_name = "SKA-2"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "OBR" 
+			version_name = "LOR-2"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_airframe_0
+			creator = "OBR"
+			version_name = "ARB-1"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+		industrial_manufacturer = mio:generic_heavy_aircraft_organization
+	}
+}

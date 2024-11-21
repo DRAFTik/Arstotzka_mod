@@ -50,19 +50,19 @@ on_actions = {
 					limit = {
 						has_dlc = "Arms Against Tyranny"
 					}
-					set_temp_variable = { num_of_build_exp_temp = 0.5 }
-					add_to_temp_variable = { num_of_build_exp_temp = generic_building_organization_add_money }
-					multiply_temp_variable = { num_of_build_exp_temp = num_of_civilian_factories_available_for_projects }
-					clamp_temp_variable = { var = num_of_build_exp_temp min = 0.0 max = 100.0 }
-					set_variable = { ROOT.num_of_build_exp = num_of_build_exp_temp }
-#					every_military_industrial_organization = {	# mio:generic_building_organization
-					mio:generic_building_organization = {	# mio:generic_building_organization
+					set_temp_variable						= { num_of_build_exp_temp = 0.5 }
+					add_to_temp_variable					= { num_of_build_exp_temp = generic_building_organization_add_money }
+					multiply_temp_variable					= { num_of_build_exp_temp = num_of_civilian_factories_available_for_projects }
+					clamp_temp_variable						= { var = num_of_build_exp_temp min = 0.0 max = 100.0 }
+					set_variable							= { ROOT.num_of_build_exp = num_of_build_exp_temp }
+#					every_military_industrial_organization	= {	# mio:generic_building_organization
+					mio:generic_building_organization		= {	# mio:generic_building_organization
 						limit = {
 							is_mio_available = yes
 #							has_mio_equipment_type = mio_cat_eq_build
 						}
-						add_mio_funds = ROOT.num_of_build_exp
-						set_variable = { num_of_build_exp = num_of_build_exp_temp }
+						add_mio_funds	= ROOT.num_of_build_exp
+						set_variable	= { num_of_build_exp = num_of_build_exp_temp }
 					}
 				}
 				
@@ -73,10 +73,10 @@ on_actions = {
 						limit = { NOT = { has_dynamic_modifier = { modifier = volunteer_only_dyn } } }
 						add_dynamic_modifier = { modifier = volunteer_only_dyn }
 					}
-					set_variable = { volunteer_only_var = party_popularity@ruling_party }
-					multiply_variable = { volunteer_only_var = has_war_support }
-					multiply_variable = { volunteer_only_var = 0.0045 }
-					subtract_from_variable = { volunteer_only_var = 0.015 }
+					set_variable			= { volunteer_only_var = party_popularity@ruling_party }
+					multiply_variable		= { volunteer_only_var = has_war_support }
+					multiply_variable		= { volunteer_only_var = 0.0045 }
+					subtract_from_variable	= { volunteer_only_var = 0.015 }
 				}
 			}
 		}

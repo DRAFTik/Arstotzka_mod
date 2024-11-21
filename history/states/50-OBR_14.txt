@@ -6,13 +6,14 @@ state={
 	}
 	history={
 		victory_points = {
-			1723 2
+			1723 25
 		}
 		buildings = {
 			infrastructure = 1
 			agro_complex = 2
 			livestock_complex = 1
 			agro_silo = 1
+			air_base = 1
 		}
 		owner = OBR
 		add_core_of = OBR

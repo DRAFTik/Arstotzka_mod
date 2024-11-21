@@ -6,13 +6,14 @@ state={
 	}
 	history={
 		victory_points = {
-			1995 2
+			1995 20
 		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			livestock_complex = 2
+			air_base = 1
 		}
 		owner = REP
 		add_core_of = REP

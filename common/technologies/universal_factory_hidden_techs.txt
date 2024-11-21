@@ -53,4 +53,15 @@ technologies = {
 			level = 40
 		}
 	}
+
+	empty_build_tech = {
+		
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = empty_build_1
+			level = 1
+		}
+	}
 }	

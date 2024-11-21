@@ -465,7 +465,6 @@ calculate_provision_start_effect = {
 	set_variable = { max_provision_total_var = max_provision_base_var }
 	add_to_variable = { max_provision_total_var = modifier@max_provision }
 	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
-	add_equipment_to_stockpile = { type = provision_equipment amount = provision_total_var }
 	
 # ПАРАМЕТР ТОПБАРА
 	set_variable = { provision_balance_var = weekly_income_provision }
@@ -543,7 +542,6 @@ calculate_provision_daily_effect = {
 	
 	set_temp_variable = { provision_need_eq_temp = provision_need_temp }
 	multiply_temp_variable = { provision_need_eq_temp = -1 }
-	add_equipment_to_stockpile = { type = provision_equipment amount = provision_need_eq_temp }
 
 # ПОДСЧЕТ ДЛЯ СТАТЫ
 	while_loop_effect = { limit = { agro_complex > var:agro_complex }			add_to_temp_variable = { agro_complex = 1 } }
@@ -661,7 +659,6 @@ calculate_provision_weekly_effect = {
 	log = "[GetDateText]: [This.GetName] ([This.GetTag]): provision_need_var: [?provision_need_var]"
 	add_to_variable = { provision_total_var = weekly_income_provision }
 	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
-	add_equipment_to_stockpile = { type = provision_equipment amount = weekly_income_provision }
 }
 
 calculate_provision_monthly_effect = {		# порча еды
@@ -681,7 +678,6 @@ calculate_provision_monthly_effect = {		# порча еды
 		
 		set_temp_variable = { monthly_bad_provision_eq_temp = monthly_bad_provision_temp }
 		multiply_temp_variable = { monthly_bad_provision_eq_temp = -1 }
-		add_equipment_to_stockpile = { type = provision_equipment amount = monthly_bad_provision_eq_temp }
 	}
 	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
 	set_variable = { provision_goal_var = provision_total_var }
@@ -730,7 +726,6 @@ calculate_provision_yearly_effect = {
 	}
 	add_to_variable = { provision_total_var = yearly_income_provision_temp }
 	clamp_variable = { var = provision_total_var min = 0 max = max_provision_total_var }
-	add_equipment_to_stockpile = { type = provision_equipment amount = yearly_income_provision_temp }
 }
 
 calculate_provision_need_effect = {
