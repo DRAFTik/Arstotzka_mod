@@ -13,7 +13,7 @@
     gta_party_popularity_delayed_tooltip: "Популярность партии представляет собой контроль текущего правительства над страной и его поддержку в народе. Политические партии с высокой популярностью имеют больше возможностей для продвижения своей политической программы и стабилизации нации."
 
     gta_party_popularity_tooltip: "§HПопулярность партии§![GetPopularityPPGain]"
-    gta_party_popularity_tooltip_long: "§H\n\nЭффекты от нашей нынешней Популярности партии:§!\nЕжедневный прирост Политической силы: [GetPopularityPPGainValue]"
+    gta_party_popularity_tooltip_long: "§H\n\nЭффекты от нашей нынешней Популярности партии:§!\nЕжедневный прирост Политической силы: [?ROOT.party_popularity@ruling_party|2=+]"
 
     party_popularity_dynamic_modifier: "Популярность партии"
 

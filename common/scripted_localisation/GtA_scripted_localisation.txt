@@ -61,19 +61,6 @@ defined_text = {
 	}
 }
 
-defined_text = {
-	name = GetPopularityPPGainValue
-	text = {
-		trigger = {
-			has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
-		}
-		localization_key = "[?party_popularity@ruling_party|2=+]"
-	}
-	text = {
-		localization_key = empty
-	}
-}
-
 
 
 

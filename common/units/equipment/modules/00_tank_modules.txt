@@ -185,7 +185,7 @@ equipment_modules = {
 		dismantle_cost_ic  = 2
 		multiply_stats =  {
 			maximum_speed = 0.2
-			breakthrough = -0.15
+			breakthrough = -0.10
 			defense = -0.15
 			armor_value = -0.1
 			fuel_consumption = -0.1
@@ -221,8 +221,8 @@ equipment_modules = {
 		}
 
 		add_stats = {
-			build_cost_ic = 1
-			breakthrough = 5
+			build_cost_ic = 2
+			breakthrough = 4
 			defense = 3
 			reliability = -0.1
 		}
@@ -344,7 +344,7 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 1
-			maximum_speed = -0.25
+			maximum_speed = -0.1
 			breakthrough = 14
 		}
 		dismantle_cost_ic = 0.5
@@ -657,7 +657,7 @@ equipment_modules = {
 			breakthrough = 35
 		}
 		multiply_stats = {
-			build_cost_ic = 0.35
+			build_cost_ic = 0.50
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 2
@@ -741,7 +741,7 @@ equipment_modules = {
 	}
 	
 	flamethrower_2 = {
-		abbreviation = "flt"
+		abbreviation = "flt2"
 		category = tank_medium_main_armament
 		sfx = sfx_ui_sd_module_turret
 		allow_equipment_type = flame
@@ -774,7 +774,7 @@ equipment_modules = {
 	}
 
 	flamethrower_3 = {
-		abbreviation = "flt"
+		abbreviation = "flt3"
 		category = tank_heavy_main_armament
 		sfx = sfx_ui_sd_module_turret
 		allow_equipment_type = flame

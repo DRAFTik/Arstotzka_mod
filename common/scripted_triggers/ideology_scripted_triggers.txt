@@ -1,3 +1,10 @@
+is_neutrality_ideology = {
+	OR = {
+		has_government = mysticist
+		has_government = authoritarian_democrat
+	}
+}
+
 is_democratic_ideology = {
 	OR = {
 		has_government = market_liberal

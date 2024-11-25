@@ -46,11 +46,11 @@ equipments = {
 
 		archetype = motorcycle_equipment
 		priority = 30
-		maximum_speed = 12
-		reliability = 0.65
-		breakthrough = 4
-		defense = 3
-		is_convertable = yes
+		maximum_speed	= 12
+		reliability		= 0.65
+		breakthrough	= 4
+		defense			= 3
+		is_convertable	= yes
 	}
 
 	motorcycle_equipment_1 = {	# Harley-Davidson WLA / М-72

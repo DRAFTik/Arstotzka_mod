@@ -18,6 +18,7 @@ sub_units = {
 		categories = {
 			category_all_armor
 			category_army
+			category_self_propelled_anti_air
 			category_aa_tanks
 		}
 
@@ -84,6 +85,7 @@ sub_units = {
 		categories = {
 			category_all_armor
 			category_army
+			category_self_propelled_anti_air
 			category_aa_tanks
 		}
 
@@ -154,6 +156,7 @@ sub_units = {
 		categories = {
 			category_all_armor
 			category_army
+			category_self_propelled_anti_air
 			category_aa_tanks
 		}
 
@@ -214,6 +217,7 @@ sub_units = {
 		categories = {
 			category_all_armor
 			category_army
+			category_self_propelled_anti_air
 			category_aa_tanks
 		}
 		
@@ -290,6 +294,7 @@ sub_units = {
 		categories = {
 			category_all_armor
 			category_army
+			category_self_propelled_anti_air
 			category_aa_tanks
 		}
 
@@ -340,7 +345,4 @@ sub_units = {
 			attack = -0.7
 		}
 	}
-
-
-	
 }

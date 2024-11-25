@@ -19,6 +19,7 @@ sub_units = {
 			category_front_line
 			category_all_armor
 			category_army
+			category_tank_destroyers
 			category_td_tanks
 		}
 
@@ -86,6 +87,7 @@ sub_units = {
 			category_front_line
 			category_all_armor
 			category_army
+			category_tank_destroyers
 			category_td_tanks
 		}
 
@@ -158,6 +160,7 @@ sub_units = {
 			category_front_line
 			category_all_armor
 			category_army
+			category_tank_destroyers
 			category_td_tanks
 		}
 
@@ -231,6 +234,7 @@ sub_units = {
 			category_front_line
 			category_all_armor
 			category_army
+			category_tank_destroyers
 			category_td_tanks
 		}
 
@@ -304,6 +308,7 @@ sub_units = {
 			category_front_line
 			category_all_armor
 			category_army
+			category_tank_destroyers
 			category_td_tanks
 		}
 
@@ -355,6 +360,4 @@ sub_units = {
 			attack = -0.7
 		}
 	}
-
-
 }
