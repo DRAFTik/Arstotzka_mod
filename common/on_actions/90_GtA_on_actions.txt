@@ -38,7 +38,7 @@ on_actions = {
 
 	on_daily_SAI = {
 		effect = {
-			every_country = {
+			every_other_country = {
 				calculate_electric_power_effect				= yes
 				calculate_electric_power_dyn				= yes		# дебаф электричества
 				calculate_provision_daily_effect			= yes		# стата
@@ -85,7 +85,7 @@ on_actions = {
 	on_weekly_SAI = {
 		effect = {
 			add_to_variable = { global.total_iron_exported = resource_exported@iron }
-			every_country = {
+			every_other_country = {
 				calculate_electric_power_LOG_effect			= yes
 				calculate_provision_weekly_effect			= yes		# животнаводство
 				calculate_hunger_dyn_effect					= yes		# голод
@@ -108,11 +108,11 @@ on_actions = {
 						YEAR = "[?global.year]"
 					}
 				}
-				every_country = {
+				every_other_country = {
 					calculate_provision_yearly_effect	= yes		# урожай культур
 				}
 			}
-			every_country = {
+			every_other_country = {
 				calculate_provision_monthly_effect		= yes		# порча еды
 				AI_set_electric_panel_effect			= yes		# тумблеры электричества
 			}

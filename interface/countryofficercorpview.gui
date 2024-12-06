@@ -304,6 +304,7 @@ guiTypes = {
 		}
 	}
 
+
     #### OFFICER CORP MAIN VIEW ####
 
 	containerWindowType = {
@@ -1478,9 +1479,11 @@ guiTypes = {
 	
 	} # END OF countryofficercorpview
 
+
+
     #### SPIRITS ####
 	
-    containerWindowType = {								# NW
+    containerWindowType = {								# GtA
 		name = "division_tank_school_spirit_entry"
 		#position = { x = -275 y = -135 }	#55*-56
 		position = { x = 228 y = -56 }
@@ -1521,7 +1524,7 @@ guiTypes = {
 			centerposition = yes
 			alwaystransparent = yes
 		}
-	}													# NW
+	}													# GtA
 	
     containerWindowType = {
 		name = "division_command_spirit_entry"
@@ -2182,7 +2185,7 @@ guiTypes = {
 		}
 	}
 
-	containerWindowType = {						# NW
+	containerWindowType = {						# GtA
 		name = "division_tank_school_spirit_window_item_grid"
 		size = { width = 231 height = 74 }
 		clipping = no
@@ -2262,7 +2265,7 @@ guiTypes = {
 			format = center
 			alwaystransparent = yes
 		}
-	}										# NW
+	}										# GtA
 
 	containerWindowType = {
 		name = "division_command_spirit_window_item_grid"

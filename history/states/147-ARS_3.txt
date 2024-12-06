@@ -9,6 +9,9 @@ state={
 			infrastructure = 1
 			dockyard = 1
 			livestock_complex = 1
+			386 = {
+                land_facility = 1
+            }
 		}
 		owner = ARS
 		add_core_of = ARS

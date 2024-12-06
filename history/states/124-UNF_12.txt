@@ -13,6 +13,9 @@ state={
 			593 = {
 				naval_base = 3
 			}
+			2093 = {
+                land_facility = 1
+            }
 		}
 		owner = UNF
 		add_core_of = UNF

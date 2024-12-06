@@ -16,6 +16,9 @@ state={
 			arms_factory = 1
 			livestock_complex = 1
 			air_base = 3
+			138 = {
+                air_facility = 1
+            }
 		}
 		owner = UNF
 		add_core_of = UNF

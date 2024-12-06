@@ -53,11 +53,11 @@ default_party_popularity_PP_gain = {
 calculate_electric_power_effect = {
 
 ### ПРОИЗВОДСТВО ###
-	while_loop_effect			= { limit = { thermal_power_plant > var:thermal_power_plant }	add_to_temp_variable = { thermal_power_plant = 1 } }
-	while_loop_effect			= { limit = { hydro_power_plant > var:hydro_power_plant }		add_to_temp_variable = { hydro_power_plant = 1 } }
-	while_loop_effect			= { limit = { nuclear_power_plant > var:nuclear_power_plant }	add_to_temp_variable = { nuclear_power_plant = 1 } }
-	set_variable				= { thermal_power_plant_total = thermal_power_plant }		# для текста
-	set_temp_variable			= { electric_power_thermal_generation_fuel_need_var = thermal_power_plant }
+	while_loop_effect			= { limit = { thermal_power_plant > var:thermal_power_plant_@THIS }	add_to_temp_variable = { thermal_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { hydro_power_plant > var:hydro_power_plant_@THIS }		add_to_temp_variable = { hydro_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { nuclear_power_plant > var:nuclear_power_plant_@THIS }	add_to_temp_variable = { nuclear_power_plant_@THIS = 1 } }
+	set_variable				= { thermal_power_plant_total = thermal_power_plant_@THIS }		# для текста
+	set_temp_variable			= { electric_power_thermal_generation_fuel_need_var = thermal_power_plant_@THIS }
 	multiply_temp_variable		= { electric_power_thermal_generation_fuel_need_var = 24 }
 	set_temp_variable			= { total_fuel_temp = fuel_k }
 #	log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL TOTAL: [?total_fuel_temp]"
@@ -66,8 +66,8 @@ calculate_electric_power_effect = {
 	subtract_from_temp_variable	= { total_fuel_temp = electric_power_thermal_generation_fuel_need_var }
 	if = {
 		limit					= { check_variable = { total_fuel_temp > 0 } }
-		set_variable			= { electric_power_thermal_generation_var = thermal_power_plant }
-		set_variable			= { thermal_power_plant_ok = thermal_power_plant }
+		set_variable			= { electric_power_thermal_generation_var = thermal_power_plant_@THIS }
+		set_variable			= { thermal_power_plant_ok = thermal_power_plant_@THIS }
 #		log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL OK // thermal_power_plant OK: [?thermal_power_plant_ok]"
 		
 		else = {
@@ -81,9 +81,9 @@ calculate_electric_power_effect = {
 		}
 	}
 	multiply_variable	= { electric_power_thermal_generation_var = 60 }					# для текста ТЭС
-	set_variable		= { electric_power_hydro_generation_var = hydro_power_plant }
+	set_variable		= { electric_power_hydro_generation_var = hydro_power_plant_@THIS }
 	multiply_variable	= { electric_power_hydro_generation_var = 150 }					# для текста ГЭС
-	set_variable		= { electric_power_nuclear_generation_var = nuclear_power_plant }
+	set_variable		= { electric_power_nuclear_generation_var = nuclear_power_plant_@THIS }
 	multiply_variable	= { electric_power_nuclear_generation_var = 500 }					# для текста АЭС
 
 
@@ -110,23 +110,23 @@ calculate_electric_power_effect = {
 	add_to_variable			= { electric_power_cost_state_var = 3 }
 	
 # Инфра
-	while_loop_effect		= { limit = { infrastructure > var:infrastructure }			add_to_temp_variable = { infrastructure = 1 } }
-	while_loop_effect		= { limit = { hospital > var:hospital }						add_to_temp_variable = { hospital = 1 } }
-	set_variable			= { electric_power_cost_infrastructure_var = infrastructure }
-	add_to_variable			= { electric_power_cost_infrastructure_var = hospital }
+	while_loop_effect		= { limit = { infrastructure > var:infrastructure_@THIS }			add_to_temp_variable = { infrastructure_@THIS = 1 } }
+	while_loop_effect		= { limit = { hospital > var:hospital_@THIS }						add_to_temp_variable = { hospital_@THIS = 1 } }
+	set_variable			= { electric_power_cost_infrastructure_var = infrastructure_@THIS }
+	add_to_variable			= { electric_power_cost_infrastructure_var = hospital_@THIS }
 
 # Фабрики
-	while_loop_effect		= { limit = { arms_factory > var:arms_factory }				add_to_temp_variable = { arms_factory = 1 } }
-	while_loop_effect		= { limit = { industrial_complex > var:industrial_complex }	add_to_temp_variable = { industrial_complex = 1 } }
-	while_loop_effect		= { limit = { dockyard > var:dockyard }						add_to_temp_variable = { dockyard = 1 } }
-	while_loop_effect		= { limit = { dockyard > var:universal_factory }			add_to_temp_variable = { universal_factory = 1 } }
-	set_temp_variable		= { arms_factory_temp = arms_factory }
+	while_loop_effect		= { limit = { arms_factory > var:arms_factory_@THIS }				add_to_temp_variable = { arms_factory_@THIS = 1 } }
+	while_loop_effect		= { limit = { industrial_complex > var:industrial_complex_@THIS }	add_to_temp_variable = { industrial_complex_@THIS = 1 } }
+	while_loop_effect		= { limit = { dockyard > var:dockyard_@THIS }						add_to_temp_variable = { dockyard_@THIS = 1 } }
+	while_loop_effect		= { limit = { universal_factory > var:universal_factory_@THIS }		add_to_temp_variable = { universal_factory_@THIS = 1 } }
+	set_temp_variable		= { arms_factory_temp = arms_factory_@THIS }
 	multiply_temp_variable	= { arms_factory_temp = 6 }
-	set_temp_variable		= { industrial_complex_temp = industrial_complex }
+	set_temp_variable		= { industrial_complex_temp = industrial_complex_@THIS }
 	multiply_temp_variable	= { industrial_complex_temp = 5 }
-	set_temp_variable		= { dockyard_temp = dockyard }
+	set_temp_variable		= { dockyard_temp = dockyard_@THIS }
 	multiply_temp_variable	= { dockyard_temp = 7 }
-	set_temp_variable		= { universal_factory_temp = universal_factory }
+	set_temp_variable		= { universal_factory_temp = universal_factory_@THIS }
 	multiply_temp_variable	= { universal_factory_temp = 11 }
 	
 	set_variable			= { electric_power_cost_factory_var = arms_factory_temp }
@@ -135,52 +135,51 @@ calculate_electric_power_effect = {
 	add_to_variable			= { electric_power_cost_factory_var = universal_factory_temp }
 
 # Снабжение
-	while_loop_effect		= { limit = { supply_node > var:supply_node }				add_to_temp_variable = { supply_node = 1 } }
-	while_loop_effect		= { limit = { naval_base > var:naval_base }					add_to_temp_variable = { naval_base = 1 } }
-	set_temp_variable		= { supply_node_temp = supply_node }
+	while_loop_effect		= { limit = { supply_node > var:supply_node_@THIS }			add_to_temp_variable = { supply_node_@THIS = 1 } }
+	while_loop_effect		= { limit = { naval_base > var:naval_base_@THIS }			add_to_temp_variable = { naval_base_@THIS = 1 } }
+	set_temp_variable		= { supply_node_temp = supply_node_@THIS }
 	multiply_temp_variable	= { supply_node_temp = 2 }
-	set_temp_variable		= { naval_base_temp = naval_base }
+	set_temp_variable		= { naval_base_temp = naval_base_@THIS }
 	multiply_temp_variable	= { naval_base_temp = 0.5 }
 	
-	set_variable = { electric_power_cost_supply_var = supply_node_temp }
-	add_to_variable = { electric_power_cost_supply_var = naval_base_temp }
+	set_variable			= { electric_power_cost_supply_var = supply_node_temp }
+	add_to_variable			= { electric_power_cost_supply_var = naval_base_temp }
 
 # Сооружения военного назначения
-	while_loop_effect		= { limit = { anti_air_building > var:anti_air_building }	add_to_temp_variable = { anti_air_building = 1 } }
-	while_loop_effect		= { limit = { air_base > var:air_base }						add_to_temp_variable = { air_base = 1 } }
-	while_loop_effect		= { limit = { bunker > var:bunker }							add_to_temp_variable = { bunker = 1 } }
-	while_loop_effect		= { limit = { coastal_bunker > var:coastal_bunker }			add_to_temp_variable = { coastal_bunker = 1 } }
-	while_loop_effect		= { limit = { radar_station > var:radar_station }			add_to_temp_variable = { radar_station = 1 } }
-	while_loop_effect		= { limit = { rocket_site > var:rocket_site }				add_to_temp_variable = { rocket_site = 1 } }
-	set_temp_variable		= { anti_air_building_temp = anti_air_building }
-	add_to_temp_variable	= { anti_air_building_temp = air_base }
+	while_loop_effect		= { limit = { anti_air_building > var:anti_air_building_@THIS }	add_to_temp_variable = { anti_air_building_@THIS = 1 } }
+	while_loop_effect		= { limit = { air_base > var:air_base_@THIS }					add_to_temp_variable = { air_base_@THIS = 1 } }
+	while_loop_effect		= { limit = { bunker > var:bunker_@THIS }						add_to_temp_variable = { bunker_@THIS = 1 } }
+	while_loop_effect		= { limit = { coastal_bunker > var:coastal_bunker_@THIS }		add_to_temp_variable = { coastal_bunker_@THIS = 1 } }
+	while_loop_effect		= { limit = { radar_station > var:radar_station_@THIS }			add_to_temp_variable = { radar_station_@THIS = 1 } }
+	while_loop_effect		= { limit = { rocket_site > var:rocket_site_@THIS }				add_to_temp_variable = { rocket_site_@THIS = 1 } }
+	set_temp_variable		= { anti_air_building_temp = anti_air_building_@THIS }
+	add_to_temp_variable	= { anti_air_building_temp = air_base_@THIS }
 	multiply_temp_variable	= { anti_air_building_temp = 0.5 }
-	set_temp_variable		= { bunker_temp = bunker }
-	add_to_temp_variable	= { bunker_temp = coastal_bunker }
+	set_temp_variable		= { bunker_temp = bunker_@THIS }
+	add_to_temp_variable	= { bunker_temp = coastal_bunker_@THIS }
 	multiply_temp_variable	= { bunker_temp = 0.1 }
-	set_temp_variable		= { radar_station_temp = radar_station }
-	add_to_temp_variable	= { radar_station_temp = rocket_site }
+	set_temp_variable		= { radar_station_temp = radar_station_@THIS }
+	add_to_temp_variable	= { radar_station_temp = rocket_site_@THIS }
 	multiply_temp_variable	= { radar_station_temp = 1.5 }
 	
-	set_variable			= { electric_power_cost_army_var = anti_air_building }
-	add_to_variable			= { electric_power_cost_army_var = anti_air_building_temp }
+	set_variable			= { electric_power_cost_army_var = anti_air_building_temp }
 	add_to_variable			= { electric_power_cost_army_var = bunker_temp }
 	add_to_variable			= { electric_power_cost_army_var = radar_station_temp }
 
 # Другие
-	while_loop_effect		= { limit = { synthetic_refinery > var:synthetic_refinery }	add_to_temp_variable = { synthetic_refinery = 1 } }
-	while_loop_effect		= { limit = { fuel_silo > var:fuel_silo }					add_to_temp_variable = { fuel_silo = 1 } }
-	while_loop_effect		= { limit = { nuclear_reactor > var:nuclear_reactor }		add_to_temp_variable = { nuclear_reactor = 1 } }
-	while_loop_effect		= { limit = { agro_complex > var:agro_complex }				add_to_temp_variable = { agro_complex = 1 } }
-	while_loop_effect		= { limit = { livestock_complex > var:livestock_complex }	add_to_temp_variable = { livestock_complex = 1 } }
-	set_temp_variable		= { synthetic_refinery_temp = synthetic_refinery }
+	while_loop_effect		= { limit = { synthetic_refinery > var:synthetic_refinery_@THIS }	add_to_temp_variable = { synthetic_refinery_@THIS = 1 } }
+	while_loop_effect		= { limit = { fuel_silo > var:fuel_silo_@THIS }						add_to_temp_variable = { fuel_silo_@THIS = 1 } }
+	while_loop_effect		= { limit = { nuclear_reactor > var:nuclear_reactor_@THIS }			add_to_temp_variable = { nuclear_reactor_@THIS = 1 } }
+	while_loop_effect		= { limit = { agro_complex > var:agro_complex_@THIS }				add_to_temp_variable = { agro_complex_@THIS = 1 } }
+	while_loop_effect		= { limit = { livestock_complex > var:livestock_complex_@THIS }		add_to_temp_variable = { livestock_complex_@THIS = 1 } }
+	set_temp_variable		= { synthetic_refinery_temp = synthetic_refinery_@THIS }
 	multiply_temp_variable	= { synthetic_refinery_temp = 4 }
-	set_temp_variable		= { fuel_silo_temp = fuel_silo }
-	add_to_temp_variable	= { fuel_silo_temp = livestock_complex }
+	set_temp_variable		= { fuel_silo_temp = fuel_silo_@THIS }
+	add_to_temp_variable	= { fuel_silo_temp = livestock_complex_@THIS }
 	multiply_temp_variable	= { fuel_silo_temp = 0.5 }
-	set_temp_variable		= { agro_complex_temp = agro_complex }
+	set_temp_variable		= { agro_complex_temp = agro_complex_@THIS }
 	multiply_temp_variable	= { agro_complex_temp = 0.25 }
-	set_temp_variable		= { nuclear_reactor_temp = nuclear_reactor }
+	set_temp_variable		= { nuclear_reactor_temp = nuclear_reactor_@THIS }
 	multiply_temp_variable	= { nuclear_reactor_temp = 15 }
 	
 	set_variable			= { electric_power_cost_other_var = synthetic_refinery_temp }
@@ -189,10 +188,10 @@ calculate_electric_power_effect = {
 	add_to_variable			= { electric_power_cost_other_var = nuclear_reactor_temp }
 
 # Сталь
-	while_loop_effect		= { limit = { steel_mill > var:steel_mill }	add_to_temp_variable = { steel_mill = 1 } }
-	set_variable			= { steel_mill_total = steel_mill }
-	set_variable			= { steel_mill_ok = steel_mill }
-	set_temp_variable		= { steel_mill_temp = steel_mill }
+	while_loop_effect		= { limit = { steel_mill > var:steel_mill_@THIS }	add_to_temp_variable = { steel_mill_@THIS = 1 } }
+	set_variable			= { steel_mill_total = steel_mill_@THIS }
+	set_variable			= { steel_mill_ok = steel_mill_@THIS }
+	set_temp_variable		= { steel_mill_temp = steel_mill_@THIS }
 	multiply_temp_variable	= { steel_mill_temp = 3.5 }
 	
 	set_variable			= { electric_power_cost_mill_var = steel_mill_temp }
@@ -254,10 +253,10 @@ calculate_electric_power_effect = {
 
 
 calculate_electric_power_LOG_effect = {
-	while_loop_effect			= { limit = { thermal_power_plant > var:thermal_power_plant }	add_to_temp_variable = { thermal_power_plant = 1 } }
-	while_loop_effect			= { limit = { hydro_power_plant > var:hydro_power_plant }		add_to_temp_variable = { hydro_power_plant = 1 } }
-	while_loop_effect			= { limit = { nuclear_power_plant > var:nuclear_power_plant }	add_to_temp_variable = { nuclear_power_plant = 1 } }
-	set_temp_variable			= { electric_power_thermal_generation_fuel_need_var = thermal_power_plant }
+	while_loop_effect			= { limit = { thermal_power_plant > var:thermal_power_plant_@THIS }	add_to_temp_variable = { thermal_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { hydro_power_plant > var:hydro_power_plant_@THIS }		add_to_temp_variable = { hydro_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { nuclear_power_plant > var:nuclear_power_plant_@THIS }	add_to_temp_variable = { nuclear_power_plant_@THIS = 1 } }
+	set_temp_variable			= { electric_power_thermal_generation_fuel_need_var = thermal_power_plant_@THIS }
 	multiply_temp_variable		= { electric_power_thermal_generation_fuel_need_var = 24 }
 	set_temp_variable			= { total_fuel_temp = fuel_k }
 	log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL TOTAL: [?total_fuel_temp]"
@@ -266,7 +265,7 @@ calculate_electric_power_LOG_effect = {
 	subtract_from_temp_variable	= { total_fuel_temp = electric_power_thermal_generation_fuel_need_var }
 	if = {
 		limit					= { check_variable = { total_fuel_temp > 0 } }
-		set_temp_variable		= { thermal_power_plant_ok_temp = thermal_power_plant }
+		set_temp_variable		= { thermal_power_plant_ok_temp = thermal_power_plant_@THIS }
 		log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL OK // thermal_power_plant OK: [?thermal_power_plant_ok_temp]"
 		
 		else = {
@@ -395,13 +394,13 @@ calculate_provision_start_effect = {
 	set_variable			= { max_provision_base_var = 1000 }										# БАЗА МАКСИМУМА ПРОВИЗИИ
 	set_variable			= { provision_need_base_var = 0.254 }										# БАЗА ПОТРЕБЛЕНИЯ ПРОВИЗИИ = 254 кг в год на человека
 	
-	while_loop_effect		= { limit = { agro_complex > var:agro_complex }			add_to_temp_variable = { agro_complex = 1 } }
-	while_loop_effect		= { limit = { livestock_complex > var:livestock_complex }	add_to_temp_variable = { livestock_complex = 1 } }
+	while_loop_effect		= { limit = { agro_complex > var:agro_complex_@THIS }			add_to_temp_variable = { agro_complex_@THIS = 1 } }
+	while_loop_effect		= { limit = { livestock_complex > var:livestock_complex_@THIS }	add_to_temp_variable = { livestock_complex_@THIS = 1 } }
 
 # НАЧАЛЬНАЯ ПРОВИЗИЯ
-#	set_temp_variable		= { temp1 = agro_complex }
+#	set_temp_variable		= { temp1 = agro_complex_@THIS }
 #	multiply_temp_variable	= { temp1 = 300 }
-#	set_temp_variable		= { temp2 = livestock_complex }
+#	set_temp_variable		= { temp2 = livestock_complex_@THIS }
 #	multiply_temp_variable	= { temp2 = 15.2 }
 #	set_variable			= { provision_total_var = temp1 }
 #	add_to_variable			= { provision_total_var = temp2 }
@@ -540,11 +539,11 @@ calculate_provision_daily_effect = {
 	multiply_temp_variable	= { provision_need_eq_temp = -1 }
 
 # ПОДСЧЕТ ДЛЯ СТАТЫ
-	while_loop_effect		= { limit = { agro_complex > var:agro_complex }			add_to_temp_variable = { agro_complex = 1 } }
-	while_loop_effect		= { limit = { livestock_complex > var:livestock_complex }	add_to_temp_variable = { livestock_complex = 1 } }
+	while_loop_effect		= { limit = { agro_complex > var:agro_complex_@THIS }			add_to_temp_variable = { agro_complex_@THIS = 1 } }
+	while_loop_effect		= { limit = { livestock_complex > var:livestock_complex_@THIS }	add_to_temp_variable = { livestock_complex_@THIS = 1 } }
 	while_loop_effect		= { limit = { agro_silo > var:agro_silo }					add_to_temp_variable = { agro_silo = 1 } }
-	set_variable			= { agro_complex_total = agro_complex }
-	set_variable			= { livestock_complex_total = livestock_complex }
+	set_variable			= { agro_complex_total = agro_complex_@THIS }
+	set_variable			= { livestock_complex_total = livestock_complex_@THIS }
 	set_variable			= { agro_silo_total = agro_silo }
 
 # ЖИВОТНАВОДСТВО
@@ -835,8 +834,8 @@ calculate_change_population_weekly_effect = {
 calculate_steel_mill_effect = {
 	if = {
 		limit = {
-			check_variable = { var = resource@iron	value = 0	compare = less_than }
-			check_variable = { var = steel_mill		value = 0	compare = greater_than }
+			check_variable = { var = resource@iron		value = 0	compare = less_than }
+			check_variable = { var = steel_mill_total	value = 0	compare = greater_than }
 		}
 		set_temp_variable			= { steel_temp = resource@iron }
 		divide_temp_variable		= { steel_temp = -8 }
@@ -1106,4 +1105,7 @@ calculate_in_economic_development_factor = {
 }
 
 effect_1 = {
+#	set_temp_variable		= { test_temp = 0 }
+	while_loop_effect		= { limit = { check_variable { political_power > var:test_temp_@THIS } }	add_to_temp_variable = { test_temp_@THIS = 1 } }
+	set_variable			= { test_var = test_temp_@THIS }
 }

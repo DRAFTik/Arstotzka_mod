@@ -58,6 +58,7 @@ idea_categories = {
 		slot = materiel_manufacturer
 		slot = industrial_concern
 		slot = industrial_concern
+		character_slot = research_theorist
 
 		ledger = civilian
 		

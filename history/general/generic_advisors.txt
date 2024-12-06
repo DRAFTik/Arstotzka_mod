@@ -1021,4 +1021,14 @@ every_possible_country = {
 			army = { small = GFX_idea_generic_head_of_intelligence }
 		}
 	}
+	generate_character = {
+		token_base = generic_research_theorist # token will be TAG_token_base
+		advisor = {
+			slot = research_theorist
+			traits = { war_industrialist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
 }
