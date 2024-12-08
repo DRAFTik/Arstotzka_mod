@@ -15,8 +15,12 @@ state={
 			steel_mill = 1
 			livestock_complex = 1
 			air_base = 3
+			839 = {
+                coastal_bunker = 4
+            }
 			1108 = {
 				naval_base = 1
+				coastal_bunker = 4
 			}
 		}
 		owner = IMP

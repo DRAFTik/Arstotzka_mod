@@ -6,6 +6,15 @@ state={
 	}
 	history={
 		buildings = {
+			793 = {
+				bunker = 3
+			}
+			1412 = {
+				bunker = 3
+			}
+			1973 = {
+				bunker = 3
+			}
 		}
 		owner = REP
 		add_core_of = REP

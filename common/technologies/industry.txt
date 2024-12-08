@@ -35,6 +35,7 @@ technologies = {
 			industry
 			cat_production
 		}
+		special_project_specialization = { specialization_base }
 	}
 
 	#Machine tools branch	
@@ -81,6 +82,7 @@ technologies = {
 			industry
 			cat_production
 		}
+		special_project_specialization = { specialization_base }
 	}
 	
 	advanced_machine_tools = {
@@ -123,6 +125,7 @@ technologies = {
 			industry
 			cat_production
 		}
+		special_project_specialization = { specialization_base }
 	}
 	
 	assembly_line_production = {
@@ -171,6 +174,7 @@ technologies = {
 			industry
 			cat_production
 		}
+		special_project_specialization = { specialization_base }
 	}
 	
 	flexible_line = {
@@ -208,6 +212,7 @@ technologies = {
 			industry
 			cat_production
 		}
+		special_project_specialization = { specialization_base }
 	}
 	
 	streamlined_line = {
@@ -256,6 +261,7 @@ technologies = {
 			industry
 			cat_production
 		}
+		special_project_specialization = { specialization_base }
 	}
 
 	#Conversion branch - Enabled in DoD
@@ -293,6 +299,7 @@ technologies = {
 			industry
 			cat_production
 		}
+		special_project_specialization = { specialization_base }
 	}
 	
 	advanced_equipment_conversion = {
@@ -320,6 +327,7 @@ technologies = {
 			industry
 			cat_production
 		}
+		special_project_specialization = { specialization_base }
 	}
 
 	###############
@@ -378,6 +386,7 @@ technologies = {
 			industry
 			concentrated_industry_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_research_weights = {
 			offensive = -1.0
@@ -419,6 +428,7 @@ technologies = {
 			industry
 			concentrated_industry_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_research_weights = {
 			offensive = -1.0
@@ -459,6 +469,7 @@ technologies = {
 			industry
 			concentrated_industry_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_research_weights = {
 			offensive = -1.0
@@ -499,6 +510,7 @@ technologies = {
 			industry
 			concentrated_industry_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_research_weights = {
 			offensive = -1.0
@@ -539,6 +551,7 @@ technologies = {
 			industry
 			concentrated_industry_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_research_weights = {
 			offensive = -1.0
@@ -601,6 +614,7 @@ technologies = {
 			industry
 			dispersed_industry_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_research_weights = {
 			defensive = -1.0
@@ -641,6 +655,7 @@ technologies = {
 			industry
 			dispersed_industry_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_research_weights = {
 			defensive = -1.0
@@ -681,6 +696,7 @@ technologies = {
 			industry
 			dispersed_industry_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_research_weights = {
 			defensive = -1.0
@@ -721,6 +737,7 @@ technologies = {
 			industry
 			dispersed_industry_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_research_weights = {
 			defensive = -1.0
@@ -762,6 +779,7 @@ technologies = {
 			industry
 			dispersed_industry_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_research_weights = {
 			defensive = -1.0
@@ -796,6 +814,7 @@ technologies = {
 			synth_resources
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 1
@@ -887,6 +906,7 @@ technologies = {
 			synth_resources
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 5
@@ -957,6 +977,7 @@ technologies = {
 			synth_resources
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 5
@@ -1018,6 +1039,7 @@ technologies = {
 			synth_resources
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 5
@@ -1070,6 +1092,7 @@ technologies = {
 			synth_resources
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 5
@@ -1118,6 +1141,7 @@ technologies = {
 			synth_resources
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 5
@@ -1184,6 +1208,7 @@ technologies = {
 			all_resources_category
 			cat_synth_oil
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 5
@@ -1234,6 +1259,7 @@ technologies = {
 			all_resources_category
 			cat_synth_oil
 		}
+		special_project_specialization = { specialization_base }
 		
 #		on_research_complete = {
 #			if = {
@@ -1313,6 +1339,7 @@ technologies = {
 			all_resources_category
 			cat_synth_oil
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 1
@@ -1370,6 +1397,7 @@ technologies = {
 			all_resources_category
 			cat_synth_oil
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 1
@@ -1427,6 +1455,7 @@ technologies = {
 			all_resources_category
 			cat_synth_oil
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 1
@@ -1479,6 +1508,7 @@ technologies = {
 			all_resources_category
 			cat_synth_oil
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 1
@@ -1547,6 +1577,7 @@ technologies = {
 			all_resources_category
 			cat_synth_rubber
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 1
@@ -1616,6 +1647,7 @@ technologies = {
 			all_resources_category
 			cat_synth_rubber
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 1
@@ -1685,6 +1717,7 @@ technologies = {
 			all_resources_category
 			cat_synth_rubber
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 1
@@ -1749,6 +1782,7 @@ technologies = {
 			all_resources_category
 			cat_synth_rubber
 		}
+		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
 			factor = 1
@@ -1805,10 +1839,12 @@ technologies = {
 		
 		research_cost = 2
 		start_year = 1983
+		
 		categories = {
 			industry
 			construction_tech
 		}
+		special_project_specialization = { specialization_base }
 		
 		folder = {
 			name = industry_folder
@@ -1842,6 +1878,7 @@ technologies = {
 			excavation_tech
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		folder = {
 			name = industry_folder
@@ -1911,6 +1948,7 @@ technologies = {
 			industry
 			construction_tech
 		}
+		special_project_specialization = { specialization_base }
 		
 		folder = {
 			name = industry_folder
@@ -1952,6 +1990,7 @@ technologies = {
 			excavation_tech
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		folder = {
 			name = industry_folder
@@ -2023,6 +2062,7 @@ technologies = {
 			industry
 			construction_tech
 		}
+		special_project_specialization = { specialization_base }
 		
 		folder = {
 			name = industry_folder
@@ -2076,6 +2116,7 @@ technologies = {
 			excavation_tech
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		folder = {
 			name = industry_folder
@@ -2153,6 +2194,7 @@ technologies = {
 			industry
 			construction_tech
 		}
+		special_project_specialization = { specialization_base }
 		
 		folder = {
 			name = industry_folder
@@ -2204,6 +2246,7 @@ technologies = {
 			excavation_tech
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		folder = {
 			name = industry_folder
@@ -2266,6 +2309,7 @@ technologies = {
 			industry
 			construction_tech
 		}
+		special_project_specialization = { specialization_base }
 		
 		folder = {
 			name = industry_folder
@@ -2317,6 +2361,7 @@ technologies = {
 			excavation_tech
 			all_resources_category
 		}
+		special_project_specialization = { specialization_base }
 		
 		folder = {
 			name = industry_folder

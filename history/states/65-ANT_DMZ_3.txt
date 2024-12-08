@@ -3,6 +3,15 @@ state={
 	name="STATE_65"
 	history={
 		buildings = {
+			99 = {
+				bunker = 2
+			}
+			609 = {
+				bunker = 2
+			}
+			1238 = {
+				bunker = 2
+			}
 		}
 		owner = ANT
 		add_core_of = ANT

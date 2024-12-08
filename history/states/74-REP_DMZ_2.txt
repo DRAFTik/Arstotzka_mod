@@ -3,6 +3,18 @@ state={
 	name="STATE_74"
 	history={
 		buildings = {
+			4 = {
+				bunker = 3
+			}
+			208 = {
+				bunker = 3
+			}
+			372 = {
+				bunker = 3
+			}
+			649 = {
+				bunker = 3
+			}
 		}
 		owner = REP
 		add_core_of = REP

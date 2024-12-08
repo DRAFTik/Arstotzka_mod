@@ -8,6 +8,15 @@ state={
 		buildings = {
 			infrastructure = 1
 			arms_factory = 1
+			298 = {
+				bunker = 4
+			}
+			989 = {
+				bunker = 4
+			}
+			1261 = {
+				bunker = 4
+			}
 		}
 		owner = KOL
 		add_core_of = KOL

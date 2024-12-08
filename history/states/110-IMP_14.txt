@@ -12,6 +12,9 @@ state={
 			dockyard = 2
 			steel_mill = 1
 			livestock_complex = 1
+			2139 = {
+                coastal_bunker = 4
+            }
 		}
 		owner = IMP
 		add_core_of = IMP

@@ -11,11 +11,22 @@ state={
 			dockyard = 2
 			agro_complex = 1
 			air_base = 3
+			103 = {
+				coastal_bunker = 2
+			}
+			798 = {
+                coastal_bunker = 2
+            }
 			844 = {
 				naval_base = 1
+				coastal_bunker = 2
 			}
 			2063 = {
                 naval_facility = 1
+                coastal_bunker = 2
+            }
+			2079 = {
+                coastal_bunker = 2
             }
 		}
 		owner = KOL

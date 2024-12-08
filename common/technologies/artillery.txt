@@ -1140,7 +1140,7 @@ technologies = {
 				}
 			}
 			modifier = {
-				original_tag = KOL
+				tag = KOL
 				factor = 4
 			}
 		}

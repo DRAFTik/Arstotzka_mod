@@ -8,6 +8,18 @@ state={
 		buildings = {
 			infrastructure = 1
 			steel_mill = 1
+			673 = {
+				bunker = 4
+			}
+			1173 = {
+				bunker = 4
+			}
+			1364 = {
+				bunker = 4
+			}
+			1943 = {
+				bunker = 4
+			}
 		}
 		owner = ARS
 		add_core_of = ARS

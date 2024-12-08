@@ -1610,6 +1610,8 @@ technologies = {
 			train_tech
 		}
 		
+		special_project_specialization = { specialization_base }
+		
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1650,6 +1652,8 @@ technologies = {
 			artillery
 		}
 		
+		special_project_specialization = { specialization_land }
+		
 		ai_will_do = {
 			factor = 1
 			
@@ -1683,6 +1687,8 @@ technologies = {
 		categories = {
 			train_tech
 		}
+		
+		special_project_specialization = { specialization_land	specialization_base }
 		
 		ai_will_do = {
 			factor = 2
@@ -1736,6 +1742,8 @@ technologies = {
 		categories = {
 			train_tech
 		}
+		
+		special_project_specialization = { specialization_land	specialization_base }
 		
 		ai_will_do = {
 			factor = 1

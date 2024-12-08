@@ -7,9 +7,19 @@ state={
 			industrial_complex = 2
 			dockyard = 1
 			agro_complex = 1
+			885 = {
+                coastal_bunker = 2
+            }
+			1229 = {
+                coastal_bunker = 2
+            }
 			2045 = {
 				naval_base = 1
+				coastal_bunker = 2
 			}
+			2056 = {
+                coastal_bunker = 2
+            }
 		}
 		owner = KOL
 		add_core_of = KOL

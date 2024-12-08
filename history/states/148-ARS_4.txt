@@ -12,6 +12,7 @@ state={
 			air_base = 4
 			2010 = {
 				naval_base = 3
+				coastal_bunker = 3
 			}
 		}
 		owner = ARS

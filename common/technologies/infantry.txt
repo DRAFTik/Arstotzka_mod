@@ -2366,10 +2366,6 @@ technologies = {
 				is_major = yes
 				factor = 3
 			}
-			modifier = {
-				tag = GER
-				factor = 4
-			}
 		}
 	}
 
@@ -2428,10 +2424,6 @@ technologies = {
 				is_major = yes
 				factor = 3
 			}
-			modifier = {
-				tag = GER
-				factor = 4
-			}
 		}
 	}
 
@@ -2484,10 +2476,6 @@ technologies = {
 			modifier = {
 				is_major = yes
 				factor = 3
-			}
-			modifier = {
-				tag = GER
-				factor = 4
 			}
 		}
 	}
@@ -2894,6 +2882,8 @@ technologies = {
 			infantry_tech
 			cat_mechanized_equipment
 		}
+		
+		special_project_specialization = { specialization_land }
 		
 		ai_will_do = {
 			factor = 2

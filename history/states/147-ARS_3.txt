@@ -12,6 +12,9 @@ state={
 			386 = {
                 land_facility = 1
             }
+			1349 = {
+                coastal_bunker = 2
+            }
 		}
 		owner = ARS
 		add_core_of = ARS
