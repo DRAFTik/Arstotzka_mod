@@ -19,6 +19,10 @@ air_wings = {
 			amount = 5
 			version_name = "ORV-5"
 		}
+		transport_plane_equipment_1 = {
+			owner = "ARS" 
+			amount = 5
+		}
 	}
 	# Trevven
 	150 = { 

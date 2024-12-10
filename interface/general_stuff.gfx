@@ -175,6 +175,12 @@ spriteTypes = {
 		name = "GFX_header_bg"
 		texturefile = "gfx/interface/header_bg.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_construction_header_bg"
+		texturefile = "gfx/interface/construction_header_bg.dds"
+	}
+	
 	spriteType = {
 		name = "GFX_header_gta_bg"
 		texturefile = "gfx/interface/header_gta_bg.dds"

@@ -897,13 +897,15 @@ focus_tree = {
 					}
 					tooltip = KOL_all_core_states_trigger_tt
 				}
-				any_controlled_state = { is_core_of = KOL }
-				KOL = {
-					OR = {
-						is_subject = yes
-						is_in_faction_with = ROOT
-						exists = no
-						has_capitulated = yes
+				AND = {
+					any_controlled_state = { is_core_of = KOL }
+					KOL = {
+						OR = {
+							is_subject = yes
+							is_in_faction_with = ROOT
+							exists = no
+							has_capitulated = yes
+						}
 					}
 				}
 			}

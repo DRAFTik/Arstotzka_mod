@@ -135,13 +135,13 @@ NDefines.NAI.EASY_TARGET_FRONT_IMPORTANCE = 10.0							-- How much extra focus t
 NDefines.NAI.DIPLOMACY_ACCEPT_VOLUNTEERS_BASE = 100							-- Base value of volunteer acceptance (help is welcome)
 NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 10						-- This many divisons are required for the country to be able to send volunteers.
 
-NDefines.NAI.DIVISION_DESIGN_COMBAT_WIDTH_TARGET_WEIGHT = -10000			-- This score is reduced the farther the width is from the target width (if set)
+-- УДАЛЕНО --NDefines.NAI.DIVISION_DESIGN_COMBAT_WIDTH_TARGET_WEIGHT = -10000			-- This score is reduced the farther the width is from the target width (if set)
 
 -- NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.2 			-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during war time
 -- NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.2			-- deployment will try to buffer a ratio of manpower (for reinforcements) during war time
 
 --NDefines.NAI.MANPOWER_FREE_USAGE_THRESHOLD = 100000 			            -- If AI has this much manpower he doesn't care about the percentage
-NDefines.NAI.MANPOWER_RESERVED_THRESHOLD = 0 								-- The AI will not deploy more units if he goes below this percentag
+-- УДАЛЕНО --NDefines.NAI.MANPOWER_RESERVED_THRESHOLD = 0 								-- The AI will not deploy more units if he goes below this percentag
 
 
 NDefines.NAI.DIPLOMACY_IMPROVE_RELATION_COST_FACTOR = 7.0					-- Desire to boost relations subtracts the cost multiplied by this
@@ -165,8 +165,8 @@ NDefines.NAI.PRODUCTION_WAIT_TO_FINISH_IF_EXPENSIVE = 0.01
 NDefines.NAI.PRODUCTION_WAIT_TO_FINISH_IF_CHEAP = 0.01
 
 NDefines.NAI.NAVAL_DOCKYARDS_SHIP_FACTOR = 1000								-- The extent to which number of dockyards play into amount of sips a nation wants
-NDefines.NAI.NAVAL_BASES_SHIP_FACTOR = 1000									-- The extent to which number of naval bases play into amount of sips a nation wants
-NDefines.NAI.NAVAL_STATES_SHIP_FACTOR = 1000								-- The extent to which number of states play into amount of sips a nation wants
+-- УДАЛЕНО --NDefines.NAI.NAVAL_BASES_SHIP_FACTOR = 1000									-- The extent to which number of naval bases play into amount of sips a nation wants
+-- УДАЛЕНО --NDefines.NAI.NAVAL_STATES_SHIP_FACTOR = 1000								-- The extent to which number of states play into amount of sips a nation wants
 
 NDefines.NAI.PRODUCTION_LINE_SWITCH_SURPLUS_NEEDED_MODIFIER = 0	-- 0.2		--delays the AI from upgrading air lines too long, this is handled by strategies instead
 
@@ -235,7 +235,6 @@ NDefines.NAI.PLAN_MIN_SIZE_FOR_FALLBACK = 5000								-- A country with less pro
 
 --посмотрим, как это улучшит деф ИИ
 NDefines.NAI.AREA_DEFENSE_SETTING_VP = true									-- Which settings will AI use for area defense by default
-NDefines.NAI.AREA_DEFENSE_SETTING_PORTS = true								-- Which settings will AI use for area defense by default
 
 
 NDefines.NAI.MIN_AI_SCORE_TO_MOBILIZATION_LAW_OVERRIDE_HARD_CODED_SCORE = 1000.0
@@ -314,8 +313,8 @@ NDefines.NAI.GARRISON_TEMPLATE_SCORE_MANPOWER_FACTOR = 0.05		-- formula is (temp
 -- NDefines.NAI.REFIT_SHIP_RELUCTANCE = 5000							-- How often to consider refitting to new equipment variants for ships in the field
 -- NDefines.NAI.REFIT_SHIP_PERCENTAGE_OF_FORCES = 0.30					-- How big part of the navy that should be considered for refitting
 
-NDefines.NAI.DIVISION_DESIGN_MANPOWER_WEIGHT = 0 --0.005
-NDefines.NAI.DIVISION_DESIGN_STOCKPILE_WEIGHT = 0 --0.01
+-- УДАЛЕНО --NDefines.NAI.DIVISION_DESIGN_MANPOWER_WEIGHT = 0 --0.005
+-- УДАЛЕНО --NDefines.NAI.DIVISION_DESIGN_STOCKPILE_WEIGHT = 0 --0.01
 
 --------------
 -- NAVY
@@ -399,7 +398,7 @@ NDefines.NAI.LAND_DEFENSE_CIVIL_FACTORY_IMPORTANCE = 800					-- Strategic import
 NDefines.NAI.LAND_DEFENSE_MILITARY_FACTORY_IMPORTANCE = 880					-- Strategic importance of military factories
 NDefines.NAI.LAND_DEFENSE_NAVAL_FACTORY_IMPORTANCE = 420					-- Strategic importance of naval factories
 
-NDefines.NAI.LAND_DEFENSE_INTERSEPTORS_PER_BOMBERS = 1						-- Amount of air interceptor planes requested per enemy bomber
+-- УДАЛЕНО --NDefines.NAI.LAND_DEFENSE_INTERSEPTORS_PER_BOMBERS = 1						-- Amount of air interceptor planes requested per enemy bomber
 -- NDefines.NAI.LAND_DEFENSE_INTERSEPTORS_PER_PLANE = 0.0					-- Amount of air interceptor planes requested per enemy plane (non bomber)
 
 -- NDefines.NAI.LAND_COMBAT_FIGHTERS_PER_PLANE = 2							-- Amount of air superiority planes requested per enemy plane
@@ -425,5 +424,8 @@ NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {
 	0.0, -- TRAINING
 	0.0, -- NAVAL_MINES_PLANTING
 	0.0, -- NAVAL_MINES_SWEEPING
-	0.0, -- MISSION_RECON
+	0.0, -- RECON
+	0.0, -- NAVAL_PATROL
+	0,0, -- BARRAGE
+	0,0, -- SAM
 }

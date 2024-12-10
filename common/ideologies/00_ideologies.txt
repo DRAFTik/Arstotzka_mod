@@ -30,6 +30,8 @@ ideologies = {
 		ai_communist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
+		
+		ai_give_core_state_control_threshold = 10 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
 
 	syndicalist = {
@@ -63,6 +65,8 @@ ideologies = {
 		ai_communist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
+		
+		ai_give_core_state_control_threshold = 10
 	}
 
 	market_liberal = {
@@ -96,6 +100,8 @@ ideologies = {
 		ai_fascist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
+		
+		ai_give_core_state_control_threshold = 0
 	}
 	
 	mysticist = {
@@ -129,6 +135,8 @@ ideologies = {
 		ai_fascist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
+		
+		ai_give_core_state_control_threshold = 0
 	}
 
 	authoritarian_democrat = {
@@ -162,6 +170,8 @@ ideologies = {
 		ai_fascist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
+		
+		ai_give_core_state_control_threshold = 10000
 	}
 
 	national_populist = {
@@ -195,5 +205,7 @@ ideologies = {
 		ai_fascist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
+		
+		ai_give_core_state_control_threshold = 10000
 	}
 }

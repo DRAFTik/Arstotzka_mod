@@ -58,6 +58,10 @@ air_wings = {
 			amount = 10
 			version_name = "IB-2"
 		}
+		transport_plane_equipment_1 = {
+			owner = "IMP" 
+			amount = 4
+		}
 	}
 }
 

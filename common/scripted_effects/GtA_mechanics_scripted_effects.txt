@@ -104,10 +104,17 @@ calculate_electric_power_effect = {
 ### ЗАТРАТЫ ### (для текста)
 
 # Госаппарат
-	set_temp_variable		= { state_power_cost_temp = num_controlled_states }
-	multiply_temp_variable	= { state_power_cost_temp = 1 }
-	set_variable			= { electric_power_cost_state_var = state_power_cost_temp }
-	add_to_variable			= { electric_power_cost_state_var = 3 }
+	set_temp_variable			= { state_power_cost_temp = num_controlled_states }
+	multiply_temp_variable		= { state_power_cost_temp = 1 }
+	set_variable				= { electric_power_cost_state_var = state_power_cost_temp }
+	add_to_variable				= { electric_power_cost_state_var = 3 }
+	if = {
+		limit					= { has_intelligence_agency = yes }
+		add_to_variable			= { electric_power_cost_state_var = 5 }
+		set_temp_variable		= { state_power_cost_temp2 = agency_upgrade_number }
+		multiply_temp_variable	= { state_power_cost_temp2 = 0.5 }
+		add_to_variable			= { electric_power_cost_state_var = state_power_cost_temp2 }
+	}
 	
 # Инфра
 	while_loop_effect		= { limit = { infrastructure > var:infrastructure_@THIS }			add_to_temp_variable = { infrastructure_@THIS = 1 } }
@@ -514,7 +521,7 @@ calculate_provision_start_effect = {
 	set_variable			= { chance_of_crop_failure_var = 33 }
 	
 ### ГОЛОД БАЗА
-	set_variable			= { hunger_stability_weekly_var = -0.025 }
+	set_variable			= { hunger_stability_weekly_var = -0.005 }
 	set_variable			= { hunger_monthly_population_var = -1 }
 	set_variable			= { hunger_change_population_weekly_var = -0.005 }
 	set_variable			= { hunger_industrial_capacity_var = -0.025 }
@@ -698,13 +705,13 @@ calculate_provision_yearly_effect = {
 		}
 	}
 	random_list = {
-		chance_of_crop_failure_var = {		# НЕУРОЖАЙ
+		var:chance_of_crop_failure_var = {		# НЕУРОЖАЙ
 			set_variable				= { chance_of_crop_failure_var = 15 }
 			set_temp_variable			= { yearly_income_provision_temp = yearly_income_provision }
 			multiply_temp_variable		= { yearly_income_provision_temp = 0.25 }
 			set_country_flag			= { flag = crop_failure_flag days = 150 value = 1 }
 		}
-		temp_random = {
+		temp_var:temp_random = {
 			add_to_variable					= { chance_of_crop_failure_var = 33 }
 			random_list = {
 				10 = {
@@ -744,7 +751,7 @@ calculate_hunger_dyn_effect = {
 				check_variable		= { var = provision_days_var	value = 7	compare = less_than_or_equals }
 			}
 		}
-		set_variable				= { hunger_stability_weekly_var = -0.025 }
+		set_variable				= { hunger_stability_weekly_var = -0.005 }
 		set_variable				= { hunger_monthly_population_var = -1 }
 		if = {
 			limit					= { NOT = { has_variable = hunger_dyn_var } }
@@ -1090,6 +1097,7 @@ calculate_mobilization_speed_proletariat_effect = {
 			limit						= { check_variable = { target_proletariat < 0 } }
 			multiply_variable			= { mobilization_speed_proletariat_var = -1 }												# для текст
 		}
+		clamp_variable					= { var = mobilization_speed_proletariat_var	min = 0.0001	max = 2 }
 	}
 }
 
@@ -1097,15 +1105,25 @@ calculate_in_economic_development_factor = {
 	set_temp_variable					= { interest_in_economic_development_base_temp = 1 }
 	set_temp_variable					= { t1 = num_of_factories }
 	set_temp_variable					= { t2 = t1 }
-	add_to_temp_variable				= { t2 = 100 }
+	add_to_temp_variable				= { t2 = global.nof }	# ~100
 	divide_temp_variable				= { t1 = t2 }
 	subtract_from_temp_variable			= { interest_in_economic_development_base_temp = t1 }
 	add_to_temp_variable				= { interest_in_economic_development_base_temp = modifier@interest_in_economic_development_factor }
 	set_variable						= { interest_in_economic_development_base = interest_in_economic_development_base_temp }
+	clamp_variable						= { var = interest_in_economic_development_base	min = 0	max = 2 }
+}
+
+effect_calculate_base_nof = {
+	every_other_country = {
+		add_to_temp_variable			= { nof_temp = num_of_factories }
+	}
+	multiply_temp_variable				= { nof_temp = 0.5 }
+	round_temp_variable					= nof_temp
+	set_variable						= { global.nof = nof_temp }
 }
 
 effect_1 = {
 #	set_temp_variable		= { test_temp = 0 }
-	while_loop_effect		= { limit = { check_variable { political_power > var:test_temp_@THIS } }	add_to_temp_variable = { test_temp_@THIS = 1 } }
+	while_loop_effect		= { limit = { check_variable = { political_power > var:test_temp_@THIS } }	add_to_temp_variable = { test_temp_@THIS = 1 } }
 	set_variable			= { test_var = test_temp_@THIS }
 }

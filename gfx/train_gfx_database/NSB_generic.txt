@@ -382,7 +382,7 @@ wagon_data = {
 #GER = {
 #	# specify for specific original tags
 #}
-GER = {
+ANT = {
 	train_equipment_1 = {
 		wagon_0 = GER_train_locomotive_equipment_1_entity
 		wagon_1 = GER_train_coal_equipment_1_entity
@@ -430,7 +430,7 @@ GER = {
 #SOV = {
 #	# specify for specific original tags
 #}
-SOV = {
+ARS = {
 	train_equipment_1 = {
 		wagon_0 = SOV_train_locomotive_equipment_1_entity
 		wagon_1 = SOV_train_coal_equipment_1_entity
@@ -478,7 +478,7 @@ SOV = {
 #FRA = {
 #	# specify for specific original tags
 #}
-FRA = {
+KOL = {
 	train_equipment_1 = {
 		wagon_0 = FRA_train_locomotive_equipment_1_entity
 		wagon_1 = FRA_train_coal_equipment_1_entity
@@ -511,7 +511,7 @@ FRA = {
 #ENG = {
 #	# specify for specific original tags
 #}
-ENG = {
+OBR = {
 	train_equipment_1 = {
 		wagon_0 = ENG_train_locomotive_equipment_1_entity
 		wagon_1 = ENG_train_coal_equipment_1_entity
@@ -545,7 +545,7 @@ ENG = {
 #USA = {
 #	# specify for specific original tags
 #}
-USA = {
+UNF = {
 	train_equipment_1 = {
 		wagon_0 = USA_train_locomotive_equipment_1_entity
 		wagon_1 = USA_train_coal_equipment_1_entity
@@ -579,7 +579,7 @@ USA = {
 #JAP = {
 #	# specify for specific original tags
 #}
-JAP = {
+IMP = {
 	train_equipment_1 = {
 		wagon_0 = JAP_train_locomotive_equipment_1_entity
 		wagon_1 = JAP_train_coal_equipment_1_entity

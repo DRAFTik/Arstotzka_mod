@@ -29,7 +29,7 @@ state={
             }
 			2119 = {
 				naval_base = 1
-                naval_facility = 1
+				naval_facility = 1
                 coastal_bunker = 4
             }
 			2154 = {
@@ -44,5 +44,5 @@ state={
 	}
 	manpower=4204443
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=small_island
+	local_supplies=0.000	state_category=town		# TODO
 }

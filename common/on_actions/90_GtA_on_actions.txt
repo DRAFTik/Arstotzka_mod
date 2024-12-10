@@ -2,7 +2,10 @@ on_actions = {
 
 	on_startup = {
 		effect = {
-			set_variable = { global.num_of_extra_tank_school_var = 5 }
+			SAI = {
+				set_variable = { global.num_of_extra_tank_school_var = 5 }
+				effect_calculate_base_nof = yes
+			}
 			every_possible_country = {
 				default_party_popularity_PP_gain			= yes
 				calculate_electric_power_effect				= yes
@@ -91,8 +94,18 @@ on_actions = {
 				calculate_hunger_dyn_effect					= yes		# голод
 				calculate_change_population_weekly_effect	= yes		# изменение населения в регионах
 				add_to_temp_variable = { total_iron_exported_temp = resource_exported@iron }
+				
+### ШПИОНАЖ
+				if = {
+					limit = { 
+						has_intelligence_agency = yes
+						is_ai = yes
+					}
+					update_operation_ai = yes
+				}
 			}
 			add_to_variable = { global.total_iron_exported = total_iron_exported_temp }
+			effect_calculate_base_nof = yes
 		}
 	}
 
@@ -115,6 +128,29 @@ on_actions = {
 			every_other_country = {
 				calculate_provision_monthly_effect		= yes		# порча еды
 				AI_set_electric_panel_effect			= yes		# тумблеры электричества
+				
+### AGENCY UPGRADES
+				if = {
+					limit = { is_ai = yes }
+					set_variable = { GtA_max_agency_upgrades = global.num_days }
+					subtract_from_variable = { GtA_max_agency_upgrades = 706640 }
+					divide_variable = { GtA_max_agency_upgrades = 30.41 }
+					if = {
+						limit = { is_major = yes }
+						divide_variable = { GtA_max_agency_upgrades = 6 }
+					}
+					else = {
+						divide_variable = { GtA_max_agency_upgrades = 12 }
+					}
+					if = {
+						limit = { has_capitulated = yes }
+						multiply_variable = { GtA_max_agency_upgrades = 5 }
+					}
+					set_temp_variable = { industry_factor = num_of_factories }
+					divide_temp_variable = { industry_factor = 1000 }
+					add_to_temp_variable = { industry_factor = 1 }
+					multiply_variable = { GtA_max_agency_upgrades = industry_factor }
+				}
 			}
 		}
 	}

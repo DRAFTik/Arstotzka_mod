@@ -43,24 +43,34 @@ continent = {
 	}
 	
 	political = {
-		communism = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+		totalist = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
 			}
 		}
-		democratic = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
+		syndicalist = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
 			}
 		}
-		fascism = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+		market_liberal = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
 			}
 		}
-		neutrality = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+		mysticist = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
+			}
+		}
+		authoritarian_democrat = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+			}
+		}
+		national_populist = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
 			}
 		}
 	}

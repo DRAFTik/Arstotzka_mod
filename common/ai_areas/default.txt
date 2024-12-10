@@ -1,42 +1,7 @@
 areas = {
-	europe = {
+	protocont = {
 		continents = {
-			europe
-		}
-	}
-
-	north_america = {
-
-		continents = {
-			north_america
-		}
-	}
-
-	south_america = {
-
-		continents = {
-			south_america
-		}
-	}
-
-	africa = {
-
-		continents = {
-			africa
-		}
-	}
-
-	asia = {
-
-		continents = {
-			asia
-		}
-	}
-
-	middle_east = {
-
-		continents = {
-			middle_east
+			protocont
 		}
 	}
 }
