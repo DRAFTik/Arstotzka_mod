@@ -48,7 +48,7 @@
 ### ELECTRIC POWER ###
 ######################
 
-    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\n\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.modifier@num_generation_electric_power|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-]"
+    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\n\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.modifier@num_generation_electric_power|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-]"
     gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!.[GET_ELECTRIC_POWER_CRISIS_LOC]"
     GET_ELECTRIC_POWER_CRISIS_TEXT: "\n$SEPARATION_LINE$$electric_power_title_bad_debuff_text$$electric_power_debuff_text$"
     
@@ -138,3 +138,19 @@
     iron: "Железная руда"
     iron_desc: "Природные минеральные образования, содержащие железо и его соединения в таком объёме, при котором промышленное извлечение железа из этих образований целесообразно."
     PRODUCTION_MATERIALS_IRON: "$iron$"
+    
+    
+    
+###################
+### TRADE PANEL ###
+###################
+    generic_trade_title: "Меню торговли"
+    electro_trade_title_1: "Страна"
+    electro_trade_title_2: "Объёмы продажи £electric_power_pure_icon , МВт"
+    our_electro_generator_trade_title_1: "Наши объёмы выработки, МВт"
+    our_electro_balance_trade_title_1: "Наш баланс электроэнергии, МВт"
+    SUB_FACTORIES_CLICK: "§GЩелкните§!, чтобы уменьшить экспорт на §Y1§!\n§GПКМ§! — уменьшить экспорт на §Y10§!"
+    ADD_FACTORIES_CLICK: "§GЩелкните§!, чтобы увеличить экспорт на §Y1§!\n§GПКМ§! — увеличить экспорт на §Y10§!"
+    CLEAR_CLICK: "Отчистить экспорт"
+    NUM_ELECTRO_TRADE_GREEN_TEXT: "§G[?THIS.num_electro_export_var]§!"
+    NUM_ELECTRO_TRADE_RED_TEXT: "§R[?THIS.num_electro_export_var]§!"

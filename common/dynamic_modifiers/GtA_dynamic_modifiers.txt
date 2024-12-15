@@ -34,6 +34,11 @@
 		# list of modifiers
 		fuel_cost = fuel_cost_var		# в час
 	}
+	electro_power_trade_cost_dyn = {
+		
+		# list of modifiers
+		num_generation_electric_power = num_generation_electric_power_cost_var
+	}
 	
 	
 	universal_factory_dyn = {

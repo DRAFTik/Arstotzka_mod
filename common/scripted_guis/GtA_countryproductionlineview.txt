@@ -2,9 +2,9 @@ scripted_gui = {
 
 	GtA_block_tanks = {
 		context_type = player_context
-		
 		window_name = "GtA_block_tanks_container"
 		parent_window_token = production_tab
+		dirty = ROOT.own_tank_school_tech
 
 		visible = {
 			has_tech = gwtank_chassis

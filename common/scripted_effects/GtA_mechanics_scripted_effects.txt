@@ -395,6 +395,20 @@ AI_set_electric_panel_effect = {
 	}
 }
 
+calculate_electric_power_trade_effect = {
+	if = {
+		limit						= { NOT = { has_dynamic_modifier = { modifier = electro_power_trade_cost_dyn } } }
+		add_dynamic_modifier		= { modifier = electro_power_trade_cost_dyn }
+	}
+	set_temp_variable				= { num_electro_export_temp = num_electro_export_var }
+	multiply_temp_variable			= { num_electro_export_temp = -1 }
+	set_variable					= { num_generation_electric_power_cost_var = num_electro_export_temp }
+	force_update_dynamic_modifier	= yes
+	
+	calculate_electric_power_effect	= yes
+	calculate_electric_power_dyn	= yes
+}
+
 
 
 calculate_provision_start_effect = {

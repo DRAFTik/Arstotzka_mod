@@ -1,0 +1,220 @@
+scripted_gui = {
+	
+	generic_trade_opener_menu = {
+		context_type = player_context
+		window_name = "generic_trade_opener_container"
+		dirty = ROOT.generic_trade_open_var
+		
+		visible = {
+		}
+
+		ai_enabled = {
+			always = no
+		}
+		
+		triggers = {
+		}
+		effects = {
+			generic_trade_open_click = {
+				if = {
+					limit			= { check_variable = { generic_trade_open_var = 0 } }
+					set_variable	= { generic_trade_open_var = 1 }
+				}
+				else				= { set_variable = { generic_trade_open_var = 0 } }
+			}
+		}
+	}
+	
+	generic_trade_ui = {
+		context_type = player_context
+		window_name = "generic_trade_ui_window"
+#		dirty = country_electro_trade_country_array^num
+		
+		visible = {
+			check_variable = { generic_trade_open_var = 1 }
+		}
+		ai_enabled = {
+			always = no
+		}
+
+		properties = {
+			electro_opener = {
+				frame = electro_opener_frame
+			}
+		}
+		
+		triggers = {
+			clear_button_click_enabled	= { check_variable = { ROOT.num_electro_export_var > 0 } }
+			sub_button_click_enabled 	= { check_variable = { ROOT.num_electro_export_var > 0 } }
+			add_button_click_enabled	= { check_variable = { ROOT.modifier@num_generation_electric_power > 0 } }
+		}
+		
+		effects = {
+			generic_trade_close_click = {
+				set_variable = { generic_trade_open_var = 0 }
+			}
+			electro_opener_click = {
+				if = {
+					limit			= { check_variable = { electro_opener_frame = 1 } }
+					set_variable	= { electro_opener_frame = 2 }
+				}
+				else				= { set_variable = { electro_opener_frame = 1 } }
+			}
+			clear_button_click = {
+				if = {
+					limit = { check_variable = { electro_opener_frame = 2 } }
+					if = {
+						limit = { check_variable = { num_electro_export_var > 0 } }
+						set_variable = { num_electro_export_var = 0 }
+						calculate_electric_power_trade_effect = yes
+					}
+					if = {
+						limit = {
+							is_in_array = { global.country_electro_trade_country_array = THIS }
+						}
+						remove_from_array	= { global.country_electro_trade_country_array = THIS }
+					}
+				}
+			}
+			sub_button_click = {
+				if = {
+					limit = { check_variable = { electro_opener_frame = 2 } }
+					if = {
+						limit = { check_variable = { num_electro_export_var > 1 } }
+						subtract_from_variable = { num_electro_export_var = 1 }
+						else = { set_variable = { num_electro_export_var = 0 } }
+						calculate_electric_power_trade_effect = yes
+					}
+					if = {
+						limit = {
+							check_variable = { num_electro_export_var = 0 }
+							is_in_array = { global.country_electro_trade_country_array = THIS }
+						}
+						remove_from_array	= { global.country_electro_trade_country_array = THIS }
+						calculate_electric_power_trade_effect = yes
+					}
+				}
+			}
+			sub_button_right_click = {
+				if = {
+					limit = { check_variable = { electro_opener_frame = 2 } }
+					if = {
+						limit = { check_variable = { num_electro_export_var > 10 } }
+						subtract_from_variable = { num_electro_export_var = 10 }
+						else = { set_variable = { num_electro_export_var = 0 } }
+						calculate_electric_power_trade_effect = yes
+					}
+					if = {
+						limit = {
+							check_variable = { num_electro_export_var = 0 }
+							is_in_array = { global.country_electro_trade_country_array = THIS }
+						}
+						remove_from_array	= { global.country_electro_trade_country_array = THIS }
+						calculate_electric_power_trade_effect = yes
+					}
+				}
+			}
+			
+			
+			add_button_click = {
+				if = {
+					limit = { check_variable = { electro_opener_frame = 2 } }
+					if = {
+						limit = { NOT = { is_in_array = { global.country_electro_trade_country_array = THIS } } }
+						add_to_array = { global.country_electro_trade_country_array = THIS }
+					}
+					add_to_variable = { num_electro_export_var = 1 }
+					calculate_electric_power_trade_effect = yes
+				}
+			}
+			add_button_right_click = {
+				if = {
+					limit = { check_variable = { electro_opener_frame = 2 } }
+					if = {
+						limit = { NOT = { is_in_array = { global.country_electro_trade_country_array = THIS } } }
+						add_to_array = { global.country_electro_trade_country_array = THIS }
+					}
+					if = {
+						limit = { check_variable = { ROOT.modifier@num_generation_electric_power < 10 } }
+						add_to_variable = { num_electro_export_var = ROOT.modifier@num_generation_electric_power }
+						else = { add_to_variable = { num_electro_export_var = 10 } }
+					}
+					calculate_electric_power_trade_effect = yes
+				}
+			}
+		}
+	}
+	
+	our_electric_power_ui = {
+		context_type = player_context
+		window_name = "our_electric_power_container"
+		parent_window_name = generic_trade_ui_window
+		dirty = ROOT.modifier@num_generation_electric_power
+		
+		visible = {
+			check_variable = { electro_opener_frame = 2 }
+		}
+
+		ai_enabled = {
+			always = no
+		}
+	}
+	
+	country_electro_trade_grid_ui = {
+		context_type = player_context
+		window_name = "country_electro_trade_grid_container"
+		parent_window_name = generic_trade_ui_window
+#		dirty = country_electro_trade_country_array^num
+		
+		visible = {
+			check_variable = { electro_opener_frame = 2 }
+		}
+		ai_enabled = {
+			always = no
+		}
+		
+		triggers = {
+			clear_button_grid_click_enabled = {
+				NOT = { THIS = { tag = ROOT } }
+#				check_variable = { ROOT.num_electro_export_var > 0 }
+			}
+			sub_button_grid_click_enabled = {
+				NOT = { THIS = { tag = ROOT } }
+				check_variable = { THIS.num_electro_export_var > 0 }
+			}
+			add_button_grid_click_enabled = {
+				NOT = { THIS = { tag = ROOT } }
+				check_variable = { THIS.num_electro_export_var > 0 }
+			}
+		}
+		
+		effects = {
+			sub_button_grid_click = {
+				add_to_variable = { ROOT.num_electro_export_var = 1 }
+				add_to_variable = { THIS.num_electro_export_var = 1 }
+				calculate_electric_power_trade_effect = yes
+				THIS = { calculate_electric_power_trade_effect = yes }
+			}
+			add_button_grid_click = {
+				add_to_variable = { ROOT.num_electro_export_var = -1 }
+				add_to_variable = { THIS.num_electro_export_var = 1 }
+				calculate_electric_power_trade_effect = yes
+				THIS = { calculate_electric_power_trade_effect = yes }
+			}
+		}
+
+		properties = {
+			flag = {
+				image = "[This.GetFlag]"
+			}
+		}
+		
+		dynamic_lists = {
+			country_grid = {
+				array = global.country_electro_trade_country_array
+				change_scope = yes
+				entry_container = scripted_gui_country_electro_trade_entry
+			}
+		}
+	}
+}

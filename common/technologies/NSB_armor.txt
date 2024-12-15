@@ -109,6 +109,7 @@ technologies = {
 
 					load_oob = "unlock_tanks"
 				}
+				add_to_variable = { own_tank_school_tech = 1 }
 			}
 
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
@@ -2180,6 +2181,7 @@ technologies = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = own_tank_school_tech_tt
+			add_to_variable = { own_tank_school_tech = 1 }
 		}
 		show_effect_as_desc = yes
 	

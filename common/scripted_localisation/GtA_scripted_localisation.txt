@@ -296,3 +296,18 @@ defined_text = {
 		localization_key = GET_PROLETARIAT_STABLE_TEXT
 	}
 }
+
+defined_text = {
+	name = GET_NUM_ELECTRO_TRADE_TEXT
+	text = {
+		trigger = {
+			set_temp_variable = { temp1 = ROOT.electric_power_total_var }
+			add_to_temp_variable = { temp1 = THIS.num_electro_export_var }
+			check_variable = { var = temp1	value = 0	compare = greater_than_or_equals }
+		}
+		localization_key = NUM_ELECTRO_TRADE_GREEN_TEXT
+	}
+	text = {
+		localization_key = NUM_ELECTRO_TRADE_RED_TEXT
+	}
+}

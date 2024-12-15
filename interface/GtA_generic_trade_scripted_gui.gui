@@ -1,0 +1,323 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "generic_trade_opener_container"
+		position = { x=20	y=80 }
+		size = { width = 100% height = 100% }
+		
+		buttonType = {
+			name = "generic_trade_open"
+			quadTextureSprite = "GFX_traded_factories_icon"
+			position = { x=0	y=0 }
+			shortcut = ""
+			pdx_tooltip = generic_trade_open_tt
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+	}
+	
+	
+	containerWindowType = {
+		name = "generic_trade_ui_window"
+		position = { x=0	y=110 }
+		size = { width = 580 height= 660 }
+		Orientation = UPPER_LEFT
+		
+		show_position = { x=95 y=110 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 450
+		moveable = yes
+		
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+		
+		buttonType = {
+			name = "generic_trade_close"
+			position = { x = 535 y = 10 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			shortcut = "ESCAPE"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+
+		instantTextBoxType = {
+			name = "generic_trade_title"
+			position = { x=135	y=15 } 
+			font = "hoi_36header"
+			text = "generic_trade_title"
+			maxWidth = 250  
+			maxHeight = 20
+			format = right
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="divider"
+			spriteType = "GFX_divider"
+			position = { x= 20 y = 7 }
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="divider2"
+			spriteType = "GFX_divider"
+			position = { x= 20 y = 42 }
+			alwaystransparent = yes
+		}
+		
+		containerWindowType = {
+			name = "electro_opener_container"
+			position = { x = 20 y = 60 }
+			size = { width = 400 height = 265 }
+
+
+			buttonType = {
+				name = "electro_opener"
+				position = {x=0 y=0}
+				quadTextureSprite ="GFX_gta_resource_btn"
+				clicksound = click_checkbox
+			}
+			
+			iconType = {
+				name ="electric_power_icon"
+				position = { x = 30 y = 5 }	#x+30 y+5
+				spriteType = "GFX_electric_power_pure_icon"
+				alwaystransparent = yes
+			}
+		}
+		
+		buttonType = {
+			name = "sub_button"
+			position = { x=31 y=17 }
+			quadTextureSprite = "GFX_subtract_one"
+			clicksound = click_default
+			pdx_tooltip = "SUB_FACTORIES_CLICK"
+		}
+		buttonType = {
+			name = "clear_button"
+			position = { x=65 y=19 }
+			quadTextureSprite = "GFX_conversion_mapicon_industry_disabled"
+			clicksound = click_default
+			pdx_tooltip = "CLEAR_CLICK"
+		}
+		buttonType = {
+			name = "add_button"
+			position = { x=95 y=17 }
+			quadTextureSprite = "GFX_add_one"
+			clicksound = click_default
+			pdx_tooltip = "ADD_FACTORIES_CLICK"
+		}
+	}
+	
+	
+	containerWindowType = {
+		name = "our_electric_power_container"
+		position = { x = 450 y = 68 }
+		
+		containerWindowType = {
+			name = "our_electric_power_generator_container"
+			position = { x = 0 y = -15 }
+			
+			instantTextBoxType = {
+				name = "our_electro_generator_trade_title_1"
+				position = { x = -310 y = 4 }
+				font = "hoi_18mbs"
+				text = "our_electro_generator_trade_title_1"
+				format = right
+				maxWidth = 300
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			
+			iconType = {
+				name ="electric_power_bg"
+				spriteType = "GFX_generic_box_smallest"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			instantTextBoxType = {
+				name ="electric_power_generator_text"
+				position = { x = 3 y = 4 }
+				font = "hoi_18mbs"
+				text = "[?ROOT.modifier@num_generation_electric_power|Y1]"
+				format = right
+				maxWidth = 60
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			
+			iconType = {
+				name ="electric_power_generator_icon"
+				position = { x = 1 y = 2 }
+				spriteType = "GFX_electric_power_icon"
+				alwaystransparent = yes
+			}
+		}
+		
+		containerWindowType = {
+			name = "our_electric_power_balance_container"
+			position = { x = 0 y = 15 }
+			
+			instantTextBoxType = {
+				name = "our_electro_balance_trade_title_1"
+				position = { x = -310 y = 4 }
+				font = "hoi_18mbs"
+				text = "our_electro_balance_trade_title_1"
+				format = right
+				maxWidth = 300
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			
+			iconType = {
+				name ="electric_power_bg2"
+				spriteType = "GFX_generic_box_smallest"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			instantTextBoxType = {
+				name ="electric_power_balance_text"
+				position = { x = 3 y = 4 }
+				font = "hoi_18mbs"
+				text = "[?ROOT.electric_power_total_var|1+]"
+				format = right
+				maxWidth = 60
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			
+			iconType = {
+				name ="electric_power_balance_icon"
+				position = { x = 1 y = 2 }
+				spriteType = "GFX_electric_power_icon"
+				alwaystransparent = yes
+			}
+		}
+	}
+	
+	
+	# if you want a scroll bar, you have to add a parent container to your grid
+	containerWindowType = {
+		name = "country_electro_trade_grid_container"
+		position = { x=31 y=110 }
+		size = {width = 520 height = 530 }
+		margin = { top = 10 bottom = 10 }
+		Orientation = upper_left
+
+		verticalScrollbar = "right_vertical_slider"
+
+		# background is necesarry for scrollbars to work
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_1b_thin_border"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "electro_trade_title_1"
+			position = { x = 110 y = 0 }
+			font = "hoi_18mbs"
+			text = "electro_trade_title_1"
+			maxWidth = 120
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "electro_trade_title_2"
+			position = { x = 300 y = 0 }
+			font = "hoi_18mbs"
+			text = "electro_trade_title_2"
+			maxWidth = 420
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		
+		# this grid will be dynamically populated
+		gridboxtype = {
+			name = "country_grid"
+			position = { x = 10 y = 0 }
+			size = { width = 442 height = 100%% }
+			slotsize = { width = 442 height = 1 } #if width or height is 1, it will use slot element's dimension
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+	}
+
+	
+	# this entry will be used to populate country_grid in saadabad_pact_decision_ui
+	containerWindowType = {
+		name = "scripted_gui_country_electro_trade_entry"
+		position = { x = 0 y = 20}
+		size = { width = 485 height = 70 }
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_tiled_plain_bg"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "flag"
+			quadTextureSprite = "GFX_player_flag"
+			position = { x = 20 y = 7 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 120 y = 25 }
+			font = "hoi_18mbs"
+			text = "[?this.GetName]"
+			maxWidth = 200
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "num"
+			position = { x = 380 y = 25 }
+			font = "hoi_18mbs"
+			text = "[GET_NUM_ELECTRO_TRADE_TEXT]"
+			maxWidth = 80
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		
+		buttonType = {
+			name = "sub_button_grid"
+			position = { x=441 y=3 }
+			quadTextureSprite = "GFX_subtract_one"
+			clicksound = click_default
+			pdx_tooltip = "SUB_FACTORIES_CLICK"
+		}
+		buttonType = {
+			name = "clear_button_grid"
+			position = { x=443 y=26 }		# x+3
+			quadTextureSprite = "GFX_conversion_mapicon_industry_disabled"
+			clicksound = click_default
+			pdx_tooltip = "CLEAR_CLICK"
+		}
+		buttonType = {
+			name = "add_button_grid"
+			position = { x=440 y=45 }
+			quadTextureSprite = "GFX_add_one"
+			clicksound = click_default
+			pdx_tooltip = "ADD_FACTORIES_CLICK"
+		}
+	}
+}

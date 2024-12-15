@@ -104,4 +104,10 @@ spriteTypes = {
 		name = "GFX_proletariat_icon"
 		texturefile = "gfx/interface/GUI/proletariat/proletariat_icon.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_gta_resource_btn"
+		texturefile = "gfx/interface/tradeview/resource_btn.dds"
+		noOfFrames = 2
+	}
 }
