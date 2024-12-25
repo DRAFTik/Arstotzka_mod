@@ -671,6 +671,15 @@ script_enum_equipment_bonus_type = {
 	heavy_tank_flame_equipment_2
 	heavy_tank_flame_equipment_3
 	
+	extreme_tank_chassis
+	extreme_tank_chassis_1
+	extreme_tank_artillery_chassis
+	extreme_tank_artillery_chassis_1
+	extreme_tank_destroyer_chassis
+	extreme_tank_destroyer_chassis_1
+	extreme_tank_aa_chassis
+	extreme_tank_aa_chassis_1
+	
 	motorcycle_equipment
 	motorcycle_equipment_0
 	motorcycle_equipment_1

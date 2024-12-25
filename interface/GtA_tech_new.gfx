@@ -133,8 +133,85 @@ spriteTypes = {
 ### INDUSTRY ###
 	SpriteType = {
 		name = "GFX_synth_construction_medium"
-		texturefile = "gfx/interface/technologies/technologies/synth_construction.dds"
+		texturefile = "gfx/interface/technologies/technologies/industry/synth_construction.dds"
 	}
+	SpriteType = {
+		name = "GFX_technocities_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/technocities.dds"
+	}
+	SpriteType = {
+		name = "GFX_underground_factories_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/underground_factories.dds"
+	}
+	SpriteType = {
+		name = "GFX_aglomerations_building_sites_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/aglomerations_building_sites.dds"
+	}
+	SpriteType = {
+		name = "GFX_city_industry_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/city_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_civilian_industry_development_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/civilian_industry_development.dds"
+	}
+	SpriteType = {
+		name = "GFX_civilian_infrastructure_development_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/civilian_infrastructure_development.dds"
+	}
+	SpriteType = {
+		name = "GFX_defensive_buildings_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/defensive_buildings.dds"
+	}
+	SpriteType = {
+		name = "GFX_global_projects_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/global_projects.dds"
+	}
+	SpriteType = {
+		name = "GFX_handicraft_industry_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/handicraft_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_improved_industry_conversion_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/improved_industry_conversion.dds"
+	}
+	SpriteType = {
+		name = "GFX_advanced_industry_conversion_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/advanced_industry_conversion.dds"
+	}
+	SpriteType = {
+		name = "GFX_line_programming_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/line_programming.dds"
+	}
+	SpriteType = {
+		name = "GFX_logistics_improvement_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/logistics_improvement.dds"
+	}
+	SpriteType = {
+		name = "GFX_militarized_industry_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/militarized_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_military_infrastructure_development_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/military_infrastructure_development.dds"
+	}
+	SpriteType = {
+		name = "GFX_offensive_buildings_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/offensive_buildings.dds"
+	}
+	SpriteType = {
+		name = "GFX_repair_methods_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/repair_methods.dds"
+	}
+	SpriteType = {
+		name = "GFX_ship_building_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/ship_building.dds"
+	}
+	SpriteType = {
+		name = "GFX_strategic_prepairing_medium"
+		texturefile = "gfx/interface/technologies/technologies/industry/strategic_prepairing.dds"
+	}
+
 	
 	
 	
@@ -166,6 +243,42 @@ spriteTypes = {
 ### TANK TECH
 	SpriteType = {
 		name = "GFX_tank_gas_generator_engine_tech_medium"
-		textureFile = "gfx/interface/technologies/technologies/tank_gas_generator_engine.dds"
+		textureFile = "gfx/interface/technologies/technologies/armor/tank_gas_generator_engine.dds"
+	}
+	SpriteType = {
+		name = "GFX_army_cooperation_medium"
+		textureFile = "gfx/interface/technologies/technologies/armor/army_cooperation.dds"
+	}
+	SpriteType = {
+		name = "GFX_theory_tank_war_medium"
+		textureFile = "gfx/interface/technologies/technologies/armor/theory_tank_war.dds"
+	}
+	SpriteType = {
+		name = "GFX_uprage_recon_furniture_medium"
+		textureFile = "gfx/interface/technologies/technologies/armor/uprage_recon_furniture.dds"
+	}
+	SpriteType = {
+		name = "GFX_from_mass_to_speed_medium"
+		textureFile = "gfx/interface/technologies/technologies/armor/from_mass_to_speed.dds"
+	}
+	SpriteType = {
+		name = "GFX_increase_mass_armor_medium"
+		textureFile = "gfx/interface/technologies/technologies/armor/increase_mass_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_consctruction_medium"
+		textureFile = "gfx/interface/technologies/technologies/armor/light_consctruction.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_consctruction_medium"
+		textureFile = "gfx/interface/technologies/technologies/armor/heavy_consctruction.dds"
+	}
+	SpriteType = {
+		name = "GFX_experiments_dynamic_defensive_medium"
+		textureFile = "gfx/interface/technologies/technologies/armor/experiments_dynamic_defensive.dds"
+	}
+	SpriteType = {
+		name = "GFX_tank_of_extreme_parameters_chassis_medium"
+		textureFile = "gfx/interface/technologies/technologies/armor/tank_of_extreme_parameters_chassis.dds"
 	}
 }

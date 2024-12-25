@@ -223,13 +223,13 @@ equipments = {
 		}
 		
 		default_modules = {
-			land_cruiser_main_armament_slot = empty
-			layout_type_slot = empty
-			special_type_slot_5 = empty
-			land_cruiser_suspension_type_slot = empty
-			land_cruiser_continuous_track_type_slot = empty
-			land_cruiser_armor_type_slot = empty
-			land_cruiser_engine_type_slot = empty
+			land_cruiser_main_armament_slot			= empty
+			layout_type_slot						= empty
+			special_type_slot_5						= empty
+			land_cruiser_suspension_type_slot		= empty
+			land_cruiser_continuous_track_type_slot	= empty
+			land_cruiser_armor_type_slot			= empty
+			land_cruiser_engine_type_slot			= empty
 		}
 
 		fuel_consumption = 0
@@ -257,6 +257,306 @@ equipments = {
 		upgrades = {
 			#tank_nsb_engine_upgrade
 			#tank_nsb_armor_upgrade
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+##########################################################################
+
+
+
+
+
+	
+	extreme_tank_chassis = {
+		year = 1995
+		is_archetype = yes
+		is_buildable = no
+		can_be_produced = {
+			if = {
+				limit = { has_dlc = "No Step Back" }
+				has_tech = own_tank_school_tech
+			}
+		}
+		picture = archetype_modern_tank_equipment
+		type = armor
+		group_by = archetype
+		interface_category = interface_category_armor
+		priority = 2000
+
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+				}
+			}
+			
+			layout_type_slot = {	
+				required = yes
+				allowed_module_categories = {
+					tank_layout_type
+				}
+			}
+
+			turret_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_medium_turret_type
+					tank_heavy_turret_type
+					tank_modern_turret_type
+				}
+			}
+
+			suspension_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_suspension_type
+				}
+			}
+			
+			continuous_track_type_slot = {	#NW
+				required = yes
+				allowed_module_categories = {
+				}
+			}
+
+			armor_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_type
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_engine_type
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_radio_module
+					tank_coatings
+					tank_ammo
+				}
+			}
+
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_radio_module
+					tank_coatings
+					tank_ammo
+				}
+			}
+
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_radio_module
+					tank_coatings
+					tank_ammo
+				}
+			}
+
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_radio_module
+					tank_coatings
+					tank_ammo
+				}
+			}
+
+		}
+		module_count_limit = {
+			module = tank_continuous_track_full_rubber
+			count < 1
+		}
+		module_count_limit = {
+			module = sloped_armor
+			count < 2
+		}	
+		module_count_limit = {
+			category = tank_radio_module
+			count < 2
+		}
+		module_count_limit = {
+			module = amphibious_drive
+			count < 1
+		}
+
+		module_count_limit = {
+			module = wet_ammo_storage
+			count < 2
+		}
+
+		module_count_limit = {
+			module = squeezebore_adaptor
+			count < 2
+		}
+
+		module_count_limit = {
+			module = armor_skirts
+			count < 2
+		}
+
+		module_count_limit = {
+			module = dozer_blade
+			count < 2
+		}
+
+		module_count_limit = {
+			module = easy_maintenance
+			count < 2
+		}
+		module_count_limit = {
+			module = auto_loader
+			count < 2
+		}
+		module_count_limit = {
+			module = stabilizer
+			count < 2
+		}
+		module_count_limit = {
+			category = tank_coatings
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_ammo_armour_piercing_discarding_sabot
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_high_explosive_anti_tank
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_boosted_engine
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_low_noise_exhaust_system
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_stereo_tube
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_improved_turning_mechanisms
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_additional_ground_hooks
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_manual_fire_extinguisher
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_repair_kit
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_hardening_of_armor
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_carburizing_steel
+			count < 2
+		}
+		module_count_limit = {
+			module = tank_drum_charging_systems
+			count < 2
+		}
+		
+		
+		### CLONE WEAPONS
+		
+		module_count_limit = {
+			category = tank_flamethrower
+			count < 3
+		}
+		module_count_limit = {
+			category = tank_anti_air
+			count < 3
+		}
+		module_count_limit = {
+			module = tank_super_heavy_cannon_clone
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_heavy_cannon_clone
+			count < 3
+		}
+		module_count_limit = {
+			module = tank_heavy_cannon_2_clone
+			count < 3
+		}
+		module_count_limit = {
+			module = tank_heavy_cannon_3_clone
+			count < 3
+		}
+		module_count_limit = {
+			module = tank_medium_cannon_clone
+			count < 4
+		}
+		module_count_limit = {
+			module = tank_medium_cannon_2_clone
+			count < 4
+		}
+		
+		default_modules = {
+			main_armament_slot			= empty
+			layout_type_slot			= tank_center_single_turret_layout
+			turret_type_slot			= tank_modern_tank_turret
+			suspension_type_slot		= tank_bogie_suspension
+			continuous_track_type_slot	= tank_continuous_track_full_metal
+			armor_type_slot				= tank_riveted_armor
+			engine_type_slot			= tank_gasoline_engine
+		}
+
+		fuel_consumption	= 0
+		maximum_speed		= 6		# med3 = 6		# hev3 = 5
+		build_cost_ic		= 15	# med3 = 4		# hev3 = 12
+		reliability			= 1.2	# med3 = 1.2	# hev3 = 1.2
+		armor_value			= 90	# med3 = 50		# hev3 = 75
+		hardness			= 0.95	# med3 = 0.85	# hev3 = 0.95
+		resources = {
+			steel		= 2
+			chromium	= 1
+		}
+		
+		lend_lease_cost = 14
+		
+		manpower = 2
+
+	}
+
+	extreme_tank_chassis_1 = {
+		abbreviation = "ept0"
+		derived_variant_name = extreme_tank_equipment_1
+		visual_level = 0
+		year = 1995
+		archetype = extreme_tank_chassis
+		priority = 2000
+		module_slots = inherit
+
+		upgrades = {
+			tank_nsb_engine_upgrade
+			tank_nsb_armor_upgrade
 		}
 	}
 }

@@ -76,6 +76,16 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
+
+
+### NEW TANKS
+
+	spriteType = {
+		name = "GFX_unit_extreme_armor_icon_small"
+		texturefile = "gfx/texticons/unit_extreme_armor_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
 	
 	
 ### FIRE TANKS

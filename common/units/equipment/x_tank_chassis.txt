@@ -214,6 +214,34 @@ duplicate_archetypes = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
 		}
 	}
+
+	# extreme tank
+
+	extreme_tank_aa_chassis = {
+		archetype = extreme_tank_chassis
+		type = { armor anti_air }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.85 }
+		}
+	}
+
+	extreme_tank_artillery_chassis = {
+		archetype = extreme_tank_chassis
+		type = { armor artillery }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.85 }
+		}
+	}
+
+	extreme_tank_destroyer_chassis = {
+		archetype = extreme_tank_chassis
+		type = { armor anti_tank }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+		}
+	}
 }
 
 equipments = {
@@ -1944,37 +1972,37 @@ equipments = {
 		is_convertable = yes
 
 		#Misc Abilities
-		maximum_speed = 10
-		reliability = 0.8
+		maximum_speed = 10		# med3 = 10		# hev3 = 6
+		reliability = 0.8		# med3 = 0.8	# hev3 = 0.8
 
 		#Defensive Abilities
-		defense = 10
-		breakthrough = 84
+		defense = 10			# med3 = 9		# hev3 = 9
+		breakthrough = 84		# med3 = 66		# hev3 = 67
 		hardness = 0.98
-		armor_value = 130
+		armor_value = 130		# med3 = 90		# hev3 = 130
 
 		#Offensive Abilities
-		soft_attack = 40
-		hard_attack = 32
-		ap_attack = 131
+		soft_attack = 40		# med3 = 32		# hev3 = 35
+		hard_attack = 32		# med3 = 24		# hev3 = 40
+		ap_attack = 131			# med3 = 91		# hev3 = 131
 		air_attack = 0
 
 		#Space taken in convoy
-		lend_lease_cost = 14
+		lend_lease_cost = 14	
 		upgrades = {
 			tank_reliability_upgrade
 			tank_engine_upgrade
 			tank_armor_upgrade
 			tank_gun_upgrade
 		}
-		build_cost_ic = 28
+		build_cost_ic = 28		# med3 = 14		# hev3 = 30
 		resources = {
 			#oil = 1
 			steel = 3
 			chromium = 4
 		}
 		
-		fuel_consumption = 5
+		fuel_consumption = 5	# med3 = 3.6	# hev3 = 4.4
 	}
 
 	modern_tank_artillery_equipment_1 = {
@@ -1993,29 +2021,29 @@ equipments = {
 			tank_art_upgrade
 		}
 		#Misc Abilities
-		maximum_speed = 10
-		reliability = 0.8
+		maximum_speed = 10		# med3 = 10		# hev3 = 6
+		reliability = 0.8		# med3 = 0.8	# hev3 = 0.8
 
 		#Defensive Abilities
-		defense = 8
-		breakthrough = 4
+		defense = 8				# med3 = 7		# hev3 = 7
+		breakthrough = 4		# med3 = 4		# hev3 = 3.5
 		hardness = 0.85
-		armor_value = 90
+		armor_value = 90		# med3 = 58		# hev3 = 90
 
 		#Offensive Abilities
-		soft_attack = 80
-		hard_attack = 3
-		ap_attack = 10
+		soft_attack = 80		# med3 = 55		# hev3 = 80
+		hard_attack = 3			# med3 = 2		# hev3 = 2.5
+		ap_attack = 10			# med3 = 0		# hev3 = 0
 		air_attack = 0
 
-		build_cost_ic = 28
+		build_cost_ic = 28		# med3 = 14		# hev3 = 30
 		
 		resources = {
 			#oil = 1
 			steel = 3
 			chromium = 4
 		}
-		fuel_consumption = 2.5
+		fuel_consumption = 2.5	# med3 = 1.8	# hev3 = 2.2
 	}
 
 	modern_tank_destroyer_equipment_1 = {
@@ -2034,30 +2062,30 @@ equipments = {
 			tank_at_upgrade
 		}
 		#Misc Abilities
-		maximum_speed = 10
-		reliability = 0.8
+		maximum_speed = 10		# med3 = 10		# hev3 = 6
+		reliability = 0.8		# med3 = 0.8	# hev3 = 0.8
 
 		#Defensive Abilities
-		defense = 8
-		breakthrough = 2
+		defense = 8				# med3 = 7		# hev3 = 6
+		breakthrough = 2		# med3 = 1.8	# hev3 = 1.5
 		hardness = 0.98
-		armor_value = 130
+		armor_value = 130		# med3 = 90		# hev3 = 110
 
 		#Offensive Abilities
-		soft_attack = 10
-		hard_attack = 42
-		ap_attack = 165
+		soft_attack = 10		# med3 = 8		# hev3 = 8
+		hard_attack = 42		# med3 = 32		# hev3 = 42
+		ap_attack = 165			# med3 = 120	# hev3 = 140
 		air_attack = 0
 
 		
-		build_cost_ic = 28
+		build_cost_ic = 28		# med3 = 14		# hev3 = 27
 		
 		resources = {
 			#oil = 1
 			steel = 3
 			chromium = 4
 		}
-		fuel_consumption = 2.5
+		fuel_consumption = 2.5	# med3 = 1.8	# hev3 = 2.2
 	}
 
 	modern_tank_aa_equipment_1 = {
@@ -2076,29 +2104,29 @@ equipments = {
 			tank_aa_upgrade
 		}
 		#Misc Abilities
-		maximum_speed = 10
-		reliability = 0.8
+		maximum_speed = 10		# med3 = 10		# hev3 = 6
+		reliability = 0.8		# med3 = 0.8	# hev3 = 0.8
 
 		#Defensive Abilities
-		defense = 4
-		breakthrough = 4
+		defense = 4				# med3 = 3.5	# hev3 = 3.5
+		breakthrough = 4		# med3 = 3.5	# hev3 = 3.5
 		hardness = 0.85
-		armor_value = 90
+		armor_value = 90		# med3 = 58		# hev3 = 90
 
 		#Offensive Abilities
-		soft_attack = 9
-		hard_attack = 7.5
-		ap_attack = 100
-		air_attack = 50
+		soft_attack = 9			# med3 = 7.5	# hev3 = 7.5
+		hard_attack = 7.5		# med3 = 6		# hev3 = 6
+		ap_attack = 100			# med3 = 70		# hev3 = 88
+		air_attack = 50			# med3 = 43		# hev3 = 44
 		
-		build_cost_ic = 28
+		build_cost_ic = 28		# med3 = 14		# hev3 = 30
 		
 		resources = {
 			#oil = 1
 			steel = 3
 			chromium = 4
 		}
-		fuel_consumption = 1.25
+		fuel_consumption = 1.25	# med3 = 0.9	# hev3 = 1.1
 	}
 
 	super_heavy_tank_equipment_1 = {
@@ -2426,5 +2454,177 @@ equipments = {
 			chromium = 4
 		}
 		fuel_consumption = 5
+	}
+	
+	
+	
+##############################################################################
+
+	
+	
+	extreme_tank_equipment_1 = {
+		year = 1992
+
+		archetype = extreme_tank_chassis
+		priority = 170
+		visual_level = 0
+		is_convertable = yes
+
+		#Misc Abilities
+		maximum_speed = 6		# med3 = 10		# hev3 = 6		# sh = 4
+		reliability = 0.8		# med3 = 0.8	# hev3 = 0.8	# sh = 0.8
+
+		#Defensive Abilities
+		defense = 10			# med3 = 9		# hev3 = 9		# sh = 10
+		breakthrough = 86		# med3 = 66		# hev3 = 67		# sh = 74
+		hardness = 0.99					# = 0.98				# sh = 0.99
+		armor_value = 145		# med3 = 90		# hev3 = 130	# sh = 145
+
+		#Offensive Abilities
+		soft_attack = 45		# med3 = 32		# hev3 = 35		# sh = 38
+		hard_attack = 50		# med3 = 24		# hev3 = 40		# sh = 45
+		ap_attack = 146			# med3 = 91		# hev3 = 131	# sh = 146
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 14									# sh = 15
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+		build_cost_ic = 45		# med3 = 14		# hev3 = 30		# sh = 100
+		resources = {
+			#oil = 1
+			steel = 3
+			chromium = 4
+		}
+		
+		fuel_consumption = 6	# med3 = 3.6	# hev3 = 4.4	# sh = 10
+	}
+
+	extreme_tank_artillery_equipment_1 = {
+		year = 1992
+
+		archetype = extreme_tank_artillery_chassis
+		priority = 180
+		visual_level = 0
+		can_convert_from = { 
+			extreme_tank_equipment_1 
+		}
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_art_upgrade
+		}
+		#Misc Abilities
+		maximum_speed = 6		# med3 = 10		# hev3 = 6		# sh = 4
+		reliability = 0.8		# med3 = 0.8	# hev3 = 0.8	# sh = 0.8
+
+		#Defensive Abilities
+		defense = 9				# med3 = 7		# hev3 = 7		# sh = 7
+		breakthrough = 4		# med3 = 4		# hev3 = 3.5	# sh = 3.5
+		hardness = 0.9
+		armor_value = 100		# med3 = 58		# hev3 = 90		# sh = 100
+
+		#Offensive Abilities
+		soft_attack = 85		# med3 = 55		# hev3 = 80		# sh = 85
+		hard_attack = 3.5		# med3 = 2		# hev3 = 2.5	# sh = 3
+		ap_attack = 12			# med3 = 0		# hev3 = 0		# sh = 9
+		air_attack = 0
+
+		build_cost_ic = 45		# med3 = 14		# hev3 = 30		# sh = 100
+		
+		resources = {
+			#oil = 1
+			steel = 3
+			chromium = 4
+		}
+		fuel_consumption = 3	# med3 = 1.8	# hev3 = 2.2	# sh = 5
+	}
+
+	extreme_tank_destroyer_equipment_1 = {
+		year = 1992
+
+		archetype = extreme_tank_destroyer_chassis
+		priority = 200
+		visual_level = 0
+		can_convert_from = { 
+			extreme_tank_equipment_1 
+		}
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_at_upgrade
+		}
+		#Misc Abilities
+		maximum_speed = 6		# med3 = 10		# hev3 = 6		# sh = 4
+		reliability = 0.8		# med3 = 0.8	# hev3 = 0.8	# sh = 0.8
+
+		#Defensive Abilities
+		defense = 9				# med3 = 7		# hev3 = 6		# sh = 7
+		breakthrough = 2.5		# med3 = 1.8	# hev3 = 1.5	# sh = 1.8
+		hardness = 0.99
+		armor_value = 145		# med3 = 90		# hev3 = 110	# sh = 145
+
+		#Offensive Abilities
+		soft_attack = 11		# med3 = 8		# hev3 = 8		# sh = 12
+		hard_attack = 70		# med3 = 32		# hev3 = 42		# sh = 70
+		ap_attack = 175			# med3 = 120	# hev3 = 140	# sh = 170
+		air_attack = 0
+
+		
+		build_cost_ic = 45		# med3 = 14		# hev3 = 27		# sh = 100
+		
+		resources = {
+			#oil = 1
+			steel = 3
+			chromium = 4
+		}
+		fuel_consumption = 3	# med3 = 1.8	# hev3 = 2.2	# sh = 5
+	}
+
+	extreme_tank_aa_equipment_1 = {
+		year = 1992
+
+		archetype = extreme_tank_aa_chassis
+		priority = 190
+		visual_level = 0
+		can_convert_from = { 
+			extreme_tank_equipment_1 
+		}
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_aa_upgrade
+		}
+		#Misc Abilities
+		maximum_speed = 6		# med3 = 10		# hev3 = 6		# sh = 4
+		reliability = 0.8		# med3 = 0.8	# hev3 = 0.8	# sh = 0.8
+
+		#Defensive Abilities
+		defense = 4				# med3 = 3.5	# hev3 = 3.5	# sh = 3.5
+		breakthrough = 4		# med3 = 3.5	# hev3 = 3.5	# sh = 3.5
+		hardness = 0.9
+		armor_value = 100		# med3 = 58		# hev3 = 90		# sh = 100
+
+		#Offensive Abilities
+		soft_attack = 10		# med3 = 7.5	# hev3 = 7.5	# sh = 11.5
+		hard_attack = 9			# med3 = 6		# hev3 = 6		# sh = 9
+		ap_attack = 105			# med3 = 70		# hev3 = 88		# sh = 98
+		air_attack = 64			# med3 = 43		# hev3 = 44		# sh = 50
+		
+		build_cost_ic = 45		# med3 = 14		# hev3 = 30		# sh = 100
+		
+		resources = {
+			#oil = 1
+			steel = 3
+			chromium = 4
+		}
+		fuel_consumption = 1.7	# med3 = 0.9	# hev3 = 1.1	# sh = 2.5
 	}
 }
