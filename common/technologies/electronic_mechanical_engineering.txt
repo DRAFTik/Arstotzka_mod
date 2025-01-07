@@ -68,7 +68,7 @@ technologies = {
 			}
 		}
 
-		special_project_specialization = { specialization_air specialization_nuclear }
+		special_project_specialization = { specialization_air }
 		
 
 	}
@@ -289,7 +289,7 @@ technologies = {
 			position = { x = @radar y = 6 }
 		}
 
-		special_project_specialization = { specialization_air specialization_nuclear }
+		special_project_specialization = { specialization_air }
 
 		path = {
 			leads_to_tech = centimetric_radar 
@@ -379,7 +379,7 @@ technologies = {
 			level = 4
 		}
 		is_special_project_tech = yes
-		special_project_specialization = { specialization_air specialization_nuclear }
+		special_project_specialization = { specialization_air }
 		coordination_bonus = 0.02
 		static_anti_air_hit_chance_factor = 0.2
 
@@ -439,7 +439,7 @@ technologies = {
 			ship_radar_3
 		}
 
-		special_project_specialization = { specialization_air specialization_nuclear }
+		special_project_specialization = { specialization_air }
 
 		static_anti_air_hit_chance_factor = 0.2
 		
@@ -494,7 +494,7 @@ technologies = {
 			air_ground_radar_2
 			
 		}
-		special_project_specialization = { specialization_air specialization_nuclear }
+		special_project_specialization = { specialization_air }
 		
 		static_anti_air_hit_chance_factor = 0.2
 		
@@ -555,7 +555,7 @@ technologies = {
 			electronics
 			computing_tech
 		}
-		special_project_specialization = { specialization_nuclear }
+		special_project_specialization = { specialization_air }
 
 	}
 	
@@ -608,7 +608,7 @@ technologies = {
 			decryption_tech
 			computing_tech
 		}
-		special_project_specialization = { specialization_nuclear }
+		special_project_specialization = { specialization_air }
 	}
 	
 	improved_computing_machine = {
@@ -665,7 +665,7 @@ technologies = {
 			decryption_tech
 			computing_tech
 		}
-		special_project_specialization = { specialization_nuclear }
+		special_project_specialization = { specialization_air }
 	}
 	
 	advanced_computing_machine = {
@@ -710,7 +710,7 @@ technologies = {
 			decryption_tech
 			computing_tech
 		}
-		special_project_specialization = { specialization_nuclear }
+		special_project_specialization = { specialization_air }
 	}
 	
 	basic_encryption = {
@@ -1575,167 +1575,6 @@ technologies = {
 		}
 	}
 	
-	atomic_research = {
-
-		research_speed_factor = 0.04
-		
-		#path = {
-		#	leads_to_tech = nuclear_reactor 
-		#	research_cost_coeff = 1
-		#}
-		
-		start_year = 1987
-		research_cost = 5
-		
-		folder = {
-			name = electronics_folder
-			position = { x = 0 y = 0 }
-		}
-		
-		ai_will_do = {
-			base = 1
-			
-			modifier = {
-				factor = 1.2
-				date > 1988.1.1
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > 1989.1.1
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > 1990.1.1
-			}
-
-			modifier = {
-				factor = 2
-				is_major = yes
-				date > 1901.1.1
-			}
-
-			modifier = {
-				factor = 4
-				tag = UNF
-			}
-		}
-		
-		categories = {
-			nuclear
-		}
-
-		special_project_specialization = { specialization_nuclear }
-		
-		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_nuclear_reactor	
-			}
-		}
-	}
-	
-	nuclear_reactor = {
-
-		# can build reactors
-		
-		start_year = 1990
-		research_cost = 5
-		
-		#folder = {
-		#	name = electronics_folder
-		#	position = { x = 0 y = 2 }
-		#}
-
-		#path = {
-		#	leads_to_tech = nukes 
-		#	research_cost_coeff = 1
-		#}
-		
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				tag = UNF
-				factor = 2
-			}
-		}
-		
-		categories = {
-			nuclear
-		}
-
-		special_project_specialization = { specialization_nuclear }
-		
-		enable_building = {
-			building = nuclear_reactor
-			level = 1
-		}
-	}
-
-	nuclear_reactor_heavy_water = {
-
-		# can build reactors
-		
-		start_year = 1990
-		research_cost = 5
-		
-		#folder = {
-		#	name = electronics_folder
-		#	position = { x = 0 y = 2 }
-		#}
-
-		#path = {
-		#	leads_to_tech = nukes 
-		#	research_cost_coeff = 1
-		#}
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		categories = {
-			nuclear
-		}
-
-		special_project_specialization = { specialization_nuclear }
-		
-		enable_building = {
-			building = nuclear_reactor_heavy_water
-			level = 1
-		}
-	}
-
-	nukes = {
-	
-		start_year = 1992
-		research_cost = 5
-		
-		#folder = {
-		#	name = electronics_folder
-		#	position = { x = 0 y = 6 }
-		#}
-		
-		ai_will_do = {
-			factor = 10
-		}
-		
-		nuclear_production = 0.5
-		on_research_complete = {
-			if = {
-				limit = {
-					tag = UNF
-					has_war_with = IMP
-				}
-				play_warning_to_japan_effect = yes
-			}
-		}
-		categories = {
-			nuclear
-		}
-		special_project_specialization = { specialization_nuclear }
-	}
-
 	lar_decryption_bonus_tech = {
 				
 		research_cost = 1.5 #Carrier Variant

@@ -19,7 +19,10 @@ technology_categories = {
 }
 
 technology_folders = {
-	
+	special_infantry_folder = {
+		ledger = army
+	}
+	nuclear_folder = {
+		ledger = civilian
+	}
 }
-
- 

@@ -7,24 +7,342 @@ spriteTypes = {
 	}
 	
 
+### NEW TECH TABS
+	spriteType = {
+		name = "GFX_special_infantry_folder_tab"
+		textureFile = "gfx/interface/technologies/techtree/techtree_special_infantry_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_nuclear_folder_tab"
+		textureFile = "gfx/interface/technologies/techtree/techtree_nuclear_tab.dds"
+		noOfFrames = 2		
+	}
+
+### ГРАФИКА ИКОНОК НОВЫХ ПАНЕЛЕЙ
+
+
+# special_infantry_folder
+	
+	spriteType = {
+		name = "GFX_technology_special_infantry_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_special_infantry_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_special_infantry_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_special_infantry_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+# SPECIAL PROJECT
+	spriteType = {
+		name = "GFX_technology_special_infantry_folder_special_project_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//technology_special_project_small_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_special_infantry_folder_special_project_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//technology_special_project_small_unavailable_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_special_infantry_folder_special_project_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//technology_special_project_small_researched_item_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_special_infantry_folder_special_project_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//technology_special_project_small_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	
+# nuclear_folder
+	
+	spriteType = {
+		name = "GFX_technology_nuclear_folder_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_nuclear_folder_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_nuclear_folder_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_nuclear_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+# SPECIAL PROJECT
+	spriteType = {
+		name = "GFX_technology_nuclear_folder_special_project_available_item_bg"
+		textureFile = "gfx//interface//techtree//technology_special_project_small_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_nuclear_folder_special_project_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//technology_special_project_small_unavailable_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_nuclear_folder_special_project_researched_item_bg"
+		textureFile = "gfx//interface//techtree//technology_special_project_small_researched_item_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_nuclear_folder_special_project_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//technology_special_project_small_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+
+
+
+
+
+
+### NUCLEAR
+	SpriteType = {
+ 		name = "GFX_basic_particle_accelerators_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/basic_particle_accelerators.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_nuclear_fission_experiments_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/nuclear_fission_experiments.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_nuclear_chain_reaction_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/nuclear_chain_reaction.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_neutron_deceleration_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/neutron_deceleration.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_improved_particle_emitters_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/improved_particle_emitters.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_improved_particle_detectors_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/improved_particle_detectors.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_synchrotron_particle_accelerator_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/synchrotron_particle_accelerator.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_scintillation_detectors_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/scintillation_detectors.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_experimental_reactors_medium"
+ 		texturefile = "gfx/interface/technologies/nuclear_reactor.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_enrichment_plants_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/enrichment_plants.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_gas_diffusion_method_of_isotope_separation_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/gas_diffusion_method_of_isotope_separation.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_centrifuge_method_of_isotope_separation_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/centrifuge_method_of_isotope_separation.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_electromagnetic_method_of_isotope_separation_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/electromagnetic_method_of_isotope_separation.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_modernization_of_isotope_separation_methods_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/modernization_of_isotope_separation_methods.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_breeder_reactors_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/breeder_reactors.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_thorium_uranium_fuel_cycle_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/thorium_uranium_fuel_cycle.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_gun_type_assembly_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/gun_type_assembly.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_uranium_plutonium_fuel_cycle_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/uranium_plutonium_fuel_cycle.dds"
+ 	}
+	
+	
+	SpriteType = {
+ 		name = "GFX_implosion_type_assembly_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/implosion_type_assembly.dds"
+ 	}
+	
+	
+	SpriteType = {
+ 		name = "GFX_improved_neutron_initiators_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/improved_neutron_initiators.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_boostering_nuclear_explosion_medium"
+ 		texturefile = "gfx/interface/technologies/nukes.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_swan_type_constructions_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/swan_type_constructions.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_reactor_design_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/reactor_design.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_reactor_design_improvements_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/reactor_design_improvements.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_nuclear_energy_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/nuclear/nuclear_energy.dds"
+ 	}
+
+
+
+
+### ANTITANK INFANTRY
+	SpriteType = {
+ 		name = "GFX_tech_infantry_antitank_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/tech_infantry_antitank_0.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_tech_infantry_antitank_1_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/tech_infantry_antitank_1.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_tech_infantry_antitank_2_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/tech_infantry_antitank_2.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_tech_infantry_antitank_3_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/tech_infantry_antitank_3.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_tech_infantry_antitank_4_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/tech_infantry_antitank_4.dds"
+ 	}
+	
+	SpriteType = {
+ 		name = "GFX_infantry_antitank_equipment_0_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/tech_infantry_antitank_0.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_infantry_antitank_equipment_1_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/tech_infantry_antitank_1.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_infantry_antitank_equipment_2_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/tech_infantry_antitank_2.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_infantry_antitank_equipment_3_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/tech_infantry_antitank_3.dds"
+ 	}
+	SpriteType = {
+ 		name = "GFX_infantry_antitank_equipment_4_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/tech_infantry_antitank_4.dds"
+ 	}
+
+
+
+### REPLACE INFANTRY WEAPONS
+	
+	SpriteType = {
+ 		name = "GFX_improved_infantry_weapons_gta_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/improved_infantry_weapons.dds"
+ 	}
+	SpriteType = {
+		name = "GFX_infantry_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/technologies/infantry/improved_infantry_weapons.dds"
+	}
+	SpriteType = {
+ 		name = "GFX_advanced_infantry_weapons_gta_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/advanced_infantry_weapons.dds"
+ 	}
+	SpriteType = {
+		name = "GFX_infantry_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/technologies/infantry/advanced_infantry_weapons.dds"
+	}
+	SpriteType = {
+ 		name = "GFX_modern_infantry_weapons_medium"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/modern_infantry_weapons.dds"
+ 	}
+	SpriteType = {
+		name = "GFX_infantry_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/technologies/infantry/modern_infantry_weapons.dds"
+	}
+	
+	
 
 ### MOTORCYCLE
 	SpriteType = {
  		name = "GFX_basic_motorcycle_medium"
- 		texturefile = "gfx/interface/technologies/motorcycle_equipment_0.dds"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/motorcycle_equipment_0.dds"
  	}
 	SpriteType = {
  		name = "GFX_improved_motorcycle_medium"
- 		texturefile = "gfx/interface/technologies/motorcycle_equipment_1.dds"
+ 		texturefile = "gfx/interface/technologies/technologies/infantry/motorcycle_equipment_1.dds"
  	}
 
 	SpriteType = {
 		name = "GFX_motorcycle_equipment_0_medium"
-		texturefile = "gfx/interface/technologies/motorcycle_equipment_0.dds"
+		texturefile = "gfx/interface/technologies/technologies/infantry/motorcycle_equipment_0.dds"
 	}
 	SpriteType = {
 		name = "GFX_motorcycle_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/motorcycle_equipment_1.dds"
+		texturefile = "gfx/interface/technologies/technologies/infantry/motorcycle_equipment_1.dds"
 	}
 	
 

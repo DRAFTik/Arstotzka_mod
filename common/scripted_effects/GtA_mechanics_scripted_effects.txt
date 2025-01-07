@@ -413,7 +413,7 @@ calculate_electric_power_trade_effect = {
 
 calculate_provision_start_effect = {
 	set_variable			= { max_provision_base_var = 1000 }										# БАЗА МАКСИМУМА ПРОВИЗИИ
-	set_variable			= { provision_need_base_var = 0.254 }										# БАЗА ПОТРЕБЛЕНИЯ ПРОВИЗИИ = 254 кг в год на человека
+	set_variable			= { provision_need_base_var = 0.254 }									# БАЗА ПОТРЕБЛЕНИЯ ПРОВИЗИИ = 254 кг в год на человека
 	
 	while_loop_effect		= { limit = { agro_complex > var:agro_complex_@THIS }			add_to_temp_variable = { agro_complex_@THIS = 1 } }
 	while_loop_effect		= { limit = { livestock_complex > var:livestock_complex_@THIS }	add_to_temp_variable = { livestock_complex_@THIS = 1 } }

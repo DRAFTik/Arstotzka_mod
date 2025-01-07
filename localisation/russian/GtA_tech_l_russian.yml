@@ -338,6 +338,25 @@
  tank_gas_generator_engine_tech: "Газогенераторный двигатель"
  tank_gas_generator_engine_tech_desc: "Двигатель, использующий альтернативный источник топлива, позволит нам выпускать их в большем количестве с меньшим потреблением топлива. Однако, стоит понимать, что от этого пострадают его мощностные характеристики."
  
+ tech_infantry_antitank: "Противотанковое ружьё"
+ tech_infantry_antitank_desc: "Противотанковые ружья, использовавшиеся в войсках еще до ВМВ, до сих пор остаются распространенным средством борьбы против вражеской бронетехники, не смотря на свою громоздкость и моральную устаревшесть."
+ tech_infantry_antitank_1: "Противотанковая граната"
+ tech_infantry_antitank_1_desc: "Противотанковые гранаты вошли в массовый обиход во времена ВМВ, став легким и удобным средством борьбы с бронетехникой, доступным каждому бойцу."
+ tech_infantry_antitank_2: "Одноразовый гранатомёт"
+ tech_infantry_antitank_2_desc: "Одноразовые противотанковые гранатометы стали массовым вооружением ближе к концу ВМВ, став реальной угрозой бронированным армиям даже не смотря на все свои недостатки в виде ограниченной огневой эффективности."
+ tech_infantry_antitank_3: "Ручной противотанковый гранатомёт"
+ tech_infantry_antitank_3_desc: "Полноценные ручные противотанковые гранатометы появились в начале 50-х годов, заменив все существовавшие до этого раннее бронебойные экспериментальные наработки, став универсальным средством борьбы против бронетехники."
+ tech_infantry_antitank_4: "ПТУР и ПЗРК"
+ tech_infantry_antitank_4_desc: "Противотанковые и зенитные управляемые ракеты – вершина развития средств борьбы с авиацией и танками противника без использования тяжёлой техники – ручные ракетные установки обладают превосходными показателями, что компенсируют их высокую стоимость."
+
+
+ improved_infantry_weapons_gta: "$improved_infantry_weapons$"
+ improved_infantry_weapons_gta_desc: "$improved_infantry_weapons_desc$"
+ advanced_infantry_weapons_gta: "$advanced_infantry_weapons$"
+ advanced_infantry_weapons_gta_desc: "$advanced_infantry_weapons_desc$"
+ modern_infantry_weapons: "Оружие IV"
+ modern_infantry_weapons_desc: "$advanced_infantry_weapons_desc$"
+
  motorised_infantry1: "Автотранспорт I"
  motorised_infantry1_desc: ""
  motorised_infantry2: "Автотранспорт II"
@@ -353,13 +372,13 @@
  tech_flamethrower3_desc: "Мы можем выйти на качественно новый уровень, перейдя на новые типы огнеметов с новым составом огнесмеси, благодаря чему дальность поражения огнеметания вырастет еще больше."
  ###
  tech_flamethrower_squad: "Огнеметчики поддержки I"
- tech_flamethrower_squad_desc: ""
+ tech_flamethrower_squad_desc: "$tech_flamethrower_desc$"
  tech_flamethrower_squad2: "Огнеметчики поддержки II"
- tech_flamethrower_squad2_desc: ""
+ tech_flamethrower_squad2_desc: "$tech_flamethrower_desc$"
  tech_flamethrower_squad3: "Огнеметчики поддержки III"
- tech_flamethrower_squad3_desc: ""
+ tech_flamethrower_squad3_desc: "$tech_flamethrower_desc$"
  tech_flamethrower_squad4: "Огнеметчики поддержки IV"
- tech_flamethrower_squad4_desc: ""
+ tech_flamethrower_squad4_desc: "$tech_flamethrower_desc$"
  ##
  tech_sniper_squad: "Снайперы поддержки I"
  tech_sniper_squad_desc: ""
@@ -384,12 +403,6 @@
  recon_training_desc: "Наши спецвойска часто оказываются одни во враждебной обстановке. Обучение их специальной тактике разведки даст им преимущество."
  tank_training: "Противодействие бронетехнике"
  tank_training_desc: "Наши спецвойска сражаются с растущим числом танков. Обучение их выявлению уязвимых мест у бронетехники и атаке с близкого расстояния поможет им эффективнее уничтожать вражескую бронетехнику."
- kukri_1: "Кукри I"
- kukri_1_desc: ""
- kukri_2: "Кукри II"
- kukri_2_desc: ""
- kukri_3: "Кукри III"
- kukri_3_desc: ""
  ##
  armored_car_fire_upgrade: "Огнеметная бронемашина"
  armored_car_fire_upgrade_desc: ""
@@ -420,45 +433,34 @@
  radioupgrade4_desc: "Развитие транзисторной технологии позволило разработать портативную радиостанцию малой дальности для использования в передовых боевых операциях.\n\n"
 
  
- 
 
- ### UNITS
- flamethrower_infantry: "Огнеметчики"
- flamethrower_infantry_desc: ""
- ## ARMORED CAR
- armored_car_fire: "Огнеметная бронемашина"
- armored_car_fire_desc: ""
- ## TANKS
- light_flame_tank: "Легкий огнеметный танк"
- light_flame_tank_desc: ""
- medium_flame_tank: "Средний огнеметный танк"
- medium_flame_tank_desc: ""
- heavy_flame_tank: "Тяжелый огнеметный танк"
- heavy_flame_tank_desc: ""
- modern_sp_fire_brigade: "Современный огнеметный танк"
- modern_sp_fire_brigade_desc: ""
- ## SUPPORT
- flamethrower_squad: "Огнеметчики поддержки"
- flamethrower_squad_desc: ""
- sniper_squad: "Снайперы поддержки"
- sniper_squad_desc: ""
  ## AIR
  cat_air_engine_research: "§YАвиадвигатели§!"
  
  engine_0_1x: "1 двигатель 0"
  engine_0_1x_desc: "Эта базовая модель двигателя отличается надежностью и дешевизной, но обладает сравнительно небольшой мощью."
- multi_purpose: "Многоцелевой самолёт"
- multi_purpose_desc: "Многоцелевой самолёт - дешёвый и простой в обслуживании биплан, приспособленный для выполнения широкого круга задач и используемый странами, которые не могут позволить себе содержание специализированных самолётов."
- 
- SAU_small_plane_airframe_0: "Корпус маленького самолета межвоенных лет"
- SAU_small_plane_airframe_0_desc: "Авиация прошла долгий пусть с первых дней Великой войны. Этот корпус демонстрирует лучшие достижения инженерной мысли своей эпохи, но потенциал для его развития достаточно ограничен."
- SAU_fighter_equipment_0: "Межвоенный истребитель"
- SAU_fighter_equipment_0_short: "Истребитель"
- SAU_fighter_equipment_0_desc: "Несмотря на все улучшения за время Первой мировой войны и после нее, бипланы уходят в прошлое. Нам нужно использовать новейшие мирные технологии в военных целях."
- 
+
  ### EQUIPMENT
  tank_gas_generator_engine: "Газогенераторный двигатель"
  tank_gas_generator_engine_desc: "Двигатель, использующий альтернативный источник топлива, позволит нам выпускать их в большем количестве с меньшим потреблением топлива. Однако, стоит понимать, что от этого пострадают его мощностные характеристики."
+ 
+ infantry_antitank_equipment: "Пехотное противотанковое вооружение"
+ infantry_antitank_equipment_desc: "Пехотное противотанковое вооружение"
+ infantry_antitank_equipment_0: "Противотанковое ружьё"
+ infantry_antitank_equipment_0_desc: "Противотанковые ружья, использовавшиеся в войсках еще до ВМВ, до сих пор остаются распространенным средством борьбы против вражеской бронетехники, не смотря на свою громоздкость и моральную устаревшесть."
+ infantry_antitank_equipment_1: "Противотанковая граната"
+ infantry_antitank_equipment_1_desc: "Противотанковые гранаты вошли в массовый обиход во времена ВМВ, став легким и удобным средством борьбы с бронетехникой, доступным каждому бойцу."
+ infantry_antitank_equipment_2: "Одноразовый гранатомёт"
+ infantry_antitank_equipment_2_desc: "Одноразовые противотанковые гранатометы стали массовым вооружением ближе к концу ВМВ, став реальной угрозой бронированным армиям даже не смотря на все свои недостатки в виде ограниченной огневой эффективности."
+ infantry_antitank_equipment_3: "Ручной противотанковый гранатомёт"
+ infantry_antitank_equipment_3_desc: "Полноценные ручные противотанковые гранатометы появились в начале 50-х годов, заменив все существовавшие до этого раннее бронебойные экспериментальные наработки, став универсальным средством борьбы против бронетехники."
+ infantry_antitank_equipment_4: "ПТУР и ПЗРК"
+ infantry_antitank_equipment_4_desc: "Противотанковые и зенитные управляемые ракеты – вершина развития средств борьбы с авиацией и танками противника без использования тяжёлой техники – ручные ракетные установки обладают превосходными показателями, что компенсируют их высокую стоимость."
+
+ 
+ infantry_equipment_4: "$modern_infantry_weapons$"
+ infantry_equipment_4_desc: "$modern_infantry_weapons_desc$"
+ 
  
  armored_car_fire_equipment: "Огнеметная бронемашина"
  armored_car_fire_equipment_desc: "Огнеметная бронемашина"
@@ -602,4 +604,63 @@
  cat_asymmetric_warfare_cost_factor: "Стоимость доктрины ассиметричной войны"
  cat_war_of_attrition_cost_factor: "Стоимость доктрины войны на истощение"
  cat_professional_pilots_cost_factor: "Стоимость доктрины профессиональных лётчиков"
+ 
+ 
+ 
+ ### ЯО
+ basic_particle_accelerators: "Базовые ускорители частиц"
+ basic_particle_accelerators_desc: ""
+ nuclear_fission_experiments: "Эксперименты по делению ядра"
+ nuclear_fission_experiments_desc: ""
+ nuclear_chain_reaction: "Цепная ядерная реакция"
+ nuclear_chain_reaction_desc: ""
+ neutron_deceleration: "Замедление нейтронов"
+ neutron_deceleration_desc: ""
+ improved_particle_emitters: "Улучшенные излучатели частиц"
+ improved_particle_emitters_desc: ""
+ improved_particle_detectors: "Улучшенные детекторы частиц"
+ improved_particle_detectors_desc: ""
+ synchrotron_particle_accelerator: "Синхротронный ускоритель частиц"
+ synchrotron_particle_accelerator_desc: ""
+ scintillation_detectors: "Сцинтилляционные детекторы"
+ scintillation_detectors_desc: ""
+ experimental_reactors: "Экспериментальные реакторы"
+ experimental_reactors_desc: ""
+ enrichment_plants: "Обогатительные установки"
+ enrichment_plants_desc: ""
+ gas_diffusion_method_of_isotope_separation: "Газодиффузионный метод разделения изотопов"
+ gas_diffusion_method_of_isotope_separation_desc: ""
+ centrifuge_method_of_isotope_separation: "Центрифужный способ разделения изотопов"
+ centrifuge_method_of_isotope_separation_desc: ""
+ electromagnetic_method_of_isotope_separation: "Электромагнитный способ разделения изотопов"
+ electromagnetic_method_of_isotope_separation_desc: ""
+ modernization_of_isotope_separation_methods: "Модернизация методов разделения изотопов"
+ modernization_of_isotope_separation_methods_desc: ""
+ breeder_reactors: "Реакторы-размножители"
+ breeder_reactors_desc: ""
+ thorium_uranium_fuel_cycle: "Торий-урановый топливный цикл"
+ thorium_uranium_fuel_cycle_desc: ""
+ gun_type_assembly: "«Пушечная» схема"
+ gun_type_assembly_desc: ""
+ uranium_plutonium_fuel_cycle: "Уран-плутониевый топливный цикл"
+ uranium_plutonium_fuel_cycle_desc: ""
+ implosion_type_assembly: "«Имплозивная» схема"
+ implosion_type_assembly_desc: ""
+ improved_neutron_initiators: "Улучшенные инициаторы нейтронов"
+ improved_neutron_initiators_desc: ""
+ boostering_nuclear_explosion: "Бустеризация ядерного взрыва"
+ boostering_nuclear_explosion_desc: ""
+ swan_type_constructions: "Конструкции типа «Swan»"
+ swan_type_constructions_desc: ""
+ reactor_design: "Проектирование реакторов"
+ reactor_design_desc: ""
+ reactor_design_improvements: "Усовершенствование конструкции реакторов"
+ reactor_design_improvements_desc: ""
+ nuclear_energy: "Ядерная энергетика"
+ nuclear_energy_desc: ""
+ 
+ TITLE_ATOMIC_RESEARCH_SUBTITLE_1: "§GТЕОРИЯ\nИзучение процесса§!"
+ TITLE_ATOMIC_RESEARCH_SUBTITLE_2: "§BПРАКТИКА\nИнструментальное изучение§!"
+ TITLE_ATOMIC_RESEARCH_SUBTITLE_3: "§RПРАКТИЧЕСКОЕ ПРИМЕНЕНИЕ§!"
+ 
  

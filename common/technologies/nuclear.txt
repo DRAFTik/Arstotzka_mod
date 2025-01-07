@@ -1,0 +1,1299 @@
+technologies = {
+	
+	@1982 = 0
+	@1983 = 2
+	@1984 = 4
+	@1985 = 6
+	@1986 = 8
+	@1987 = 9
+	@1988 = 11
+	@1989 = 13
+	@1990 = 15
+	@1991 = 17
+	@1992 = 19
+	@1993 = 21
+
+
+	atomic_research = {
+
+		research_speed_factor = 0.04
+		
+		path = {
+			leads_to_tech = basic_particle_accelerators 
+			research_cost_coeff = 1
+		}
+		
+		start_year = 1982
+		research_cost = 1.0
+		
+		folder = {
+			name = nuclear_folder
+			position = { x = 0 y = @1982 }
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_nuclear_reactor	
+			}
+		}
+	}
+	
+	basic_particle_accelerators = {
+		
+		path = {
+			leads_to_tech = nuclear_fission_experiments 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = improved_particle_emitters 
+			research_cost_coeff = 1
+		}
+		research_cost = 1.0
+		start_year = 1983
+		folder = {
+			name = nuclear_folder
+			position = { x = 0 y = @1983 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	nuclear_fission_experiments = {
+		
+		path = {
+			leads_to_tech = nuclear_chain_reaction 
+			research_cost_coeff = 1
+		}
+		research_cost = 1.0
+		start_year = 1984
+		folder = {
+			name = nuclear_folder
+			position = { x = -2 y = @1984 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	nuclear_chain_reaction = {
+		
+		path = {
+			leads_to_tech = neutron_deceleration 
+			research_cost_coeff = 1
+		}
+		research_cost = 1.0
+		start_year = 1985
+		folder = {
+			name = nuclear_folder
+			position = { x = -2 y = @1985 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	neutron_deceleration = {
+		
+		path = {
+			leads_to_tech = experimental_reactors 
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1986
+		folder = {
+			name = nuclear_folder
+			position = { x = -2 y = @1986 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+
+
+
+	improved_particle_emitters = {
+		
+		path = {
+			leads_to_tech = improved_particle_detectors 
+			research_cost_coeff = 1
+		}
+		research_cost = 1.0
+		start_year = 1984
+		folder = {
+			name = nuclear_folder
+			position = { x = 2 y = @1984 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	improved_particle_detectors = {
+		
+		path = {
+			leads_to_tech = synchrotron_particle_accelerator 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = scintillation_detectors 
+			research_cost_coeff = 1
+		}
+		research_cost = 1.0
+		start_year = 1985
+		folder = {
+			name = nuclear_folder
+			position = { x = 2 y = @1985 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	synchrotron_particle_accelerator = {
+		
+		research_cost = 1.5
+		start_year = 1986
+		folder = {
+			name = nuclear_folder
+			position = { x = 4 y = @1986 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	scintillation_detectors = {
+		
+		path = {
+			leads_to_tech = experimental_reactors 
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1986
+		folder = {
+			name = nuclear_folder
+			position = { x = 2 y = @1986 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	experimental_reactors = {
+		
+		path = {
+			leads_to_tech = enrichment_plants 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = breeder_reactors 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = reactor_design 
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1987
+		folder = {
+			name = nuclear_folder
+			position = { x = 0 y = @1987 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+		
+		dependencies = {
+			neutron_deceleration = 1
+			scintillation_detectors = 1
+		}
+	}
+
+
+	enrichment_plants = {
+		
+		path = {
+			leads_to_tech = gas_diffusion_method_of_isotope_separation 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1988
+		folder = {
+			name = nuclear_folder
+			position = { x = -2 y = @1988 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	gas_diffusion_method_of_isotope_separation = {
+		
+		path = {
+			leads_to_tech = centrifuge_method_of_isotope_separation 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = gun_type_assembly 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1989
+		folder = {
+			name = nuclear_folder
+			position = { x = -2 y = @1989 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	centrifuge_method_of_isotope_separation = {
+		
+		path = {
+			leads_to_tech = electromagnetic_method_of_isotope_separation 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1989
+		folder = {
+			name = nuclear_folder
+			position = { x = -4 y = @1989 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	electromagnetic_method_of_isotope_separation = {
+		
+		path = {
+			leads_to_tech = modernization_of_isotope_separation_methods 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1990
+		folder = {
+			name = nuclear_folder
+			position = { x = -4 y = @1990 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	modernization_of_isotope_separation_methods = {
+		
+		research_cost = 2.0
+		start_year = 1991
+		folder = {
+			name = nuclear_folder
+			position = { x = -4 y = @1991 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	
+	breeder_reactors = {
+		
+		path = {
+			leads_to_tech = thorium_uranium_fuel_cycle 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = uranium_plutonium_fuel_cycle 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1988
+		folder = {
+			name = nuclear_folder
+			position = { x = 1 y = @1988 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	thorium_uranium_fuel_cycle = {
+		
+		path = {
+			leads_to_tech = gun_type_assembly 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1989
+		folder = {
+			name = nuclear_folder
+			position = { x = 0 y = @1989 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	gun_type_assembly = {
+		
+		path = {
+			leads_to_tech = improved_neutron_initiators 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1990
+		folder = {
+			name = nuclear_folder
+			position = { x = -1 y = @1990 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	uranium_plutonium_fuel_cycle = {
+		
+		path = {
+			leads_to_tech = implosion_type_assembly 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1989
+		folder = {
+			name = nuclear_folder
+			position = { x = 2 y = @1989 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	implosion_type_assembly = {
+		
+		path = {
+			leads_to_tech = improved_neutron_initiators 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1990
+		folder = {
+			name = nuclear_folder
+			position = { x = 2 y = @1990 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1991.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1992.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1993.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1994.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	improved_neutron_initiators = {
+		
+		path = {
+			leads_to_tech = boostering_nuclear_explosion 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1991
+		folder = {
+			name = nuclear_folder
+			position = { x = 0 y = @1991 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1992.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1993.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1994.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1995.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	boostering_nuclear_explosion = {
+		
+		path = {
+			leads_to_tech = swan_type_constructions 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1992
+		folder = {
+			name = nuclear_folder
+			position = { x = 0 y = @1992 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1993.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1994.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1995.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1996.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	swan_type_constructions = {
+		
+		research_cost = 2.0
+		start_year = 1993
+		folder = {
+			name = nuclear_folder
+			position = { x = 0 y = @1993 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1993.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1994.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1995.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1996.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+
+
+	reactor_design = {
+		
+		path = {
+			leads_to_tech = reactor_design_improvements 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1988
+		folder = {
+			name = nuclear_folder
+			position = { x = 4 y = @1988 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	reactor_design_improvements = {
+		
+		path = {
+			leads_to_tech = nuclear_energy 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.0
+		start_year = 1990
+		folder = {
+			name = nuclear_folder
+			position = { x = 4 y = @1990 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	nuclear_energy = {
+		
+		research_cost = 2.0
+		start_year = 1992
+		folder = {
+			name = nuclear_folder
+			position = { x = 4 y = @1992 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				date > 1988.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1989.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1990.1.1
+			}
+			modifier = {
+				factor = 4
+				tag = UNF
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	nuclear_reactor = {
+
+		# can build reactors
+		
+		start_year = 1990
+		research_cost = 5
+		
+		#folder = {
+		#	name = nuclear_folder
+		#	position = { x = 0 y = 2 }
+		#}
+
+		#path = {
+		#	leads_to_tech = nukes 
+		#	research_cost_coeff = 1
+		#}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				tag = UNF
+				factor = 2
+			}
+		}
+		
+		categories = {
+			nuclear
+		}
+
+		special_project_specialization = { specialization_nuclear }
+		
+		enable_building = {
+			building = nuclear_reactor
+			level = 1
+		}
+	}
+
+	nuclear_reactor_heavy_water = {
+
+		# can build reactors
+		
+		start_year = 1990
+		research_cost = 5
+		
+		#folder = {
+		#	name = nuclear_folder
+		#	position = { x = 0 y = 2 }
+		#}
+
+		#path = {
+		#	leads_to_tech = nukes 
+		#	research_cost_coeff = 1
+		#}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			nuclear
+		}
+
+		special_project_specialization = { specialization_nuclear }
+		
+		enable_building = {
+			building = nuclear_reactor_heavy_water
+			level = 1
+		}
+	}
+
+	nukes = {
+	
+		start_year = 1992
+		research_cost = 5
+		
+		#folder = {
+		#	name = nuclear_folder
+		#	position = { x = 0 y = 6 }
+		#}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		nuclear_production = 0.5
+		on_research_complete = {
+			if = {
+				limit = {
+					tag = UNF
+					has_war_with = IMP
+				}
+				play_warning_to_japan_effect = yes
+			}
+		}
+		categories = {
+			nuclear
+		}
+		special_project_specialization = { specialization_nuclear }
+	}
+}

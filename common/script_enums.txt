@@ -651,6 +651,14 @@ script_enum_equipment_bonus_type = {
 	
 	
 	## GtA
+	infantry_equipment_4
+	
+	infantry_antitank_equipment_0
+	infantry_antitank_equipment_1
+	infantry_antitank_equipment_2
+	infantry_antitank_equipment_3
+	infantry_antitank_equipment_4
+	
 	armored_car_fire_equipment
 	armored_car_fire_equipment_1
 

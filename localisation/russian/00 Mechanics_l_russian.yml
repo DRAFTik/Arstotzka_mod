@@ -49,7 +49,7 @@
 ######################
 
     gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\n\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.modifier@num_generation_electric_power|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-]"
-    gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!.[GET_ELECTRIC_POWER_CRISIS_LOC]"
+    gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!.\nНажмите §Gправой кнопкой§!, чтобы начать §Hторговлю электроэнергией§!.[GET_ELECTRIC_POWER_CRISIS_LOC]"
     GET_ELECTRIC_POWER_CRISIS_TEXT: "\n$SEPARATION_LINE$$electric_power_title_bad_debuff_text$$electric_power_debuff_text$"
     
     GET_THERMAL_POWER_PLANT_RED: "[?ROOT.thermal_power_plant_ok|0-]"
@@ -68,7 +68,7 @@
     electric_power_text_5: "Строительство"
     electric_power_text_6: "Переработка нефти"
     electric_power_text_7: "Добыча ресурсов"
-    electric_power_tumbler_tt: "Нажмите §Hлевой кнопкой мыши§!, чтобы §Gувеличить§! значение приоритета на §H1§!.\n§HПравая кнопка мыши§! §Rуменьшает§! значение приоритета на §H1§!."
+    electric_power_tumbler_tt: "Нажмите §Hлевой кнопкой§!, чтобы §Gувеличить§! значение приоритета на §H1§!.\n§HПравая кнопка§! §Rуменьшает§! значение приоритета на §H1§!."
     red_button_tt: "Нажмите, чтобы §Rсбросить§! настройки приоритета."
     electric_panel_title_text: "£electric_power_pure_icon §YПАНЕЛЬ РАСПРЕДЕЛЕНИЯ ЭЛЕКТРОЭНЕРГИИ§! £electric_power_pure_icon "
     electric_power_title_good_text: "§GПРОБЛЕМЫ СО СНАБЖЕНИЕМ ЭЛЕКТРОЭНЕРГИЕЙ ОТСУТСТВУЮТ§!"

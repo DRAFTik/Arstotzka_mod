@@ -46,6 +46,17 @@ scripted_gui = {
 					set_variable = { electric_power_tumbler_icon_7_frame = 1 }
 				}
 			}
+			electric_power_bg_right_click = {
+				if = {
+					limit			= { check_variable = { generic_trade_open_var = 0 } }
+					set_variable	= { generic_trade_open_var = 1 }
+					set_variable	= { electro_opener_frame = 2 }
+				}
+				else = {
+					set_variable	= { generic_trade_open_var = 0 }
+					set_variable	= { electro_opener_frame = 1 }
+				}
+			}
 		}
 	}
 	

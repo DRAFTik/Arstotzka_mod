@@ -1,0 +1,38 @@
+﻿l_russian:
+
+ flamethrower_infantry: "Огнеметчики"
+ flamethrower_infantry_desc: "$flamethrower_infantry$"
+ motorcycle_battalion: "Мотоциклетная пехота"
+ motorcycle_battalion_desc: "$motorcycle_battalion$."
+ 
+ ## ARMORED CAR
+ armored_car_fire: "Огнеметная бронемашина"
+ armored_car_fire_desc: "$armored_car_fire$"
+ 
+ ## TANKS
+ light_flame_tank: "Легкий огнеметный танк"
+ light_flame_tank_desc: "$light_flame_tank$"
+ medium_flame_tank: "Средний огнеметный танк"
+ medium_flame_tank_desc: "$medium_flame_tank$"
+ heavy_flame_tank: "Тяжелый огнеметный танк"
+ heavy_flame_tank_desc: "$heavy_flame_tank$"
+ modern_sp_fire_brigade: "Современный огнеметный танк"
+ modern_sp_fire_brigade_desc: "$modern_sp_fire_brigade$"
+ 
+ extreme_armor: "Танк предельных параметров"
+ extreme_armor_desc: "$extreme_armor$"
+ 
+ ## SUPPORT
+ bike_recon: "Мотоциклетная разведка"
+ bike_recon_desc: "$bike_recon$."
+ flamethrower_squad: "Огнеметчики поддержки"
+ flamethrower_squad_desc: "$flamethrower_squad$"
+ sniper_squad: "Снайперы поддержки"
+ sniper_squad_desc: "$sniper_squad$"
+ infantry_antitank_squad: "Бронебойщики"
+ infantry_antitank_squad_desc: "$infantry_antitank_squad$"
+ machine_gunner_squad: "Пулеметчики"
+ machine_gunner_squad_desc: "$machine_gunner_squad$"
+ mortar_squad: "Минометчики"
+ mortar_squad_desc: "$mortar_squad$"
+ 
