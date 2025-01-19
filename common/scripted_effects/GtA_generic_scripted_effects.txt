@@ -186,6 +186,9 @@ economy_law_up = {
 }
 
 
+set_all_major = {
+	every_other_country = { set_major = yes }
+}
 drop_all_major = {
 	every_country = { set_major = no }
 }

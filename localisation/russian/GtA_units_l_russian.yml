@@ -36,3 +36,21 @@
  mortar_squad: "Минометчики"
  mortar_squad_desc: "$mortar_squad$"
  
+ 
+ 
+ 
+ 
+ ### NEW UNIT CATEGORY
+ category_all_motorized: "Вся моторизация и механизация"
+ category_all_armored_car: "Все бронемашины"
+ category_all_flamethrower: "Огнеметные войска"
+ 
+ category_flame_tanks: "Огнеметные танки"
+ category_aa_tanks: "Зенитные танки"
+ category_art_tanks: "Артиллерийские танки"
+ category_td_tanks: "Истребители танков"
+ category_main_tanks: "Основные танки"
+ 
+ category_scout_plane: "Самолеты-разведчики"       #vanila_fix
+ military_police_tech: "Военная полиция"           #vanila_fix
+ 

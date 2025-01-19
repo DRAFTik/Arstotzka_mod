@@ -1,0 +1,1523 @@
+technologies = {
+
+
+	@1900 = 0
+	
+	@1984 = 0
+	@1986 = 2
+	@1988 = 3
+	@1990 = 4
+	@1991 = 5
+	@1992 = 6
+	@1993 = 7
+	@1994 = 7
+	@1995 = 8
+	@1996 = 9
+	@1997 = 10
+	@1998 = 11
+	@1999 = 12
+	@2000 = 13
+	@2001 = 14
+	
+
+	
+	improved_alloy_steels = {
+
+		allow = {
+			NOT = { is_researching_technology = improved_alloy_steels_industry }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { improved_alloy_steels_industry = 1 popup = no }
+			}
+		}
+		
+		
+		path = {
+			leads_to_tech = hardening_and_processing_of_metals
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1915
+		folder = {
+			name = armour_walker_folder
+			position = { x = 3 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+	}
+	
+	hardening_and_processing_of_metals = {
+
+		allow = {
+			NOT = { is_researching_technology = hardening_and_processing_of_metals_industry }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { hardening_and_processing_of_metals_industry = 1 popup = no }
+			}
+		}
+		
+		path = {
+			leads_to_tech = composite_materials
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = shockproof_coatings
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = precision_eccentrics
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = hydraulic_pumps_and_drives
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = mechanical_stabilization
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1915
+		folder = {
+			name = armour_walker_folder
+			position = { x = 1 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+	}
+	
+	composite_materials = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = composite_armor_for_walkers
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = -3 y = 5 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	shockproof_coatings = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = dynamic_protection
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = -2 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	dynamic_protection = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = modular_armor
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = -1 y = 3 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	modular_armor = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = composite_armor_for_walkers
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = reconnaissance_walker_chassis_1
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = -2 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	composite_armor_for_walkers = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = reinforced_armored_cabins
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = -2 y = 7 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+		
+		dependencies = {
+			composite_materials	= 1
+			modular_armor		= 1
+		}
+	}
+	
+	reinforced_armored_cabins = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = universal_combat_walker_chassis_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = modular_combat_complexes
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = -1 y = 9 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	
+	precision_eccentrics = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = pneumatic_shock_absorption
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	hydraulic_pumps_and_drives = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = pneumatic_shock_absorption
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = early_electric_drives
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = high_power_mechanical_gearboxes
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 2 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	pneumatic_shock_absorption = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = engineering_walkers
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = reconnaissance_walker_chassis_1
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 1 y = 3 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+		
+		dependencies = {
+			precision_eccentrics		= 1
+			hydraulic_pumps_and_drives	= 1
+		}
+	}
+	
+	engineering_walkers = {
+
+		army_speed_factor = 0.085
+	
+		
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	early_electric_drives = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = electromechanical_control_systems
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 2 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	
+	
+	mechanical_stabilization = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = high_power_mechanical_gearboxes
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = autonomous_drives
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = stable_hinge_joints
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 6 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	high_power_mechanical_gearboxes = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = electromechanical_control_systems
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+		
+		dependencies = {
+			hydraulic_pumps_and_drives	= 1
+			mechanical_stabilization	= 1
+		}
+	}
+	
+	electromechanical_control_systems = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = energy_efficient_engines
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = cargo_walkers
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 3 y = 5 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+		
+		dependencies = {
+			early_electric_drives			= 1
+			high_power_mechanical_gearboxes	= 1
+		}
+	}
+	
+	cargo_walkers = {
+
+		army_speed_factor = 0.085
+	
+		
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 5 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	energy_efficient_engines = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = multi_legged_platform_technology
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = hybrid_drives
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 4 y = 7 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	multi_legged_platform_technology = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = universal_combat_walker_chassis_1
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 2 y = 9 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	autonomous_drives = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = guided_weapons_systems
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 6 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	guided_weapons_systems = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = reconnaissance_walker_chassis_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = weapon_stabilization_systems
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 6 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	stable_hinge_joints = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = autonomous_gyroscopes
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 8 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	autonomous_gyroscopes = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = weapon_stabilization_systems
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 8 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	weapon_stabilization_systems = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = universal_combat_walker_chassis_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = integration_of_guidance_systems
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = stabilizers_for_heavy_weapons
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 7 y = 9 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+		
+		dependencies = {
+			guided_weapons_systems	= 1
+			autonomous_gyroscopes	= 1
+		}
+	}
+
+
+	reconnaissance_walker_chassis_1 = {
+
+		army_speed_factor = 0.085
+		
+		enable_equipments = {
+			reconnaissance_walker_chassis_1
+		}
+		
+		enable_equipment_modules = {
+			walker_tubular_frame
+			walker_sectional_frame
+			walker_monolithic_frame
+			
+			walker_open_cabin
+			walker_closed_with_viewing_slots_cabin
+			walker_panoramic_cabin_with_periscopes_cabin
+			walker_armored_cabin
+			walker_with_integrated_control_computer_cabin
+			
+			walker_mechanical_stabilization
+			walker_gyroscopic_stabilization
+			walker_hydraulic_compensator
+			
+			walker_telescopic_inserts_legs
+			walker_articulated_hydraulic_legs
+			walker_wide_soled_legs
+			walker_electromechanical_articulated_shock_absorption_legs
+			walker_claws_legs
+		}
+	
+		
+		path = {
+			leads_to_tech = masking_walkers
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = reconnaissance_walker_chassis_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 1 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+		
+		dependencies = {
+			modular_armor				= 1
+			pneumatic_shock_absorption	= 1
+			guided_weapons_systems		= 1
+		}
+	}
+	
+	reconnaissance_walker_chassis_2 = {
+
+		army_speed_factor = 0.085
+		
+		enable_equipments = {
+			reconnaissance_walker_chassis_2
+		}
+	
+		
+		path = {
+			leads_to_tech = reconnaissance_walker_chassis_3
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 12 y = 7 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	reconnaissance_walker_chassis_3 = {
+
+		army_speed_factor = 0.085
+		
+		enable_equipments = {
+			reconnaissance_walker_chassis_3
+		}
+	
+	
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 16 y = 7 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	masking_walkers = {
+
+		army_speed_factor = 0.085
+	
+		
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	universal_combat_walker_chassis_1 = {
+
+		army_speed_factor = 0.085
+		
+		enable_equipments = {
+			light_tank_chassis_0
+		}
+	
+		
+		path = {
+			leads_to_tech = universal_combat_walker_chassis_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 2 y = 11 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+		
+		dependencies = {
+			reinforced_armored_cabins			= 1
+			multi_legged_platform_technology	= 1
+			weapon_stabilization_systems		= 1
+		}
+	}
+	
+	universal_combat_walker_chassis_2 = {
+
+		army_speed_factor = 0.085
+		
+		enable_equipments = {
+			light_tank_chassis_0
+		}
+	
+		
+		path = {
+			leads_to_tech = universal_combat_walker_chassis_3
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 14 y = 11 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	universal_combat_walker_chassis_3 = {
+
+		army_speed_factor = 0.085
+		
+		enable_equipments = {
+			light_tank_chassis_0
+		}
+	
+		
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 18 y = 11 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	modular_combat_complexes = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = siege_walker_chassis_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = self_healing_systems
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = -1 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	integration_of_guidance_systems = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = siege_walker_chassis_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = adaptive_chassis_platform
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 6 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	stabilizers_for_heavy_weapons = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = siege_walker_chassis_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = adaptive_chassis_platform
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 8 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	siege_walker_chassis_1 = {
+
+		army_speed_factor = 0.085
+		
+		enable_equipments = {
+			light_tank_chassis_0
+		}
+	
+		
+		path = {
+			leads_to_tech = siege_walker_chassis_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 2 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+		
+		dependencies = {
+			modular_combat_complexes		= 1
+			integration_of_guidance_systems	= 1
+			stabilizers_for_heavy_weapons	= 1
+		}
+	}
+	
+	siege_walker_chassis_2 = {
+
+		army_speed_factor = 0.085
+		
+		enable_equipments = {
+			light_tank_chassis_0
+		}
+	
+		
+		path = {
+			leads_to_tech = siege_walker_chassis_3
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 14 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	siege_walker_chassis_3 = {
+
+		army_speed_factor = 0.085
+		
+		enable_equipments = {
+			light_tank_chassis_0
+		}
+	
+	
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 20 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	
+	self_healing_systems = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = walking_fortress_chassis
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = -1 y = 15 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	hybrid_drives = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = walking_fortress_chassis
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 4 y = 15 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+	
+	adaptive_chassis_platform = {
+
+		army_speed_factor = 0.085
+	
+		
+		path = {
+			leads_to_tech = walking_fortress_chassis
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1984
+		folder = {
+			name = armour_walker_folder
+			position = { x = 7 y = 15 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+		
+		dependencies = {
+			integration_of_guidance_systems	= 1
+			stabilizers_for_heavy_weapons	= 1
+		}
+	}
+	
+	walking_fortress_chassis = {
+
+		army_speed_factor = 0.085
+		
+		enable_equipments = {
+			light_tank_chassis_0
+		}
+	
+	
+		research_cost = 1
+		start_year = 2000
+		folder = {
+			name = armour_walker_folder
+			position = { x = 2 y = 17 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			armour_walker_tech
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+		
+		dependencies = {
+			self_healing_systems		= 1
+			hybrid_drives				= 1
+			adaptive_chassis_platform	= 1
+		}
+	}

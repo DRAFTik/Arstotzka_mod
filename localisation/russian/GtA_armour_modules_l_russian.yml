@@ -157,3 +157,44 @@
  flamethrower_3_clone_desc: "$flamethrower_clone_desc$"
  
  
+ 
+ ### ШАГОХОДЫ ###
+ ### СЛОТ КАРКАСА
+ EQ_MOD_SLOT_frame_type_slot_TITLE: "Тип каркаса"
+ EQ_MOD_SLOT_frame_type_slot_TITLE_desc: ""
+ EQ_MOD_CAT_walker_frame_type_TITLE: "Разновидности типов каркаса"
+ walker_tubular_frame: "Трубчатый каркас"
+ walker_tubular_frame_desc: ""
+ walker_sectional_frame: "Секционный каркас"
+ walker_sectional_frame_desc: ""
+ walker_monolithic_frame: "Монолитный каркас"
+ walker_monolithic_frame_desc: ""
+ 
+ ### СЛОТ КАБИНЫ
+ EQ_MOD_SLOT_cabin_type_slot_TITLE: "Тип кабины"
+ EQ_MOD_SLOT_cabin_type_slot_TITLE_desc: ""
+ EQ_MOD_CAT_walker_cabin_type_TITLE: "Разновидности пункта управления машиной"
+ walker_open_cabin: "Открытая кабина"
+ walker_closed_with_viewing_slots_cabin: "Закрытая кабина со смотровыми щелями"
+ walker_panoramic_cabin_with_periscopes_cabin: "Панорамная кабина с перископами"
+ walker_armored_cabin: "Бронированная кабина"
+ walker_with_integrated_control_computer_cabin: "Кабина с интегрированным компьютером управления"
+ 
+ ### СЛОТ СТАБИЛИЗАЦИИ
+ EQ_MOD_SLOT_sustainability_type_slot_TITLE: "Тип стабилизации"
+ EQ_MOD_SLOT_sustainability_type_slot_TITLE_desc: "Тип стабилизации"
+ EQ_MOD_CAT_walker_sustainability_type_TITLE: "Разновидности типов стабилизации конструкции"
+ walker_mechanical_stabilization: "Механическая стабилизация"
+ walker_gyroscopic_stabilization: "Гироскопическая стабилизация"
+ walker_hydraulic_compensator: "Гидравлический компенсатор"
+ 
+ ### СЛОТ НОГ
+ EQ_MOD_SLOT_legs_type_slot_TITLE: "Тип ног"
+ EQ_MOD_SLOT_legs_type_slot_TITLE_desc: "Тип ног"
+ EQ_MOD_CAT_walker_legs_type_TITLE: "Разновидности типов ног"
+ walker_telescopic_inserts_legs: "Ноги с телескопическими вставками"
+ walker_articulated_hydraulic_legs: "Шарнирные гидравлические ноги"
+ walker_wide_soled_legs: "Ноги с широким основанием"
+ walker_electromechanical_articulated_shock_absorption_legs: "Электромеханические ноги с шарнирной амортизацией"
+ walker_claws_legs: "Ноги с когтями"
+ 

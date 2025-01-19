@@ -694,4 +694,9 @@ script_enum_equipment_bonus_type = {
 	
 	build_equipment
 	build_equipment_1
+	
+	reconnaissance_walker_chassis
+	reconnaissance_walker_chassis_1
+	reconnaissance_walker_chassis_2
+	reconnaissance_walker_chassis_3
 }

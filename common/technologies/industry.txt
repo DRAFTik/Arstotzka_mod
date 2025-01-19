@@ -1,19 +1,349 @@
 technologies = {
 	
-	@construction_x = 1
-	@excavation_x = 5
-	@ersatz_materials_x = 7
+	@machine_tools_x			= -2
+	@concentrated_industry_x	= 2
+	@dispersed_industry_x		= 4
 	
-	@1983 = 0
-	@1984 = 4
-	@1986 = 6
-	@1988 = 8
-	@1990 = 10
-	@1992 = 12
-	@1994 = 14
-	@1996 = 16
-	@1998 = 18
-	@2000 = 20
+	@construction_minus_2_x		= 7
+	@construction_minus_1_x		= 8
+	@construction_x				= 9
+	@construction_plus_1_x		= 10
+	@construction_plus_2_x		= 11
+	
+	@excavation_x				= 13
+	@ersatz_materials_x			= 15
+	
+	@1900	= 0
+	@1983	= 2
+	@1983_2	= 4
+	@1984	= 6
+	@1986	= 8
+	@1988	= 10
+	@1990	= 12
+	@1992	= 14
+	@1994	= 16
+	@1996	= 18
+	@1998	= 20
+	@2000	= 22
+	
+	@fuel_1983 = 2
+	@fuel_1984 = 4
+	@fuel_1988 = 8
+	@fuel_1992 = 12
+	@fuel_1996 = 16
+	
+	
+	
+	iron_purification_industry = {
+	
+		allow = {
+			NOT = { is_researching_technology = iron_purification }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { iron_purification = 1 popup = no }
+			}
+		}
+		
+		path = {
+			leads_to_tech = simple_chain_systems_industry
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = fundamentals_of_gear_design_industry
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = steel_smelting_industry
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1900
+		folder = {
+			name = industry_folder
+			position = { x = 5 y = @1900 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+		special_project_specialization = { specialization_base }
+		force_use_small_tech_layout = yes
+	}
+	
+	simple_chain_systems_industry = {
+
+		allow = {
+			NOT = { is_researching_technology = simple_chain_systems }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { simple_chain_systems = 1 popup = no }
+			}
+		}
+		
+		
+		path = {
+			leads_to_tech = basic_machine_tools
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1910
+		folder = {
+			name = industry_folder
+			position = { x = 3 y = @1900 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+		special_project_specialization = { specialization_base }
+		force_use_small_tech_layout = yes
+	}
+	
+	fundamentals_of_gear_design_industry = {
+
+		allow = {
+			NOT = { is_researching_technology = fundamentals_of_gear_design }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { fundamentals_of_gear_design = 1 popup = no }
+			}
+		}
+		
+		path = {
+			leads_to_tech = axle_and_bearing_development_industry
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1910
+		folder = {
+			name = industry_folder
+			position = { x = 5 y = 2 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+		special_project_specialization = { specialization_base }
+		force_use_small_tech_layout = yes
+	}
+	
+	axle_and_bearing_development_industry = {
+
+		allow = {
+			NOT = { is_researching_technology = axle_and_bearing_development }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { axle_and_bearing_development = 1 popup = no }
+			}
+		}
+	
+	
+		path = {
+			leads_to_tech = basic_machine_tools
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1915
+		folder = {
+			name = industry_folder
+			position = { x = 3 y = 2 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+		special_project_specialization = { specialization_base }
+		force_use_small_tech_layout = yes
+	}
+	
+	steel_smelting_industry = {
+
+		allow = {
+			NOT = { is_researching_technology = steel_smelting }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { steel_smelting = 1 popup = no }
+			}
+		}
+		
+		
+		path = {
+			leads_to_tech = improved_alloy_steels_industry
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1915
+		folder = {
+			name = industry_folder
+			position = { x = 7 y = @1900 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+		special_project_specialization = { specialization_base }
+		force_use_small_tech_layout = yes
+	}
+	
+	improved_alloy_steels_industry = {
+
+		allow = {
+			NOT = { is_researching_technology = improved_alloy_steels }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { improved_alloy_steels = 1 popup = no }
+			}
+		}
+		
+		
+		path = {
+			leads_to_tech = hardening_and_processing_of_metals_industry
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1915
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 1 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+		special_project_specialization = { specialization_base }
+		force_use_small_tech_layout = yes
+	}
+	
+	hardening_and_processing_of_metals_industry = {
+
+		allow = {
+			NOT = { is_researching_technology = hardening_and_processing_of_metals }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { hardening_and_processing_of_metals = 1 popup = no }
+			}
+		}
+		
+		
+		path = {
+			leads_to_tech = construction1
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1915
+		folder = {
+			name = industry_folder
+			position = { x = 7 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+		special_project_specialization = { specialization_base }
+		force_use_small_tech_layout = yes
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -85,7 +415,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = @1984 }
+			position = { x = @machine_tools_x y = @1984 }
 		}
 		
 		ai_will_do = {
@@ -127,7 +457,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = @1986 }
+			position = { x = @machine_tools_x y = @1986 }
 		}
 		
 		ai_will_do = {
@@ -176,7 +506,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = @1988 }
+			position = { x = @machine_tools_x y = @1988 }
 		}
 		
 		ai_will_do = {
@@ -218,7 +548,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = -1 y = @1990 }
+			position = { x = -3 y = @1990 }
 		}
 		
 		ai_will_do = {
@@ -260,7 +590,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 1 y = @1990 }
+			position = { x = -1 y = @1990 }
 		}
 		
 		ai_will_do = {
@@ -307,7 +637,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = @1992 }
+			position = { x = @machine_tools_x y = @1992 }
 		}
 		
 		ai_will_do = {
@@ -349,7 +679,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = -2 y = @1984 }
+			position = { x = -4 y = @1984 }
 		}
 		
 		ai_will_do = {
@@ -380,7 +710,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = -2 y = @1986 }
+			position = { x = -4 y = @1986 }
 		}
 		
 		ai_will_do = {
@@ -418,7 +748,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = @1984 }
+			position = { x = 0 y = @1984 }
 		}
 
 		ai_will_do = {
@@ -446,7 +776,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = @1986 }
+			position = { x = 0 y = @1986 }
 		}
 		
 		ai_will_do = {
@@ -491,7 +821,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = 2 }
+			position = { x = @concentrated_industry_x y = @1983_2 }
 		}
 		
 		ai_will_do = {
@@ -550,7 +880,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = @1984 }
+			position = { x = @concentrated_industry_x y = @1984 }
 		}
 		
 		ai_will_do = {
@@ -592,7 +922,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = @1986 }
+			position = { x = @concentrated_industry_x y = @1986 }
 		}
 		
 		ai_will_do = {
@@ -633,7 +963,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = @1988 }
+			position = { x = @concentrated_industry_x y = @1988 }
 		}
 		
 		ai_will_do = {
@@ -681,7 +1011,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = @1990 }
+			position = { x = @concentrated_industry_x y = @1990 }
 		}
 		
 		ai_will_do = {
@@ -731,7 +1061,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 2 }
+			position = { x = @dispersed_industry_x y = @1983_2 }
 		}
 		
 		ai_will_do = {
@@ -790,7 +1120,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = @1984 }
+			position = { x = @dispersed_industry_x y = @1984 }
 		}
 		
 		ai_will_do = {
@@ -831,7 +1161,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = @1986 }
+			position = { x = @dispersed_industry_x y = @1986 }
 		}
 		
 		ai_will_do = {
@@ -872,7 +1202,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = @1988 }
+			position = { x = @dispersed_industry_x y = @1988 }
 		}
 		
 		ai_will_do = {
@@ -920,7 +1250,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = @1990 }
+			position = { x = @dispersed_industry_x y = @1990 }
 		}
 		
 		ai_will_do = {
@@ -973,7 +1303,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = @1992 }
+			position = { x = 1 y = @1992 }
 		}
 		
 		ai_will_do = {
@@ -1019,7 +1349,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 5 y = @1992 }
+			position = { x = 3 y = @1992 }
 		}
 		
 		ai_will_do = {
@@ -1064,7 +1394,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 7 y = @1992 }
+			position = { x = 5 y = @1992 }
 		}
 		
 		ai_will_do = {
@@ -1101,7 +1431,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = @1994 }
+			position = { x = 2 y = @1994 }
 		}
 		
 		ai_will_do = {
@@ -1135,7 +1465,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = @1994 }
+			position = { x = 4 y = @1994 }
 		}
 		
 		ai_will_do = {
@@ -1157,7 +1487,8 @@ technologies = {
 	
 
 	
-	#####################################
+	
+#####################################################
 	
 	construction1 = {
 		
@@ -1192,7 +1523,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = @1983 }
+			position = { x = 11 y = @1983 }
 		}
 		
 		ai_will_do = {
@@ -1233,7 +1564,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 2 }
+			position = { x = @construction_minus_1_x y = @1983_2 }
 		}
 		
 		ai_will_do = {
@@ -1282,7 +1613,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 2 }
+			position = { x = @construction_plus_1_x y = @1983_2 }
 		}
 		
 		ai_will_do = {
@@ -1373,7 +1704,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = @1986 }
+			position = { x = @construction_minus_1_x y = @1986 }
 		}
 		
 		ai_will_do = {
@@ -1428,7 +1759,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = @1986 }
+			position = { x = @construction_plus_1_x y = @1986 }
 		}
 		
 		ai_will_do = {
@@ -1523,7 +1854,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = -1 y = @1988 }
+			position = { x = @construction_minus_2_x y = @1988 }
 		}
 		
 		ai_will_do = {
@@ -1562,7 +1893,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = -1 y = @1992 }
+			position = { x = @construction_minus_2_x y = @1992 }
 		}
 		
 		ai_will_do = {
@@ -1611,7 +1942,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = @1990 }
+			position = { x = @construction_minus_1_x y = @1990 }
 		}
 		
 		ai_will_do = {
@@ -1661,7 +1992,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = @1990 }
+			position = { x = @construction_plus_1_x y = @1990 }
 		}
 		
 		ai_will_do = {
@@ -1844,7 +2175,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = @1988 }
+			position = { x = @construction_plus_2_x y = @1988 }
 		}
 		
 		ai_will_do = {
@@ -1884,7 +2215,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = @1992 }
+			position = { x = @construction_plus_2_x y = @1992 }
 		}
 		
 		ai_will_do = {
@@ -1937,7 +2268,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = @excavation_x y = 2 }
+			position = { x = @excavation_x y = @1983_2 }
 		}
 		
 		ai_will_do = {
@@ -2205,7 +2536,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = @ersatz_materials_x y = 2 }
+			position = { x = @ersatz_materials_x y = @1983_2 }
 		}
 		
 		ai_will_do = {
@@ -2450,7 +2781,7 @@ technologies = {
 		start_year = 1983
 		folder = {
 			name = industry_folder
-			position = { x = 1 y = @1983 }
+			position = { x = 1 y = 0 }
 		}
 		
 		categories = {
@@ -2542,7 +2873,7 @@ technologies = {
 		start_year = 1983
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 2 }
+			position = { x = 3 y = @fuel_1983 }
 		}
 		
 		categories = {
@@ -2613,7 +2944,7 @@ technologies = {
 		start_year = 1984
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = @1984 }
+			position = { x = 3 y = @fuel_1984 }
 		}
 		
 		categories = {
@@ -2675,7 +3006,7 @@ technologies = {
 		start_year = 1988
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = @1988 }
+			position = { x = 3 y = @fuel_1988 }
 		}
 		
 		categories = {
@@ -2728,7 +3059,7 @@ technologies = {
 		start_year = 1992
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = @1992 }
+			position = { x = 3 y = @fuel_1992 }
 		}
 		
 		categories = {
@@ -2777,7 +3108,7 @@ technologies = {
 		start_year = 1996
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = @1996 }
+			position = { x = 3 y = @fuel_1996 }
 		}
 		
 		categories = {
@@ -2841,7 +3172,7 @@ technologies = {
 		start_year = 1983
 		folder = {
 			name = industry_folder
-			position = { x = 1 y = 2 }	#x = 0
+			position = { x = 1 y = @fuel_1983 }	#x = 0
 		}
 		
 		categories = {
@@ -2894,7 +3225,7 @@ technologies = {
 		start_year = 1983
 		folder = {
 			name = industry_folder
-			position = { x = -1 y = 2 }
+			position = { x = -1 y = @fuel_1983 }
 		}
 		
 		categories = {
@@ -2973,7 +3304,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = -1 y = @1984 }
+			position = { x = -1 y = @fuel_1984 }
 		}
 		
 		categories = {
@@ -3031,7 +3362,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = -1 y = @1988 }
+			position = { x = -1 y = @fuel_1988 }
 		}
 		
 		categories = {
@@ -3089,7 +3420,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = -1 y = @1992 }
+			position = { x = -1 y = @fuel_1992 }
 		}
 		
 		categories = {
@@ -3142,7 +3473,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = -1 y = @1996 }
+			position = { x = -1 y = @fuel_1996 }
 		}
 		
 		categories = {
@@ -3189,7 +3520,8 @@ technologies = {
 
 
 
-	#####################################
+#####################################################
+
 	rubber_processing = {
 		
 		enable_equipment_modules = {
@@ -3214,7 +3546,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 1 y = @1984 }
+			position = { x = 1 y = @fuel_1984 }
 		}
 		
 		categories = {
@@ -3284,7 +3616,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 1 y = @1988 }
+			position = { x = 1 y = @fuel_1988 }
 		}
 		
 		categories = {
@@ -3354,7 +3686,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 1 y = @1992 }
+			position = { x = 1 y = @fuel_1992 }
 		}
 		
 		categories = {
@@ -3419,7 +3751,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 1 y = @1996 }
+			position = { x = 1 y = @fuel_1996 }
 		}
 		
 		categories = {

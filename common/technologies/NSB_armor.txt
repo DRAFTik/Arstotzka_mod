@@ -18,6 +18,216 @@ technologies = {
 	@2001 = 14
 	
 	
+	
+	iron_purification = {
+
+		allow = {
+			NOT = { is_researching_technology = iron_purification_industry }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { iron_purification_industry = 1 popup = no }
+			}
+		}
+		
+		
+		path = {
+			leads_to_tech = simple_chain_systems
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = fundamentals_of_gear_design
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = steel_smelting
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1900
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 5 y = @1900 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+	}
+	
+	simple_chain_systems = {
+
+		allow = {
+			NOT = { is_researching_technology = simple_chain_systems_industry }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { simple_chain_systems_industry = 1 popup = no }
+			}
+		}
+		
+
+		research_cost = 1
+		start_year = 1910
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 8 y = 2 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+	}
+	
+	fundamentals_of_gear_design = {
+
+		allow = {
+			NOT = { is_researching_technology = fundamentals_of_gear_design_industry }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { fundamentals_of_gear_design_industry = 1 popup = no }
+			}
+		}
+		
+		
+		path = {
+			leads_to_tech = axle_and_bearing_development
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1910
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 4 y = 2 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+	}
+	
+	axle_and_bearing_development = {
+
+		allow = {
+			NOT = { is_researching_technology = axle_and_bearing_development_industry }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { axle_and_bearing_development_industry = 1 popup = no }
+			}
+		}
+	
+		
+		research_cost = 1
+		start_year = 1915
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 4 y = 4 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+	}
+	
+	steel_smelting = {
+
+		allow = {
+			NOT = { is_researching_technology = steel_smelting_industry }
+		}
+
+		army_speed_factor = 0.085
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = { steel_smelting_industry = 1 popup = no }
+			}
+		}
+		
+		
+		path = {
+			leads_to_tech = improved_alloy_steels
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1915
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 2 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
 	army_cooperation = {
 
 		army_speed_factor = 0.085
@@ -80,6 +290,7 @@ technologies = {
 			tank_christie_suspension
 			tank_bogie_suspension
 			tank_interleaved_suspension
+			NOR_rikstanken_turret
 			tank_light_one_man_tank_turret
 			tank_light_two_man_tank_turret
 			tank_light_three_man_tank_turret
@@ -99,8 +310,9 @@ technologies = {
 			#wet_ammo_storage
 			smoke_launchers
 			expanded_fuel_tank
+			NOR_tank_rikstanken_armor
 			
-			### NW
+			### GtA
 			tank_continuous_track_full_metal
 			
 			#tank_improved_turning_mechanisms
@@ -421,11 +633,11 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1996
+		start_year = 1997
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = @1996 }
+			position = { x = -4 y = @1997 }
 		}
 
 		ai_will_do = {
@@ -1494,7 +1706,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = experiments_dynamic_defensive
+			leads_to_tech = anti_accumulation_protection
 			research_cost_coeff = 1
 		}
 
@@ -1671,7 +1883,12 @@ technologies = {
 	}
 
 	armor_tech_4 = {
-
+		
+		path = {
+			leads_to_tech = experiments_dynamic_defensive
+			research_cost_coeff = 1
+		}
+		
 		research_cost = 1
 		start_year = 1995
 		folder = {
@@ -1722,15 +1939,10 @@ technologies = {
 		special_project_specialization = { specialization_land }
 	}
 	
-	experiments_dynamic_defensive = {
+	anti_accumulation_protection = {
 
 		enable_equipment_modules = {
 			armor_skirts
-		}
-		
-		path = {
-			leads_to_tech = active_anticamulation_defense
-			research_cost_coeff = 1
 		}
 		
 		research_cost = 1
@@ -1762,6 +1974,44 @@ technologies = {
 		}
 		special_project_specialization = { specialization_land }
 	}
+	
+	experiments_dynamic_defensive = {
+
+		enable_equipment_modules = {
+#			armor_skirts
+		}
+		
+		research_cost = 1
+		start_year = 1995
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 5 y = @1995 }
+		}
+
+		ai_will_do = {
+			factor = 5
+			
+			modifier = {
+				is_major = yes
+				factor = 3
+			}
+			modifier = {
+				factor = 2
+				date > "1996.1.1"
+			}
+		}
+
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+
+
 
 	engine_tech_1 = {
 

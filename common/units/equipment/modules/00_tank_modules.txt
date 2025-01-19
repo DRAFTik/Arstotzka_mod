@@ -1548,7 +1548,9 @@ equipment_modules = {
 			reliability = -0.1
 			breakthrough = 2
 			defense = 4
-			supply_consumption = -0.25
+		}
+		multiply_stats = {
+			supply_consumption = -0.15
 		}
 		xp_cost = 1
 	}

@@ -188,52 +188,7 @@
  sea_hunting: "Морская охота"
  sea_hunting_desc: "Разработав новые тактики ведения воздушного боя против вражеского флота, мы станем значительно легче топить их корабли."
  
- ### GENERALS TRAITS
- guerrilla_war_trait: "Доктрина «Партизанская война»"
- guerrilla_war_trait_desc: "Наша война ведется скрывающимися среди местного населения либо использующими свойства местности вооруженными группами, избегающими открытых и крупных столкновений с противником."
- national_war_trait: "Доктрина «Всенародная война»"
- national_war_trait_desc: "Мы завербуем весь народ в качестве своих агентов. Борьба за выживание должна стать стихийным явлением. Каждый из них поможем нам в пропагандистском или подрывном влиянии на противника."
  
- guerrilla_war_trait_tt: "Что даст:\nМаксимальный размер группы армий фельдмаршала: §R-2§!\nМаксимальный размер армии генерала: §R-14§!\n"
- national_war_trait_tt: "Что даст:\nМаксимальный размер группы армий фельдмаршала: §G+2§!\nМаксимальный размер армии генерала: §G+16§!\n"
- all_new_generals_be_have_trait_tt: "Все §Yновые генералы§! так же получат трейт.\n"
- ###
- art_leader: "Командующий артиллерией"
- art_leader_desc: "§LЭтот офицер обладает большим опытом командования артиллерией.§!"
- art_ratio_over_20: "Соотношение артиллерии > §H20%§!"
- art_ratio_over_40: "Соотношение артиллерии > §H40%§!"
- art_expert: "Эксперт артиллерии"
- art_expert_desc: "§LЭксперт в сфере применения артиллерийских расчетов на поле боя.§!"
- ###
- fire_leader: "Пиротехник"
- fire_leader_desc: "§LЭтот офицер освоил грамотное применение огнеметных подразделений в бою.§!"
- fire_ratio_over_20: "Соотношение огнеметчиков, огнеметных бронемашин и огнеметных танков > §H20%§!"
- fire_ratio_over_50: "Соотношение огнеметчиков, огнеметных бронемашин и огнеметных танков > §H50%§!"
- fire_expert: "Пироман"
- fire_expert_desc: "§LЭтот офицер любит запах напалма поутру.§!"  #Этот офицер мастерски научился использовать напалм на поле боя // Рофл же
- INCREASED_TACTIC_FIRE_STORM_AND_ENCIRCLEMENT_FIRE_CHANCE: "Повышенный шанс тактик §Hогненный шторм§! и §Hогненное кольцо§!"
- INCREASED_TACTIC_TACTIC_BLITZ_INF_CHANCE: "Повышенный шанс тактики §Hпехотный блиц§!"
- fire_fuel_expert: "Топливный импровизатор"
- fire_fuel_expert_desc: "§LЭтот офицер научился экономно расходовать огнесмесь.§!"
- ###
- combined_avia_leader: "Любитель авиации"
- combined_avia_leader_desc: "§LЭтот офицер быстро понял насколько важна авиаподдержка в наземном бою.§!"
- COMBINED_AVIA_LEADER_TRIGGER_TT: "Сражается с вражескими авиачастями или под прикрытием своих авиачастей"
- combined_avia_expert: "Авиадиспетчер"
- combined_avia_expert_desc: "§LЭтот офицер готов продемонстрировать преимущества концепции наземно-воздушного боя.§!"
- ###
- dismissal_leader: "§RУволить лидера§!"
- dismissal_leader_desc: "§LНам пора избавиться от этого офицера.§!"
- dismissal_leader_tt: "\n§TМы уже уволили:§!\n§LФельдмаршалов: §H[?dismissal_field_marshal]§!\nГенералов: §H[?dismissal_corp_leader]§!§!\n\n§YЭто действие стоит §H25§! £pol_power!.§!"
- dismissal_leader_tt2: "§YНедостаточно политической власти.\nДля увольнения необходимо §H25§! £pol_power!.§!"
- 
- ### IDEAS TRAITS
- army_fire_1: "Огнеметные войска\n(мастер)"
- army_fire_2: "Огнеметные войска\n(специалист)"
- army_fire_3: "Огнеметные войска\n(эксперт)"
- 
- asymmetric_warfare_expert: "Эксперт ведению ассиметричной войны"
- war_of_attrition_expert: "Эксперт по ведению войны на истощение"
  
  
  ### IDEAS
@@ -259,35 +214,12 @@
  
  
  
- ### TACTICS
- tactic_fire_storm: "Огненный шторм"
- tactic_encirclement_fire: "Огненное кольцо"
- tactic_lightning_attacks: "Молниеносная атака"
- tactic_blitz_inf: "Пехотный блиц"
- tactic_chemical_weapons_attack: "Атака с применением химического оружия"
- tactic_biological_weapons_attack: "Атака с применением биологического оружия"
- 
- unlock_tactic_tt: "Открывает доступ к тактике:"
- unlock_tactic_chemical_weapons_attack_tt: "$unlock_tactic_tt$ §Y$tactic_chemical_weapons_attack$§!.\n"
- unlock_tactic_biological_weapons_attack_tt: "$unlock_tactic_tt$ §Y$tactic_biological_weapons_attack$§!.\n"
- 
- ### NEW UNIT CATEGORY
- category_all_motorized: "Вся моторизация и механизация"
- category_all_armored_car: "Все бронемашины"
- category_all_flamethrower: "Огнеметные войска"
- 
- category_flame_tanks: "Огнеметные танки"
- category_aa_tanks: "Зенитные танки"
- category_art_tanks: "Артиллерийские танки"
- category_td_tanks: "Истребители танков"
- category_main_tanks: "Основные танки"
- 
- category_scout_plane: "Самолеты-разведчики"       #vanila_fix
- military_police_tech: "Военная полиция"           #vanila_fix
  
  
- cat_medium_armor_research: "£research_speed_texticon  Темпы исследований средних танков"                 #vanila_fix
- cat_anti_tank_research: "£research_speed_texticon  Темпы исследований ПТ САУ"                           #vanila_fix
+ 
+ 
+ cat_medium_armor_research: "£research_speed_texticon  Темпы исследований средних танков"   #vanila_fix
+ cat_anti_tank_research: "£research_speed_texticon  Темпы исследований ПТ САУ"              #vanila_fix
  
  ### NEW RESEARCH CATEGORY
  aa_artillery: "ПВО"
@@ -308,6 +240,8 @@
  special_forces_tech_research: "£research_speed_texticon  Темпы исследований технологий спецназа"
  tank_school_cat: "Технологии танковой школы"
  tank_school_cat_research: "£research_speed_texticon  Темпы исследований технологий танковой школы"
+ armour_walker_tech: "Технологии шагоходов"
+ armour_walker_tech_research: "£research_speed_texticon  Темпы исследований технологий шагоходов"
  
  cat_mechanized_equipment_research: "£research_speed_texticon  Темпы исследований механизации"
  
@@ -411,6 +345,115 @@
  basic_motorcycle_desc: "$motorcycle_equipment_desc$"
  improved_motorcycle: "Улучшенный мотоцикл"
  improved_motorcycle_desc: "$motorcycle_equipment_desc$"
+ 
+ 
+ 
+ ### TANKS
+ army_cooperation: "Теория общевойскового взаимодействия"
+ army_cooperation_desc: "Появление большого количество отличных друг от друга видов войск за последние десятилетия требует теоретического совершенствования их взаимодействия в рамках тактического, оперативного и стратегического военного искусства."
+ theory_tank_war: "Теория танковой войны"
+ theory_tank_war_desc: "Самостоятельные танковые операции - новый виток в военной мысли человечества. Использование бронетехники исключительно в качестве средства непосредственной поддержки пехоты оказалось ошибкой и, осознавая ее, должны быть разработаны методы ведения боевых действий с использованием отделенных от пехоты до танковых кулаков."
+ light_consctruction: "Тенденции на упрощение конструкции"
+ light_consctruction_desc: "Необходимость развития массового танкового производства требует от конструкторов сокращения количества деталей в конструкции бронетехники, облегчая заводскую сборку нужной армии номенклатуры."
+ heavy_consctruction: "Конструционная сверхдетализация"
+ heavy_consctruction_desc: "Увеличение количества деталей в технике, способствующее росту стоимости и уменьшению производственных возможностей, на первый взгляд является иррациональным решением. Но стоит признать, что именно из-за раздутого числа механизмов появляется возможность обеспечить их взаимозаменяемость."
+ from_mass_to_speed: "От массы к скорости"
+ from_mass_to_speed_desc: "Опыт ведения боевых действий доказал, что скорость и способны громить тылы противника в современных боевых действиях ценятся выше, чем масса танка и новые машины должно разрабатывать с упором на эти выводы."
+ increase_mass_armor: "Увеличение массы техники"
+ increase_mass_armor_desc: "Опыт ведения боевых действий доказал, что масса техники полностью определяет ее возможность держать удар артиллерии и других танков врага. Пусть медленное, но неумолимое наступление неуничтожаемого врага обратит в бегство любое войско и именно этот опыт следует двигать танкостроение в дальнейшем."
+ uprage_recon_furniture: "Совершенствование разведывательной аппаратуры"
+ uprage_recon_furniture_desc: "Разведка - основная задача легких танков в предстоящем будущем. Для ее эффективного исполнения необходимо разработать новую ."
+ anti_accumulation_protection: "Противокумулятивная защита"
+ anti_accumulation_protection_desc: ""
+ experiments_dynamic_defensive: "Эксперименты с динамической защитой"
+ experiments_dynamic_defensive_desc: "Усиление брони невозможно без повышения её эффективности путем разработок в области концепции динамической защиты - заряда, выстреливающего навстречу снаряду противника и перехватывающего его таким образом."
+ 
+ 
+ 
+ ### TANKS
+ improved_alloy_steels: "Улучшенные легированные стали"
+ improved_alloy_steels_desc: ""
+ hardening_and_processing_of_metals: "Закалка и обработка металлов"
+ hardening_and_processing_of_metals_desc: ""
+ composite_materials: "Композитные материалы"
+ composite_materials_desc: ""
+ shockproof_coatings: "Противоударные покрытия"
+ shockproof_coatings_desc: ""
+ dynamic_protection: "Динамическая защита"
+ dynamic_protection_desc: ""
+ modular_armor: "Модульная броня"
+ modular_armor_desc: ""
+ composite_armor_for_walkers: "Композитная броня для шагоходов"
+ composite_armor_for_walkers_desc: ""
+ reinforced_armored_cabins: "Укрепленные бронированные кабины"
+ reinforced_armored_cabins_desc: ""
+ precision_eccentrics: "Прецизионные эксцентрики"
+ precision_eccentrics_desc: ""
+ hydraulic_pumps_and_drives: "Гидравлические насосы и приводы"
+ hydraulic_pumps_and_drives_desc: ""
+ pneumatic_shock_absorption: "Пневматическая амортизация"
+ pneumatic_shock_absorption_desc: ""
+ engineering_walkers: "Инженерные шагоходы"
+ engineering_walkers_desc: ""
+ early_electric_drives: "Ранние электрические приводы"
+ early_electric_drives_desc: ""
+ mechanical_stabilization: "Механическая стабилизация"
+ mechanical_stabilization_desc: ""
+ high_power_mechanical_gearboxes: "Механические редукторы высокой мощности"
+ high_power_mechanical_gearboxes_desc: ""
+ electromechanical_control_systems: "Электромеханические системы управления"
+ electromechanical_control_systems_desc: ""
+ cargo_walkers: "Грузовые шагоходы"
+ cargo_walkers_desc: ""
+ energy_efficient_engines: "Энергоэффективные двигатели"
+ energy_efficient_engines_desc: ""
+ multi_legged_platform_technology: "Технология многоногих платформ"
+ multi_legged_platform_technology_desc: ""
+ autonomous_drives: "Автономные приводы"
+ autonomous_drives_desc: ""
+ guided_weapons_systems: "Управляемые системы вооружения"
+ guided_weapons_systems_desc: ""
+ stable_hinge_joints: "Устойчивые шарнирные соединения"
+ stable_hinge_joints_desc: ""
+ autonomous_gyroscopes: "Автономные гироскопы"
+ autonomous_gyroscopes_desc: ""
+ weapon_stabilization_systems: "Системы стабилизации оружия"
+ weapon_stabilization_systems_desc: ""
+ reconnaissance_walker_chassis_1: "Примитивный разведывательный шагоход"
+ reconnaissance_walker_chassis_1_desc: ""
+ reconnaissance_walker_chassis_2: "Улучшенный разведывательный шагоход"
+ reconnaissance_walker_chassis_2_desc: ""
+ reconnaissance_walker_chassis_3: "Продвинутый разведывательный шагоход"
+ reconnaissance_walker_chassis_3_desc: ""
+ masking_walkers: "Маскировка шагоходов"
+ masking_walkers_desc: ""
+ universal_combat_walker_chassis_1: "Примитивный боевой шагоход"
+ universal_combat_walker_chassis_1_desc: ""
+ universal_combat_walker_chassis_2: "Улучшенный боевой шагоход"
+ universal_combat_walker_chassis_2_desc: ""
+ universal_combat_walker_chassis_3: "Продвинутый боевой шагоход"
+ universal_combat_walker_chassis_3_desc: ""
+ modular_combat_complexes: "Модульные боевые комплексы"
+ modular_combat_complexes_desc: ""
+ integration_of_guidance_systems: "Интеграция систем наведения"
+ integration_of_guidance_systems_desc: ""
+ stabilizers_for_heavy_weapons: "Стабилизаторы для тяжелого вооружения"
+ stabilizers_for_heavy_weapons_desc: ""
+ siege_walker_chassis_1: "Примитивный осадный шагоход"
+ siege_walker_chassis_1_desc: ""
+ siege_walker_chassis_2: "Улучшенный осадный шагоход"
+ siege_walker_chassis_2_desc: ""
+ siege_walker_chassis_3: "Продвинутый осадный шагоход"
+ siege_walker_chassis_3_desc: ""
+ self_healing_systems: "Системы самовосстановления"
+ self_healing_systems_desc: ""
+ hybrid_drives: "Гибридные приводы"
+ hybrid_drives_desc: ""
+ adaptive_chassis_platform: "Адаптивная ходовая платформа"
+ adaptive_chassis_platform_desc: ""
+ walking_fortress_chassis: "Шагающая крепость"
+ walking_fortress_chassis_desc: ""
+ 
  
  
  ### INDUSTRY

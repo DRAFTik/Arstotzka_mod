@@ -16,10 +16,14 @@ technology_categories = {
 	sniper_tech
 	special_forces_tech
 	tank_school_cat
+	armour_walker_tech
 }
 
 technology_folders = {
 	special_infantry_folder = {
+		ledger = army
+	}
+	armour_walker_folder = {
 		ledger = army
 	}
 	nuclear_folder = {
