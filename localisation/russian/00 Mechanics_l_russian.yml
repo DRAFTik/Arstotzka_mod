@@ -1,7 +1,7 @@
 ﻿l_russian:
 
     GtA_debug_decisions: "DEBUG"
-    GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]\n\nprovision_total_var: [?ROOT.provision_total_var]\nprovision_delta_var:[?ROOT.provision_delta_var]\nprovision_percent_to_max_var: [?provision_percent_to_max_var]\n\nprovision_total_var: [?ROOT.provision_total_var|+1]\n\nhunger_dyn: [?hunger_dyn]\n\nГОЛОД\nnum_change_population_weekly: [?modifier@num_change_population_weekly]\nmax_manpower_k: [?max_manpower_k]\nnum_controlled_states: [?num_controlled_states]\npercent_change_population_weekly: [?percent_change_population_weekly]\n\n resource iron: [?resource@iron]\n resource_produced iron: [?resource_produced@iron]\n resource_exported iron: [?resource_exported@iron]\n\n steel_minus_var!!!: [?steel_minus_var]\n steel_return_electric_power_var: [?steel_return_electric_power_var]\n steel_minus_state_total_1: [?steel_minus_state_total_1]\n\n mobilization_speed_proletariat_var: [?mobilization_speed_proletariat_var|4]\n modifier_mobilization_speed_proletariat: [?modifier@mobilization_speed_proletariat]\n\n target_proletariat: [?target_proletariat]\n target_proletariat_percent_var: [?target_proletariat_percent_var|4]\n num_of_days_mobilization_proletariat: [?num_of_days_mobilization_proletariat|5]\n TOTAL_num_proletariat_add_k: [?TOTAL_num_proletariat_add_k]\n SUM_check_min_pulse_proletariat: [?SUM_check_min_pulse_proletariat]\n target_min_pulse_proletariat: [?target_min_pulse_proletariat]\n\n max_manpower_k: [?max_manpower_k]\n\n num_of_factories: [?num_of_factories]\n\nagency_upgrade_number: [?ROOT.agency_upgrade_number]\nnof: [?global.nof]"
+    GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]\n\nprovision_total_var: [?ROOT.provision_total_var]\nprovision_delta_var:[?ROOT.provision_delta_var]\nprovision_percent_to_max_var: [?provision_percent_to_max_var]\n\nprovision_total_var: [?ROOT.provision_total_var|+1]\n\nhunger_dyn: [?hunger_dyn]\n\nГОЛОД\nnum_change_population_weekly: [?modifier@num_change_population_weekly]\nmax_manpower_k: [?max_manpower_k]\nnum_controlled_states: [?num_controlled_states]\npercent_change_population_weekly: [?percent_change_population_weekly]\n\n resource iron: [?resource@iron]\n resource_produced iron: [?resource_produced@iron]\n resource_exported iron: [?resource_exported@iron]\n\n steel_minus_var!!!: [?steel_minus_var]\n steel_return_electric_power_var: [?steel_return_electric_power_var]\n steel_minus_state_total_1: [?steel_minus_state_total_1]\n\n mobilization_speed_proletariat_var: [?mobilization_speed_proletariat_var|4]\n modifier_mobilization_speed_proletariat: [?modifier@mobilization_speed_proletariat]\n\n target_proletariat: [?target_proletariat]\n target_proletariat_percent_var: [?target_proletariat_percent_var|4]\n num_of_days_mobilization_proletariat: [?num_of_days_mobilization_proletariat|5]\n TOTAL_num_proletariat_add_k: [?TOTAL_num_proletariat_add_k]\n SUM_check_min_pulse_proletariat: [?SUM_check_min_pulse_proletariat]\n target_min_pulse_proletariat: [?target_min_pulse_proletariat]\n\n max_manpower_k: [?max_manpower_k]\n\n num_of_factories: [?num_of_factories]\n\nagency_upgrade_number: [?ROOT.agency_upgrade_number]\nnof: [?global.nof]\n\namount_research_slots: [?amount_research_slots]\nnum_science_minus_var: [?num_science_minus_var]\nmodifier@num_generation_science_point: [?modifier@num_generation_science_point]\nmodifier@num_use_science_point_factor: [?modifier@num_use_science_point_factor]\nnum_science_plus_var: [?num_science_plus_var]"
     empty_text: ""
 
 ########################
@@ -13,7 +13,7 @@
     gta_party_popularity_delayed_tooltip: "Популярность партии представляет собой контроль текущего правительства над страной и его поддержку в народе. Политические партии с высокой популярностью имеют больше возможностей для продвижения своей политической программы и стабилизации нации."
 
     gta_party_popularity_tooltip: "§HПопулярность партии§![GetPopularityPPGain]"
-    gta_party_popularity_tooltip_long: "§H\n\nЭффекты от нашей нынешней Популярности партии:§!\nЕжедневный прирост Политической силы: [?ROOT.party_popularity@ruling_party|2=+]"
+    gta_party_popularity_tooltip_long: "§H\nЭффекты от нашей нынешней Популярности партии:§!\nЕжедневный прирост Политической силы: [?ROOT.party_popularity@ruling_party|2=+]"
 
     party_popularity_dynamic_modifier: "Популярность партии"
 
@@ -22,7 +22,7 @@
 ### PROVISIONS ###
 ##################
 
-    gta_provisions_tooltip: "§HПродовольственная обеспеченность (тыс. тонн)§!\n\n§HУровень обеспеченности:§! [?ROOT.provision_percent_var|+1%%]\n\nТекущий запас провианта: [?ROOT.provision_total_var|+1*] из [?ROOT.max_provision_total_var|H1*] | [?ROOT.provision_percent_to_max_var|+1%]\nТекущий баланс провианта: [?ROOT.provision_balance_var|+1*]/день\nТекущее потребление провианта: [?ROOT.provision_need_var|-1*]/день\n\nПроизводство провианта:\n    - в неделю: [?ROOT.weekly_income_provision|+1*] от [?ROOT.livestock_complex_total|H0] шт.\n    - в год: [?ROOT.yearly_income_provision|+1*] от [?ROOT.agro_complex_total|H0] шт.[GET_CROP_LOC]\n\nУровень сохранения провизии: [?ROOT.monthly_save_provision|+0%]\nВ этом месяце ожидается порча: [?ROOT.bad_provision_var|-1*]\n\nМаксимальный запас провианта: [?ROOT.max_provision_total_var|H1*]\nБазовое значение: [?ROOT.max_provision_base_var|H1*]\nВ регионах: [?ROOT.modifier@max_provision|H1*][GET_HUNGER_LOC]"
+    gta_provisions_tooltip: "§HПродовольственная обеспеченность (тыс. тонн)§!\nУровень обеспеченности: [?ROOT.provision_percent_var|+1%%]\n\nТекущий запас провианта: [?ROOT.provision_total_var|+1*] из [?ROOT.max_provision_total_var|H1*] | [?ROOT.provision_percent_to_max_var|+1%]\nТекущий баланс провианта: [?ROOT.provision_balance_var|+1*]/день\nТекущее потребление провианта: [?ROOT.provision_need_var|-1*]/день\n\nПроизводство провианта:\n    - в неделю: [?ROOT.weekly_income_provision|+1*] от [?ROOT.livestock_complex_total|H0] шт.\n    - в год: [?ROOT.yearly_income_provision|+1*] от [?ROOT.agro_complex_total|H0] шт.[GET_CROP_LOC]\n\nУровень сохранения провизии: [?ROOT.monthly_save_provision|+0%]\nВ этом месяце ожидается порча: [?ROOT.bad_provision_var|-1*]\n\nМаксимальный запас провианта: [?ROOT.max_provision_total_var|H1*]\nБазовое значение: [?ROOT.max_provision_base_var|H1*]\nВ регионах: [?ROOT.modifier@max_provision|H1*][GET_HUNGER_LOC]"
     gta_provisions_delayed_tooltip: "Продовольственная обеспеченность отображает потребность в продуктах питания вашей страны.\n\nНерегулярные поступления провианта от §HАгрокомплексов§! не учитываются в расчете значения §Hбаланса провианта§!."
     GET_BASE_HARVEST_LOC: "\nУрожай текущего года:"
     GET_BAD_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §RНЕУРОЖАЙ§!"
@@ -48,7 +48,7 @@
 ### ELECTRIC POWER ###
 ######################
 
-    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\n\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.modifier@num_generation_electric_power|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-]"
+    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.modifier@num_generation_electric_power|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-]"
     gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!.\nНажмите §Gправой кнопкой§!, чтобы начать §Hторговлю электроэнергией§!.[GET_ELECTRIC_POWER_CRISIS_LOC]"
     GET_ELECTRIC_POWER_CRISIS_TEXT: "\n$SEPARATION_LINE$$electric_power_title_bad_debuff_text$$electric_power_debuff_text$"
     
@@ -109,7 +109,13 @@
     GET_MAX_MANPOWER_IN_K_TEXT: "[?ROOT.max_manpower_k|2]K"
     GET_MAX_MANPOWER_IN_M_TEXT: "[?ROOT.max_manpower_m_var|2]M"
 
+###############
+### SCIENCE ###
+###############
 
+    gta_science_tooltip: "§HНаука§!\nИзменение очков: [?ROOT.num_science_DELTA_var|+1]\n\nТекущие затраты ОН: [?ROOT.num_science_minus_var|+1]\nТекущий прирост ОН: [?ROOT.num_science_plus_var|+1]"
+    gta_science_delayed_tooltip: "Очки науки (ОН) отображают состояние науки в вашей страны."
+    
 
 ### MODIFIERS ###
 
@@ -129,6 +135,8 @@
     proletariat_factor: "£proletariat_texticon Трудовые ресурсы"
     mobilization_speed_proletariat: "£proletariat_texticon Мобилизация труда"
     interest_in_economic_development_factor: "£ETH_imperial_treasury Заинтересованность в экономическом развитии"
+    num_generation_science_point: "£science_texticon Очки науки"
+    num_use_science_point_factor: "£science_texticon Расход очков науки"
     
     state_resource_cost_iron: "Расход железа"
     

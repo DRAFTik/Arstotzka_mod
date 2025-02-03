@@ -178,7 +178,7 @@
  walker_closed_with_viewing_slots_cabin: "Закрытая кабина со смотровыми щелями"
  walker_panoramic_cabin_with_periscopes_cabin: "Панорамная кабина с перископами"
  walker_armored_cabin: "Бронированная кабина"
- walker_with_integrated_control_computer_cabin: "Кабина с интегрированным компьютером управления"
+ walker_with_integrated_control_computer_cabin: "Кабина с компьютером управления"
  
  ### СЛОТ СТАБИЛИЗАЦИИ
  EQ_MOD_SLOT_sustainability_type_slot_TITLE: "Тип стабилизации"
@@ -192,9 +192,9 @@
  EQ_MOD_SLOT_legs_type_slot_TITLE: "Тип ног"
  EQ_MOD_SLOT_legs_type_slot_TITLE_desc: "Тип ног"
  EQ_MOD_CAT_walker_legs_type_TITLE: "Разновидности типов ног"
- walker_telescopic_inserts_legs: "Ноги с телескопическими вставками"
  walker_articulated_hydraulic_legs: "Шарнирные гидравлические ноги"
+ walker_telescopic_inserts_legs: "Ноги с телескопич. вставками"
  walker_wide_soled_legs: "Ноги с широким основанием"
- walker_electromechanical_articulated_shock_absorption_legs: "Электромеханические ноги с шарнирной амортизацией"
+ walker_electromechanical_articulated_shock_absorption_legs: "Электромех. ноги с амортизацией"
  walker_claws_legs: "Ноги с когтями"
  

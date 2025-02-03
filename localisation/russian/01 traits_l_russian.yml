@@ -6,6 +6,51 @@
     nuclear_concern: "Ядерный концерн"
     
     
+    ### SCIENCE TRAITS
+    reformer_technocrat: "Технократ-реформатор"
+    social_utopian: "Социальный утопист"
+    pragmatic_militarist: "Милитарист-прагматик"
+    conservative_traditionalist: "Традиционалист-консерватор"
+    integrator_of_interdisciplinary_research: "Интегратор междисциплинарных исследований"
+    
+    chaos_theorist: "Теоретик хаоса"
+    statistical_planner: "Статистик-плановик"
+    cryptographer_scout: "Криптограф-разведчик"
+    logistics_rationalizer: "Рационализатор логистики"
+    algorithm_optimizer: "Оптимизатор алгоритмов"
+    
+    nuclear_enthusiast: "Ядерный энтузиаст"
+    quantum_theorist: "Квантовый теоретик"
+    materials_scientist_innovator: "Материаловед-новатор"
+    energy_engineer: "Инженер-энергетик"
+    automation_engineer: "Инженер автоматизации"
+    
+    agrotechnologist: "Агротехнолог"
+    pharmacologist_and_humanist: "Фармаколог-гуманист"
+    plastic_innovator: "Пластмассовый новатор"
+    eco_technologist: "Эко-технолог"
+    polymer_specialist: "Специалист по полимерам"
+    
+    geneticist_breeder: "Генетик-селекционер"
+    epidemiologist_is_savior: "Эпидемиолог-спаситель"
+    radical_ecologist: "Эколог-радикал"
+    marine_biologist: "Морской биолог"
+    specialist_in_soil_restoration: "Специалист по восстановлению почв"
+    
+    financial_analyst: "Финансовый аналитик"
+    industrial_magnate: "Индустриальный магнат"
+    supporter_of_cartels: "Сторонник картелей"
+    shadow_speculator: "Теневик-спекулянт"
+    export_strategist: "Экспортный стратег"
+    
+    education_reformer: "Реформатор образования"
+    cultural_assimilator: "Культурный ассимилятор"
+    demographer_analyst: "Демограф-аналитик"
+    historian_archivist: "Историк-архивист"
+    humanist_philosopher: "Философ-гуманист"
+    
+    
+    
     ### GENERALS TRAITS
     guerrilla_war_trait: "Доктрина «Партизанская война»"
     guerrilla_war_trait_desc: "Наша война ведется скрывающимися среди местного населения либо использующими свойства местности вооруженными группами, избегающими открытых и крупных столкновений с противником."

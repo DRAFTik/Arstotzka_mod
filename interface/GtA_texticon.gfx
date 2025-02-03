@@ -29,6 +29,11 @@ spriteTypes = {
 		texturefile = "gfx/texticons/proletariat_text_icon.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_science_texticon"
+		texturefile = "gfx/texticons/science_text_icon.dds"
+		legacy_lazy_load = no
+	}
 	
 	
 	

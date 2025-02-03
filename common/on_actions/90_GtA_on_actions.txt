@@ -12,6 +12,7 @@ on_actions = {
 				calculate_electric_power_LOG_effect			= yes
 				calculate_electric_power_dyn				= yes
 				calculate_proletariat_start_effect			= yes
+				calculate_science_start_effect				= yes
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): infrastructure: [?infrastructure]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): arms_factory: [?arms_factory]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): industrial_complex: [?industrial_complex]"
@@ -47,6 +48,7 @@ on_actions = {
 				calculate_provision_daily_effect			= yes		# стата
 				calculate_steel_mill_effect					= yes		# сталь
 				calculate_proletariat_effect				= yes		# рабсила
+				calculate_science_effect					= yes		# наука
 				
 ### ОБЩЕМЕХАНЫ // generic_building_organization
 				if = {
@@ -60,12 +62,14 @@ on_actions = {
 					set_variable							= { ROOT.num_of_build_exp = num_of_build_exp_temp }
 #					every_military_industrial_organization	= {	# mio:generic_building_organization
 					mio:generic_building_organization		= {	# mio:generic_building_organization
-						limit = {
-							is_mio_available = yes
-#							has_mio_equipment_type = mio_cat_eq_build
+						if = {
+							limit = {
+								is_mio_available = yes
+	#							has_mio_equipment_type = mio_cat_eq_build
+							}
+							add_mio_funds	= ROOT.num_of_build_exp
+							set_variable	= { num_of_build_exp = num_of_build_exp_temp }
 						}
-						add_mio_funds	= ROOT.num_of_build_exp
-						set_variable	= { num_of_build_exp = num_of_build_exp_temp }
 					}
 				}
 				

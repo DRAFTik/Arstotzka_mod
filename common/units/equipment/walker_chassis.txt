@@ -124,10 +124,7 @@ equipments = {
 			category = tank_radio_module
 			count < 2
 		}
-		module_count_limit = {
-			category = tank_secondary_turret
-			count < 2
-		}
+	
 		module_count_limit = {
 			module = amphibious_drive
 			count < 2
@@ -284,18 +281,18 @@ equipments = {
 			engine_type_slot			= empty
 		}
 
-		fuel_consumption	= 0
-		maximum_speed		= 4
-		build_cost_ic		= 2
-		reliability			= 0.5
+		fuel_consumption	= 1
+		maximum_speed		= 3
+		build_cost_ic		= 1.5
+		reliability			= 0.7
 		hardness			= 0.5
-		armor_value			= 5
+		armor_value			= 7
 		resources = {
 			steel = 1
 		}
 		
 		lend_lease_cost		= 10
-		manpower			= 2
+		manpower			= 3
 
 	}
 
@@ -323,10 +320,11 @@ equipments = {
 		parent = reconnaissance_walker_chassis_1
 		priority = 2000
 		module_slots = inherit
-		maximum_speed	= 5
+		maximum_speed	= 4
 		build_cost_ic	= 2.25
-		reliability		= 0.7
-		armor_value		= 10
+		reliability		= 0.85
+		hardness		= 0.55
+		armor_value		= 12
 	}
 
 	reconnaissance_walker_chassis_3 = {
@@ -338,10 +336,11 @@ equipments = {
 		parent = reconnaissance_walker_chassis_2
 		priority = 2000
 		module_slots = inherit
-		maximum_speed	= 7
-		build_cost_ic	= 2.6
-		reliability		= 0.9
-		armor_value		= 15
+		maximum_speed	= 5
+		build_cost_ic	= 3.5
+		reliability		= 1.0
+		hardness		= 0.6
+		armor_value		= 18
 		resources = {
 			steel = 1
 		}

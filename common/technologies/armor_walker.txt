@@ -918,6 +918,15 @@ technologies = {
 			walker_wide_soled_legs
 			walker_electromechanical_articulated_shock_absorption_legs
 			walker_claws_legs
+			
+			tank_gasoline_engine
+			tank_diesel_engine
+			tank_petrol_electric_engine
+			
+			tank_riveted_armor
+			tank_cast_armor
+			sloped_armor
+			NOR_tank_rikstanken_armor
 		}
 	
 		

@@ -56,9 +56,15 @@
  
  
  
-### IDEA CATEGORIES ###
- laws: "Законы"
- political_advisors: "Правительство"
+### NEW IDEA CATEGORIES ###
+ science_advisors: "Наука"
+ scientific_chief: "Научные руководители"
+ mathematicians_theorist: "Математики и криптографы"
+ physicists_theorist: "Физики и инженеры-теоретики"
+ chemists_theorist: "Химики и технологи"
+ biologists_theorist: "Биологи и экологи"
+ economists_theorist: "Экономисты и логисты"
+ sociologists_theorist: "Социологи и педагоги"
 
 
 ### LAWS ###

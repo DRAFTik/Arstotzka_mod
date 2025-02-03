@@ -115,7 +115,13 @@ ideas = {
 	navy_chief = { }
 	air_chief = { }
 	high_command = { }
-	research_theorist = { }
+	scientific_chief = { }
+	mathematicians_theorist = { }
+	physicists_theorist = { }
+	chemists_theorist = { }
+	biologists_theorist = { }
+	economists_theorist = { }
+	sociologists_theorist = { }
 
 	### General ###
 	industrial_concern = {

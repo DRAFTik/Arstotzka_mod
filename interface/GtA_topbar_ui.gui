@@ -20,7 +20,6 @@ guiTypes = {
 			maxWidth = 60
 			maxHeight = 24
 			fixedsize = yes
-
 			pdx_tooltip = "gta_party_popularity_tooltip"
 			pdx_tooltip_delayed = "gta_party_popularity_delayed_tooltip"
 		}
@@ -42,14 +41,13 @@ guiTypes = {
 			spriteType = "GFX_generic_box_smallest"
 			position = { x = 0 y = 0 }
 			Orientation = "UPPER_LEFT"
-			
 			pdx_tooltip = "gta_provisions_tooltip"
 			pdx_tooltip_delayed = "gta_provisions_delayed_tooltip"
 		}
 		
 		instantTextBoxType = {
 			name ="provisions_text"
-			position = { x = 10 y = -2 }	#3*4
+			position = { x = 8 y = -2 }	#3*4
 			font = "hoi_18mbs"
 			text = "[GET_PROVISIONS_TEXT]"
 			format = right
@@ -84,7 +82,6 @@ guiTypes = {
 			spriteType = "GFX_generic_box_smallest"
 			position = { x = 0 y = 0 }
 			Orientation = "UPPER_LEFT"
-			
 			pdx_tooltip = "gta_electric_power_tooltip"
 			pdx_tooltip_delayed = "gta_electric_power_delayed_tooltip"
 		}
@@ -118,7 +115,6 @@ guiTypes = {
 			spriteType = "GFX_generic_box_96"
 			position = { x = 0 y = 0 }
 			Orientation = "UPPER_LEFT"
-			
 			pdx_tooltip = "gta_proletariat_tooltip"
 			pdx_tooltip_delayed = "gta_proletariat_delayed_tooltip"
 		}
@@ -139,6 +135,38 @@ guiTypes = {
 			name ="proletariat_icon"
 			position = { x = 0 y = -2 }
 			spriteType = "GFX_proletariat_icon"
+			alwaystransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "science_container"
+		position = { x = 418 y = 37 }		# шаг х+73 или 99, первый = 100; шаг у+32, первый = 5
+		
+		iconType = {
+			name ="science_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "gta_science_tooltip"
+			pdx_tooltip_delayed = "gta_science_delayed_tooltip"
+		}
+		
+		instantTextBoxType = {
+			name ="science_text"
+			position = { x = 20 y = 4 }
+			font = "hoi_18mbs"
+			text = "[?ROOT.TOTAL_num_science|0]"
+			format = center
+			maxWidth = 50
+			maxHeight = 24
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="science_icon"
+			position = { x = 1 y = 0 }
+			spriteType = "GFX_science_icon"
 			alwaystransparent = yes
 		}
 	}

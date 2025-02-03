@@ -1,10 +1,10 @@
 bookmarks = {
 	bookmark = {
-		name = "GATHERING_STORM_NAME"
-		desc = "GATHERING_STORM_DESC"
+		name = "GTA_BOOKMARK_NAME"
+		desc = "GTA_BOOKMARK_NAME_DESC"
 		date = 1983.1.1.12
 #		date = 1936.1.1.12
-		picture = "GFX_select_date_1936"
+		picture = "GFX_select_date_1983"
 		default_country = "ARS"
 		default = yes
 		

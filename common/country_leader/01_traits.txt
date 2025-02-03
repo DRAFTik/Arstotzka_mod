@@ -16,4 +16,159 @@ leader_traits = {
 		random = no
 		political_power_gain = -10
 	}
+	
+	
+	
+### science advisors
+	reformer_technocrat = {
+		random = no
+		
+	}
+	social_utopian = {
+		random = no
+		
+	}
+	pragmatic_militarist = {
+		random = no
+		
+	}
+	conservative_traditionalist = {
+		random = no
+		
+	}
+	integrator_of_interdisciplinary_research = {
+		random = no
+		
+	}
+	
+	
+	chaos_theorist = {
+		random = no
+		research_speed_factor = 0.1
+	}
+	statistical_planner = {
+		random = no
+		num_generation_science_point = 0.2
+	}
+	cryptographer_scout = {
+		random = no
+		
+	}
+	logistics_rationalizer = {
+		random = no
+		
+	}
+	algorithm_optimizer = {
+		random = no
+		num_use_science_point_factor = -0.1
+	}
+	
+	
+	nuclear_enthusiast = {
+		random = no
+		
+	}
+	quantum_theorist = {
+		random = no
+		num_generation_science_point = 0.5
+	}
+	materials_scientist_innovator = {
+		random = no
+		
+	}
+	energy_engineer = {
+		random = no
+		num_generation_science_point = 0.2
+	}
+	automation_engineer = {
+		random = no
+	}
+	
+	
+	agrotechnologist = {
+		random = no
+		
+	}
+	pharmacologist_and_humanist = {
+		random = no
+		num_generation_science_point = 0.1
+	}
+	plastic_innovator = {
+		random = no
+		
+	}
+	eco_technologist = {
+		random = no
+		
+	}
+	polymer_specialist = {
+		random = no
+		num_generation_science_point = 0.3
+	}
+	
+	
+	geneticist_breeder = {
+		random = no
+		
+	}
+	epidemiologist_is_savior = {
+		random = no
+		
+	}
+	radical_ecologist = {
+		random = no
+		
+	}
+	marine_biologist = {
+		random = no
+		
+	}
+	specialist_in_soil_restoration = {
+		random = no
+		
+	}
+	
+	
+	financial_analyst = {
+		random = no
+		
+	}
+	industrial_magnate = {
+		random = no
+		
+	}
+	supporter_of_cartels = {
+		random = no
+		
+	}
+	shadow_speculator = {
+		random = no
+		
+	}
+	export_strategist = {
+		random = no
+		
+	}
+	
+	
+	education_reformer = {
+		random = no
+		
+	}
+	cultural_assimilator = {
+		random = no
+		
+	}
+	demographer_analyst = {
+		random = no
+		
+	}
+	historian_archivist = {
+		random = no
+		num_generation_science_point = 0.2
+	}
+	humanist_philosopher = {
+		random = no
+		num_generation_science_point = 0.3
+	}
 }

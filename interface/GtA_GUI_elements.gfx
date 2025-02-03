@@ -21,6 +21,15 @@ spriteTypes = {
 		play_on_show = yes
 		pause_on_loop = 0.0
 	}
+	frameAnimatedSpriteType = {
+		name = "GFX_select_date_1983" 
+		texturefile = "gfx/interface/select_date_1983.dds"
+		noOfFrames = 16
+		animation_rate_fps = 32
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
 	
 	
 	spriteType = {
@@ -109,5 +118,11 @@ spriteTypes = {
 		name = "GFX_gta_resource_btn"
 		texturefile = "gfx/interface/tradeview/resource_btn.dds"
 		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_science_icon"
+		texturefile = "gfx/interface/GUI/science/science_icon.dds"
 	}
 }

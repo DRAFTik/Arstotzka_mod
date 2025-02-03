@@ -148,3 +148,16 @@ interest_in_economic_development_factor = {
 	precision = 2
 	category = country
 }
+
+num_generation_science_point = {
+	color_type = good
+	value_type = number
+	precision = 1
+	category = all
+}
+num_use_science_point_factor = {
+	color_type = bad
+	value_type = percentage
+	precision = 1
+	category = all
+}

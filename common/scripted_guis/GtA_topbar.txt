@@ -54,4 +54,17 @@ scripted_gui = {
 			always = no
 		}
 	}
+	
+	science = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "science_container"
+		dirty = ROOT.num_science_DIRTY_var
+		
+		visible = {
+		}
+		ai_enabled = {
+			always = no
+		}
+	}
 }

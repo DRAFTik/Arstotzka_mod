@@ -11,21 +11,19 @@ equipment_modules = {
 		category = walker_frame_type
 		sfx = sfx_ui_sd_module_turret
 		
-		xp_cost = 2
+		xp_cost					= 2
 		add_stats = {
-			initiative = 1
-			recon = 1
-			defense = 2
-			entrenchment = 1
+			maximum_speed		= 1
+			breakthrough		= 3
+			hardness			= -0.05
+			fuel_consumption	= -0.2
+			entrenchment		= -1
+			recon				= 1
+			build_cost_ic		= 1
 		}
 		multiply_stats = {
-			defense = 0.15
-			soft_attack = -0.15
-			hard_attack = -0.15
-			weight = -0.1
-			build_cost_ic = -0.15
-			maximum_speed = 0.1
-			max_strength = 0.1
+			armor_value			= -0.15
+			build_cost_ic		= -0.1
 		}
 	}
 	
@@ -34,16 +32,13 @@ equipment_modules = {
 		category = walker_frame_type
 		sfx = sfx_ui_sd_module_turret
 		
-		xp_cost = 2
+		xp_cost				= 2
 		add_stats = {
-			reliability = 0.15
-			armor_value = -3
+			breakthrough	= 5
+			reliability		= 0.1
+			build_cost_ic	= 2
 		}
 		multiply_stats = {
-			armor_value = -0.1
-			defense = -0.2
-			build_cost_ic = -0.1
-			max_strength = -0.1
 		}
 	}
 	
@@ -52,15 +47,17 @@ equipment_modules = {
 		category = walker_frame_type
 		sfx = sfx_ui_sd_module_turret
 		
-		xp_cost = 2
+		xp_cost				= 2
 		add_stats = {
-			breakthrough = 4
+			breakthrough	= 8
+			armor_value		= 5
+			build_cost_ic	= 3
 		}
 		multiply_stats = {
-			reliability = -0.1
-			soft_attack = 0.1
-			hard_attack = 0.1
-			build_cost_ic = 0.1
+			maximum_speed	= -0.2
+			armor_value		= 0.1
+			max_strength	= 0.1
+			build_cost_ic	= 0.1
 		}
 	}
 	
@@ -73,18 +70,20 @@ equipment_modules = {
 		category = walker_cabin_type
 		sfx = sfx_ui_sd_module_turret
 
-		xp_cost = 10
-		dismantle_cost_ic = 3
+		xp_cost				= 10
+		dismantle_cost_ic	= 3
 		add_stats = {
-			build_cost_ic = 1.75
-			reliability = -0.25
-			defense = 3
-			armor_value = -1.5
-			maximum_speed = -0.05
+			hardness		= -0.1
+			reliability		= -0.03
+			initiative		= 1
+			recon			= 1
+			build_cost_ic	= 2
 		}
 
 		multiply_stats = {
-			armor_value = -0.15
+			defense			= -0.10
+			armor_value		= -0.10
+			build_cost_ic	= -0.10
 		}
 	}
 	
@@ -96,15 +95,12 @@ equipment_modules = {
 		xp_cost				= 10
 		dismantle_cost_ic	= 3
 		add_stats = {
-			build_cost_ic	= 2.5
-			reliability		= -0.2
-			defense			= 3
-			armor_value		= -3
-			maximum_speed	= -0.1
+			reliability		= 0.03
+			build_cost_ic	= 4
 		}
 
 		multiply_stats = {
-			armor_value		= -0.2
+			armor_value		= 0.03
 		}
 	}
 	
@@ -116,16 +112,15 @@ equipment_modules = {
 		xp_cost				= 10
 		dismantle_cost_ic	= 3
 		add_stats = {
-			build_cost_ic	= 5
-			reliability		= -0.15
-			defense			= 3
-			armor_value		= -3
-			maximum_speed	= -0.15
+			initiative		= 1
+			recon			= 1
+			build_cost_ic	= 3
 		}
 
 		multiply_stats = {
-			armor_value		= -0.25
+			armor_value		= -0.05
 		}
+		manpower			= 1
 	}
 	
 	walker_armored_cabin = {
@@ -136,15 +131,13 @@ equipment_modules = {
 		xp_cost				= 10
 		dismantle_cost_ic	= 3
 		add_stats = {
+			hardness		= 0.05
+			reliability		= 0.07
 			build_cost_ic	= 5
-			reliability		= -0.15
-			defense			= 3
-			armor_value		= -3
-			maximum_speed	= -0.15
 		}
 
 		multiply_stats = {
-			armor_value		= -0.25
+			armor_value		= 0.08
 		}
 	}
 	
@@ -156,16 +149,16 @@ equipment_modules = {
 		xp_cost				= 10
 		dismantle_cost_ic	= 3
 		add_stats = {
+			initiative		= 2
+			recon			= 2
+			reliability		= -0.10
 			build_cost_ic	= 5
-			reliability		= -0.15
-			defense			= 3
-			armor_value		= -3
-			maximum_speed	= -0.15
 		}
 
 		multiply_stats = {
-			armor_value		= -0.25
+			build_cost_ic	= 0.10
 		}
+		manpower			= -1
 	}
 	
 	
@@ -175,81 +168,57 @@ equipment_modules = {
 		abbreviation = ""
 		category = walker_sustainability_type
 		sfx = sfx_ui_sd_module_turret
-
+		
+		xp_cost					= 5
 		add_stats = {
-			soft_attack		= 25
-			hard_attack		= 25
-			ap_attack		= 60
-			build_cost_ic	= 5
-			maximum_speed	= -0.2
-			reliability		= -0.2
+			fuel_consumption	= -0.1
+			reliability			= -0.20
+			build_cost_ic		= 2
 		}
 		multiply_stats = {
-			breakthrough	= 0.15
-			defense			= 0.15
+			breakthrough		= -0.10
+			defense				= -0.10
+			build_cost_ic		= -0.10
 		}
-		manpower			= 1
-		xp_cost				= 5
 	}
 	
 	walker_gyroscopic_stabilization = {
 		abbreviation = ""
 		category = walker_sustainability_type
 		sfx = sfx_ui_sd_module_turret
-
+		
+		xp_cost				= 5
 		add_stats = {
-			soft_attack		= 25
-			hard_attack		= 25
-			ap_attack		= 60
-			build_cost_ic	= 5
-			maximum_speed	= -0.2
-			reliability		= -0.2
+			breakthrough	= 3
+			defense			= 3
+			build_cost_ic	= 3
 		}
 		multiply_stats = {
-			breakthrough	= 0.15
-			defense			= 0.15
+			maximum_speed	= 0.05
 		}
-		manpower			= 1
-		xp_cost				= 5
+		
 	}
 	
 	walker_hydraulic_compensator = {
 		abbreviation = ""
 		category = walker_sustainability_type
 		sfx = sfx_ui_sd_module_turret
-
+		
+		xp_cost				= 5
 		add_stats = {
-			soft_attack		= 25
-			hard_attack		= 25
-			ap_attack		= 60
+			maximum_speed	= 0.5
+			breakthrough	= 5
+			defense			= 5
 			build_cost_ic	= 5
-			maximum_speed	= -0.2
-			reliability		= -0.2
 		}
 		multiply_stats = {
-			breakthrough	= 0.15
-			defense			= 0.15
+			maximum_speed	= 0.10
+			build_cost_ic	= 0.05
 		}
-		manpower			= 1
-		xp_cost				= 5
 	}
 	
 	
 ### LEGS TYPES
-	
-	walker_telescopic_inserts_legs = {
-		abbreviation = ""
-		category = walker_legs_type
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			reliability = -0.05
-			maximum_speed = 0.1
-			build_cost_ic = 1
-		}
-		multiply_stats = {
-		}
-	}
 	
 	walker_articulated_hydraulic_legs = {
 		abbreviation = ""
@@ -257,11 +226,28 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			reliability = 0.1
-			maximum_speed = 0.2
-			build_cost_ic = 0.5
+			reliability			= 0.1
+			maximum_speed		= -0.05
+			hardness			= -0.03
+			build_cost_ic		= 1
 		}
 		multiply_stats = {
+		}
+	}
+	
+	walker_telescopic_inserts_legs = {
+		abbreviation = ""
+		category = walker_legs_type
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			defense			= 3
+			armor_value		= 1
+			recon			= 1
+			build_cost_ic	= 1.5
+		}
+		multiply_stats = {
+			maximum_speed	= 0.10
 		}
 	}
 	
@@ -270,18 +256,21 @@ equipment_modules = {
 		category = walker_legs_type
 		sfx = sfx_ui_sd_module_turret
 		
-		forbid_equipment_type = amphibious
+#		forbid_equipment_type = amphibious
 
 		add_stats = {
-			reliability = 0.15
-			maximum_speed = 0.1
-			build_cost_ic = 2
-			defense = 2
-			breakthrough = 2
+			reliability			= 0.05
+			maximum_speed		= 0.5
+			breakthrough		= 2
+			defense				= 2
+			hardness			= 0.03
+			armor_value			= 4
+			fuel_consumption	= 0.05
+			entrenchment		= 1
+			build_cost_ic		= 2
 		}
 		multiply_stats = {
-			armor_value = 0.05
-			hardness = 0.05
+			
 		}
 		build_cost_resources = {
 			steel = 1
@@ -294,12 +283,14 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			reliability = -0.15
-			maximum_speed = 0.5
+			reliability		= -0.05
+			breakthrough	= 3
+			defense			= 3
+			armor_value		= 2
+			initiative		= 1
+			build_cost_ic	= 3
 		}
 		multiply_stats = {
-			build_cost_ic = -0.1
-			hardness = -0.05
 		}
 		build_cost_resources = {
 			rubber = 1
@@ -312,16 +303,17 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			reliability = -0.25
-			maximum_speed = 1
+			breakthrough	= 3
+			armor_value		= 2
+			initiative		= 1
+			build_cost_ic	= 1.5
 		}
 		multiply_stats = {
-			build_cost_ic = -0.15
-			armor_value = -0.15
-			hardness = -0.1
+			maximum_speed	= 0.05
+			breakthrough	= 0.05
 		}
 		build_cost_resources = {
-			rubber = 1
+			tungsten = 1
 		}
 	}
 }

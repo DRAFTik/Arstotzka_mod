@@ -1,0 +1,377 @@
+# For minor countries where advisors are not defined
+# Generate them from a generic template
+
+
+every_possible_country = {
+	
+### SCIENCE ADVISORS
+### scientific_chief
+	generate_character = {
+		token_base = generic_reformer_technocrat # token will be TAG_token_base
+		advisor = {
+			slot = scientific_chief
+			traits = { reformer_technocrat }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_social_utopian # token will be TAG_token_base
+		advisor = {
+			slot = scientific_chief
+			traits = { social_utopian }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_pragmatic_militarist # token will be TAG_token_base
+		advisor = {
+			slot = scientific_chief
+			traits = { pragmatic_militarist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_conservative_traditionalist # token will be TAG_token_base
+		advisor = {
+			slot = scientific_chief
+			traits = { conservative_traditionalist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_integrator_of_interdisciplinary_research # token will be TAG_token_base
+		advisor = {
+			slot = scientific_chief
+			traits = { integrator_of_interdisciplinary_research }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	
+	
+### mathematicians_theorist
+	generate_character = {
+		token_base = generic_chaos_theorist # token will be TAG_token_base
+		advisor = {
+			slot = mathematicians_theorist
+			traits = { chaos_theorist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_statistical_planner # token will be TAG_token_base
+		advisor = {
+			slot = mathematicians_theorist
+			traits = { statistical_planner }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_cryptographer_scout # token will be TAG_token_base
+		advisor = {
+			slot = mathematicians_theorist
+			traits = { cryptographer_scout }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_logistics_rationalizer # token will be TAG_token_base
+		advisor = {
+			slot = mathematicians_theorist
+			traits = { logistics_rationalizer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_algorithm_optimizer # token will be TAG_token_base
+		advisor = {
+			slot = mathematicians_theorist
+			traits = { algorithm_optimizer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+
+### physicists_theorist
+	generate_character = {
+		token_base = generic_nuclear_enthusiast # token will be TAG_token_base
+		advisor = {
+			slot = physicists_theorist
+			traits = { nuclear_enthusiast }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_quantum_theorist # token will be TAG_token_base
+		advisor = {
+			slot = physicists_theorist
+			traits = { quantum_theorist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_materials_scientist_innovator # token will be TAG_token_base
+		advisor = {
+			slot = physicists_theorist
+			traits = { materials_scientist_innovator }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_energy_engineer # token will be TAG_token_base
+		advisor = {
+			slot = physicists_theorist
+			traits = { energy_engineer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_automation_engineer # token will be TAG_token_base
+		advisor = {
+			slot = physicists_theorist
+			traits = { automation_engineer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	
+	
+### chemists_theorist
+	generate_character = {
+		token_base = generic_agrotechnologist # token will be TAG_token_base
+		advisor = {
+			slot = chemists_theorist
+			traits = { agrotechnologist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_pharmacologist_and_humanist # token will be TAG_token_base
+		advisor = {
+			slot = chemists_theorist
+			traits = { pharmacologist_and_humanist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_plastic_innovator # token will be TAG_token_base
+		advisor = {
+			slot = chemists_theorist
+			traits = { plastic_innovator }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_eco_technologist # token will be TAG_token_base
+		advisor = {
+			slot = chemists_theorist
+			traits = { eco_technologist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_polymer_specialist # token will be TAG_token_base
+		advisor = {
+			slot = chemists_theorist
+			traits = { polymer_specialist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	
+	
+### biologists_theorist
+	generate_character = {
+		token_base = generic_geneticist_breeder # token will be TAG_token_base
+		advisor = {
+			slot = biologists_theorist
+			traits = { geneticist_breeder }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_epidemiologist_is_savior # token will be TAG_token_base
+		advisor = {
+			slot = biologists_theorist
+			traits = { epidemiologist_is_savior }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_radical_ecologist # token will be TAG_token_base
+		advisor = {
+			slot = biologists_theorist
+			traits = { radical_ecologist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_marine_biologist # token will be TAG_token_base
+		advisor = {
+			slot = biologists_theorist
+			traits = { marine_biologist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_specialist_in_soil_restoration # token will be TAG_token_base
+		advisor = {
+			slot = biologists_theorist
+			traits = { specialist_in_soil_restoration }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	
+	
+### economists_theorist
+	generate_character = {
+		token_base = generic_financial_analyst # token will be TAG_token_base
+		advisor = {
+			slot = economists_theorist
+			traits = { financial_analyst }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_industrial_magnate # token will be TAG_token_base
+		advisor = {
+			slot = economists_theorist
+			traits = { industrial_magnate }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_supporter_of_cartels # token will be TAG_token_base
+		advisor = {
+			slot = economists_theorist
+			traits = { supporter_of_cartels }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_shadow_speculator # token will be TAG_token_base
+		advisor = {
+			slot = economists_theorist
+			traits = { shadow_speculator }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_export_strategist # token will be TAG_token_base
+		advisor = {
+			slot = economists_theorist
+			traits = { export_strategist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+
+
+### sociologists_theorist
+	generate_character = {
+		token_base = generic_education_reformer # token will be TAG_token_base
+		advisor = {
+			slot = sociologists_theorist
+			traits = { education_reformer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_cultural_assimilator # token will be TAG_token_base
+		advisor = {
+			slot = sociologists_theorist
+			traits = { cultural_assimilator }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_demographer_analyst # token will be TAG_token_base
+		advisor = {
+			slot = sociologists_theorist
+			traits = { demographer_analyst }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_historian_archivist # token will be TAG_token_base
+		advisor = {
+			slot = sociologists_theorist
+			traits = { historian_archivist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+	generate_character = {
+		token_base = generic_humanist_philosopher # token will be TAG_token_base
+		advisor = {
+			slot = sociologists_theorist
+			traits = { humanist_philosopher }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+
+}

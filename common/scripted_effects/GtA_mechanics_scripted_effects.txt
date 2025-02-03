@@ -1136,6 +1136,49 @@ effect_calculate_base_nof = {
 	set_variable						= { global.nof = nof_temp }
 }
 
+calculate_science_start_effect = {
+	set_temp_variable					= { num_science_minus_temp = amount_research_slots }
+	multiply_temp_variable				= { num_science_minus_temp = -1 }
+	set_variable						= { num_science_minus_var = num_science_minus_temp }
+	if = {
+		limit							= { check_variable	= { var = modifier@num_use_science_point_factor	value = 0 compare = not_equals } }
+		set_temp_variable				= { num_science_minus_factor_temp = 1 }
+		add_to_temp_variable			= { num_science_minus_factor_temp = modifier@num_use_science_point_factor }
+		multiply_variable				= { num_science_minus_var = num_science_minus_factor_temp }
+	}
+	set_temp_variable					= { num_science_plus_temp = modifier@num_generation_science_point }
+	set_variable						= { num_science_plus_var = num_science_plus_temp }
+	set_variable						= { num_science_DELTA_var = num_science_minus_var }
+	add_to_variable						= { num_science_DELTA_var = num_science_plus_var }
+}
+
+calculate_science_effect = {
+	set_variable						= { num_science_DIRTY_var = TOTAL_num_science }
+	
+	set_temp_variable					= { num_science_minus_temp = amount_research_slots }
+	multiply_temp_variable				= { num_science_minus_temp = -1 }
+	if = {
+		limit							= { check_variable	= { var = modifier@num_use_science_point_factor	value = 0 compare = not_equals } }
+		set_temp_variable				= { num_science_minus_factor_temp = 1 }
+		add_to_temp_variable			= { num_science_minus_factor_temp = modifier@num_use_science_point_factor }
+		multiply_temp_variable			= { num_science_minus_temp = num_science_minus_factor_temp }
+	}
+	set_variable						= { num_science_minus_var = num_science_minus_temp }
+	
+	set_temp_variable					= { num_science_plus_temp = modifier@num_generation_science_point }
+	set_variable						= { num_science_plus_var = num_science_plus_temp }
+	set_variable						= { num_science_DELTA_var = num_science_minus_var }
+	add_to_variable						= { num_science_DELTA_var = num_science_plus_var }
+	
+	add_to_variable						= { TOTAL_num_science = num_science_DELTA_var }
+	clamp_variable						= { var = TOTAL_num_science	min = 0 }
+	
+	if = {
+		limit							= { check_variable	= { num_science_DIRTY_var = TOTAL_num_science } }
+		add_to_variable					= { num_science_DIRTY_var = 0.1 }
+	}
+}
+
 effect_1 = {
 #	set_temp_variable		= { test_temp = 0 }
 	while_loop_effect		= { limit = { check_variable = { political_power > var:test_temp_@THIS } }	add_to_temp_variable = { test_temp_@THIS = 1 } }

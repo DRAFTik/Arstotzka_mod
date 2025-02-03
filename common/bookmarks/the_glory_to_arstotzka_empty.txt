@@ -1,0 +1,105 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1999.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "ARS"
+		
+		"OBR" = {
+			history = "OBR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"ANT" = {
+			history = "ANT_GATHERING_STORM_DESC"
+			ideology = national_populist
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"REP" = {
+			history = "REP_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"ARS" = {
+			history = "ARS_GATHERING_STORM_DESC"
+			ideology = totalist
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"KOL" = {
+			history = "KOL_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"IMP" = {
+			history = "IMP_GATHERING_STORM_DESC"
+			ideology = market_liberal
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"UNF" = {
+			history = "UNF_GATHERING_STORM_DESC"
+			ideology = market_liberal
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		
+		
+		"---" = {
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		
+		
+		
+#### MINORS ####
+
+		"SKO"={
+			minor = yes
+			history = "SKO_GATHERING_STORM_DESC"
+			ideology = market_liberal
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"SEM"={
+			minor = yes
+			history = "SEM_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			SAI = {
+				set_all_major = yes
+			}
+		}
+	}
+}
