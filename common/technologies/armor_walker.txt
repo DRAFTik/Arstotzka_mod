@@ -928,6 +928,10 @@ technologies = {
 			sloped_armor
 			NOR_tank_rikstanken_armor
 		}
+		
+		enable_subunits = {
+			reconnaissance_walker
+		}
 	
 		
 		path = {
@@ -1068,9 +1072,12 @@ technologies = {
 		army_speed_factor = 0.085
 		
 		enable_equipments = {
-			light_tank_chassis_0
+			universal_combat_walker_chassis_1
 		}
-	
+		
+		enable_subunits = {
+			universal_combat_walker
+		}
 		
 		path = {
 			leads_to_tech = universal_combat_walker_chassis_2
@@ -1110,7 +1117,7 @@ technologies = {
 		army_speed_factor = 0.085
 		
 		enable_equipments = {
-			light_tank_chassis_0
+			universal_combat_walker_chassis_2
 		}
 	
 		
@@ -1146,7 +1153,7 @@ technologies = {
 		army_speed_factor = 0.085
 		
 		enable_equipments = {
-			light_tank_chassis_0
+			universal_combat_walker_chassis_3
 		}
 	
 		
@@ -1286,7 +1293,11 @@ technologies = {
 		army_speed_factor = 0.085
 		
 		enable_equipments = {
-			light_tank_chassis_0
+			siege_walker_chassis_1
+		}
+		
+		enable_subunits = {
+			siege_walker
 		}
 	
 		
@@ -1328,7 +1339,7 @@ technologies = {
 		army_speed_factor = 0.085
 		
 		enable_equipments = {
-			light_tank_chassis_0
+			siege_walker_chassis_2
 		}
 	
 		
@@ -1364,7 +1375,7 @@ technologies = {
 		army_speed_factor = 0.085
 		
 		enable_equipments = {
-			light_tank_chassis_0
+			siege_walker_chassis_3
 		}
 	
 	
@@ -1398,7 +1409,7 @@ technologies = {
 	
 		
 		path = {
-			leads_to_tech = walking_fortress_chassis
+			leads_to_tech = coloss_walker_chassis
 			research_cost_coeff = 1
 		}
 		research_cost = 1
@@ -1430,7 +1441,7 @@ technologies = {
 	
 		
 		path = {
-			leads_to_tech = walking_fortress_chassis
+			leads_to_tech = coloss_walker_chassis
 			research_cost_coeff = 1
 		}
 		research_cost = 1
@@ -1462,7 +1473,7 @@ technologies = {
 	
 		
 		path = {
-			leads_to_tech = walking_fortress_chassis
+			leads_to_tech = coloss_walker_chassis
 			research_cost_coeff = 1
 		}
 		research_cost = 1
@@ -1493,12 +1504,12 @@ technologies = {
 		}
 	}
 	
-	walking_fortress_chassis = {
+	coloss_walker_chassis = {
 
 		army_speed_factor = 0.085
 		
 		enable_equipments = {
-			light_tank_chassis_0
+			coloss_walker_chassis_1
 		}
 	
 	

@@ -6076,14 +6076,6 @@ leader_traits = {
 		}
 	}
 
-	nuclear_enthusiast = {
-		random = no
-		sprite = 14
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
 	### END BRITISH TRADE UNION MINISTER TRAITS ###
 

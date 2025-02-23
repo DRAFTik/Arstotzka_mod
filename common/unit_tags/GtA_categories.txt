@@ -8,4 +8,9 @@ sub_unit_categories = {
 	category_art_tanks
 	category_td_tanks
 	category_main_tanks
+	
+	category_walkers
+	category_reconnaissance_walker
+	category_universal_combat_walkers
+	category_siege_walkers
 }

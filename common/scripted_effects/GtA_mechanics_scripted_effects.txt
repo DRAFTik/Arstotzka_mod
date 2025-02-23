@@ -22,6 +22,7 @@
 #	modifier@universal_factory_modifier
 
 #	modifier@num_generation_electric_power
+#	modifier@num_generation_electric_power_factor
 #	modifier@num_use_electric_power
 
 #	modifier@consumption_of_provisions_modifier
@@ -29,6 +30,7 @@
 #	modifier@max_provision
 #	modifier@num_generation_provision_weekly
 #	modifier@num_generation_provision_yearly
+#	modifier@num_generation_provision_yearly_factor
 #	modifier@monthly_save_provision_modifier
 
 #	modifier@num_change_population_weekly
@@ -37,6 +39,9 @@
 #	modifier@proletariat_factor
 #	modifier@num_proletariat_k
 #	modifier@interest_in_economic_development_factor
+
+#	modifier@num_generation_science_point
+#	modifier@num_generation_science_point_factor
 
 
 default_party_popularity_PP_gain = {
@@ -80,14 +85,18 @@ calculate_electric_power_effect = {
 #			log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL SHORTAGE // thermal_power_plant OK: [?thermal_power_plant_ok]"
 		}
 	}
-	multiply_variable	= { electric_power_thermal_generation_var = 60 }					# для текста ТЭС
+	multiply_variable	= { electric_power_thermal_generation_var = 60 }						# для текста ТЭС
 	set_variable		= { electric_power_hydro_generation_var = hydro_power_plant_@THIS }
-	multiply_variable	= { electric_power_hydro_generation_var = 150 }					# для текста ГЭС
+	multiply_variable	= { electric_power_hydro_generation_var = 150 }							# для текста ГЭС
 	set_variable		= { electric_power_nuclear_generation_var = nuclear_power_plant_@THIS }
-	multiply_variable	= { electric_power_nuclear_generation_var = 500 }					# для текста АЭС
+	multiply_variable	= { electric_power_nuclear_generation_var = 500 }						# для текста АЭС
 
 
+	set_variable		= { num_generation_electric_power_factor = 1 }
+	add_to_variable		= { num_generation_electric_power_factor = modifier@num_generation_electric_power_factor }
+	
 	set_variable		= { electric_power_total_generation_var = modifier@num_generation_electric_power }		# РЕАЛЬНЫЕ ВЫЧИСЛЕНИЯ
+	multiply_variable	= { electric_power_total_generation_var = num_generation_electric_power_factor }
 #	set_variable		= { electric_power_total_generation_var = electric_power_thermal_generation_var }
 #	add_to_variable		= { electric_power_total_generation_var = electric_power_hydro_generation_var }
 #	add_to_variable		= { electric_power_total_generation_var = electric_power_nuclear_generation_var }
@@ -427,6 +436,11 @@ calculate_provision_start_effect = {
 #	add_to_variable			= { provision_total_var = temp2 }
 	
 	set_temp_variable		= { temp1 = modifier@num_generation_provision_yearly }
+	
+	set_temp_variable		= { temp3 = 1 }
+	add_to_temp_variable	= { temp3 = modifier@num_generation_provision_yearly_factor }
+	multiply_temp_variable	= { temp1 = temp3 }
+	
 	set_temp_variable		= { temp2 = modifier@num_generation_provision_weekly }
 	multiply_temp_variable	= { temp2 = 4 }
 	set_variable			= { provision_total_var = temp1 }
@@ -459,7 +473,7 @@ calculate_provision_start_effect = {
 # ПОЛЯ
 #	set_temp_variable		= { yearly_income_provision_temp = agro_complex_total }
 #	multiply_temp_variable	= { yearly_income_provision_temp = 300 }
-	set_variable			= { yearly_income_provision = modifier@num_generation_provision_yearly }	# для текста
+	set_variable			= { yearly_income_provision = temp1 }									# для текста
 	
 	set_temp_variable		= { income_temp1 = yearly_income_provision }
 	set_temp_variable		= { yearly_income_delta = modifier@provision_income_modifier }
@@ -576,18 +590,23 @@ calculate_provision_daily_effect = {
 	set_temp_variable		= { weekly_income_delta = modifier@provision_income_modifier }
 	multiply_temp_variable	= { weekly_income_delta = weekly_income_provision }
 	subtract_from_variable	= { weekly_income_delta = income_temp1 }
-	add_to_variable			= { weekly_income_provision = weekly_income_delta }						# БАФ/ДЕБАФ
+	add_to_variable			= { weekly_income_provision = weekly_income_delta }							# БАФ/ДЕБАФ
 
 # ПОЛЯ
 #	set_temp_variable		= { yearly_income_provision_temp = agro_complex_total }
 #	multiply_temp_variable	= { yearly_income_provision_temp = 300 }
-	set_variable			= { yearly_income_provision = modifier@num_generation_provision_yearly }	# для текста
+	set_variable			= { num_generation_provision_yearly_var = 1 }
+	add_to_variable			= { num_generation_provision_yearly_var = modifier@num_generation_provision_yearly_factor }
+	
+	set_temp_variable		= { temp1 = modifier@num_generation_provision_yearly }
+	multiply_temp_variable	= { temp1 = num_generation_provision_yearly_var }
+	set_variable			= { yearly_income_provision = temp1 }	# для текста
 	
 	set_temp_variable		= { income_temp1 = yearly_income_provision }
 	set_temp_variable		= { yearly_income_delta = modifier@provision_income_modifier }
 	multiply_temp_variable	= { yearly_income_delta = yearly_income_provision }
 	subtract_from_variable	= { yearly_income_delta = income_temp1 }
-	add_to_variable			= { yearly_income_provision = yearly_income_delta }						# БАФ/ДЕБАФ
+	add_to_variable			= { yearly_income_provision = yearly_income_delta }							# БАФ/ДЕБАФ
 
 # ЭЛЕВАТОРЫ
 #	set_temp_variable		= { monthly_save_provision_temp = agro_silo_total }

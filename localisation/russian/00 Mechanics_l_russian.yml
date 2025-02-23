@@ -22,7 +22,7 @@
 ### PROVISIONS ###
 ##################
 
-    gta_provisions_tooltip: "§HПродовольственная обеспеченность (тыс. тонн)§!\nУровень обеспеченности: [?ROOT.provision_percent_var|+1%%]\n\nТекущий запас провианта: [?ROOT.provision_total_var|+1*] из [?ROOT.max_provision_total_var|H1*] | [?ROOT.provision_percent_to_max_var|+1%]\nТекущий баланс провианта: [?ROOT.provision_balance_var|+1*]/день\nТекущее потребление провианта: [?ROOT.provision_need_var|-1*]/день\n\nПроизводство провианта:\n    - в неделю: [?ROOT.weekly_income_provision|+1*] от [?ROOT.livestock_complex_total|H0] шт.\n    - в год: [?ROOT.yearly_income_provision|+1*] от [?ROOT.agro_complex_total|H0] шт.[GET_CROP_LOC]\n\nУровень сохранения провизии: [?ROOT.monthly_save_provision|+0%]\nВ этом месяце ожидается порча: [?ROOT.bad_provision_var|-1*]\n\nМаксимальный запас провианта: [?ROOT.max_provision_total_var|H1*]\nБазовое значение: [?ROOT.max_provision_base_var|H1*]\nВ регионах: [?ROOT.modifier@max_provision|H1*][GET_HUNGER_LOC]"
+    gta_provisions_tooltip: "§HПродовольственная обеспеченность (тыс. тонн)§!\nУровень обеспеченности: [?ROOT.provision_percent_var|+1%%]\n\nТекущий запас провианта: [?ROOT.provision_total_var|+1*] из [?ROOT.max_provision_total_var|H1*] | [?ROOT.provision_percent_to_max_var|+1%]\nТекущий баланс провианта: [?ROOT.provision_balance_var|+1*]/день\nТекущее потребление провианта: [?ROOT.provision_need_var|-1*]/день\n\nПроизводство провианта:\n    - в неделю: [?ROOT.weekly_income_provision|+1*] от [?ROOT.livestock_complex_total|H0] шт.\n    - в год: [?ROOT.yearly_income_provision|+1*] от [?ROOT.agro_complex_total|H0] шт.[GET_CROP_LOC]\nКоэффициент сбора урожая: [?ROOT.num_generation_provision_yearly_var|1+%]\n\nУровень сохранения провизии: [?ROOT.monthly_save_provision|+0%]\nВ этом месяце ожидается порча: [?ROOT.bad_provision_var|-1*]\n\nМаксимальный запас провианта: [?ROOT.max_provision_total_var|H1*]\nБазовое значение: [?ROOT.max_provision_base_var|H1*]\nВ регионах: [?ROOT.modifier@max_provision|H1*][GET_HUNGER_LOC]"
     gta_provisions_delayed_tooltip: "Продовольственная обеспеченность отображает потребность в продуктах питания вашей страны.\n\nНерегулярные поступления провианта от §HАгрокомплексов§! не учитываются в расчете значения §Hбаланса провианта§!."
     GET_BASE_HARVEST_LOC: "\nУрожай текущего года:"
     GET_BAD_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §RНЕУРОЖАЙ§!"
@@ -48,7 +48,7 @@
 ### ELECTRIC POWER ###
 ######################
 
-    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.modifier@num_generation_electric_power|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-]"
+    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.electric_power_total_generation_var|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\nКоэффициент выработки: [?ROOT.num_generation_electric_power_factor|1+%]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-]"
     gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!.\nНажмите §Gправой кнопкой§!, чтобы начать §Hторговлю электроэнергией§!.[GET_ELECTRIC_POWER_CRISIS_LOC]"
     GET_ELECTRIC_POWER_CRISIS_TEXT: "\n$SEPARATION_LINE$$electric_power_title_bad_debuff_text$$electric_power_debuff_text$"
     
@@ -121,12 +121,14 @@
 
     fake_fuel_cost: "£fuel_texticon Потребление топлива"
     num_generation_electric_power: "£electric_power_pure_icon Производство электроэнергии (МВт*ч)"
+    num_generation_electric_power_factor: "£electric_power_pure_icon Выработка электроэнергии"
     num_use_electric_power: "£electric_power_pure_icon Потребление электроэнергии (МВт*ч)"
     num_use_electric_power_4_tt: "£electric_power_pure_icon Потребление электроэнергии (МВт*ч): +4"
     max_provision: "£provisions_icon Максимум провизии (K)"
     num_generation_provision_weekly: "£provisions_icon Провиант еженедельно"
     provision_weekly_factor: "$num_generation_provision_weekly$"
     num_generation_provision_yearly: "£provisions_icon Провиант ежегодно"
+    num_generation_provision_yearly_factor: "£provisions_icon Провиант ежегодно"
     monthly_save_provision_modifier: "£provisions_icon Сохранение провианта"
     consumption_of_provisions_modifier: "£provisions_icon Потребление провианта"
     provision_income_modifier: "£provisions_icon Производство провианта"
@@ -136,6 +138,7 @@
     mobilization_speed_proletariat: "£proletariat_texticon Мобилизация труда"
     interest_in_economic_development_factor: "£ETH_imperial_treasury Заинтересованность в экономическом развитии"
     num_generation_science_point: "£science_texticon Очки науки"
+    num_generation_science_point_factor: "£science_texticon Прирост очков науки"
     num_use_science_point_factor: "£science_texticon Расход очков науки"
     
     state_resource_cost_iron: "Расход железа"

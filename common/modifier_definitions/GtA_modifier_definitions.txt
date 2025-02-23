@@ -44,6 +44,13 @@ num_generation_electric_power = {
 	category = country
 }
 
+num_generation_electric_power_factor = {
+	color_type = good
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
 num_use_electric_power = {
 	color_type = bad
 	value_type = number
@@ -82,6 +89,12 @@ provision_weekly_factor = {
 num_generation_provision_yearly = {
 	color_type = good
 	value_type = number
+	precision = 1
+	category = country
+}
+num_generation_provision_yearly_factor = {
+	color_type = good
+	value_type = percentage
 	precision = 1
 	category = country
 }
@@ -152,6 +165,12 @@ interest_in_economic_development_factor = {
 num_generation_science_point = {
 	color_type = good
 	value_type = number
+	precision = 1
+	category = all
+}
+num_generation_science_point_factor = {
+	color_type = good
+	value_type = percentage
 	precision = 1
 	category = all
 }

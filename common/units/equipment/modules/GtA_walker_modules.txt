@@ -307,6 +307,12 @@ equipment_modules = {
 			armor_value		= 2
 			initiative		= 1
 			build_cost_ic	= 1.5
+			
+			#Offensive Abilities
+#			railway_gun_attack							= 25
+#			railway_gun_attack_range_index_in_define	= 0
+#			railway_gun_annex_ratio						= 0.5
+#			railway_gun_hours_between_redistribution	= 24
 		}
 		multiply_stats = {
 			maximum_speed	= 0.05

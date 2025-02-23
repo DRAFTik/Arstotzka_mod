@@ -370,7 +370,7 @@
  
  
  
- ### TANKS
+ ### WALKERS
  improved_alloy_steels: "Улучшенные легированные стали"
  improved_alloy_steels_desc: ""
  hardening_and_processing_of_metals: "Закалка и обработка металлов"
@@ -451,9 +451,10 @@
  hybrid_drives_desc: ""
  adaptive_chassis_platform: "Адаптивная ходовая платформа"
  adaptive_chassis_platform_desc: ""
- walking_fortress_chassis: "Шагающая крепость"
- walking_fortress_chassis_desc: ""
- 
+ coloss_walker_chassis: "Шагоход-колосс"
+ coloss_walker_chassis_desc: ""
+ coloss_walker_chassis_1: "$coloss_walker_chassis$"
+ coloss_walker_chassis_1_desc: ""
  
  
  ### INDUSTRY

@@ -2,13 +2,13 @@
 @tier2 = 20
 @tier3 = 10
 
-@experience_gain_low = 0.03
-@experience_gain_medium = 0.06
-@experience_gain_high = 0.08
+@experience_gain_low			= 0.03
+@experience_gain_medium			= 0.06
+@experience_gain_high			= 0.08
 
-@chief_experience_gain_low = 0.20
-@chief_experience_gain_medium = 0.30
-@chief_experience_gain_high = 0.40
+@chief_experience_gain_low		= 0.20
+@chief_experience_gain_medium	= 0.30
+@chief_experience_gain_high		= 0.40
 
 
 leader_traits = {
@@ -22,29 +22,32 @@ leader_traits = {
 ### science advisors
 	reformer_technocrat = {
 		random = no
-		
+		political_power_factor = -0.1
 	}
 	social_utopian = {
 		random = no
-		
+		political_power_factor = -0.1
 	}
 	pragmatic_militarist = {
 		random = no
-		
+		political_power_factor = -0.1
 	}
 	conservative_traditionalist = {
 		random = no
-		
+		political_power_factor				= -0.1
+		num_generation_science_point_factor	= -0.06
 	}
 	integrator_of_interdisciplinary_research = {
 		random = no
-		
+		political_power_factor				= -0.1
+		research_speed_factor				= -0.06
+		num_generation_science_point_factor	= 0.03
 	}
 	
 	
 	chaos_theorist = {
 		random = no
-		research_speed_factor = 0.1
+		research_speed_factor = 0.05
 	}
 	statistical_planner = {
 		random = no
@@ -52,21 +55,28 @@ leader_traits = {
 	}
 	cryptographer_scout = {
 		random = no
-		
+		foreign_subversive_activites	= -0.05
+		decryption_factor				= 0.05
+		encryption_factor				= 0.05
 	}
 	logistics_rationalizer = {
 		random = no
-		
+		supply_consumption_factor	= 0.03
+		supply_node_range			= 0.05
+		army_speed_factor 			= 0.05
 	}
 	algorithm_optimizer = {
 		random = no
-		num_use_science_point_factor = -0.1
+		research_speed_factor			= 0.03
+		num_use_science_point_factor	= -0.1
 	}
 	
 	
 	nuclear_enthusiast = {
 		random = no
-		
+		sprite = 14
+		nuclear_production_factor				= 0.05
+		production_speed_nuclear_reactor_factor	= 0.05
 	}
 	quantum_theorist = {
 		random = no
@@ -74,57 +84,98 @@ leader_traits = {
 	}
 	materials_scientist_innovator = {
 		random = no
-		
+		production_speed_buildings_factor = 0.05
+		equipment_bonus = {
+			infantry_equipment = {
+				reliability = 0.05
+				instant = yes
+			}
+			motorized_equipment = {
+				reliability = 0.03
+				instant = yes
+			}
+			train_equipment = {
+				reliability = 0.03
+				instant = yes
+			}
+			armor = {
+				reliability = 0.02
+				instant = yes
+			}
+		}
 	}
 	energy_engineer = {
 		random = no
-		num_generation_science_point = 0.2
+		num_generation_science_point				= 0.2
+		num_generation_electric_power_factor		= 0.05
+		production_speed_thermal_power_plant_factor	= 0.03
+		production_speed_hydro_power_plant_factor	= 0.03
 	}
 	automation_engineer = {
 		random = no
+		production_factory_max_efficiency_factor 	= 0.03
+		production_factory_efficiency_gain_factor	= 0.03
+		industrial_factory_donations				= 1
 	}
 	
 	
 	agrotechnologist = {
 		random = no
-		
+		num_generation_provision_yearly_factor = 0.05
 	}
 	pharmacologist_and_humanist = {
 		random = no
-		num_generation_science_point = 0.1
+		num_generation_science_point		= 0.1
+		consumption_of_provisions_modifier	= 0.1
+		production_speed_hospital_factor	= 0.05
 	}
 	plastic_innovator = {
 		random = no
-		
+		consumer_goods_factor						= -0.03
+		monthly_save_provision_modifier				= 0.02
+		production_speed_industrial_complex_factor	= 0.05
+		num_generation_provision_yearly_factor		= -0.1
 	}
 	eco_technologist = {
 		random = no
-		
+		num_generation_provision_yearly_factor		= 0.05
+		production_speed_thermal_power_plant_factor	= -0.15
+		production_speed_synthetic_refinery_factor	= -0.1
+		production_speed_hydro_power_plant_factor	= 0.07
 	}
-	polymer_specialist = {
+	petrochemical_technologist = {
 		random = no
-		num_generation_science_point = 0.3
+		fuel_gain_factor							= 0.05
+		fuel_gain_factor_from_states				= 0.1
+		production_speed_synthetic_refinery_factor	= 0.05
+		production_speed_thermal_power_plant_factor	= 0.05
 	}
 	
 	
 	geneticist_breeder = {
 		random = no
-		
+		num_generation_provision_yearly_factor	= 0.02
+		num_generation_science_point			= 0.1
 	}
 	epidemiologist_is_savior = {
 		random = no
-		
+		stability_factor					= 0.05
+		production_speed_hospital_factor	= 0.05
 	}
 	radical_ecologist = {
 		random = no
-		
+		local_resources_factor	= -0.15
+		monthly_population		= 0.15
 	}
 	marine_biologist = {
 		random = no
-		
+		provision_income_modifier					= 0.05
+		production_speed_hydro_power_plant_factor	= -0.1
 	}
 	specialist_in_soil_restoration = {
 		random = no
+		num_generation_provision_yearly_factor	= 0.1
+		num_generation_science_point_factor		= -0.1
 		
 	}
 	

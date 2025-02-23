@@ -11,6 +11,10 @@ every_possible_country = {
 		advisor = {
 			slot = scientific_chief
 			traits = { reformer_technocrat }
+			research_bonus = {
+				industry	= 0.05
+				electronics	= 0.05
+			}
 		}
 		portraits = { 
 			army = { small = GFX_idea_generic_war_industrialist }
@@ -21,6 +25,15 @@ every_possible_country = {
 		advisor = {
 			slot = scientific_chief
 			traits = { social_utopian }
+			research_bonus = {
+				industry					= 0.05
+				infantry_weapons			= -0.03
+				motorized_equipment			= -0.03
+				cat_mechanized_equipment	= -0.03
+				armor						= -0.03
+				naval_equipment				= -0.03
+				air_equipment				= -0.03
+			}
 		}
 		portraits = { 
 			army = { small = GFX_idea_generic_war_industrialist }
@@ -31,6 +44,16 @@ every_possible_country = {
 		advisor = {
 			slot = scientific_chief
 			traits = { pragmatic_militarist }
+			research_bonus = {
+				industry					= -0.07
+				electronics					= -0.07
+				infantry_weapons			= 0.05
+				motorized_equipment			= 0.05
+				cat_mechanized_equipment	= 0.05
+				armor						= 0.05
+				naval_equipment				= 0.05
+				air_equipment				= 0.05
+			}
 		}
 		portraits = { 
 			army = { small = GFX_idea_generic_war_industrialist }
@@ -41,6 +64,13 @@ every_possible_country = {
 		advisor = {
 			slot = scientific_chief
 			traits = { conservative_traditionalist }
+			research_bonus = {
+				electronics			= -0.07
+				nuclear				= -0.07
+				rocketry			= -0.07
+				infantry_weapons	= 0.05
+				artillery			= 0.05
+			}
 		}
 		portraits = { 
 			army = { small = GFX_idea_generic_war_industrialist }
@@ -74,6 +104,9 @@ every_possible_country = {
 		advisor = {
 			slot = mathematicians_theorist
 			traits = { statistical_planner }
+			research_bonus = {
+				industry = -0.07
+			}
 		}
 		portraits = { 
 			army = { small = GFX_idea_generic_war_industrialist }
@@ -116,6 +149,9 @@ every_possible_country = {
 		advisor = {
 			slot = physicists_theorist
 			traits = { nuclear_enthusiast }
+			research_bonus = {
+				nuclear = 0.05
+			}
 		}
 		portraits = { 
 			army = { small = GFX_idea_generic_war_industrialist }
@@ -205,10 +241,20 @@ every_possible_country = {
 		}
 	}
 	generate_character = {
-		token_base = generic_polymer_specialist # token will be TAG_token_base
+		token_base = generic_petrochemical_technologist # token will be TAG_token_base
 		advisor = {
 			slot = chemists_theorist
-			traits = { polymer_specialist }
+			traits = { petrochemical_technologist }
+			research_bonus = {
+				synth_rubber_res	= 0.05
+				synth_oil_res		= 0.05
+			}
+			available = {
+				OR = {
+					synthetic_refinery > 0
+					has_resources_in_country = { resource = oil amount > 0 extracted = yes }
+				}
+			}
 		}
 		portraits = { 
 			army = { small = GFX_idea_generic_war_industrialist }
@@ -252,6 +298,9 @@ every_possible_country = {
 		advisor = {
 			slot = biologists_theorist
 			traits = { marine_biologist }
+			available = {
+				any_owned_state = { is_coastal = yes }
+			}
 		}
 		portraits = { 
 			army = { small = GFX_idea_generic_war_industrialist }
