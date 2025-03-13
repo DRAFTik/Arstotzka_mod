@@ -311,3 +311,91 @@ defined_text = {
 		localization_key = NUM_ELECTRO_TRADE_RED_TEXT
 	}
 }
+
+
+
+
+
+
+defined_text = {		# CUSTOM IDEAS DESC
+    name = get_state_culture_desc
+    
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_potato }
+		}
+		localization_key = "state_culture_potato_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_wheat }
+		}
+		localization_key = "state_culture_wheat_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_rice }
+		}
+		localization_key = "state_culture_rice_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_legumes }
+		}
+		localization_key = "state_culture_legumes_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_cotton }
+		}
+		localization_key = "state_culture_cotton_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_corn }
+		}
+		localization_key = "state_culture_corn_desc"
+	}
+}
+
+
+defined_text = {		# CUSTOM IDEAS IMAGE
+    name = get_state_culture_icon
+    
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_potato }
+		}
+		localization_key = "GFX_state_culture_potato"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_wheat }
+		}
+		localization_key = "GFX_state_culture_wheat"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_rice }
+		}
+		localization_key = "GFX_state_culture_rice"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_legumes }
+		}
+		localization_key = "GFX_state_culture_legumes"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_cotton }
+		}
+		localization_key = "GFX_state_culture_cotton"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:state_culture_corn }
+		}
+		localization_key = "GFX_state_culture_corn"
+	}
+}

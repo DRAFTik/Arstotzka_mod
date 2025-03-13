@@ -2,9 +2,16 @@ on_actions = {
 
 	on_startup = {
 		effect = {
+			add_to_array = { global.state_culture_ui_array = token:state_culture_potato }
+			add_to_array = { global.state_culture_ui_array = token:state_culture_wheat }
+			add_to_array = { global.state_culture_ui_array = token:state_culture_rice }
+			add_to_array = { global.state_culture_ui_array = token:state_culture_legumes }
+			add_to_array = { global.state_culture_ui_array = token:state_culture_cotton }
+			add_to_array = { global.state_culture_ui_array = token:state_culture_corn }
 			SAI = {
 				set_variable = { global.num_of_extra_tank_school_var = 5 }
-				effect_calculate_base_nof = yes
+				effect_calculate_base_nof			= yes
+				set_fertility_in_ALL_state_effect	= yes
 			}
 			every_possible_country = {
 				default_party_popularity_PP_gain			= yes

@@ -706,3 +706,12 @@ script_enum_equipment_bonus_type = {
 	reconnaissance_walker_chassis_2
 	reconnaissance_walker_chassis_3
 }
+
+script_enum_special_tokens = {
+	state_culture_potato
+	state_culture_wheat
+	state_culture_rice
+	state_culture_legumes
+	state_culture_cotton
+	state_culture_corn
+}

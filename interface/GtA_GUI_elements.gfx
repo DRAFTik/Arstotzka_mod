@@ -39,8 +39,8 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_topbar_provisions_bar"
-		color = { 0.0 0.5 0.0 }
-		colortwo = { 1.0 0.0 0.0 }
+		color		= { 0.0 0.5 0.0 }
+		colortwo	= { 1.0 0.0 0.0 }
 		textureFile1 = "gfx\\interface\\GUI\\provision\\provision_bar.dds"
 		textureFile2 = "gfx\\interface\\GUI\\provision\\provision_bar_bg.dds"
 		size = { x = 45 y = 8 }
@@ -124,5 +124,42 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_science_icon"
 		texturefile = "gfx/interface/GUI/science/science_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_fertility_icon"
+		texturefile = "gfx/interface/GUI/state/fertility_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_state_culture_potato"
+		texturefile = "gfx/interface/GUI/state/state_culture_potato.dds"
+	}
+	spriteType = {
+		name = "GFX_state_culture_wheat"
+		texturefile = "gfx/interface/GUI/state/state_culture_wheat.dds"
+	}
+	spriteType = {
+		name = "GFX_state_culture_rice"
+		texturefile = "gfx/interface/GUI/state/state_culture_rice.dds"
+	}
+	spriteType = {
+		name = "GFX_state_culture_legumes"
+		texturefile = "gfx/interface/GUI/state/state_culture_legumes.dds"
+	}
+	spriteType = {
+		name = "GFX_state_culture_cotton"
+		texturefile = "gfx/interface/GUI/state/state_culture_cotton.dds"
+	}
+	spriteType = {
+		name = "GFX_state_culture_corn"
+		texturefile = "gfx/interface/GUI/state/state_culture_corn.dds"
+	}
+	progressbartype = {
+		name = "GFX_state_soil_depletion_bar"
+		color		= { 1.0 0.0 0.0 }
+		colortwo	= { 0.0 1.0 0.0 }
+		textureFile1 = "gfx\\interface\\GUI\\provision\\provision_bar_bg.dds"
+		textureFile2 = "gfx\\interface\\GUI\\provision\\provision_bar.dds"
+		size = { x = 45 y = 8 }
+		effectFile = "gfx/FX/progress_startend.lua"
 	}
 }

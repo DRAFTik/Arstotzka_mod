@@ -116,6 +116,23 @@
     gta_science_tooltip: "§HНаука§!\nИзменение очков: [?ROOT.num_science_DELTA_var|+1]\n\nТекущие затраты ОН: [?ROOT.num_science_minus_var|+1]\nТекущий прирост ОН: [?ROOT.num_science_plus_var|+1]"
     gta_science_delayed_tooltip: "Очки науки (ОН) отображают состояние науки в вашей страны."
     
+    
+#############
+### STATE ###
+#############
+
+    gta_fertility_state_tooltip: "§HПлодородность§!\nПлодородность почвы — это комплексный показатель состояния почвы, её способность поддерживать рост растений, обеспечивая их необходимыми элементами."
+    gta_fertility_state_delayed_tooltip: "От этого параметра зависит §Hмаксимальный§! размер §Hурожая§!. Это комплексный показатель, отражающий максимально возможный урожай с региона от базового значения §HАгрокомплексов§! при §G0%§! §Hистощения§! земель.\n\nУрожай §Y1 Агрокомплекса§! составит: 300*[?THIS.TOTAL_state_fertility|2]*(1-[?THIS.TOTAL_state_soil_depletion_var|2])"
+    
+    gta_soil_depletion_state_tooltip: "§HИстощенность почв§! ([?THIS.TOTAL_state_soil_depletion_var|%0Y])\nИстощение почвы — это процесс значительного снижения её способности поддерживать рост растений из-за потери питательных веществ, ухудшения структуры и нарушения биологического баланса."
+    gta_soil_depletion_state_delayed_tooltip: "От произведения §YНЕ истощенных земель§! и §Yплодородности§! зависит §Hтекущий§! размер §Hурожая§!. При достижении §R100%§! регион перестанет приносить §Hурожай§! и ему будет требоваться §Hрекультивация§!."
+    state_culture_desc: "§L[get_state_culture_desc]§!"
+    state_culture_potato_desc: "Картошка"
+    state_culture_wheat_desc: "Пшеница"
+    state_culture_rice_desc: "Рис"
+    state_culture_legumes_desc: "Бобовые"
+    state_culture_cotton_desc: "Хлопок"
+    state_culture_corn_desc: "Кукуруза"
 
 ### MODIFIERS ###
 

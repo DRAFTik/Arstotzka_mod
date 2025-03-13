@@ -1,0 +1,99 @@
+guiTypes = {
+	containerWindowType = {
+		name = "GtA_state_container"
+		position = { x = 20 y = 200 }
+		Orientation = upper_left
+		
+		iconType = {
+			name ="fertility_icon"
+			position = { x = 3 y = 0 }
+			spriteType = "GFX_fertility_icon"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="fertility_bg"
+			spriteType = "GFX_generic_text_bg_48"
+			position = { x = 35 y = 0 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "gta_fertility_state_tooltip"
+			pdx_tooltip_delayed = "gta_fertility_state_delayed_tooltip"
+		}
+		
+		instantTextBoxType = {
+			name ="fertility_text"
+			position = { x = 32 y = 4 }
+			font = "hoi_18mbs"
+			text = "[?THIS.TOTAL_state_fertility|0%]"
+			format = right
+			maxWidth = 46
+			maxHeight = 24
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="soil_depletion_ratio_bar"
+			spriteType = "GFX_state_soil_depletion_bar"
+			position = { x = 38 y = 26 }
+			frame = 50
+#			alwaystransparent = yes
+			pdx_tooltip = "gta_soil_depletion_state_tooltip"
+			pdx_tooltip_delayed = "gta_soil_depletion_state_delayed_tooltip"
+		}
+		
+		buttonType = {
+			name = "state_culture_selector_open"
+			quadTextureSprite = "GFX_fertility_icon"
+			position = { x=90	y=0 }
+			shortcut = ""
+			pdx_tooltip = generic_trade_open_tt
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+
+
+	}
+
+
+	containerWindowType = {
+		name = "GtA_state_culture_selector_container"
+		position = { x = 0 y = 7 }
+		size = { width = 100 height = 200 }		#500*540
+		show_position = { x=462 y=7 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 450
+		
+        
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+		
+		gridboxtype = {
+			name = "state_culture_grid"
+			position = { x = -13 y = 20 }
+			size = { width = 100% height = 1 }
+			slotsize = { width = 32 height = 32 } #if width or height is 1, it will use slot element's dimension
+			max_slots_horizontal = 2
+			add_horizontal = yes
+		}
+	}
+	
+	
+	# this entry will be used to populate state_culture_grid in GtA_state_culture_selector_container
+	containerWindowType = {
+		name = "scripted_gui_state_culture_ui_array_ui_entry"
+		position = { x = 0 y = 0}
+		size = { width = 100%% height = 100%% }
+	
+		buttonType = {
+			name ="state_culture_icon"
+			spriteType = "GFX_idea_unknown"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "POR_colony_idea_effect"
+			pdx_tooltip_delayed = "state_culture_desc"
+		}
+	}
+}

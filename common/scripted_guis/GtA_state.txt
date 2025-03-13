@@ -1,0 +1,63 @@
+scripted_gui = {
+	GtA_state = {
+	
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		window_name = "GtA_state_container"
+		dirty = THIS.TOTAL_soil_dirty
+		
+		visible = {
+			is_controlled_by = ROOT
+		}
+		
+		properties = {
+			soil_depletion_ratio_bar = {
+				frame = GUI_state_soil_depletion_var
+			}
+#            state_culture_selector_open = { image = "[get_state_culture_icon]" }
+        }
+		
+		effects = {
+			state_culture_selector_open_click = {
+				ROOT = {
+					if = {
+						limit = { has_country_flag = state_culture_selector_ui_flag }
+						clr_country_flag = state_culture_selector_ui_flag
+					}
+					else = { set_country_flag = state_culture_selector_ui_flag }
+				}
+			}
+		}
+		
+		ai_enabled = {
+			always = no
+		}
+	}
+	
+	GtA_state_culture_selector = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		window_name = "GtA_state_culture_selector_container"
+#		dirty = THIS.TOTAL_soil_dirty
+		
+		visible = {
+			ROOT = { has_country_flag = state_culture_selector_ui_flag }
+		}
+		
+		dynamic_lists = {
+			state_culture_grid = {
+				array = global.state_culture_ui_array
+				entry_container = scripted_gui_state_culture_ui_array_ui_entry
+			}
+		}
+		
+		properties = {
+            state_culture_icon = { image = "[get_state_culture_icon]" }
+        }
+		
+		
+		ai_enabled = {
+			always = no
+		}
+	}
+}
