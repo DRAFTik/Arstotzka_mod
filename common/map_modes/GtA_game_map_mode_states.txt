@@ -1,0 +1,468 @@
+# scripted map modes can be used to add new map modes to game_map_mode_factions
+# 
+# example:
+
+scripted_map_modes = {
+	core_map_mode = {
+		# the game will use name of the map mode for some strings:
+		# MAPMODE_TEST_MAP_MODE MAPMODE_TEST_MAP_MODE_NAME MAPMODE_TEST_MAP_MODE_DESCRIPTION as name & desc
+		# test_map_mode_tooltip & test_map_mode_tooltip_delayed for tooltips
+		# GFX_mapmode_buttons_deselected_small_core_map_mode GFX_mapmode_buttons_selected_small_core_map_mode for the icons
+
+		top = {
+			type = state
+			
+			color = {
+				if = {
+					limit = {
+						FROM = {
+							is_claimed_by = ROOT
+							NOT = { is_controlled_by = ROOT }
+						}
+					}
+					set_temp_variable = { red	= 1.0 }
+					set_temp_variable = { green	= 0.0 }
+					set_temp_variable = { blue	= 0.0 }
+					set_temp_variable = { alpha	= 0.5 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							AND = {
+								is_core_of = ROOT
+								is_controlled_by = ROOT
+							}
+						}
+					}
+					set_temp_variable = { red	= 0.0 }
+					set_temp_variable = { green	= 0.0 }
+					set_temp_variable = { blue	= 1.0 }
+					set_temp_variable = { alpha	= 0.5 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							AND = {
+								is_core_of = ROOT
+								NOT = { is_controlled_by = ROOT }
+							}
+						}
+					}
+					set_temp_variable = { red	= 1.0 }
+					set_temp_variable = { green	= 1.0 }
+					set_temp_variable = { blue	= 0.0 }
+					set_temp_variable = { alpha = 0.5 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							is_controlled_by = ROOT
+						}
+					}
+					set_temp_variable = { red	= 0.0 }
+					set_temp_variable = { green	= 0.0 }
+					set_temp_variable = { blue	= 0.5 }
+					set_temp_variable = { alpha	= 0.25 }
+				}
+				
+				
+				# only needed if thickness = yes on parent
+				# specify layer thickness
+				set_temp_variable = { thickness = 1.0 }
+				
+				# if set border will pulsate
+				set_temp_variable = { highlighted = 1.0 }
+				
+				#always = yes
+			}
+			
+			targets = {
+				#target_array = robot_map_icon_array
+				#targets
+				#target_trigger
+				#... everything targeted decisions support
+				
+#				target_array = ROOT.core_states
+				target_array = global.states
+				target_trigger = {
+					FROM = {
+						OR = {
+							is_core_of = ROOT
+							is_controlled_by = ROOT
+							is_claimed_by = ROOT
+						}
+					}
+				}
+			}
+			
+			thickness = yes
+		}
+		
+#		bottom = {
+#			type = state
+#			
+#			color = {
+#				set_temp_variable = { red = 0.0 }
+#				set_temp_variable = { blue = 1.0 }
+#				set_temp_variable = { green = 0.0 }
+#				set_temp_variable = { alpha = 0.5 }
+#				
+#				# only needed if thickness = yes on parent
+#				# specify layer thickness
+#				set_temp_variable = { thickness = 1.0 }
+#				
+#				# if set border will pulsate
+#				set_temp_variable = { highlighted = 1.0 }
+#			}
+#			
+#			targets = {
+#				target_array = ROOT.core_states
+#			}
+#		}
+	 
+
+		far_text = country
+		near_text = state
+
+		update_daily = no
+	}
+	
+	
+	
+	soil_type_map_mode = {
+		# the game will use name of the map mode for some strings:
+		# MAPMODE_TEST_MAP_MODE MAPMODE_TEST_MAP_MODE_NAME MAPMODE_TEST_MAP_MODE_DESCRIPTION as name & desc
+		# test_map_mode_tooltip & test_map_mode_tooltip_delayed for tooltips
+		# GFX_mapmode_buttons_deselected_small_core_map_mode GFX_mapmode_buttons_selected_small_core_map_mode for the icons
+
+		top = {
+			type = state
+			
+			color = {
+				if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = { modifier = arctic_soil_type_dynamic_modifier }
+						}
+					}
+					set_temp_variable = { red	= 0.0 }
+					set_temp_variable = { green	= 0.31 }
+					set_temp_variable = { blue	= 1.0 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = { modifier = peat_soil_type_dynamic_modifier }
+						}
+					}
+					set_temp_variable = { red	= 0.0 }
+					set_temp_variable = { green	= 0.42 }
+					set_temp_variable = { blue	= 0.3 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = { modifier = podzolic_soil_type_dynamic_modifier }
+						}
+					}
+					set_temp_variable = { red	= 0.04 }
+					set_temp_variable = { green	= 0.64 }
+					set_temp_variable = { blue	= 0.0 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = { modifier = gray_earth_soil_type_dynamic_modifier }
+						}
+					}
+					set_temp_variable = { red	= 0.4 }
+					set_temp_variable = { green	= 0.4 }
+					set_temp_variable = { blue	= 0.4 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = { modifier = brown_soil_type_dynamic_modifier }
+						}
+					}
+					set_temp_variable = { red	= 0.4 }
+					set_temp_variable = { green	= 0.26 }
+					set_temp_variable = { blue	= 0.2 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = { modifier = chestnut_soil_type_dynamic_modifier }
+						}
+					}
+					set_temp_variable = { red	= 0.4 }
+					set_temp_variable = { green	= 0.0 }
+					set_temp_variable = { blue	= 0.0 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = { modifier = chernozem_soil_type_dynamic_modifier }
+						}
+					}
+					set_temp_variable = { red	= 0.2 }
+					set_temp_variable = { green	= 0.15 }
+					set_temp_variable = { blue	= 0.0 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = { modifier = red_earth_soil_type_dynamic_modifier }
+						}
+					}
+					set_temp_variable = { red	= 0.78 }
+					set_temp_variable = { green	= 0.0 }
+					set_temp_variable = { blue	= 0.0 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = { modifier = desert_soil_type_dynamic_modifier }
+						}
+					}
+					set_temp_variable = { red	= 0.74 }
+					set_temp_variable = { green	= 0.66 }
+					set_temp_variable = { blue	= 0.0 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_dynamic_modifier = { modifier = alluvial_soil_type_dynamic_modifier }
+						}
+					}
+					set_temp_variable = { red	= 0.0 }
+					set_temp_variable = { green	= 0.27 }
+					set_temp_variable = { blue	= 0.4 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				
+				
+				# only needed if thickness = yes on parent
+				# specify layer thickness
+				set_temp_variable = { thickness		= 0.0 }
+				
+				# if set border will pulsate
+				set_temp_variable = { highlighted	= 0.0 }
+				
+				#always = yes
+			}
+			
+			targets = {
+				#target_array = robot_map_icon_array
+				#targets
+				#target_trigger
+				#... everything targeted decisions support
+				
+#				target_array = ROOT.core_states
+				target_array = global.states
+#				target_trigger = {
+#					FROM = {
+#					}
+#				}
+			}
+			
+			thickness = no
+		}
+		
+#		bottom = {
+#			type = state
+#			
+#			color = {
+#				set_temp_variable = { red = 0.0 }
+#				set_temp_variable = { blue = 1.0 }
+#				set_temp_variable = { green = 0.0 }
+#				set_temp_variable = { alpha = 0.5 }
+#				
+#				# only needed if thickness = yes on parent
+#				# specify layer thickness
+#				set_temp_variable = { thickness = 1.0 }
+#				
+#				# if set border will pulsate
+#				set_temp_variable = { highlighted = 1.0 }
+#			}
+#			
+#			targets = {
+#				target_array = ROOT.core_states
+#			}
+#		}
+	 
+
+		far_text = country
+		near_text = state
+
+		update_daily = no
+	}
+	
+	state_culture_type_map_mode = {
+		# the game will use name of the map mode for some strings:
+		# MAPMODE_TEST_MAP_MODE MAPMODE_TEST_MAP_MODE_NAME MAPMODE_TEST_MAP_MODE_DESCRIPTION as name & desc
+		# test_map_mode_tooltip & test_map_mode_tooltip_delayed for tooltips
+		# GFX_mapmode_buttons_deselected_small_core_map_mode GFX_mapmode_buttons_selected_small_core_map_mode for the icons
+
+		top = {
+			type = state
+			
+			color = {
+				if = {
+					limit = {
+						FROM = {
+							is_in_array = { global.rice_states_array = This.id }
+						}
+					}
+					set_temp_variable = { red	= 0.05 }
+					set_temp_variable = { green	= 0.66 }
+					set_temp_variable = { blue	= 0.78 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							is_in_array = { global.cotton_states_array = This.id }
+						}
+					}
+					set_temp_variable = { red	= 0.78 }
+					set_temp_variable = { green	= 0.75 }
+					set_temp_variable = { blue	= 0.48 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							is_in_array = { global.corn_states_array = This.id }
+						}
+					}
+					set_temp_variable = { red	= 0.78 }
+					set_temp_variable = { green	= 0.38 }
+					set_temp_variable = { blue	= 0.0 }
+					set_temp_variable = { alpha	= 1.0 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							is_in_array = { global.wheat_states_array = This.id }
+						}
+					}
+					set_temp_variable = { red	= 0.74 }
+					set_temp_variable = { green	= 0.66 }
+					set_temp_variable = { blue	= 0.0 }
+					set_temp_variable = { alpha	= 0.5 }
+				}
+				
+				# only needed if thickness = yes on parent
+				# specify layer thickness
+				set_temp_variable = { thickness		= 0.5 }
+				
+				# if set border will pulsate
+				set_temp_variable = { highlighted	= 0.5 }
+				
+				#always = yes
+			}
+			
+			targets = {
+				target_array = global.wheat_states_array
+				target_array = global.rice_states_array
+				target_array = global.cotton_states_array
+				target_array = global.corn_states_array
+			}
+			thickness = no
+		}
+	 
+
+		far_text = country
+		near_text = state
+
+		update_daily = no
+	}
+	
+	state_fertility_map_mode = {
+		# the game will use name of the map mode for some strings:
+		# MAPMODE_TEST_MAP_MODE MAPMODE_TEST_MAP_MODE_NAME MAPMODE_TEST_MAP_MODE_DESCRIPTION as name & desc
+		# test_map_mode_tooltip & test_map_mode_tooltip_delayed for tooltips
+		# GFX_mapmode_buttons_deselected_small_core_map_mode GFX_mapmode_buttons_selected_small_core_map_mode for the icons
+
+		top = {
+			type = state
+			
+			color = {
+				set_temp_variable = { red	= 0.0 }
+				set_temp_variable = { green	= FROM.TOTAL_state_fertility }
+				set_temp_variable = { blue	= 0.0 }
+				set_temp_variable = { alpha	= 1 }
+				
+				
+				# only needed if thickness = yes on parent
+				# specify layer thickness
+				set_temp_variable = { thickness = 1 }
+				
+				# if set border will pulsate
+				set_temp_variable = { highlighted = 1 }
+				
+				#always = yes
+			}
+			
+			targets = {
+				target_array = ROOT.controlled_states
+			}
+			thickness = yes
+		}
+	 
+
+		far_text = state
+		near_text = none
+
+		update_daily = no
+	}
+	
+	state_soil_depletion_map_mode = {
+		# the game will use name of the map mode for some strings:
+		# MAPMODE_TEST_MAP_MODE MAPMODE_TEST_MAP_MODE_NAME MAPMODE_TEST_MAP_MODE_DESCRIPTION as name & desc
+		# test_map_mode_tooltip & test_map_mode_tooltip_delayed for tooltips
+		# GFX_mapmode_buttons_deselected_small_core_map_mode GFX_mapmode_buttons_selected_small_core_map_mode for the icons
+
+		top = {
+			type = state
+			
+			color = {
+				set_temp_variable = { red	= FROM.TOTAL_state_soil_depletion_var }
+				set_temp_variable = { green	= 0.0 }
+				set_temp_variable = { blue	= 0.0 }
+				set_temp_variable = { alpha	= 1 }
+				
+				
+				# only needed if thickness = yes on parent
+				# specify layer thickness
+				set_temp_variable = { thickness = 1 }
+				
+				# if set border will pulsate
+				set_temp_variable = { highlighted = 1 }
+				
+				#always = yes
+			}
+			
+			targets = {
+				target_array = ROOT.controlled_states
+			}
+			thickness = yes
+		}
+	 
+
+		far_text = state
+		near_text = none
+
+		update_daily = no
+	}
+}

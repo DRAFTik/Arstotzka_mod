@@ -317,7 +317,7 @@ defined_text = {
 
 
 
-defined_text = {		# CUSTOM IDEAS DESC
+defined_text = {		# CUSTOM STATE_CULTURE_ICON DESC
     name = get_state_culture_desc
     
 	text = {
@@ -359,7 +359,7 @@ defined_text = {		# CUSTOM IDEAS DESC
 }
 
 
-defined_text = {		# CUSTOM IDEAS IMAGE
+defined_text = {		# CUSTOM STATE_CULTURE_ICON IMAGE
     name = get_state_culture_icon
     
 	text = {
@@ -397,5 +397,215 @@ defined_text = {		# CUSTOM IDEAS IMAGE
 			check_variable = { v = token:state_culture_corn }
 		}
 		localization_key = "GFX_state_culture_corn"
+	}
+}
+
+
+defined_text = {		# CUSTOM STATE_CULTURE_SELECTOR_OPEN IMAGE
+    name = get_state_culture_selector_open_icon
+    
+	text = {
+		trigger = {
+			THIS = { has_state_flag = state_culture_POTATO_state_flag }
+		}
+		localization_key = "GFX_state_culture_potato"
+	}
+	text = {
+		trigger = {
+			THIS = { has_state_flag = state_culture_WHEAT_state_flag }
+		}
+		localization_key = "GFX_state_culture_wheat"
+	}
+	text = {
+		trigger = {
+			THIS = { has_state_flag = state_culture_RICE_state_flag }
+		}
+		localization_key = "GFX_state_culture_rice"
+	}
+	text = {
+		trigger = {
+			THIS = { has_state_flag = state_culture_LEGUMES_state_flag }
+		}
+		localization_key = "GFX_state_culture_legumes"
+	}
+	text = {
+		trigger = {
+			THIS = { has_state_flag = state_culture_COTTON_state_flag }
+		}
+		localization_key = "GFX_state_culture_cotton"
+	}
+	text = {
+		trigger = {
+			THIS = { has_state_flag = state_culture_CORN_state_flag }
+		}
+		localization_key = "GFX_state_culture_corn"
+	}
+	text = {
+		localization_key = "GFX_fertility_icon"
+	}
+}
+
+defined_text = {
+	name = soil_type_map_mode_tooltip_status
+	text = {
+		trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = arctic_soil_type_dynamic_modifier }
+			}
+		}
+		localization_key = SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_ARCTIC
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = peat_soil_type_dynamic_modifier }
+			}
+		}
+		localization_key = SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_PEAT
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = podzolic_soil_type_dynamic_modifier }
+			}
+		}
+		localization_key = SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_PODZOLIC
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = gray_earth_soil_type_dynamic_modifier }
+			}
+		}
+		localization_key = SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_GRAY_EARTH
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = brown_soil_type_dynamic_modifier }
+			}
+		}
+		localization_key = SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_BROWN
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = chestnut_soil_type_dynamic_modifier }
+			}
+		}
+		localization_key = SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_CHESTNUT
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = chernozem_soil_type_dynamic_modifier }
+			}
+		}
+		localization_key = SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_CHERNOZEM
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = red_earth_soil_type_dynamic_modifier }
+			}
+		}
+		localization_key = SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_RED_EARTH
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = desert_soil_type_dynamic_modifier }
+			}
+		}
+		localization_key = SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_DESERT
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = alluvial_soil_type_dynamic_modifier }
+			}
+		}
+		localization_key = SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_ALLUVIAL
+	}
+}
+
+defined_text = {
+	name = state_culture_type_map_mode_tooltip_status
+	text = {
+		trigger = {
+			FROM = {
+				is_in_array = { global.wheat_states_array = This.id }
+			}
+		}
+		localization_key = wheat_state_culture_type_map_mode_tooltip
+	}
+	text = {
+		trigger = {
+			FROM = {
+				is_in_array = { global.rice_states_array = This.id }
+			}
+		}
+		localization_key = rice_state_culture_type_map_mode_tooltip
+	}
+	text = {
+		trigger = {
+			FROM = {
+				is_in_array = { global.cotton_states_array = This.id }
+			}
+		}
+		localization_key = cotton_state_culture_type_map_mode_tooltip
+	}
+	text = {
+		trigger = {
+			FROM = {
+				is_in_array = { global.corn_states_array = This.id }
+			}
+		}
+		localization_key = corn_state_culture_type_map_mode_tooltip
+	}
+}
+
+defined_text = {
+	name = wheat_state_culture_status
+	text = {
+		trigger = {
+			FROM = {
+				is_in_array = { global.wheat_states_array = This.id }
+			}
+		}
+		localization_key = wheat_state_culture_status_tooltip
+	}
+}
+defined_text = {
+	name = rice_state_culture_status
+	text = {
+		trigger = {
+			FROM = {
+				is_in_array = { global.rice_states_array = This.id }
+			}
+		}
+		localization_key = rice_state_culture_status_tooltip
+	}
+}
+defined_text = {
+	name = cotton_state_culture_status
+	text = {
+		trigger = {
+			FROM = {
+				is_in_array = { global.cotton_states_array = This.id }
+			}
+		}
+		localization_key = cotton_state_culture_status_tooltip
+	}
+}
+defined_text = {
+	name = corn_state_culture_status
+	text = {
+		trigger = {
+			FROM = {
+				is_in_array = { global.corn_states_array = This.id }
+			}
+		}
+		localization_key = corn_state_culture_status_tooltip
 	}
 }

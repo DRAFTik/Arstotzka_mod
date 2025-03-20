@@ -1,0 +1,179 @@
+scripted_gui = {
+	GtA_state = {
+	
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		window_name = "GtA_state_container"
+		dirty = THIS.TOTAL_soil_dirty
+		
+		visible = {
+			is_controlled_by = ROOT
+		}
+		
+		properties = {
+			soil_depletion_ratio_bar = {
+				frame = GUI_state_soil_depletion_var
+			}
+            state_culture_selector_open = { image = "[get_state_culture_selector_open_icon]" }
+        }
+		
+		effects = {
+			state_culture_selector_open_click = {
+				ROOT = {
+					if = {
+						limit			= { check_variable = { state_culture_selector_open_var = 0 } }
+						set_variable	= { state_culture_selector_open_var = 1 }
+					}
+					else				= { set_variable = { state_culture_selector_open_var = 0 } }
+				}
+			}
+		}
+		triggers = {
+			state_culture_selector_open_click_enabled = {
+				THIS = { agro_complex > 0 }
+			}
+		}
+		
+		ai_enabled = {
+			always = no
+		}
+	}
+	
+	GtA_state_culture_selector = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		window_name = "GtA_state_culture_selector_container"
+#		dirty = THIS.TOTAL_soil_dirty
+		
+		visible = {
+			ROOT = { check_variable = { state_culture_selector_open_var = 1 } }
+			THIS = { agro_complex > 0 }
+		}
+		
+		dynamic_lists = {
+			state_culture_grid = {
+				array = global.state_culture_ui_array
+				entry_container = scripted_gui_state_culture_ui_array_ui_entry
+			}
+		}
+		
+		properties = {
+            state_culture_icon = { image = "[get_state_culture_icon]" }
+        }
+		
+		effects = {
+			state_culture_icon_click = {
+				THIS = { drop_all_state_culture_flags = yes }
+				add_to_variable = { THIS.TOTAL_soil_dirty = 0.01 }
+				if = {
+					limit = { check_variable = { v = token:state_culture_potato } }
+					THIS = {
+						set_state_flag = state_culture_POTATO_state_flag
+					}
+					custom_effect_tooltip = state_culture_POTATO_effect_tooltip
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_wheat } }
+					THIS = {
+						set_state_flag = state_culture_WHEAT_state_flag
+					}
+					custom_effect_tooltip = state_culture_WHEAT_effect_tooltip
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_rice } }
+					THIS = {
+						set_state_flag = state_culture_RICE_state_flag
+					}
+					custom_effect_tooltip = state_culture_RICE_effect_tooltip
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_legumes } }
+					THIS = {
+						set_state_flag = state_culture_LEGUMES_state_flag
+					}
+					custom_effect_tooltip = state_culture_LEGUMES_effect_tooltip
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_cotton } }
+					THIS = {
+						set_state_flag = state_culture_COTTON_state_flag
+					}
+					custom_effect_tooltip = state_culture_COTTON_effect_tooltip
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_corn } }
+					THIS = {
+						set_state_flag = state_culture_CORN_state_flag
+					}
+					custom_effect_tooltip = state_culture_CORN_effect_tooltip
+				}
+			}
+		}
+		
+		triggers = {
+			state_culture_icon_click_enabled = {
+				if = {
+					limit = { check_variable = { v = token:state_culture_potato } }
+					THIS = {
+						NOT = { has_state_flag = state_culture_POTATO_state_flag }
+					}
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_wheat } }
+					THIS = {
+						NOT = { has_state_flag = state_culture_WHEAT_state_flag }
+						has_state_flag = state_culture_WHEAT_available_state_flag
+					}
+					custom_trigger_tooltip = {
+						tooltip = culture_is_growing_in_region_tt
+						is_in_array = { global.wheat_states_array = This.id }
+					}
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_rice } }
+					THIS = {
+						NOT = { has_state_flag = state_culture_RICE_state_flag }
+						has_state_flag = state_culture_RICE_available_state_flag
+					}
+					custom_trigger_tooltip = {
+						tooltip = culture_is_growing_in_region_tt
+						is_in_array = { global.rice_states_array = This.id }
+					}
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_legumes } }
+					THIS = {
+						NOT = { has_state_flag = state_culture_LEGUMES_state_flag }
+					}
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_cotton } }
+					THIS = {
+						NOT = { has_state_flag = state_culture_COTTON_state_flag }
+						has_state_flag = state_culture_COTTON_available_state_flag
+					}
+					custom_trigger_tooltip = {
+						tooltip = culture_is_growing_in_region_tt
+						is_in_array = { global.cotton_states_array = This.id }
+					}
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_corn } }
+					THIS = {
+						NOT = { has_state_flag = state_culture_CORN_state_flag }
+						has_state_flag = state_culture_CORN_available_state_flag
+					}
+					custom_trigger_tooltip = {
+						tooltip = culture_is_growing_in_region_tt
+						is_in_array = { global.corn_states_array = This.id }
+					}
+				}
+			}
+		}
+		
+		
+		ai_enabled = {
+			always = no
+		}
+	}
+}

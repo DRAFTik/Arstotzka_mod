@@ -117,6 +117,11 @@ on_actions = {
 			}
 			add_to_variable = { global.total_iron_exported = total_iron_exported_temp }
 			effect_calculate_base_nof = yes
+			
+			force_update_map_mode = {
+				limit = { is_ai = no }
+				mapmode = core_map_mode
+			}
 		}
 	}
 

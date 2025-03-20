@@ -162,4 +162,11 @@ spriteTypes = {
 		size = { x = 45 y = 8 }
 		effectFile = "gfx/FX/progress_startend.lua"
 	}
+	
+	
+	spriteType = {
+		name = "GFX_old_antimobile_menu"
+		texturefile = "gfx/interface/old_antimobile_menu.dds"
+		noOfFrames = 3
+	}
 }

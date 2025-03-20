@@ -50,8 +50,6 @@ guiTypes = {
 			clicksound = click_ok
 			oversound = ui_menu_over
 		}
-
-
 	}
 
 
@@ -92,7 +90,7 @@ guiTypes = {
 			spriteType = "GFX_idea_unknown"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
-			pdx_tooltip = "POR_colony_idea_effect"
+			pdx_tooltip = "state_culture_effect"
 			pdx_tooltip_delayed = "state_culture_desc"
 		}
 	}

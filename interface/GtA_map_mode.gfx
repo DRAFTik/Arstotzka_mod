@@ -1,0 +1,47 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_mapmode_buttons_deselected_small_core_map_mode"
+		texturefile = "gfx/interface/mapmode/mapmode_buttons_deselected_small_core_map_mode.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmode_buttons_selected_small_core_map_mode"
+		texturefile = "gfx/interface/mapmode/mapmode_buttons_selected_small_core_map_mode.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mapmode_buttons_deselected_small_soil_type_map_mode"
+		texturefile = "gfx/interface/mapmode/mapmode_buttons_deselected_small_soil_type_map_mode.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmode_buttons_selected_small_soil_type_map_mode"
+		texturefile = "gfx/interface/mapmode/mapmode_buttons_selected_small_soil_type_map_mode.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mapmode_buttons_deselected_small_state_culture_type_map_mode"
+		texturefile = "gfx/interface/mapmode/mapmode_buttons_deselected_small_state_culture_type_map_mode.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmode_buttons_selected_small_state_culture_type_map_mode"
+		texturefile = "gfx/interface/mapmode/mapmode_buttons_selected_small_state_culture_type_map_mode.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mapmode_buttons_deselected_small_state_fertility_map_mode"
+		texturefile = "gfx/interface/mapmode/mapmode_buttons_deselected_small_state_fertility_map_mode.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmode_buttons_selected_small_state_fertility_map_mode"
+		texturefile = "gfx/interface/mapmode/mapmode_buttons_selected_small_state_fertility_map_mode.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mapmode_buttons_deselected_small_state_soil_depletion_map_mode"
+		texturefile = "gfx/interface/mapmode/mapmode_buttons_deselected_small_state_soil_depletion_map_mode.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmode_buttons_selected_small_state_soil_depletion_map_mode"
+		texturefile = "gfx/interface/mapmode/mapmode_buttons_selected_small_state_soil_depletion_map_mode.dds"
+	}
+}

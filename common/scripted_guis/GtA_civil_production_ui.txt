@@ -1,0 +1,54 @@
+scripted_gui = {
+	
+	GtA_civil_production_line_opener_container = {
+		context_type = player_context
+		window_name = "GtA_civil_production_line_opener_container"
+		dirty = ROOT.civil_production_line_open_var
+		
+		visible = {
+		}
+
+		ai_enabled = {
+			always = no
+		}
+		
+		triggers = {
+		}
+		effects = {
+			civil_production_open_click = {
+				if = {
+					limit			= { check_variable = { civil_production_line_open_var = 0 } }
+					set_variable	= { civil_production_line_open_var = 1 }
+				}
+				else				= { set_variable = { civil_production_line_open_var = 0 } }
+			}
+		}
+	}
+	
+	GtA_civil_production_line_container = {
+	
+		context_type = player_context
+#		parent_window_token = selected_state_view
+		window_name = "GtA_civil_production_line_container"
+#		dirty = THIS.TOTAL_soil_dirty
+		
+		visible = {
+			check_variable = { civil_production_line_open_var = 1 }
+		}
+		
+		properties = {
+        }
+		
+		effects = {
+			close_button_click = {
+				set_variable = { civil_production_line_open_var = 0 }
+			}
+		}
+		triggers = {
+		}
+		
+		ai_enabled = {
+			always = no
+		}
+	}
+}

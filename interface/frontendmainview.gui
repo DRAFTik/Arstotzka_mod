@@ -321,6 +321,7 @@ guiTypes = {
 			name = "single_player_button"
 			position = { x = 16 y = 18 }
 			quadTextureSprite ="GFX_main_lobby_button"
+#			quadTextureSprite ="GFX_old_antimobile_menu"
 			font = "hoi_24header"			
 			text = "FE_SINGLE_PLAYER"				
 			clicksound = click_default			

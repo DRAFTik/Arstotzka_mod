@@ -1,0 +1,61 @@
+﻿l_russian:
+    MAPMODE_CORE_MAP_MODE_NAME: "Территории"
+    MAPMODE_CORE_MAP_MODE: "Режим карты: §Hтерриториальный§!"
+    MAPMODE_CORE_MAP_MODE_DESCRIPTION: "Отображает статус территории нашего государства."
+    core_map_mode_tooltip: "[core_map_mode_tooltip_status]"
+    core_map_mode_tooltip_delayed: ""
+    
+    CORE_MAP_MODE_TOOLTIP_STATUS_RED: "§RКрасным§! обозначены регионы, находящиеся §Hне под нашим контролем§! и на которые у нас §Hесть претензия§!."
+    CORE_MAP_MODE_TOOLTIP_STATUS_BLUE: "§BСиним§! обозначены регионы, §Hконтролируемые§! нами наши §Hнациональными регионы§!."
+    CORE_MAP_MODE_TOOLTIP_STATUS_BLUE_2: "§1Блеклым синим§! обозначены §Hконтролируемые§! регионы, §Hне являющиеся§! для нас национальными."
+    CORE_MAP_MODE_TOOLTIP_STATUS_YELLOW: "§YЖелтым§! обозначены регионы, которые наше государство §Hсчитает национальными§!, но находящиеся §Hне под нашим контролем§!."
+    
+############################################################
+
+    MAPMODE_SOIL_TYPE_MAP_MODE_NAME: "Типы почв"
+    MAPMODE_SOIL_TYPE_MAP_MODE: "Режим карты: §Hтипы почв§!"
+    MAPMODE_SOIL_TYPE_MAP_MODE_DESCRIPTION: "Отображает типы почв в мире."
+    soil_type_map_mode_tooltip: "[soil_type_map_mode_tooltip_status]"
+    soil_type_map_mode_tooltip_delayed: ""
+    
+    SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_ARCTIC: "§2Арктические почвы.§! Плодородность §H0 - 5%§!"
+    SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_PEAT: "§TТорфяные почвы.§! Плодородность §H5 - 25%§!"
+    SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_PODZOLIC: "§GПодзолистые почвы.§! Плодородность §H10 - 20%§!"
+    SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_GRAY_EARTH: "§gСероземы.§! Плодородность §H25 - 50%§!"
+    SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_BROWN: "§FБурые почвы.§! Плодородность §H35 - 60%§!"
+    SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_CHESTNUT: "§9Каштановые почвы.§! Плодородность §H40 - 65%§!"
+    SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_CHERNOZEM: "§bЧерноземы.§! Плодородность §H90 - 100%§!"
+    SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_RED_EARTH: "§RКраснозёмы.§! Плодородность §H50 - 60%§!"
+    SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_DESERT: "§8Пустынные почвы.§! Плодородность §H5 - 10%§!"
+    SOIL_TYPE_MAP_MODE_TOOLTIP_STATUS_ALLUVIAL: "§BАллювиальные почвы.§! Плодородность §H75 - 90%§!"
+    
+############################################################
+    
+    MAPMODE_STATE_CULTURE_TYPE_MAP_MODE_NAME: "Культуры"
+    MAPMODE_STATE_CULTURE_TYPE_MAP_MODE: "Режим карты: §Hкультуры§!"
+    MAPMODE_STATE_CULTURE_TYPE_MAP_MODE_DESCRIPTION: "Отображает регионы, где можно выращивать различные культуры."
+    state_culture_type_map_mode_tooltip: "Выращиваемые культуры: \n§LКартошка§! \n§GБобовые§! [wheat_state_culture_status][rice_state_culture_status][cotton_state_culture_status][corn_state_culture_status]"
+    #state_culture_type_map_mode_tooltip: "[state_culture_type_map_mode_tooltip_status]"
+    state_culture_type_map_mode_tooltip_delayed: ""
+    
+    wheat_state_culture_status_tooltip: "\n§YПшеница§!"
+    rice_state_culture_status_tooltip: "\n§TРис§!"
+    cotton_state_culture_status_tooltip: "\n§gХлопок§!"
+    corn_state_culture_status_tooltip: "\n§OКукуруза§!"
+    
+############################################################
+    
+    MAPMODE_STATE_FERTILITY_MAP_MODE_NAME: "Плодородность"
+    MAPMODE_STATE_FERTILITY_MAP_MODE: "Режим карты: §Hплодородность§!"
+    MAPMODE_STATE_FERTILITY_MAP_MODE_DESCRIPTION: "Отображает текущую плодородность региона."
+    state_fertility_map_mode_tooltip: "Уровень плодородности: §H[?FROM.TOTAL_state_fertility|%1]§!"
+    state_fertility_map_mode_tooltip_delayed: ""
+    
+############################################################
+    
+    MAPMODE_STATE_SOIL_DEPLETION_MAP_MODE_NAME: "Истощенность почв"
+    MAPMODE_STATE_SOIL_DEPLETION_MAP_MODE: "Режим карты: §Hистощенность почв§!"
+    MAPMODE_STATE_SOIL_DEPLETION_MAP_MODE_DESCRIPTION: "Отображает истощенность почв региона."
+    state_soil_depletion_map_mode_tooltip: "Уровень истощенности почв: §H[?FROM.TOTAL_state_soil_depletion_var|%1]§!"
+    state_soil_depletion_map_mode_tooltip_delayed: ""
+ 
