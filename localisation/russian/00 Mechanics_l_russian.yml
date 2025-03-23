@@ -197,3 +197,18 @@
     CLEAR_CLICK: "Отчистить экспорт"
     NUM_ELECTRO_TRADE_GREEN_TEXT: "§G[?THIS.num_electro_export_var]§!"
     NUM_ELECTRO_TRADE_RED_TEXT: "§R[?THIS.num_electro_export_var]§!"
+    
+    
+########################
+### CIVIL PRODUCTION ###
+########################
+   
+   CIV_PRODUCTION_PRODUCTION_LABEL: "Гражданское производство"
+   PRODUCTION_OPERATIONAL_CIVIL_FACTORIES_LABEL: "Гражданские фабрики"
+   
+   civ_production_fertilizer_name: "Удобрения"
+   civ_production_tractor_name: "Трактор"
+   civ_production_factory_machines_name: "Заводские станки"
+   civ_production_computer_name: "Компьютер"
+   
+   

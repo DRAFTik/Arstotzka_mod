@@ -609,3 +609,62 @@ defined_text = {
 		localization_key = corn_state_culture_status_tooltip
 	}
 }
+
+
+defined_text = {		# CUSTOM CIV_PRODUCTION_EQUIPMENT NAME
+    name = get_general_name_civ_production
+    
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_fertilizer }
+		}
+		localization_key = civ_production_fertilizer_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_tractor }
+		}
+		localization_key = civ_production_tractor_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_factory_machines }
+		}
+		localization_key = civ_production_factory_machines_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_computer }
+		}
+		localization_key = civ_production_computer_name
+	}
+}
+
+defined_text = {		# CUSTOM CIV_PRODUCTION_EQUIPMENT IMAGE
+    name = get_civ_production_equipment_icon
+    
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_fertilizer }
+		}
+		localization_key = "GFX_civilian_fertilizer_equipment"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_tractor }
+		}
+		localization_key = "GFX_civilian_tractor_equipment"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_factory_machines }
+		}
+		localization_key = "GFX_civilian_factory_machines_equipment"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_computer }
+		}
+		localization_key = "GFX_civilian_computer_equipment"
+	}
+}

@@ -32,6 +32,7 @@ spriteTypes = {
 	}
 	
 	
+	
 	spriteType = {
 		name = "GFX_provision_icon"
 		texturefile = "gfx/interface/GUI/provision/provision_icon.dds"
@@ -168,5 +169,40 @@ spriteTypes = {
 		name = "GFX_old_antimobile_menu"
 		texturefile = "gfx/interface/old_antimobile_menu.dds"
 		noOfFrames = 3
+	}
+	
+	
+	
+	
+### CIVILIAN IMAGES
+	
+	spriteType = {
+		name = "GFX_civil_prod_header_bg"
+		texturefile = "gfx/interface/civil_prod_header_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_civil_production_line_selected"
+		texturefile = "gfx/interface/civil_production_line_selected.dds"
+	}
+	spriteType = {
+		name = "GFX_civil_equipment_item_large_02"
+		textureFile = "gfx/interface/civil_equipment_item_large_02.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_civilian_fertilizer_equipment"
+		texturefile = "gfx/interface/technologies/technologies/civilian/civilian_fertilizer_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_civilian_tractor_equipment"
+		texturefile = "gfx/interface/technologies/technologies/civilian/civilian_tractor_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_civilian_factory_machines_equipment"
+		texturefile = "gfx/interface/technologies/technologies/civilian/civilian_factory_machines_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_civilian_computer_equipment"
+		texturefile = "gfx/interface/technologies/technologies/civilian/civilian_computer_equipment.dds"
 	}
 }

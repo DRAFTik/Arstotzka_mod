@@ -7,13 +7,10 @@ scripted_gui = {
 		
 		visible = {
 		}
-
-		ai_enabled = {
-			always = no
-		}
 		
 		triggers = {
 		}
+		
 		effects = {
 			civil_production_open_click = {
 				if = {
@@ -22,6 +19,10 @@ scripted_gui = {
 				}
 				else				= { set_variable = { civil_production_line_open_var = 0 } }
 			}
+		}
+		
+		ai_enabled = {
+			always = no
 		}
 	}
 	
@@ -36,15 +37,108 @@ scripted_gui = {
 			check_variable = { civil_production_line_open_var = 1 }
 		}
 		
+		dynamic_lists = {
+			civ_available_equipments_grid = {		# доступная для производства снаряга
+				array = global.civ_available_equipments_ui_array
+				entry_container = scripted_gui_civ_available_equipments_ui_array_entry
+			}
+			civ_production_grid = {					# производимая снаряга
+				array = civ_production_ui_array
+				entry_container = scripted_gui_civ_production_ui_array_entry
+			}
+			civ_factories_grid = {					# число заводов
+				array = civ_factories_ui_array_@var:v
+				entry_container = scripted_gui_civ_factories_ui_array_entry
+			}
+		}
+		
 		properties = {
+            civ_production_equipment_icon = { image = "[get_civ_production_equipment_icon]" }
         }
 		
 		effects = {
 			close_button_click = {
-				set_variable = { civil_production_line_open_var = 0 }
+				set_variable			= { civil_production_line_open_var = 0 }
+			}
+			close_production_line_click = {
+#				while_loop_effect		= {
+#					limit = { civ_factories_ui_array_last_var_@var:v > 0 }
+#					remove_from_array		= { array = civ_factories_ui_array_@var:v 	index = civ_factories_ui_array_last_var_@var:v }
+#					subtract_from_variable	= { civ_factories_ui_array_last_var_@var:v = 1 }
+#				}
+				clear_variable			= civ_factories_ui_array_last_var_@var:v
+				clear_array				= civ_factories_ui_array_@var:v
+				remove_from_array		= { civ_production_ui_array = v }
+			}
+			civ_factories_sub_click	= {
+				subtract_from_variable	= { civ_factories_ui_array_last_var_@var:v = 1 }
+				remove_from_array		= { array = civ_factories_ui_array_@var:v 	index = civ_factories_ui_array_last_var_@var:v }
+			}
+			civ_factories_sub_right_click = {
+				if = {
+					limit = { check_variable = { civ_factories_ui_array_last_var_@var:v > 4 } }
+					set_temp_variable		= { t_counter = 5 }
+					else = {
+						set_temp_variable	= { t_counter = civ_factories_ui_array_last_var_@var:v }
+					}
+				}
+				subtract_from_variable		= { civ_factories_ui_array_last_var_@var:v = t_counter }
+				while_loop_effect			= {
+					limit = { check_variable = { t_counter > 0 } }
+					remove_from_array		= { array = civ_factories_ui_array_@var:v 	index = civ_factories_ui_array_last_var_@var:v }
+					subtract_from_temp_variable = { t_counter = 1 }
+				}
+			}
+			civ_factories_add_click	= {
+				add_to_variable			= { civ_factories_ui_array_last_var_@var:v = 1 }
+				add_to_array			= { civ_factories_ui_array_@var:v = token:civ_factories }
+			}
+			civ_factories_add_right_click = {
+				set_temp_variable			= { t1 = 15 }
+				subtract_from_temp_variable	= { t1 = civ_factories_ui_array_last_var_@var:v }
+				if = {
+					limit = { check_variable	= { t1 > 4 } }
+					set_temp_variable			= { t_counter = 5 }
+					else = {
+						set_temp_variable		= { t_counter = t1 }
+					}
+				}
+				add_to_variable			= { civ_factories_ui_array_last_var_@var:v = t_counter }
+				while_loop_effect		= {
+					limit = { check_variable = { t_counter > 0 } }
+					add_to_array		= { civ_factories_ui_array_@var:v = token:civ_factories }
+					subtract_from_temp_variable = { t_counter = 1 }
+				}
+			}
+			civil_equipment_button_click = {
+				if = {
+					limit = { check_variable = { v = token:civ_production_fertilizer } }
+					add_to_array = { civ_production_ui_array = token:civ_production_fertilizer }
+				}
+				else_if = {
+					limit = { check_variable = { v = token:civ_production_tractor } }
+					add_to_array = { civ_production_ui_array = token:civ_production_tractor }
+				}
+				else_if = {
+					limit = { check_variable = { v = token:civ_production_factory_machines } }
+					add_to_array = { civ_production_ui_array = token:civ_production_factory_machines }
+				}
+				else_if = {
+					limit = { check_variable = { v = token:civ_production_computer } }
+					add_to_array = { civ_production_ui_array = token:civ_production_computer }
+				}
 			}
 		}
 		triggers = {
+			civ_factories_sub_click_enabled = {
+				check_variable = { civ_factories_ui_array_last_var_@var:v > 0 }
+			}
+			civ_factories_add_click_enabled = {
+				check_variable = { civ_factories_ui_array_last_var_@var:v < 15 }
+			}
+			civil_equipment_button_click_enabled = {
+				NOT = { is_in_array = { civ_production_ui_array = v } }
+			}
 		}
 		
 		ai_enabled = {

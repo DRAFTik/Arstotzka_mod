@@ -8,10 +8,17 @@ on_actions = {
 			add_to_array = { global.state_culture_ui_array = token:state_culture_legumes }
 			add_to_array = { global.state_culture_ui_array = token:state_culture_cotton }
 			add_to_array = { global.state_culture_ui_array = token:state_culture_corn }
+			
+			add_to_array = { global.civ_available_equipments_ui_array = token:civ_production_fertilizer }
+			add_to_array = { global.civ_available_equipments_ui_array = token:civ_production_tractor }
+			add_to_array = { global.civ_available_equipments_ui_array = token:civ_production_factory_machines }
+			add_to_array = { global.civ_available_equipments_ui_array = token:civ_production_computer }
+			
+			
 			SAI = {
 				set_variable = { global.num_of_extra_tank_school_var = 5 }
-				effect_calculate_base_nof			= yes
-				set_fertility_in_ALL_state_effect	= yes
+				effect_calculate_base_nof					= yes
+				set_fertility_in_ALL_state_effect			= yes
 			}
 			every_possible_country = {
 				default_party_popularity_PP_gain			= yes

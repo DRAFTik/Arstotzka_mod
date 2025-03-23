@@ -53,7 +53,7 @@ scripted_gui = {
 		dynamic_lists = {
 			state_culture_grid = {
 				array = global.state_culture_ui_array
-				entry_container = scripted_gui_state_culture_ui_array_ui_entry
+				entry_container = scripted_gui_state_culture_ui_array_entry
 			}
 		}
 		

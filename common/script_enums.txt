@@ -714,4 +714,10 @@ script_enum_special_tokens = {
 	state_culture_legumes
 	state_culture_cotton
 	state_culture_corn
+	
+	
+	civ_production_fertilizer
+	civ_production_tractor
+	civ_production_factory_machines
+	civ_production_computer
 }
