@@ -446,8 +446,10 @@ calculate_provision_start_effect = {
 		subtract_from_temp_variable	= { PYtemp = TOTAL_state_soil_depletion_var }
 		multiply_temp_variable		= { PYtemp = modifier@num_generation_provision_yearly }
 		multiply_temp_variable		= { PYtemp = TOTAL_state_fertility }
-		add_to_temp_variable		= { temp1 = PYtemp }
+		add_to_variable				= { PREV.temp_var = PYtemp }
 	}
+	set_temp_variable		= { temp1 = temp_var }
+	clear_variable			= temp_var
 	
 	set_temp_variable		= { temp3 = 1 }
 	add_to_temp_variable	= { temp3 = modifier@num_generation_provision_yearly_factor }
@@ -480,18 +482,18 @@ calculate_provision_start_effect = {
 	set_temp_variable		= { weekly_income_delta = modifier@provision_income_modifier }
 	multiply_temp_variable	= { weekly_income_delta = weekly_income_provision }
 	subtract_from_variable	= { weekly_income_delta = income_temp1 }
-	add_to_variable			= { weekly_income_provision = weekly_income_delta }						# БАФ/ДЕБАФ
+	add_to_variable			= { weekly_income_provision = weekly_income_delta }							# БАФ/ДЕБАФ
 
 # ПОЛЯ
 #	set_temp_variable		= { yearly_income_provision_temp = agro_complex_total }
 #	multiply_temp_variable	= { yearly_income_provision_temp = 300 }
-	set_variable			= { yearly_income_provision = temp1 }									# для текста
+	set_variable			= { yearly_income_provision = temp1 }										# для текста
 	
 	set_temp_variable		= { income_temp1 = yearly_income_provision }
 	set_temp_variable		= { yearly_income_delta = modifier@provision_income_modifier }
 	multiply_temp_variable	= { yearly_income_delta = yearly_income_provision }
 	subtract_from_variable	= { yearly_income_delta = income_temp1 }
-	add_to_variable			= { yearly_income_provision = yearly_income_delta }						# БАФ/ДЕБАФ
+	add_to_variable			= { yearly_income_provision = yearly_income_delta }							# БАФ/ДЕБАФ
 
 # ЭЛЕВАТОРЫ
 #	set_temp_variable		= { monthly_save_provision_temp = agro_silo_total }
@@ -511,26 +513,26 @@ calculate_provision_start_effect = {
 # ПАРАМЕТР ТОПБАРА
 	set_variable			= { provision_balance_var = weekly_income_provision }
 	divide_variable			= { provision_balance_var = 7 }
-	subtract_from_variable	= { provision_balance_var = provision_need_temp }				# для текста
+	subtract_from_variable	= { provision_balance_var = provision_need_temp }							# для текста
 	
 	if = {
 		limit				= { check_variable = { provision_total_var < 0 } }
 		set_variable		= { provision_total_var = 0 }
 		
 		set_variable		= { provision_percent_var = provision_balance_var }
-		divide_variable		= { provision_percent_var = provision_need_temp }					# для текста
+		divide_variable		= { provision_percent_var = provision_need_temp }							# для текста
 		else = {
 			set_variable	= { provision_percent_var = provision_total_var }
-			divide_variable	= { provision_percent_var = provision_need_temp }				# для текста
+			divide_variable	= { provision_percent_var = provision_need_temp }							# для текста
 		}
 	}
 	
 	clamp_variable			= { var = provision_total_var min = 0 max = max_provision_total_var }
 	set_variable			= { provision_percent_to_max_var = provision_total_var }
-	divide_variable			= { provision_percent_to_max_var = max_provision_total_var }			# для текста
+	divide_variable			= { provision_percent_to_max_var = max_provision_total_var }				# для текста
 	
 	set_variable			= { provision_ratio_var = provision_percent_to_max_var }
-	multiply_variable		= { provision_ratio_var = 100 }										# для ГУИ
+	multiply_variable		= { provision_ratio_var = 100 }												# для ГУИ
 	
 	if = {
 		limit				= { check_variable = { provision_percent_var < 0 } }
@@ -538,14 +540,14 @@ calculate_provision_start_effect = {
 	}
 	
 	set_variable			= { provision_delta_var = provision_total_var }
-	subtract_from_variable	= { provision_delta_var = provision_ex_delta_var }				# для текста ?
+	subtract_from_variable	= { provision_delta_var = provision_ex_delta_var }							# для текста ?
 	set_variable			= { provision_ex_delta_var = provision_total_var }
 	
 	set_variable			= { provision_days_var = provision_percent_var }							# для текста
 	set_variable			= { provision_month_var = provision_days_var }
-	divide_variable			= { provision_month_var = 30 }											# для текста
+	divide_variable			= { provision_month_var = 30 }												# для текста
 	set_variable			= { provision_year_var = provision_month_var }
-	divide_variable			= { provision_year_var = 12 }											# для текста
+	divide_variable			= { provision_year_var = 12 }												# для текста
 	
 	set_variable			= { provision_goal_var = provision_total_var }
 	if = {
@@ -621,10 +623,12 @@ calculate_provision_daily_effect = {
 		subtract_from_temp_variable	= { PYtemp = TOTAL_state_soil_depletion_var }
 		multiply_temp_variable		= { PYtemp = modifier@num_generation_provision_yearly }
 		multiply_temp_variable		= { PYtemp = TOTAL_state_fertility }
-		add_to_temp_variable		= { temp1 = PYtemp }
+		add_to_variable				= { PREV.temp_var = PYtemp }
 	}
+	set_temp_variable		= { temp1 = temp_var }
+	clear_variable			= temp_var
 	multiply_temp_variable	= { temp1 = num_generation_provision_yearly_var }
-	set_variable			= { yearly_income_provision = temp1 }	# для текста
+	set_variable			= { yearly_income_provision = temp1 }										# для текста
 	
 	set_temp_variable		= { income_temp1 = yearly_income_provision }
 	set_temp_variable		= { yearly_income_delta = modifier@provision_income_modifier }
@@ -752,6 +756,72 @@ calculate_provision_monthly_effect = {		# порча еды
 	}
 }
 
+
+set_sowing_work_has_begun_provision_effect = {
+	if = {			### БОБОВЫЕ
+		limit = {
+			meta_trigger = {
+				text = {
+					date > [YEAR].2.28
+					date < [YEAR].3.2
+				}
+				YEAR = "[?global.year]"
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				is_fully_controlled_by = PREV
+				has_state_flag = state_culture_LEGUMES_state_flag
+			}
+			set_state_flag = state_culture_sowing_work_has_begun_state_flag
+		}
+	}
+	else_if = {		### ПШЕНИЦА + КАРТОФЕЛЬ + ХЛОПОК
+		limit = {
+			meta_trigger = {
+				text = {
+					date > [YEAR].3.28
+					date < [YEAR].4.2
+				}
+				YEAR = "[?global.year]"
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				is_fully_controlled_by = PREV
+				OR = {
+					has_state_flag = state_culture_WHEAT_state_flag
+					has_state_flag = state_culture_POTATO_state_flag
+					has_state_flag = state_culture_COTTON_state_flag
+				}
+			}
+			set_state_flag = state_culture_sowing_work_has_begun_state_flag
+		}
+	}
+	else_if = {		### РИС + КУКУРУЗА
+		limit = {
+			meta_trigger = {
+				text = {
+					date > [YEAR].4.28
+					date < [YEAR].5.2
+				}
+				YEAR = "[?global.year]"
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				is_fully_controlled_by = PREV
+				OR = {
+					has_state_flag = state_culture_RICE_state_flag
+					has_state_flag = state_culture_CORN_state_flag
+				}
+			}
+			set_state_flag = state_culture_sowing_work_has_begun_state_flag
+		}
+	}
+}
+
+
 OLD_calculate_provision_yearly_effect = {
 	if = {
 		limit							= { check_variable = { chance_of_crop_failure_var > 99 } }
@@ -764,46 +834,236 @@ OLD_calculate_provision_yearly_effect = {
 	random_list = {
 		var:chance_of_crop_failure_var = {		# НЕУРОЖАЙ
 			set_variable				= { chance_of_crop_failure_var = 15 }
-			set_temp_variable			= { yearly_income_provision_temp = yearly_income_provision }
-			multiply_temp_variable		= { yearly_income_provision_temp = 0.25 }
+			set_variable				= { yearly_income_provision_harvest_type_mult = 0.25 }
 			set_country_flag			= { flag = crop_failure_flag days = 150 value = 1 }
 		}
 		temp_var:temp_random = {
-			add_to_variable					= { chance_of_crop_failure_var = 33 }
+			add_to_variable				= { chance_of_crop_failure_var = 33 }
 			random_list = {
 				10 = {
-					set_temp_variable		= { yearly_income_provision_temp = yearly_income_provision }
-					multiply_temp_variable	= { yearly_income_provision_temp = 1.25 }
-					set_country_flag		= { flag = record_harvest_flag days = 150 value = 1 }
+					set_variable		= { yearly_income_provision_harvest_type_mult = 1.25 }
+					set_country_flag	= { flag = record_harvest_flag days = 150 value = 1 }
 				}
 				90 = {
-					set_temp_variable		= { yearly_income_provision_temp = yearly_income_provision }
-					set_country_flag		= { flag = normal_harvest_flag days = 150 value = 1  }
+					set_variable		= { yearly_income_provision_harvest_type_mult = 1 }
+					set_country_flag	= { flag = normal_harvest_flag days = 150 value = 1  }
 				}
 			}
 		}
 	}
-	add_to_variable			= { provision_total_var = yearly_income_provision_temp }
-	clamp_variable			= { var = provision_total_var min = 0 max = max_provision_total_var }
+#	add_to_variable			= { provision_total_var = yearly_income_provision_harvest_type_mult }
+#	clamp_variable			= { var = provision_total_var min = 0 max = max_provision_total_var }
+}
+
+test_1 = {
+	SAI = {
+		every_other_country = {
+			calculate_provision_yearly_effect	= yes			# урожай культур
+		}
+	}
 }
 
 calculate_provision_yearly_effect = {
-	every_controlled_state = {
+#	every_controlled_state = {
+#		limit = {
+#			is_fully_controlled_by = PREV
+#			check_variable = { modifier@num_generation_provision_yearly > 0 }
+#		}
+#		set_temp_variable			= { PYtemp = 1 }
+#		subtract_from_temp_variable	= { PYtemp = TOTAL_state_soil_depletion_var }
+#		multiply_temp_variable		= { PYtemp = modifier@num_generation_provision_yearly }
+#		multiply_temp_variable		= { PYtemp = TOTAL_state_fertility }
+#		add_to_temp_variable		= { yearly_income_provision_temp = PYtemp }
+#	}
+#	
+#	add_to_variable					= { provision_total_var = yearly_income_provision_temp }
+#	clamp_variable					= { var = provision_total_var min = 0 max = max_provision_total_var }
+#	log = "[GetDateText]: [This.GetName] ([This.GetTag]): yearly_income_provision_temp [?yearly_income_provision_temp]"
+	
+	
+	
+	
+	if = {			### БОБОВЫЕ (80 %)
 		limit = {
-			is_fully_controlled_by = PREV
-			check_variable = { modifier@num_generation_provision_yearly > 0 }
+			meta_trigger = {
+				text = {
+					date > [YEAR].7.28
+					date < [YEAR].8.2
+				}
+				YEAR = "[?global.year]"
+			}
 		}
-		set_temp_variable			= { PYtemp = 1 }
-		subtract_from_temp_variable	= { PYtemp = TOTAL_state_soil_depletion_var }
-		multiply_temp_variable		= { PYtemp = modifier@num_generation_provision_yearly }
-		multiply_temp_variable		= { PYtemp = TOTAL_state_fertility }
-		add_to_temp_variable		= { yearly_income_provision_temp = PYtemp }
+		OLD_calculate_provision_yearly_effect = yes
+		
+		every_controlled_state = {
+			limit = {
+				is_fully_controlled_by = PREV
+				has_state_flag = state_culture_LEGUMES_state_flag
+			}
+			clr_state_flag				= state_culture_sowing_work_has_begun_state_flag
+			add_to_variable				= { TOTAL_soil_dirty = 0.01 }
+			
+			set_temp_variable			= { PYtemp_@PREV = 1 }
+			subtract_from_temp_variable	= { PYtemp_@PREV = TOTAL_state_soil_depletion_var }
+			multiply_temp_variable		= { PYtemp_@PREV = modifier@num_generation_provision_yearly }
+			multiply_temp_variable		= { PYtemp_@PREV = TOTAL_state_fertility }
+			multiply_temp_variable		= { PYtemp_@PREV = 0.80 }
+			multiply_temp_variable		= { PYtemp_@PREV = PREV.yearly_income_provision_harvest_type_mult }
+			add_to_temp_variable		= { yearly_income_provision_temp = PYtemp_@PREV }
+			
+			add_to_variable				= { TOTAL_state_soil_depletion_var = -0.05 }
+			clamp_variable				= { var = TOTAL_state_soil_depletion_var min = 0 max = 1 }
+			set_variable				= { GUI_state_soil_depletion_var = TOTAL_state_soil_depletion_var }
+			multiply_variable			= { GUI_state_soil_depletion_var = 100 }
+		}
+		
+		add_to_variable					= { provision_total_var = yearly_income_provision_temp }
+		clamp_variable					= { var = provision_total_var min = 0 max = max_provision_total_var }
 	}
-	
-	add_to_variable			= { provision_total_var = yearly_income_provision_temp }
-	clamp_variable			= { var = provision_total_var min = 0 max = max_provision_total_var }
-	log = "[GetDateText]: [This.GetName] ([This.GetTag]): yearly_income_provision_temp [?yearly_income_provision_temp]"
-	
+	else_if = {		### ПШЕНИЦА (115 %) + КАРТОФЕЛЬ (100 %)
+		limit = {
+			meta_trigger = {
+				text = {
+					date > [YEAR].8.28
+					date < [YEAR].9.2
+				}
+				YEAR = "[?global.year]"
+			}
+		}
+		log = "==============================================================="
+		set_variable = { provision_total_var = 0 }
+		log = "[GetDateText]: [This.GetName] ([This.GetTag]): provision_total_var_1: [?provision_total_var]"
+		every_controlled_state = {
+			limit = {
+				is_fully_controlled_by = PREV
+				OR = {
+					has_state_flag = state_culture_WHEAT_state_flag
+					has_state_flag = state_culture_POTATO_state_flag
+				}
+			}
+			clr_state_flag					= state_culture_sowing_work_has_begun_state_flag
+			
+			set_temp_variable				= { PYtemp = 1 }
+			subtract_from_temp_variable		= { PYtemp = TOTAL_state_soil_depletion_var }
+			multiply_temp_variable			= { PYtemp = modifier@num_generation_provision_yearly }
+			multiply_temp_variable			= { PYtemp = TOTAL_state_fertility }
+			if = {
+				limit = { has_state_flag = state_culture_WHEAT_state_flag }
+				multiply_temp_variable		= { PYtemp = 1.15 }
+				add_to_variable				= { TOTAL_state_soil_depletion_var = 0.15 }
+			}
+			else = {
+#				add_to_variable				= { TOTAL_state_soil_depletion_var = 0.08 }
+			}
+			clamp_variable					= { var = TOTAL_state_soil_depletion_var min = 0 max = 1 }
+			set_variable					= { GUI_state_soil_depletion_var = TOTAL_state_soil_depletion_var }
+			multiply_variable				= { GUI_state_soil_depletion_var = 100 }
+			multiply_temp_variable			= { PYtemp = PREV.yearly_income_provision_harvest_type_mult }
+			add_to_variable					= { PREV.yearly_income_provision_temp = PYtemp }
+			
+			add_to_variable					= { TOTAL_soil_dirty = 0.01 }
+		}
+		log = "[GetDateText]: [This.GetName] ([This.GetTag]): yearly_income_provision_temp: [?yearly_income_provision_temp]"
+		add_to_variable						= { provision_total_var = yearly_income_provision_temp }
+		clamp_variable						= { var = provision_total_var min = 0 max = max_provision_total_var }
+		log = "[GetDateText]: [This.GetName] ([This.GetTag]): provision_total_var_2: [?provision_total_var]"
+		clear_variable						= provision_total_var
+	}
+	else_if = {		### РИС (120 %) + КУКУРУЗА (140 %)
+		limit = {
+			meta_trigger = {
+				text = {
+					date > [YEAR].9.28
+					date < [YEAR].10.2
+				}
+				YEAR = "[?global.year]"
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				is_fully_controlled_by = PREV
+				OR = {
+					has_state_flag = state_culture_RICE_state_flag
+					has_state_flag = state_culture_CORN_state_flag
+				}
+			}
+			clr_state_flag					= state_culture_sowing_work_has_begun_state_flag
+			add_to_variable					= { TOTAL_soil_dirty = 0.01 }
+			
+			set_temp_variable				= { PYtemp = 1 }
+			subtract_from_temp_variable		= { PYtemp = TOTAL_state_soil_depletion_var }
+			multiply_temp_variable			= { PYtemp = modifier@num_generation_provision_yearly }
+			multiply_temp_variable			= { PYtemp = TOTAL_state_fertility }
+			if = {
+				limit = {
+					has_state_flag = state_culture_RICE_state_flag
+				}
+				multiply_temp_variable		= { PYtemp = 1.2 }
+				add_to_variable				= { TOTAL_state_soil_depletion_var = 0.12 }
+			}
+			else_if = {
+				limit = {
+					has_state_flag = state_culture_CORN_state_flag
+				}
+				multiply_temp_variable		= { PYtemp = 1.4 }
+				add_to_variable				= { TOTAL_state_soil_depletion_var = 0.18 }
+			}
+			clamp_variable					= { var = TOTAL_state_soil_depletion_var min = 0 max = 1 }
+			set_variable					= { GUI_state_soil_depletion_var = TOTAL_state_soil_depletion_var }
+			multiply_variable				= { GUI_state_soil_depletion_var = 100 }
+			
+			multiply_temp_variable			= { PYtemp = PREV.yearly_income_provision_harvest_type_mult }
+			add_to_temp_variable			= { yearly_income_provision_temp = PYtemp }
+		}
+		add_to_variable						= { provision_total_var = yearly_income_provision_temp }
+		clamp_variable						= { var = provision_total_var min = 0 max = max_provision_total_var }
+	}
+	else_if = {		### ХЛОПОК // (70 %)
+		limit = {
+			meta_trigger = {
+				text = {
+					date > [YEAR].10.28
+					date < [YEAR].11.2
+				}
+				YEAR = "[?global.year]"
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				is_fully_controlled_by = PREV
+				has_state_flag = state_culture_COTTON_state_flag
+			}
+			clr_state_flag					= state_culture_sowing_work_has_begun_state_flag
+			add_to_variable					= { TOTAL_soil_dirty = 0.01 }
+			
+			set_temp_variable				= { PYtemp = 1 }
+			subtract_from_temp_variable		= { PYtemp = TOTAL_state_soil_depletion_var }
+			multiply_temp_variable			= { PYtemp = modifier@num_generation_provision_yearly }
+			multiply_temp_variable			= { PYtemp = TOTAL_state_fertility }
+			multiply_temp_variable			= { PYtemp = 0.70 }
+			multiply_temp_variable			= { PYtemp = PREV.yearly_income_provision_harvest_type_mult }
+			add_to_temp_variable			= { yearly_income_provision_temp = PYtemp }
+			
+			add_to_variable					= { TOTAL_state_soil_depletion_var = 0.10 }
+			clamp_variable					= { var = TOTAL_state_soil_depletion_var min = 0 max = 1 }
+			set_variable					= { GUI_state_soil_depletion_var = TOTAL_state_soil_depletion_var }
+			multiply_variable				= { GUI_state_soil_depletion_var = 100 }
+		}
+#		add_to_variable						= { provision_total_var = yearly_income_provision_temp }
+#		clamp_variable						= { var = provision_total_var min = 0 max = max_provision_total_var }
+		
+		### ТНП !!!
+		
+		
+		every_state = {		# проверка на случай войн и прочих причин отсутствия полного контроля регионов
+			limit = {
+				has_state_flag = state_culture_sowing_work_has_begun_state_flag
+			}
+			clr_state_flag	= state_culture_sowing_work_has_begun_state_flag
+			add_to_variable	= { TOTAL_soil_dirty = 0.01 }
+		}
+		clear_variable		= yearly_income_provision_harvest_type_mult
+	}
 }
 
 calculate_provision_need_effect = {
@@ -879,7 +1139,7 @@ calculate_change_population_weekly_effect = {
 		limit						= { check_variable = { var = modifier@num_change_population_weekly	value = 0 compare = not_equals } }
 		every_controlled_state = {
 			set_temp_variable		= { state_hunger_change_population_temp = state_population_k }
-			multiply_temp_variable	= { state_hunger_change_population_temp = ROOT.modifier@num_change_population_weekly }
+			multiply_temp_variable	= { state_hunger_change_population_temp = PREV.modifier@num_change_population_weekly }
 			multiply_temp_variable	= { state_hunger_change_population_temp = 1000 }
 			round_temp_variable		= state_hunger_change_population_temp
 			add_manpower			= var:state_hunger_change_population_temp
@@ -1462,6 +1722,180 @@ drop_all_state_culture_flags = {
 	clr_state_flag = state_culture_COTTON_state_flag
 	clr_state_flag = state_culture_CORN_state_flag
 }
+
+
+calculate_civ_production_prod_speed_effect = {
+	set_temp_variable		= { civ_factory_base_speed_temp = civ_factories_ui_array_last_var_@token:civ_production_consumer_goods }
+	multiply_temp_variable	= { civ_factory_base_speed_temp = 5 }
+	divide_temp_variable	= { civ_factory_base_speed_temp = global.civ_factories_production_cost_@token:civ_production_consumer_goods }
+	set_variable			= { civ_factory_total_speed_@token:civ_production_consumer_goods = civ_factory_base_speed_temp }									# скорость производства снаряги
+	
+	set_temp_variable		= { civ_current_efficiency_temp = civ_current_efficiency_@token:civ_production_consumer_goods }										# бонус от эффективности
+	divide_temp_variable	= { civ_current_efficiency_temp = 100 }
+	multiply_variable		= { civ_factory_total_speed_@token:civ_production_consumer_goods = civ_current_efficiency_temp }
+	
+	add_to_variable			= { civ_factory_counter_production_@token:civ_production_consumer_goods = civ_factory_total_speed_@token:civ_production_consumer_goods }		# с десятыми долями
+	set_temp_variable		= { civ_factory_num_production_@token:civ_production_consumer_goods = civ_factory_counter_production_@token:civ_production_consumer_goods }
+	if = {
+		limit = { check_variable = { var = civ_factory_num_production_@token:civ_production_consumer_goods value = 1 compare = greater_than_or_equals } }		# если производство больше 1 шт\день
+		round_temp_variable			= civ_factory_num_production_@token:civ_production_consumer_goods
+		add_equipment_to_stockpile	= { type = civ_production_consumer_goods amount = civ_factory_num_production_@token:civ_production_consumer_goods }
+		subtract_from_variable		= { civ_factory_counter_production_@token:civ_production_consumer_goods = civ_factory_num_production_@token:civ_production_consumer_goods }
+	}
+########
+	set_temp_variable		= { civ_factory_base_speed_temp = civ_factories_ui_array_last_var_@token:civ_production_fertilizer }
+	multiply_temp_variable	= { civ_factory_base_speed_temp = 5 }
+	divide_temp_variable	= { civ_factory_base_speed_temp = global.civ_factories_production_cost_@token:civ_production_fertilizer }
+	set_variable			= { civ_factory_total_speed_@token:civ_production_fertilizer = civ_factory_base_speed_temp }
+	
+	set_temp_variable		= { civ_current_efficiency_temp = civ_current_efficiency_@token:civ_production_fertilizer }										# бонус от эффективности
+	divide_temp_variable	= { civ_current_efficiency_temp = 100 }
+	multiply_variable		= { civ_factory_total_speed_@token:civ_production_fertilizer = civ_current_efficiency_temp }
+	
+	add_to_variable			= { civ_factory_counter_production_@token:civ_production_fertilizer = civ_factory_total_speed_@token:civ_production_fertilizer }		# с десятыми долями
+	set_temp_variable		= { civ_factory_num_production_@token:civ_production_fertilizer = civ_factory_counter_production_@token:civ_production_fertilizer }
+	if = {
+		limit = { check_variable = { var = civ_factory_num_production_@token:civ_production_fertilizer value = 1 compare = greater_than_or_equals } }				# если производство больше 1 шт\день
+		round_temp_variable			= civ_factory_num_production_@token:civ_production_fertilizer
+		add_equipment_to_stockpile	= { type = civ_production_fertilizer amount = civ_factory_num_production_@token:civ_production_fertilizer }
+		subtract_from_variable		= { civ_factory_counter_production_@token:civ_production_fertilizer = civ_factory_num_production_@token:civ_production_fertilizer }
+	}
+########
+	set_temp_variable		= { civ_factory_base_speed_temp = civ_factories_ui_array_last_var_@token:civ_production_tractor }
+	multiply_temp_variable	= { civ_factory_base_speed_temp = 5 }
+	divide_temp_variable	= { civ_factory_base_speed_temp = global.civ_factories_production_cost_@token:civ_production_tractor }
+	set_variable			= { civ_factory_total_speed_@token:civ_production_tractor = civ_factory_base_speed_temp }
+	
+	set_temp_variable		= { civ_current_efficiency_temp = civ_current_efficiency_@token:civ_production_tractor }										# бонус от эффективности
+	divide_temp_variable	= { civ_current_efficiency_temp = 100 }
+	multiply_variable		= { civ_factory_total_speed_@token:civ_production_tractor = civ_current_efficiency_temp }
+	
+	add_to_variable			= { civ_factory_counter_production_@token:civ_production_tractor = civ_factory_total_speed_@token:civ_production_tractor }		# с десятыми долями
+	set_temp_variable		= { civ_factory_num_production_@token:civ_production_tractor = civ_factory_counter_production_@token:civ_production_tractor }
+	if = {
+		limit = { check_variable = { var = civ_factory_num_production_@token:civ_production_tractor value = 1 compare = greater_than_or_equals } }			# если производство больше 1 шт\день
+		round_temp_variable			= civ_factory_num_production_@token:civ_production_tractor
+		add_equipment_to_stockpile	= { type = civ_production_tractor amount = civ_factory_num_production_@token:civ_production_tractor }
+		subtract_from_variable		= { civ_factory_counter_production_@token:civ_production_tractor = civ_factory_num_production_@token:civ_production_tractor }
+	}
+########
+	set_temp_variable		= { civ_factory_base_speed_temp = civ_factories_ui_array_last_var_@token:civ_production_factory_machines }
+	multiply_temp_variable	= { civ_factory_base_speed_temp = 5 }
+	divide_temp_variable	= { civ_factory_base_speed_temp = global.civ_factories_production_cost_@token:civ_production_factory_machines }
+	set_variable			= { civ_factory_total_speed_@token:civ_production_factory_machines = civ_factory_base_speed_temp }
+	
+	set_temp_variable		= { civ_current_efficiency_temp = civ_current_efficiency_@token:civ_production_factory_machines }										# бонус от эффективности
+	divide_temp_variable	= { civ_current_efficiency_temp = 100 }
+	multiply_variable		= { civ_factory_total_speed_@token:civ_production_factory_machines = civ_current_efficiency_temp }
+	
+	add_to_variable			= { civ_factory_counter_production_@token:civ_production_factory_machines = civ_factory_total_speed_@token:civ_production_factory_machines }		# с десятыми долями
+	set_temp_variable		= { civ_factory_num_production_@token:civ_production_factory_machines = civ_factory_counter_production_@token:civ_production_factory_machines }
+	if = {
+		limit = { check_variable = { var = civ_factory_num_production_@token:civ_production_factory_machines value = 1 compare = greater_than_or_equals } }						# если производство больше 1 шт\день
+		round_temp_variable			= civ_factory_num_production_@token:civ_production_factory_machines
+		add_equipment_to_stockpile	= { type = civ_production_factory_machines amount = civ_factory_num_production_@token:civ_production_factory_machines }
+		subtract_from_variable		= { civ_factory_counter_production_@token:civ_production_factory_machines = civ_factory_num_production_@token:civ_production_factory_machines }
+	}
+########
+	set_temp_variable		= { civ_factory_base_speed_temp = civ_factories_ui_array_last_var_@token:civ_production_computer }
+	multiply_temp_variable	= { civ_factory_base_speed_temp = 5 }
+	divide_temp_variable	= { civ_factory_base_speed_temp = global.civ_factories_production_cost_@token:civ_production_computer }
+	set_variable			= { civ_factory_total_speed_@token:civ_production_computer = civ_factory_base_speed_temp }
+	
+	set_temp_variable		= { civ_current_efficiency_temp = civ_current_efficiency_@token:civ_production_computer }										# бонус от эффективности
+	divide_temp_variable	= { civ_current_efficiency_temp = 100 }
+	multiply_variable		= { civ_factory_total_speed_@token:civ_production_computer = civ_current_efficiency_temp }
+	
+	add_to_variable			= { civ_factory_counter_production_@token:civ_production_computer = civ_factory_total_speed_@token:civ_production_computer }				# с десятыми долями
+	set_temp_variable		= { civ_factory_num_production_@token:civ_production_computer = civ_factory_counter_production_@token:civ_production_computer }
+	if = {
+		limit = { check_variable = { var = civ_factory_num_production_@token:civ_production_computer value = 1 compare = greater_than_or_equals } }						# если производство больше 1 шт\день
+		round_temp_variable			= civ_factory_num_production_@token:civ_production_computer
+		add_equipment_to_stockpile	= { type = civ_production_computer amount = civ_factory_num_production_@token:civ_production_computer }
+		subtract_from_variable		= { civ_factory_counter_production_@token:civ_production_computer = civ_factory_num_production_@token:civ_production_computer }
+	}
+########
+}
+
+calculate_efficiency_civ_production_effect = {
+	if = {
+		limit = { check_variable = { civ_current_efficiency_@token:civ_production_consumer_goods < civ_max_efficiency_@token:civ_production_consumer_goods } }
+		set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_consumer_goods }		# 0.05%
+		multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }
+		divide_temp_variable	= { t1 = 100 }
+		### МНОЖИТЕЛИ РОСТА
+		add_to_variable			= { civ_current_efficiency_@token:civ_production_consumer_goods = t1 }
+	}
+	if = {
+		limit = { check_variable = { civ_current_efficiency_@token:civ_production_fertilizer < civ_max_efficiency_@token:civ_production_fertilizer } }
+		set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_fertilizer }		# 0.05%
+		multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }
+		divide_temp_variable	= { t1 = 100 }
+		### МНОЖИТЕЛИ РОСТА
+		add_to_variable			= { civ_current_efficiency_@token:civ_production_fertilizer = t1 }
+	}
+	if = {
+		limit = { check_variable = { civ_current_efficiency_@token:civ_production_tractor < civ_max_efficiency_@token:civ_production_tractor } }
+		set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_tractor }		# 0.05%
+		multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }
+		divide_temp_variable	= { t1 = 100 }
+		### МНОЖИТЕЛИ РОСТА
+		add_to_variable			= { civ_current_efficiency_@token:civ_production_tractor = t1 }
+	}
+	if = {
+		limit = { check_variable = { civ_current_efficiency_@token:civ_production_factory_machines < civ_max_efficiency_@token:civ_production_factory_machines } }
+		set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_factory_machines }		# 0.05%
+		multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }
+		divide_temp_variable	= { t1 = 100 }
+		### МНОЖИТЕЛИ РОСТА
+		add_to_variable			= { civ_current_efficiency_@token:civ_production_factory_machines = t1 }
+	}
+	if = {
+		limit = { check_variable = { civ_current_efficiency_@token:civ_production_computer < civ_max_efficiency_@token:civ_production_computer } }
+		set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_computer }		# 0.05%
+		multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }
+		divide_temp_variable	= { t1 = 100 }
+		### МНОЖИТЕЛИ РОСТА
+		add_to_variable			= { civ_current_efficiency_@token:civ_production_computer = t1 }
+	}
+	clamp_variable				= { var = civ_current_efficiency_@token:civ_production_consumer_goods	min = 0 max = civ_max_efficiency_@token:civ_production_consumer_goods }
+	clamp_variable				= { var = civ_current_efficiency_@token:civ_production_fertilizer		min = 0 max = civ_max_efficiency_@token:civ_production_fertilizer }
+	clamp_variable				= { var = civ_current_efficiency_@token:civ_production_tractor			min = 0 max = civ_max_efficiency_@token:civ_production_tractor }
+	clamp_variable				= { var = civ_current_efficiency_@token:civ_production_factory_machines	min = 0 max = civ_max_efficiency_@token:civ_production_factory_machines }
+	clamp_variable				= { var = civ_current_efficiency_@token:civ_production_computer			min = 0 max = civ_max_efficiency_@token:civ_production_factory_machines }
+	
+	
+	
+	initiate_GUI_efficiency_civ_production_bar = yes
+}
+
+initiate_GUI_efficiency_civ_production_bar = {
+	set_variable			= { GUI_civ_current_efficiency_@token:civ_production_consumer_goods = civ_current_efficiency_@token:civ_production_consumer_goods }
+#	multiply_variable		= { GUI_civ_current_efficiency_@token:civ_production_consumer_goods = 100 }
+	set_variable			= { GUI_civ_max_efficiency_@token:civ_production_consumer_goods = civ_max_efficiency_@token:civ_production_consumer_goods }
+#	multiply_variable		= { GUI_civ_max_efficiency_@token:civ_production_consumer_goods = 100 }
+	
+	set_variable			= { GUI_civ_current_efficiency_@token:civ_production_fertilizer = civ_current_efficiency_@token:civ_production_fertilizer }
+#	multiply_variable		= { GUI_civ_current_efficiency_@token:civ_production_fertilizer = 100 }
+	set_variable			= { GUI_civ_max_efficiency_@token:civ_production_fertilizer = civ_max_efficiency_@token:civ_production_fertilizer }
+#	multiply_variable		= { GUI_civ_max_efficiency_@token:civ_production_fertilizer = 100 }
+	
+	set_variable			= { GUI_civ_current_efficiency_@token:civ_production_tractor = civ_current_efficiency_@token:civ_production_tractor }
+#	multiply_variable		= { GUI_civ_current_efficiency_@token:civ_production_tractor = 100 }
+	set_variable			= { GUI_civ_max_efficiency_@token:civ_production_tractor = civ_max_efficiency_@token:civ_production_tractor }
+#	multiply_variable		= { GUI_civ_max_efficiency_@token:civ_production_tractor = 100 }
+	
+	set_variable			= { GUI_civ_current_efficiency_@token:civ_production_factory_machines = civ_current_efficiency_@token:civ_production_factory_machines }
+#	multiply_variable		= { GUI_civ_current_efficiency_@token:civ_production_factory_machines = 100 }
+	set_variable			= { GUI_civ_max_efficiency_@token:civ_production_factory_machines = civ_max_efficiency_@token:civ_production_factory_machines }
+#	multiply_variable		= { GUI_civ_max_efficiency_@token:civ_production_factory_machines = 100 }
+	
+	set_variable			= { GUI_civ_current_efficiency_@token:civ_production_computer = civ_current_efficiency_@token:civ_production_computer }
+#	multiply_variable		= { GUI_civ_current_efficiency_@token:civ_production_computer = 100 }
+	set_variable			= { GUI_civ_max_efficiency_@token:civ_production_computer = civ_max_efficiency_@token:civ_production_computer }
+#	multiply_variable		= { GUI_civ_max_efficiency_@token:civ_production_computer = 100 }
+}
+
 
 effect_1 = {
 #	set_temp_variable		= { test_temp = 0 }

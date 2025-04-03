@@ -7,8 +7,8 @@ tags={
 }
 picture="thumbnail.png"
 name="[Glory to Arstotzka!]"
-supported_version="1.15.*"
-path="mod/Arstotzka_mod"
+supported_version="1.16.*"
+path="mod/_glory_to_arstotzka"
 
 replace_path="common/ai_areas"
 replace_path="common/ai_equipment"

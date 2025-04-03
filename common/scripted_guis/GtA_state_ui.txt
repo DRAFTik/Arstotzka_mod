@@ -43,7 +43,7 @@ scripted_gui = {
 		context_type = selected_state_context
 		parent_window_token = selected_state_view
 		window_name = "GtA_state_culture_selector_container"
-#		dirty = THIS.TOTAL_soil_dirty
+		dirty = THIS.TOTAL_soil_dirty
 		
 		visible = {
 			ROOT = { check_variable = { state_culture_selector_open_var = 1 } }
@@ -108,10 +108,107 @@ scripted_gui = {
 					custom_effect_tooltip = state_culture_CORN_effect_tooltip
 				}
 			}
+			state_culture_icon_right_click = {
+				if = {
+					limit = { check_variable = { v = token:state_culture_potato } }
+					ROOT = {
+						every_controlled_state = {
+							limit = {
+								is_fully_controlled_by = ROOT
+								agro_complex > 0
+								NOT = { has_state_flag = state_culture_POTATO_state_flag }
+							}
+							drop_all_state_culture_flags = yes
+							set_state_flag = state_culture_POTATO_state_flag
+							add_to_variable = { THIS.TOTAL_soil_dirty = 0.01 }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_wheat } }
+					ROOT = {
+						every_controlled_state = {
+							limit = {
+								is_fully_controlled_by = ROOT
+								agro_complex > 0
+								NOT = { has_state_flag = state_culture_WHEAT_state_flag }
+								is_in_array = { global.wheat_states_array = This.id }
+							}
+							drop_all_state_culture_flags = yes
+							set_state_flag = state_culture_WHEAT_state_flag
+							add_to_variable = { THIS.TOTAL_soil_dirty = 0.01 }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_rice } }
+					ROOT = {
+						every_controlled_state = {
+							limit = {
+								is_fully_controlled_by = ROOT
+								agro_complex > 0
+								NOT = { has_state_flag = state_culture_RICE_state_flag }
+								is_in_array = { global.rice_states_array = This.id }
+							}
+							drop_all_state_culture_flags = yes
+							set_state_flag = state_culture_RICE_state_flag
+							add_to_variable = { THIS.TOTAL_soil_dirty = 0.01 }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_legumes } }
+					ROOT = {
+						every_controlled_state = {
+							limit = {
+								is_fully_controlled_by = ROOT
+								agro_complex > 0
+								NOT = { has_state_flag = state_culture_LEGUMES_state_flag }
+							}
+							drop_all_state_culture_flags = yes
+							set_state_flag = state_culture_LEGUMES_state_flag
+							add_to_variable = { THIS.TOTAL_soil_dirty = 0.01 }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_cotton } }
+					ROOT = {
+						every_controlled_state = {
+							limit = {
+								is_fully_controlled_by = ROOT
+								agro_complex > 0
+								NOT = { has_state_flag = state_culture_COTTON_state_flag }
+								is_in_array = { global.cotton_states_array = This.id }
+							}
+							drop_all_state_culture_flags = yes
+							set_state_flag = state_culture_COTTON_state_flag
+							add_to_variable = { THIS.TOTAL_soil_dirty = 0.01 }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { v = token:state_culture_corn } }
+					ROOT = {
+						every_controlled_state = {
+							limit = {
+								is_fully_controlled_by = ROOT
+								agro_complex > 0
+								NOT = { has_state_flag = state_culture_CORN_state_flag }
+								is_in_array = { global.corn_states_array = This.id }
+							}
+							drop_all_state_culture_flags = yes
+							set_state_flag = state_culture_CORN_state_flag
+							add_to_variable = { THIS.TOTAL_soil_dirty = 0.01 }
+						}
+					}
+				}
+			}
 		}
 		
 		triggers = {
 			state_culture_icon_click_enabled = {
+				NOT = { has_state_flag = state_culture_sowing_work_has_begun_state_flag }
 				if = {
 					limit = { check_variable = { v = token:state_culture_potato } }
 					THIS = {

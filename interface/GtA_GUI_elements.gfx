@@ -177,6 +177,15 @@ spriteTypes = {
 ### CIVILIAN IMAGES
 	
 	spriteType = {
+		name = "GFX_civ_production_button"
+		texturefile = "gfx/interface/topbar/toolbar/civ_production_button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_civ_prod_progress_bar2_yellow"
+		texturefile = "gfx/interface/civ_prod_progress_bar2_yellow.dds"
+	}
+	spriteType = {
 		name = "GFX_civil_prod_header_bg"
 		texturefile = "gfx/interface/civil_prod_header_bg.dds"
 	}
@@ -188,6 +197,10 @@ spriteTypes = {
 		name = "GFX_civil_equipment_item_large_02"
 		textureFile = "gfx/interface/civil_equipment_item_large_02.dds"
 		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_civilian_consumer_goods_equipment"
+		texturefile = "gfx/interface/technologies/technologies/civilian/civilian_consumer_goods_equipment.dds"
 	}
 	SpriteType = {
 		name = "GFX_civilian_fertilizer_equipment"

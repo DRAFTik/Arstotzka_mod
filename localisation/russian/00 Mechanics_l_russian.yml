@@ -22,9 +22,9 @@
 ### PROVISIONS ###
 ##################
 
-    gta_provisions_tooltip: "§HПродовольственная обеспеченность (тыс. тонн)§!\nУровень обеспеченности: [?ROOT.provision_percent_var|+1%%]\n\nТекущий запас провианта: [?ROOT.provision_total_var|+1*] из [?ROOT.max_provision_total_var|H1*] | [?ROOT.provision_percent_to_max_var|+1%]\nТекущий баланс провианта: [?ROOT.provision_balance_var|+1*]/день\nТекущее потребление провианта: [?ROOT.provision_need_var|-1*]/день\n\nПроизводство провианта:\n    - в неделю: [?ROOT.weekly_income_provision|+1*] от [?ROOT.livestock_complex_total|H0] шт.\n    - в год: [?ROOT.yearly_income_provision|+1*] от [?ROOT.agro_complex_total|H0] шт.[GET_CROP_LOC]\nКоэффициент сбора урожая: [?ROOT.num_generation_provision_yearly_var|1+%]\n\nУровень сохранения провизии: [?ROOT.monthly_save_provision|+0%]\nВ этом месяце ожидается порча: [?ROOT.bad_provision_var|-1*]\n\nМаксимальный запас провианта: [?ROOT.max_provision_total_var|H1*]\nБазовое значение: [?ROOT.max_provision_base_var|H1*]\nВ регионах: [?ROOT.modifier@max_provision|H1*][GET_HUNGER_LOC]"
+    gta_provisions_tooltip: "§HПродовольственная обеспеченность (тыс. тонн)§!\nУровень обеспеченности: [?ROOT.provision_percent_var|+1%%]\n\nТекущий запас провианта: [?ROOT.provision_total_var|+1*] из [?ROOT.max_provision_total_var|H1*] | [?ROOT.provision_percent_to_max_var|+1%]\nТекущий баланс провианта: [?ROOT.provision_balance_var|+1*]/день\nТекущее потребление провианта: [?ROOT.provision_need_var|-1*]/день\n\nПроизводство провианта:\n    - в неделю: [?ROOT.weekly_income_provision|+1*] от [?ROOT.livestock_complex_total|H0] шт.\n    - в год (среднее): [?ROOT.yearly_income_provision|+1*] от [?ROOT.agro_complex_total|H0] шт.[GET_CROP_LOC]\nКоэффициент сбора урожая: [?ROOT.num_generation_provision_yearly_var|1+%]\n\nУровень сохранения провизии: [?ROOT.monthly_save_provision|+0%]\nВ этом месяце ожидается порча: [?ROOT.bad_provision_var|-1*]\n\nМаксимальный запас провианта: [?ROOT.max_provision_total_var|H1*]\nБазовое значение: [?ROOT.max_provision_base_var|H1*]\nВ регионах: [?ROOT.modifier@max_provision|H1*][GET_HUNGER_LOC]"
     gta_provisions_delayed_tooltip: "Продовольственная обеспеченность отображает потребность в продуктах питания вашей страны.\n\nНерегулярные поступления провианта от §HАгрокомплексов§! не учитываются в расчете значения §Hбаланса провианта§!."
-    GET_BASE_HARVEST_LOC: "\nУрожай текущего года:"
+    GET_BASE_HARVEST_LOC: "\n\nУрожай текущего года:"
     GET_BAD_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §RНЕУРОЖАЙ§!"
     GET_RECORD_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §GРЕКОРД§!"
     GET_NORMAL_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §YОБЫЧНЫЙ§!"
@@ -129,22 +129,22 @@
     state_culture_effect: "[!state_culture_icon_click]"
     state_culture_desc: "§L[get_state_culture_desc]§!"
     
-    state_culture_POTATO_effect_tooltip: "§TКартофель§!\n\n§HУрожайность:§! §Yсредняя§!\n§HИстощение почвы§!: §Gнизкое§! (5% за сезон)\n§HПосев:§! (апрель)\n§HСбор:§! (сентябрь)"
+    state_culture_POTATO_effect_tooltip: "§TКартофель§!\n\n§HУрожайность:§! §Yсредняя§!\n§HИстощение почвы§!: §Gнизкое§! (8% за сезон)\n§HПосев:§! (апрель)\n§HСбор:§! (сентябрь)"
     state_culture_potato_desc: "Скромный, но надёжный. Не боится засух и бедных почв. Накормит народ в голодные времена."
     
-    state_culture_WHEAT_effect_tooltip: "§TПшеница§!\n\n§HУрожайность:§! §Gвысокая§!\n§HИстощение почвы§!: §Oвысокое§! (12% за сезон)\n§HПосев:§! (апрель)\n§HСбор:§! (сентябрь)"
+    state_culture_WHEAT_effect_tooltip: "§TПшеница§!\n\n§HУрожайность:§! §Sвыше среднего§! (+15%)\n§HИстощение почвы§!: §Oвысокое§! (15% за сезон)\n§HПосев:§! (апрель)\n§HСбор:§! (сентябрь)"
     state_culture_wheat_desc: "Выносливый злак для холодных регионов. Даёт стабильный урожай даже после суровых зим, но требует много тракторов.\n [!state_culture_icon_click_enabled]"
     
-    state_culture_RICE_effect_tooltip: "§TРис§!\n\n§HУрожайность:§! §Yсредняя§!\n§HИстощение почвы§!: §Yсреднее§! (8% за сезон)\n§HПосев:§! (май)\n§HСбор:§! (октябрь)"
+    state_culture_RICE_effect_tooltip: "§TРис§!\n\n§HУрожайность:§! §Gвысокая§! (+20%)\n§HИстощение почвы§!: §Yсреднее§! (12% за сезон)\n§HПосев:§! (май)\n§HСбор:§! (октябрь)"
     state_culture_rice_desc: "Водная культура для тропиков. Растёт только у рек или во влажных зонах. Даёт обильный урожай, но боится засух.\n [!state_culture_icon_click_enabled]"
     
-    state_culture_LEGUMES_effect_tooltip: "§TБобовые§!\n\n§HУрожайность:§! §Oнизкая§!\n§HИстощение почвы§!: §Gотсутствует§! (-5% за сезон)\n§HПосев:§! (март)\n§HСбор:§! (август)"
+    state_culture_LEGUMES_effect_tooltip: "§TБобовые§!\n\n§HУрожайность:§! §Oнизкая§! (-20%)\n§HИстощение почвы§!: §Gотсутствует§! (-5% за сезон)\n§HПосев:§! (март)\n§HСбор:§! (август)"
     state_culture_legumes_desc: "Спасители почвы. Скромный урожай компенсируется восстановлением земли. Идеальны для севооборота — засевайте после пшеницы, чтобы избежать катастрофы."
     
-    state_culture_COTTON_effect_tooltip: "§TХлопок§!\n\n§HУрожайность:§! §Oнизкая§! (не провиант)\n§HИстощение почвы§!: §Yсреднее§! (8% за сезон)\n§HПосев:§! (апрель)\n§HСбор:§! (ноябрь)"
+    state_culture_COTTON_effect_tooltip: "§TХлопок§!\n\n§HУрожайность:§! §Rочень низкая§! (-30%, не провиант)\n§HИстощение почвы§!: §Yсреднее§! (8% за сезон)\n§HПосев:§! (апрель)\n§HСбор:§! (ноябрь)"
     state_culture_cotton_desc: "Белое золото для торговцев. Заменяет еду на ткани, но требует тепла и времени. Если враги подойдут к полям — урожай сгорит первым.\n [!state_culture_icon_click_enabled]"
     
-    state_culture_CORN_effect_tooltip: "§TКукуруза§!\n\n§HУрожайность:§! §Gочень высокая§!\n§HИстощение почвы§!: §Rочень высокая§! (18% за сезон)\n§HПосев:§! (май)\n§HСбор:§! (октябрь)"
+    state_culture_CORN_effect_tooltip: "§TКукуруза§!\n\n§HУрожайность:§! §Gочень высокая§! (+40%)\n§HИстощение почвы§!: §Rочень высокое§! (18% за сезон)\n§HПосев:§! (май)\n§HСбор:§! (октябрь)"
     state_culture_corn_desc: "Царица полей. Даёт рекордные урожаи и возможность использовать при производстве биотоплива, но выжимает из почвы все соки. Теплолюбивая и капризная — подходит только для избранных регионов.\n [!state_culture_icon_click_enabled]"
     
     culture_is_growing_in_region_tt: "Культура растет в этом регионе"
@@ -205,10 +205,14 @@
    
    CIV_PRODUCTION_PRODUCTION_LABEL: "Гражданское производство"
    PRODUCTION_OPERATIONAL_CIVIL_FACTORIES_LABEL: "Гражданские фабрики"
+   civil_production_line_dyn: "$CIV_PRODUCTION_PRODUCTION_LABEL$"
+   production_cost_text: "[?global.civ_factories_production_cost_@var:v]  £GFX_civ_factory_output"
    
+   civ_production_consumer_goods_name: "Товары народного потребления"
    civ_production_fertilizer_name: "Удобрения"
    civ_production_tractor_name: "Трактор"
    civ_production_factory_machines_name: "Заводские станки"
    civ_production_computer_name: "Компьютер"
    
+   civ_efficiency_tooltip: "[?civ_current_efficiency_@var:v|2%%]"
    

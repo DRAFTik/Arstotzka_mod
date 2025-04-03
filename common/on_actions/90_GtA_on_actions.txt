@@ -2,25 +2,31 @@ on_actions = {
 
 	on_startup = {
 		effect = {
-			add_to_array = { global.state_culture_ui_array = token:state_culture_potato }
-			add_to_array = { global.state_culture_ui_array = token:state_culture_wheat }
-			add_to_array = { global.state_culture_ui_array = token:state_culture_rice }
-			add_to_array = { global.state_culture_ui_array = token:state_culture_legumes }
-			add_to_array = { global.state_culture_ui_array = token:state_culture_cotton }
-			add_to_array = { global.state_culture_ui_array = token:state_culture_corn }
-			
-			add_to_array = { global.civ_available_equipments_ui_array = token:civ_production_fertilizer }
-			add_to_array = { global.civ_available_equipments_ui_array = token:civ_production_tractor }
-			add_to_array = { global.civ_available_equipments_ui_array = token:civ_production_factory_machines }
-			add_to_array = { global.civ_available_equipments_ui_array = token:civ_production_computer }
-			
-			
 			SAI = {
+				add_to_array = { global.state_culture_ui_array = token:state_culture_potato }
+				add_to_array = { global.state_culture_ui_array = token:state_culture_wheat }
+				add_to_array = { global.state_culture_ui_array = token:state_culture_rice }
+				add_to_array = { global.state_culture_ui_array = token:state_culture_legumes }
+				add_to_array = { global.state_culture_ui_array = token:state_culture_cotton }
+				add_to_array = { global.state_culture_ui_array = token:state_culture_corn }
+				
+				
 				set_variable = { global.num_of_extra_tank_school_var = 5 }
+				set_variable = { global.civ_current_efficiency_growth_per_day_var = 0.05 }		# базовый уровень роста эффективности производства гражданской продукции c 1 фабрики
+				
+				
+				set_variable = { global.civ_factories_production_cost_@token:civ_production_consumer_goods		= 1 }
+				set_variable = { global.civ_factories_production_cost_@token:civ_production_fertilizer			= 0.5 }
+				set_variable = { global.civ_factories_production_cost_@token:civ_production_tractor				= 5 }
+				set_variable = { global.civ_factories_production_cost_@token:civ_production_factory_machines	= 2.5 }
+				set_variable = { global.civ_factories_production_cost_@token:civ_production_computer			= 7.5 }
+				
+				
 				effect_calculate_base_nof					= yes
 				set_fertility_in_ALL_state_effect			= yes
 			}
 			every_possible_country = {
+				set_variable								= { yearly_income_provision_harvest_type_mult = 1 }
 				default_party_popularity_PP_gain			= yes
 				calculate_electric_power_effect				= yes
 				calculate_electric_power_LOG_effect			= yes
@@ -63,6 +69,8 @@ on_actions = {
 				calculate_steel_mill_effect					= yes		# сталь
 				calculate_proletariat_effect				= yes		# рабсила
 				calculate_science_effect					= yes		# наука
+				calculate_efficiency_civ_production_effect	= yes		# гражданское производство
+				calculate_civ_production_prod_speed_effect	= yes		# гражданское производство
 				
 ### ОБЩЕМЕХАНЫ // generic_building_organization
 				if = {
@@ -134,23 +142,37 @@ on_actions = {
 
 	on_monthly_SAI = {
 		effect = {
-			if = {
+			if = {		### ПОСЕВНАЯ
 				limit = {
 					meta_trigger = {
 						text = {
-							date > [YEAR].7.31
-							date < [YEAR].8.2
+							date > [YEAR].2.28
+							date < [YEAR].5.2
 						}
 						YEAR = "[?global.year]"
 					}
 				}
 				every_other_country = {
-					calculate_provision_yearly_effect	= yes		# урожай культур
+					set_sowing_work_has_begun_provision_effect	= yes	# посевная культур
+				}
+			}
+			if = {		### СБОР УРОЖАЯ
+				limit = {
+					meta_trigger = {
+						text = {
+							date > [YEAR].8.28
+							date < [YEAR].11.2
+						}
+						YEAR = "[?global.year]"
+					}
+				}
+				every_other_country = {
+					calculate_provision_yearly_effect	= yes			# урожай культур
 				}
 			}
 			every_other_country = {
-				calculate_provision_monthly_effect		= yes		# порча еды
-				AI_set_electric_panel_effect			= yes		# тумблеры электричества
+				calculate_provision_monthly_effect		= yes			# порча еды
+				AI_set_electric_panel_effect			= yes			# тумблеры электричества
 				
 ### AGENCY UPGRADES
 				if = {

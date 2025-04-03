@@ -1,31 +1,5 @@
 scripted_gui = {
-	
-	GtA_civil_production_line_opener_container = {
-		context_type = player_context
-		window_name = "GtA_civil_production_line_opener_container"
-		dirty = ROOT.civil_production_line_open_var
-		
-		visible = {
-		}
-		
-		triggers = {
-		}
-		
-		effects = {
-			civil_production_open_click = {
-				if = {
-					limit			= { check_variable = { civil_production_line_open_var = 0 } }
-					set_variable	= { civil_production_line_open_var = 1 }
-				}
-				else				= { set_variable = { civil_production_line_open_var = 0 } }
-			}
-		}
-		
-		ai_enabled = {
-			always = no
-		}
-	}
-	
+
 	GtA_civil_production_line_container = {
 	
 		context_type = player_context
@@ -34,12 +8,12 @@ scripted_gui = {
 #		dirty = THIS.TOTAL_soil_dirty
 		
 		visible = {
-			check_variable = { civil_production_line_open_var = 1 }
+			check_variable = { civil_production_line_open_var = 2 }
 		}
 		
 		dynamic_lists = {
 			civ_available_equipments_grid = {		# доступная для производства снаряга
-				array = global.civ_available_equipments_ui_array
+				array = civ_available_equipments_ui_array
 				entry_container = scripted_gui_civ_available_equipments_ui_array_entry
 			}
 			civ_production_grid = {					# производимая снаряга
@@ -53,7 +27,9 @@ scripted_gui = {
 		}
 		
 		properties = {
-            civ_production_equipment_icon = { image = "[get_civ_production_equipment_icon]" }
+            civ_production_equipment_icon					= { image = "[get_civ_production_equipment_icon]" }
+			civ_efficiency_progressbar_current_ratio_bar	= { frame = GUI_civ_current_efficiency_@var:v }
+			civ_efficiency_progressbar_max_ratio_bar		= { frame = GUI_civ_max_efficiency_@var:v }
         }
 		
 		effects = {
@@ -66,13 +42,20 @@ scripted_gui = {
 #					remove_from_array		= { array = civ_factories_ui_array_@var:v 	index = civ_factories_ui_array_last_var_@var:v }
 #					subtract_from_variable	= { civ_factories_ui_array_last_var_@var:v = 1 }
 #				}
+				subtract_from_variable	= { TOTAL_num_of_use_civilian_factories_in_production_var = civ_factories_ui_array_last_var_@var:v }
 				clear_variable			= civ_factories_ui_array_last_var_@var:v
 				clear_array				= civ_factories_ui_array_@var:v
 				remove_from_array		= { civ_production_ui_array = v }
+				force_update_dynamic_modifier = yes
+				
+				clear_variable = civ_current_efficiency_@var:v
+				clear_variable = civ_max_efficiency_@var:v
 			}
 			civ_factories_sub_click	= {
+				subtract_from_variable	= { TOTAL_num_of_use_civilian_factories_in_production_var = 1 }
 				subtract_from_variable	= { civ_factories_ui_array_last_var_@var:v = 1 }
 				remove_from_array		= { array = civ_factories_ui_array_@var:v 	index = civ_factories_ui_array_last_var_@var:v }
+				force_update_dynamic_modifier = yes
 			}
 			civ_factories_sub_right_click = {
 				if = {
@@ -82,16 +65,20 @@ scripted_gui = {
 						set_temp_variable	= { t_counter = civ_factories_ui_array_last_var_@var:v }
 					}
 				}
+				subtract_from_variable		= { TOTAL_num_of_use_civilian_factories_in_production_var = t_counter }
 				subtract_from_variable		= { civ_factories_ui_array_last_var_@var:v = t_counter }
 				while_loop_effect			= {
 					limit = { check_variable = { t_counter > 0 } }
 					remove_from_array		= { array = civ_factories_ui_array_@var:v 	index = civ_factories_ui_array_last_var_@var:v }
 					subtract_from_temp_variable = { t_counter = 1 }
 				}
+				force_update_dynamic_modifier = yes
 			}
 			civ_factories_add_click	= {
+				add_to_variable			= { TOTAL_num_of_use_civilian_factories_in_production_var = 1 }
 				add_to_variable			= { civ_factories_ui_array_last_var_@var:v = 1 }
 				add_to_array			= { civ_factories_ui_array_@var:v = token:civ_factories }
+				force_update_dynamic_modifier = yes
 			}
 			civ_factories_add_right_click = {
 				set_temp_variable			= { t1 = 15 }
@@ -103,30 +90,48 @@ scripted_gui = {
 						set_temp_variable		= { t_counter = t1 }
 					}
 				}
+				if = {
+					limit = { check_variable	= { var = num_of_civilian_factories_available_for_projects	value = t_counter compare = greater_than_or_equals } }
+					set_temp_variable			= { t_counter = 5 }
+					else = {
+						set_temp_variable		= { t_counter = num_of_civilian_factories_available_for_projects }
+					}
+				}
+				add_to_variable			= { TOTAL_num_of_use_civilian_factories_in_production_var = t_counter }
 				add_to_variable			= { civ_factories_ui_array_last_var_@var:v = t_counter }
 				while_loop_effect		= {
 					limit = { check_variable = { t_counter > 0 } }
 					add_to_array		= { civ_factories_ui_array_@var:v = token:civ_factories }
 					subtract_from_temp_variable = { t_counter = 1 }
 				}
+				force_update_dynamic_modifier = yes
 			}
 			civil_equipment_button_click = {
-				if = {
-					limit = { check_variable = { v = token:civ_production_fertilizer } }
-					add_to_array = { civ_production_ui_array = token:civ_production_fertilizer }
-				}
-				else_if = {
-					limit = { check_variable = { v = token:civ_production_tractor } }
-					add_to_array = { civ_production_ui_array = token:civ_production_tractor }
-				}
-				else_if = {
-					limit = { check_variable = { v = token:civ_production_factory_machines } }
-					add_to_array = { civ_production_ui_array = token:civ_production_factory_machines }
-				}
-				else_if = {
-					limit = { check_variable = { v = token:civ_production_computer } }
-					add_to_array = { civ_production_ui_array = token:civ_production_computer }
-				}
+#				if = {
+#					limit = { check_variable = { v = token:civ_production_consumer_goods } }
+#					add_to_array = { civ_production_ui_array = token:civ_production_consumer_goods }
+#				}
+#				if = {
+#					limit = { check_variable = { v = token:civ_production_fertilizer } }
+#					add_to_array = { civ_production_ui_array = token:civ_production_fertilizer }
+#				}
+#				else_if = {
+#					limit = { check_variable = { v = token:civ_production_tractor } }
+#					add_to_array = { civ_production_ui_array = token:civ_production_tractor }
+#				}
+#				else_if = {
+#					limit = { check_variable = { v = token:civ_production_factory_machines } }
+#					add_to_array = { civ_production_ui_array = token:civ_production_factory_machines }
+#				}
+#				else_if = {
+#					limit = { check_variable = { v = token:civ_production_computer } }
+#					add_to_array = { civ_production_ui_array = token:civ_production_computer }
+#				}
+				
+				add_to_array = { civ_production_ui_array = var:v }
+				set_variable = { civ_current_efficiency_@var:v = 50 }
+				set_variable = { civ_max_efficiency_@var:v = 100 }
+				initiate_GUI_efficiency_civ_production_bar = yes
 			}
 		}
 		triggers = {
@@ -135,6 +140,7 @@ scripted_gui = {
 			}
 			civ_factories_add_click_enabled = {
 				check_variable = { civ_factories_ui_array_last_var_@var:v < 15 }
+				check_variable = { num_of_civilian_factories_available_for_projects > 0 }
 			}
 			civil_equipment_button_click_enabled = {
 				NOT = { is_in_array = { civ_production_ui_array = v } }

@@ -1,0 +1,13 @@
+technologies = {
+	default_civ_equipment_tech = {
+		allow = { always = no }
+		enable_equipments = {
+			civ_production_consumer_goods_1
+			civ_production_fertilizer_1
+			civ_production_tractor_1
+			civ_production_factory_machines_1
+			civ_production_computer_1
+		}
+		research_cost = 1
+	}
+}

@@ -1,7 +1,5 @@
 equipments = {
 
-### ========== PROVISION ========== ###
-	
 	build_equipment = {
 		year = 1983
 		picture = archetype_infantry_equipment

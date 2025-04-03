@@ -616,6 +616,12 @@ defined_text = {		# CUSTOM CIV_PRODUCTION_EQUIPMENT NAME
     
 	text = {
 		trigger = {
+			check_variable = { v = token:civ_production_consumer_goods }
+		}
+		localization_key = civ_production_consumer_goods_name
+	}
+	text = {
+		trigger = {
 			check_variable = { v = token:civ_production_fertilizer }
 		}
 		localization_key = civ_production_fertilizer_name
@@ -643,6 +649,12 @@ defined_text = {		# CUSTOM CIV_PRODUCTION_EQUIPMENT NAME
 defined_text = {		# CUSTOM CIV_PRODUCTION_EQUIPMENT IMAGE
     name = get_civ_production_equipment_icon
     
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_consumer_goods }
+		}
+		localization_key = "GFX_civilian_consumer_goods_equipment"
+	}
 	text = {
 		trigger = {
 			check_variable = { v = token:civ_production_fertilizer }

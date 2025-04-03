@@ -67,4 +67,53 @@ scripted_gui = {
 			always = no
 		}
 	}
+	
+	
+	GtA_civil_production_line_opener_container = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "GtA_civil_production_line_opener_container"
+		dirty = ROOT.civil_production_line_open_var
+		
+		visible = {
+		}
+		
+		properties = {
+			civil_production_open = { frame = civil_production_line_open_var }
+        }
+		
+		effects = {
+			civil_production_open_click = {
+				if = {
+					limit			= { check_variable = { civil_production_line_open_var = 0 } }
+					set_variable	= { civil_production_line_open_var = 2 }
+				}
+				else				= { set_variable = { civil_production_line_open_var = 0 } }
+				
+				if = {
+					limit = { NOT = { is_in_array = { civ_available_equipments_ui_array = token:civ_production_consumer_goods } } }
+					add_to_array = { civ_available_equipments_ui_array = token:civ_production_consumer_goods }
+					add_to_array = { civ_available_equipments_ui_array = token:civ_production_fertilizer }
+					add_to_array = { civ_available_equipments_ui_array = token:civ_production_tractor }
+					add_to_array = { civ_available_equipments_ui_array = token:civ_production_factory_machines }
+					add_to_array = { civ_available_equipments_ui_array = token:civ_production_computer }
+				}
+				if = {
+					limit					= { NOT = { has_dynamic_modifier = { modifier = civil_production_line_dyn } } }
+					add_dynamic_modifier	= { modifier = civil_production_line_dyn }
+				}
+				if = {
+					limit					= { NOT = { has_tech = default_civ_equipment_tech } }
+					set_technology			= { default_civ_equipment_tech = 1 popup = no }
+				}
+			}
+		}
+		
+		triggers = {
+		}
+		
+		ai_enabled = {
+			always = no
+		}
+	}
 }

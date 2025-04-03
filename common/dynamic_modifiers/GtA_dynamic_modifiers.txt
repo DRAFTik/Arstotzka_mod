@@ -185,4 +185,10 @@
 		stability_factor							= generic_building_organization_stability_factor
 	}
 	
+	civil_production_line_dyn = {
+#		icon = GFX_modifiers_increased_metal_production
+		enable = { always = yes }
+		# list of modifiers
+		civilian_factory_use = TOTAL_num_of_use_civilian_factories_in_production_var
+	}
 	

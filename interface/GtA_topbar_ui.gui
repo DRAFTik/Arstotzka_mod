@@ -170,4 +170,21 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 	}
+	
+	
+	containerWindowType = {
+		name = "GtA_civil_production_line_opener_container"
+		position = { x=0 y=0 }
+		
+		buttonType = {
+			name = "civil_production_open"
+			quadTextureSprite = "GFX_civ_production_button"
+			position = { x = 473 y = 79 }
+			Orientation = "UPPER_LEFT"
+			shortcut = ""
+			pdx_tooltip = generic_trade_open_tt
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+	}
 }

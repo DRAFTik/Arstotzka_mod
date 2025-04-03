@@ -701,6 +701,12 @@ script_enum_equipment_bonus_type = {
 	build_equipment
 	build_equipment_1
 	
+	civ_production_consumer_goods_1
+	civ_production_fertilizer_1
+	civ_production_tractor_1
+	civ_production_factory_machines_1
+	civ_production_computer_1
+	
 	reconnaissance_walker_chassis
 	reconnaissance_walker_chassis_1
 	reconnaissance_walker_chassis_2
@@ -716,6 +722,7 @@ script_enum_special_tokens = {
 	state_culture_corn
 	
 	
+	civ_production_consumer_goods
 	civ_production_fertilizer
 	civ_production_tractor
 	civ_production_factory_machines

@@ -6,24 +6,6 @@
 guiTypes = {
 	
 	containerWindowType = {
-		name = "GtA_civil_production_line_opener_container"
-		position = { x=-50	y=100 }
-		size = { width = 100% height = 100% }
-		Orientation = UPPER_RIGHT
-		
-		buttonType = {
-			name = "civil_production_open"
-			quadTextureSprite = "GFX_non_available_factory_icon"
-			position = { x=0	y=50 }
-			shortcut = ""
-			pdx_tooltip = generic_trade_open_tt
-			clicksound = click_ok
-			oversound = ui_menu_over
-		}
-	}
-	
-	
-	containerWindowType = {
 		name = "GtA_civil_production_line_container"
 		position = { x=-606 y=108}
 		show_position = { x=-6 y =108 }
@@ -240,10 +222,54 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 100
 			maxHeight = 20
-			text = "Total need: 200"
+			text = "[?num_equipment@var:v|0]"
 			format = right
 			#alwaystransparent = yes
 		}
+		iconType = {
+			name ="progressbar"
+			quadTextureSprite = "GFX_civ_prod_progress_bar2_yellow"
+			position = { x= 158 y = 30 }
+		}
+
+		instantTextboxType = {
+			name = "speed"
+			position = { x = 156 y = 30 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			text = "[?civ_factory_total_speed_@var:v]/день"
+			maxWidth = 120
+			maxHeight = 20
+			format = center
+		}
+		
+		iconType = {
+			name ="civ_efficiency_progressbar_max_ratio_bar"
+			spriteType = "GFX_efficiency_progressbar_to_max"
+			position = { x= 252 y = 8 }
+#			alwaystransparent = yes
+		}
+		iconType = {
+			name ="civ_efficiency_progressbar_current_ratio_bar"
+			spriteType = "GFX_efficiency_progressbar"
+			position = { x= 252 y = 8 }
+#			alwaystransparent = yes
+		}
+		iconType = {
+			name ="civ_efficiency_progressbar_frame"
+			spriteType = "GFX_efficiency_progressbar_frame"
+			position = { x= 248 y = 7 }
+			pdx_tooltip = "civ_efficiency_tooltip"
+#			pdx_tooltip_delayed = "civ_efficiency_delayed_tooltip"
+		}
+		iconType = {
+			name ="civ_efficiency_icon"
+			spriteType = "GFX_efficiency_icon"
+			position = { x= 225 y = 4 }
+			alwaystransparent = yes
+		}
+		
+		
 		iconType = {
 			name = "factories_used"
 			position = { x=@prod_icon_pos_x y=6 }
@@ -348,7 +374,7 @@ guiTypes = {
 			name = "production_cost"
 			position = { x = 15 y = 61 }
 			font = "hoi_18mbs"
-			text = "cost 9001"
+			text = "production_cost_text"
 			maxWidth = 160
 			maxHeight = 30
 			format = left
