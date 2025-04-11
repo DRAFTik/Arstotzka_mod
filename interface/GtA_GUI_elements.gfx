@@ -218,4 +218,99 @@ spriteTypes = {
 		name = "GFX_civilian_computer_equipment"
 		texturefile = "gfx/interface/technologies/technologies/civilian/civilian_computer_equipment.dds"
 	}
+	
+	
+	
+	
+### PRIVATE BUILDINGS IMAGES
+	
+	SpriteType = {
+		name = "GFX_private_sector_label"
+		texturefile = "gfx/interface/GUI/private_buildings/private_sector_label.dds"
+	}
+	SpriteType = {
+		name = "GFX_GtA_construction_screen_top"
+		texturefile = "gfx/interface/GtA_construction_screen_top.dds"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_gta_ongoing_contruction_bad" 
+		texturefile = "gfx/interface/ongoing_contruction_anim.dds"
+		noOfFrames = 12
+		animation_rate_fps = 2
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_gta_ongoing_contruction_anim_low" 
+		texturefile = "gfx/interface/ongoing_contruction_anim.dds"
+		noOfFrames = 12
+		animation_rate_fps = 6
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_gta_ongoing_contruction_anim_normal" 
+		texturefile = "gfx/interface/ongoing_contruction_anim.dds"
+		noOfFrames = 12
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_gta_ongoing_contruction_anim_good" 
+		texturefile = "gfx/interface/ongoing_contruction_anim.dds"
+		noOfFrames = 12
+		animation_rate_fps = 24
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_gta_ongoing_contruction_anim_epic" 
+		texturefile = "gfx/interface/ongoing_contruction_anim.dds"
+		noOfFrames = 12
+		animation_rate_fps = 36
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+### BUILDINGS
+
+	SpriteType = {
+		name = "GFX_private_industrial_complex"
+		texturefile = "gfx/interface/GUI/private_buildings/private_industrial_complex.dds"
+	}
+	SpriteType = {
+		name = "GFX_private_arms_factory"
+		texturefile = "gfx/interface/GUI/private_buildings/private_arms_factory.dds"
+	}
+	SpriteType = {
+		name = "GFX_private_dockyard"
+		texturefile = "gfx/interface/GUI/private_buildings/private_dockyard.dds"
+	}
+	SpriteType = {
+		name = "GFX_private_synthetic_refinery"
+		texturefile = "gfx/interface/GUI/private_buildings/private_synthetic_refinery.dds"
+	}
+	SpriteType = {
+		name = "GFX_private_steel_mill"
+		texturefile = "gfx/interface/GUI/private_buildings/private_steel_mill.dds"
+	}
+	SpriteType = {
+		name = "GFX_private_agro_complex"
+		texturefile = "gfx/interface/GUI/private_buildings/private_agro_complex.dds"
+	}
+	SpriteType = {
+		name = "GFX_private_livestock_complex"
+		texturefile = "gfx/interface/GUI/private_buildings/private_livestock_complex.dds"
+	}
+	SpriteType = {
+		name = "GFX_private_thermal_power_plant"
+		texturefile = "gfx/interface/GUI/private_buildings/private_thermal_power_plant.dds"
+	}
+	
 }

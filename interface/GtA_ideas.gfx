@@ -1,5 +1,37 @@
 spriteTypes = {
 	
+	
+	spriteType = {
+		name = "GFX_idea_slot_scientific_chief"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_mathematicians_theorist"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_physicists_theorist"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_chemists_theorist"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_biologists_theorist"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_economists_theorist"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_sociologists_theorist"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+
+
+
 	### NORMAL ICONS ###
 
 	spriteType = {

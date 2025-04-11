@@ -29,6 +29,7 @@ idea_categories = {
 		slot = proletariat_laws
 		slot = economy
 		slot = provision_laws
+		slot = private_capital_laws
 		
 		ledger = civilian
 		

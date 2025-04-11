@@ -91,11 +91,48 @@ scripted_gui = {
 				else				= { set_variable = { civil_production_line_open_var = 0 } }
 				
 				if = {
-					limit = { NOT = { is_in_array = { civ_available_equipments_ui_array = token:civ_production_consumer_goods } } }
+					limit = {
+						NOT = {
+							is_in_array = { civ_available_equipments_ui_array = token:civ_production_consumer_goods }
+							is_in_array = { civ_production_ui_array = token:civ_production_consumer_goods }
+						}
+					}
 					add_to_array = { civ_available_equipments_ui_array = token:civ_production_consumer_goods }
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_in_array = { civ_available_equipments_ui_array = token:civ_production_fertilizer }
+							is_in_array = { civ_production_ui_array = token:civ_production_fertilizer }
+						}
+					}
 					add_to_array = { civ_available_equipments_ui_array = token:civ_production_fertilizer }
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_in_array = { civ_available_equipments_ui_array = token:civ_production_tractor }
+							is_in_array = { civ_production_ui_array = token:civ_production_tractor }
+						}
+					}
 					add_to_array = { civ_available_equipments_ui_array = token:civ_production_tractor }
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_in_array = { civ_available_equipments_ui_array = token:civ_production_factory_machines }
+							is_in_array = { civ_production_ui_array = token:civ_production_factory_machines }
+						}
+					}
 					add_to_array = { civ_available_equipments_ui_array = token:civ_production_factory_machines }
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_in_array = { civ_available_equipments_ui_array = token:civ_production_computer }
+							is_in_array = { civ_production_ui_array = token:civ_production_computer }
+						}
+					}
 					add_to_array = { civ_available_equipments_ui_array = token:civ_production_computer }
 				}
 				if = {

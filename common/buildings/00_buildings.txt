@@ -528,9 +528,9 @@ buildings = {
 		}
 		country_modifiers = {
 			modifiers = {
-				universal_factory_modifier = 1
-				num_proletariat_k = -30.4
-				num_use_electric_power = 11
+				universal_factory_modifier	= 1
+				num_proletariat_k			= -30.4
+				num_use_electric_power		= 11
 			}
 		}
 	}
@@ -554,8 +554,8 @@ buildings = {
 		}
 		country_modifiers = {
 			modifiers = {
-				num_proletariat_k = -10.2
-				num_use_electric_power = 0.25
+				num_proletariat_k		= -10.2
+				num_use_electric_power	= 0.25
 			}
 		}
 		state_modifiers = {
@@ -617,7 +617,7 @@ buildings = {
 		show_on_map = 0
 		base_cost = 10000
 		icon_frame = 34
-		value = 5
+		value = 8
 		
 		show_modifier = yes
 		infrastructure_construction_effect = yes
@@ -641,7 +641,7 @@ buildings = {
 		show_on_map = 0
 		base_cost = 18000
 		icon_frame = 35
-		value = 7
+		value = 10
 		
 		only_costal = yes
 		show_modifier = yes
@@ -664,7 +664,7 @@ buildings = {
 		show_on_map = 0
 		base_cost = 35000
 		icon_frame = 36
-		value = 10
+		value = 15
 		
 		show_modifier = yes
 		infrastructure_construction_effect = yes

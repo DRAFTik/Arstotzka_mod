@@ -43,6 +43,8 @@
 #	modifier@num_generation_science_point
 #	modifier@num_generation_science_point_factor
 
+#	modifier@capitalist_activity_modifier
+
 
 default_party_popularity_PP_gain = {
 	if = {
@@ -1306,6 +1308,10 @@ calculate_proletariat_start_effect = {
 	add_to_temp_variable	= { t1 = TOTAL_num_USE_proletariat_k_pozitiv }
 	divide_temp_variable	= { t1 = max_manpower_k }
 	set_variable			= { current_proletariat_percent_var = t1 }
+	
+	set_variable			= { proletariat_unemployment_rate = TOTAL_num_USE_proletariat_k_pozitiv }
+	divide_variable			= { proletariat_unemployment_rate = TOTAL_num_ALL_proletariat_k }
+	clamp_variable			= { var = proletariat_unemployment_rate	min = 0	max = 1 }
 }
 
 calculate_ACTUAL_proletariat_factor_effect = {
@@ -1361,6 +1367,10 @@ calculate_proletariat_effect = {
 #	multiply_temp_variable	= { t1 = interest_in_economic_development_base }
 	
 	set_variable			= { current_proletariat_percent_var = t1 }
+	
+	set_variable			= { proletariat_unemployment_rate = TOTAL_num_USE_proletariat_k_pozitiv }
+	divide_variable			= { proletariat_unemployment_rate = TOTAL_num_ALL_proletariat_k }
+	clamp_variable			= { var = proletariat_unemployment_rate	min = 0	max = 1 }
 }
 
 calculate_mobilization_speed_proletariat_effect = {
@@ -1726,6 +1736,7 @@ drop_all_state_culture_flags = {
 
 calculate_civ_production_prod_speed_effect = {
 	set_temp_variable		= { civ_factory_base_speed_temp = civ_factories_ui_array_last_var_@token:civ_production_consumer_goods }
+	add_to_temp_variable	= { civ_factory_base_speed_temp = num_of_factories_cgff_var }		# только у civ_production_consumer_goods
 	multiply_temp_variable	= { civ_factory_base_speed_temp = 5 }
 	divide_temp_variable	= { civ_factory_base_speed_temp = global.civ_factories_production_cost_@token:civ_production_consumer_goods }
 	set_variable			= { civ_factory_total_speed_@token:civ_production_consumer_goods = civ_factory_base_speed_temp }									# скорость производства снаряги
@@ -1819,52 +1830,142 @@ calculate_civ_production_prod_speed_effect = {
 
 calculate_efficiency_civ_production_effect = {
 	if = {
-		limit = { check_variable = { civ_current_efficiency_@token:civ_production_consumer_goods < civ_max_efficiency_@token:civ_production_consumer_goods } }
-		set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_consumer_goods }		# 0.05%
-		multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }
-		divide_temp_variable	= { t1 = 100 }
-		### МНОЖИТЕЛИ РОСТА
-		add_to_variable			= { civ_current_efficiency_@token:civ_production_consumer_goods = t1 }
+		limit = {
+			set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_consumer_goods }
+			add_to_temp_variable	= { t1 = num_of_factories_cgff_var }							# только у civ_production_consumer_goods
+		}
+		if = {
+			limit = {
+				check_variable		= { t1 > 0 }
+				check_variable		= { civ_current_efficiency_@token:civ_production_consumer_goods < civ_max_efficiency_@token:civ_production_consumer_goods }
+			}
+			set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_consumer_goods }
+			multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }		# 0.05%
+#			divide_temp_variable	= { t1 = 100 }
+			### МНОЖИТЕЛИ РОСТА
+			add_to_variable			= { civ_current_efficiency_@token:civ_production_consumer_goods = t1 }
+		}
+		else_if = {
+			limit = {
+				check_variable		= { t1 < 1 }
+				check_variable		= { civ_current_efficiency_@token:civ_production_consumer_goods > 25.05 }
+			}
+			subtract_from_variable	= { civ_current_efficiency_@token:civ_production_consumer_goods = 0.05 }
+		}
 	}
 	if = {
-		limit = { check_variable = { civ_current_efficiency_@token:civ_production_fertilizer < civ_max_efficiency_@token:civ_production_fertilizer } }
-		set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_fertilizer }		# 0.05%
-		multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }
-		divide_temp_variable	= { t1 = 100 }
-		### МНОЖИТЕЛИ РОСТА
-		add_to_variable			= { civ_current_efficiency_@token:civ_production_fertilizer = t1 }
+		limit = {
+			set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_fertilizer }
+		}
+		if = {
+			limit = {
+				check_variable		= { t1 > 0 }
+				check_variable		= { civ_current_efficiency_@token:civ_production_fertilizer < civ_max_efficiency_@token:civ_production_fertilizer }
+			}
+			set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_fertilizer }
+			multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }		# 0.05%
+#			divide_temp_variable	= { t1 = 100 }
+			### МНОЖИТЕЛИ РОСТА
+			add_to_variable			= { civ_current_efficiency_@token:civ_production_fertilizer = t1 }
+		}
+		else_if = {
+			limit = {
+				check_variable		= { t1 < 1 }
+				check_variable		= { civ_current_efficiency_@token:civ_production_fertilizer > 25.05 }
+			}
+			subtract_from_variable	= { civ_current_efficiency_@token:civ_production_fertilizer = 0.05 }
+		}
 	}
 	if = {
-		limit = { check_variable = { civ_current_efficiency_@token:civ_production_tractor < civ_max_efficiency_@token:civ_production_tractor } }
-		set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_tractor }		# 0.05%
-		multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }
-		divide_temp_variable	= { t1 = 100 }
-		### МНОЖИТЕЛИ РОСТА
-		add_to_variable			= { civ_current_efficiency_@token:civ_production_tractor = t1 }
+		limit = {
+			set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_tractor }
+		}
+		if = {
+			limit = {
+				check_variable		= { t1 > 0 }
+				check_variable		= { civ_current_efficiency_@token:civ_production_tractor < civ_max_efficiency_@token:civ_production_tractor }
+			}
+			set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_tractor }
+			multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }		# 0.05%
+#			divide_temp_variable	= { t1 = 100 }
+			### МНОЖИТЕЛИ РОСТА
+			add_to_variable			= { civ_current_efficiency_@token:civ_production_tractor = t1 }
+		}
+		else_if = {
+			limit = {
+				check_variable		= { t1 < 1 }
+				check_variable		= { civ_current_efficiency_@token:civ_production_tractor > 25.05 }
+			}
+			subtract_from_variable	= { civ_current_efficiency_@token:civ_production_tractor = 0.05 }
+		}
 	}
 	if = {
-		limit = { check_variable = { civ_current_efficiency_@token:civ_production_factory_machines < civ_max_efficiency_@token:civ_production_factory_machines } }
-		set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_factory_machines }		# 0.05%
-		multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }
-		divide_temp_variable	= { t1 = 100 }
-		### МНОЖИТЕЛИ РОСТА
-		add_to_variable			= { civ_current_efficiency_@token:civ_production_factory_machines = t1 }
+		limit = {
+			set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_factory_machines }
+		}
+		if = {
+			limit = {
+				check_variable		= { t1 > 0 }
+				check_variable		= { civ_current_efficiency_@token:civ_production_factory_machines < civ_max_efficiency_@token:civ_production_factory_machines }
+			}
+			set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_factory_machines }
+			multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }		# 0.05%
+#			divide_temp_variable	= { t1 = 100 }
+			### МНОЖИТЕЛИ РОСТА
+			add_to_variable			= { civ_current_efficiency_@token:civ_production_factory_machines = t1 }
+		}
+		else_if = {
+			limit = {
+				check_variable		= { t1 < 1 }
+				check_variable		= { civ_current_efficiency_@token:civ_production_factory_machines > 25.05 }
+			}
+			subtract_from_variable	= { civ_current_efficiency_@token:civ_production_factory_machines = 0.05 }
+		}
 	}
 	if = {
-		limit = { check_variable = { civ_current_efficiency_@token:civ_production_computer < civ_max_efficiency_@token:civ_production_computer } }
-		set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_computer }		# 0.05%
-		multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }
-		divide_temp_variable	= { t1 = 100 }
-		### МНОЖИТЕЛИ РОСТА
-		add_to_variable			= { civ_current_efficiency_@token:civ_production_computer = t1 }
+		limit = {
+			set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_computer }
+		}
+		if = {
+			limit = {
+				check_variable		= { t1 > 0 }
+				check_variable		= { civ_current_efficiency_@token:civ_production_computer < civ_max_efficiency_@token:civ_production_computer }
+			}
+			set_temp_variable		= { t1 = civ_factories_ui_array_last_var_@token:civ_production_computer }
+			multiply_temp_variable	= { t1 = global.civ_current_efficiency_growth_per_day_var }		# 0.05%
+#			divide_temp_variable	= { t1 = 100 }
+			### МНОЖИТЕЛИ РОСТА
+			add_to_variable			= { civ_current_efficiency_@token:civ_production_computer = t1 }
+		}
+		else_if = {
+			limit = {
+				check_variable		= { t1 < 1 }
+				check_variable		= { civ_current_efficiency_@token:civ_production_computer > 25.05 }
+			}
+			subtract_from_variable	= { civ_current_efficiency_@token:civ_production_computer = 0.05 }
+		}
 	}
-	clamp_variable				= { var = civ_current_efficiency_@token:civ_production_consumer_goods	min = 0 max = civ_max_efficiency_@token:civ_production_consumer_goods }
-	clamp_variable				= { var = civ_current_efficiency_@token:civ_production_fertilizer		min = 0 max = civ_max_efficiency_@token:civ_production_fertilizer }
-	clamp_variable				= { var = civ_current_efficiency_@token:civ_production_tractor			min = 0 max = civ_max_efficiency_@token:civ_production_tractor }
-	clamp_variable				= { var = civ_current_efficiency_@token:civ_production_factory_machines	min = 0 max = civ_max_efficiency_@token:civ_production_factory_machines }
-	clamp_variable				= { var = civ_current_efficiency_@token:civ_production_computer			min = 0 max = civ_max_efficiency_@token:civ_production_factory_machines }
-	
-	
+### CLAMP
+	if = {
+		limit = { check_variable	= { civ_max_efficiency_@token:civ_production_consumer_goods > 1 } }
+		clamp_variable				= { var = civ_current_efficiency_@token:civ_production_consumer_goods	min = 1 max = civ_max_efficiency_@token:civ_production_consumer_goods }
+	}
+	if = {
+		limit = { check_variable	= { civ_max_efficiency_@token:civ_production_fertilizer > 1 } }
+		clamp_variable				= { var = civ_current_efficiency_@token:civ_production_fertilizer	min = 1 max = civ_max_efficiency_@token:civ_production_fertilizer }
+	}
+	if = {
+		limit = { check_variable	= { civ_max_efficiency_@token:civ_production_tractor > 1 } }
+		clamp_variable				= { var = civ_current_efficiency_@token:civ_production_tractor	min = 1 max = civ_max_efficiency_@token:civ_production_tractor }
+	}
+	if = {
+		limit = { check_variable	= { civ_max_efficiency_@token:civ_production_factory_machines > 1 } }
+		clamp_variable				= { var = civ_current_efficiency_@token:civ_production_factory_machines	min = 1 max = civ_max_efficiency_@token:civ_production_factory_machines }
+	}
+	if = {
+		limit = { check_variable	= { civ_max_efficiency_@token:civ_production_computer > 1 } }
+		clamp_variable				= { var = civ_current_efficiency_@token:civ_production_computer	min = 1 max = civ_max_efficiency_@token:civ_production_computer }
+	}
 	
 	initiate_GUI_efficiency_civ_production_bar = yes
 }
@@ -1897,8 +1998,731 @@ initiate_GUI_efficiency_civ_production_bar = {
 }
 
 
+calculate_consumer_goods_factories_effect = {
+	set_temp_variable			= { cgff_temp = 1 }
+	add_to_temp_variable		= { cgff_temp = modifier@consumer_goods_factor }
+	multiply_temp_variable		= { cgff_temp = modifier@consumer_goods_expected_value }
+	subtract_from_temp_variable	= { cgff_temp = 0.005 }
+	
+	set_temp_variable			= { num_of_factories_cgff_temp = num_of_factories }
+	subtract_from_temp_variable	= { num_of_factories_cgff_temp = num_of_naval_factories }
+	multiply_temp_variable		= { num_of_factories_cgff_temp = cgff_temp }
+	round_temp_variable			= num_of_factories_cgff_temp
+	set_variable				= { num_of_factories_cgff_var = num_of_factories_cgff_temp }
+	
+	if = {
+		limit = { check_variable = { num_of_factories_cgff_var > 0 } }
+		if = {
+			limit = { NOT = { is_in_array = { civ_production_ui_array = token:civ_production_consumer_goods } } }
+			add_to_array = { civ_production_ui_array = token:civ_production_consumer_goods }
+		}
+		if = {
+			limit = { is_in_array = { civ_available_equipments_ui_array = token:civ_production_consumer_goods } }
+			remove_from_array = { civ_available_equipments_ui_array = token:civ_production_consumer_goods }
+		}
+		if = {
+			limit			= { NOT = { has_tech = default_civ_equipment_tech } }
+			set_technology	= { default_civ_equipment_tech = 1 popup = no }
+		}
+		if = {
+			limit = { NOT = { has_variable = civ_current_efficiency_@token:civ_production_consumer_goods } }
+			set_variable = { civ_current_efficiency_@token:civ_production_consumer_goods = 25 }
+		}
+		if = {
+			limit = { NOT = { has_variable = civ_max_efficiency_@token:civ_production_consumer_goods } }
+			set_variable = { civ_max_efficiency_@token:civ_production_consumer_goods = 100 }
+		}
+		initiate_GUI_efficiency_civ_production_bar = yes
+	}
+}
+
+calculate_private_building_effect = {
+	set_temp_variable			= { capital_activity_fail_temp = 1 }
+	subtract_from_temp_variable	= { capital_activity_fail_temp = private_capital_activity_value }
+	clamp_temp_variable			= { var = capital_activity_fail_temp min = 0.0 max = 1.0 }
+	set_temp_variable			= { capital_activity_success_temp = private_capital_activity_value }
+	clamp_temp_variable			= { var = capital_activity_success_temp min = 0.0 max = 1.0 }
+	random_list = {
+		temp_var:capital_activity_fail_temp		= {
+			# НИЧЕГО
+		}
+		temp_var:capital_activity_success_temp	= {
+			set_temp_variable			= { temp1 = private_capital_activity_value }
+			multiply_temp_variable		= { temp1 = 5 }		#*100/20
+			subtract_from_temp_variable	= { temp1 = 0.5 }
+			round_temp_variable			= temp1
+			if = {
+				limit = { check_variable	= { num_of_private_building_project < temp1 } }
+				add_to_variable = { num_of_private_building_project = 1 }
+				private_building_add_effect = yes
+			}
+		}
+	}
+}
+
+private_building_add_effect = {
+	random_list = {
+		1 = {
+			if = {
+				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_industrial_complex } } }
+				add_to_array			= { private_building_lines_ui_array = token:private_industrial_complex }
+				set_variable_to_random	= {
+					var = private_build_speed_@token:private_industrial_complex
+					min = 1 max = 5 integer = yes
+				}
+			}
+			add_to_variable = { num_of_private_building_@token:private_industrial_complex = 1 }
+			if = {
+				limit = { NOT = { has_variable = private_building_target_state_@token:private_industrial_complex } }
+				random_core_state = {
+					limit = {
+						is_owned_by = PREV
+						free_building_slots = {
+							building = private_industrial_complex
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_industrial_complex = THIS.id }
+				}
+			}
+		}
+		1 = {
+			if = {
+				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_arms_factory } } }
+				add_to_array			= { private_building_lines_ui_array = token:private_arms_factory }
+				set_variable_to_random	= {
+					var = private_build_speed_@token:private_arms_factory
+					min = 1 max = 5 integer = yes
+				}
+			}
+			add_to_variable = { num_of_private_building_@token:private_arms_factory = 1 }
+			if = {
+				limit = { NOT = { has_variable = private_building_target_state_@token:private_arms_factory } }
+				random_core_state = {
+					limit = {
+						is_owned_by = PREV
+						free_building_slots = {
+							building = private_arms_factory
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_arms_factory = THIS.id }
+				}
+			}
+		}
+		1 = {
+			if = {
+				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_dockyard } } }
+				add_to_array			= { private_building_lines_ui_array = token:private_dockyard }
+				set_variable_to_random	= {
+					var = private_build_speed_@token:private_dockyard
+					min = 1 max = 5 integer = yes
+				}
+			}
+			add_to_variable = { num_of_private_building_@token:private_dockyard = 1 }
+			if = {
+				limit = { NOT = { has_variable = private_building_target_state_@token:private_dockyard } }
+				random_core_state = {
+					limit = {
+						is_owned_by = PREV
+						is_coastal = yes
+						free_building_slots = {
+							building = private_dockyard
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_dockyard = THIS.id }
+				}
+			}
+		}
+		1 = {
+			if = {
+				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_synthetic_refinery } } }
+				add_to_array			= { private_building_lines_ui_array = token:private_synthetic_refinery }
+				set_variable_to_random	= {
+					var = private_build_speed_@token:private_synthetic_refinery
+					min = 1 max = 5 integer = yes
+				}
+			}
+			add_to_variable = { num_of_private_building_@token:private_synthetic_refinery = 1 }
+			if = {
+				limit = { NOT = { has_variable = private_building_target_state_@token:private_synthetic_refinery } }
+				random_core_state = {
+					limit = {
+						is_owned_by = PREV
+						free_building_slots = {
+							building = private_synthetic_refinery
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_synthetic_refinery = THIS.id }
+				}
+			}
+		}
+		1 = {
+			if = {
+				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_steel_mill } } }
+				add_to_array			= { private_building_lines_ui_array = token:private_steel_mill }
+				set_variable_to_random	= {
+					var = private_build_speed_@token:private_steel_mill
+					min = 1 max = 5 integer = yes
+				}
+			}
+			add_to_variable = { num_of_private_building_@token:private_steel_mill = 1 }
+			if = {
+				limit = { NOT = { has_variable = private_building_target_state_@token:private_steel_mill } }
+				random_core_state = {
+					limit = {
+						is_owned_by = PREV
+						free_building_slots = {
+							building = private_steel_mill
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_steel_mill = THIS.id }
+				}
+			}
+		}
+		1 = {
+			if = {
+				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_agro_complex } } }
+				add_to_array			= { private_building_lines_ui_array = token:private_agro_complex }
+				set_variable_to_random	= {
+					var = private_build_speed_@token:private_agro_complex
+					min = 1 max = 5 integer = yes
+				}
+			}
+			add_to_variable = { num_of_private_building_@token:private_agro_complex = 1 }
+			if = {
+				limit = { NOT = { has_variable = private_building_target_state_@token:private_agro_complex } }
+				random_core_state = {
+					limit = {
+						is_owned_by = PREV
+						free_building_slots = {
+							building = private_agro_complex
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_agro_complex = THIS.id }
+				}
+			}
+		}
+		1 = {
+			if = {
+				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_livestock_complex } } }
+				add_to_array			= { private_building_lines_ui_array = token:private_livestock_complex }
+				set_variable_to_random	= {
+					var = private_build_speed_@token:private_livestock_complex
+					min = 1 max = 5 integer = yes
+				}
+			}
+			add_to_variable = { num_of_private_building_@token:private_livestock_complex = 1 }
+			if = {
+				limit = { NOT = { has_variable = private_building_target_state_@token:private_livestock_complex } }
+				random_core_state = {
+					limit = {
+						is_owned_by = PREV
+						free_building_slots = {
+							building = private_livestock_complex
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_livestock_complex = THIS.id }
+				}
+			}
+		}
+		1 = {
+			if = {
+				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_thermal_power_plant } } }
+				add_to_array			= { private_building_lines_ui_array = token:private_thermal_power_plant }
+				set_variable_to_random	= {
+					var = private_build_speed_@token:private_thermal_power_plant
+					min = 1 max = 5 integer = yes
+				}
+			}
+			add_to_variable = { num_of_private_building_@token:private_thermal_power_plant = 1 }
+			if = {
+				limit = { NOT = { has_variable = private_building_target_state_@token:private_thermal_power_plant } }
+				random_core_state = {
+					limit = {
+						is_owned_by = PREV
+						free_building_slots = {
+							building = private_thermal_power_plant
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_thermal_power_plant = THIS.id }
+				}
+			}
+		}
+	}
+}
+
+calculate_private_building_progress_effect = {
+	set_temp_variable			= { private_capital_activity_temp = 1 }
+	add_to_temp_variable		= { private_capital_activity_temp = proletariat_unemployment_rate }
+	multiply_temp_variable		= { private_capital_activity_temp = modifier@capitalist_activity_modifier }
+	set_variable				= { private_capital_activity_value = private_capital_activity_temp }
+	
+	if = {
+		limit = { check_variable = { num_of_private_building_@token:private_industrial_complex > 0 } }
+		set_temp_variable		= { tp1 = 1 }
+		add_to_temp_variable	= { tp1 = private_capital_activity_value }
+		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+
+		add_to_variable			= { completion_private_building_@token:private_industrial_complex = tp1 }
+		
+		set_variable			= {	GUI_completion_private_building_@token:private_industrial_complex = completion_private_building_@token:private_industrial_complex }
+		divide_variable			= {	GUI_completion_private_building_@token:private_industrial_complex = global.private_build_cost_@token:private_industrial_complex }
+		multiply_variable		= {	GUI_completion_private_building_@token:private_industrial_complex = 100 }
+		
+		if = {
+			limit = { check_variable = { var = completion_private_building_@token:private_industrial_complex value = global.private_build_cost_@token:private_industrial_complex compare = greater_than_or_equals } }
+			
+			meta_effect = {
+				text = {
+					[TARGET_STATE] = {
+						add_building_construction = {
+							type			= private_industrial_complex
+							level			= 1
+							instant_build	= yes
+						}
+					}
+				}
+				TARGET_STATE = "[?var:private_building_target_state_@token:private_industrial_complex.GetID]"
+			}
+			add_to_variable		= { num_of_private_building_@token:private_industrial_complex = -1 }
+			add_to_variable		= { num_of_private_building_project = -1 }
+			
+			clear_variable		= private_building_target_state_@token:private_industrial_complex
+			clear_variable		= completion_private_building_@token:private_industrial_complex
+			clear_variable		= GUI_completion_private_building_@token:private_industrial_complex
+			if = {
+				limit = { check_variable = { num_of_private_building_@token:private_industrial_complex > 0 } }
+				random_owned_state = {
+					limit = {
+						is_core_of = PREV
+						free_building_slots = {
+							building = private_industrial_complex
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_industrial_complex = THIS.id }
+				}
+				else = {
+					remove_from_array	= { private_building_lines_ui_array = token:private_industrial_complex }
+					clear_variable		= private_build_speed_@token:private_industrial_complex
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_variable = { num_of_private_building_@token:private_arms_factory > 0 } }
+		set_temp_variable		= { tp1 = 1 }
+		add_to_temp_variable	= { tp1 = private_capital_activity_value }
+		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+
+		add_to_variable			= { completion_private_building_@token:private_arms_factory = tp1 }
+		
+		set_variable			= {	GUI_completion_private_building_@token:private_arms_factory = completion_private_building_@token:private_arms_factory }
+		divide_variable			= {	GUI_completion_private_building_@token:private_arms_factory = global.private_build_cost_@token:private_arms_factory }
+		multiply_variable		= {	GUI_completion_private_building_@token:private_arms_factory = 100 }
+		
+		if = {
+			limit = { check_variable = { var = completion_private_building_@token:private_arms_factory value = global.private_build_cost_@token:private_arms_factory compare = greater_than_or_equals } }
+			meta_effect = {
+				text = {
+					[TARGET_STATE] = {
+						add_building_construction = {
+							type			= private_arms_factory
+							level			= 1
+							instant_build	= yes
+						}
+					}
+				}
+				TARGET_STATE = "[?var:private_building_target_state_@token:private_arms_factory.GetID]"
+			}
+			
+			add_to_variable		= { num_of_private_building_@token:private_arms_factory = -1 }
+			add_to_variable		= { num_of_private_building_project = -1 }
+			
+			clear_variable		= private_building_target_state_@token:private_arms_factory
+			clear_variable		= completion_private_building_@token:private_arms_factory
+			clear_variable		= GUI_completion_private_building_@token:private_arms_factory
+			if = {
+				limit = { check_variable = { num_of_private_building_@token:private_arms_factory > 0 } }
+				random_owned_state = {
+					limit = {
+						is_core_of = PREV
+						free_building_slots = {
+							building = private_arms_factory
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_arms_factory = THIS.id }
+				}
+				else = {
+					remove_from_array	= { private_building_lines_ui_array = token:private_arms_factory }
+					clear_variable		= private_build_speed_@token:private_arms_factory
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_variable = { num_of_private_building_@token:private_dockyard > 0 } }
+		set_temp_variable		= { tp1 = 1 }
+		add_to_temp_variable	= { tp1 = private_capital_activity_value }
+		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+
+		add_to_variable			= { completion_private_building_@token:private_dockyard = tp1 }
+		
+		set_variable			= {	GUI_completion_private_building_@token:private_dockyard = completion_private_building_@token:private_dockyard }
+		divide_variable			= {	GUI_completion_private_building_@token:private_dockyard = global.private_build_cost_@token:private_dockyard }
+		multiply_variable		= {	GUI_completion_private_building_@token:private_dockyard = 100 }
+		
+		if = {
+			limit = { check_variable = { var = completion_private_building_@token:private_dockyard value = global.private_build_cost_@token:private_dockyard compare = greater_than_or_equals } }
+			meta_effect = {
+				text = {
+					[TARGET_STATE] = {
+						add_building_construction = {
+							type			= private_dockyard
+							level			= 1
+							instant_build	= yes
+						}
+					}
+				}
+				TARGET_STATE = "[?var:private_building_target_state_@token:private_dockyard.GetID]"
+			}
+			
+			add_to_variable		= { num_of_private_building_@token:private_dockyard = -1 }
+			add_to_variable		= { num_of_private_building_project = -1 }
+			
+			clear_variable		= private_building_target_state_@token:private_dockyard
+			clear_variable		= completion_private_building_@token:private_dockyard
+			clear_variable		= GUI_completion_private_building_@token:private_dockyard
+			if = {
+				limit = { check_variable = { num_of_private_building_@token:private_dockyard > 0 } }
+				random_owned_state = {
+					limit = {
+						is_core_of = PREV
+						is_coastal = yes
+						free_building_slots = {
+							building = private_dockyard
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_dockyard = THIS.id }
+				}
+				else = {
+					remove_from_array	= { private_building_lines_ui_array = token:private_dockyard }
+					clear_variable		= private_build_speed_@token:private_dockyard
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_variable = { num_of_private_building_@token:private_synthetic_refinery > 0 } }
+		set_temp_variable		= { tp1 = 1 }
+		add_to_temp_variable	= { tp1 = private_capital_activity_value }
+		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+
+		add_to_variable			= { completion_private_building_@token:private_synthetic_refinery = tp1 }
+		
+		set_variable			= {	GUI_completion_private_building_@token:private_synthetic_refinery = completion_private_building_@token:private_synthetic_refinery }
+		divide_variable			= {	GUI_completion_private_building_@token:private_synthetic_refinery = global.private_build_cost_@token:private_synthetic_refinery }
+		multiply_variable		= {	GUI_completion_private_building_@token:private_synthetic_refinery = 100 }
+		
+		if = {
+			limit = { check_variable = { var = completion_private_building_@token:private_synthetic_refinery value = global.private_build_cost_@token:private_synthetic_refinery compare = greater_than_or_equals } }
+			meta_effect = {
+				text = {
+					[TARGET_STATE] = {
+						add_building_construction = {
+							type			= private_synthetic_refinery
+							level			= 1
+							instant_build	= yes
+						}
+					}
+				}
+				TARGET_STATE = "[?var:private_building_target_state_@token:private_synthetic_refinery.GetID]"
+			}
+			
+			add_to_variable		= { num_of_private_building_@token:private_synthetic_refinery = -1 }
+			add_to_variable		= { num_of_private_building_project = -1 }
+			
+			clear_variable		= private_building_target_state_@token:private_synthetic_refinery
+			clear_variable		= completion_private_building_@token:private_synthetic_refinery
+			clear_variable		= GUI_completion_private_building_@token:private_synthetic_refinery
+			if = {
+				limit = { check_variable = { num_of_private_building_@token:private_synthetic_refinery > 0 } }
+				random_owned_state = {
+					limit = {
+						is_core_of = PREV
+						free_building_slots = {
+							building = private_synthetic_refinery
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_synthetic_refinery = THIS.id }
+				}
+				else = {
+					remove_from_array	= { private_building_lines_ui_array = token:private_synthetic_refinery }
+					clear_variable		= private_build_speed_@token:private_synthetic_refinery
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_variable = { num_of_private_building_@token:private_steel_mill > 0 } }
+		set_temp_variable		= { tp1 = 1 }
+		add_to_temp_variable	= { tp1 = private_capital_activity_value }
+		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+
+		add_to_variable			= { completion_private_building_@token:private_steel_mill = tp1 }
+		
+		set_variable			= {	GUI_completion_private_building_@token:private_steel_mill = completion_private_building_@token:private_steel_mill }
+		divide_variable			= {	GUI_completion_private_building_@token:private_steel_mill = global.private_build_cost_@token:private_steel_mill }
+		multiply_variable		= {	GUI_completion_private_building_@token:private_steel_mill = 100 }
+		
+		if = {
+			limit = { check_variable = { var = completion_private_building_@token:private_steel_mill value = global.private_build_cost_@token:private_steel_mill compare = greater_than_or_equals } }
+			meta_effect = {
+				text = {
+					[TARGET_STATE] = {
+						add_building_construction = {
+							type			= private_steel_mill
+							level			= 1
+							instant_build	= yes
+						}
+					}
+				}
+				TARGET_STATE = "[?var:private_building_target_state_@token:private_steel_mill.GetID]"
+			}
+			
+			add_to_variable		= { num_of_private_building_@token:private_steel_mill = -1 }
+			add_to_variable		= { num_of_private_building_project = -1 }
+			
+			clear_variable		= private_building_target_state_@token:private_steel_mill
+			clear_variable		= completion_private_building_@token:private_steel_mill
+			clear_variable		= GUI_completion_private_building_@token:private_steel_mill
+			if = {
+				limit = { check_variable = { num_of_private_building_@token:private_steel_mill > 0 } }
+				random_owned_state = {
+					limit = {
+						is_core_of = PREV
+						free_building_slots = {
+							building = private_steel_mill
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_steel_mill = THIS.id }
+				}
+				else = {
+					remove_from_array	= { private_building_lines_ui_array = token:private_steel_mill }
+					clear_variable		= private_build_speed_@token:private_steel_mill
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_variable = { num_of_private_building_@token:private_agro_complex > 0 } }
+		set_temp_variable		= { tp1 = 1 }
+		add_to_temp_variable	= { tp1 = private_capital_activity_value }
+		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+
+		add_to_variable			= { completion_private_building_@token:private_agro_complex = tp1 }
+		
+		set_variable			= {	GUI_completion_private_building_@token:private_agro_complex = completion_private_building_@token:private_agro_complex }
+		divide_variable			= {	GUI_completion_private_building_@token:private_agro_complex = global.private_build_cost_@token:private_agro_complex }
+		multiply_variable		= {	GUI_completion_private_building_@token:private_agro_complex = 100 }
+		
+		if = {
+			limit = { check_variable = { var = completion_private_building_@token:private_agro_complex value = global.private_build_cost_@token:private_agro_complex compare = greater_than_or_equals } }
+			meta_effect = {
+				text = {
+					[TARGET_STATE] = {
+						add_building_construction = {
+							type			= private_agro_complex
+							level			= 1
+							instant_build	= yes
+						}
+					}
+				}
+				TARGET_STATE = "[?var:private_building_target_state_@token:private_agro_complex.GetID]"
+			}
+			
+			add_to_variable		= { num_of_private_building_@token:private_agro_complex = -1 }
+			add_to_variable		= { num_of_private_building_project = -1 }
+			
+			clear_variable		= private_building_target_state_@token:private_agro_complex
+			clear_variable		= completion_private_building_@token:private_agro_complex
+			clear_variable		= GUI_completion_private_building_@token:private_agro_complex
+			if = {
+				limit = { check_variable = { num_of_private_building_@token:private_agro_complex > 0 } }
+				random_owned_state = {
+					limit = {
+						is_core_of = PREV
+						free_building_slots = {
+							building = private_agro_complex
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_agro_complex = THIS.id }
+				}
+				else = {
+					remove_from_array	= { private_building_lines_ui_array = token:private_agro_complex }
+					clear_variable		= private_build_speed_@token:private_agro_complex
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_variable = { num_of_private_building_@token:private_livestock_complex > 0 } }
+		set_temp_variable		= { tp1 = 1 }
+		add_to_temp_variable	= { tp1 = private_capital_activity_value }
+		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+
+		add_to_variable			= { completion_private_building_@token:private_livestock_complex = tp1 }
+		
+		set_variable			= {	GUI_completion_private_building_@token:private_livestock_complex = completion_private_building_@token:private_livestock_complex }
+		divide_variable			= {	GUI_completion_private_building_@token:private_livestock_complex = global.private_build_cost_@token:private_livestock_complex }
+		multiply_variable		= {	GUI_completion_private_building_@token:private_livestock_complex = 100 }
+		
+		if = {
+			limit = { check_variable = { var = completion_private_building_@token:private_livestock_complex value = global.private_build_cost_@token:private_livestock_complex compare = greater_than_or_equals } }
+			meta_effect = {
+				text = {
+					[TARGET_STATE] = {
+						add_building_construction = {
+							type			= private_livestock_complex
+							level			= 1
+							instant_build	= yes
+						}
+					}
+				}
+				TARGET_STATE = "[?var:private_building_target_state_@token:private_livestock_complex.GetID]"
+			}
+			
+			add_to_variable		= { num_of_private_building_@token:private_livestock_complex = -1 }
+			add_to_variable		= { num_of_private_building_project = -1 }
+			
+			clear_variable		= private_building_target_state_@token:private_livestock_complex
+			clear_variable		= completion_private_building_@token:private_livestock_complex
+			clear_variable		= GUI_completion_private_building_@token:private_livestock_complex
+			if = {
+				limit = { check_variable = { num_of_private_building_@token:private_livestock_complex > 0 } }
+				random_owned_state = {
+					limit = {
+						is_core_of = PREV
+						free_building_slots = {
+							building = private_livestock_complex
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_livestock_complex = THIS.id }
+				}
+				else = {
+					remove_from_array	= { private_building_lines_ui_array = token:private_livestock_complex }
+					clear_variable		= private_build_speed_@token:private_livestock_complex
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_variable = { num_of_private_building_@token:private_thermal_power_plant > 0 } }
+		set_temp_variable		= { tp1 = 1 }
+		add_to_temp_variable	= { tp1 = private_capital_activity_value }
+		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+
+		add_to_variable			= { completion_private_building_@token:private_thermal_power_plant = tp1 }
+		
+		set_variable			= {	GUI_completion_private_building_@token:private_thermal_power_plant = completion_private_building_@token:private_thermal_power_plant }
+		divide_variable			= {	GUI_completion_private_building_@token:private_thermal_power_plant = global.private_build_cost_@token:private_thermal_power_plant }
+		multiply_variable		= {	GUI_completion_private_building_@token:private_thermal_power_plant = 100 }
+		
+		if = {
+			limit = { check_variable = { var = completion_private_building_@token:private_thermal_power_plant value = global.private_build_cost_@token:private_thermal_power_plant compare = greater_than_or_equals } }
+			meta_effect = {
+				text = {
+					[TARGET_STATE] = {
+						add_building_construction = {
+							type			= private_thermal_power_plant
+							level			= 1
+							instant_build	= yes
+						}
+					}
+				}
+				TARGET_STATE = "[?var:private_building_target_state_@token:private_thermal_power_plant.GetID]"
+			}
+			
+			add_to_variable		= { num_of_private_building_@token:private_thermal_power_plant = -1 }
+			add_to_variable		= { num_of_private_building_project = -1 }
+			
+			clear_variable		= private_building_target_state_@token:private_thermal_power_plant
+			clear_variable		= completion_private_building_@token:private_thermal_power_plant
+			clear_variable		= GUI_completion_private_building_@token:private_thermal_power_plant
+			if = {
+				limit = { check_variable = { num_of_private_building_@token:private_thermal_power_plant > 0 } }
+				random_owned_state = {
+					limit = {
+						is_core_of = PREV
+						free_building_slots = {
+							building = private_thermal_power_plant
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_thermal_power_plant = THIS.id }
+				}
+				else = {
+					remove_from_array	= { private_building_lines_ui_array = token:private_thermal_power_plant }
+					clear_variable		= private_build_speed_@token:private_thermal_power_plant
+				}
+			}
+		}
+	}
+}
+
 effect_1 = {
-#	set_temp_variable		= { test_temp = 0 }
-	while_loop_effect		= { limit = { check_variable = { political_power > var:test_temp_@THIS } }	add_to_temp_variable = { test_temp_@THIS = 1 } }
-	set_variable			= { test_var = test_temp_@THIS }
+#	clear_variable = private_building_target_state_@token:private_thermal_power_plant
+	random_owned_state = {
+		limit = {
+			is_core_of = ROOT
+			free_building_slots = {
+				building = private_thermal_power_plant
+				size > 0
+				include_locked = no
+			}
+		}
+		set_variable = { ROOT.private_building_target_state_@token:private_thermal_power_plant = PREV.id }
+	}
+	log = "TARGET_STATE: [?private_building_target_state_@token:private_thermal_power_plant.GetID]"
+	meta_effect = {
+		text = {
+			[TARGET_STATE] = {
+				add_building_construction = {
+					type			= private_thermal_power_plant
+					level			= 1
+					instant_build	= yes
+				}
+			}
+		}
+		TARGET_STATE = "[?var:private_building_target_state_@token:private_thermal_power_plant.GetID]"
+	}
 }

@@ -722,9 +722,19 @@ script_enum_special_tokens = {
 	state_culture_corn
 	
 	
+	civ_factories
 	civ_production_consumer_goods
 	civ_production_fertilizer
 	civ_production_tractor
 	civ_production_factory_machines
 	civ_production_computer
+	
+	private_industrial_complex
+	private_arms_factory
+	private_dockyard
+	private_synthetic_refinery
+	private_steel_mill
+	private_agro_complex
+	private_livestock_complex
+	private_thermal_power_plant
 }

@@ -291,7 +291,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "production_lines"
 			position = { x = 0 y = 130 }
-			size = { width = 440 height = 100%% }
+			size = { width = 440 height = 70%% }
 			verticalScrollbar = "right_vertical_slider"
 			vertical_scroll_step = 52
 			scroll_wheel_factor = 40
@@ -539,6 +539,13 @@ guiTypes = {
 			position = { x= 0 y = 0 } # Set in code
 			Orientation = "UPPER_LEFT"
 			hide = yes
+		}
+		
+		iconType ={
+			name ="private_sector_label"
+			spriteType = "GFX_private_sector_label"
+			position = { x= 435 y = 730 }
+			Orientation = "UPPER_LEFT"
 		}
 	}
 	

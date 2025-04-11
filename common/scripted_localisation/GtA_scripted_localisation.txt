@@ -680,3 +680,114 @@ defined_text = {		# CUSTOM CIV_PRODUCTION_EQUIPMENT IMAGE
 		localization_key = "GFX_civilian_computer_equipment"
 	}
 }
+
+defined_text = {
+    name = get_factories_used_txt
+    
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_consumer_goods }
+			check_variable = { num_of_factories_cgff_var > 0 }
+		}
+		localization_key = "factories_used_cgff_txt"
+	}
+}
+defined_text = {
+    name = get_factories_used_desc
+    
+	text = {
+		trigger = {
+			check_variable = { v = token:civ_production_consumer_goods }
+		}
+		localization_key = "get_factories_used_desc_consumer_goods"
+	}
+}
+
+
+defined_text = {		# CUSTOM private_building_icon IMAGE
+    name = get_private_building_icon
+    
+	text = {
+		trigger = {
+			check_variable = { v = token:private_industrial_complex }
+		}
+		localization_key = "GFX_private_industrial_complex"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:private_arms_factory }
+		}
+		localization_key = "GFX_private_arms_factory"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:private_dockyard }
+		}
+		localization_key = "GFX_private_dockyard"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:private_synthetic_refinery }
+		}
+		localization_key = "GFX_private_synthetic_refinery"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:private_steel_mill }
+		}
+		localization_key = "GFX_private_steel_mill"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:private_agro_complex }
+		}
+		localization_key = "GFX_private_agro_complex"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:private_livestock_complex }
+		}
+		localization_key = "GFX_private_livestock_complex"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:private_thermal_power_plant }
+		}
+		localization_key = "GFX_private_thermal_power_plant"
+	}
+}
+
+defined_text = {		# CUSTOM private_ongoing_contruction_anim IMAGE
+    name = get_private_ongoing_contruction_anim
+    
+	text = {
+		trigger = {
+			check_variable = { private_build_speed_@var:v = 1 }
+		}
+		localization_key = "GFX_gta_ongoing_contruction_bad"
+	}
+	text = {
+		trigger = {
+			check_variable = { private_build_speed_@var:v = 2 }
+		}
+		localization_key = "GFX_gta_ongoing_contruction_anim_low"
+	}
+	text = {
+		trigger = {
+			check_variable = { private_build_speed_@var:v = 3 }
+		}
+		localization_key = "GFX_gta_ongoing_contruction_anim_normal"
+	}
+	text = {
+		trigger = {
+			check_variable = { private_build_speed_@var:v = 4 }
+		}
+		localization_key = "GFX_gta_ongoing_contruction_anim_good"
+	}
+	text = {
+		trigger = {
+			check_variable = { private_build_speed_@var:v = 5 }
+		}
+		localization_key = "GFX_gta_ongoing_contruction_anim_epic"
+	}
+}

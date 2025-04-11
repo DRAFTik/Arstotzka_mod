@@ -1,0 +1,339 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "private_building_lines_SHORT"
+		position = { x = 0 y = 95 }
+		show_position = { x=0 y =675 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		
+		size = { width = 440 height = 100%% }
+		verticalScrollbar = "right_vertical_slider"
+#		vertical_scroll_step = 52
+		scroll_wheel_factor = 40
+		smooth_scrolling = yes
+		margin = { top = 0 left = 13 bottom = 15 right = 25 }
+		
+		
+#		background = {
+#			name = "Background"
+#			quadTextureSprite ="GFX_tiled_window2_1b_border"
+#		}
+
+		background = {
+			name ="construction_screen_top_bg"
+			quadTextureSprite = "GFX_GtA_construction_screen_top"
+			position = { x= 6 y = 0 }
+			alwaystransparent = yes
+		}
+		background = {
+			name = "Background_2"
+			quadTextureSprite ="GFX_tiled_window2_1b_border"
+			position = { x= 0 y = 60 }
+		}
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_generic_overlay_bg1_small"
+			position = { x= 0 y = 60 }
+		}
+
+		
+		containerWindowType = {
+			name = "private_status_container"
+			position = { x= 0 y = 0 }
+			size = { width=100%% height=100%% }
+			
+			instantTextboxType = {
+				name = "private_capital_activity_txt"
+				position = { x=0 y=6 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_capital_activity_txt"
+				maxWidth = 200
+				maxHeight = 25
+				fixedsize = yes
+				format = left
+				pdx_tooltip = ""
+			}
+			instantTextboxType = {
+				name = "private_capital_activity_value"
+				position = { x=126 y=6 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_capital_activity_value"
+				maxWidth = 70
+				maxHeight = 25
+				format = right
+			}
+			
+			instantTextboxType = {
+				name = "private_electropower_supply_txt"
+				position = { x=220 y=6 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_electropower_supply_txt"
+				maxWidth = 200
+				maxHeight = 25
+				fixedsize = yes
+				format = left
+				pdx_tooltip = ""
+			}
+			instantTextboxType = {
+				name = "private_electropower_supply_value"
+				position = { x=330 y=6 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_electropower_supply_value"
+				maxWidth = 70
+				maxHeight = 25
+				format = right
+			}
+		}
+		
+		gridBoxType = {
+			name = "private_building_lines_grid"
+			position = { x = 1 y = 73 }
+			size = { width = 100% height = 100%% }
+			slotsize = { width = 500 height = 1 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+			format = "UPPER_LEFT"
+		}
+		
+		
+		buttonType = {
+			name = "private_building_open"
+			position = { x=198 y=2 }
+			quadTextureSprite = "GFX_change_armygroup_template_up"
+			font = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "private_building_add"
+			position = { x=198 y=32 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_16mbs"
+			clicksound = click_default
+		}
+	}
+	
+	
+	containerWindowType = {
+		name = "private_building_lines_FULL"
+		position = { x = 0 y = 675 }
+		show_position = { x=0 y =95 }
+		show_animation_type = decelerated
+		hide_animation_type = decelerated
+		animation_time = 300
+		
+		size = { width = 440 height = 100%% }
+		verticalScrollbar = "right_vertical_slider"
+#		vertical_scroll_step = 52
+		scroll_wheel_factor = 40
+		smooth_scrolling = yes
+		margin = { top = 0 left = 13 bottom = 15 right = 25 }
+		
+		
+#		background = {
+#			name = "Background"
+#			quadTextureSprite ="GFX_tiled_window2_1b_border"
+#		}
+
+		background = {
+			name ="construction_screen_top_bg"
+			quadTextureSprite = "GFX_GtA_construction_screen_top"
+			position = { x= 6 y = 0 }
+			alwaystransparent = yes
+		}
+		background = {
+			name = "Background_2"
+			quadTextureSprite ="GFX_tiled_window2_1b_border"
+			position = { x= 0 y = 60 }
+		}
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_generic_overlay_bg1_small"
+			position = { x= 0 y = 60 }
+		}
+
+		
+		containerWindowType = {
+			name = "private_status_container"
+			position = { x= 0 y = 0 }
+			size = { width=100%% height=100%% }
+			
+			instantTextboxType = {
+				name = "private_capital_activity_txt"
+				position = { x=0 y=6 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_capital_activity_txt"
+				maxWidth = 200
+				maxHeight = 25
+				fixedsize = yes
+				format = left
+				pdx_tooltip = ""
+			}
+			instantTextboxType = {
+				name = "private_capital_activity_value"
+				position = { x=126 y=6 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_capital_activity_value"
+				maxWidth = 70
+				maxHeight = 25
+				format = right
+			}
+			
+			instantTextboxType = {
+				name = "private_electropower_supply_txt"
+				position = { x=220 y=6 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_electropower_supply_txt"
+				maxWidth = 200
+				maxHeight = 25
+				fixedsize = yes
+				format = left
+				pdx_tooltip = ""
+			}
+			instantTextboxType = {
+				name = "private_electropower_supply_value"
+				position = { x=330 y=6 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_electropower_supply_value"
+				maxWidth = 70
+				maxHeight = 25
+				format = right
+			}
+		}
+		
+		gridBoxType = {
+			name = "private_building_lines_grid"
+			position = { x = 1 y = 73 }
+			size = { width = 100% height = 100%% }
+			slotsize = { width = 500 height = 1 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+			format = "UPPER_LEFT"
+		}
+		
+	
+		buttonType = {
+			name = "private_building_open"
+			position = { x=198 y=2 }
+			quadTextureSprite = "GFX_change_armygroup_template_down"
+			font = "hoi_16mbs"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "private_building_add"
+			position = { x=198 y=32 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_16mbs"
+			clicksound = click_default
+		}
+	}
+	
+	
+	# this entry will be used to populate private_building_lines_grid in private_building_lines_SHORT/_FULL
+	containerWindowType = {
+		name = "scripted_gui_private_building_lines_ui_array_entry"
+		position = { x=0 y=0 }
+		size = { width = 400 height = 52 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_construction_entry_bg"
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "private_location"
+			position = { x = 30 y = 4 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = { x = 0 y = 0 }
+			text = "[?var:private_building_target_state_@var:v.GetName]"
+			maxWidth = 150
+			maxHeight = 40
+			format = left
+			multiline = yes
+			vertical_alignment = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "private_location_button"
+			position = { x = 2 y = 13 }
+			quadTextureSprite = "GFX_spy_master_icon"
+			clicksound = click_default
+			Orientation = LEFT
+			scale = 0.5
+		}
+		iconType = {
+			name = "private_building_icon"
+			position = { x = 172 y = 5 }
+			spriteType = "GFX_private_industrial_complex"
+		}
+		
+		iconType = {
+			name = "private_building_progressbar_ratio_bar"
+			spriteType = "GFX_construction_progressbar"
+			position = { x= 249 y = 36 }
+			pdx_tooltip = "private_building_progressbar_ratio_bar_tooltip"
+		}
+		instantTextboxType = {
+			name = "private_building_count"
+			position = { x = 162 y = 29 }
+			textureFile = ""
+			font = "hoi_18b"
+			text = "[?num_of_private_building_@var:v]"
+			maxWidth = 50
+			maxHeight = 20
+			format = right
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "private_ongoing_contruction_anim"
+			spriteType = "GFX_gta_ongoing_contruction_anim_normal"
+			position = { x = 254 y = 9 }
+		}
+		instantTextboxType = {
+			name = "factories"
+			position = { x = 254 y = 9 }
+			textureFile = ""
+			font = "hoi_18b"
+			text = "[?private_build_speed_@var:v]"
+			maxWidth = 50
+			maxHeight = 20
+			format = center
+		}
+		buttonType = {
+			name = "increase_priority"
+			position = { x=318 y=14 }
+			quadTextureSprite = "GFX_arrow_up_small"
+			pdx_tooltip = "PRODUCTION_INCREASE_PRIORITY_LABEL"
+			pdx_tooltip_delayed = "PRODUCTION_PRIORITY_DELAYED"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "decrease_priority"
+			position = { x=341 y=14	 }
+			quadTextureSprite = "GFX_arrow_down_small"
+			pdx_tooltip = "PRODUCTION_DECREASE_PRIORITY_LABEL"
+			pdx_tooltip_delayed = "PRODUCTION_PRIORITY_DELAYED"
+			clicksound = click_default
+		}
+		
+		buttonType = {
+			name = "private_building_subtract"
+			position = { x=370 y=14 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_16mbs"
+			clicksound = click_default
+		}
+	}
+}

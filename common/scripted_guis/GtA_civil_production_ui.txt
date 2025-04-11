@@ -45,7 +45,8 @@ scripted_gui = {
 				subtract_from_variable	= { TOTAL_num_of_use_civilian_factories_in_production_var = civ_factories_ui_array_last_var_@var:v }
 				clear_variable			= civ_factories_ui_array_last_var_@var:v
 				clear_array				= civ_factories_ui_array_@var:v
-				remove_from_array		= { civ_production_ui_array = v }
+				remove_from_array		= { civ_production_ui_array = var:v }
+				add_to_array			= { civ_available_equipments_ui_array = var:v }
 				force_update_dynamic_modifier = yes
 				
 				clear_variable = civ_current_efficiency_@var:v
@@ -129,12 +130,19 @@ scripted_gui = {
 #				}
 				
 				add_to_array = { civ_production_ui_array = var:v }
-				set_variable = { civ_current_efficiency_@var:v = 50 }
+				remove_from_array = { civ_available_equipments_ui_array = var:v }
+				set_variable = { civ_current_efficiency_@var:v = 25 }
 				set_variable = { civ_max_efficiency_@var:v = 100 }
 				initiate_GUI_efficiency_civ_production_bar = yes
 			}
 		}
 		triggers = {
+			close_production_line_click_enabled = {
+				if = {
+					limit = { check_variable = { v = token:civ_production_consumer_goods } }
+					check_variable = { num_of_factories_cgff_var < 1 }
+				}
+			}
 			civ_factories_sub_click_enabled = {
 				check_variable = { civ_factories_ui_array_last_var_@var:v > 0 }
 			}

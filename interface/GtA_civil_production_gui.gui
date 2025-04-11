@@ -194,7 +194,6 @@ guiTypes = {
 			position = { x=481 y=2	 }
 			quadTextureSprite = "GFX_NV_btn_delete"
 			clicksound = click_close
-			shortcut = "ESCAPE"
 			scale = 0.9
 		}
 		instantTextboxType = {
@@ -283,12 +282,13 @@ guiTypes = {
 			position = { x=@prod_nof_pos_x y=6 }
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
-			text = "[?civ_factories_ui_array_last_var_@var:v]"
+			text = "factories_used_txt"
 			maxWidth = 50
 			maxHeight = 25
 			fixedsize = yes
 			format = center
-			alwaystransparent = yes
+#			alwaystransparent = yes
+			pdx_tooltip = "factories_used_desc"
 		}
 		gridBoxType = {
 			name = "civ_factories_grid"

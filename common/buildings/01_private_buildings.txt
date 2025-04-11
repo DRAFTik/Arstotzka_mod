@@ -1,0 +1,245 @@
+@private_repair_speed_factor = 1.0
+
+buildings = {
+
+	# show_on_map:
+	#    if it is provincial building, then show_on_map = X is amount per each province
+	#    if it is state building, then show_on_map = X is amount per state
+	#
+	# province_max:
+	# if province_max is set, then building is provincial
+	#
+	## Modifiers:
+	## country_modifiers - accept only country modifiers
+	## state_modifiers - accept only state modifiers
+	## enable_for_controllers - Country modifiers will apply only if the controller of province/state is in the list, or if the list is empty
+	## Example:
+	#
+	# building = {
+	# 	country_modifiers = {
+	#      enable_for_controllers { GER ENG } # Here you can list countries which can accept the country modifiers of this building
+	# 		modifiers = {
+	#           #Here you can add country modifiers
+	#			political_power_factor = 2.0
+	#       }
+	#   }
+	#   
+	#   state_modifiers = {
+	#       #Here you can add state modifiers
+	#   	local_building_slots_factor = 2
+	#   }
+	# }
+	#   disable_grow_animation = yes # Disables the grow animation for the building, default = no
+	#   missing_tech_loc = <bindable localization> # See script concept bindable localization
+	#   repair_speed_factor = 0.5 # Optional. Factor for how fast the building is repaired (default = 1.0)
+
+
+	private_industrial_complex = {
+		show_on_map = 0
+		base_cost = 10800
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 38
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		repair_speed_factor = @private_repair_speed_factor
+#		only_display_if_exists = yes
+		
+		always_shown = yes
+		show_modifier = yes
+		
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+		country_modifiers = {
+			modifiers = {
+				num_proletariat_k = -22.5
+				num_use_electric_power_private = 5
+			}
+		}
+	}
+	private_arms_factory = {
+		show_on_map = 0
+		base_cost = 7200
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 39
+		value = 8
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		repair_speed_factor = @private_repair_speed_factor
+#		only_display_if_exists = yes
+		
+		always_shown = yes
+		show_modifier = yes
+		
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+		country_modifiers = {
+			modifiers = {
+				num_proletariat_k = -13.25
+				num_use_electric_power_private = 6
+			}
+		}
+	}
+	private_dockyard = {
+		show_on_map = 0
+		base_cost = 6400
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 40
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		repair_speed_factor = @private_repair_speed_factor
+#		only_display_if_exists = yes
+		
+		always_shown = yes
+		show_modifier = yes
+		
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+		country_modifiers = {
+			modifiers = {
+				num_proletariat_k = -17.63
+				num_use_electric_power_private = 7
+			}
+		}
+	}
+	private_synthetic_refinery = {
+		show_on_map = 0
+		base_cost = 14500
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 41
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		repair_speed_factor = @private_repair_speed_factor
+#		only_display_if_exists = yes
+		
+		always_shown = yes
+		show_modifier = yes
+		
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+		country_modifiers = {
+			modifiers = {
+				num_proletariat_k = -8.5
+				num_use_electric_power_private = 4
+			}
+		}
+	}
+	private_steel_mill = {
+		show_on_map = 0
+		base_cost = 6500
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 42
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		repair_speed_factor = @private_repair_speed_factor
+#		only_display_if_exists = yes
+		
+		always_shown = yes
+		show_modifier = yes
+		
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+		country_modifiers = {
+			modifiers = {
+				num_proletariat_k		= -16.23
+				num_use_electric_power_private	= 3.5
+			}
+		}
+	}
+	private_agro_complex = {
+		show_on_map = 0
+		base_cost = 6500
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 43
+		value = 4
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		repair_speed_factor = @private_repair_speed_factor
+#		only_display_if_exists = yes
+		
+		always_shown = yes
+		show_modifier = yes
+		
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+		country_modifiers = {
+			modifiers = {
+				num_proletariat_k		= -10.2
+				num_use_electric_power_private	= 0.25
+			}
+		}
+	}
+	private_livestock_complex = {
+		show_on_map = 0
+		base_cost = 3375
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 44
+		value = 2
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		repair_speed_factor = @private_repair_speed_factor
+#		only_display_if_exists = yes
+		
+		always_shown = yes
+		show_modifier = yes
+		
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+		country_modifiers = {
+			modifiers = {
+				num_proletariat_k		= -12.8
+				num_use_electric_power_private	= 0.5
+			}
+		}
+	}
+	private_thermal_power_plant = {
+		show_on_map = 0
+		base_cost = 10000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 45
+		value = 8
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		repair_speed_factor = @private_repair_speed_factor
+#		only_display_if_exists = yes
+		
+		always_shown = yes
+		show_modifier = yes
+		
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+		country_modifiers = {
+			modifiers = {
+				num_proletariat_k				= -0.75
+				num_generation_electric_power_private	= 60
+			}
+		}
+	}
+}

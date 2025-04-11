@@ -1,0 +1,126 @@
+scripted_gui = {
+	
+	private_building_lines_SHORT = {
+		context_type = player_context
+		parent_window_token = construction_tab
+		window_name = "private_building_lines_SHORT"
+#		dirty = ROOT.private_production_lines
+		
+		visible = {
+			check_variable = { private_building_lines_open_var = 0 }
+		}
+		
+		dynamic_lists = {
+			private_building_lines_grid = {
+				array = private_building_lines_ui_array
+				entry_container = scripted_gui_private_building_lines_ui_array_entry
+			}
+		}
+		
+		properties = {
+			private_building_icon					= { image = "[get_private_building_icon]" }
+			private_ongoing_contruction_anim		= { image = "[get_private_ongoing_contruction_anim]" }
+			private_building_progressbar_ratio_bar	= { frame = GUI_completion_private_building_@var:v }
+		}
+		
+		effects = {
+			private_building_open_click = {
+				if = {
+					limit			= { check_variable = { private_building_lines_open_var = 0 } }
+					set_variable	= { private_building_lines_open_var = 2 }
+				}
+				else				= { set_variable = { private_building_lines_open_var = 0 } }
+			}
+			private_building_add_click = {
+				private_building_add_effect = yes
+			}
+			increase_priority_click = {
+				add_to_variable = { num_of_private_building_@var:v = 1 }
+			}
+			private_building_subtract_click = {
+				remove_from_array	= { private_building_lines_ui_array = var:v }
+				clear_variable		= num_of_private_building_@var:v
+				clear_variable		= private_build_speed_@var:v
+				clear_variable		= private_building_target_state_@var:v
+				clear_variable		= completion_private_building_@var:v
+				clear_variable		= GUI_completion_private_building_@var:v
+			}
+			private_location_button_click = {
+				meta_effect = {
+					text = {
+						goto_state = [TARGET_STATE]
+					}
+					TARGET_STATE = "[?var:private_building_target_state_@var:v.GetID]"
+				}
+			}
+		}
+		
+		ai_enabled = {
+			always = no
+		}
+	}
+	
+	
+	private_building_lines_FULL = {
+		context_type = player_context
+		parent_window_token = construction_tab
+		window_name = "private_building_lines_FULL"
+#		dirty = ROOT.private_production_lines
+		
+		visible = {
+			check_variable = { private_building_lines_open_var = 2 }
+		}
+		
+		dynamic_lists = {
+			private_building_lines_grid = {
+				array = private_building_lines_ui_array
+				entry_container = scripted_gui_private_building_lines_ui_array_entry
+			}
+		}
+		
+		properties = {
+			private_building_icon					= { image = "[get_private_building_icon]" }
+			private_ongoing_contruction_anim		= { image = "[get_private_ongoing_contruction_anim]" }
+			private_building_progressbar_ratio_bar	= { frame = GUI_completion_private_building_@var:v }
+		}
+		
+		effects = {
+			private_building_open_click = {
+				if = {
+					limit			= { check_variable = { private_building_lines_open_var = 0 } }
+					set_variable	= { private_building_lines_open_var = 2 }
+				}
+				else				= { set_variable = { private_building_lines_open_var = 0 } }
+			}
+			private_building_add_click = {
+				private_building_add_effect = yes
+			}
+			increase_priority_click = {
+				add_to_variable = { num_of_private_building_@var:v = 1 }
+				add_to_variable = { num_of_private_building_project = 1 }
+			}
+			private_building_subtract_click = {
+				remove_from_array	= { private_building_lines_ui_array = var:v }
+				add_to_variable		= { num_of_private_building_@var:v = -1 }
+				add_to_variable		= { num_of_private_building_project = -1 }
+				clear_variable		= num_of_private_building_@var:v
+				clear_variable		= private_build_speed_@var:v
+				clear_variable		= private_building_target_state_@var:v
+				clear_variable		= completion_private_building_@var:v
+				clear_variable		= GUI_completion_private_building_@var:v
+			}
+			private_location_button_click = {
+				meta_effect = {
+					text = {
+						goto_state = [TARGET_STATE]
+					}
+					TARGET_STATE = "[?var:private_building_target_state_@var:v.GetID]"
+				}
+			}
+		}
+		
+		ai_enabled = {
+			always = no
+		}
+	}
+}
