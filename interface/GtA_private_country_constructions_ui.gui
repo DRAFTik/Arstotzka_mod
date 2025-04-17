@@ -44,51 +44,103 @@ guiTypes = {
 			position = { x= 0 y = 0 }
 			size = { width=100%% height=100%% }
 			
+####	АКТИВНОСТЬ
 			instantTextboxType = {
 				name = "private_capital_activity_txt"
-				position = { x=0 y=6 }
+				position = { x=0 y=8 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				text = "private_capital_activity_txt"
+				pdx_tooltip = "private_capital_activity_tooltip"
 				maxWidth = 200
 				maxHeight = 25
 				fixedsize = yes
 				format = left
-				pdx_tooltip = ""
 			}
 			instantTextboxType = {
 				name = "private_capital_activity_value"
-				position = { x=126 y=6 }
+				position = { x=126 y=8 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				text = "private_capital_activity_value"
+				pdx_tooltip = "private_capital_activity_tooltip"
 				maxWidth = 70
 				maxHeight = 25
 				format = right
 			}
-			
+####	ДОЛЯ
 			instantTextboxType = {
-				name = "private_electropower_supply_txt"
-				position = { x=220 y=6 }
+				name = "private_capital_segment_txt"
+				position = { x=0 y=38 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
-				text = "private_electropower_supply_txt"
+				text = "private_capital_segment_txt"
+				pdx_tooltip = "private_capital_segment_tooltip"
 				maxWidth = 200
 				maxHeight = 25
 				fixedsize = yes
 				format = left
-				pdx_tooltip = ""
 			}
 			instantTextboxType = {
-				name = "private_electropower_supply_value"
-				position = { x=330 y=6 }
+				name = "private_capital_segment_value"
+				position = { x=126 y=38 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
-				text = "private_electropower_supply_value"
+				text = "private_capital_segment_value"
+				pdx_tooltip = "private_capital_segment_tooltip"
 				maxWidth = 70
 				maxHeight = 25
 				format = right
 			}
+####	ЭЛЕКТРИЧЕСТВО
+			instantTextboxType = {
+				name = "private_electropower_supply_txt"
+				position = { x=220 y=8 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_electropower_supply_txt"
+				pdx_tooltip = "private_electropower_supply_tooltip"
+				maxWidth = 200
+				maxHeight = 25
+				fixedsize = yes
+				format = left
+			}
+			instantTextboxType = {
+				name = "private_electropower_supply_value"
+				position = { x=330 y=8 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_electropower_supply_value"
+				pdx_tooltip = "private_electropower_supply_tooltip"
+				maxWidth = 70
+				maxHeight = 25
+				format = right
+			}
+####	ЭФФЕКТИВНОСТЬ
+			instantTextboxType = {
+				name = "private_capital_effectiveness_txt1"
+				position = { x=220 y=38 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_capital_effectiveness_txt"
+				pdx_tooltip = "private_capital_effectiveness_tooltip"
+				maxWidth = 200
+				maxHeight = 25
+				fixedsize = yes
+				format = left
+			}
+			instantTextboxType = {
+				name = "private_capital_effectiveness_value1"
+				position = { x=330 y=38 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_capital_effectiveness_value"
+				pdx_tooltip = "private_capital_effectiveness_tooltip"
+				maxWidth = 70
+				maxHeight = 25
+				format = right
+			}
+####
 		}
 		
 		gridBoxType = {
@@ -163,51 +215,103 @@ guiTypes = {
 			position = { x= 0 y = 0 }
 			size = { width=100%% height=100%% }
 			
+####	АКТИВНОСТЬ
 			instantTextboxType = {
 				name = "private_capital_activity_txt"
-				position = { x=0 y=6 }
+				position = { x=0 y=8 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				text = "private_capital_activity_txt"
+				pdx_tooltip = "private_capital_activity_tooltip"
 				maxWidth = 200
 				maxHeight = 25
 				fixedsize = yes
 				format = left
-				pdx_tooltip = ""
 			}
 			instantTextboxType = {
 				name = "private_capital_activity_value"
-				position = { x=126 y=6 }
+				position = { x=126 y=8 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				text = "private_capital_activity_value"
+				pdx_tooltip = "private_capital_activity_tooltip"
 				maxWidth = 70
 				maxHeight = 25
 				format = right
 			}
-			
+####	ЭФФЕКТИВНОСТЬ
 			instantTextboxType = {
-				name = "private_electropower_supply_txt"
-				position = { x=220 y=6 }
+				name = "private_capital_effectiveness_txt"
+				position = { x=0 y=38 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
-				text = "private_electropower_supply_txt"
+				text = "private_capital_effectiveness_txt"
+				pdx_tooltip = "private_capital_effectiveness_tooltip"
 				maxWidth = 200
 				maxHeight = 25
 				fixedsize = yes
 				format = left
-				pdx_tooltip = ""
 			}
 			instantTextboxType = {
-				name = "private_electropower_supply_value"
-				position = { x=330 y=6 }
+				name = "private_capital_effectiveness_value"
+				position = { x=126 y=38 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
-				text = "private_electropower_supply_value"
+				text = "private_capital_effectiveness_value"
+				pdx_tooltip = "private_capital_effectiveness_tooltip"
 				maxWidth = 70
 				maxHeight = 25
 				format = right
 			}
+####	ЭЛЕКТРИЧЕСТВО
+			instantTextboxType = {
+				name = "private_electropower_supply_txt"
+				position = { x=220 y=8 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_electropower_supply_txt"
+				pdx_tooltip = "private_electropower_supply_tooltip"
+				maxWidth = 200
+				maxHeight = 25
+				fixedsize = yes
+				format = left
+			}
+			instantTextboxType = {
+				name = "private_electropower_supply_value"
+				position = { x=330 y=8 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_electropower_supply_value"
+				pdx_tooltip = "private_electropower_supply_tooltip"
+				maxWidth = 70
+				maxHeight = 25
+				format = right
+			}
+####	ДОЛЯ
+			instantTextboxType = {
+				name = "private_capital_effectiveness_txt1"
+				position = { x=330 y=38 }
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				text = "private_capital_effectiveness_txt"
+				pdx_tooltip = "private_capital_effectiveness_tooltip"
+				maxWidth = 200
+				maxHeight = 25
+				fixedsize = yes
+				format = left
+			}
+			instantTextboxType = {
+				name = "private_capital_effectiveness_value1"
+				position = { x=126 y=38 }
+				font = "hoi_18mbs"
+				borderSize = {x = 330 y = 0}
+				text = "private_capital_effectiveness_value"
+				pdx_tooltip = "private_capital_effectiveness_tooltip"
+				maxWidth = 70
+				maxHeight = 25
+				format = right
+			}
+####
 		}
 		
 		gridBoxType = {
@@ -306,27 +410,27 @@ guiTypes = {
 			position = { x = 254 y = 9 }
 			textureFile = ""
 			font = "hoi_18b"
-			text = "[?private_build_speed_@var:v]"
+			text = "x[?private_build_speed_@var:v]"
 			maxWidth = 50
 			maxHeight = 20
 			format = center
 		}
 		buttonType = {
-			name = "increase_priority"
+			name = "private_increase_priority"
 			position = { x=318 y=14 }
 			quadTextureSprite = "GFX_arrow_up_small"
-			pdx_tooltip = "PRODUCTION_INCREASE_PRIORITY_LABEL"
-			pdx_tooltip_delayed = "PRODUCTION_PRIORITY_DELAYED"
+			pdx_tooltip = "private_increase_priority_tt"
+			pdx_tooltip_delayed = "private_increase_priority_delayed_tt"
 			clicksound = click_default
 		}
-		buttonType = {
-			name = "decrease_priority"
-			position = { x=341 y=14	 }
-			quadTextureSprite = "GFX_arrow_down_small"
-			pdx_tooltip = "PRODUCTION_DECREASE_PRIORITY_LABEL"
-			pdx_tooltip_delayed = "PRODUCTION_PRIORITY_DELAYED"
-			clicksound = click_default
-		}
+#		buttonType = {
+#			name = "private_decrease_priority"
+#			position = { x=341 y=14	 }
+#			quadTextureSprite = "GFX_arrow_down_small"
+#			pdx_tooltip = "PRODUCTION_DECREASE_PRIORITY_LABEL"
+#			pdx_tooltip_delayed = "PRODUCTION_PRIORITY_DELAYED"
+#			clicksound = click_default
+#		}
 		
 		buttonType = {
 			name = "private_building_subtract"

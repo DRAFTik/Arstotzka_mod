@@ -5,14 +5,13 @@ ideas = {
 		use_list_view = yes
 
 
-		capital_activity_3 = {
+		capital_activity_5 = {
 			picture = generic_economic_increase
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea increase_nutrition_standards"
-				calculate_provision_need_effect = yes
+				log = "[GetDateText]: [Root.GetName]: add idea capital_activity_5"
 			}
-			on_remove = { set_variable = { previous_provision_law = token:increase_nutrition_standards } }
-			level = 2
+			on_remove = { set_variable = { previous_private_capital_law = token:capital_activity_5 } }
+			level = 5
 			cost = 150
 			removal_cost = -1
 			cancel_if_invalid = no
@@ -22,7 +21,63 @@ ideas = {
 			available = {
 			}
 			modifier = {
-				capitalist_activity_modifier = 0.5
+				political_power_factor = -0.35
+				capitalist_activity_modifier = 0.25
+				custom_modifier_tooltip = base_private_build_speed_law_epic_tt
+				hidden_modifier = { base_private_build_speed_modifier = 2 }
+			}
+			ai_will_do = {
+   				base = 30
+			}
+		}
+		
+		capital_activity_4 = {
+			picture = NOR_printing_money
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea capital_activity_4"
+			}
+			on_remove = { set_variable = { previous_private_capital_law = token:capital_activity_4 } }
+			level = 4
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+			allowed = {
+				NOT = { tag = SAI }
+			}
+			available = {
+			}
+			modifier = {
+				political_power_factor = -0.25
+				capitalist_activity_modifier = 0.2
+				custom_modifier_tooltip = base_private_build_speed_law_good_tt
+				hidden_modifier = { base_private_build_speed_modifier = 1.5 }
+			}
+			ai_will_do = {
+   				base = 30
+			}
+		}
+
+		capital_activity_3 = {
+			picture = GER_economy_of_conquest
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea capital_activity_3"
+			}
+			on_remove = { set_variable = { previous_private_capital_law = token:capital_activity_3 } }
+			level = 3
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+			default = yes
+			allowed = {
+				NOT = { tag = SAI }
+			}
+			available = {
+			}
+			modifier = {
+				political_power_factor = -0.15
+				capitalist_activity_modifier = 0.15
+				custom_modifier_tooltip = base_private_build_speed_law_normal_tt
+				hidden_modifier = { base_private_build_speed_modifier = 1 }
 			}
 			ai_will_do = {
    				base = 30
@@ -30,12 +85,11 @@ ideas = {
 		}
 		
 		capital_activity_2 = {
-			picture = NOR_printing_money
+			picture = generic_economic_crisis
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea increase_nutrition_standards"
-				calculate_provision_need_effect = yes
+				log = "[GetDateText]: [Root.GetName]: add idea capital_activity_2"
 			}
-			on_remove = { set_variable = { previous_provision_law = token:increase_nutrition_standards } }
+			on_remove = { set_variable = { previous_private_capital_law = token:capital_activity_2 } }
 			level = 2
 			cost = 150
 			removal_cost = -1
@@ -46,7 +100,10 @@ ideas = {
 			available = {
 			}
 			modifier = {
-				capitalist_activity_modifier = 0.25
+				political_power_factor = -0.1
+				capitalist_activity_modifier = 0.1
+				custom_modifier_tooltip = base_private_build_speed_law_low_tt
+				hidden_modifier = { base_private_build_speed_modifier = 0.5 }
 			}
 			ai_will_do = {
    				base = 30
@@ -56,10 +113,9 @@ ideas = {
 		capital_activity_1 = {
 			picture = eng_tackle_capitalism
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea subsidies_for_provisions"
-				calculate_provision_need_effect = yes
+				log = "[GetDateText]: [Root.GetName]: add idea capital_activity_1"
 			}
-			on_remove = { set_variable = { previous_provision_law = token:subsidies_for_provisions } }
+			on_remove = { set_variable = { previous_private_capital_law = token:capital_activity_1 } }
 			level = 1
 			cost = 150
 			removal_cost = -1
@@ -70,10 +126,12 @@ ideas = {
 			available = {
 			}
 			modifier = {
-				capitalist_activity_modifier = 0.1
+				capitalist_activity_modifier = 0.05
+				custom_modifier_tooltip = base_private_build_speed_law_bad_tt
+				hidden_modifier = { base_private_build_speed_modifier = 0.25 }
 			}
 			ai_will_do = {
-   				base = 40
+   				base = 30
 			}
 		}
 	}

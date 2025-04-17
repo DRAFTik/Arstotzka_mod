@@ -192,3 +192,9 @@
 		civilian_factory_use = TOTAL_num_of_use_civilian_factories_in_production_var
 	}
 	
+	TOTAL_private_build_subsidies_dyn = {
+		enable = { always = yes }
+		# list of modifiers
+		political_power_cost = TOTAL_private_build_subsidies_to
+	}
+	

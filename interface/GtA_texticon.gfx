@@ -34,6 +34,16 @@ spriteTypes = {
 		texturefile = "gfx/texticons/science_text_icon.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_capital_texticon"
+		texturefile = "gfx/texticons/capital_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_segment_texticon"
+		texturefile = "gfx/texticons/segment_text_icon.dds"
+		legacy_lazy_load = no
+	}
 	
 	
 	

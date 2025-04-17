@@ -199,3 +199,9 @@ capitalist_activity_modifier = {
 	precision = 1
 	category = country
 }
+base_private_build_speed_modifier = {
+	color_type = neutral
+	value_type = number
+	precision = 1
+	category = country
+}

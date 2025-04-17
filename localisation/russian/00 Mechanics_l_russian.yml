@@ -48,7 +48,7 @@
 ### ELECTRIC POWER ###
 ######################
 
-    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.electric_power_total_generation_var|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\nКоэффициент выработки: [?ROOT.num_generation_electric_power_factor|1+%]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-]"
+    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.electric_power_total_generation_var|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\nКоэффициент выработки: [?ROOT.num_generation_electric_power_factor|1+%]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-] [get_electric_power_cost_private_text]"
     gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!.\nНажмите §Gправой кнопкой§!, чтобы начать §Hторговлю электроэнергией§!.[GET_ELECTRIC_POWER_CRISIS_LOC]"
     GET_ELECTRIC_POWER_CRISIS_TEXT: "\n$SEPARATION_LINE$$electric_power_title_bad_debuff_text$$electric_power_debuff_text$"
     
@@ -59,7 +59,13 @@
     GET_STEEL_MILL_RED: "[?ROOT.steel_mill_ok|0-]"
     GET_STEEL_MILL_GREEN: "[?ROOT.steel_mill_ok|0+]"
     
+    electric_power_cost_private_text: "\n    - Частный сектор: [?modifier@num_use_electric_power_private|1-]"
+    
     ### ПАНЕЛЬ УПРАВЛЕНИЯ ЭЛЕКТРИЧЕСТВОМ
+    sell_private_electric_button_tt: "Продажа электричества частным потребителям: [get_sell_private_electric_button_status]"
+    sell_private_electric_icon_tt: "§LПродажа электричества частным потребителям §Gускорит§! §Hскорость строительства§! частных сооружений."
+    SELL_PRIVATE_ELECTRIC_BUTTON_STATUS_YES: "§GДа§!"
+    SELL_PRIVATE_ELECTRIC_BUTTON_STATUS_NO: "§RНет§!"
     red_button_text: "§RСБРОС§!"
     electric_power_text_1: "Армия"
     electric_power_text_2: "Провизия"
@@ -179,6 +185,12 @@
     capitalist_activity_modifier: "£ETH_imperial_treasury Активность капиталистов"
     
     state_resource_cost_iron: "Расход железа"
+    base_private_build_speed_law_tt_base: "Скорость строительства частных сооружений"
+    base_private_build_speed_law_epic_tt: "$base_private_build_speed_law_tt_base$: §Gочень высокая§!"
+    base_private_build_speed_law_good_tt: "$base_private_build_speed_law_tt_base$: §Sвысокая§!"
+    base_private_build_speed_law_normal_tt: "$base_private_build_speed_law_tt_base$: §Yобычная§!"
+    base_private_build_speed_law_low_tt: "$base_private_build_speed_law_tt_base$: §Oнизкая§!"
+    base_private_build_speed_law_bad_tt: "$base_private_build_speed_law_tt_base$: §Rочень низкая§!"
     
 
 ### RESOURCES ###
@@ -230,10 +242,23 @@
 ### PRIVATE BUILDING ###
 ########################
    
-   private_capital_activity_txt: "£ETH_imperial_treasury Активность капитала:"
+   private_capital_activity_txt: "£GFX_capital_texticon  Активность:"
    private_capital_activity_value: "[?private_capital_activity_value|%0]"
+   private_capital_activity_tooltip: "§HАктивность частного сектора§!\n§LОтражает уровень вовлеченности капитала в экономику страны. Указанный процент соответствует еженедельному шансу начать строительство нового объекта.§!\n\nФормула: §YА§!*§YБ§!, где\nАктивность капиталистов (§YА§!): [?modifier@capitalist_activity_modifier|%H1]\nБезработица (§YБ§!): §G100%§! + [?proletariat_unemployment_rate|%H1] / §R2§!"
+   
+   private_capital_segment_txt: "£GFX_segment_texticon  Доля рынка:"
+   private_capital_segment_value: "[?private_capital_segment_value|%0]"
+   private_capital_segment_tooltip: "§HЭффективность производства частного сектора§!\n§LОтражает эффективность промышленности частного сектора§!"
    
    private_electropower_supply_txt: "£electric_power_pure_icon  Электроэнергия:"
-   private_electropower_supply_value: "[?private_electropower_supply_value]"
+   private_electropower_supply_value: "[?private_electropower_supply_value|%0]"
+   private_electropower_supply_tooltip: "§HОбеспеченность электроэнергией частного сектора§!\n§LОтражает уровень обеспеченности частного сектора электроэнергией. Дефицит электроэнергии §Rнегативно§! повлияет на скорость строительства частных проектов и их производительность после постройки.§!\n\nСтатус продажи государственной электроэнергии частному сектору: [get_sell_private_electric_button_status]\n\nПроизводство: [?modifier@num_generation_electric_power_private|G1]\nПотребление: [?modifier@num_use_electric_power_private|R1]"
+   
+   private_capital_effectiveness_txt: "£GFX_prod_eff  Эффективность:"
+   private_capital_effectiveness_value: "[?private_capital_effectiveness_value|%0]"
+   private_capital_effectiveness_tooltip: "§HЭффективность производства частного сектора§!\n§LОтражает эффективность промышленности частного сектора§!"
    
    private_building_progressbar_ratio_bar_tooltip: "[?GUI_completion_private_building_@var:v|%%1H] | ([?completion_private_building_@var:v|G1]/[?global.private_build_cost_@var:v|Y1])"
+   TOTAL_private_build_subsidies_dyn: "Субсидии частному капиталу"
+   private_increase_priority_tt: "§HВыделить субсидию проекту§!\nЭто увеличит скорость постройки данного проекта."
+   private_increase_priority_delayed_tt: "Это будет стоить §H5§! £pol_power! и §H0.05§! £pol_power!/день"

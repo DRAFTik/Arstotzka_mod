@@ -762,32 +762,74 @@ defined_text = {		# CUSTOM private_ongoing_contruction_anim IMAGE
     
 	text = {
 		trigger = {
-			check_variable = { private_build_speed_@var:v = 1 }
+			check_variable = { private_build_speed_@var:v = 0.25 }
 		}
 		localization_key = "GFX_gta_ongoing_contruction_bad"
 	}
 	text = {
 		trigger = {
-			check_variable = { private_build_speed_@var:v = 2 }
+			check_variable = { private_build_speed_@var:v = 0.5 }
 		}
 		localization_key = "GFX_gta_ongoing_contruction_anim_low"
 	}
 	text = {
 		trigger = {
-			check_variable = { private_build_speed_@var:v = 3 }
+			check_variable = { private_build_speed_@var:v = 1 }
 		}
 		localization_key = "GFX_gta_ongoing_contruction_anim_normal"
 	}
 	text = {
 		trigger = {
-			check_variable = { private_build_speed_@var:v = 4 }
+			check_variable = { private_build_speed_@var:v = 1.5 }
 		}
 		localization_key = "GFX_gta_ongoing_contruction_anim_good"
 	}
 	text = {
 		trigger = {
-			check_variable = { private_build_speed_@var:v = 5 }
+			check_variable = { private_build_speed_@var:v = 2 }
 		}
 		localization_key = "GFX_gta_ongoing_contruction_anim_epic"
+	}
+}
+
+defined_text = {		# CUSTOM sell_private_electric_button TEXT
+    name = get_sell_private_electric_button_status
+    
+	text = {
+		trigger = {
+			check_variable = { sell_private_electric_button_var = 2 }
+		}
+		localization_key = "SELL_PRIVATE_ELECTRIC_BUTTON_STATUS_YES"
+	}
+	text = {
+		localization_key = "SELL_PRIVATE_ELECTRIC_BUTTON_STATUS_NO"
+	}
+}
+
+defined_text = {		# CUSTOM sell_private_electric_icon IMAGE
+    name = get_sell_private_electric_icon
+    
+	text = {
+		trigger = {
+			check_variable = { sell_private_electric_button_var = 2 }
+		}
+		localization_key = "GFX_sell_private_electric_icon_2"
+	}
+	text = {
+		localization_key = "GFX_sell_private_electric_icon_1"
+	}
+}
+
+defined_text = {
+    name = get_electric_power_cost_private_text
+    
+	text = {
+		trigger = {
+			check_variable = { sell_private_electric_button_var = 2 }
+		}
+		localization_key = "electric_power_cost_private_text"
+	}
+	text = {
+		localization_key = ""
 	}
 }

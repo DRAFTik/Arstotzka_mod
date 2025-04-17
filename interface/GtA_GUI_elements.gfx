@@ -109,6 +109,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/GUI/electric_panel/tumbler_strip.dds"
 		noOfFrames = 7
 	}
+	spriteType = {
+		name = "GFX_private_tumbler_icon"
+		texturefile = "gfx/interface/GUI/electric_panel/private_tumbler_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_sell_private_electric_icon_1"
+		texturefile = "gfx/interface/GUI/electric_panel/sell_private_electric_icon_1.dds"
+	}
+	spriteType = {
+		name = "GFX_sell_private_electric_icon_2"
+		texturefile = "gfx/interface/GUI/electric_panel/sell_private_electric_icon_2.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_proletariat_icon"

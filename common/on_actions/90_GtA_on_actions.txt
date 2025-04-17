@@ -33,19 +33,20 @@ on_actions = {
 				set_variable = { global.private_build_cost_@token:private_thermal_power_plant					= 10000 }
 				
 				
-				effect_calculate_base_nof					= yes
-				set_fertility_in_ALL_state_effect			= yes
+				effect_calculate_base_nof						= yes
+				set_fertility_in_ALL_state_effect				= yes
 			}
 			every_possible_country = {
-				set_variable								= { yearly_income_provision_harvest_type_mult = 1 }
-				default_party_popularity_PP_gain			= yes
-				calculate_electric_power_effect				= yes
-				calculate_electric_power_LOG_effect			= yes
-				calculate_electric_power_dyn				= yes
-				calculate_proletariat_start_effect			= yes
-				calculate_science_start_effect				= yes
-				calculate_consumer_goods_factories_effect	= yes
-				calculate_private_building_progress_effect	= yes
+				set_variable									= { yearly_income_provision_harvest_type_mult = 1 }
+				default_party_popularity_PP_gain				= yes
+				calculate_electric_power_effect					= yes
+				calculate_electric_power_LOG_effect				= yes
+				calculate_electric_power_dyn					= yes
+				calculate_proletariat_start_effect				= yes
+				calculate_science_start_effect					= yes
+				calculate_consumer_goods_factories_effect		= yes
+				calculate_private_building_progress_effect		= yes
+				
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): infrastructure: [?infrastructure]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): arms_factory: [?arms_factory]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): industrial_complex: [?industrial_complex]"
@@ -76,16 +77,16 @@ on_actions = {
 	on_daily_SAI = {
 		effect = {
 			every_other_country = {
-				calculate_electric_power_effect				= yes
-				calculate_electric_power_dyn				= yes		# дебаф электричества
-				calculate_provision_daily_effect			= yes		# стата
-				calculate_steel_mill_effect					= yes		# сталь
-				calculate_proletariat_effect				= yes		# рабсила
-				calculate_science_effect					= yes		# наука
-				calculate_consumer_goods_factories_effect	= yes		# consumer goods
-				calculate_efficiency_civ_production_effect	= yes		# гражданское производство
-				calculate_civ_production_prod_speed_effect	= yes		# гражданское производство
-				calculate_private_building_progress_effect	= yes		# частные стройки
+				calculate_electric_power_effect					= yes
+				calculate_electric_power_dyn					= yes		# дебаф электричества
+				calculate_provision_daily_effect				= yes		# стата
+				calculate_steel_mill_effect						= yes		# сталь
+				calculate_proletariat_effect					= yes		# рабсила
+				calculate_science_effect						= yes		# наука
+				calculate_consumer_goods_factories_effect		= yes		# consumer goods
+				calculate_efficiency_civ_production_effect		= yes		# гражданское производство
+				calculate_civ_production_prod_speed_effect		= yes		# гражданское производство
+				calculate_private_building_progress_effect		= yes		# частные стройки
 				
 ### ОБЩЕМЕХАНЫ // generic_building_organization
 				if = {

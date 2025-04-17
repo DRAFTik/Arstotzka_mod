@@ -34,11 +34,25 @@ scripted_gui = {
 			private_building_add_click = {
 				private_building_add_effect = yes
 			}
-			increase_priority_click = {
-				add_to_variable = { num_of_private_building_@var:v = 1 }
+			private_increase_priority_click = {
+				if = {
+					limit					= { NOT = { has_dynamic_modifier = { modifier = TOTAL_private_build_subsidies_dyn } } }
+					add_dynamic_modifier	= { modifier = TOTAL_private_build_subsidies_dyn }
+				}
+				if = {
+					limit = { check_variable = { private_build_speed_@var:v = 0.25 } }
+					add_to_variable			= { private_build_speed_@var:v = 0.25 }
+				}
+				else = { add_to_variable	= { private_build_speed_@var:v = 0.5 } }
+				add_to_variable				= { private_build_subsidies_to_@var:v = 0.05 }
+				add_political_power			= -5
+				
+				calculate_TOTAL_private_build_subsidies_effect = yes
 			}
 			private_building_subtract_click = {
 				remove_from_array	= { private_building_lines_ui_array = var:v }
+				add_to_variable		= { num_of_private_building_@var:v = -1 }
+				add_to_variable		= { num_of_private_building_project = -1 }
 				clear_variable		= num_of_private_building_@var:v
 				clear_variable		= private_build_speed_@var:v
 				clear_variable		= private_building_target_state_@var:v
@@ -52,6 +66,14 @@ scripted_gui = {
 					}
 					TARGET_STATE = "[?var:private_building_target_state_@var:v.GetID]"
 				}
+			}
+		}
+		
+		triggers = {
+			private_increase_priority_click_enabled = {
+				check_variable = { private_build_speed_@var:v < 2 }
+				has_political_power > 4.999
+				political_power_growth > 0.0499
 			}
 		}
 		
@@ -95,9 +117,20 @@ scripted_gui = {
 			private_building_add_click = {
 				private_building_add_effect = yes
 			}
-			increase_priority_click = {
-				add_to_variable = { num_of_private_building_@var:v = 1 }
-				add_to_variable = { num_of_private_building_project = 1 }
+			private_increase_priority_click = {
+				if = {
+					limit					= { NOT = { has_dynamic_modifier = { modifier = TOTAL_private_build_subsidies_dyn } } }
+					add_dynamic_modifier	= { modifier = TOTAL_private_build_subsidies_dyn }
+				}
+				if = {
+					limit = { check_variable = { private_build_speed_@var:v = 0.25 } }
+					add_to_variable			= { private_build_speed_@var:v = 0.25 }
+				}
+				else = { add_to_variable	= { private_build_speed_@var:v = 0.5 } }
+				add_to_variable				= { private_build_subsidies_to_@var:v = 0.05 }
+				add_political_power			= -5
+				
+				calculate_TOTAL_private_build_subsidies_effect = yes
 			}
 			private_building_subtract_click = {
 				remove_from_array	= { private_building_lines_ui_array = var:v }
@@ -116,6 +149,14 @@ scripted_gui = {
 					}
 					TARGET_STATE = "[?var:private_building_target_state_@var:v.GetID]"
 				}
+			}
+		}
+		
+		triggers = {
+			private_increase_priority_click_enabled = {
+				check_variable = { private_build_speed_@var:v < 2 }
+				has_political_power > 4.999
+				political_power_growth > 0.0499
 			}
 		}
 		

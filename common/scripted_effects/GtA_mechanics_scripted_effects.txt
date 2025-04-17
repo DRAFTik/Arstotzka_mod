@@ -244,12 +244,18 @@ calculate_electric_power_effect = {
 #	add_to_temp_variable		= { resource_produced_power_cost_temp = resource_produced@steel }
 	multiply_temp_variable		= { resource_produced_power_cost_temp = 0.1 }
 	set_variable				= { electric_power_cost_resource_produced_var = resource_produced_power_cost_temp }
-	
+
+# Частники
+	if = {
+		limit					= { check_variable = { sell_private_electric_button_var = 2 } }
+		set_variable			= { electric_power_cost_private_var = modifier@num_use_electric_power_private }
+	}
 	
 # Баланс энергии
 	set_variable				= { electric_power_cost_var = modifier@num_use_electric_power }
 	add_to_variable				= { electric_power_cost_var = electric_power_cost_state_var }
 	add_to_variable				= { electric_power_cost_var = electric_power_cost_resource_produced_var }
+	add_to_variable				= { electric_power_cost_var = electric_power_cost_private_var }
 	
 #	set_variable				= { electric_power_cost_var = electric_power_cost_infrastructure_var }
 #	add_to_variable				= { electric_power_cost_var = electric_power_cost_factory_var }
@@ -374,7 +380,7 @@ calculate_electric_power_dyn = {
 		set_temp_variable			= { RESOURCE_tumbler_7_debuff_temp2	= electric_power_tumbler_icon_7_frame }
 		divide_temp_variable		= { RESOURCE_tumbler_7_debuff_temp2	= summ_tumbler_temp }
 		subtract_from_temp_variable	= { RESOURCE_tumbler_7_debuff_temp	= RESOURCE_tumbler_7_debuff_temp2 }
-		multiply_temp_variable		= { RESOURCE_tumbler_7_debuff_temp	= electric_power_debuff }							# ИТОГОВЫЙ ДЕБАФ (-число)
+		multiply_temp_variable		= { RESOURCE_tumbler_7_debuff_temp	= electric_power_debuff }						# ИТОГОВЫЙ ДЕБАФ (-число)
 		
 		set_variable				= { electric_power_local_resources_factor_var	= RESOURCE_tumbler_7_debuff_temp }
 		multiply_variable			= { electric_power_local_resources_factor_var	= 0.5 }
@@ -2065,11 +2071,8 @@ private_building_add_effect = {
 		1 = {
 			if = {
 				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_industrial_complex } } }
-				add_to_array			= { private_building_lines_ui_array = token:private_industrial_complex }
-				set_variable_to_random	= {
-					var = private_build_speed_@token:private_industrial_complex
-					min = 1 max = 5 integer = yes
-				}
+				add_to_array	= { private_building_lines_ui_array = token:private_industrial_complex }
+				set_variable	= { private_build_speed_@token:private_industrial_complex = modifier@base_private_build_speed_modifier }
 			}
 			add_to_variable = { num_of_private_building_@token:private_industrial_complex = 1 }
 			if = {
@@ -2090,11 +2093,8 @@ private_building_add_effect = {
 		1 = {
 			if = {
 				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_arms_factory } } }
-				add_to_array			= { private_building_lines_ui_array = token:private_arms_factory }
-				set_variable_to_random	= {
-					var = private_build_speed_@token:private_arms_factory
-					min = 1 max = 5 integer = yes
-				}
+				add_to_array	= { private_building_lines_ui_array = token:private_arms_factory }
+				set_variable	= { private_build_speed_@token:private_arms_factory = modifier@base_private_build_speed_modifier }
 			}
 			add_to_variable = { num_of_private_building_@token:private_arms_factory = 1 }
 			if = {
@@ -2115,11 +2115,8 @@ private_building_add_effect = {
 		1 = {
 			if = {
 				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_dockyard } } }
-				add_to_array			= { private_building_lines_ui_array = token:private_dockyard }
-				set_variable_to_random	= {
-					var = private_build_speed_@token:private_dockyard
-					min = 1 max = 5 integer = yes
-				}
+				add_to_array	= { private_building_lines_ui_array = token:private_dockyard }
+				set_variable	= { private_build_speed_@token:private_dockyard = modifier@base_private_build_speed_modifier }
 			}
 			add_to_variable = { num_of_private_building_@token:private_dockyard = 1 }
 			if = {
@@ -2141,11 +2138,8 @@ private_building_add_effect = {
 		1 = {
 			if = {
 				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_synthetic_refinery } } }
-				add_to_array			= { private_building_lines_ui_array = token:private_synthetic_refinery }
-				set_variable_to_random	= {
-					var = private_build_speed_@token:private_synthetic_refinery
-					min = 1 max = 5 integer = yes
-				}
+				add_to_array	= { private_building_lines_ui_array = token:private_synthetic_refinery }
+				set_variable	= { private_build_speed_@token:private_synthetic_refinery = modifier@base_private_build_speed_modifier }
 			}
 			add_to_variable = { num_of_private_building_@token:private_synthetic_refinery = 1 }
 			if = {
@@ -2166,11 +2160,8 @@ private_building_add_effect = {
 		1 = {
 			if = {
 				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_steel_mill } } }
-				add_to_array			= { private_building_lines_ui_array = token:private_steel_mill }
-				set_variable_to_random	= {
-					var = private_build_speed_@token:private_steel_mill
-					min = 1 max = 5 integer = yes
-				}
+				add_to_array	= { private_building_lines_ui_array = token:private_steel_mill }
+				set_variable	= { private_build_speed_@token:private_steel_mill = modifier@base_private_build_speed_modifier }
 			}
 			add_to_variable = { num_of_private_building_@token:private_steel_mill = 1 }
 			if = {
@@ -2191,11 +2182,8 @@ private_building_add_effect = {
 		1 = {
 			if = {
 				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_agro_complex } } }
-				add_to_array			= { private_building_lines_ui_array = token:private_agro_complex }
-				set_variable_to_random	= {
-					var = private_build_speed_@token:private_agro_complex
-					min = 1 max = 5 integer = yes
-				}
+				add_to_array	= { private_building_lines_ui_array = token:private_agro_complex }
+				set_variable	= { private_build_speed_@token:private_agro_complex = modifier@base_private_build_speed_modifier }
 			}
 			add_to_variable = { num_of_private_building_@token:private_agro_complex = 1 }
 			if = {
@@ -2216,11 +2204,8 @@ private_building_add_effect = {
 		1 = {
 			if = {
 				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_livestock_complex } } }
-				add_to_array			= { private_building_lines_ui_array = token:private_livestock_complex }
-				set_variable_to_random	= {
-					var = private_build_speed_@token:private_livestock_complex
-					min = 1 max = 5 integer = yes
-				}
+				add_to_array	= { private_building_lines_ui_array = token:private_livestock_complex }
+				set_variable	= { private_build_speed_@token:private_livestock_complex = modifier@base_private_build_speed_modifier }
 			}
 			add_to_variable = { num_of_private_building_@token:private_livestock_complex = 1 }
 			if = {
@@ -2241,11 +2226,8 @@ private_building_add_effect = {
 		1 = {
 			if = {
 				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_thermal_power_plant } } }
-				add_to_array			= { private_building_lines_ui_array = token:private_thermal_power_plant }
-				set_variable_to_random	= {
-					var = private_build_speed_@token:private_thermal_power_plant
-					min = 1 max = 5 integer = yes
-				}
+				add_to_array	= { private_building_lines_ui_array = token:private_thermal_power_plant }
+				set_variable	= { private_build_speed_@token:private_thermal_power_plant = modifier@base_private_build_speed_modifier }
 			}
 			add_to_variable = { num_of_private_building_@token:private_thermal_power_plant = 1 }
 			if = {
@@ -2266,30 +2248,47 @@ private_building_add_effect = {
 	}
 }
 
+calculate_private_electropower_supply_effect = {
+	set_temp_variable				= { private_electropower_supply_temp = modifier@num_generation_electric_power_private }
+	divide_temp_variable			= { private_electropower_supply_temp = modifier@num_use_electric_power_private }
+	set_variable					= { private_electropower_supply_value = private_electropower_supply_temp }
+	if = {
+		limit = { check_variable	= { sell_private_electric_button_var = 2 } }
+		set_variable				= { private_electropower_supply_value = 1 }
+	}
+}
+
 calculate_private_building_progress_effect = {
-	set_temp_variable			= { private_capital_activity_temp = 1 }
-	add_to_temp_variable		= { private_capital_activity_temp = proletariat_unemployment_rate }
-	multiply_temp_variable		= { private_capital_activity_temp = modifier@capitalist_activity_modifier }
-	set_variable				= { private_capital_activity_value = private_capital_activity_temp }
+	set_temp_variable				= { private_capital_activity_temp = proletariat_unemployment_rate }
+	multiply_temp_variable			= { private_capital_activity_temp = 0.5 }
+	add_to_temp_variable			= { private_capital_activity_temp = 1 }
+	multiply_temp_variable			= { private_capital_activity_temp = modifier@capitalist_activity_modifier }
+	set_variable					= { private_capital_activity_value = private_capital_activity_temp }
+	
+	calculate_private_electropower_supply_effect = yes
 	
 	if = {
 		limit = { check_variable = { num_of_private_building_@token:private_industrial_complex > 0 } }
-		set_temp_variable		= { tp1 = 1 }
-		add_to_temp_variable	= { tp1 = private_capital_activity_value }
-		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+		set_temp_variable			= { tp2 = 1 }
+		subtract_from_temp_variable	= { tp2 = private_electropower_supply_value }
+		set_temp_variable			= { tp1 = 1 }
+		add_to_temp_variable		= { tp1 = private_capital_activity_value }
+		subtract_from_temp_variable	= { tp1 = tp2 }
+		multiply_temp_variable		= { tp1 = global.private_build_growth_per_day_var }
+		multiply_temp_variable		= { tp1 = private_build_speed_@token:private_industrial_complex }
 
-		add_to_variable			= { completion_private_building_@token:private_industrial_complex = tp1 }
+		add_to_variable				= { completion_private_building_@token:private_industrial_complex = tp1 }
 		
-		set_variable			= {	GUI_completion_private_building_@token:private_industrial_complex = completion_private_building_@token:private_industrial_complex }
-		divide_variable			= {	GUI_completion_private_building_@token:private_industrial_complex = global.private_build_cost_@token:private_industrial_complex }
-		multiply_variable		= {	GUI_completion_private_building_@token:private_industrial_complex = 100 }
+		set_variable				= {	GUI_completion_private_building_@token:private_industrial_complex = completion_private_building_@token:private_industrial_complex }
+		divide_variable				= {	GUI_completion_private_building_@token:private_industrial_complex = global.private_build_cost_@token:private_industrial_complex }
+		multiply_variable			= {	GUI_completion_private_building_@token:private_industrial_complex = 100 }
 		
 		if = {
 			limit = { check_variable = { var = completion_private_building_@token:private_industrial_complex value = global.private_build_cost_@token:private_industrial_complex compare = greater_than_or_equals } }
 			
 			meta_effect = {
 				text = {
-					[TARGET_STATE] = {
+					[TARGET_STATE]	= {
 						add_building_construction = {
 							type			= private_industrial_complex
 							level			= 1
@@ -2299,12 +2298,12 @@ calculate_private_building_progress_effect = {
 				}
 				TARGET_STATE = "[?var:private_building_target_state_@token:private_industrial_complex.GetID]"
 			}
-			add_to_variable		= { num_of_private_building_@token:private_industrial_complex = -1 }
-			add_to_variable		= { num_of_private_building_project = -1 }
+			add_to_variable			= { num_of_private_building_@token:private_industrial_complex = -1 }
+			add_to_variable			= { num_of_private_building_project = -1 }
 			
-			clear_variable		= private_building_target_state_@token:private_industrial_complex
-			clear_variable		= completion_private_building_@token:private_industrial_complex
-			clear_variable		= GUI_completion_private_building_@token:private_industrial_complex
+			clear_variable			= private_building_target_state_@token:private_industrial_complex
+			clear_variable			= completion_private_building_@token:private_industrial_complex
+			clear_variable			= GUI_completion_private_building_@token:private_industrial_complex
 			if = {
 				limit = { check_variable = { num_of_private_building_@token:private_industrial_complex > 0 } }
 				random_owned_state = {
@@ -2316,32 +2315,39 @@ calculate_private_building_progress_effect = {
 							include_locked = no
 						}
 					}
-					set_variable = { PREV.private_building_target_state_@token:private_industrial_complex = THIS.id }
+					set_variable	= { PREV.private_building_target_state_@token:private_industrial_complex = THIS.id }
 				}
 				else = {
 					remove_from_array	= { private_building_lines_ui_array = token:private_industrial_complex }
 					clear_variable		= private_build_speed_@token:private_industrial_complex
+					clear_variable		= private_build_subsidies_to_@token:private_industrial_complex
+					calculate_TOTAL_private_build_subsidies_effect = yes
 				}
 			}
 		}
 	}
 	if = {
 		limit = { check_variable = { num_of_private_building_@token:private_arms_factory > 0 } }
-		set_temp_variable		= { tp1 = 1 }
-		add_to_temp_variable	= { tp1 = private_capital_activity_value }
-		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+		set_temp_variable			= { tp2 = 1 }
+		subtract_from_temp_variable	= { tp2 = private_electropower_supply_value }
+		set_temp_variable			= { tp1 = 1 }
+		add_to_temp_variable		= { tp1 = private_capital_activity_value }
+		subtract_from_temp_variable	= { tp1 = tp2 }
+		multiply_temp_variable		= { tp1 = global.private_build_growth_per_day_var }
+		multiply_temp_variable		= { tp1 = private_build_speed_@token:private_arms_factory }
 
-		add_to_variable			= { completion_private_building_@token:private_arms_factory = tp1 }
+		add_to_variable				= { completion_private_building_@token:private_arms_factory = tp1 }
 		
-		set_variable			= {	GUI_completion_private_building_@token:private_arms_factory = completion_private_building_@token:private_arms_factory }
-		divide_variable			= {	GUI_completion_private_building_@token:private_arms_factory = global.private_build_cost_@token:private_arms_factory }
-		multiply_variable		= {	GUI_completion_private_building_@token:private_arms_factory = 100 }
+		set_variable				= {	GUI_completion_private_building_@token:private_arms_factory = completion_private_building_@token:private_arms_factory }
+		divide_variable				= {	GUI_completion_private_building_@token:private_arms_factory = global.private_build_cost_@token:private_arms_factory }
+		multiply_variable			= {	GUI_completion_private_building_@token:private_arms_factory = 100 }
 		
 		if = {
 			limit = { check_variable = { var = completion_private_building_@token:private_arms_factory value = global.private_build_cost_@token:private_arms_factory compare = greater_than_or_equals } }
+			
 			meta_effect = {
 				text = {
-					[TARGET_STATE] = {
+					[TARGET_STATE]	= {
 						add_building_construction = {
 							type			= private_arms_factory
 							level			= 1
@@ -2351,13 +2357,12 @@ calculate_private_building_progress_effect = {
 				}
 				TARGET_STATE = "[?var:private_building_target_state_@token:private_arms_factory.GetID]"
 			}
+			add_to_variable			= { num_of_private_building_@token:private_arms_factory = -1 }
+			add_to_variable			= { num_of_private_building_project = -1 }
 			
-			add_to_variable		= { num_of_private_building_@token:private_arms_factory = -1 }
-			add_to_variable		= { num_of_private_building_project = -1 }
-			
-			clear_variable		= private_building_target_state_@token:private_arms_factory
-			clear_variable		= completion_private_building_@token:private_arms_factory
-			clear_variable		= GUI_completion_private_building_@token:private_arms_factory
+			clear_variable			= private_building_target_state_@token:private_arms_factory
+			clear_variable			= completion_private_building_@token:private_arms_factory
+			clear_variable			= GUI_completion_private_building_@token:private_arms_factory
 			if = {
 				limit = { check_variable = { num_of_private_building_@token:private_arms_factory > 0 } }
 				random_owned_state = {
@@ -2369,32 +2374,39 @@ calculate_private_building_progress_effect = {
 							include_locked = no
 						}
 					}
-					set_variable = { PREV.private_building_target_state_@token:private_arms_factory = THIS.id }
+					set_variable	= { PREV.private_building_target_state_@token:private_arms_factory = THIS.id }
 				}
 				else = {
 					remove_from_array	= { private_building_lines_ui_array = token:private_arms_factory }
 					clear_variable		= private_build_speed_@token:private_arms_factory
+					clear_variable		= private_build_subsidies_to_@token:private_arms_factory
+					calculate_TOTAL_private_build_subsidies_effect = yes
 				}
 			}
 		}
 	}
 	if = {
 		limit = { check_variable = { num_of_private_building_@token:private_dockyard > 0 } }
-		set_temp_variable		= { tp1 = 1 }
-		add_to_temp_variable	= { tp1 = private_capital_activity_value }
-		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+		set_temp_variable			= { tp2 = 1 }
+		subtract_from_temp_variable	= { tp2 = private_electropower_supply_value }
+		set_temp_variable			= { tp1 = 1 }
+		add_to_temp_variable		= { tp1 = private_capital_activity_value }
+		subtract_from_temp_variable	= { tp1 = tp2 }
+		multiply_temp_variable		= { tp1 = global.private_build_growth_per_day_var }
+		multiply_temp_variable		= { tp1 = private_build_speed_@token:private_dockyard }
 
-		add_to_variable			= { completion_private_building_@token:private_dockyard = tp1 }
+		add_to_variable				= { completion_private_building_@token:private_dockyard = tp1 }
 		
-		set_variable			= {	GUI_completion_private_building_@token:private_dockyard = completion_private_building_@token:private_dockyard }
-		divide_variable			= {	GUI_completion_private_building_@token:private_dockyard = global.private_build_cost_@token:private_dockyard }
-		multiply_variable		= {	GUI_completion_private_building_@token:private_dockyard = 100 }
+		set_variable				= {	GUI_completion_private_building_@token:private_dockyard = completion_private_building_@token:private_dockyard }
+		divide_variable				= {	GUI_completion_private_building_@token:private_dockyard = global.private_build_cost_@token:private_dockyard }
+		multiply_variable			= {	GUI_completion_private_building_@token:private_dockyard = 100 }
 		
 		if = {
 			limit = { check_variable = { var = completion_private_building_@token:private_dockyard value = global.private_build_cost_@token:private_dockyard compare = greater_than_or_equals } }
+			
 			meta_effect = {
 				text = {
-					[TARGET_STATE] = {
+					[TARGET_STATE]	= {
 						add_building_construction = {
 							type			= private_dockyard
 							level			= 1
@@ -2404,51 +2416,56 @@ calculate_private_building_progress_effect = {
 				}
 				TARGET_STATE = "[?var:private_building_target_state_@token:private_dockyard.GetID]"
 			}
+			add_to_variable			= { num_of_private_building_@token:private_dockyard = -1 }
+			add_to_variable			= { num_of_private_building_project = -1 }
 			
-			add_to_variable		= { num_of_private_building_@token:private_dockyard = -1 }
-			add_to_variable		= { num_of_private_building_project = -1 }
-			
-			clear_variable		= private_building_target_state_@token:private_dockyard
-			clear_variable		= completion_private_building_@token:private_dockyard
-			clear_variable		= GUI_completion_private_building_@token:private_dockyard
+			clear_variable			= private_building_target_state_@token:private_dockyard
+			clear_variable			= completion_private_building_@token:private_dockyard
+			clear_variable			= GUI_completion_private_building_@token:private_dockyard
 			if = {
 				limit = { check_variable = { num_of_private_building_@token:private_dockyard > 0 } }
 				random_owned_state = {
 					limit = {
 						is_core_of = PREV
-						is_coastal = yes
 						free_building_slots = {
 							building = private_dockyard
 							size > 0
 							include_locked = no
 						}
 					}
-					set_variable = { PREV.private_building_target_state_@token:private_dockyard = THIS.id }
+					set_variable	= { PREV.private_building_target_state_@token:private_dockyard = THIS.id }
 				}
 				else = {
 					remove_from_array	= { private_building_lines_ui_array = token:private_dockyard }
 					clear_variable		= private_build_speed_@token:private_dockyard
+					clear_variable		= private_build_subsidies_to_@token:private_dockyard
+					calculate_TOTAL_private_build_subsidies_effect = yes
 				}
 			}
 		}
 	}
 	if = {
 		limit = { check_variable = { num_of_private_building_@token:private_synthetic_refinery > 0 } }
-		set_temp_variable		= { tp1 = 1 }
-		add_to_temp_variable	= { tp1 = private_capital_activity_value }
-		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+		set_temp_variable			= { tp2 = 1 }
+		subtract_from_temp_variable	= { tp2 = private_electropower_supply_value }
+		set_temp_variable			= { tp1 = 1 }
+		add_to_temp_variable		= { tp1 = private_capital_activity_value }
+		subtract_from_temp_variable	= { tp1 = tp2 }
+		multiply_temp_variable		= { tp1 = global.private_build_growth_per_day_var }
+		multiply_temp_variable		= { tp1 = private_build_speed_@token:private_synthetic_refinery }
 
-		add_to_variable			= { completion_private_building_@token:private_synthetic_refinery = tp1 }
+		add_to_variable				= { completion_private_building_@token:private_synthetic_refinery = tp1 }
 		
-		set_variable			= {	GUI_completion_private_building_@token:private_synthetic_refinery = completion_private_building_@token:private_synthetic_refinery }
-		divide_variable			= {	GUI_completion_private_building_@token:private_synthetic_refinery = global.private_build_cost_@token:private_synthetic_refinery }
-		multiply_variable		= {	GUI_completion_private_building_@token:private_synthetic_refinery = 100 }
+		set_variable				= {	GUI_completion_private_building_@token:private_synthetic_refinery = completion_private_building_@token:private_synthetic_refinery }
+		divide_variable				= {	GUI_completion_private_building_@token:private_synthetic_refinery = global.private_build_cost_@token:private_synthetic_refinery }
+		multiply_variable			= {	GUI_completion_private_building_@token:private_synthetic_refinery = 100 }
 		
 		if = {
 			limit = { check_variable = { var = completion_private_building_@token:private_synthetic_refinery value = global.private_build_cost_@token:private_synthetic_refinery compare = greater_than_or_equals } }
+			
 			meta_effect = {
 				text = {
-					[TARGET_STATE] = {
+					[TARGET_STATE]	= {
 						add_building_construction = {
 							type			= private_synthetic_refinery
 							level			= 1
@@ -2458,13 +2475,12 @@ calculate_private_building_progress_effect = {
 				}
 				TARGET_STATE = "[?var:private_building_target_state_@token:private_synthetic_refinery.GetID]"
 			}
+			add_to_variable			= { num_of_private_building_@token:private_synthetic_refinery = -1 }
+			add_to_variable			= { num_of_private_building_project = -1 }
 			
-			add_to_variable		= { num_of_private_building_@token:private_synthetic_refinery = -1 }
-			add_to_variable		= { num_of_private_building_project = -1 }
-			
-			clear_variable		= private_building_target_state_@token:private_synthetic_refinery
-			clear_variable		= completion_private_building_@token:private_synthetic_refinery
-			clear_variable		= GUI_completion_private_building_@token:private_synthetic_refinery
+			clear_variable			= private_building_target_state_@token:private_synthetic_refinery
+			clear_variable			= completion_private_building_@token:private_synthetic_refinery
+			clear_variable			= GUI_completion_private_building_@token:private_synthetic_refinery
 			if = {
 				limit = { check_variable = { num_of_private_building_@token:private_synthetic_refinery > 0 } }
 				random_owned_state = {
@@ -2476,32 +2492,39 @@ calculate_private_building_progress_effect = {
 							include_locked = no
 						}
 					}
-					set_variable = { PREV.private_building_target_state_@token:private_synthetic_refinery = THIS.id }
+					set_variable	= { PREV.private_building_target_state_@token:private_synthetic_refinery = THIS.id }
 				}
 				else = {
 					remove_from_array	= { private_building_lines_ui_array = token:private_synthetic_refinery }
 					clear_variable		= private_build_speed_@token:private_synthetic_refinery
+					clear_variable		= private_build_subsidies_to_@token:private_synthetic_refinery
+					calculate_TOTAL_private_build_subsidies_effect = yes
 				}
 			}
 		}
 	}
 	if = {
 		limit = { check_variable = { num_of_private_building_@token:private_steel_mill > 0 } }
-		set_temp_variable		= { tp1 = 1 }
-		add_to_temp_variable	= { tp1 = private_capital_activity_value }
-		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+		set_temp_variable			= { tp2 = 1 }
+		subtract_from_temp_variable	= { tp2 = private_electropower_supply_value }
+		set_temp_variable			= { tp1 = 1 }
+		add_to_temp_variable		= { tp1 = private_capital_activity_value }
+		subtract_from_temp_variable	= { tp1 = tp2 }
+		multiply_temp_variable		= { tp1 = global.private_build_growth_per_day_var }
+		multiply_temp_variable		= { tp1 = private_build_speed_@token:private_steel_mill }
 
-		add_to_variable			= { completion_private_building_@token:private_steel_mill = tp1 }
+		add_to_variable				= { completion_private_building_@token:private_steel_mill = tp1 }
 		
-		set_variable			= {	GUI_completion_private_building_@token:private_steel_mill = completion_private_building_@token:private_steel_mill }
-		divide_variable			= {	GUI_completion_private_building_@token:private_steel_mill = global.private_build_cost_@token:private_steel_mill }
-		multiply_variable		= {	GUI_completion_private_building_@token:private_steel_mill = 100 }
+		set_variable				= {	GUI_completion_private_building_@token:private_steel_mill = completion_private_building_@token:private_steel_mill }
+		divide_variable				= {	GUI_completion_private_building_@token:private_steel_mill = global.private_build_cost_@token:private_steel_mill }
+		multiply_variable			= {	GUI_completion_private_building_@token:private_steel_mill = 100 }
 		
 		if = {
 			limit = { check_variable = { var = completion_private_building_@token:private_steel_mill value = global.private_build_cost_@token:private_steel_mill compare = greater_than_or_equals } }
+			
 			meta_effect = {
 				text = {
-					[TARGET_STATE] = {
+					[TARGET_STATE]	= {
 						add_building_construction = {
 							type			= private_steel_mill
 							level			= 1
@@ -2511,13 +2534,12 @@ calculate_private_building_progress_effect = {
 				}
 				TARGET_STATE = "[?var:private_building_target_state_@token:private_steel_mill.GetID]"
 			}
+			add_to_variable			= { num_of_private_building_@token:private_steel_mill = -1 }
+			add_to_variable			= { num_of_private_building_project = -1 }
 			
-			add_to_variable		= { num_of_private_building_@token:private_steel_mill = -1 }
-			add_to_variable		= { num_of_private_building_project = -1 }
-			
-			clear_variable		= private_building_target_state_@token:private_steel_mill
-			clear_variable		= completion_private_building_@token:private_steel_mill
-			clear_variable		= GUI_completion_private_building_@token:private_steel_mill
+			clear_variable			= private_building_target_state_@token:private_steel_mill
+			clear_variable			= completion_private_building_@token:private_steel_mill
+			clear_variable			= GUI_completion_private_building_@token:private_steel_mill
 			if = {
 				limit = { check_variable = { num_of_private_building_@token:private_steel_mill > 0 } }
 				random_owned_state = {
@@ -2529,32 +2551,39 @@ calculate_private_building_progress_effect = {
 							include_locked = no
 						}
 					}
-					set_variable = { PREV.private_building_target_state_@token:private_steel_mill = THIS.id }
+					set_variable	= { PREV.private_building_target_state_@token:private_steel_mill = THIS.id }
 				}
 				else = {
 					remove_from_array	= { private_building_lines_ui_array = token:private_steel_mill }
 					clear_variable		= private_build_speed_@token:private_steel_mill
+					clear_variable		= private_build_subsidies_to_@token:private_steel_mill
+					calculate_TOTAL_private_build_subsidies_effect = yes
 				}
 			}
 		}
 	}
 	if = {
 		limit = { check_variable = { num_of_private_building_@token:private_agro_complex > 0 } }
-		set_temp_variable		= { tp1 = 1 }
-		add_to_temp_variable	= { tp1 = private_capital_activity_value }
-		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+		set_temp_variable			= { tp2 = 1 }
+		subtract_from_temp_variable	= { tp2 = private_electropower_supply_value }
+		set_temp_variable			= { tp1 = 1 }
+		add_to_temp_variable		= { tp1 = private_capital_activity_value }
+		subtract_from_temp_variable	= { tp1 = tp2 }
+		multiply_temp_variable		= { tp1 = global.private_build_growth_per_day_var }
+		multiply_temp_variable		= { tp1 = private_build_speed_@token:private_agro_complex }
 
-		add_to_variable			= { completion_private_building_@token:private_agro_complex = tp1 }
+		add_to_variable				= { completion_private_building_@token:private_agro_complex = tp1 }
 		
-		set_variable			= {	GUI_completion_private_building_@token:private_agro_complex = completion_private_building_@token:private_agro_complex }
-		divide_variable			= {	GUI_completion_private_building_@token:private_agro_complex = global.private_build_cost_@token:private_agro_complex }
-		multiply_variable		= {	GUI_completion_private_building_@token:private_agro_complex = 100 }
+		set_variable				= {	GUI_completion_private_building_@token:private_agro_complex = completion_private_building_@token:private_agro_complex }
+		divide_variable				= {	GUI_completion_private_building_@token:private_agro_complex = global.private_build_cost_@token:private_agro_complex }
+		multiply_variable			= {	GUI_completion_private_building_@token:private_agro_complex = 100 }
 		
 		if = {
 			limit = { check_variable = { var = completion_private_building_@token:private_agro_complex value = global.private_build_cost_@token:private_agro_complex compare = greater_than_or_equals } }
+			
 			meta_effect = {
 				text = {
-					[TARGET_STATE] = {
+					[TARGET_STATE]	= {
 						add_building_construction = {
 							type			= private_agro_complex
 							level			= 1
@@ -2564,13 +2593,12 @@ calculate_private_building_progress_effect = {
 				}
 				TARGET_STATE = "[?var:private_building_target_state_@token:private_agro_complex.GetID]"
 			}
+			add_to_variable			= { num_of_private_building_@token:private_agro_complex = -1 }
+			add_to_variable			= { num_of_private_building_project = -1 }
 			
-			add_to_variable		= { num_of_private_building_@token:private_agro_complex = -1 }
-			add_to_variable		= { num_of_private_building_project = -1 }
-			
-			clear_variable		= private_building_target_state_@token:private_agro_complex
-			clear_variable		= completion_private_building_@token:private_agro_complex
-			clear_variable		= GUI_completion_private_building_@token:private_agro_complex
+			clear_variable			= private_building_target_state_@token:private_agro_complex
+			clear_variable			= completion_private_building_@token:private_agro_complex
+			clear_variable			= GUI_completion_private_building_@token:private_agro_complex
 			if = {
 				limit = { check_variable = { num_of_private_building_@token:private_agro_complex > 0 } }
 				random_owned_state = {
@@ -2582,32 +2610,39 @@ calculate_private_building_progress_effect = {
 							include_locked = no
 						}
 					}
-					set_variable = { PREV.private_building_target_state_@token:private_agro_complex = THIS.id }
+					set_variable	= { PREV.private_building_target_state_@token:private_agro_complex = THIS.id }
 				}
 				else = {
 					remove_from_array	= { private_building_lines_ui_array = token:private_agro_complex }
 					clear_variable		= private_build_speed_@token:private_agro_complex
+					clear_variable		= private_build_subsidies_to_@token:private_agro_complex
+					calculate_TOTAL_private_build_subsidies_effect = yes
 				}
 			}
 		}
 	}
 	if = {
 		limit = { check_variable = { num_of_private_building_@token:private_livestock_complex > 0 } }
-		set_temp_variable		= { tp1 = 1 }
-		add_to_temp_variable	= { tp1 = private_capital_activity_value }
-		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+		set_temp_variable			= { tp2 = 1 }
+		subtract_from_temp_variable	= { tp2 = private_electropower_supply_value }
+		set_temp_variable			= { tp1 = 1 }
+		add_to_temp_variable		= { tp1 = private_capital_activity_value }
+		subtract_from_temp_variable	= { tp1 = tp2 }
+		multiply_temp_variable		= { tp1 = global.private_build_growth_per_day_var }
+		multiply_temp_variable		= { tp1 = private_build_speed_@token:private_livestock_complex }
 
-		add_to_variable			= { completion_private_building_@token:private_livestock_complex = tp1 }
+		add_to_variable				= { completion_private_building_@token:private_livestock_complex = tp1 }
 		
-		set_variable			= {	GUI_completion_private_building_@token:private_livestock_complex = completion_private_building_@token:private_livestock_complex }
-		divide_variable			= {	GUI_completion_private_building_@token:private_livestock_complex = global.private_build_cost_@token:private_livestock_complex }
-		multiply_variable		= {	GUI_completion_private_building_@token:private_livestock_complex = 100 }
+		set_variable				= {	GUI_completion_private_building_@token:private_livestock_complex = completion_private_building_@token:private_livestock_complex }
+		divide_variable				= {	GUI_completion_private_building_@token:private_livestock_complex = global.private_build_cost_@token:private_livestock_complex }
+		multiply_variable			= {	GUI_completion_private_building_@token:private_livestock_complex = 100 }
 		
 		if = {
 			limit = { check_variable = { var = completion_private_building_@token:private_livestock_complex value = global.private_build_cost_@token:private_livestock_complex compare = greater_than_or_equals } }
+			
 			meta_effect = {
 				text = {
-					[TARGET_STATE] = {
+					[TARGET_STATE]	= {
 						add_building_construction = {
 							type			= private_livestock_complex
 							level			= 1
@@ -2617,13 +2652,12 @@ calculate_private_building_progress_effect = {
 				}
 				TARGET_STATE = "[?var:private_building_target_state_@token:private_livestock_complex.GetID]"
 			}
+			add_to_variable			= { num_of_private_building_@token:private_livestock_complex = -1 }
+			add_to_variable			= { num_of_private_building_project = -1 }
 			
-			add_to_variable		= { num_of_private_building_@token:private_livestock_complex = -1 }
-			add_to_variable		= { num_of_private_building_project = -1 }
-			
-			clear_variable		= private_building_target_state_@token:private_livestock_complex
-			clear_variable		= completion_private_building_@token:private_livestock_complex
-			clear_variable		= GUI_completion_private_building_@token:private_livestock_complex
+			clear_variable			= private_building_target_state_@token:private_livestock_complex
+			clear_variable			= completion_private_building_@token:private_livestock_complex
+			clear_variable			= GUI_completion_private_building_@token:private_livestock_complex
 			if = {
 				limit = { check_variable = { num_of_private_building_@token:private_livestock_complex > 0 } }
 				random_owned_state = {
@@ -2635,32 +2669,39 @@ calculate_private_building_progress_effect = {
 							include_locked = no
 						}
 					}
-					set_variable = { PREV.private_building_target_state_@token:private_livestock_complex = THIS.id }
+					set_variable	= { PREV.private_building_target_state_@token:private_livestock_complex = THIS.id }
 				}
 				else = {
 					remove_from_array	= { private_building_lines_ui_array = token:private_livestock_complex }
 					clear_variable		= private_build_speed_@token:private_livestock_complex
+					clear_variable		= private_build_subsidies_to_@token:private_livestock_complex
+					calculate_TOTAL_private_build_subsidies_effect = yes
 				}
 			}
 		}
 	}
 	if = {
 		limit = { check_variable = { num_of_private_building_@token:private_thermal_power_plant > 0 } }
-		set_temp_variable		= { tp1 = 1 }
-		add_to_temp_variable	= { tp1 = private_capital_activity_value }
-		multiply_temp_variable	= { tp1 = global.private_build_growth_per_day_var }
+		set_temp_variable			= { tp2 = 1 }
+		subtract_from_temp_variable	= { tp2 = private_electropower_supply_value }
+		set_temp_variable			= { tp1 = 1 }
+		add_to_temp_variable		= { tp1 = private_capital_activity_value }
+		subtract_from_temp_variable	= { tp1 = tp2 }
+		multiply_temp_variable		= { tp1 = global.private_build_growth_per_day_var }
+		multiply_temp_variable		= { tp1 = private_build_speed_@token:private_thermal_power_plant }
 
-		add_to_variable			= { completion_private_building_@token:private_thermal_power_plant = tp1 }
+		add_to_variable				= { completion_private_building_@token:private_thermal_power_plant = tp1 }
 		
-		set_variable			= {	GUI_completion_private_building_@token:private_thermal_power_plant = completion_private_building_@token:private_thermal_power_plant }
-		divide_variable			= {	GUI_completion_private_building_@token:private_thermal_power_plant = global.private_build_cost_@token:private_thermal_power_plant }
-		multiply_variable		= {	GUI_completion_private_building_@token:private_thermal_power_plant = 100 }
+		set_variable				= {	GUI_completion_private_building_@token:private_thermal_power_plant = completion_private_building_@token:private_thermal_power_plant }
+		divide_variable				= {	GUI_completion_private_building_@token:private_thermal_power_plant = global.private_build_cost_@token:private_thermal_power_plant }
+		multiply_variable			= {	GUI_completion_private_building_@token:private_thermal_power_plant = 100 }
 		
 		if = {
 			limit = { check_variable = { var = completion_private_building_@token:private_thermal_power_plant value = global.private_build_cost_@token:private_thermal_power_plant compare = greater_than_or_equals } }
+			
 			meta_effect = {
 				text = {
-					[TARGET_STATE] = {
+					[TARGET_STATE]	= {
 						add_building_construction = {
 							type			= private_thermal_power_plant
 							level			= 1
@@ -2670,13 +2711,12 @@ calculate_private_building_progress_effect = {
 				}
 				TARGET_STATE = "[?var:private_building_target_state_@token:private_thermal_power_plant.GetID]"
 			}
+			add_to_variable			= { num_of_private_building_@token:private_thermal_power_plant = -1 }
+			add_to_variable			= { num_of_private_building_project = -1 }
 			
-			add_to_variable		= { num_of_private_building_@token:private_thermal_power_plant = -1 }
-			add_to_variable		= { num_of_private_building_project = -1 }
-			
-			clear_variable		= private_building_target_state_@token:private_thermal_power_plant
-			clear_variable		= completion_private_building_@token:private_thermal_power_plant
-			clear_variable		= GUI_completion_private_building_@token:private_thermal_power_plant
+			clear_variable			= private_building_target_state_@token:private_thermal_power_plant
+			clear_variable			= completion_private_building_@token:private_thermal_power_plant
+			clear_variable			= GUI_completion_private_building_@token:private_thermal_power_plant
 			if = {
 				limit = { check_variable = { num_of_private_building_@token:private_thermal_power_plant > 0 } }
 				random_owned_state = {
@@ -2688,15 +2728,29 @@ calculate_private_building_progress_effect = {
 							include_locked = no
 						}
 					}
-					set_variable = { PREV.private_building_target_state_@token:private_thermal_power_plant = THIS.id }
+					set_variable	= { PREV.private_building_target_state_@token:private_thermal_power_plant = THIS.id }
 				}
 				else = {
 					remove_from_array	= { private_building_lines_ui_array = token:private_thermal_power_plant }
 					clear_variable		= private_build_speed_@token:private_thermal_power_plant
+					clear_variable		= private_build_subsidies_to_@token:private_thermal_power_plant
+					calculate_TOTAL_private_build_subsidies_effect = yes
 				}
 			}
 		}
 	}
+}
+
+calculate_TOTAL_private_build_subsidies_effect = {
+	set_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_industrial_complex }
+	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_arms_factory }
+	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_dockyard }
+	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_synthetic_refinery }
+	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_steel_mill }
+	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_agro_complex }
+	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_livestock_complex }
+	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_thermal_power_plant }
+	force_update_dynamic_modifier	= yes
 }
 
 effect_1 = {
