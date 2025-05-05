@@ -55,7 +55,7 @@ buildings = {
 		}
 		country_modifiers = {
 			modifiers = {
-				num_proletariat_k				= -22.5
+				num_proletariat_private_k		= -22.5
 				num_use_electric_power_private	= 5
 			}
 		}
@@ -81,7 +81,7 @@ buildings = {
 		}
 		country_modifiers = {
 			modifiers = {
-				num_proletariat_k				= -13.25
+				num_proletariat_private_k		= -13.25
 				num_use_electric_power_private	= 6
 			}
 		}
@@ -107,7 +107,7 @@ buildings = {
 		}
 		country_modifiers = {
 			modifiers = {
-				num_proletariat_k				= -17.63
+				num_proletariat_private_k		= -17.63
 				num_use_electric_power_private	= 7
 			}
 		}
@@ -133,7 +133,7 @@ buildings = {
 		}
 		country_modifiers = {
 			modifiers = {
-				num_proletariat_k				= -8.5
+				num_proletariat_private_k		= -8.5
 				num_use_electric_power_private	= 4
 			}
 		}
@@ -159,7 +159,7 @@ buildings = {
 		}
 		country_modifiers = {
 			modifiers = {
-				num_proletariat_k				= -16.23
+				num_proletariat_private_k		= -16.23
 				num_use_electric_power_private	= 3.5
 			}
 		}
@@ -185,7 +185,7 @@ buildings = {
 		}
 		country_modifiers = {
 			modifiers = {
-				num_proletariat_k				= -10.2
+				num_proletariat_private_k		= -10.2
 				num_use_electric_power_private	= 0.25
 			}
 		}
@@ -211,7 +211,7 @@ buildings = {
 		}
 		country_modifiers = {
 			modifiers = {
-				num_proletariat_k				= -12.8
+				num_proletariat_private_k		= -12.8
 				num_use_electric_power_private	= 0.5
 			}
 		}
@@ -237,7 +237,7 @@ buildings = {
 		}
 		country_modifiers = {
 			modifiers = {
-				num_proletariat_k						= -0.75
+				num_proletariat_private_k				= -0.75
 				num_generation_electric_power_private	= 60
 			}
 		}

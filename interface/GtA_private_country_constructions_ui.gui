@@ -239,26 +239,26 @@ guiTypes = {
 				maxHeight = 25
 				format = right
 			}
-####	ЭФФЕКТИВНОСТЬ
+####	ДОЛЯ
 			instantTextboxType = {
-				name = "private_capital_effectiveness_txt"
+				name = "private_capital_segment_txt"
 				position = { x=0 y=38 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
-				text = "private_capital_effectiveness_txt"
-				pdx_tooltip = "private_capital_effectiveness_tooltip"
+				text = "private_capital_segment_txt"
+				pdx_tooltip = "private_capital_segment_tooltip"
 				maxWidth = 200
 				maxHeight = 25
 				fixedsize = yes
 				format = left
 			}
 			instantTextboxType = {
-				name = "private_capital_effectiveness_value"
+				name = "private_capital_segment_value"
 				position = { x=126 y=38 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
-				text = "private_capital_effectiveness_value"
-				pdx_tooltip = "private_capital_effectiveness_tooltip"
+				text = "private_capital_segment_value"
+				pdx_tooltip = "private_capital_segment_tooltip"
 				maxWidth = 70
 				maxHeight = 25
 				format = right
@@ -287,10 +287,10 @@ guiTypes = {
 				maxHeight = 25
 				format = right
 			}
-####	ДОЛЯ
+####	ЭФФЕКТИВНОСТЬ
 			instantTextboxType = {
 				name = "private_capital_effectiveness_txt1"
-				position = { x=330 y=38 }
+				position = { x=220 y=38 }
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				text = "private_capital_effectiveness_txt"
@@ -302,9 +302,9 @@ guiTypes = {
 			}
 			instantTextboxType = {
 				name = "private_capital_effectiveness_value1"
-				position = { x=126 y=38 }
+				position = { x=330 y=38 }
 				font = "hoi_18mbs"
-				borderSize = {x = 330 y = 0}
+				borderSize = {x = 0 y = 0}
 				text = "private_capital_effectiveness_value"
 				pdx_tooltip = "private_capital_effectiveness_tooltip"
 				maxWidth = 70

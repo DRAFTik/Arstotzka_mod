@@ -38,6 +38,7 @@
 #	modifier@mobilization_speed_proletariat
 #	modifier@proletariat_factor
 #	modifier@num_proletariat_k
+#	modifier@num_proletariat_private_k
 #	modifier@interest_in_economic_development_factor
 
 #	modifier@num_generation_science_point
@@ -245,11 +246,11 @@ calculate_electric_power_effect = {
 	multiply_temp_variable		= { resource_produced_power_cost_temp = 0.1 }
 	set_variable				= { electric_power_cost_resource_produced_var = resource_produced_power_cost_temp }
 
-# Частники
-	if = {
-		limit					= { check_variable = { sell_private_electric_button_var = 2 } }
-		set_variable			= { electric_power_cost_private_var = modifier@num_use_electric_power_private }
-	}
+# Частники // ушло в sell_private_electric_button_click
+#	if = {
+#		limit					= { check_variable = { sell_private_electric_button_var = 2 } }
+#		set_variable			= { electric_power_cost_private_var = modifier@num_use_electric_power_private }
+#	}
 	
 # Баланс энергии
 	set_variable				= { electric_power_cost_var = modifier@num_use_electric_power }
@@ -1278,9 +1279,11 @@ calculate_proletariat_start_effect = {
 	multiply_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = ACTUAL_proletariat_factor_var }
 	set_variable			= { TOTAL_num_ALL_proletariat_k = TOTAL_num_proletariat_goal_k_temp }
 	set_variable			= { TOTAL_num_USE_proletariat_k = modifier@num_proletariat_k }
+	add_to_variable			= { TOTAL_num_USE_proletariat_k = modifier@num_proletariat_private_k }
 	add_to_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = TOTAL_num_USE_proletariat_k }
 	
 	set_variable			= { TOTAL_num_USE_proletariat_k_pozitiv = modifier@num_proletariat_k }
+	add_to_variable			= { TOTAL_num_USE_proletariat_k_pozitiv = modifier@num_proletariat_private_k }
 	multiply_variable		= { TOTAL_num_USE_proletariat_k_pozitiv = -1 }
 	
 #	multiply_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = interest_in_economic_development_base }
@@ -1297,7 +1300,7 @@ calculate_proletariat_start_effect = {
 	set_variable			= { TOTAL_num_ALL_proletariat_m	= TOTAL_num_ALL_proletariat_k }
 	divide_variable			= { TOTAL_num_ALL_proletariat_m	= 1000 }
 	
-	# Сколько есть от modifier@num_proletariat_k
+	# Сколько есть от modifier@num_proletariat_k и modifier@num_proletariat_private_k
 	set_variable			= { TOTAL_num_USE_proletariat_pozitiv	= TOTAL_num_USE_proletariat_k_pozitiv }
 	multiply_variable		= { TOTAL_num_USE_proletariat_pozitiv	= 1000 }
 	set_variable			= { TOTAL_num_USE_proletariat_m_pozitiv	= TOTAL_num_USE_proletariat_k_pozitiv }
@@ -1331,9 +1334,11 @@ calculate_proletariat_effect = {
 	multiply_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = ACTUAL_proletariat_factor_var }
 	set_variable			= { TOTAL_num_ALL_proletariat_k = TOTAL_num_proletariat_goal_k_temp }
 	set_variable			= { TOTAL_num_USE_proletariat_k = modifier@num_proletariat_k }
+	add_to_variable			= { TOTAL_num_USE_proletariat_k = modifier@num_proletariat_private_k }
 	add_to_temp_variable	= { TOTAL_num_proletariat_goal_k_temp = TOTAL_num_USE_proletariat_k }
 	
 	set_variable			= { TOTAL_num_USE_proletariat_k_pozitiv = modifier@num_proletariat_k }
+	add_to_variable			= { TOTAL_num_USE_proletariat_k_pozitiv = modifier@num_proletariat_private_k }
 	multiply_variable		= { TOTAL_num_USE_proletariat_k_pozitiv = -1 }
 	
 	set_temp_variable		= { TOTAL_num_proletariat_k_temp = TOTAL_num_proletariat_k }
@@ -1353,7 +1358,7 @@ calculate_proletariat_effect = {
 	set_variable			= { TOTAL_num_ALL_proletariat_m	= TOTAL_num_ALL_proletariat_k }
 	divide_variable			= { TOTAL_num_ALL_proletariat_m	= 1000 }
 	
-	# Сколько есть от modifier@num_proletariat_k
+	# Сколько есть от modifier@num_proletariat_k и modifier@num_proletariat_private_k
 	set_variable			= { TOTAL_num_USE_proletariat_pozitiv	= TOTAL_num_USE_proletariat_k_pozitiv }
 	multiply_variable		= { TOTAL_num_USE_proletariat_pozitiv	= 1000 }
 	set_variable			= { TOTAL_num_USE_proletariat_m_pozitiv	= TOTAL_num_USE_proletariat_k_pozitiv }
@@ -2048,17 +2053,14 @@ calculate_private_building_effect = {
 	clamp_temp_variable			= { var = capital_activity_fail_temp min = 0.0 max = 1.0 }
 	set_temp_variable			= { capital_activity_success_temp = private_capital_activity_value }
 	clamp_temp_variable			= { var = capital_activity_success_temp min = 0.0 max = 1.0 }
-	random_list = {
-		temp_var:capital_activity_fail_temp		= {
-			# НИЧЕГО
-		}
-		temp_var:capital_activity_success_temp	= {
-			set_temp_variable			= { temp1 = private_capital_activity_value }
-			multiply_temp_variable		= { temp1 = 5 }		#*100/20
-			subtract_from_temp_variable	= { temp1 = 0.5 }
-			round_temp_variable			= temp1
-			if = {
-				limit = { check_variable	= { num_of_private_building_project < temp1 } }
+	
+	if = {
+		limit = { check_variable = { num_of_private_building_project < max_of_private_building_project_var } }
+		random_list = {
+			temp_var:capital_activity_fail_temp		= {
+				# НИЧЕГО
+			}
+			temp_var:capital_activity_success_temp	= {
 				add_to_variable = { num_of_private_building_project = 1 }
 				private_building_add_effect = yes
 			}
@@ -2248,6 +2250,15 @@ private_building_add_effect = {
 	}
 }
 
+calculate_max_of_private_building_project_effect = {
+	set_temp_variable			= { pca_temp = private_capital_activity_value }
+	multiply_temp_variable		= { pca_temp = 5 }		#*100/20
+	subtract_from_temp_variable	= { pca_temp = 0.5 }
+	round_temp_variable			= pca_temp
+	clamp_temp_variable			= { var = pca_temp min = 1 max = 5 }
+	set_variable				= { max_of_private_building_project_var = pca_temp }
+}
+
 calculate_private_electropower_supply_effect = {
 	set_temp_variable				= { private_electropower_supply_temp = modifier@num_generation_electric_power_private }
 	divide_temp_variable			= { private_electropower_supply_temp = modifier@num_use_electric_power_private }
@@ -2258,6 +2269,19 @@ calculate_private_electropower_supply_effect = {
 	}
 }
 
+calculate_private_segment_effect = {
+	set_variable					= { private_capital_segment_value = modifier@num_proletariat_private_k }
+	multiply_variable				= { private_capital_segment_value = -1 }
+	set_variable					= { TOTAL_num_USE_proletariat_private_k_pozitiv = private_capital_segment_value }
+	divide_variable					= { private_capital_segment_value = TOTAL_num_proletariat_k }
+	
+	# ФОРМАТ от modifier@num_proletariat_private_k
+	set_variable			= { TOTAL_num_USE_proletariat_private_pozitiv = TOTAL_num_USE_proletariat_private_k_pozitiv }
+	multiply_variable		= { TOTAL_num_USE_proletariat_private_pozitiv = 1000 }
+	set_variable			= { TOTAL_num_USE_proletariat_private_m_pozitiv	= TOTAL_num_USE_proletariat_private_k_pozitiv }
+	divide_variable			= { TOTAL_num_USE_proletariat_private_m_pozitiv	= 1000 }
+}
+
 calculate_private_building_progress_effect = {
 	set_temp_variable				= { private_capital_activity_temp = proletariat_unemployment_rate }
 	multiply_temp_variable			= { private_capital_activity_temp = 0.5 }
@@ -2265,7 +2289,9 @@ calculate_private_building_progress_effect = {
 	multiply_temp_variable			= { private_capital_activity_temp = modifier@capitalist_activity_modifier }
 	set_variable					= { private_capital_activity_value = private_capital_activity_temp }
 	
-	calculate_private_electropower_supply_effect = yes
+	calculate_max_of_private_building_project_effect	= yes
+	calculate_private_electropower_supply_effect		= yes
+	calculate_private_segment_effect					= yes
 	
 	if = {
 		limit = { check_variable = { num_of_private_building_@token:private_industrial_complex > 0 } }
@@ -2300,6 +2326,7 @@ calculate_private_building_progress_effect = {
 			}
 			add_to_variable			= { num_of_private_building_@token:private_industrial_complex = -1 }
 			add_to_variable			= { num_of_private_building_project = -1 }
+			add_to_variable			= { num_of_private_building_complete_project = 1 }
 			
 			clear_variable			= private_building_target_state_@token:private_industrial_complex
 			clear_variable			= completion_private_building_@token:private_industrial_complex
@@ -2359,6 +2386,7 @@ calculate_private_building_progress_effect = {
 			}
 			add_to_variable			= { num_of_private_building_@token:private_arms_factory = -1 }
 			add_to_variable			= { num_of_private_building_project = -1 }
+			add_to_variable			= { num_of_private_building_complete_project = 1 }
 			
 			clear_variable			= private_building_target_state_@token:private_arms_factory
 			clear_variable			= completion_private_building_@token:private_arms_factory
@@ -2418,6 +2446,7 @@ calculate_private_building_progress_effect = {
 			}
 			add_to_variable			= { num_of_private_building_@token:private_dockyard = -1 }
 			add_to_variable			= { num_of_private_building_project = -1 }
+			add_to_variable			= { num_of_private_building_complete_project = 1 }
 			
 			clear_variable			= private_building_target_state_@token:private_dockyard
 			clear_variable			= completion_private_building_@token:private_dockyard
@@ -2477,6 +2506,7 @@ calculate_private_building_progress_effect = {
 			}
 			add_to_variable			= { num_of_private_building_@token:private_synthetic_refinery = -1 }
 			add_to_variable			= { num_of_private_building_project = -1 }
+			add_to_variable			= { num_of_private_building_complete_project = 1 }
 			
 			clear_variable			= private_building_target_state_@token:private_synthetic_refinery
 			clear_variable			= completion_private_building_@token:private_synthetic_refinery
@@ -2536,6 +2566,7 @@ calculate_private_building_progress_effect = {
 			}
 			add_to_variable			= { num_of_private_building_@token:private_steel_mill = -1 }
 			add_to_variable			= { num_of_private_building_project = -1 }
+			add_to_variable			= { num_of_private_building_complete_project = 1 }
 			
 			clear_variable			= private_building_target_state_@token:private_steel_mill
 			clear_variable			= completion_private_building_@token:private_steel_mill
@@ -2595,6 +2626,7 @@ calculate_private_building_progress_effect = {
 			}
 			add_to_variable			= { num_of_private_building_@token:private_agro_complex = -1 }
 			add_to_variable			= { num_of_private_building_project = -1 }
+			add_to_variable			= { num_of_private_building_complete_project = 1 }
 			
 			clear_variable			= private_building_target_state_@token:private_agro_complex
 			clear_variable			= completion_private_building_@token:private_agro_complex
@@ -2654,6 +2686,7 @@ calculate_private_building_progress_effect = {
 			}
 			add_to_variable			= { num_of_private_building_@token:private_livestock_complex = -1 }
 			add_to_variable			= { num_of_private_building_project = -1 }
+			add_to_variable			= { num_of_private_building_complete_project = 1 }
 			
 			clear_variable			= private_building_target_state_@token:private_livestock_complex
 			clear_variable			= completion_private_building_@token:private_livestock_complex
@@ -2713,6 +2746,7 @@ calculate_private_building_progress_effect = {
 			}
 			add_to_variable			= { num_of_private_building_@token:private_thermal_power_plant = -1 }
 			add_to_variable			= { num_of_private_building_project = -1 }
+			add_to_variable			= { num_of_private_building_complete_project = 1 }
 			
 			clear_variable			= private_building_target_state_@token:private_thermal_power_plant
 			clear_variable			= completion_private_building_@token:private_thermal_power_plant
@@ -2779,4 +2813,35 @@ effect_1 = {
 		}
 		TARGET_STATE = "[?var:private_building_target_state_@token:private_thermal_power_plant.GetID]"
 	}
+}
+
+effect_2 = {
+	meta_effect = {
+		text = {
+			set_technology	= { [TARGET_TECH] = 1	popup = yes }
+#			log = "TARGET_TECH: [?global.technology^1.GetTokenKey]"
+		}
+		TARGET_TECH = "[?global.technology^2.GetTokenKey]"
+	}
+	
+	log = "TARGET_TECH: [?global.technology^2]"
+	log = "TOTAL technologies: [?global.technology^num]"
+}
+
+effect_3 = {										# имя команды может быть любой. В эффектах фокусов/ивентов ты просто пишешь тэг и эту команду. Например SOV = { effect_3 = yes }
+	set_temp_variable	= { current_index = 1 }		# задается порядковый индекс. Начинаем с 1 номера в массиве
+	while_loop_effect	= {							# это команда на вызов цикла
+		limit			= { check_variable = { current_index < global.technology^num } }	# когда цикл пройдет от 1 (переменная выше current_index) до посленей технологии в массиве global.technology
+		meta_effect		= {							# это команда на вызов мета эффекта. Здесь происходит выдача технологии, которая соответствует порядковому номеру в массиве global.technology
+			text		= {
+				if		= {
+					limit			= { NOT = { has_tech = [TARGET_TECH] } }
+					set_technology	= { [TARGET_TECH] = 1	popup = no }
+				}
+			}
+			TARGET_TECH				= "[?global.technology^current_index.GetTokenKey]"	# конкретная технология, которая в текущий момент соответствует порядковый индекс current_index в массиве global.technology
+		}
+		add_to_temp_variable		= { current_index = 1 }								# здесь обеспечивается сдвиг порядкового индекса current_index
+	}
+	log = "TOTAL technologies: [?global.technology^num]"								# это просто лог, в целом он не нужен. Просто отображает общее количество технологий в моде
 }

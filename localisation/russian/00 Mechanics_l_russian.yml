@@ -114,6 +114,10 @@
     GET_MAX_MANPOWER_IN_NUM_TEXT: "[?ROOT.max_manpower_var|0]"
     GET_MAX_MANPOWER_IN_K_TEXT: "[?ROOT.max_manpower_k|2]K"
     GET_MAX_MANPOWER_IN_M_TEXT: "[?ROOT.max_manpower_m_var|2]M"
+    
+    GET_USE_PRIVATE_PROLETARIAT_IN_NUM_TEXT: "[?ROOT.TOTAL_num_USE_proletariat_private_pozitiv|0]"
+    GET_USE_PRIVATE_PROLETARIAT_IN_K_TEXT: "[?ROOT.TOTAL_num_USE_proletariat_private_k_pozitiv|2]K"
+    GET_USE_PRIVATE_PROLETARIAT_IN_M_TEXT: "[?ROOT.TOTAL_num_USE_proletariat_private_m_pozitiv|2]M"
 
 ###############
 ### SCIENCE ###
@@ -176,6 +180,7 @@
     provision_income_modifier: "£provisions_icon Производство провианта"
     num_change_population_weekly: "£population_texticon Еженедельное изменение населения"
     num_proletariat_k: "£proletariat_texticon Изменение трудовых ресурсов (K)"
+    num_proletariat_private_k: "$num_proletariat_k$"
     proletariat_factor: "£proletariat_texticon Трудовые ресурсы"
     mobilization_speed_proletariat: "£proletariat_texticon Мобилизация труда"
     interest_in_economic_development_factor: "£ETH_imperial_treasury Заинтересованность в экономическом развитии"
@@ -244,11 +249,11 @@
    
    private_capital_activity_txt: "£GFX_capital_texticon  Активность:"
    private_capital_activity_value: "[?private_capital_activity_value|%0]"
-   private_capital_activity_tooltip: "§HАктивность частного сектора§!\n§LОтражает уровень вовлеченности капитала в экономику страны. Указанный процент соответствует еженедельному шансу начать строительство нового объекта.§!\n\nФормула: §YА§!*§YБ§!, где\nАктивность капиталистов (§YА§!): [?modifier@capitalist_activity_modifier|%H1]\nБезработица (§YБ§!): §G100%§! + [?proletariat_unemployment_rate|%H1] / §R2§!"
+   private_capital_activity_tooltip: "§HАктивность частного сектора§!\n§LОтражает уровень вовлеченности капитала в экономику страны и максимальное число активных частных проектов. Указанный процент соответствует еженедельному шансу начать строительство нового объекта.§!\n\nФормула: §YА§!*§YБ§!, где\nАктивность капиталистов (§YА§!): [?modifier@capitalist_activity_modifier|%H1]\nБезработица (§YБ§!): §G100%§! + [?proletariat_unemployment_rate|%H1] / §R2§!"
    
    private_capital_segment_txt: "£GFX_segment_texticon  Доля рынка:"
    private_capital_segment_value: "[?private_capital_segment_value|%0]"
-   private_capital_segment_tooltip: "§HЭффективность производства частного сектора§!\n§LОтражает эффективность промышленности частного сектора§!"
+   private_capital_segment_tooltip: "§HДоля частного сектора в экономике§!\n§LОтражает долю трудоспособного населения страны, которая трудится в частном секторе.§!\nКоличество активных проектов: [?num_of_private_building_project|Y0]\nМаксимум активных проектов: [?max_of_private_building_project_var|R0]\nКоличество завершенных проектов: [?num_of_private_building_complete_project|G0]\n\nИспользуемые трудовые ресурсы: §H[GET_USE_PRIVATE_PROLETARIAT_FORMAT_TEXT]§!"
    
    private_electropower_supply_txt: "£electric_power_pure_icon  Электроэнергия:"
    private_electropower_supply_value: "[?private_electropower_supply_value|%0]"
@@ -256,7 +261,7 @@
    
    private_capital_effectiveness_txt: "£GFX_prod_eff  Эффективность:"
    private_capital_effectiveness_value: "[?private_capital_effectiveness_value|%0]"
-   private_capital_effectiveness_tooltip: "§HЭффективность производства частного сектора§!\n§LОтражает эффективность промышленности частного сектора§!"
+   private_capital_effectiveness_tooltip: "§HЭффективность производства частного сектора§!\n§LОтражает эффективность промышленности частного сектора при производстве товаров гражданского назначения.§!"
    
    private_building_progressbar_ratio_bar_tooltip: "[?GUI_completion_private_building_@var:v|%%1H] | ([?completion_private_building_@var:v|G1]/[?global.private_build_cost_@var:v|Y1])"
    TOTAL_private_build_subsidies_dyn: "Субсидии частному капиталу"

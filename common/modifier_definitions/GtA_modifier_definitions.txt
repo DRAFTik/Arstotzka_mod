@@ -154,6 +154,13 @@ num_proletariat_k = {
 	category = country
 }
 
+num_proletariat_private_k = {
+	color_type = good
+	value_type = number
+	precision = 1
+	category = country
+}
+
 proletariat_factor = {
 	color_type = neutral
 	value_type = percentage

@@ -85,8 +85,12 @@ scripted_gui = {
 				if = {
 					limit			= { check_variable = { sell_private_electric_button_var = 0 } }
 					set_variable	= { sell_private_electric_button_var = 2 }
+					set_variable	= { electric_power_cost_private_var = modifier@num_use_electric_power_private }
 				}
-				else				= { set_variable = { sell_private_electric_button_var = 0 } }
+				else = {
+					set_variable = { sell_private_electric_button_var = 0 }
+					clear_variable = electric_power_cost_private_var
+				}
 				calculate_private_electropower_supply_effect = yes
 			}
 			red_button_click = {

@@ -312,7 +312,30 @@ defined_text = {
 	}
 }
 
-
+defined_text = {
+	name = GET_USE_PRIVATE_PROLETARIAT_FORMAT_TEXT
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { var = TOTAL_num_USE_proletariat_private_m_pozitiv value = 1 compare = greater_than_or_equals }
+				check_variable = { var = TOTAL_num_USE_proletariat_private_m_pozitiv value = -1 compare = less_than_or_equals }
+			}
+		}
+		localization_key = GET_USE_PRIVATE_PROLETARIAT_IN_M_TEXT
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { var = TOTAL_num_USE_proletariat_private_k_pozitiv value = 1 compare = greater_than_or_equals }
+				check_variable = { var = TOTAL_num_USE_proletariat_private_k_pozitiv value = -1 compare = less_than_or_equals }
+			}
+		}
+		localization_key = GET_USE_PRIVATE_PROLETARIAT_IN_K_TEXT
+	}
+	text = {
+		localization_key = GET_USE_PRIVATE_PROLETARIAT_IN_NUM_TEXT
+	}
+}
 
 
 
