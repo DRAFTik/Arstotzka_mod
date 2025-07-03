@@ -10,7 +10,7 @@
 
     gta_popularity_ideology_tooltip: "Ваша текущая правящая партия - §H[?current_party_ideology_group.GetTokenLocalizedKey]§!"
     gta_popularity_ideology_desc: "§L[GetPopularityTooltipDesc]§!"
-    gta_party_popularity_delayed_tooltip: "Популярность партии представляет собой контроль текущего правительства над страной и его поддержку в народе. Политические партии с высокой популярностью имеют больше возможностей для продвижения своей политической программы и стабилизации нации."
+    gta_party_popularity_delayed_tooltip: "§LПопулярность партии представляет собой контроль текущего правительства над страной и его поддержку в народе. Политические партии с высокой популярностью имеют больше возможностей для продвижения своей политической программы и стабилизации нации.§!"
 
     gta_party_popularity_tooltip: "§HПопулярность партии§![GetPopularityPPGain]"
     gta_party_popularity_tooltip_long: "§H\nЭффекты от нашей нынешней Популярности партии:§!\nЕжедневный прирост Политической силы: [?ROOT.party_popularity@ruling_party|2=+]"
@@ -23,7 +23,7 @@
 ##################
 
     gta_provisions_tooltip: "§HПродовольственная обеспеченность (тыс. тонн)§!\nУровень обеспеченности: [?ROOT.provision_percent_var|+1%%]\n\nТекущий запас провианта: [?ROOT.provision_total_var|+1*] из [?ROOT.max_provision_total_var|H1*] | [?ROOT.provision_percent_to_max_var|+1%]\nТекущий баланс провианта: [?ROOT.provision_balance_var|+1*]/день\nТекущее потребление провианта: [?ROOT.provision_need_var|-1*]/день\n\nПроизводство провианта:\n    - в неделю: [?ROOT.weekly_income_provision|+1*] от [?ROOT.livestock_complex_total|H0] шт.\n    - в год (среднее): [?ROOT.yearly_income_provision|+1*] от [?ROOT.agro_complex_total|H0] шт.[GET_CROP_LOC]\nКоэффициент сбора урожая: [?ROOT.num_generation_provision_yearly_var|1+%]\n\nУровень сохранения провизии: [?ROOT.monthly_save_provision|+0%]\nВ этом месяце ожидается порча: [?ROOT.bad_provision_var|-1*]\n\nМаксимальный запас провианта: [?ROOT.max_provision_total_var|H1*]\nБазовое значение: [?ROOT.max_provision_base_var|H1*]\nВ регионах: [?ROOT.modifier@max_provision|H1*][GET_HUNGER_LOC]"
-    gta_provisions_delayed_tooltip: "Продовольственная обеспеченность отображает потребность в продуктах питания вашей страны.\n\nНерегулярные поступления провианта от §HАгрокомплексов§! не учитываются в расчете значения §Hбаланса провианта§!."
+    gta_provisions_delayed_tooltip: "§LПродовольственная обеспеченность отображает потребность в продуктах питания вашей страны.\n\nНерегулярные поступления провианта от §HАгрокомплексов§! не учитываются в расчете значения §Hбаланса провианта§!.§!"
     GET_BASE_HARVEST_LOC: "\n\nУрожай текущего года:"
     GET_BAD_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §RНЕУРОЖАЙ§!"
     GET_RECORD_HARVEST_LOC: "$GET_BASE_HARVEST_LOC$ §GРЕКОРД§!"
@@ -49,7 +49,7 @@
 ######################
 
     gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.electric_power_total_generation_var|1+]\n    - ТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\nКоэффициент выработки: [?ROOT.num_generation_electric_power_factor|1+%]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-] [get_electric_power_cost_private_text]"
-    gta_electric_power_delayed_tooltip: "Обеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!.\nНажмите §Gправой кнопкой§!, чтобы начать §Hторговлю электроэнергией§!.[GET_ELECTRIC_POWER_CRISIS_LOC]"
+    gta_electric_power_delayed_tooltip: "§LОбеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.§!\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!.\nНажмите §Gправой кнопкой§!, чтобы начать §Hторговлю электроэнергией§!.[GET_ELECTRIC_POWER_CRISIS_LOC]"
     GET_ELECTRIC_POWER_CRISIS_TEXT: "\n$SEPARATION_LINE$$electric_power_title_bad_debuff_text$$electric_power_debuff_text$"
     
     GET_THERMAL_POWER_PLANT_RED: "[?ROOT.thermal_power_plant_ok|0-]"
@@ -66,6 +66,12 @@
     sell_private_electric_icon_tt: "§LПродажа электричества частным потребителям §Gускорит§! §Hскорость строительства§! частных сооружений."
     SELL_PRIVATE_ELECTRIC_BUTTON_STATUS_YES: "§GДа§!"
     SELL_PRIVATE_ELECTRIC_BUTTON_STATUS_NO: "§RНет§!"
+    
+    sell_private_electric_type_button_tt: "Режим продажи электричества частным потребителям: [get_sell_private_electric_type_button_status]"
+    sell_private_electric_type_button_tt_delayed: "§LИзменяет режим продажи электричества частным потребителям.\n\n§RВсё§! - означает, что вы полностью берете на себя нагрузку частных потребителей, даже ценой дефицита электричества для государственного сектора.\n\n§GИзлишки§! - означает, что объёмы продаваемой электроэнергии не превысят ваш профицит электроэнергии. В случае дефицита продажа электроэнергии частным потребителям прекратится автоматически.§!"
+    SELL_PRIVATE_ELECTRIC_TYPE_BUTTON_STATUS_ALL: "§RВсё§!"
+    SELL_PRIVATE_ELECTRIC_TYPE_BUTTON_STATUS_SURPLUSES: "§GИзлишки§!"
+    
     red_button_text: "§RСБРОС§!"
     electric_power_text_1: "Армия"
     electric_power_text_2: "Провизия"
@@ -94,7 +100,7 @@
 ###################
 
     gta_proletariat_tooltip: "§HТрудовые ресурсы§!\nТекущие трудовые ресурсы: §H[GET_PROLETARIAT_FORMAT_TEXT]§!\nУровень безработицы: [?proletariat_unemployment_rate|%1H]\n\nВсего трудовых ресурсов: §H[GET_ALL_PROLETARIAT_FORMAT_TEXT]§! ([?ROOT.ACTUAL_proletariat_factor_var|2%H])\n[GET_PROLETARIAT_PROCESS_STATUS_TEXT] от общего населения страны (§H[GET_MAX_MANPOWER_FORMAT_TEXT]§!)\nИспользуемые трудовые ресурсы: §H[GET_USE_PROLETARIAT_FORMAT_TEXT]§!\n\nЗаинтересованность в экономическом развитии: [?ROOT.interest_in_economic_development_base|2%H]"
-    gta_proletariat_delayed_tooltip: "Трудовые ресурсы отображает количество трудоспособного населения вашей страны.\n\nПараметр §HЗаинтересованность в экономическом развитии§! косвенно влияет на количество доступных §Hтрудовых ресурсов§! страны и §Hуменьшается§! по мере роста §Hпромышленности§!."
+    gta_proletariat_delayed_tooltip: "§LТрудовые ресурсы отображает количество трудоспособного населения вашей страны.\n\nПараметр §HЗаинтересованность в экономическом развитии§! косвенно влияет на количество доступных §Hтрудовых ресурсов§! страны и §Hуменьшается§! по мере роста §Hпромышленности§!.§!"
     
     GET_PROLETARIAT_IN_PROCESS_TEXT: "[?ROOT.current_proletariat_percent_var|2H%] (примерно [?ROOT.mobilization_speed_proletariat_var|4%+] проходят мобилизацию труда ежедневно)"
     GET_PROLETARIAT_STABLE_TEXT: "Доступно [?ROOT.ACTUAL_proletariat_factor_var|2H%]"
@@ -124,7 +130,7 @@
 ###############
 
     gta_science_tooltip: "§HНаука§!\nИзменение очков: [?ROOT.num_science_DELTA_var|+1]\n\nТекущие затраты ОН: [?ROOT.num_science_minus_var|+1]\nТекущий прирост ОН: [?ROOT.num_science_plus_var|+1]"
-    gta_science_delayed_tooltip: "Очки науки (ОН) отображают состояние науки в вашей страны."
+    gta_science_delayed_tooltip: "§LОчки науки (ОН) отображают состояние науки в вашей страны.§!"
     
     
 #############
@@ -225,6 +231,7 @@
 ### CIVIL PRODUCTION ###
 ########################
    
+   civil_production_tt: "§HГражданское производство§!\nВыпуск товаров для ваших граждан."
    CIV_PRODUCTION_PRODUCTION_LABEL: "Гражданское производство"
    PRODUCTION_OPERATIONAL_CIVIL_FACTORIES_LABEL: "Гражданские фабрики"
    civil_production_line_dyn: "$CIV_PRODUCTION_PRODUCTION_LABEL$"

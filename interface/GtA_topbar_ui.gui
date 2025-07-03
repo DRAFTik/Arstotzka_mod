@@ -182,7 +182,7 @@ guiTypes = {
 			position = { x = 473 y = 79 }
 			Orientation = "UPPER_LEFT"
 			shortcut = ""
-			pdx_tooltip = generic_trade_open_tt
+			pdx_tooltip = "civil_production_tt"
 			clicksound = click_ok
 			oversound = ui_menu_over
 		}

@@ -1,0 +1,17 @@
+give_all_technology_effect = {										# имя команды может быть любой. В эффектах фокусов/ивентов ты просто пишешь тэг и эту команду. Например SOV = { effect_3 = yes }
+	set_temp_variable	= { current_index = 1 }		# задается порядковый индекс. Начинаем с 1 номера в массиве
+	while_loop_effect	= {							# это команда на вызов цикла
+		limit			= { check_variable = { current_index < global.technology^num } }	# когда цикл пройдет от 1 (переменная выше current_index) до посленей технологии в массиве global.technology
+		meta_effect		= {							# это команда на вызов мета эффекта. Здесь происходит выдача технологии, которая соответствует порядковому номеру в массиве global.technology
+			text		= {
+				if		= {
+					limit			= { NOT = { has_tech = [TARGET_TECH] } }
+					set_technology	= { [TARGET_TECH] = 1	popup = no }
+				}
+			}
+			TARGET_TECH				= "[?global.technology^current_index.GetTokenKey]"	# конкретная технология, которая в текущий момент соответствует порядковый индекс current_index в массиве global.technology
+		}
+		add_to_temp_variable		= { current_index = 1 }								# здесь обеспечивается сдвиг порядкового индекса current_index
+	}
+	log = "TOTAL technologies: [?global.technology^num]"								# это просто лог, в целом он не нужен. Просто отображает общее количество технологий в моде
+}

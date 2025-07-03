@@ -68,28 +68,54 @@ scripted_gui = {
 			has_variable = electric_panel
 		}
 		properties = {
-			electric_power_tumbler_icon_1	= { frame = electric_power_tumbler_icon_1_frame }
-			electric_power_tumbler_icon_2	= { frame = electric_power_tumbler_icon_2_frame }
-			electric_power_tumbler_icon_3	= { frame = electric_power_tumbler_icon_3_frame }
-			electric_power_tumbler_icon_4	= { frame = electric_power_tumbler_icon_4_frame }
-			electric_power_tumbler_icon_5	= { frame = electric_power_tumbler_icon_5_frame }
-			electric_power_tumbler_icon_6	= { frame = electric_power_tumbler_icon_6_frame }
-			electric_power_tumbler_icon_7	= { frame = electric_power_tumbler_icon_7_frame }
-			sell_private_electric_button	= { frame = sell_private_electric_button_var }
-			sell_private_electric_icon		= { image = "[get_sell_private_electric_icon]" }
+			electric_power_tumbler_icon_1		= { frame = electric_power_tumbler_icon_1_frame }
+			electric_power_tumbler_icon_2		= { frame = electric_power_tumbler_icon_2_frame }
+			electric_power_tumbler_icon_3		= { frame = electric_power_tumbler_icon_3_frame }
+			electric_power_tumbler_icon_4		= { frame = electric_power_tumbler_icon_4_frame }
+			electric_power_tumbler_icon_5		= { frame = electric_power_tumbler_icon_5_frame }
+			electric_power_tumbler_icon_6		= { frame = electric_power_tumbler_icon_6_frame }
+			electric_power_tumbler_icon_7		= { frame = electric_power_tumbler_icon_7_frame }
+			sell_private_electric_button		= { frame = sell_private_electric_button_var }
+			sell_private_electric_type_button	= { frame = sell_private_electric_type_button_var }
+			sell_private_electric_icon			= { image = "[get_sell_private_electric_icon]" }
 		}
 		
 		effects = {
 			close_button_click = { clear_variable = electric_panel }
 			sell_private_electric_button_click = {
 				if = {
-					limit			= { check_variable = { sell_private_electric_button_var = 0 } }
-					set_variable	= { sell_private_electric_button_var = 2 }
-					set_variable	= { electric_power_cost_private_var = modifier@num_use_electric_power_private }
+					limit				= { check_variable = { sell_private_electric_button_var = 0 } }
+					set_variable		= { sell_private_electric_button_var = 2 }
+					
+					if = {				# Всё
+						limit = { check_variable = { sell_private_electric_type_button_var = 2 } }
+						set_variable	= { electric_power_cost_private_var = modifier@num_use_electric_power_private }
+					
+						else = {		# Излишки
+							if = {
+								limit	= { check_variable = { electric_power_total_var > 0 } }
+								if = {
+									limit			= { check_variable = { var = modifier@num_use_electric_power_private	value = electric_power_total_var	compare = greater_than_or_equals } }
+									set_variable	= { electric_power_cost_private_var = electric_power_total_var }
+									else			= { set_variable = { electric_power_cost_private_var = modifier@num_use_electric_power_private } }
+								}
+							}
+						}
+					}
 				}
 				else = {
 					set_variable = { sell_private_electric_button_var = 0 }
 					clear_variable = electric_power_cost_private_var
+				}
+				calculate_private_electropower_supply_effect = yes
+			}
+			sell_private_electric_type_button_click = {
+				if = {
+					limit				= { check_variable = { sell_private_electric_type_button_var = 0 } }
+					set_variable		= { sell_private_electric_type_button_var = 2 }
+				}
+				else = {
+					set_variable = { sell_private_electric_type_button_var = 0 }
 				}
 				calculate_private_electropower_supply_effect = yes
 			}
@@ -243,6 +269,9 @@ scripted_gui = {
 			}
 			electric_panel_main_ammeter_minus_strip_visible = {
 				check_variable = { electric_power_percent_var < 1 }
+			}
+			sell_private_electric_type_button_click_enabled = {
+				check_variable = { var = electric_power_total_generation_var value = modifier@num_use_electric_power_private compare = greater_than_or_equals }
 			}
 		}
 		ai_enabled = {

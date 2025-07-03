@@ -829,6 +829,20 @@ defined_text = {		# CUSTOM sell_private_electric_button TEXT
 	}
 }
 
+defined_text = {		# CUSTOM sell_private_electric_type_button TEXT
+    name = get_sell_private_electric_type_button_status
+    
+	text = {
+		trigger = {
+			check_variable = { sell_private_electric_type_button_var = 2 }
+		}
+		localization_key = "SELL_PRIVATE_ELECTRIC_TYPE_BUTTON_STATUS_ALL"
+	}
+	text = {
+		localization_key = "SELL_PRIVATE_ELECTRIC_TYPE_BUTTON_STATUS_SURPLUSES"
+	}
+}
+
 defined_text = {		# CUSTOM sell_private_electric_icon IMAGE
     name = get_sell_private_electric_icon
     

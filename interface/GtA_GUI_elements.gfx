@@ -115,6 +115,11 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
+		name = "GFX_electro_toggle_switch_icon"
+		texturefile = "gfx/interface/GUI/electric_panel/electro_toggle_switch_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
 		name = "GFX_sell_private_electric_icon_1"
 		texturefile = "gfx/interface/GUI/electric_panel/sell_private_electric_icon_1.dds"
 	}
