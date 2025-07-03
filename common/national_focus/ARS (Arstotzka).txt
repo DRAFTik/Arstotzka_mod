@@ -257,7 +257,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = ARS_glory_of_old1
-			add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
+			add_popularity = { ideology = national_populist popularity = 0.1 }
 		}
 	}
 	
@@ -276,7 +276,7 @@ focus_tree = {
 				remove_idea = ARS_glory_of_old1
 				add_idea = ARS_glory_of_old2
 			}
-			add_popularity = { ideology = paternal_autocrat popularity = 0.15 }
+			add_popularity = { ideology = national_populist popularity = 0.15 }
 		}
 	}
 	
@@ -296,7 +296,7 @@ focus_tree = {
 				add_idea = ARS_glory_of_old3
 			}
 			set_politics = {
-				ruling_party = paternal_autocrat
+				ruling_party = national_populist
 				elections_allowed = no
 			}
 		}

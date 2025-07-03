@@ -430,18 +430,6 @@ ideas = {
 			}
 		}
 
-		paternal_autocrat_influence = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea paternal_autocrat_influence" }
-			picture = generic_fascism_drift_bonus
-			allowed_civil_war = {
-				has_government = paternal_autocrat
-			}
-			modifier = {
-				paternal_autocrat_drift = 0.1
-				paternal_autocrat_acceptance = 85
-			}
-		}
-
 		national_populist_influence = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea national_populist_influence" }
 			picture = generic_fascism_drift_bonus

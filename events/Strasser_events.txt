@@ -111,7 +111,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = strasser.6.a
-		add_popularity = { ideology = paternal_autocrat popularity = 0.15 }
+		add_popularity = { ideology = national_populist popularity = 0.15 }
 	}
 	option = {
 		name = strasser.6.b

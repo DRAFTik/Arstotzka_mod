@@ -414,7 +414,7 @@ ideas = {
 			picture = generic_morale_bonus
 			
 			modifier = {
-				paternal_autocrat_drift = 0.1
+				national_populist_drift = 0.1
 				stability_factor = -0.1
 				war_support_factor = -0.1
 				drift_defence_factor = -0.25
@@ -435,7 +435,7 @@ ideas = {
 			picture = generic_morale_bonus
 			
 			modifier = {
-				paternal_autocrat_drift = 0.25
+				national_populist_drift = 0.25
 				stability_factor = -0.2
 				war_support_factor = -0.3
 				drift_defence_factor = -0.5
@@ -459,7 +459,7 @@ ideas = {
 			picture = generic_morale_bonus
 			
 			modifier = {
-				paternal_autocrat_drift = 0.1
+				national_populist_drift = 0.1
 				stability_factor = 0.1
 				political_power_gain = 1.0
 				consumer_goods_factor = 0.1
@@ -480,7 +480,7 @@ ideas = {
 			picture = generic_morale_bonus
 			
 			modifier = {
-				paternal_autocrat_drift = 0.1
+				national_populist_drift = 0.1
 				stability_factor = 0.1
 				political_power_gain = 1.0
 				consumer_goods_factor = 0.1
