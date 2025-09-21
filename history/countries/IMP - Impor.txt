@@ -63,8 +63,6 @@ if = {
 		basic_submarine_snorkel = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 	}
 	else = {
 		set_technology = {
@@ -97,15 +95,19 @@ recruit_character = IMP_naoki_takano
 
 
 set_politics = {
-	ruling_party = market_liberal
+	ruling_party = patrimonialist
 }
 set_popularities = {
-	totalist				= 0
-	syndicalist				= 4
-	market_liberal			= 48
-	mysticist				= 0
-	authoritarian_democrat	= 34
-	national_populist		= 14
+	totalist					= 0
+	syndicalist					= 0
+	communitarianist			= 5
+	market_liberal				= 17
+	social_conservative			= 20
+	stratocratic_apologetism	= 5
+	patrimonialist				= 39
+	national_populist			= 14
+	national_radicalist			= 0
+	mysticist					= 0
 }
 
 give_market_access = UNF

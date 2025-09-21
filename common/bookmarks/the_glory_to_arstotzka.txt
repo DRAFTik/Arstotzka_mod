@@ -10,7 +10,7 @@ bookmarks = {
 		
 		"OBR" = {
 			history = "OBR_GATHERING_STORM_DESC"
-			ideology = authoritarian_democrat
+			ideology = social_conservative
 			ideas = {
 			}
 			focuses = {
@@ -26,7 +26,7 @@ bookmarks = {
 		}
 		"REP" = {
 			history = "REP_GATHERING_STORM_DESC"
-			ideology = authoritarian_democrat
+			ideology = patrimonialist
 			ideas = {
 			}
 			focuses = {
@@ -42,7 +42,7 @@ bookmarks = {
 		}
 		"KOL" = {
 			history = "KOL_GATHERING_STORM_DESC"
-			ideology = authoritarian_democrat
+			ideology = stratocratic_apologetism
 			ideas = {
 			}
 			focuses = {
@@ -50,7 +50,7 @@ bookmarks = {
 		}
 		"IMP" = {
 			history = "IMP_GATHERING_STORM_DESC"
-			ideology = market_liberal
+			ideology = patrimonialist
 			ideas = {
 			}
 			focuses = {
@@ -78,7 +78,7 @@ bookmarks = {
 		"SKO"={
 			minor = yes
 			history = "SKO_GATHERING_STORM_DESC"
-			ideology = market_liberal
+			ideology = patrimonialist
 			ideas = {
 			}
 			focuses = {
@@ -88,7 +88,7 @@ bookmarks = {
 		"SEM"={
 			minor = yes
 			history = "SEM_GATHERING_STORM_DESC"
-			ideology = authoritarian_democrat
+			ideology = social_conservative
 			ideas = {
 			}
 			focuses = {

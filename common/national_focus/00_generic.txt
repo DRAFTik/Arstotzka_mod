@@ -26,7 +26,7 @@ focus_tree = {
 		y = 0
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_army_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_army_effort"
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = generic_army_effort
@@ -49,7 +49,7 @@ focus_tree = {
 
 		prerequisite = { focus = generic_army_effort }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_equipment_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_equipment_effort"
 			add_tech_bonus = {
 				name = generic_equipment_effort
 				bonus = 1
@@ -73,7 +73,7 @@ focus_tree = {
 		prerequisite = { focus = generic_army_effort }
 		bypass = { has_tech = motorised_infantry }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_motorization_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_motorization_effort"
 			add_tech_bonus = {
 				name = generic_motorization_effort
 				bonus = 1
@@ -95,7 +95,7 @@ focus_tree = {
 
 		prerequisite = { focus = generic_army_effort }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_doctrine_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_doctrine_effort"
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = generic_doctrine_effort
@@ -118,7 +118,7 @@ focus_tree = {
 
 		prerequisite = { focus = generic_equipment_effort }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_equipment_effort_2"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_equipment_effort_2"
 			add_tech_bonus = {
 				name = generic_equipment_effort_2
 				bonus = 1
@@ -141,7 +141,7 @@ focus_tree = {
 
 		prerequisite = { focus = generic_motorization_effort }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_mechanization_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_mechanization_effort"
 			add_tech_bonus = {
 				name = generic_mechanization_effort
 				ahead_reduction = 2
@@ -163,7 +163,7 @@ focus_tree = {
 
 		prerequisite = { focus = generic_doctrine_effort }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_doctrine_effort_2"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_doctrine_effort_2"
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = generic_doctrine_effort_2
@@ -186,7 +186,7 @@ focus_tree = {
 
 		prerequisite = { focus = generic_equipment_effort_2 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_equipment_effort_3"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_equipment_effort_3"
 			add_tech_bonus = {
 				name = generic_equipment_effort_3
 				bonus = 1
@@ -209,7 +209,7 @@ focus_tree = {
 
 		prerequisite = { focus = generic_mechanization_effort }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_armor_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_armor_effort"
 			add_tech_bonus = {
 				name = generic_armor_effort
 				bonus = 1
@@ -233,7 +233,7 @@ focus_tree = {
 		prerequisite = { focus = generic_doctrine_effort_2 }
 		prerequisite = { focus = generic_armor_effort }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_special_forces"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_special_forces"
 			add_tech_bonus = {
 				name = generic_special_forces
 				bonus = 1
@@ -255,7 +255,7 @@ focus_tree = {
 		y = 0
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_aviation_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_aviation_effort"
 			air_experience = 25
 			if = {
 				limit = {
@@ -304,7 +304,7 @@ focus_tree = {
 		prerequisite = { focus = generic_aviation_effort }
 		mutually_exclusive = { focus = generic_bomber_focus }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_fighter_focus"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_fighter_focus"
 			add_tech_bonus = {
 				name = generic_fighter_focus
 				bonus = 1
@@ -328,7 +328,7 @@ focus_tree = {
 		prerequisite = { focus = generic_aviation_effort }
 		mutually_exclusive = { focus = generic_fighter_focus }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_bomber_focus"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_bomber_focus"
 			add_tech_bonus = {
 				name = generic_bomber_focus
 				bonus = 1
@@ -352,7 +352,7 @@ focus_tree = {
 		prerequisite = { focus = generic_bomber_focus focus = generic_fighter_focus }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_aviation_effort_2"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_aviation_effort_2"
 			air_experience = 25
 			if = {
 				limit = {
@@ -401,7 +401,7 @@ focus_tree = {
 		prerequisite = { focus = generic_aviation_effort_2 }
 		prerequisite = { focus = generic_motorization_effort }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_CAS_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_CAS_effort"
 			add_tech_bonus = {
 				name = generic_CAS_effort
 				bonus = 1
@@ -424,7 +424,7 @@ focus_tree = {
 		prerequisite = { focus = generic_aviation_effort_2 }
 		prerequisite = { focus = generic_infrastructure_effort }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_rocket_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_rocket_effort"
 			add_tech_bonus = {
 				name = generic_rocket_effort
 				bonus = 1
@@ -456,7 +456,7 @@ focus_tree = {
 		prerequisite = { focus = generic_aviation_effort_2 }
 		prerequisite = { focus = generic_flexible_navy }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_NAV_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_NAV_effort"
 			add_tech_bonus = {
 				name = generic_NAV_effort
 				bonus = 1
@@ -485,7 +485,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_naval_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_naval_effort"
 			navy_experience = 25
 			if = {
 				limit = {
@@ -572,7 +572,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_flexible_navy"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_flexible_navy"
 			add_doctrine_cost_reduction = {
 				name = generic_flexible_navy
 				cost_reduction = 0.5
@@ -609,7 +609,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_large_navy"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_large_navy"
 			add_doctrine_cost_reduction = {
 				name = generic_large_navy
 				cost_reduction = 0.5
@@ -645,7 +645,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_submarine_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_submarine_effort"
 			add_tech_bonus = {
 				name = generic_submarine_effort
 				bonus = 1
@@ -681,7 +681,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_cruiser_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_cruiser_effort"
 			add_tech_bonus = {
 				name = generic_cruiser_effort
 				bonus = 1
@@ -718,7 +718,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_destroyer_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_destroyer_effort"
 			add_tech_bonus = {
 				name = generic_destroyer_effort
 				bonus = 1
@@ -754,7 +754,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_capital_ships_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_capital_ships_effort"
 			navy_experience = 25
 			add_tech_bonus = {
 				name = generic_capital_ships_effort
@@ -789,7 +789,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_industrial_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_industrial_effort"
 			add_tech_bonus = {
 				name = generic_industrial_effort
 				bonus = 1
@@ -829,7 +829,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_construction_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_construction_effort"
 			add_one_random_civilian_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -862,7 +862,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_production_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_production_effort"
 			add_one_random_military_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -895,7 +895,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_construction_effort_2"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_construction_effort_2"
 			add_one_random_civilian_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -928,7 +928,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_production_effort_2"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_production_effort_2"
 			add_one_random_military_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -957,7 +957,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_infrastructure_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_infrastructure_effort"
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
@@ -1015,7 +1015,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_production_effort_3"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_production_effort_3"
 			add_one_random_military_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1044,7 +1044,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_infrastructure_effort_2"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_infrastructure_effort_2"
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
@@ -1102,7 +1102,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_construction_effort_3"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_construction_effort_3"
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
@@ -1132,7 +1132,7 @@ focus_tree = {
 
 		prerequisite = { focus = generic_infrastructure_effort_2 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_extra_tech_slot"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_extra_tech_slot"
 			add_research_slot_until_five = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1153,7 +1153,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_extra_tech_slot_2"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_extra_tech_slot_2"
 			add_research_slot_until_five = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1173,7 +1173,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_political_effort"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_political_effort"
 
 			add_political_power = 200
 		}
@@ -1195,7 +1195,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_collectivist_ethos_kr"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_collectivist_ethos_kr"
 
 			add_stability = 0.05
 		}
@@ -1221,7 +1221,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_liberty_ethos_kr"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_liberty_ethos_kr"
 
 			add_ideas = generic_liberty_idea
 		}
@@ -1242,7 +1242,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_militarism"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_militarism"
 
 			add_ideas = generic_militarism_focus
 
@@ -1265,7 +1265,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_military_youth"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_military_youth"
 
 			add_ideas = generic_military_youth_focus
 		}
@@ -1286,7 +1286,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_ideological_fanaticism"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_ideological_fanaticism"
 
 			add_ideas = generic_ideological_fanaticism_focus
 		}
@@ -1308,7 +1308,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_rights_of_man"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_rights_of_man"
 
 			add_political_power = 200
 		}
@@ -1330,7 +1330,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_liberty_research"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_liberty_research"
 
 			add_ideas = generic_liberty_research_idea
 		}
@@ -1352,7 +1352,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_welfare"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_welfare"
 
 			add_ideas = generic_welfare_idea
 		}
@@ -1374,7 +1374,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_national_identity"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_national_identity"
 
 			add_stability = 0.05
 		}
@@ -1411,7 +1411,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_technology_sharing"
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Focus generic_technology_sharing"
 			if = {
 				limit = { original_research_slots < 3 }
 				add_research_slot_until_five = yes

@@ -1,0 +1,338 @@
+ALL_KOL_tags_prepare_civil_war_front = {
+	allowed = {
+		OR = {
+			tag = KOL
+			tag = ESA
+			tag = MLS
+			tag = WGF
+			tag = EOL
+		}
+	}
+	enable = {
+		has_global_flag = KOL_civil_war_pause_flag
+		NOT = { has_global_flag = KOL_civil_war_over_flag }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = ESA
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = MLS
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = WGF
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = EOL
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = no
+	}
+}
+
+KOL_attack_civil_war_front = {
+	allowed = {
+		tag = KOL
+	}
+	enable = {
+		NOT = { has_global_flag = KOL_civil_war_pause_flag }
+		NOT = { has_global_flag = KOL_civil_war_over_flag }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = ignore_army_incompetence
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = front_control
+		tag = ESA
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = MLS
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = WGF
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = EOL
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+}
+
+ESA_attack_civil_war_front = {
+	allowed = {
+		tag = ESA
+	}
+	enable = {
+		NOT = { has_global_flag = KOL_civil_war_pause_flag }
+		NOT = { has_global_flag = KOL_civil_war_over_flag }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = ignore_army_incompetence
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = front_control
+		tag = KOL
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = MLS
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = WGF
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = EOL
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+}
+
+MLS_attack_civil_war_front = {
+	allowed = {
+		tag = MLS
+	}
+	enable = {
+		NOT = { has_global_flag = KOL_civil_war_pause_flag }
+		NOT = { has_global_flag = KOL_civil_war_over_flag }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = ignore_army_incompetence
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = front_control
+		tag = KOL
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = ESA
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = WGF
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = EOL
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+}
+
+WGF_attack_civil_war_front = {
+	allowed = {
+		tag = WGF
+	}
+	enable = {
+		NOT = { has_global_flag = KOL_civil_war_pause_flag }
+		NOT = { has_global_flag = KOL_civil_war_over_flag }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = ignore_army_incompetence
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = front_control
+		tag = KOL
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = ESA
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = MLS
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = EOL
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+}
+
+EOL_attack_civil_war_front = {
+	allowed = {
+		tag = EOL
+	}
+	enable = {
+		NOT = { has_global_flag = KOL_civil_war_pause_flag }
+		NOT = { has_global_flag = KOL_civil_war_over_flag }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = ignore_army_incompetence
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = KOL
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = ESA
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = MLS
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = WGF
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+}

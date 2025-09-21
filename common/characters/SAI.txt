@@ -29,7 +29,7 @@ characters={
 		}
 		country_leader={
 			desc="POLITICS_SAI_LEADER_DESC"
-			ideology=authoritarian_democrat_subtype
+			ideology=stratocratic_apologetism_subtype
 			traits={ we_are_modders }
 			expire="1965.1.1.1"
 			id=-1

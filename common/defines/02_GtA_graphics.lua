@@ -43,3 +43,7 @@ NDefines_Graphics.NGraphics.COMMANDGROUP_PRESET_COLORS_HSV = {
 	260.0/360.0, 0.5, 0.85,		--purple
 	330.0/360.0, 0, 0.75,		--white
 }
+
+
+NDefines_Graphics.NGraphics.POLITICAL_GRID_SMALL_BOX_LIMIT = 16		-- 6		-- Limit for gridbox in political view before it will be replaced with extended gridbox
+--NDefines_Graphics.NGraphics.SETUP_SPIRIT_GRID_BOX_LIMIT = 2		-- 3		-- Limit for gridbox in game setup before it will be replaced with extended gridbox

@@ -156,7 +156,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ARS_ezic_rises1
-			add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
+			add_popularity = { ideology = stratocratic_apologetism popularity = 0.1 }
 		}	
 	}
 	
@@ -179,7 +179,7 @@ focus_tree = {
 				remove_idea = ARS_ezic_rises1
 				add_idea = ARS_ezic_rises2
 			}
-			add_popularity = { ideology = authoritarian_democrat popularity = 0.2 }
+			add_popularity = { ideology = stratocratic_apologetism popularity = 0.2 }
 		}
 	}
 	
@@ -203,7 +203,7 @@ focus_tree = {
 				remove_idea = ARS_ezic_rises2
 				add_idea = ARS_ezic_triumphant
 			}
-			set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes }	
+			set_politics = { ruling_party = stratocratic_apologetism elections_allowed = yes }	
 		}
 	}
 	

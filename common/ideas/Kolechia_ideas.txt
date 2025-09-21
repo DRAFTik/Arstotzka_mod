@@ -1,0 +1,20 @@
+ideas = {
+
+	country = {
+		KOL_CW_idea = {
+			on_add = { log = "[GetLogRoot]: add idea KOL_CW_idea" }
+			picture = FRA_national_mobilization_focus
+			allowed = { always = no }
+			available = {
+				has_global_flag = KOL_civil_war_begun_flag
+				NOT = { has_global_flag = KOL_civil_war_over_flag }
+			}
+			modifier = {
+				war_support_factor = 0.20
+				no_supply_grace = 168
+				compliance_growth_on_our_occupied_states = -0.25
+				resistance_target_on_our_occupied_states = 0.2
+			}
+		}
+	}
+}

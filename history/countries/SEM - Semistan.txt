@@ -56,8 +56,6 @@ if = {
 		basic_submarine_snorkel = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 	}
 	else = {
 		set_technology = {
@@ -90,15 +88,19 @@ add_ideas = {
 recruit_character = SEM_leo_rush
 
 set_politics = {
-	ruling_party = authoritarian_democrat
+	ruling_party = social_conservative
 }
 set_popularities = {
-	totalist				= 5
-	syndicalist				= 12
-	market_liberal			= 44
-	mysticist				= 0
-	authoritarian_democrat	= 35
-	national_populist		= 4
+	totalist					= 2
+	syndicalist					= 12
+	communitarianist			= 3
+	market_liberal				= 32
+	social_conservative			= 30
+	stratocratic_apologetism	= 12
+	patrimonialist				= 0
+	national_populist			= 9
+	national_radicalist			= 0
+	mysticist					= 0
 }
 
 give_guarantee = OBR

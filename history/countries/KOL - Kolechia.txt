@@ -58,8 +58,6 @@ if = {
 		basic_submarine_snorkel = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 	}
 	else = {
 		set_technology = {
@@ -78,7 +76,7 @@ set_stability = 0.5
 set_war_support = 0.5
 set_convoys = 5
 
-starting_train_buffer = 0.25
+starting_train_buffer = 2
 set_fuel_ratio = 0.1
 starting_truck_buffer = 0.5
 
@@ -95,15 +93,19 @@ recruit_character = KOL_kordon_kallo
 
 
 set_politics = {
-	ruling_party = authoritarian_democrat
+	ruling_party = stratocratic_apologetism
 }
 set_popularities = {
-	totalist				= 5
-	syndicalist				= 24
-	market_liberal			= 11
-	mysticist				= 0
-	authoritarian_democrat	= 39
-	national_populist		= 21
+	totalist					= 5
+	syndicalist					= 13
+	communitarianist			= 7
+	market_liberal				= 9
+	social_conservative			= 6
+	stratocratic_apologetism	= 37
+	patrimonialist				= 5
+	national_populist			= 15
+	national_radicalist			= 3
+	mysticist					= 0
 }
 
 172 = { set_demilitarized_zone = yes }

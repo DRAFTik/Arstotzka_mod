@@ -1,0 +1,31 @@
+﻿l_russian:
+ ESA_KCW: "Восточный Стальной Альянс"
+ ESA_KCW_DEF: "Восточный Стальной Альянс"
+ ESA_KCW_ADJ: "Альянск."
+ 
+ MLS_KCW: "Морская Лига Юга"
+ MLS_KCW_DEF: "Морская Лига Юга"
+ MLS_KCW_ADJ: "Лигск."
+ 
+ KOL_KCW: "Союз Верных Земель"
+ KOL_KCW_DEF: "Союз Верных Земель"
+ KOL_KCW_ADJ: "Колечианск."
+ 
+ WGF_KCW: "Западно-Грештинская Федерация"
+ WGF_KCW_DEF: "Западно-Грештинская Федерация"
+ WGF_KCW_ADJ: "Грештинск."
+ 
+ EOL_KCW: "Восточные Наблюдаемые Земли"
+ EOL_KCW_DEF: "Восточные Наблюдаемые Земли"
+ EOL_KCW_ADJ: "Контегрск."
+ 
+ 
+ 
+ EMPIRE_GREAT_LAKE: "Империя Великого Озера"
+ EMPIRE_GREAT_LAKE_DEF: "Империя Великого Озера"
+ EMPIRE_GREAT_LAKE_ADJ: "Озёрск."
+ 
+ IMPERIAL_PERIMETER_ORDER: "Имперские Опорные Рубежи"
+ IMPERIAL_PERIMETER_ORDER_DEF: "Имперские Опорные Рубежи"
+ IMPERIAL_PERIMETER_ORDER_ADJ: "$IMP_ADJ$"
+ 

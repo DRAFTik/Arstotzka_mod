@@ -53,7 +53,17 @@ continent = {
 				"gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
 			}
 		}
+		communitarianist = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
 		market_liberal = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
+			}
+		}
+		social_conservative = {
 			male = {
 				"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
 			}
@@ -63,12 +73,22 @@ continent = {
 				"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
 			}
 		}
-		authoritarian_democrat = {
+		stratocratic_apologetism = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+			}
+		}
+		patrimonialist = {
 			male = {
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
 			}
 		}
 		national_populist = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+			}
+		}
+		national_radicalist = {
 			male = {
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
 			}

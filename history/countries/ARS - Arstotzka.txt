@@ -63,8 +63,6 @@ if = {
 		basic_submarine_snorkel = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 	}
 	else = {
 		set_technology = {
@@ -82,7 +80,7 @@ set_stability = 0.5
 set_war_support = 0.5
 set_convoys = 5
 
-starting_train_buffer = 0.5
+starting_train_buffer = 1.5
 set_fuel_ratio = 0.3
 starting_truck_buffer = 1.3
 
@@ -102,12 +100,16 @@ set_politics = {
 	ruling_party = totalist
 }
 set_popularities = {
-	totalist				= 44
-	syndicalist				= 33
-	market_liberal			= 17
-	mysticist				= 0
-	authoritarian_democrat	= 6
-	national_populist		= 0
+	totalist					= 39
+	syndicalist					= 22
+	communitarianist			= 20
+	market_liberal				= 10
+	social_conservative			= 3
+	stratocratic_apologetism	= 6
+	patrimonialist				= 0
+	national_populist			= 0
+	national_radicalist			= 0
+	mysticist					= 0
 }
 
 171 = { set_demilitarized_zone = yes }

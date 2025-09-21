@@ -1,0 +1,28 @@
+﻿l_russian:
+  
+### EVENTS ###
+    kolechia_CW.1.t: "ГВ!"
+    kolechia_CW.1.desc: "РЕЗНЯ?"
+    kolechia_CW.1.a: "РЕЗНЯ!"
+
+
+
+### IDEAS ###
+    KOL_CW_idea: "Мы сражаемся"
+    
+    
+   
+### DECISIONS ###   
+    KCW_foreign_volunteer_decisions_categories: "Гражданская война в Колечии"
+    KCW_foreign_volunteer_decisions_categories_desc: "DESC"
+    KCW_support_FROM_dec: "Поддержать §H[From.GetName]§!"
+    KCW_civil_war_decisions_categories: "$KCW_foreign_volunteer_decisions_categories$"
+    KCW_civil_war_decisions_categories_desc: "DESC"
+    KCW_recruit_in_state: "Рекрутировать население в регионе §H[From.GetName]§!"
+    KCW_recruitment_tooltip: "Доступно для рекрутирования"
+    KCW_recruit_units: "будет рекрутировано §H[?units_to_spawn|0]§! отрядов.\n"
+    KCW_is_recruiting: "Рекрутирует в другом регионе"
+
+
+
+### OTHER ###

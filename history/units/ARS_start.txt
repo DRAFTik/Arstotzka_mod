@@ -325,7 +325,7 @@ units = {
 		name = "1st Arstotzkian Guards Armor Brigade regiment"
 		location = 1364
 		division_template = "Guards Armor Brigade"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.6
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
@@ -334,7 +334,7 @@ units = {
 		name = "2nd Arstotzkian Guards Armor Brigade regiment"
 		location = 1364
 		division_template = "Guards Armor Brigade"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.6
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
@@ -343,7 +343,7 @@ units = {
 		name = "3rd Arstotzkian Guards Armor Brigade regiment"
 		location = 784
 		division_template = "Guards Armor Brigade"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.6
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
@@ -352,7 +352,7 @@ units = {
 		name = "4th Arstotzkian Guards Armor Brigade regiment"
 		location = 784
 		division_template = "Guards Armor Brigade"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.6
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}

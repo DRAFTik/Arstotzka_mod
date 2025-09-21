@@ -1,0 +1,321 @@
+create_KOL_template = {
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = { has_template = "Kolechian Artillery Brigade" }
+			}
+			division_template = {
+				name = "Kolechian Artillery Brigade"
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					artillery_brigade = { x = 1 y = 0 }
+					artillery_brigade = { x = 1 y = 1 }
+					artillery_brigade = { x = 1 y = 2 }
+					artillery_brigade = { x = 1 y = 3 }
+					artillery_brigade = { x = 1 y = 4 }
+				}
+				
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+				
+				priority = 2
+			}
+		}
+	}
+}
+
+create_ESA_militia_template = {
+	create_KOL_template = yes
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = { has_template = "Miners Militia" }
+			}
+			division_template = {
+				name = "Miners Militia"
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 0 y = 3 }
+				}
+				priority = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_template = "Miners Stormtroopers" }
+			}
+			division_template = {
+				name = "Miners Stormtroopers"
+				regiments = {
+					mountaineers = { x = 0 y = 0 }
+					mountaineers = { x = 0 y = 1 }
+					mountaineers = { x = 0 y = 2 }
+				}
+				priority = 2
+			}
+		}
+	}
+}
+create_MLS_militia_template = {
+	create_KOL_template = yes
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = { has_template = "Dockers Militia" }
+			}
+			division_template = {
+				name = "Dockers Militia"
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 0 y = 3 }
+				}
+				priority = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_template = "Dockers Stormtroopers" }
+			}
+			division_template = {
+				name = "Dockers Stormtroopers"
+				regiments = {
+					marine = { x = 0 y = 0 }
+					marine = { x = 0 y = 1 }
+					marine = { x = 0 y = 2 }
+				}
+				priority = 2
+			}
+		}
+	}
+}
+create_WGF_militia_template = {
+	create_KOL_template = yes
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = { has_template = "Greshtin Militia" }
+			}
+			division_template = {
+				name = "Greshtin Militia"
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 0 y = 3 }
+				}
+				priority = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_template = "Greshtin Stormtroopers" }
+			}
+			division_template = {
+				name = "Greshtin Stormtroopers"
+				regiments = {
+					paratrooper = { x = 0 y = 0 }
+					paratrooper = { x = 0 y = 1 }
+					paratrooper = { x = 0 y = 2 }
+				}
+				priority = 2
+			}
+		}
+	}
+}
+create_EOL_militia_template = {
+	create_KOL_template = yes
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = { has_template = "Kontegria Militia" }
+			}
+			division_template = {
+				name = "Kontegria Militia"
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 0 y = 3 }
+				}
+				priority = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_template = "Kontegria Stormtroopers" }
+			}
+			division_template = {
+				name = "Kontegria Stormtroopers"
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 0 y = 2 }
+				}
+				priority = 2
+			}
+		}
+	}
+}
+
+
+KCW_spawn_militia_divisions = {
+	# lock out the state for further recruitment
+	set_state_flag = KCW_recruited_militias
+
+	### calculate number of units to spawn
+	set_temp_variable = { units_to_spawn = state_population_k }
+	divide_temp_variable = { units_to_spawn = 500 }
+
+	### failsafe so at least one unit is always spawned
+	clamp_temp_variable = { var = units_to_spawn min = 1 max = 50 }
+
+	### if core, get twice the units
+	if = {
+		limit = { is_core_of = ROOT }
+		multiply_temp_variable = { units_to_spawn = 2 }
+	}
+	round_temp_variable = units_to_spawn
+
+	### tooltip
+	custom_effect_tooltip = KCW_recruit_units
+
+
+	### spawn normal militias
+	set_temp_variable = { counter = 1 }
+	if = {
+		limit = {
+			check_variable = { var = units_to_spawn value = 1 compare = greater_than_or_equals }
+		}
+		for_loop_effect = {
+			start = 1
+			end = units_to_spawn
+			compare = less_than_or_equals
+			
+			if = {
+				limit = { ROOT = { tag = KOL } }
+				if = {
+					limit = {
+						NOT = { has_template = "National Militia" }
+					}
+					division_template = {
+						name = "National Militia"
+						regiments = {
+							militia = { x = 0 y = 0 }
+							militia = { x = 0 y = 1 }
+							militia = { x = 0 y = 2 }
+							militia = { x = 0 y = 3 }
+						}
+						priority = 0
+					}
+				}
+				create_unit = {
+					division = "division_template = \"National Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+					allow_spawning_on_enemy_provs = yes
+					owner = ROOT
+				}
+			}
+			else_if = {
+				limit = { ROOT = { tag = ESA } }
+				if = {
+					limit = {
+						NOT = { has_template = "Miners Militia" }
+					}
+					division_template = {
+						name = "Miners Militia"
+						regiments = {
+							militia = { x = 0 y = 0 }
+							militia = { x = 0 y = 1 }
+							militia = { x = 0 y = 2 }
+							militia = { x = 0 y = 3 }
+						}
+						priority = 0
+					}
+				}
+				create_unit = {
+					division = "division_template = \"Miners Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+					allow_spawning_on_enemy_provs = yes
+					owner = ROOT
+				}
+			}
+			else_if = {
+				limit = { ROOT = { tag = MLS } }
+				if = {
+					limit = {
+						NOT = { has_template = "Dockers Militia" }
+					}
+					division_template = {
+						name = "Dockers Militia"
+						regiments = {
+							militia = { x = 0 y = 0 }
+							militia = { x = 0 y = 1 }
+							militia = { x = 0 y = 2 }
+							militia = { x = 0 y = 3 }
+						}
+						priority = 0
+					}
+				}
+				create_unit = {
+					division = "division_template = \"Dockers Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+					allow_spawning_on_enemy_provs = yes
+					owner = ROOT
+				}
+			}
+			else_if = {
+				limit = { ROOT = { tag = WGF } }
+				if = {
+					limit = {
+						NOT = { has_template = "Greshtin Militia" }
+					}
+					division_template = {
+						name = "Greshtin Militia"
+						regiments = {
+							militia = { x = 0 y = 0 }
+							militia = { x = 0 y = 1 }
+							militia = { x = 0 y = 2 }
+							militia = { x = 0 y = 3 }
+						}
+						priority = 0
+					}
+				}
+				create_unit = {
+					division = "division_template = \"Greshtin Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+					allow_spawning_on_enemy_provs = yes
+					owner = ROOT
+				}
+			}
+			else_if = {
+				limit = { ROOT = { tag = EOL } }
+				if = {
+					limit = {
+						NOT = { has_template = "Kontegria Militia" }
+					}
+					division_template = {
+						name = "Kontegria Militia"
+						regiments = {
+							militia = { x = 0 y = 0 }
+							militia = { x = 0 y = 1 }
+							militia = { x = 0 y = 2 }
+							militia = { x = 0 y = 3 }
+						}
+						priority = 0
+					}
+				}
+				create_unit = {
+					division = "division_template = \"Kontegria Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+					allow_spawning_on_enemy_provs = yes
+					owner = ROOT
+				}
+			}
+			add_to_temp_variable = { counter = 1 }
+		}
+	}
+}

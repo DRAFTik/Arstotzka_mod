@@ -38,7 +38,7 @@ ideas = {
 				}
 			}
 
-			ai_will_do = { factor = 0 }
+			ai_will_do = { base = 0 }
 		}
 		
 		isolation = {
@@ -75,7 +75,7 @@ ideas = {
 				}
 			}
 
-			ai_will_do = { factor = 0 }
+			ai_will_do = { base = 0 }
 		}
 		
 		civilian_economy = {
@@ -104,7 +104,7 @@ ideas = {
 			default = yes
 			cancel_if_invalid = no
 
-			ai_will_do = { factor = 0 }
+			ai_will_do = { base = 0 }
 		}
 		
 		low_economic_mobilisation = {
@@ -131,7 +131,7 @@ ideas = {
 				consumption_of_provisions_modifier = 0.1
 			}
 
-			ai_will_do = { factor = 600 }
+			ai_will_do = { base = 100 }
 		}
 		
 		partial_economic_mobilisation = {
@@ -164,7 +164,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 700
+				base = 200
 				modifier = { #one step at a time
 					factor = 0
 					NOT = { has_idea = low_economic_mobilisation }
@@ -196,14 +196,14 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 60
+				base = 60
 				modifier = { #one step at a time
 					factor = 0
 					NOT = { has_idea = partial_economic_mobilisation }
 				}
 				modifier = {
-					factor = 20
-					manpower_per_military_factory > 3000
+					factor = 10
+					manpower_per_military_factory > 6000
 				}
 			}
 		}
@@ -234,7 +234,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 10
+				base = 10
 				modifier = { #one step at a time
 					factor = 0
 					NOT = { has_idea = war_economy }
@@ -314,7 +314,7 @@ ideas = {
 			}
 			
 			ai_will_do = {
-				factor = 0.5
+				base = 0.5
 				modifier = {
 					check_variable = { resource@steel > 0 }
 					add = resource@steel
@@ -367,7 +367,7 @@ ideas = {
 			default = yes
 			
 			ai_will_do = {
-				factor = 1
+				base = 1
 				modifier = {
 					check_variable = { resource_produced@steel > 0 }
 
@@ -440,7 +440,7 @@ ideas = {
 			
 
 			ai_will_do = {
-				factor = 1
+				base = 1
 				modifier = {
 					factor = 0
 					is_major = no #only majors should choose limited exports
@@ -522,7 +522,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 1
+				base = 1
 				modifier = {
 					factor = 0
 					is_major = no #only majors should choose limited exports

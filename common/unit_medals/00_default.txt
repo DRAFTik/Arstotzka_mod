@@ -30,8 +30,11 @@ unit_medals = {
 	
 	democratic_gallantry = {
 		
-		available = { 
-			has_government = market_liberal
+		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_conservative
+			}
 			should_have_any_unique_medals_trigger = no
 		}
 		frame = 1
@@ -52,7 +55,10 @@ unit_medals = {
 	democratic_honor = {
 		
 		available = { 
-			has_government = market_liberal
+			OR = {
+				has_government = market_liberal
+				has_government = social_conservative
+			}
 			should_have_any_unique_medals_trigger = no
 		}
 		frame = 2
@@ -73,7 +79,10 @@ unit_medals = {
 	democratic_war_cross = {
 		
 		available = { 
-			has_government = market_liberal
+			OR = {
+				has_government = market_liberal
+				has_government = social_conservative
+			}
 			should_have_any_unique_medals_trigger = no	
 		}
 		frame = 3
@@ -95,7 +104,10 @@ unit_medals = {
 	democratic_lion = {
 		
 		available = { 
-			has_government = market_liberal
+			OR = {
+				has_government = market_liberal
+				has_government = social_conservative
+			}
 			should_have_any_unique_medals_trigger = no
 		}
 		frame = 4
@@ -206,7 +218,7 @@ unit_medals = {
 	fascism_bravery = {
 		
 		available = { 
-			has_government = national_populist
+			is_fascism_ideology = yes
 			should_have_any_unique_medals_trigger = no
 		}
 		frame = 1
@@ -227,7 +239,7 @@ unit_medals = {
 	fascism_merit = {
 		
 		available = { 
-			has_government = national_populist
+			is_fascism_ideology = yes
 			should_have_any_unique_medals_trigger = no
 		}
 		frame = 2
@@ -248,7 +260,7 @@ unit_medals = {
 	fascism_order_brave = {
 		
 		available = { 
-			has_government = national_populist
+			is_fascism_ideology = yes
 			should_have_any_unique_medals_trigger = no
 		}
 		frame = 3
@@ -270,7 +282,7 @@ unit_medals = {
 	fascism_heroism = {
 		
 		available = { 
-			has_government = national_populist
+			is_fascism_ideology = yes
 			should_have_any_unique_medals_trigger = no
 		}
 		frame = 4

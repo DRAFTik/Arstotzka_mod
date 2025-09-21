@@ -347,6 +347,17 @@ ideas = {
 		}
 
 		### Drift ideas ###
+		totalist_influence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea totalist_influence" }
+			picture = generic_syndicalism_drift_bonus
+			allowed_civil_war = {
+				has_government = totalist
+			}
+			modifier = {
+				totalist_drift = 0.1
+				totalist_acceptance = 85
+			}
+		}
 		syndicalist_influence = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea syndicalist_influence" }
 			picture = generic_syndicalism_drift_bonus
@@ -358,15 +369,15 @@ ideas = {
 				syndicalist_acceptance = 85
 			}
 		}
-		totalist_influence = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea totalist_influence" }
+		communitarianist_influence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea communitarianist_influence" }
 			picture = generic_syndicalism_drift_bonus
 			allowed_civil_war = {
-				has_government = totalist
+				has_government = communitarianist
 			}
 			modifier = {
-				totalist_drift = 0.1
-				totalist_acceptance = 85
+				communitarianist_drift = 0.1
+				communitarianist_acceptance = 85
 			}
 		}
 
@@ -418,15 +429,27 @@ ideas = {
 			}
 		}
 
-		authoritarian_democrat_influence = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea authoritarian_democrat_influence" }
+		stratocratic_apologetism_influence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea stratocratic_apologetism_influence" }
 			picture = generic_democratic_drift_bonus
 			allowed_civil_war = {
-				has_government = authoritarian_democrat
+				has_government = stratocratic_apologetism
 			}
 			modifier = {
-				authoritarian_democrat_drift = 0.1
-				authoritarian_democrat_acceptance = 85
+				stratocratic_apologetism_drift = 0.1
+				stratocratic_apologetism_acceptance = 85
+			}
+		}
+
+		patrimonialist_influence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea patrimonialist_influence" }
+			picture = generic_fascism_drift_bonus
+			allowed_civil_war = {
+				has_government = patrimonialist
+			}
+			modifier = {
+				patrimonialist_drift = 0.1
+				patrimonialist_acceptance = 85
 			}
 		}
 
@@ -439,6 +462,18 @@ ideas = {
 			modifier = {
 				national_populist_drift = 0.1
 				national_populist_acceptance = 85
+			}
+		}
+
+		national_radicalist_influence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea national_radicalist_influence" }
+			picture = generic_fascism_drift_bonus
+			allowed_civil_war = {
+				has_government = national_radicalist
+			}
+			modifier = {
+				national_radicalist_drift = 0.1
+				national_radicalist_acceptance = 85
 			}
 		}
 

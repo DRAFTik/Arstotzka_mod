@@ -68,8 +68,6 @@ if = {
 		basic_light_battery = 1
 		basic_medium_battery = 1
 		basic_heavy_battery = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 	}
 	else = {
 		set_technology = {
@@ -105,7 +103,7 @@ set_stability = 0.5
 set_war_support = 0.5
 set_convoys = 5
 
-starting_train_buffer = 0.85
+starting_train_buffer = 2
 set_fuel_ratio = 0.8
 starting_truck_buffer = 2
 
@@ -125,12 +123,16 @@ set_politics = {
 	ruling_party = market_liberal
 }
 set_popularities = {
-	totalist				= 0
-	syndicalist				= 6
-	market_liberal			= 70
-	mysticist				= 0
-	authoritarian_democrat	= 21
-	national_populist		= 3
+	totalist					= 0
+	syndicalist					= 6
+	communitarianist			= 0
+	market_liberal				= 55
+	social_conservative			= 15
+	stratocratic_apologetism	= 21
+	patrimonialist				= 0
+	national_populist			= 3
+	national_radicalist			= 0
+	mysticist					= 0
 }
 
 diplomatic_relation = {

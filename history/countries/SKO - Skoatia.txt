@@ -56,8 +56,6 @@ if = {
 		basic_submarine_snorkel = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 	}
 	else = {
 		set_technology = {
@@ -91,15 +89,19 @@ add_ideas = {
 recruit_character = SKO_deon_kaffer
 
 set_politics = {
-	ruling_party = market_liberal
+	ruling_party = patrimonialist
 }
 set_popularities = {
-	totalist				= 0
-	syndicalist				= 5
-	market_liberal			= 62
-	mysticist				= 0
-	authoritarian_democrat	= 18
-	national_populist		= 15
+	totalist					= 0
+	syndicalist					= 0
+	communitarianist			= 5
+	market_liberal				= 13
+	social_conservative			= 17
+	stratocratic_apologetism	= 18
+	patrimonialist				= 32
+	national_populist			= 15
+	national_radicalist			= 0
+	mysticist					= 0
 }
 
 give_guarantee = SEM

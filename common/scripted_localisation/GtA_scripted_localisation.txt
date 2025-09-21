@@ -24,27 +24,51 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_government = communitarianist
+		}
+		localization_key = communitarianist_subtype_desc
+	}
+	text = {
+		trigger = {
 			has_government = market_liberal
 		}
 		localization_key = market_liberal_subtype_desc
 	}
 	text = {
 		trigger = {
-			has_government = mysticist
+			has_government = social_conservative
 		}
-		localization_key = mysticist_subtype_desc
+		localization_key = social_conservative_subtype_desc
 	}
 	text = {
 		trigger = {
-			has_government = authoritarian_democrat
+			has_government = stratocratic_apologetism
 		}
-		localization_key = authoritarian_democrat_subtype_desc
+		localization_key = stratocratic_apologetism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = patrimonialist
+		}
+		localization_key = patrimonialist_subtype_desc
 	}
 	text = {
 		trigger = {
 			has_government = national_populist
 		}
 		localization_key = national_populist_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = national_radicalist
+		}
+		localization_key = national_radicalist_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = mysticist
+		}
+		localization_key = mysticist_subtype_desc
 	}
 }
 

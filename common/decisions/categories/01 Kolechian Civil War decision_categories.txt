@@ -1,0 +1,67 @@
+KCW_foreign_volunteer_decisions_categories = {
+	icon = GFX_decision_category_military_operation
+	allowed = {
+		NOT = {
+			tag = KOL
+			tag = ESA
+			tag = MLS
+			tag = WGF
+			tag = EOL
+		}
+	}
+	visible = {
+		has_global_flag = KOL_civil_war_begun_flag
+		NOT = { has_global_flag = KOL_civil_war_over_flag }
+	}
+}
+KCW_civil_war_decisions_categories = {
+	icon = GFX_decision_category_military_operation
+	priority = 100
+
+	allowed = {
+		OR = {
+			tag = KOL
+			tag = ESA
+			tag = MLS
+			tag = WGF
+			tag = EOL
+		}
+	}
+
+	visible_when_empty = yes
+	visible = {
+		has_global_flag = KOL_civil_war_begun_flag
+		NOT = { has_global_flag = KOL_civil_war_over_flag }
+	}
+
+	on_map_area = {
+		name = KCW_recruitment_tooltip
+		zoom = 250
+
+		target_array = controlled_states
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 95
+					state = 144
+					state = 94
+					state = 92
+					state = 83
+					state = 82
+					state = 84
+					state = 172
+					state = 86
+					state = 91
+					state = 89
+					state = 88
+					state = 87
+					state = 85
+					state = 90
+					state = 96
+					state = 93
+				}
+				NOT = { has_state_flag = KCW_recruited_militias }
+			}
+		}
+	}
+}

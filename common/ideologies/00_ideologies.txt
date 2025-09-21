@@ -1,4 +1,9 @@
 ideologies = {
+
+##################################
+###    SOCIALIST IDEOLOGIES    ###
+##################################
+
 	totalist = {
 		types = {
 			totalist_subtype = {} #generic
@@ -12,6 +17,8 @@ ideologies = {
 			"FACTION_NAME_TOTALIST_6"
 		}
 		color = { 127 0 0 }
+		
+		## Rules (identical for each ideology)
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -21,16 +28,17 @@ ideologies = {
 		}
 		can_host_government_in_exile = no
 		can_collaborate = yes
+		
 		modifiers = {
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 7.5
-			navy_intel_to_others = 12.5
-			airforce_intel_to_others = 7.5
+			civilian_intel_to_others	= 10.0
+			army_intel_to_others		= 7.5
+			navy_intel_to_others		= 12.5
+			airforce_intel_to_others	= 7.5
 		}
+		
 		ai_communist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
-		
 		ai_give_core_state_control_threshold = 10 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
 
@@ -47,6 +55,8 @@ ideologies = {
 			"FACTION_NAME_SYNDICALIST_6"
 		}
 		color = { 255 0 0 }
+		
+		## Rules (identical for each ideology)
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -56,18 +66,63 @@ ideologies = {
 		}
 		can_host_government_in_exile = no
 		can_collaborate = yes
+		
 		modifiers = {
-			civilian_intel_to_others = 15.0
-			army_intel_to_others = 10.0
-			navy_intel_to_others = 10.0
-			airforce_intel_to_others = 10.0
+			civilian_intel_to_others	= 15.0
+			army_intel_to_others		= 10.0
+			navy_intel_to_others		= 10.0
+			airforce_intel_to_others	= 10.0
 		}
+		
 		ai_communist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
-		
-		ai_give_core_state_control_threshold = 10
+		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
+
+	communitarianist = {
+		types = {
+			communitarianist_subtype = {} #generic
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNITARIANIST_1"
+			"FACTION_NAME_COMMUNITARIANIST_2"
+			"FACTION_NAME_COMMUNITARIANIST_3"
+			"FACTION_NAME_COMMUNITARIANIST_4"
+			"FACTION_NAME_COMMUNITARIANIST_5"
+			"FACTION_NAME_COMMUNITARIANIST_6"
+		}
+		color = { 234 100 100 }
+		
+		## Rules (identical for each ideology)
+		rules = {
+			can_force_government = yes
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_host_government_in_exile = no
+		can_collaborate = yes
+		
+		modifiers = {
+			civilian_intel_to_others	= 20.0
+			army_intel_to_others		= 5.0
+			navy_intel_to_others		= 20.0
+			airforce_intel_to_others	= 5.0
+		}
+		
+		ai_communist = yes
+		war_impact_on_world_tension = 1
+		ai_ideology_wanted_units_factor = 1.5
+		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
+	}
+	
+	
+	
+###################################
+###    DEMOCRATIC IDEOLOGIES    ###
+###################################
 
 	market_liberal = {
 		types = {
@@ -81,7 +136,9 @@ ideologies = {
 			"FACTION_NAME_MARKET_LIBERAL_5"
 			"FACTION_NAME_MARKET_LIBERAL_6"
 		}
-		color = { 245 217 0 }
+		color = { 245 216 0 }
+		
+		## Rules (identical for each ideology)
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -91,32 +148,35 @@ ideologies = {
 		}
 		can_host_government_in_exile = no
 		can_collaborate = yes
+		
 		modifiers = {
-			civilian_intel_to_others = 20.0
-			army_intel_to_others = 5.0
-			navy_intel_to_others = 20.0
-			airforce_intel_to_others = 5
+			civilian_intel_to_others	= 20.0
+			army_intel_to_others		= 5.0
+			navy_intel_to_others		= 20.0
+			airforce_intel_to_others	= 5.0
 		}
+		
 		ai_fascist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
-		
-		ai_give_core_state_control_threshold = 0
+		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
 	
-	mysticist = {
+	social_conservative = {
 		types = {
-			mysticist_subtype = {}
+			social_conservative_subtype = {}
 		}
 		dynamic_faction_names = {
-			"FACTION_NAME_MYSTICIST_1"
-			"FACTION_NAME_MYSTICIST_2"
-			"FACTION_NAME_MYSTICIST_3"
-			"FACTION_NAME_MYSTICIST_4"
-			"FACTION_NAME_MYSTICIST_5"
-			"FACTION_NAME_MYSTICIST_6"
+			"FACTION_NAME_SOCIAL_CONSERVATIVE_1"
+			"FACTION_NAME_SOCIAL_CONSERVATIVE_2"
+			"FACTION_NAME_SOCIAL_CONSERVATIVE_3"
+			"FACTION_NAME_SOCIAL_CONSERVATIVE_4"
+			"FACTION_NAME_SOCIAL_CONSERVATIVE_5"
+			"FACTION_NAME_SOCIAL_CONSERVATIVE_6"
 		}
-		color = { 0 95 55 }
+		color = { 0 80 130 }
+		
+		## Rules (identical for each ideology)
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -126,32 +186,40 @@ ideologies = {
 		}
 		can_host_government_in_exile = no
 		can_collaborate = yes
+
 		modifiers = {
-			civilian_intel_to_others = 15.0
-			army_intel_to_others = 10.0
-			navy_intel_to_others = 10.0
-			airforce_intel_to_others = 10.0
+			civilian_intel_to_others	= 20.0
+			army_intel_to_others		= 5.0
+			navy_intel_to_others		= 20.0
+			airforce_intel_to_others	= 5.0
 		}
+		
 		ai_fascist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
-		
-		ai_give_core_state_control_threshold = 0
+		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
+	
+	
+##################################
+###  AUTHORITARIAN IDEOLOGIES  ###
+##################################
 
-	authoritarian_democrat = {
+	stratocratic_apologetism = {
 		types = {
-			authoritarian_democrat_subtype = {}
+			stratocratic_apologetism_subtype = {}
 		}
 		dynamic_faction_names = {
-			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_1"
-			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_2"
-			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_3"
-			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_4"
-			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_5"
-			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_6"
+			"FACTION_NAME_STRATOCRATIC_APOLOGETISM_1"
+			"FACTION_NAME_STRATOCRATIC_APOLOGETISM_2"
+			"FACTION_NAME_STRATOCRATIC_APOLOGETISM_3"
+			"FACTION_NAME_STRATOCRATIC_APOLOGETISM_4"
+			"FACTION_NAME_STRATOCRATIC_APOLOGETISM_5"
+			"FACTION_NAME_STRATOCRATIC_APOLOGETISM_6"
 		}
 		color = { 110 110 110 }
+		
+		## Rules (identical for each ideology)
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -161,17 +229,56 @@ ideologies = {
 		}
 		can_host_government_in_exile = no
 		can_collaborate = yes
+		
 		modifiers = {
-			civilian_intel_to_others = 15.0
-			army_intel_to_others = 10.0
-			navy_intel_to_others = 10.0
-			airforce_intel_to_others = 10.0
+			civilian_intel_to_others	= 15.0
+			army_intel_to_others		= 10.0
+			navy_intel_to_others		= 10.0
+			airforce_intel_to_others	= 10.0
 		}
+		
 		ai_fascist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
+		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
+	}
+	
+	patrimonialist = {
+		types = {
+			patrimonialist_subtype = {}
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_PATRIMONIALIST_1"
+			"FACTION_NAME_PATRIMONIALIST_2"
+			"FACTION_NAME_PATRIMONIALIST_3"
+			"FACTION_NAME_PATRIMONIALIST_4"
+			"FACTION_NAME_PATRIMONIALIST_5"
+			"FACTION_NAME_PATRIMONIALIST_6"
+		}
+		color = { 40 40 40 }
+
+		## Rules (identical for each ideology)
+		rules = {
+			can_force_government = yes
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_host_government_in_exile = no
+		can_collaborate = yes
+
+		modifiers = {
+			civilian_intel_to_others	= 15.0
+			army_intel_to_others		= 10.0
+			navy_intel_to_others		= 10.0
+			airforce_intel_to_others	= 10.0
+		}
 		
-		ai_give_core_state_control_threshold = 10000
+		ai_fascist = yes
+		war_impact_on_world_tension = 1
+		ai_ideology_wanted_units_factor = 1.5
+		ai_give_core_state_control_threshold = 10 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
 
 	national_populist = {
@@ -186,7 +293,9 @@ ideologies = {
 			"FACTION_NAME_NATIONAL_POPULIST_5"
 			"FACTION_NAME_NATIONAL_POPULIST_6"
 		}
-		color = { 142 57 0 }
+		color = { 16 83 29 }	# 11 46 29
+		
+		## Rules (identical for each ideology)
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -196,16 +305,94 @@ ideologies = {
 		}
 		can_host_government_in_exile = no
 		can_collaborate = yes
+		
 		modifiers = {
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 7.5
-			navy_intel_to_others = 12.5
-			airforce_intel_to_others = 7.5
+			civilian_intel_to_others	= 10.0
+			army_intel_to_others		= 7.5
+			navy_intel_to_others		= 12.5
+			airforce_intel_to_others	= 7.5
 		}
+		
 		ai_fascist = yes
 		war_impact_on_world_tension = 1
 		ai_ideology_wanted_units_factor = 1.5
+		ai_give_core_state_control_threshold = 10 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
+	}
+
+	national_radicalist = {
+		types = {
+			national_radicalist_subtype = {}
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_NATIONAL_RADICALIST_1"
+			"FACTION_NAME_NATIONAL_RADICALIST_2"
+			"FACTION_NAME_NATIONAL_RADICALIST_3"
+			"FACTION_NAME_NATIONAL_RADICALIST_4"
+			"FACTION_NAME_NATIONAL_RADICALIST_5"
+			"FACTION_NAME_NATIONAL_RADICALIST_6"
+		}
+		color = { 94 50 11 }	# vanilla: 150 75 0
 		
-		ai_give_core_state_control_threshold = 10000
+		## Rules (identical for each ideology)
+		rules = {
+			can_force_government = yes
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_host_government_in_exile = no
+		can_collaborate = yes
+		
+		modifiers = {
+			civilian_intel_to_others	= 10.0
+			army_intel_to_others		= 7.5
+			navy_intel_to_others		= 12.5
+			airforce_intel_to_others	= 7.5
+		}
+		
+		ai_fascist = yes
+		war_impact_on_world_tension = 1
+		ai_ideology_wanted_units_factor = 1.5
+		ai_give_core_state_control_threshold = 10 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
+	}
+	
+	
+	mysticist = {
+		types = {
+			mysticist_subtype = {}
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_MYSTICIST_1"
+			"FACTION_NAME_MYSTICIST_2"
+			"FACTION_NAME_MYSTICIST_3"
+			"FACTION_NAME_MYSTICIST_4"
+			"FACTION_NAME_MYSTICIST_5"
+			"FACTION_NAME_MYSTICIST_6"
+		}
+		color = { 94 45 94 }	# 82 158 140
+		
+		## Rules (identical for each ideology)
+		rules = {
+			can_force_government = yes
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_host_government_in_exile = no
+		can_collaborate = yes
+		
+		modifiers = {
+			civilian_intel_to_others	= 15.0
+			army_intel_to_others		= 12.5
+			navy_intel_to_others		= 15.0
+			airforce_intel_to_others	= 12.5
+		}
+		
+		ai_fascist = yes
+		war_impact_on_world_tension = 1
+		ai_ideology_wanted_units_factor = 1.5
+		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
 }

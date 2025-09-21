@@ -1,4 +1,9 @@
-#MAL_UK = {
-#    color = rgb { 201 56 93 }
-#    color_ui = rgb { 255 73 121 }
-#}
+EMPIRE_GREAT_LAKE = {
+    color = rgb { 114 193 183 }
+    color_ui = rgb { 114 193 183 }
+}
+
+IMPERIAL_PERIMETER_ORDER = {
+    color = rgb { 163 43 15 }
+    color_ui = rgb { 163 43 15 }
+}

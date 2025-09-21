@@ -1,0 +1,351 @@
+add_namespace = kolechia_CW
+
+country_event = {
+	id = kolechia_CW.1
+	title = kolechia_CW.1.t
+	desc = kolechia_CW.1.desc
+	picture = GFX_report_event_defense_or_attack
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = KOL_civil_war_begun_flag
+		set_global_flag = { flag = KOL_civil_war_pause_flag days = 7 value = 1 }	# таймаут для построения фронтов
+	}
+
+	option = {
+		name = kolechia_CW.1.a
+		ESA = {
+			add_ideas = KOL_CW_idea
+			add_to_variable	= { provision_total_var = 500 }
+			create_ESA_militia_template = yes
+			every_state = {
+				limit = {
+					OR = {
+						state = 95
+						state = 144
+						state = 94
+						state = 92
+					}
+					controller = {
+						original_tag = ROOT
+					}
+				}
+				PREV = {
+					transfer_state = PREV
+					add_state_core = PREV
+				}
+				create_unit = {
+					division = "division_template = \"Miners Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					allow_spawning_on_enemy_provs = yes
+					owner = PREV
+					count = 5
+				}
+				create_unit = {
+					division = "division_template = \"Miners Stormtroopers\" start_experience_factor = 0.6 start_equipment_factor = 0.5"
+					allow_spawning_on_enemy_provs = yes
+					owner = PREV
+					count = 1
+				}
+			}
+			set_cosmetic_tag = ESA_KCW
+
+			
+			ROOT = {
+				send_equipment_fraction = { target = PREV value = 0.20 }	# 20% от 100%
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = KOL
+						original_tag = ESA
+						original_tag = MLS
+						original_tag = WGF
+						original_tag = EOL
+					}
+				}
+				declare_war_on = {
+					target = PREV
+					type = civil_war
+				}
+				add_civil_war_target = PREV
+				PREV = { add_civil_war_target = PREV }
+			}
+			every_enemy_country = {
+				every_state = {
+					limit = {
+						NOT = { is_fully_controlled_by = PREV }
+						controller = {
+							tag = PREV.PREV
+						}
+					}
+					teleport_armies = {
+						limit = {
+							tag = PREV
+						}
+						to_state_array = controlled_states
+					}
+				}
+			}
+		}
+		MLS = {
+			add_ideas = KOL_CW_idea
+			add_to_variable	= { provision_total_var = 500 }
+			create_MLS_militia_template = yes
+			every_state = {
+				limit = {
+					OR = {
+						state = 83
+						state = 82
+						state = 84
+					}
+					controller = {
+						original_tag = ROOT
+					}
+				}
+				PREV = {
+					transfer_state = PREV
+					add_state_core = PREV
+				}
+				create_unit = {
+					division = "division_template = \"Dockers Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					allow_spawning_on_enemy_provs = yes
+					owner = PREV
+					count = 7
+				}
+				create_unit = {
+					division = "division_template = \"Dockers Stormtroopers\" start_experience_factor = 0.6 start_equipment_factor = 0.5"
+					allow_spawning_on_enemy_provs = yes
+					owner = PREV
+					count = 1
+				}
+			}
+			set_cosmetic_tag = MLS_KCW
+
+			
+			ROOT = {
+				send_equipment_fraction = { target = PREV value = 0.24 }	# от 80% = 20% от 100%
+				transfer_units_fraction = {
+					target = PREV
+					size = 0.0
+					stockpile_ratio = 0.0
+					army_ratio = 0.0
+					navy_ratio = 1.0
+					air_ratio = 0.0
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 9
+				producer = KOL
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = KOL
+						original_tag = ESA
+						original_tag = MLS
+						original_tag = WGF
+						original_tag = EOL
+					}
+				}
+				declare_war_on = {
+					target = PREV
+					type = civil_war
+				}
+				add_civil_war_target = PREV
+				PREV = { add_civil_war_target = PREV }
+			}
+			add_civil_war_target = ROOT
+			every_enemy_country = {
+				every_state = {
+					limit = {
+						NOT = { is_fully_controlled_by = PREV }
+						controller = {
+							tag = PREV.PREV
+						}
+					}
+					teleport_armies = {
+						limit = {
+							tag = PREV
+						}
+						to_state_array = controlled_states
+					}
+				}
+			}
+			
+			delete_unit_template_and_units = { division_template = "Kolechian Guard" disband = no }
+		}
+		WGF = {
+			add_ideas = KOL_CW_idea
+			add_to_variable	= { provision_total_var = 500 }
+			create_WGF_militia_template = yes
+			every_state = {
+				limit = {
+					OR = {
+						state = 172
+						state = 86
+						state = 91
+					}
+					controller = {
+						original_tag = ROOT
+					}
+				}
+				PREV = {
+					transfer_state = PREV
+					add_state_core = PREV
+				}
+				create_unit = {
+					division = "division_template = \"Greshtin Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					allow_spawning_on_enemy_provs = yes
+					owner = PREV
+					count = 7
+				}
+				create_unit = {
+					division = "division_template = \"Greshtin Stormtroopers\" start_experience_factor = 0.6 start_equipment_factor = 0.5"
+					allow_spawning_on_enemy_provs = yes
+					owner = PREV
+					count = 1
+				}
+			}
+			set_cosmetic_tag = WGF_KCW
+
+			
+			ROOT = {
+				send_equipment_fraction = { target = PREV value = 0.32 }	# от 61% ~ 20% от 100%
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = KOL
+						original_tag = ESA
+						original_tag = MLS
+						original_tag = WGF
+						original_tag = EOL
+					}
+				}
+				declare_war_on = {
+					target = PREV
+					type = civil_war
+				}
+				add_civil_war_target = PREV
+				PREV = { add_civil_war_target = PREV }
+			}
+			add_civil_war_target = ROOT
+			every_enemy_country = {
+				every_state = {
+					limit = {
+						NOT = { is_fully_controlled_by = PREV }
+						controller = {
+							tag = PREV.PREV
+						}
+					}
+					teleport_armies = {
+						limit = {
+							tag = PREV
+						}
+						to_state_array = controlled_states
+					}
+				}
+			}
+		}
+		EOL = {
+			add_ideas = KOL_CW_idea
+			add_to_variable	= { provision_total_var = 500 }
+			create_EOL_militia_template = yes
+			every_state = {
+				limit = {
+					OR = {
+						state = 89
+						state = 88
+						state = 87
+						state = 85
+					}
+					controller = {
+						original_tag = ROOT
+					}
+				}
+				PREV = {
+					transfer_state = PREV
+					add_state_core = PREV
+				}
+				create_unit = {
+					division = "division_template = \"Kontegria Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					allow_spawning_on_enemy_provs = yes
+					owner = PREV
+					count = 5
+				}
+				create_unit = {
+					division = "division_template = \"Kontegria Stormtroopers\" start_experience_factor = 0.6 start_equipment_factor = 0.5"
+					allow_spawning_on_enemy_provs = yes
+					owner = PREV
+					count = 1
+				}
+			}
+			set_cosmetic_tag = EOL_KCW
+
+			
+			ROOT = {
+				send_equipment_fraction = { target = PREV value = 0.47 }	# от 41% ~ 20% от 100%
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = KOL
+						original_tag = ESA
+						original_tag = MLS
+						original_tag = WGF
+						original_tag = EOL
+					}
+				}
+				declare_war_on = {
+					target = PREV
+					type = civil_war
+				}
+				add_civil_war_target = PREV
+				PREV = { add_civil_war_target = PREV }
+			}
+			add_civil_war_target = ROOT
+			every_enemy_country = {
+				every_state = {
+					limit = {
+						NOT = { is_fully_controlled_by = PREV }
+						controller = {
+							tag = PREV.PREV
+						}
+					}
+					teleport_armies = {
+						limit = {
+							tag = PREV
+						}
+						to_state_array = controlled_states
+					}
+				}
+			}
+		}
+		add_ideas = KOL_CW_idea
+		set_cosmetic_tag = KOL_KCW
+		for_each_scope_loop = {
+			array = KOL.core_states
+#			if = {
+#				limit = { is_controlled_by = KOL }
+				KOL = { activate_targeted_decision = { decision = KCW_recruit_in_state target = PREV } }
+#			}
+#			else_if = {
+#				limit = { is_controlled_by = ESA }
+				ESA = { activate_targeted_decision = { decision = KCW_recruit_in_state target = PREV } }
+#			}
+#			else_if = {
+#				limit = { is_controlled_by = MLS }
+				MLS = { activate_targeted_decision = { decision = KCW_recruit_in_state target = PREV } }
+#			}
+#			else_if = {
+#				limit = { is_controlled_by = WGF }
+				WGF = { activate_targeted_decision = { decision = KCW_recruit_in_state target = PREV } }
+#			}
+#			else_if = {
+#				limit = { is_controlled_by = EOL }
+				EOL = { activate_targeted_decision = { decision = KCW_recruit_in_state target = PREV } }
+#			}
+		}
+	}
+}

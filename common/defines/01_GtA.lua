@@ -62,6 +62,9 @@ NDefines.NAI.BUILDING_TARGETS_BUILDING_PRIORITIES = {						 -- buildings in orde
 -- Operatives
 NDefines.NOperatives.MAX_RECRUITED_OPERATIVES = 500
 
+-- Intel
+--NDefines.NIntel.INTEL_TO_SHOW_IDEAS = { 0.15, 0.15, 0.15, 0.15 }
+
 
 --------------
 -- AI FIX

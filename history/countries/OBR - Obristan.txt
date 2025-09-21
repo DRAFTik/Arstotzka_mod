@@ -62,8 +62,6 @@ if = {
 		basic_submarine_snorkel = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 	}
 	else = {
 		set_technology = {
@@ -98,7 +96,7 @@ set_stability = 0.5
 set_war_support = 0.5
 set_convoys = 5
 
-starting_train_buffer = 0.85
+starting_train_buffer = 2
 set_fuel_ratio = 0.8
 starting_truck_buffer = 1.5
 
@@ -115,15 +113,19 @@ recruit_character = OBR_elijah_michelson
 
 
 set_politics = {
-	ruling_party = authoritarian_democrat
+	ruling_party = social_conservative
 }
 set_popularities = {
-	totalist				= 0
-	syndicalist				= 35
-	market_liberal			= 6
-	mysticist				= 0
-	authoritarian_democrat	= 46
-	national_populist		= 13
+	totalist					= 0
+	syndicalist					= 19
+	communitarianist			= 4
+	market_liberal				= 6
+	social_conservative			= 44
+	stratocratic_apologetism	= 15
+	patrimonialist				= 0
+	national_populist			= 12
+	national_radicalist			= 0
+	mysticist					= 0
 }
 
 give_guarantee = SEM

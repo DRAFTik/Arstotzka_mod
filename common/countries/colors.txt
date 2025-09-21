@@ -34,3 +34,37 @@ SEM = {
 	color = rgb { 200 150 100 }
 	color_ui = rgb { 200 150 100 }
 }
+
+
+# Kolechia shards
+ESA = {
+	color = rgb { 178 34 52 }			# 100 100 100
+	color_ui = rgb { 178 34 52 }
+}
+MLS = {
+	color = rgb { 150 150 60 }
+	color_ui = rgb { 150 150 60 }
+}
+WGF = {
+	color = rgb { 93 182 156 }
+	color_ui = rgb { 93 182 156 }
+}
+EOL = {
+	color = rgb { 247 134 108 }
+	color_ui = rgb { 247 134 108 }
+}
+
+
+# for Dev Diares
+KAL = {
+	color = rgb { 211 205 33 }
+	color_ui = rgb { 211 205 33 }
+}
+VRN = {
+	color = rgb { 67 137 27 }
+	color_ui = rgb { 67 137 27 }
+}
+SEV = {
+	color = rgb { 42 67 114 }
+	color_ui = rgb { 42 67 114 }
+}

@@ -13,33 +13,58 @@
 # After this, a first and second will be randomly picked from the default pool
 # The prefix must be provided for all pools
 
-default = {
+
+default = {		# OBR
 	male = {
-		names = { "John" "Bob" "Lucas" "Marcus" "Alexander" "Alex" "Peter" "Jonas" "Jim" "Johannes"}
-		surnames = { }
-		callsigns = { }
+		names = {
+			Adam Alexander Andreas Anton Björn Dan Daniel David Dennis Emil Erik Felix
+			Fredrik Gustav Jacob Joakim Johan John Jonas Magnus Martin Mikael Niklas Nils Olof Per Peter
+			Rikard Robin Rufus Samuel Tobias Thomas																# SWE
+			Adolph Jens Sverre Odd Johan Frederik Lorentz Ole Hans
+			Harald Haakon Olaf Paul Petter Carl Christian Kaare Jacob Søren Wilhelm Tryggve Daniel				# NOR
+			Lauri Pekka Mauno Jussi Alpo Petri Kari Juha Risto Viljo Paavo Eino Arvo Ville Mikko Petteri Aleksi
+			Allu Ahti Ahto Erikki Eero Jani Jarno Johannes Kauko Kalevi Ilkka Eljas Erkki Auno Ilmo Kaarle		# FIN
+			Aage Adam Alber Anders Asmund Axel Carl Christian Edvard Edvin
+			Erik Folke Frederik Georg Hannibal Hans Henrik Herman Hugo Ivar Jakob
+			Jacob Johan Julius Knud Ludvig Magnus Michael Niels Olav Otto
+			Peter Poul Sigurd Sven Tage Thomas Thorvald Ukrik Valdemar Vilhelm									# DEN
+			Karen Alma Elsa Else Monica Grete Gerda Helga Jytte Kaja Asta Astrid Signe							# FIN
+		}
 	}
-	#female = {
-	#	names = { "Juliette" "Anna" }
-	#	surnames = { }
-	#	callsigns = { "Queen Of The Sky" "The Red Princess" }
-	#}
-	surnames = { "Smith" "Jones" "Taylor" "Brown" "Williams" "Wilson" "Evans" "Walker" "White" "Roberts" }
-	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon}
+	female = {
+		names = {
+			Anna Linda Sara Caroline Eira Katya Greta Pernilla Malin Linnéa Ebba Tove Astrid Camilla Lotta Eva	# SWE
+			Trine Kajsa Helga Paula Olivia Nela Monika Torhild Trude Ingeborg Gerda								# NOR
+			Anna Helvi Hilda Nea Mirjam Kirsi Raili Elina Kaja Ilona Ingrid										# FIN
+		}
+	}
 
-
+	surnames = {
+		Andersson Anward Björk Blomberg Bodlund Borg Brolin Carlberg Cederholm Cornelius
+		Dahlberg Ekre Elgerot Hargelid Hasselström Hemmingsson Hultdin Ivarsson Jenelius
+		Johanneson Johansson Karlsson Kiby Knubb Lagerqvist Lerström Lind Lindgren
+		Lundström Mattsson Nisshagen Norrevik Norrevik Oltner Palmqvist Persson Renström
+		Rickne Sandin Sidvall Sjöberg Sjöman Sparrhult Ström Tisander Tronde Viklund
+		Wendel Wester Westinger Wickerström Zetterman Åslund													# SWE
+		Munthe Sejersted Ræder Dahl Nordhaug Hamre Fleischer Eriksen Berg Hauge
+		Prytz Lund Nørregaard Vilberg Hauge Sunde Petersen Brandt Lie Wergeland Frisvold
+		Teige Carenwall Falck																					# NOR
+		Pertola Törni Marttinen Arjanen Rajala Ryti Juutilanen Virtanen
+		Korhonen Nieminen Laine Järvinen Karhu Kari Markkula Matilla Luoma
+		Heikkinen Helminen Lahti Olli Oksanen Jaakola Janhunen Mäkelä Mäkinen									# FIN
+		Ahlefeldt Asp-Persson Berger Bonde Carlsen Dannemand Danneskjold-Samso  Eberlin Falsen
+		Folsach Güntelberg Gyldenfeldt Haack Hambro Haxthausen Juul Klauman Krogh Laessoe Hansen Have
+		Leuenbach Lovenbalk Michaelsen Mylius Neergaard Obelitz Oxholm Reventlow Rosenkrantz
+		Schack-Schackenborg Stemman Suenson Thygeson Trampe Urne Wadenstierna Wedel-Heinen Zytphen-Adeler		# FIN
+	}
+	
 	#Operations - treat these as keys, not strings.
 	prefix = o_operation
-
-	operation = {
-		0 = { o_default_operation }
-	}
-
+	
 	use_geographical_default_operation_names = yes
-	offensive_operation_suffix = o_strat_offensive_default
-	defensive_operation_suffix = o_strat_defensive_default
-	naval_operation_suffix = o_strat_naval_default
-
+	offensive_operation_suffix	= o_strat_offensive_default
+	defensive_operation_suffix	= o_strat_defensive_default
+	naval_operation_suffix		= o_strat_naval_default
 }
 
 ###############################################################

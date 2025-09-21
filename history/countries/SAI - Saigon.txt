@@ -14,15 +14,19 @@ set_research_slots = 0
 
 
 set_politics = {
-	ruling_party = authoritarian_democrat
+	ruling_party = stratocratic_apologetism
 }
 set_popularities = {
-	totalist				= 0
-	syndicalist				= 0
-	market_liberal			= 0
-	mysticist				= 0
-	authoritarian_democrat	= 100
-	national_populist		= 0
+	totalist					= 0
+	syndicalist					= 0
+	communitarianist			= 0
+	market_liberal				= 0
+	social_conservative			= 0
+	stratocratic_apologetism	= 100
+	patrimonialist				= 0
+	national_populist			= 0
+	national_radicalist			= 0
+	mysticist					= 0
 }
 
 recruit_character = SAI_universal_leader

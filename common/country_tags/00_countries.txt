@@ -1,3 +1,6 @@
+#Buffer // первый среди равных
+SAI = "countries/_western_european.txt"
+
 ARS = "countries/_western_european.txt"
 KOL = "countries/_western_european.txt"
 OBR = "countries/_western_european.txt"
@@ -11,6 +14,15 @@ SKO = "countries/_western_european.txt"
 SEM = "countries/_western_european.txt"
 
 
+# Kolechia shards
+ESA = "countries/_western_european.txt"
+MLS = "countries/_western_european.txt"
+WGF = "countries/_western_european.txt"
+EOL = "countries/_western_european.txt"
 
-#Buffer // всегда на дне
-SAI = "countries/_western_european.txt"
+
+
+# for Dev Diares
+KAL = "countries/_western_european.txt"
+VRN = "countries/_western_european.txt"
+SEV = "countries/_western_european.txt"

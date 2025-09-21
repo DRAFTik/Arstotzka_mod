@@ -69,6 +69,10 @@ on_actions = {
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): provision_total_var: [?provision_total_var]"
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): max_manpower_k: [?max_manpower_k]"
 			}
+			
+			KOL = {
+				country_event = { id = kolechia_CW.1 days = 2 random_days = 10 } # ГВ
+			}
 		}
 	}
 

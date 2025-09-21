@@ -690,4 +690,14 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
 	
+	spriteType = {
+		name = "GFX_power_balance_button_kr"
+		textureFile = "gfx/interface/power_balance_button_kr.dds"
+	}
+
+	spriteType = {
+		name = "GFX_power_balance_icon_kr"
+		textureFile = "gfx/interface/power_balance_icon_kr.dds"
+	}
+	
 }

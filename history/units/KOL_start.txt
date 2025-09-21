@@ -43,12 +43,10 @@ division_template = {
 	name = "National Militia"
 
 	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
 	}
 	
 	support = {
@@ -266,7 +264,7 @@ units = {
 		name = "1st Kolechian National Militia regiment"
 		location = 1974
 		division_template = "National Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
@@ -275,7 +273,7 @@ units = {
 		name = "2nd Kolechian National Militia regiment"
 		location = 844
 		division_template = "National Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
@@ -284,7 +282,7 @@ units = {
 		name = "3rd Kolechian National Militia regiment"
 		location = 2022
 		division_template = "National Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
@@ -293,7 +291,7 @@ units = {
 		name = "4th Kolechian National Militia regiment"
 		location = 2022
 		division_template = "National Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
@@ -302,7 +300,7 @@ units = {
 		name = "5th Kolechian National Militia regiment"
 		location = 844
 		division_template = "National Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
@@ -311,7 +309,7 @@ units = {
 		name = "6th Kolechian National Militia regiment"
 		location = 844
 		division_template = "National Militia"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 		start_manpower_factor = 1.0
 	}
