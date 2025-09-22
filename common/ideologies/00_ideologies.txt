@@ -16,7 +16,7 @@ ideologies = {
 			"FACTION_NAME_TOTALIST_5"
 			"FACTION_NAME_TOTALIST_6"
 		}
-		color = { 127 0 0 }
+		color = { 147 7 7 }
 		
 		## Rules (identical for each ideology)
 		rules = {
@@ -54,7 +54,7 @@ ideologies = {
 			"FACTION_NAME_SYNDICALIST_5"
 			"FACTION_NAME_SYNDICALIST_6"
 		}
-		color = { 255 0 0 }
+		color = { 225 39 19 }
 		
 		## Rules (identical for each ideology)
 		rules = {
@@ -92,7 +92,7 @@ ideologies = {
 			"FACTION_NAME_COMMUNITARIANIST_5"
 			"FACTION_NAME_COMMUNITARIANIST_6"
 		}
-		color = { 234 100 100 }
+		color = { 234 60 60 }
 		
 		## Rules (identical for each ideology)
 		rules = {
