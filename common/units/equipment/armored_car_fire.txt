@@ -4,6 +4,10 @@ equipments = {
 
 	armored_car_fire_equipment = {
 		year = 1986
+		
+		can_be_produced = {
+			NOT = { has_country_flag = block_produced_armored_car_flag }
+		}
 	
 		is_archetype = yes
 		is_buildable = no

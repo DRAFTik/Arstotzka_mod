@@ -4,11 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
-			dockyard = 2
 			livestock_complex = 1
-			1651 = {
-				naval_base = 1
-			}
 		}
 		owner = UNF
 		add_core_of = UNF

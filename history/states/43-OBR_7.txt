@@ -5,7 +5,6 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
-			dockyard = 1
 			livestock_complex = 1
 		}
 		owner = OBR
@@ -16,5 +15,6 @@ state={
 	}
 	manpower=3391573
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

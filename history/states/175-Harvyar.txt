@@ -1,0 +1,18 @@
+state={
+	id=175
+	name="STATE_175"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = HAR
+		add_core_of = HAR
+	}
+	provinces={
+		2165 2300 2310 2339 2670 2686 2773 2776 2804 2849 2882 2936 2953 3515 3516 3517 3518 3519 3520 3521 3522 3523 3524 3525 3526 3527 3528 3529 3530 3531 3532 3533 3534 3535 3536 3537 3538 3539 3540 3541 3542 3543 3544 3545 3546 3547 3548 3549 3550 3551
+	}
+	manpower=111111
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

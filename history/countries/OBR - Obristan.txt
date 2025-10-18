@@ -38,58 +38,58 @@ if = {
 		}
 	}
 }
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_naval_oob = "OBR_naval_mtg"
-	set_technology = {
-		basic_torpedo = 1
-		mtg_transport = 1
-		basic_naval_mines = 1
-		early_ship_hull_light = 1
-		sonar = 1
-		smoke_generator = 1
-		early_ship_hull_cruiser = 1
-		improved_airplane_launcher = 1
-		basic_ship_hull_cruiser = 1
-		basic_cruiser_armor_scheme = 1
-		early_ship_hull_heavy = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		improved_ship_torpedo_launcher = 1
-		magnetic_detonator = 1
-		basic_submarine_snorkel = 1
-		basic_battery = 1
-		basic_light_battery = 1
-	}
-	else = {
-		set_technology = {
-			early_destroyer = 1
-			early_light_cruiser = 1
-			early_heavy_cruiser = 1
-			early_submarine = 1
-			transport = 1
-		}
-	}
-}
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = {
-		gwtank_chassis = 1
-		armor_tech_1 = 1
-	}
-}
+#if = {
+#	limit = {
+#		has_dlc = "Man the Guns"
+#	}
+#	set_naval_oob = "OBR_naval_mtg"
+#	set_technology = {
+#		basic_torpedo = 1
+#		mtg_transport = 1
+#		basic_naval_mines = 1
+#		early_ship_hull_light = 1
+#		sonar = 1
+#		smoke_generator = 1
+#		early_ship_hull_cruiser = 1
+#		improved_airplane_launcher = 1
+#		basic_ship_hull_cruiser = 1
+#		basic_cruiser_armor_scheme = 1
+#		early_ship_hull_heavy = 1
+#		early_ship_hull_submarine = 1
+#		basic_ship_hull_submarine = 1
+#		improved_ship_torpedo_launcher = 1
+#		magnetic_detonator = 1
+#		basic_submarine_snorkel = 1
+#		basic_battery = 1
+#		basic_light_battery = 1
+#	}
+#	else = {
+#		set_technology = {
+#			early_destroyer = 1
+#			early_light_cruiser = 1
+#			early_heavy_cruiser = 1
+#			early_submarine = 1
+#			transport = 1
+#		}
+#	}
+#}
+#if = {
+#	limit = {
+#		NOT = { has_dlc = "No Step Back" }
+#	}
+#	set_technology = {
+#		gwtank = 1
+#	}
+#}
+#if = {
+#	limit = {
+#		has_dlc = "No Step Back"
+#	}
+#	set_technology = {
+#		gwtank_chassis = 1
+#		armor_tech_1 = 1
+#	}
+#}
 
 
 set_stability = 0.5

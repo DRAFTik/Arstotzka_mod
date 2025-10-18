@@ -4,7 +4,6 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
-			dockyard = 2
 		}
 		owner = OBR
 		add_core_of = OBR
@@ -14,5 +13,6 @@ state={
 	}
 	manpower=2810106
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

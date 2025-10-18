@@ -44,7 +44,11 @@ spriteTypes = {
 		texturefile = "gfx/texticons/segment_text_icon.dds"
 		legacy_lazy_load = no
 	}
-	
+	spriteType = {
+		name = "GFX_infantry_equipment_texticon"
+		texturefile = "gfx/texticons/infantry_equipment_texticon.dds"
+		legacy_lazy_load = no
+	}
 	
 	
 ### FOR TECHNOLOGY

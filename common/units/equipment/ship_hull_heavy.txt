@@ -4,6 +4,7 @@ equipments = {
 		year = 1969
 
 		can_be_produced = {
+			NOT = { has_country_flag = block_produced_naval_flag }
 		}
 
 		is_archetype = yes

@@ -329,16 +329,16 @@ instant_effect = {
 		industrial_manufacturer = mio:generic_infantry_equipment_organization
 	}
 	
-	add_equipment_production = {
-		equipment = {
-			type = artillery_equipment_1
-			creator = "KOL"
-		}
-		requested_factories = 2
-		progress = 0.7
-		efficiency = 100
-		industrial_manufacturer = mio:generic_artillery_organization
-	}
+#	add_equipment_production = {
+#		equipment = {
+#			type = artillery_equipment_1
+#			creator = "KOL"
+#		}
+#		requested_factories = 2
+#		progress = 0.7
+#		efficiency = 100
+#		industrial_manufacturer = mio:generic_artillery_organization
+#	}
 	
 	add_equipment_production = {
 		equipment = {

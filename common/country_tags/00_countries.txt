@@ -12,6 +12,14 @@ UNF = "countries/_western_european.txt"
 # non classic countrys
 SKO = "countries/_western_european.txt"
 SEM = "countries/_western_european.txt"
+CIR = "countries/_western_european.txt"
+GAL = "countries/_western_european.txt"
+HAR = "countries/_western_european.txt"
+BOG = "countries/_western_european.txt"
+GOR = "countries/_western_european.txt"
+EST = "countries/_western_european.txt"
+EAS = "countries/_western_european.txt"
+WES = "countries/_western_european.txt"
 
 
 # Kolechia shards

@@ -2,6 +2,10 @@ equipments = {
 
 	anti_tank_equipment = {
 		year = 1981
+		
+		can_be_produced = {
+			NOT = { has_country_flag = block_produced_artillery_flag }
+		}
 
 		is_archetype = yes
 		picture = archetype_anti_tank_equipment		

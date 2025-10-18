@@ -34,6 +34,38 @@ SEM = {
 	color = rgb { 200 150 100 }
 	color_ui = rgb { 200 150 100 }
 }
+CIR = {
+	color = rgb { 51 155 0 }
+	color_ui = rgb { 51 155 0 }
+}
+GAL = {
+	color = rgb { 145 163 176 }
+	color_ui = rgb { 145 163 176 }
+}
+HAR = {
+	color = rgb { 198 130 74 }
+	color_ui = rgb { 198 130 74 }
+}
+BOG = {
+	color = rgb { 121 131 196 }
+	color_ui = rgb { 121 131 196 }
+}
+GOR = {
+	color = rgb { 193 171 8 }
+	color_ui = rgb { 193 171 8 }
+}
+EST = {
+	color = rgb { 132 137 93 }
+	color_ui = rgb { 132 137 93 }
+}
+EAS = {
+	color = rgb { 165 77 107 }
+	color_ui = rgb { 165 77 107 }
+}
+WES = {
+	color = rgb { 48 96 117 }
+	color_ui = rgb { 48 96 117 }
+}
 
 
 # Kolechia shards

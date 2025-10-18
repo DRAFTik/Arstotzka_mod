@@ -135,7 +135,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = train_equipment
-				amount = 9
+				amount = 3
 				producer = KOL
 			}
 			every_other_country = {

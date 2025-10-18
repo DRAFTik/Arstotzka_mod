@@ -4,11 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
-			hydro_power_plant = 1
 			steel_mill = 2
-			313 = {
-				naval_base = 1
-			}
 		}
 		owner = OBR
 		add_core_of = OBR

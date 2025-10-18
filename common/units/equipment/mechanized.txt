@@ -2,7 +2,11 @@ equipments = {
 
 	mechanized_equipment = {
 		year = 1983
-
+		
+		can_be_produced = {
+			NOT = { has_country_flag = block_produced_artillery_flag }
+		}
+		
 		is_archetype = yes
 		picture = archetype_motorized_equipment		
 		is_buildable = no

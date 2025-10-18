@@ -1,5 +1,6 @@
 
 @KCW_recruit_in_state_days_remove = 12
+@KCW_focus_FROM_front_dec = 90
 
 KCW_foreign_volunteer_decisions_categories = { # Foreign Volunteers
 	KCW_support_FROM_dec = {
@@ -40,9 +41,20 @@ KCW_foreign_volunteer_decisions_categories = { # Foreign Volunteers
 		
 		fire_only_once = yes
 		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 1999 }
+			set_temp_variable = { infantry_equipment_var_temp = 2000 }
+			NOT = { has_equipment = { infantry_equipment < infantry_equipment_var_temp } }
 		}
-		custom_cost_text = 2000_guns
+		custom_cost_text = infantry_equipment_cost
+		
+		complete_effect = {
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Decision complete KCW_support_FROM_dec"
+			set_country_flag = KCW_supported
+			army_experience = 5
+			send_equipment = { target = FROM type = infantry_equipment amount = 2000 }
+#			FROM = {
+#				country_event = amcivwar.611
+#			}
+		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -77,15 +89,6 @@ KCW_foreign_volunteer_decisions_categories = { # Foreign Volunteers
 				tag = OBR
 			}
 		}
-		complete_effect = {
-			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Decision complete KCW_support_FROM_dec"
-			set_country_flag = KCW_supported
-			army_experience = 5
-			send_equipment = { target = FROM type = infantry_equipment amount = 2000 }
-#			FROM = {
-#				country_event = amcivwar.611
-#			}
-		}
 	}
 }
 
@@ -112,30 +115,7 @@ KCW_civil_war_decisions_categories = {
 		state_target = yes
 		days_remove = @KCW_recruit_in_state_days_remove
 		on_map_mode = map_only
-
-		ai_will_do = {
-			base = 15
-			modifier = {
-				set_temp_variable = { units_to_spawn = FROM.state_population_k }
-				divide_temp_variable = { units_to_spawn = 200 }
-				clamp_temp_variable = { var = units_to_spawn min = 1 max = 50 }
-				round_temp_variable = units_to_spawn
-				factor = units_to_spawn
-			}
-			modifier = {
-				surrender_progress > 0.20
-				factor = 2
-			}
-			modifier = {
-				surrender_progress > 0.50
-				factor = 5
-			}
-			modifier = {
-				surrender_progress > 0.80
-				factor = 5
-			}
-		}
-
+		
 		cancel_effect = {
 			log = "[GetDateText] [Root.GetName] ([Root.GetTag]) ([From.GetID]): Decision cancel KCW_recruit_in_state"
 			clr_country_flag = KCW_is_recruiting
@@ -158,5 +138,111 @@ KCW_civil_war_decisions_categories = {
 				EOL = { remove_targeted_decision = { decision = KCW_recruit_in_state target = FROM } }
 			}
 		}
+		
+		ai_will_do = {
+			base = 15
+			modifier = {
+				set_temp_variable = { units_to_spawn = FROM.state_population_k }
+				divide_temp_variable = { units_to_spawn = 200 }
+				clamp_temp_variable = { var = units_to_spawn min = 1 max = 50 }
+				round_temp_variable = units_to_spawn
+				factor = units_to_spawn
+			}
+			modifier = {
+				surrender_progress > 0.20
+				factor = 2
+			}
+			modifier = {
+				surrender_progress > 0.50
+				factor = 5
+			}
+			modifier = {
+				surrender_progress > 0.80
+				factor = 5
+			}
+		}
 	}
+	
+	KCW_focus_FROM_front_dec = {
+		icon = generic_prepare_civil_war
+		
+		targets = { KOL ESA MLS WGF EOL }
+		targets_dynamic = yes
+		
+		visible = {
+			has_global_flag = KOL_civil_war_begun_flag
+			has_war_with = FROM
+			NOT = { has_country_flag = KCW_focus_FROM_front_block_flag }
+		}
+		target_root_trigger = {
+			has_capitulated = no
+			NOT = { has_country_flag = KCW_focus_FROM_front_block_flag }
+		}
+		target_trigger = {
+			FROM = {
+				has_capitulated = no
+				has_war_with = ROOT
+			}
+		}
+		
+		days_re_enable = 180
+		days_remove = @KCW_focus_FROM_front_dec
+		fire_only_once = no
+		
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			set_temp_variable = { CP_var_temp = 25 }
+			set_temp_variable = { PP_var_temp = 25 }
+			NOT = { command_power < CP_var_temp }
+			NOT = { has_political_power < PP_var_temp }
+		}
+		custom_cost_text = PP_CP_cost
+		
+		targeted_modifier = {
+			tag = FROM
+			attack_bonus_against = 0.25
+			defense_bonus_against = 0.25
+		}
+		complete_effect = {
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Decision complete KCW_focus_FROM_front_dec"
+			set_country_flag = { flag = KCW_focus_FROM_front_block_flag days = @KCW_focus_FROM_front_dec value = 1 }
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -25
+			}
+		}
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				NOT = { any_home_area_neighbor_country = { tag = FROM } }
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { tag = KOL }
+				FROM = { NOT = { tag = KOL } }
+				country_exists = KOL
+				any_home_area_neighbor_country = { tag = KOL }
+			}
+			modifier = {
+				factor = 2
+				count_triggers = {
+					amount = 4
+					check_variable = { FROM.num_controlled_states > KOL.num_controlled_states }
+					check_variable = { FROM.num_controlled_states > ESA.num_controlled_states }
+					check_variable = { FROM.num_controlled_states > MLS.num_controlled_states }
+					check_variable = { FROM.num_controlled_states > WGF.num_controlled_states }
+					check_variable = { FROM.num_controlled_states > EOL.num_controlled_states }
+				}
+			}
+			modifier = {
+				factor = 2
+				any_owned_state = {
+					is_core_of = ROOT
+					is_controlled_by = FROM
+				}
+			}
+		}
+	}
+	
 }

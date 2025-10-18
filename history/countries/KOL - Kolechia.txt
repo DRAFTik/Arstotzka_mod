@@ -76,7 +76,7 @@ set_stability = 0.5
 set_war_support = 0.5
 set_convoys = 5
 
-starting_train_buffer = 2
+starting_train_buffer = 2.5
 set_fuel_ratio = 0.1
 starting_truck_buffer = 0.5
 
@@ -86,7 +86,20 @@ add_ideas = {
 	export_focus
 	volunteer_only
 	self_regulation_of_consumption
+	
+	KOL_greshtin_peace_treaty_idea
+	KOL_international_inspectors_idea
+	KOL_national_disaster_idea
+	KOL_patchwork_economy_idea
+	KOL_technological_gap_idea
 }
+
+country_lock_all_division_template = yes
+set_country_flag = block_produced_tank_flag
+set_country_flag = block_produced_artillery_flag
+set_country_flag = block_produced_armored_car_flag
+set_country_flag = block_produced_air_flag
+set_country_flag = block_produced_naval_flag
 
 
 recruit_character = KOL_kordon_kallo

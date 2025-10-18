@@ -44,6 +44,10 @@ bookmarks = {
 			history = "KOL_GATHERING_STORM_DESC"
 			ideology = stratocratic_apologetism
 			ideas = {
+				KOL_greshtin_peace_treaty_idea
+				KOL_national_disaster_idea
+				KOL_patchwork_economy_idea
+				KOL_technological_gap_idea
 			}
 			focuses = {
 			}

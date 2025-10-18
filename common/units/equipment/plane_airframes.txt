@@ -4,6 +4,7 @@ equipments = {
 		year = 1980
 
 		can_be_produced = {
+			NOT = { has_country_flag = block_produced_air_flag }
 		}
 
 		is_archetype = yes
@@ -796,6 +797,7 @@ equipments = {
 		year = 1980
 
 		can_be_produced = {
+			NOT = { has_country_flag = block_produced_air_flag }
 		}
 
 		is_archetype = yes
@@ -1413,6 +1415,7 @@ equipments = {
 		year = 1980
 
 		can_be_produced = {
+			NOT = { has_country_flag = block_produced_air_flag }
 		}
 
 		is_archetype = yes
@@ -2273,6 +2276,7 @@ equipments = {
 		year = 1980
 
 		can_be_produced = {
+			NOT = { has_country_flag = block_produced_air_flag }
 		}
 
 		is_archetype = yes

@@ -54,6 +54,26 @@ spriteTypes = {
 		name = "GFX_idea_generic_improved_repair"
 		texturefile = "gfx/interface/ideas/generic_improved_repair.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_KOL_national_disaster"
+		texturefile = "gfx/interface/ideas/KOL_national_disaster.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_bad_economic"
+		texturefile = "gfx/interface/ideas/bad_economic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_science_base_bad"
+		texturefile = "gfx/interface/ideas/science_base_bad.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_science_base_normal"
+		texturefile = "gfx/interface/ideas/science_base_normal.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_science_base_good"
+		texturefile = "gfx/interface/ideas/science_base_good.dds"
+	}
 	
 	
 	

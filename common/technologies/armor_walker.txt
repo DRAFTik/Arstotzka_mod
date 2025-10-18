@@ -1541,3 +1541,4 @@ technologies = {
 			adaptive_chassis_platform	= 1
 		}
 	}
+}

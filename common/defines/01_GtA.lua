@@ -25,14 +25,19 @@ NDefines.NCountry.MIN_MAJOR_COUNTRIES = 0									-- MIN_MAJOR_COUNTRIES countri
 NDefines.NMilitary.MIN_DIVISION_DEPLOYMENT_TRAINING = 0.3					-- Min level of division training
 NDefines.NMilitary.SLOWEST_SPEED = 1
 
+-- War Support
+NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = 0								-- Vanilla is -0.2
+NDefines.NCountry.WAR_SUPPORT_DEFENSIVE_WAR = 0								-- Vanilla is -0.2
+
 -- Diplomatic
+NDefines.NDiplomacy.MAX_TRUST_VALUE = 200									-- Vanilla is 100
+NDefines.NDiplomacy.MIN_TRUST_VALUE = -200									-- Vanilla is -100
 NDefines.NDiplomacy.MAX_OPINION_VALUE = 200									-- Max opinion value cap.
 NDefines.NDiplomacy.MIN_OPINION_VALUE = -200								-- Min opinion value cap.
 NDefines.NDiplomacy.VERY_GOOD_OPINION = 100									-- Threshold for a country that has a very good opinion of you.
 NDefines.NDiplomacy.VERY_BAD_OPINION = -100									-- Threshold for a country that has a very bad opinion of you.
 NDefines.NDiplomacy.IDEOLOGY_JOIN_FACTION_MIN_LEVEL = 0.4					-- ideology limit required to join faction
 NDefines.NDiplomacy.DIPLOMACY_HOURS_BETWEEN_REQUESTS = 0					-- How long a country must wait before sending a new diplomatic request.
-NDefines.NDiplomacy.MIN_TRUST_VALUE = -500									-- max value for embargo, vanilla -100
 NDefines.NDiplomacy.BASE_SEND_ATTACHE_COST = 50								-- Political power cost to send attache
 NDefines.NDiplomacy.BASE_SEND_ATTACHE_CP_COST = 25							-- Command Power sent attache usage cost
 
@@ -44,6 +49,8 @@ NDefines.NDiplomacy.TENSION_ANNEX_NO_CLAIM = 1.5							-- Amount of tension gene
 NDefines.NDiplomacy.EMBARGO_COST = 10										-- Vanilla is 100	-- One-time cost
 NDefines.NDiplomacy.EMBARGO_THREAT_THRESHOLD = 10							-- Vanilla is 30	-- Target-generated threat threshold to allow embargo (affected by modifiers)
 
+-- Volunteers
+NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 0						-- Vanilla is 30
 
 -- Technology
 NDefines.NTechnology.MAX_SUBTECHS = 4										-- Max number of sub technologies a technology can have.
@@ -136,7 +143,6 @@ NDefines.NAI.EASY_TARGET_FRONT_IMPORTANCE = 10.0							-- How much extra focus t
 --NDefines.NMilitary.PLAN_EXECUTE_CAREFUL_MAX_FORT = 4						-- If execution mode is set to careful, units will not attack provinces with fort levels greater than or equal to this
 
 NDefines.NAI.DIPLOMACY_ACCEPT_VOLUNTEERS_BASE = 100							-- Base value of volunteer acceptance (help is welcome)
-NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 10						-- This many divisons are required for the country to be able to send volunteers.
 
 -- УДАЛЕНО --NDefines.NAI.DIVISION_DESIGN_COMBAT_WIDTH_TARGET_WEIGHT = -10000			-- This score is reduced the farther the width is from the target width (if set)
 

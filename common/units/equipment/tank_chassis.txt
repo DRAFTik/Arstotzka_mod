@@ -14,6 +14,7 @@ equipments = {
 				limit = { has_dlc = "No Step Back" }
 				has_tech = own_tank_school_tech
 			}
+			NOT = { has_country_flag = block_produced_tank_flag }
 		}
 
 		picture = archetype_light_tank_equipment
@@ -381,6 +382,7 @@ equipments = {
 				limit = { has_dlc = "No Step Back" }
 				has_tech = own_tank_school_tech
 			}
+			NOT = { has_country_flag = block_produced_tank_flag }
 		}
 		picture = archetype_medium_tank_equipment
 		type = armor
@@ -735,6 +737,7 @@ equipments = {
 				limit = { has_dlc = "No Step Back" }
 				has_tech = own_tank_school_tech
 			}
+			NOT = { has_country_flag = block_produced_tank_flag }
 		}
 		picture = archetype_heavy_tank_equipment
 		type = armor
@@ -1080,6 +1083,7 @@ equipments = {
 				limit = { has_dlc = "No Step Back" }
 				has_tech = own_tank_school_tech
 			}
+			NOT = { has_country_flag = block_produced_tank_flag }
 		}
 		picture = archetype_modern_tank_equipment
 		type = armor
@@ -1368,6 +1372,7 @@ equipments = {
 				limit = { has_dlc = "No Step Back" }
 				has_tech = own_tank_school_tech
 			}
+			NOT = { has_country_flag = block_produced_tank_flag }
 		}
 		picture = archetype_super_heavy_tank_equipment
 		type = armor
@@ -1657,6 +1662,7 @@ equipments = {
 				limit = { has_dlc = "No Step Back" }
 				has_tech = own_tank_school_tech
 			}
+			NOT = { has_country_flag = block_produced_tank_flag }
 		}
 		picture = archetype_amphibious_tank_equipment
 		type = armor

@@ -10,6 +10,7 @@ equipments = {
 #				limit = { has_dlc = "No Step Back" }
 #				has_tech = own_tank_school_tech
 #			}
+			NOT = { has_country_flag = block_produced_tank_flag }
 		}
 
 		picture = archetype_reconnaissance_walker_equipment
@@ -359,6 +360,7 @@ equipments = {
 #				limit = { has_dlc = "No Step Back" }
 #				has_tech = own_tank_school_tech
 #			}
+			NOT = { has_country_flag = block_produced_tank_flag }
 		}
 		picture = archetype_universal_combat_walker_equipment
 		type = armor
@@ -688,6 +690,7 @@ equipments = {
 #				limit = { has_dlc = "No Step Back" }
 #				has_tech = own_tank_school_tech
 #			}
+			NOT = { has_country_flag = block_produced_tank_flag }
 		}
 		picture = archetype_siege_walker_equipment
 		type = armor
@@ -1012,6 +1015,7 @@ equipments = {
 #				limit = { has_dlc = "No Step Back" }
 #				has_tech = own_tank_school_tech
 #			}
+			NOT = { has_country_flag = block_produced_tank_flag }
 		}
 		picture = archetype_coloss_walker_equipment
 		type = armor

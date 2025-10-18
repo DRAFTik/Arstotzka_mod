@@ -2,6 +2,10 @@ equipments = {
 
 	artillery_equipment = {
 		year = 1981
+		
+		can_be_produced = {
+			NOT = { has_country_flag = block_produced_artillery_flag }
+		}
 
 		is_archetype = yes
 		picture = archetype_artillery_equipment		
@@ -109,6 +113,10 @@ equipments = {
 	# Nebelwerfers!
 	rocket_artillery_equipment = {
 		year = 1987
+		
+		can_be_produced = {
+			NOT = { has_country_flag = block_produced_artillery_flag }
+		}
 
 		is_archetype = yes
 		picture = archetype_rocket_artillery_equipment		
@@ -201,6 +209,10 @@ equipments = {
 	#Katyusha 
 	motorized_rocket_equipment = {
 		year = 1981
+		
+		can_be_produced = {
+			NOT = { has_country_flag = block_produced_artillery_flag }
+		}
 
 		is_archetype = yes
 		picture = archetype_motorized_rocket_equipment			
@@ -270,6 +282,10 @@ equipments = {
 
 	super_heavy_artillery_equipment = {
 		year = 1936
+		
+		can_be_produced = {
+			NOT = { has_country_flag = block_produced_artillery_flag }
+		}
 
 		is_archetype = yes
 		picture = archetype_artillery_equipment		
@@ -324,6 +340,10 @@ equipments = {
 
 	self_propelled_super_heavy_artillery_equipment = {
 		year = 1936
+		
+		can_be_produced = {
+			NOT = { has_country_flag = block_produced_artillery_flag }
+		}
 
 		is_archetype = yes
 		picture = archetype_artillery_equipment		

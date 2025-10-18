@@ -7,10 +7,6 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
-			dockyard = 1
-			1212 = {
-				naval_base = 1
-			}
 		}
 		owner = SEM
 		add_core_of = SEM

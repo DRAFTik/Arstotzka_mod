@@ -2,7 +2,7 @@ state={
 	id=145
 	name="STATE_145"
 	resources={
-		oil = 5
+		oil=5
 	}
 	history={
 		victory_points = {
@@ -28,9 +28,10 @@ state={
 		add_core_of = ARS
 	}
 	provinces={
-		296 360 404 405 473 715 815 1044 2081 2084 2152 2153 
+		296 360 404 405 473 715 815 1044 2081 2084 2153 3040 3041 3042 3043 
 	}
 	manpower=1447148
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=small_island
+	local_supplies=0.000
+	state_category=small_island
 }

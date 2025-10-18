@@ -1,0 +1,69 @@
+﻿capital = 180
+
+# oob = "WES_start"
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	basic_train = 1
+	gw_artillery = 1
+	fuel_silos = 1
+	
+	linar_infantry = 1
+	default_civ_equipment_tech = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+#	set_air_oob = "WES_air_bba"
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		bba_early_transport_plane = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_transport_plane = 1
+		}
+	}
+}
+
+set_stability = 0.5
+set_war_support = 0.5
+set_convoys = 5
+
+starting_train_buffer = 1
+set_fuel_ratio = 0.2
+starting_truck_buffer = 1
+
+
+add_ideas = {
+	civilian_economy
+	export_focus
+	volunteer_only
+	self_regulation_of_consumption
+}
+
+
+# recruit_character = REP_persius_lestrade
+
+set_politics = {
+	ruling_party = market_liberal
+}
+set_popularities = {
+	totalist					= 0
+	syndicalist					= 3
+	communitarianist			= 6
+	market_liberal				= 15
+	social_conservative			= 11
+	stratocratic_apologetism	= 3
+	patrimonialist				= 46
+	national_populist			= 16
+	national_radicalist			= 0
+	mysticist					= 0
+}

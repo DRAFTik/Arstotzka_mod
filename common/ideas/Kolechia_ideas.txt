@@ -1,6 +1,102 @@
 ideas = {
 
 	country = {
+		KOL_greshtin_peace_treaty_idea = {
+			on_add = { log = "[GetLogRoot]: add idea KOL_greshtin_peace_treaty_idea" }
+			picture = generic_constitutional_guarantees
+			allowed = { always = no }
+			available = {
+			}
+			on_add = {
+				hidden_effect = {
+					country_lock_all_division_template = yes
+					set_country_flag = block_produced_tank_flag
+					set_country_flag = block_produced_artillery_flag
+					set_country_flag = block_produced_armored_car_flag
+					set_country_flag = block_produced_air_flag
+					set_country_flag = block_produced_naval_flag
+				}
+				custom_effect_tooltip = SPR_military_disloyalty_tt
+			}
+			on_remove = {
+				hidden_effect = {
+					country_lock_all_division_template = no
+				}
+			}
+			modifier = {
+				conscription_factor = -0.90
+				mobilization_speed = -1
+				production_speed_arms_factory_factor = -0.5
+				mobilization_laws_cost_factor = 20
+				economy_laws_cost_factor = 20
+				custom_modifier_tooltip = KOL_greshtin_peace_treaty_idea_tt
+			}
+		}
+		KOL_international_inspectors_idea = {
+			on_add = { log = "[GetLogRoot]: add idea KOL_international_inspectors_idea" }
+			picture = ETH_corrupt_bureaucracy
+			allowed = { always = no }
+			available = {
+			}
+			modifier = {
+				civilian_intel_to_others = 25.0
+				army_intel_to_others = 50.0
+				navy_intel_to_others = 50.0
+				airforce_intel_to_others = 50.0
+			}
+		}
+		KOL_national_disaster_idea = {
+			on_add = { log = "[GetLogRoot]: add idea KOL_national_disaster_idea" }
+			picture = KOL_national_disaster
+			allowed = { always = no }
+			available = {
+			}
+			modifier = {
+				political_power_factor = -0.5
+				stability_factor = -0.2
+				stability_weekly = -0.003
+				war_support_factor = -0.2
+				army_morale_factor = -0.2
+				industrial_capacity_factory = -0.2
+			}
+		}
+		KOL_patchwork_economy_idea = {
+			on_add = { log = "[GetLogRoot]: add idea KOL_patchwork_economy_idea" }
+			picture = bad_economic
+			allowed = { always = no }
+			available = {
+			}
+			modifier = {
+				interest_in_economic_development_factor = -0.5
+				production_speed_infrastructure_factor = -0.5
+				production_speed_hospital_factor = -0.5
+				production_speed_industrial_complex_factor = -0.5
+				production_factory_max_efficiency_factor = -0.15
+				consumer_goods_factor = 0.5
+				min_export = 0.1
+				trade_opinion_factor = 0.05
+				local_resources = 0.05
+			}
+		}
+		KOL_technological_gap_idea = {
+			on_add = { log = "[GetLogRoot]: add idea KOL_technological_gap_idea" }
+			picture = science_base_bad
+			allowed = { always = no }
+			available = {
+			}
+			modifier = {
+				interest_in_economic_development_factor = -0.5
+				num_generation_science_point = 0.1
+				research_speed_factor = -0.3
+				military_industrial_organization_research_bonus = -0.3
+				scientist_research_bonus_factor = -0.3
+			}
+		}
+	
+	
+	
+	
+	
 		KOL_CW_idea = {
 			on_add = { log = "[GetLogRoot]: add idea KOL_CW_idea" }
 			picture = FRA_national_mobilization_focus
