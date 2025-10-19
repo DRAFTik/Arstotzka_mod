@@ -1,3 +1,7 @@
+SAI = {
+	color = rgb { 171 190 152 }
+	color_ui = rgb { 171 190 152 }
+}
 ARS = {
 	color = rgb { 67 101 51 }
 	color_ui = rgb { 67 101 51 }
