@@ -1,7 +1,7 @@
 areas = {
-	protocont = {
+	arcanis = {
 		continents = {
-			protocont
+			arcanis
 		}
 	}
 }

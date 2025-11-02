@@ -1,6 +1,6 @@
 lar_local_recruitment = {
 	#unlocks decisions to recruit in Europe
-	recruit_in_protocont = {
+	recruit_in_arcanis = {
 
 		#icon = generic_research
 
@@ -11,22 +11,22 @@ lar_local_recruitment = {
 		visible = {
 #			capital_scope = {
 #				NOT = {
-#					is_on_continent = protocont
+#					is_on_continent = arcanis
 #				}
 #			}
 #			OR = {
 #				any_owned_state = {
-#					is_on_continent = protocont
+#					is_on_continent = arcanis
 #				}
 #				any_allied_country = {
 #					any_owned_state = {
-#						is_on_continent = protocont
+#						is_on_continent = arcanis
 #					}
 #				}
 #				any_other_country = {
 #					is_subject_of = ROOT
 #					any_owned_state = {
-#						is_on_continent = protocont
+#						is_on_continent = arcanis
 #					}
 #				}
 #			}
@@ -42,7 +42,7 @@ lar_local_recruitment = {
 		days_remove = 90
 
 		remove_effect = {
-			set_country_flag = protocont_recruitment_unlocked
+			set_country_flag = arcanis_recruitment_unlocked
 		}
 
 		ai_will_do = {
@@ -50,7 +50,7 @@ lar_local_recruitment = {
 		}
 	}
 
-	recruit_in_protocont_state = {
+	recruit_in_arcanis_state = {
 
 		icon = onmap_recruit_operative
 
@@ -61,7 +61,7 @@ lar_local_recruitment = {
 		state_target = yes
 		target_trigger = {
 			FROM = {
-				is_on_continent = protocont
+				is_on_continent = arcanis
 				CONTROLLER = {
 					NOT = {
 						tag = ROOT
@@ -72,10 +72,10 @@ lar_local_recruitment = {
 		}
 		visible = {
 			OR = {
-				has_country_flag = protocont_recruitment_unlocked
-				capital_scope = { is_on_continent = protocont }
+				has_country_flag = arcanis_recruitment_unlocked
+				capital_scope = { is_on_continent = arcanis }
 			}
-			NOT = { has_country_flag = protocont_recruitment_in_process }
+			NOT = { has_country_flag = arcanis_recruitment_in_process }
 		}
 
 		fire_only_once = no
@@ -84,7 +84,7 @@ lar_local_recruitment = {
 		days_re_enable = 180
 		on_map_mode = map_only
 		complete_effect = {
-			set_country_flag = { flag = protocont_recruitment_in_process days = 180 value = 1 }
+			set_country_flag = { flag = arcanis_recruitment_in_process days = 180 value = 1 }
 			if = {
 				limit = {
 					num_of_operatives < num_operative_slots

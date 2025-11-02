@@ -1,4 +1,6 @@
 continents = {
-	protocont
 	test
+	arcanis
+	thalassgard
+	surland
 }

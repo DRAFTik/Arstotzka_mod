@@ -22,7 +22,7 @@ default = {
 }
 
 continent = {
-	name = protocont
+	name = arcanis
 	army = {
 		male = {
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"

@@ -1,5 +1,5 @@
 continent = {
-	name = protocont
+	name = arcanis
 	scientist = {
 		female = {
 			"GFX_portrait_generic_europe_female_01"

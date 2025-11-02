@@ -38,37 +38,101 @@ SEM = {
 	color = rgb { 200 150 100 }
 	color_ui = rgb { 200 150 100 }
 }
-CIR = {
-	color = rgb { 51 155 0 }
-	color_ui = rgb { 51 155 0 }
+REV = {
+	color = rgb { 50 145 0 }
+	color_ui = rgb { 50 145 0 }
 }
-GAL = {
-	color = rgb { 145 163 176 }
-	color_ui = rgb { 145 163 176 }
+VIR = {
+	color = rgb { 47 117 138 }
+	color_ui = rgb { 47 117 138 }
 }
-HAR = {
-	color = rgb { 198 130 74 }
-	color_ui = rgb { 198 130 74 }
+DAR = {
+	color = rgb { 147 75 39 }
+	color_ui = rgb { 147 75 39 }
 }
-BOG = {
-	color = rgb { 121 131 196 }
-	color_ui = rgb { 121 131 196 }
+RUD = {
+	color = rgb { 149 143 25 }
+	color_ui = rgb { 149 143 25 }
 }
-GOR = {
-	color = rgb { 193 171 8 }
-	color_ui = rgb { 193 171 8 }
+VAL = {
+	color = rgb { 140 155 155 }
+	color_ui = rgb { 140 155 155 }
 }
-EST = {
-	color = rgb { 132 137 93 }
-	color_ui = rgb { 132 137 93 }
+FAL = {
+	color = rgb { 140 107 63 }
+	color_ui = rgb { 140 107 63 }
 }
-EAS = {
-	color = rgb { 165 77 107 }
-	color_ui = rgb { 165 77 107 }
+KEL = {
+	color = rgb { 165 10 39 }
+	color_ui = rgb { 165 10 39 }
 }
-WES = {
-	color = rgb { 48 96 117 }
-	color_ui = rgb { 48 96 117 }
+NRD = {
+	color = rgb { 45 80 184 }
+	color_ui = rgb { 45 80 184 }
+}
+
+
+# Thalassgard
+
+EDE = {
+	color = rgb { 134 75 133 }
+	color_ui = rgb { 134 75 133  }
+}
+HAL = {
+	color = rgb { 155 170 77 }
+	color_ui = rgb { 155 170 77 }
+}
+HEL = {
+	color = rgb { 105 35 35 }
+	color_ui = rgb { 105 35 35 }
+}
+NOM = {
+	color = rgb { 29 86 153 }
+	color_ui = rgb { 29 86 153 }
+}
+MAS = {
+	color = rgb { 20 121 100 }
+	color_ui = rgb { 20 121 100 }
+}
+BRV = {
+	color = rgb { 185 129 5 }
+	color_ui = rgb { 185 129 5 }
+}
+
+
+# Surland
+
+KLT = {
+	color = rgb { 120 33 33 }
+	color_ui = rgb { 120 33 33 }
+}
+ARK = {
+	color = rgb { 11 113 158 }
+	color_ui = rgb { 11 113 158 }
+}
+SAL = {
+	color = rgb { 94 99 122 }
+	color_ui = rgb { 94 99 122 }
+}
+REX = {
+	color = rgb { 70 70 70 }
+	color_ui = rgb { 70 70 70 }
+}
+NUV = {
+	color = rgb { 124 207 215 }
+	color_ui = rgb { 124 207 215 }
+}
+GRT = {
+	color = rgb { 100 169 0 }
+	color_ui = rgb { 185 129 5 }
+}
+MRK = {
+	color = rgb { 195 173 0 }
+	color_ui = rgb { 195 173 0 }
+}
+TOT = {
+	color = rgb { 252 141 123 }
+	color_ui = rgb { 252 141 123 }
 }
 
 
