@@ -56,14 +56,14 @@ set_politics = {
 	ruling_party = market_liberal
 }
 set_popularities = {
-	totalist					= 0
-	syndicalist					= 3
-	communitarianist			= 6
-	market_liberal				= 15
-	social_conservative			= 11
-	stratocratic_apologetism	= 3
-	patrimonialist				= 46
-	national_populist			= 16
-	national_radicalist			= 0
+	totalist					= 2
+	syndicalist					= 1
+	communitarianist			= 2
+	market_liberal				= 65
+	social_conservative			= 18
+	stratocratic_apologetism	= 4
+	patrimonialist				= 1
+	national_populist			= 5
+	national_radicalist			= 2
 	mysticist					= 0
 }

@@ -53,17 +53,17 @@ add_ideas = {
 # recruit_character = REP_persius_lestrade
 
 set_politics = {
-	ruling_party = market_liberal
+	ruling_party = social_conservative
 }
 set_popularities = {
-	totalist					= 0
-	syndicalist					= 3
-	communitarianist			= 6
-	market_liberal				= 15
-	social_conservative			= 11
-	stratocratic_apologetism	= 3
-	patrimonialist				= 46
-	national_populist			= 16
-	national_radicalist			= 0
+	totalist					= 1
+	syndicalist					= 0
+	communitarianist			= 10
+	market_liberal				= 5
+	social_conservative			= 65
+	stratocratic_apologetism	= 10
+	patrimonialist				= 6
+	national_populist			= 2
+	national_radicalist			= 1
 	mysticist					= 0
 }

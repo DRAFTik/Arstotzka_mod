@@ -15,7 +15,12 @@ country_event = {
 	option = {
 		name = kolechia_CW.1.a
 		ESA = {
-			add_ideas = KOL_CW_idea
+			add_ideas = {
+				KOL_national_disaster_idea
+				KOL_patchwork_economy_idea
+				KOL_technological_gap_idea
+				KOL_CW_idea
+			}
 			add_to_variable	= { provision_total_var = 500 }
 			create_ESA_militia_template = yes
 			every_state = {
@@ -88,7 +93,12 @@ country_event = {
 			}
 		}
 		MLS = {
-			add_ideas = KOL_CW_idea
+			add_ideas = {
+				KOL_national_disaster_idea
+				KOL_patchwork_economy_idea
+				KOL_technological_gap_idea
+				KOL_CW_idea
+			}
 			add_to_variable	= { provision_total_var = 500 }
 			create_MLS_militia_template = yes
 			every_state = {
@@ -176,7 +186,12 @@ country_event = {
 			delete_unit_template_and_units = { division_template = "Kolechian Guard" disband = no }
 		}
 		WGF = {
-			add_ideas = KOL_CW_idea
+			add_ideas = {
+				KOL_national_disaster_idea
+				KOL_patchwork_economy_idea
+				KOL_technological_gap_idea
+				KOL_CW_idea
+			}
 			add_to_variable	= { provision_total_var = 500 }
 			create_WGF_militia_template = yes
 			every_state = {
@@ -249,7 +264,12 @@ country_event = {
 			}
 		}
 		EOL = {
-			add_ideas = KOL_CW_idea
+			add_ideas = {
+				KOL_national_disaster_idea
+				KOL_patchwork_economy_idea
+				KOL_technological_gap_idea
+				KOL_CW_idea
+			}
 			add_to_variable	= { provision_total_var = 500 }
 			create_EOL_militia_template = yes
 			every_state = {
