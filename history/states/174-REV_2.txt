@@ -1,0 +1,21 @@
+state={
+	id=174
+	name="STATE_174"
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 2
+			dockyard = 3
+		}
+		owner = REV
+		add_core_of = REV
+	}
+	provinces={
+		3131 3138 3143 3147 3149 3151 
+	}
+	manpower=1976300
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

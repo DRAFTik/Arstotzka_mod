@@ -1,0 +1,19 @@
+state={
+	id=300
+	name="STATE_300"
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		owner = KEL
+		add_core_of = KEL
+	}
+	provinces={
+		4352 4361 4376 4377 4391 4398 4400 4403 4414 4415 4418 4430 4432 4434 
+	}
+	manpower=1212625
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

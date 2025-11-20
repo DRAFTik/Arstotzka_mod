@@ -1,0 +1,18 @@
+state={
+	id=352
+	name="STATE_352"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = HAL
+		add_core_of = HAL
+	}
+	provinces={
+		4970 4973 4977 4994 4998 5002 5007 5030 5037 5038 5062 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

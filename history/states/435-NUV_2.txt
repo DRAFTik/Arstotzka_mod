@@ -1,0 +1,18 @@
+state={
+	id=435
+	name="STATE_435"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = NUV
+		add_core_of = NUV
+	}
+	provinces={
+		6045 6049 6052 6054 6065 6066 6075 6083 6098 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

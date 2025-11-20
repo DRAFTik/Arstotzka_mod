@@ -1,0 +1,18 @@
+state={
+	id=407
+	name="STATE_407"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = ARK
+		add_core_of = ARK
+	}
+	provinces={
+		6357 6358 6359 6362 6364 6365 6366 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

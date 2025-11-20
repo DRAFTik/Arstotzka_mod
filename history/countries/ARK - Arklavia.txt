@@ -1,4 +1,4 @@
-﻿capital = 188
+﻿capital = 408
 
 # oob = "ARK_start"
 

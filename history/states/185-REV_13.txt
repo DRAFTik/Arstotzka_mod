@@ -1,0 +1,19 @@
+state={
+	id=185
+	name="STATE_185"
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		owner = REV
+		add_core_of = REV
+	}
+	provinces={
+		3113 3115 3117 3118 3132 3133 3136 3145
+	}
+	manpower=1566535
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

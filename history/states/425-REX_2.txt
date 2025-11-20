@@ -1,0 +1,18 @@
+state={
+	id=425
+	name="STATE_425"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = REX
+		add_core_of = REX
+	}
+	provinces={
+		6247 6248 6260 6277 6285 6290 6296 6310 6316 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,19 @@
+state={
+	id=312
+	name="STATE_312"
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		owner = NRD
+		add_core_of = NRD
+	}
+	provinces={
+		4456 4462 4471 4474 4489 4491 4505 4509 4530 4535 
+	}
+	manpower=1427055
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

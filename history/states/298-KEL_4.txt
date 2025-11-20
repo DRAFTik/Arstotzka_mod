@@ -1,0 +1,19 @@
+state={
+	id=298
+	name="STATE_298"
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		owner = KEL
+		add_core_of = KEL
+	}
+	provinces={
+		4394 4404 4405 4410 4423 4424 4428 4435 4440 4448 4452 4453 4459 4460 4468 4477 
+	}
+	manpower=700932
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

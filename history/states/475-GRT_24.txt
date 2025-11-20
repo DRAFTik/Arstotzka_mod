@@ -1,0 +1,18 @@
+state={
+	id=475
+	name="STATE_475"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = GRT
+		add_core_of = GRT
+	}
+	provinces={
+		5861 5871 5875 5886 5896 5899 5914 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,4 +1,4 @@
-﻿capital = 191
+﻿capital = 437
 
 # oob = "NUV_start"
 

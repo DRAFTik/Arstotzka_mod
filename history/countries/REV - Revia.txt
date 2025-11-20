@@ -1,6 +1,6 @@
-﻿capital = 173
+﻿capital = 174
 
-# oob = "REV_start"
+oob = "REV_start"
 
 
 # Starting tech

@@ -1,0 +1,20 @@
+state={
+	id=195
+	name="STATE_195"
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		owner = DAR
+		add_core_of = DAR
+	}
+	provinces={
+		2168 2804 3516 3517 3518 3521 3523 3524
+	}
+	manpower=907760
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

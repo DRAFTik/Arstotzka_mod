@@ -1,6 +1,6 @@
-﻿capital = 177
+﻿capital = 239
 
-# oob = "VAL_start"
+oob = "VAL_start"
 
 
 # Starting tech

@@ -1,2 +1,631 @@
 From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
+5500;2305;sea;2437;-1;-1;-1;-1;;Totayria
+2286;5462;sea;2437;-1;-1;-1;-1;;Totayria
+5571;5568;sea;2453;-1;-1;-1;-1;;Totayria
+5465;5486;sea;2453;-1;-1;-1;-1;;Totayria
+5425;5422;sea;2453;-1;-1;-1;-1;;Totayria
+5432;5446;sea;2453;-1;-1;-1;-1;;Totayria
+2119;2154;sea;2503;-1;-1;-1;-1;;Impor
+63;2154;sea;2503;-1;-1;-1;-1;;Impor
+1218;404;sea;2497;-1;-1;-1;-1;;Arstotzka
+296;405;sea;2982;-1;-1;-1;-1;;Arstotzka
+3532;3540;sea;2370;-1;-1;-1;-1;;Darsten
+327;881;impassable;-1;-1;-1;-1;-1;;Antegria
+6;881;impassable;-1;-1;-1;-1;-1;;Antegria
+1213;881;impassable;-1;-1;-1;-1;-1;;Antegria
+1077;881;impassable;-1;-1;-1;-1;-1;;Antegria
+1875;881;impassable;-1;-1;-1;-1;-1;;Antegria
+152;881;impassable;-1;-1;-1;-1;-1;;Antegria
+1213;1077;impassable;-1;-1;-1;-1;-1;;Antegria
+1213;719;impassable;-1;-1;-1;-1;-1;;Antegria
+597;1987;impassable;-1;-1;-1;-1;-1;;Republia
+597;1991;impassable;-1;-1;-1;-1;-1;;Republia
+1979;1991;impassable;-1;-1;-1;-1;-1;;Republia
+1979;2000;impassable;-1;-1;-1;-1;-1;;Republia
+679;2000;impassable;-1;-1;-1;-1;-1;;Republia
+2007;2000;impassable;-1;-1;-1;-1;-1;;Republia
+2007;276;impassable;-1;-1;-1;-1;-1;;Republia
+724;276;impassable;-1;-1;-1;-1;-1;;Republia
+724;1255;impassable;-1;-1;-1;-1;-1;;Republia
+1100;1255;impassable;-1;-1;-1;-1;-1;;Republia
+101;565;impassable;-1;-1;-1;-1;-1;;Impor
+546;565;impassable;-1;-1;-1;-1;-1;;Impor
+2149;929;impassable;-1;-1;-1;-1;-1;;Impor
+2149;2151;impassable;-1;-1;-1;-1;-1;;Impor
+2150;565;impassable;-1;-1;-1;-1;-1;;Impor
+2149;565;impassable;-1;-1;-1;-1;-1;;Impor
+2137;565;impassable;-1;-1;-1;-1;-1;;Impor
+2140;565;impassable;-1;-1;-1;-1;-1;;Impor
+2146;565;impassable;-1;-1;-1;-1;-1;;Impor
+2146;929;impassable;-1;-1;-1;-1;-1;;Impor
+2144;929;impassable;-1;-1;-1;-1;-1;;Impor
+2140;887;impassable;-1;-1;-1;-1;-1;;Impor
+2140;861;impassable;-1;-1;-1;-1;-1;;Impor
+861;2137;impassable;-1;-1;-1;-1;-1;;Impor
+664;2137;impassable;-1;-1;-1;-1;-1;;Impor
+664;625;impassable;-1;-1;-1;-1;-1;;Impor
+88;974;impassable;-1;-1;-1;-1;-1;;Impor
+88;275;impassable;-1;-1;-1;-1;-1;;Impor
+88;210;impassable;-1;-1;-1;-1;-1;;Impor
+88;534;impassable;-1;-1;-1;-1;-1;;Impor
+275;974;impassable;-1;-1;-1;-1;-1;;Impor
+275;2145;impassable;-1;-1;-1;-1;-1;;Impor
+2138;2145;impassable;-1;-1;-1;-1;-1;;Impor
+2138;1289;impassable;-1;-1;-1;-1;-1;;Impor
+2138;563;impassable;-1;-1;-1;-1;-1;;Impor
+563;1289;impassable;-1;-1;-1;-1;-1;;Impor
+101;1289;impassable;-1;-1;-1;-1;-1;;Impor
+1093;1026;impassable;-1;-1;-1;-1;-1;;Impor
+210;1026;impassable;-1;-1;-1;-1;-1;;Impor
+210;1067;impassable;-1;-1;-1;-1;-1;;Impor
+2128;726;impassable;-1;-1;-1;-1;-1;;Impor
+2128;1249;impassable;-1;-1;-1;-1;-1;;Impor
+2128;664;impassable;-1;-1;-1;-1;-1;;Impor
+726;1249;impassable;-1;-1;-1;-1;-1;;Impor
+2070;964;impassable;-1;-1;-1;-1;-1;;Impor
+332;964;impassable;-1;-1;-1;-1;-1;;Impor
+2132;599;impassable;-1;-1;-1;-1;-1;;Impor Islands
+2136;718;impassable;-1;-1;-1;-1;-1;;Impor Islands
+2139;718;impassable;-1;-1;-1;-1;-1;;Impor Islands
+1346;718;impassable;-1;-1;-1;-1;-1;;Impor Islands
+1346;259;impassable;-1;-1;-1;-1;-1;;Impor Islands
+2133;259;impassable;-1;-1;-1;-1;-1;;Impor Islands
+824;259;impassable;-1;-1;-1;-1;-1;;Impor Islands
+2133;835;impassable;-1;-1;-1;-1;-1;;Impor Islands
+1030;835;impassable;-1;-1;-1;-1;-1;;Impor Islands
+2129;835;impassable;-1;-1;-1;-1;-1;;Impor Islands
+270;835;impassable;-1;-1;-1;-1;-1;;Impor Islands
+1030;1391;impassable;-1;-1;-1;-1;-1;;Impor Islands
+2142;1391;impassable;-1;-1;-1;-1;-1;;Impor Islands
+1075;1391;impassable;-1;-1;-1;-1;-1;;Impor Islands
+2134;1391;impassable;-1;-1;-1;-1;-1;;Impor Islands
+1356;2130;impassable;-1;-1;-1;-1;-1;;United Federation
+2124;2130;impassable;-1;-1;-1;-1;-1;;United Federation
+2124;1082;impassable;-1;-1;-1;-1;-1;;United Federation
+2127;1356;impassable;-1;-1;-1;-1;-1;;United Federation
+2097;856;impassable;-1;-1;-1;-1;-1;;United Federation
+2097;2108;impassable;-1;-1;-1;-1;-1;;United Federation
+2103;9;impassable;-1;-1;-1;-1;-1;;United Federation
+2111;9;impassable;-1;-1;-1;-1;-1;;United Federation
+713;9;impassable;-1;-1;-1;-1;-1;;United Federation
+713;2101;impassable;-1;-1;-1;-1;-1;;United Federation
+713;2094;impassable;-1;-1;-1;-1;-1;;United Federation
+713;2087;impassable;-1;-1;-1;-1;-1;;United Federation
+713;781;impassable;-1;-1;-1;-1;-1;;United Federation
+2111;2110;impassable;-1;-1;-1;-1;-1;;United Federation
+253;2110;impassable;-1;-1;-1;-1;-1;;United Federation
+691;2110;impassable;-1;-1;-1;-1;-1;;United Federation
+691;2105;impassable;-1;-1;-1;-1;-1;;United Federation
+691;48;impassable;-1;-1;-1;-1;-1;;United Federation
+691;2112;impassable;-1;-1;-1;-1;-1;;United Federation
+691;2116;impassable;-1;-1;-1;-1;-1;;United Federation
+2116;2118;impassable;-1;-1;-1;-1;-1;;United Federation
+2122;2118;impassable;-1;-1;-1;-1;-1;;United Federation
+2122;2124;impassable;-1;-1;-1;-1;-1;;United Federation
+868;2124;impassable;-1;-1;-1;-1;-1;;United Federation
+656;112;impassable;-1;-1;-1;-1;-1;;United Federation
+656;983;impassable;-1;-1;-1;-1;-1;;United Federation
+933;983;impassable;-1;-1;-1;-1;-1;;United Federation
+781;2094;impassable;-1;-1;-1;-1;-1;;United Federation
+933;2094;impassable;-1;-1;-1;-1;-1;;United Federation
+933;2092;impassable;-1;-1;-1;-1;-1;;United Federation
+492;39;impassable;-1;-1;-1;-1;-1;;United Federation
+568;39;impassable;-1;-1;-1;-1;-1;;United Federation
+201;407;impassable;-1;-1;-1;-1;-1;;United Federation
+458;407;impassable;-1;-1;-1;-1;-1;;United Federation
+458;2115;impassable;-1;-1;-1;-1;-1;;United Federation
+1350;2115;impassable;-1;-1;-1;-1;-1;;United Federation
+1350;78;impassable;-1;-1;-1;-1;-1;;United Federation
+307;78;impassable;-1;-1;-1;-1;-1;;United Federation
+2099;78;impassable;-1;-1;-1;-1;-1;;United Federation
+1343;78;impassable;-1;-1;-1;-1;-1;;United Federation
+1343;2106;impassable;-1;-1;-1;-1;-1;;United Federation
+1343;24;impassable;-1;-1;-1;-1;-1;;United Federation
+1343;2095;impassable;-1;-1;-1;-1;-1;;United Federation
+811;2095;impassable;-1;-1;-1;-1;-1;;United Federation
+2088;2095;impassable;-1;-1;-1;-1;-1;;United Federation
+1231;2078;impassable;-1;-1;-1;-1;-1;;United Federation
+676;2078;impassable;-1;-1;-1;-1;-1;;United Federation
+667;2078;impassable;-1;-1;-1;-1;-1;;United Federation
+667;584;impassable;-1;-1;-1;-1;-1;;United Federation
+667;2074;impassable;-1;-1;-1;-1;-1;;United Federation
+667;184;impassable;-1;-1;-1;-1;-1;;United Federation
+667;676;impassable;-1;-1;-1;-1;-1;;United Federation
+1065;2074;impassable;-1;-1;-1;-1;-1;;United Federation
+1065;2069;impassable;-1;-1;-1;-1;-1;;United Federation
+1065;2058;impassable;-1;-1;-1;-1;-1;;United Federation
+1065;654;impassable;-1;-1;-1;-1;-1;;United Federation
+638;2058;impassable;-1;-1;-1;-1;-1;;United Federation
+654;2058;impassable;-1;-1;-1;-1;-1;;United Federation
+654;667;impassable;-1;-1;-1;-1;-1;;United Federation
+2058;2069;impassable;-1;-1;-1;-1;-1;;United Federation
+2058;896;impassable;-1;-1;-1;-1;-1;;United Federation
+2058;1065;impassable;-1;-1;-1;-1;-1;;United Federation
+638;1065;impassable;-1;-1;-1;-1;-1;;United Federation
+638;654;impassable;-1;-1;-1;-1;-1;;United Federation
+297;654;impassable;-1;-1;-1;-1;-1;;United Federation
+1088;630;impassable;-1;-1;-1;-1;-1;;United Federation
+630;919;impassable;-1;-1;-1;-1;-1;;United Federation
+1186;919;impassable;-1;-1;-1;-1;-1;;United Federation
+1186;799;impassable;-1;-1;-1;-1;-1;;United Federation
+1228;799;impassable;-1;-1;-1;-1;-1;;United Federation
+1909;799;impassable;-1;-1;-1;-1;-1;;United Federation
+1909;243;impassable;-1;-1;-1;-1;-1;;United Federation
+1873;478;impassable;-1;-1;-1;-1;-1;;United Federation
+936;1873;impassable;-1;-1;-1;-1;-1;;United Federation
+936;1055;impassable;-1;-1;-1;-1;-1;;United Federation
+1080;1055;impassable;-1;-1;-1;-1;-1;;United Federation
+1080;1180;impassable;-1;-1;-1;-1;-1;;United Federation
+1368;1180;impassable;-1;-1;-1;-1;-1;;United Federation
+1368;1811;impassable;-1;-1;-1;-1;-1;;United Federation
+1368;1263;impassable;-1;-1;-1;-1;-1;;United Federation
+1095;1263;impassable;-1;-1;-1;-1;-1;;United Federation
+153;1263;impassable;-1;-1;-1;-1;-1;;United Federation
+153;1161;impassable;-1;-1;-1;-1;-1;;United Federation
+153;176;impassable;-1;-1;-1;-1;-1;;United Federation
+176;928;impassable;-1;-1;-1;-1;-1;;United Federation
+1713;176;impassable;-1;-1;-1;-1;-1;;United Federation
+557;176;impassable;-1;-1;-1;-1;-1;;United Federation
+557;687;impassable;-1;-1;-1;-1;-1;;United Federation
+687;1251;impassable;-1;-1;-1;-1;-1;;United Federation
+577;892;impassable;-1;-1;-1;-1;-1;;United Federation
+1733;892;impassable;-1;-1;-1;-1;-1;;United Federation
+1733;1754;impassable;-1;-1;-1;-1;-1;;United Federation
+371;1754;impassable;-1;-1;-1;-1;-1;;United Federation
+371;1755;impassable;-1;-1;-1;-1;-1;;United Federation
+371;179;impassable;-1;-1;-1;-1;-1;;United Federation
+825;179;impassable;-1;-1;-1;-1;-1;;United Federation
+825;1731;impassable;-1;-1;-1;-1;-1;;United Federation
+1755;1754;impassable;-1;-1;-1;-1;-1;;United Federation
+138;1754;impassable;-1;-1;-1;-1;-1;;United Federation
+138;892;impassable;-1;-1;-1;-1;-1;;United Federation
+138;1388;impassable;-1;-1;-1;-1;-1;;United Federation
+758;138;impassable;-1;-1;-1;-1;-1;;United Federation
+1352;758;impassable;-1;-1;-1;-1;-1;;United Federation
+1352;1388;impassable;-1;-1;-1;-1;-1;;United Federation
+1352;1007;impassable;-1;-1;-1;-1;-1;;United Federation
+802;1699;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1710;1699;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+825;1699;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1731;1716;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1731;169;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1751;1731;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1751;179;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1751;1771;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1772;1771;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1772;1219;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1772;778;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+203;778;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1119;778;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1086;778;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+959;1086;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+959;1102;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1195;1102;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+1195;1851;impassable;-1;-1;-1;-1;-1;;United Federation - Obristan
+2056;2053;impassable;-1;-1;-1;-1;-1;;Kolechia
+798;2053;impassable;-1;-1;-1;-1;-1;;Kolechia
+95;2053;impassable;-1;-1;-1;-1;-1;;Kolechia
+95;761;impassable;-1;-1;-1;-1;-1;;Kolechia
+95;2042;impassable;-1;-1;-1;-1;-1;;Kolechia
+95;688;impassable;-1;-1;-1;-1;-1;;Kolechia
+2060;688;impassable;-1;-1;-1;-1;-1;;Kolechia
+2055;688;impassable;-1;-1;-1;-1;-1;;Kolechia
+1134;688;impassable;-1;-1;-1;-1;-1;;Kolechia
+1134;2055;impassable;-1;-1;-1;-1;-1;;Kolechia
+1134;1135;impassable;-1;-1;-1;-1;-1;;Kolechia
+785;1974;impassable;-1;-1;-1;-1;-1;;Kolechia
+897;1974;impassable;-1;-1;-1;-1;-1;;Kolechia
+897;542;impassable;-1;-1;-1;-1;-1;;Kolechia
+1115;542;impassable;-1;-1;-1;-1;-1;;Kolechia
+1235;542;impassable;-1;-1;-1;-1;-1;;Kolechia
+1111;1879;impassable;-1;-1;-1;-1;-1;;Kolechia
+578;1879;impassable;-1;-1;-1;-1;-1;;Kolechia
+578;1337;impassable;-1;-1;-1;-1;-1;;Kolechia
+578;90;impassable;-1;-1;-1;-1;-1;;Kolechia
+1264;578;impassable;-1;-1;-1;-1;-1;;Kolechia
+1264;1838;impassable;-1;-1;-1;-1;-1;;Kolechia
+1264;426;impassable;-1;-1;-1;-1;-1;;Kolechia
+1264;1800;impassable;-1;-1;-1;-1;-1;;Kolechia
+1831;1800;impassable;-1;-1;-1;-1;-1;;Kolechia
+1831;445;impassable;-1;-1;-1;-1;-1;;Kolechia
+191;459;impassable;-1;-1;-1;-1;-1;;Kolechia
+1727;1743;impassable;-1;-1;-1;-1;-1;;Kolechia
+1727;459;impassable;-1;-1;-1;-1;-1;;Kolechia
+1743;665;impassable;-1;-1;-1;-1;-1;;Kolechia
+242;665;impassable;-1;-1;-1;-1;-1;;Kolechia
+1109;665;impassable;-1;-1;-1;-1;-1;;Kolechia
+1109;1393;impassable;-1;-1;-1;-1;-1;;Kolechia
+1759;1393;impassable;-1;-1;-1;-1;-1;;Kolechia
+681;1393;impassable;-1;-1;-1;-1;-1;;Kolechia
+681;1724;impassable;-1;-1;-1;-1;-1;;Kolechia
+681;769;impassable;-1;-1;-1;-1;-1;;Kolechia
+1746;769;impassable;-1;-1;-1;-1;-1;;Kolechia
+1746;1729;impassable;-1;-1;-1;-1;-1;;Kolechia
+406;1729;impassable;-1;-1;-1;-1;-1;;Kolechia
+406;1736;impassable;-1;-1;-1;-1;-1;;Kolechia
+1396;1736;impassable;-1;-1;-1;-1;-1;;Kolechia
+1396;992;impassable;-1;-1;-1;-1;-1;;Kolechia
+1774;992;impassable;-1;-1;-1;-1;-1;;Kolechia
+1763;992;impassable;-1;-1;-1;-1;-1;;Kolechia
+1763;1360;impassable;-1;-1;-1;-1;-1;;Kolechia
+146;1360;impassable;-1;-1;-1;-1;-1;;Kolechia
+1714;1360;impassable;-1;-1;-1;-1;-1;;Kolechia
+771;1360;impassable;-1;-1;-1;-1;-1;;Kolechia
+188;769;impassable;-1;-1;-1;-1;-1;;Kolechia
+188;627;impassable;-1;-1;-1;-1;-1;;Kolechia
+1611;1237;impassable;-1;-1;-1;-1;-1;;Kolechia
+1611;1237;impassable;-1;-1;-1;-1;-1;;Kolechia
+435;1237;impassable;-1;-1;-1;-1;-1;;Kolechia
+435;419;impassable;-1;-1;-1;-1;-1;;Kolechia
+435;291;impassable;-1;-1;-1;-1;-1;;Kolechia
+435;1092;impassable;-1;-1;-1;-1;-1;;Kolechia
+1045;1092;impassable;-1;-1;-1;-1;-1;;Kolechia
+1045;956;impassable;-1;-1;-1;-1;-1;;Kolechia
+245;956;impassable;-1;-1;-1;-1;-1;;Kolechia
+245;1670;impassable;-1;-1;-1;-1;-1;;Kolechia
+289;1670;impassable;-1;-1;-1;-1;-1;;Kolechia
+1070;1670;impassable;-1;-1;-1;-1;-1;;Kolechia
+1070;1670;impassable;-1;-1;-1;-1;-1;;Kolechia
+1070;956;impassable;-1;-1;-1;-1;-1;;Kolechia
+1070;795;impassable;-1;-1;-1;-1;-1;;Kolechia
+1070;1712;impassable;-1;-1;-1;-1;-1;;Kolechia
+1712;1393;impassable;-1;-1;-1;-1;-1;;Kolechia - Obristan
+1712;990;impassable;-1;-1;-1;-1;-1;;Kolechia - Obristan
+795;990;impassable;-1;-1;-1;-1;-1;;Kolechia - Obristan
+1676;990;impassable;-1;-1;-1;-1;-1;;Kolechia - Obristan
+1676;627;impassable;-1;-1;-1;-1;-1;;Kolechia - Obristan
+113;627;impassable;-1;-1;-1;-1;-1;;Kolechia - Obristan
+113;188;impassable;-1;-1;-1;-1;-1;;Kolechia - Obristan
+865;188;impassable;-1;-1;-1;-1;-1;;Kolechia - Obristan
+865;834;impassable;-1;-1;-1;-1;-1;;Kolechia - Obristan
+268;1802;impassable;-1;-1;-1;-1;-1;;Obristan
+1813;1802;impassable;-1;-1;-1;-1;-1;;Obristan
+1813;156;impassable;-1;-1;-1;-1;-1;;Obristan
+1119;156;impassable;-1;-1;-1;-1;-1;;Obristan
+203;156;impassable;-1;-1;-1;-1;-1;;Obristan
+1256;156;impassable;-1;-1;-1;-1;-1;;Obristan
+1256;488;impassable;-1;-1;-1;-1;-1;;Obristan
+1256;1020;impassable;-1;-1;-1;-1;-1;;Obristan
+720;1020;impassable;-1;-1;-1;-1;-1;;Obristan
+1725;1020;impassable;-1;-1;-1;-1;-1;;Obristan
+1725;1719;impassable;-1;-1;-1;-1;-1;;Obristan
+1020;1719;impassable;-1;-1;-1;-1;-1;;Obristan
+1798;1122;impassable;-1;-1;-1;-1;-1;;Obristan
+860;1122;impassable;-1;-1;-1;-1;-1;;Obristan
+250;1122;impassable;-1;-1;-1;-1;-1;;Obristan
+250;1773;impassable;-1;-1;-1;-1;-1;;Obristan
+1750;1773;impassable;-1;-1;-1;-1;-1;;Obristan
+1750;488;impassable;-1;-1;-1;-1;-1;;Obristan
+1293;488;impassable;-1;-1;-1;-1;-1;;Obristan
+1257;250;impassable;-1;-1;-1;-1;-1;;Obristan
+1257;1739;impassable;-1;-1;-1;-1;-1;;Obristan
+1739;1734;impassable;-1;-1;-1;-1;-1;;Obristan
+55;1734;impassable;-1;-1;-1;-1;-1;;Obristan
+1717;1734;impassable;-1;-1;-1;-1;-1;;Obristan
+1717;1726;impassable;-1;-1;-1;-1;-1;;Obristan
+1717;1156;impassable;-1;-1;-1;-1;-1;;Obristan
+1702;1156;impassable;-1;-1;-1;-1;-1;;Obristan
+1702;1156;impassable;-1;-1;-1;-1;-1;;Obristan
+1702;98;impassable;-1;-1;-1;-1;-1;;Obristan
+1702;1685;impassable;-1;-1;-1;-1;-1;;Obristan
+1697;1685;impassable;-1;-1;-1;-1;-1;;Obristan
+1697;154;impassable;-1;-1;-1;-1;-1;;Obristan
+377;154;impassable;-1;-1;-1;-1;-1;;Obristan
+842;121;impassable;-1;-1;-1;-1;-1;;Obristan
+842;319;impassable;-1;-1;-1;-1;-1;;Obristan
+842;1658;impassable;-1;-1;-1;-1;-1;;Obristan
+1658;984;impassable;-1;-1;-1;-1;-1;;Obristan
+1658;400;impassable;-1;-1;-1;-1;-1;;Obristan
+403;400;impassable;-1;-1;-1;-1;-1;;Obristan
+403;631;impassable;-1;-1;-1;-1;-1;;Obristan
+170;631;impassable;-1;-1;-1;-1;-1;;Obristan
+631;292;impassable;-1;-1;-1;-1;-1;;Obristan
+875;292;impassable;-1;-1;-1;-1;-1;;Obristan
+875;606;impassable;-1;-1;-1;-1;-1;;Obristan
+875;705;impassable;-1;-1;-1;-1;-1;;Obristan
+875;226;impassable;-1;-1;-1;-1;-1;;Obristan
+1726;583;impassable;-1;-1;-1;-1;-1;;Obristan
+20;583;impassable;-1;-1;-1;-1;-1;;Obristan
+20;236;impassable;-1;-1;-1;-1;-1;;Obristan
+20;1012;impassable;-1;-1;-1;-1;-1;;Obristan
+41;1012;impassable;-1;-1;-1;-1;-1;;Obristan
+96;1012;impassable;-1;-1;-1;-1;-1;;Obristan
+96;1340;impassable;-1;-1;-1;-1;-1;;Obristan
+96;1015;impassable;-1;-1;-1;-1;-1;;Obristan
+151;1015;impassable;-1;-1;-1;-1;-1;;Obristan
+151;1127;impassable;-1;-1;-1;-1;-1;;Obristan
+151;1711;impassable;-1;-1;-1;-1;-1;;Obristan
+709;1711;impassable;-1;-1;-1;-1;-1;;Obristan
+548;1711;impassable;-1;-1;-1;-1;-1;;Obristan
+548;814;impassable;-1;-1;-1;-1;-1;;Obristan
+1686;814;impassable;-1;-1;-1;-1;-1;;Obristan
+940;814;impassable;-1;-1;-1;-1;-1;;Obristan
+940;100;impassable;-1;-1;-1;-1;-1;;Obristan
+344;100;impassable;-1;-1;-1;-1;-1;;Obristan
+344;953;impassable;-1;-1;-1;-1;-1;;Obristan
+1708;953;impassable;-1;-1;-1;-1;-1;;Obristan
+1230;595;impassable;-1;-1;-1;-1;-1;;Obristan
+1708;595;impassable;-1;-1;-1;-1;-1;;Obristan
+1230;624;impassable;-1;-1;-1;-1;-1;;Obristan
+1230;36;impassable;-1;-1;-1;-1;-1;;Obristan
+1378;36;impassable;-1;-1;-1;-1;-1;;Obristan
+1378;1073;impassable;-1;-1;-1;-1;-1;;Obristan
+1378;1688;impassable;-1;-1;-1;-1;-1;;Obristan
+1668;1688;impassable;-1;-1;-1;-1;-1;;Obristan
+1639;937;impassable;-1;-1;-1;-1;-1;;Obristan
+1639;1659;impassable;-1;-1;-1;-1;-1;;Obristan
+1035;1659;impassable;-1;-1;-1;-1;-1;;Obristan
+1035;1328;impassable;-1;-1;-1;-1;-1;;Obristan
+81;1328;impassable;-1;-1;-1;-1;-1;;Obristan
+81;344;impassable;-1;-1;-1;-1;-1;;Obristan
+1687;344;impassable;-1;-1;-1;-1;-1;;Obristan
+1708;1687;impassable;-1;-1;-1;-1;-1;;Obristan
+1708;1378;impassable;-1;-1;-1;-1;-1;;Obristan
+1622;752;impassable;-1;-1;-1;-1;-1;;Obristan
+317;752;impassable;-1;-1;-1;-1;-1;;Obristan
+1600;752;impassable;-1;-1;-1;-1;-1;;Obristan
+1267;752;impassable;-1;-1;-1;-1;-1;;Obristan
+1267;321;impassable;-1;-1;-1;-1;-1;;Obristan
+741;321;impassable;-1;-1;-1;-1;-1;;Obristan
+741;1623;impassable;-1;-1;-1;-1;-1;;Obristan
+1613;1623;impassable;-1;-1;-1;-1;-1;;Obristan
+1613;1643;impassable;-1;-1;-1;-1;-1;;Obristan
+3;1643;impassable;-1;-1;-1;-1;-1;;Obristan
+3;954;impassable;-1;-1;-1;-1;-1;;Obristan
+3;1634;impassable;-1;-1;-1;-1;-1;;Obristan
+512;1634;impassable;-1;-1;-1;-1;-1;;Obristan
+512;396;impassable;-1;-1;-1;-1;-1;;Obristan
+1614;396;impassable;-1;-1;-1;-1;-1;;Obristan
+1614;734;impassable;-1;-1;-1;-1;-1;;Obristan
+1606;734;impassable;-1;-1;-1;-1;-1;;Obristan
+1606;182;impassable;-1;-1;-1;-1;-1;;Obristan
+623;182;impassable;-1;-1;-1;-1;-1;;Obristan
+373;182;impassable;-1;-1;-1;-1;-1;;Obristan
+373;1607;impassable;-1;-1;-1;-1;-1;;Obristan
+373;747;impassable;-1;-1;-1;-1;-1;;Obristan
+1580;747;impassable;-1;-1;-1;-1;-1;;Obristan
+1568;747;impassable;-1;-1;-1;-1;-1;;Obristan
+1568;1585;impassable;-1;-1;-1;-1;-1;;Obristan
+1001;1585;impassable;-1;-1;-1;-1;-1;;Obristan
+1001;1389;impassable;-1;-1;-1;-1;-1;;Obristan
+1001;1555;impassable;-1;-1;-1;-1;-1;;Obristan
+1547;1555;impassable;-1;-1;-1;-1;-1;;Obristan
+172;1555;impassable;-1;-1;-1;-1;-1;;Obristan
+172;748;impassable;-1;-1;-1;-1;-1;;Obristan
+1528;748;impassable;-1;-1;-1;-1;-1;;Obristan
+68;748;impassable;-1;-1;-1;-1;-1;;Obristan
+68;1516;impassable;-1;-1;-1;-1;-1;;Obristan
+68;383;impassable;-1;-1;-1;-1;-1;;Obristan
+764;383;impassable;-1;-1;-1;-1;-1;;Obristan
+1485;383;impassable;-1;-1;-1;-1;-1;;Obristan
+889;383;impassable;-1;-1;-1;-1;-1;;Obristan
+1493;383;impassable;-1;-1;-1;-1;-1;;Obristan
+273;383;impassable;-1;-1;-1;-1;-1;;Obristan
+748;1336;impassable;-1;-1;-1;-1;-1;;Obristan
+1542;1336;impassable;-1;-1;-1;-1;-1;;Obristan
+1542;602;impassable;-1;-1;-1;-1;-1;;Obristan
+158;602;impassable;-1;-1;-1;-1;-1;;Obristan
+1583;602;impassable;-1;-1;-1;-1;-1;;Obristan
+204;602;impassable;-1;-1;-1;-1;-1;;Obristan
+204;900;impassable;-1;-1;-1;-1;-1;;Obristan
+204;1562;impassable;-1;-1;-1;-1;-1;;Obristan
+1576;1562;impassable;-1;-1;-1;-1;-1;;Obristan
+816;1562;impassable;-1;-1;-1;-1;-1;;Obristan
+816;1191;impassable;-1;-1;-1;-1;-1;;Obristan
+1569;1191;impassable;-1;-1;-1;-1;-1;;Obristan
+394;1191;impassable;-1;-1;-1;-1;-1;;Obristan
+158;1583;impassable;-1;-1;-1;-1;-1;;Obristan
+158;1083;impassable;-1;-1;-1;-1;-1;;Obristan
+262;1083;impassable;-1;-1;-1;-1;-1;;Obristan
+262;1572;impassable;-1;-1;-1;-1;-1;;Obristan
+1555;1572;impassable;-1;-1;-1;-1;-1;;Obristan
+1555;1389;impassable;-1;-1;-1;-1;-1;;Obristan
+728;1336;impassable;-1;-1;-1;-1;-1;;Obristan
+728;1329;impassable;-1;-1;-1;-1;-1;;Obristan
+249;1329;impassable;-1;-1;-1;-1;-1;;Obristan
+249;1130;impassable;-1;-1;-1;-1;-1;;Obristan
+249;1408;impassable;-1;-1;-1;-1;-1;;Obristan
+249;1326;impassable;-1;-1;-1;-1;-1;;Obristan
+686;1326;impassable;-1;-1;-1;-1;-1;;Obristan
+843;1326;impassable;-1;-1;-1;-1;-1;;Obristan
+843;141;impassable;-1;-1;-1;-1;-1;;Obristan
+843;1481;impassable;-1;-1;-1;-1;-1;;Obristan
+843;943;impassable;-1;-1;-1;-1;-1;;Obristan
+843;345;impassable;-1;-1;-1;-1;-1;;Obristan
+686;345;impassable;-1;-1;-1;-1;-1;;Obristan
+273;728;impassable;-1;-1;-1;-1;-1;;Obristan
+686;728;impassable;-1;-1;-1;-1;-1;;Obristan
+1586;1112;impassable;-1;-1;-1;-1;-1;;Obristan
+1586;608;impassable;-1;-1;-1;-1;-1;;Obristan
+1601;608;impassable;-1;-1;-1;-1;-1;;Obristan
+1601;645;impassable;-1;-1;-1;-1;-1;;Obristan
+1612;645;impassable;-1;-1;-1;-1;-1;;Obristan
+1612;402;impassable;-1;-1;-1;-1;-1;;Obristan
+1612;1629;impassable;-1;-1;-1;-1;-1;;Obristan
+1612;1331;impassable;-1;-1;-1;-1;-1;;Obristan
+322;1112;impassable;-1;-1;-1;-1;-1;;Obristan
+322;394;impassable;-1;-1;-1;-1;-1;;Obristan
+322;1569;impassable;-1;-1;-1;-1;-1;;Obristan
+322;1591;impassable;-1;-1;-1;-1;-1;;Obristan
+322;1604;impassable;-1;-1;-1;-1;-1;;Obristan
+847;1604;impassable;-1;-1;-1;-1;-1;;Obristan
+1624;1604;impassable;-1;-1;-1;-1;-1;;Obristan
+845;1604;impassable;-1;-1;-1;-1;-1;;Obristan
+845;314;impassable;-1;-1;-1;-1;-1;;Obristan
+845;1403;impassable;-1;-1;-1;-1;-1;;Obristan
+145;1403;impassable;-1;-1;-1;-1;-1;;Obristan
+1611;1403;impassable;-1;-1;-1;-1;-1;;Obristan
+1611;543;impassable;-1;-1;-1;-1;-1;;Obristan
+1073;1041;impassable;-1;-1;-1;-1;-1;;Obristan
+131;1692;impassable;-1;-1;-1;-1;-1;;Obristan
+1674;1692;impassable;-1;-1;-1;-1;-1;;Obristan
+1694;1692;impassable;-1;-1;-1;-1;-1;;Obristan
+1694;134;impassable;-1;-1;-1;-1;-1;;Obristan
+1707;134;impassable;-1;-1;-1;-1;-1;;Obristan
+1021;1707;impassable;-1;-1;-1;-1;-1;;Obristan
+774;1707;impassable;-1;-1;-1;-1;-1;;Obristan
+774;1041;impassable;-1;-1;-1;-1;-1;;Obristan
+1688;1041;impassable;-1;-1;-1;-1;-1;;Obristan
+1667;1041;impassable;-1;-1;-1;-1;-1;;Obristan
+74;1041;impassable;-1;-1;-1;-1;-1;;Obristan
+74;1311;impassable;-1;-1;-1;-1;-1;;Obristan
+1649;1311;impassable;-1;-1;-1;-1;-1;;Obristan
+1649;1674;impassable;-1;-1;-1;-1;-1;;Obristan
+1649;1153;impassable;-1;-1;-1;-1;-1;;Obristan
+1223;1153;impassable;-1;-1;-1;-1;-1;;Obristan
+125;1153;impassable;-1;-1;-1;-1;-1;;Obristan
+125;646;impassable;-1;-1;-1;-1;-1;;Obristan
+125;1379;impassable;-1;-1;-1;-1;-1;;Obristan
+125;549;impassable;-1;-1;-1;-1;-1;;Obristan
+1278;549;impassable;-1;-1;-1;-1;-1;;Obristan
+129;549;impassable;-1;-1;-1;-1;-1;;Obristan
+1166;549;impassable;-1;-1;-1;-1;-1;;Obristan
+1237;549;impassable;-1;-1;-1;-1;-1;;Obristan
+1630;549;impassable;-1;-1;-1;-1;-1;;Obristan
+1630;1379;impassable;-1;-1;-1;-1;-1;;Obristan
+1630;1660;impassable;-1;-1;-1;-1;-1;;Obristan
+1660;419;impassable;-1;-1;-1;-1;-1;;Obristan
+113;419;impassable;-1;-1;-1;-1;-1;;Obristan
+113;291;impassable;-1;-1;-1;-1;-1;;Obristan
+113;1676;impassable;-1;-1;-1;-1;-1;;Obristan
+1664;1681;impassable;-1;-1;-1;-1;-1;;Obristan
+289;1681;impassable;-1;-1;-1;-1;-1;;Obristan
+1672;1681;impassable;-1;-1;-1;-1;-1;;Obristan
+903;1672;impassable;-1;-1;-1;-1;-1;;Obristan
+903;662;impassable;-1;-1;-1;-1;-1;;Obristan
+903;786;impassable;-1;-1;-1;-1;-1;;Obristan
+1392;786;impassable;-1;-1;-1;-1;-1;;Obristan
+1392;863;impassable;-1;-1;-1;-1;-1;;Obristan
+232;863;impassable;-1;-1;-1;-1;-1;;Obristan
+232;1149;impassable;-1;-1;-1;-1;-1;;Obristan
+931;2011;impassable;-1;-1;-1;-1;-1;;Arstotzka
+931;1308;impassable;-1;-1;-1;-1;-1;;Arstotzka
+300;1308;impassable;-1;-1;-1;-1;-1;;Arstotzka
+533;1308;impassable;-1;-1;-1;-1;-1;;Arstotzka
+533;524;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1984;524;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1984;475;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1277;475;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1277;2003;impassable;-1;-1;-1;-1;-1;;Arstotzka
+27;2003;impassable;-1;-1;-1;-1;-1;;Arstotzka
+27;2004;impassable;-1;-1;-1;-1;-1;;Arstotzka
+27;592;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1181;592;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1042;592;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1980;1042;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1980;187;impassable;-1;-1;-1;-1;-1;;Arstotzka
+160;187;impassable;-1;-1;-1;-1;-1;;Arstotzka
+160;1958;impassable;-1;-1;-1;-1;-1;;Arstotzka
+160;1966;impassable;-1;-1;-1;-1;-1;;Arstotzka
+416;1966;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1976;1966;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1181;1042;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1181;1956;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1181;511;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1286;511;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1286;612;impassable;-1;-1;-1;-1;-1;;Arstotzka
+776;612;impassable;-1;-1;-1;-1;-1;;Arstotzka
+776;1919;impassable;-1;-1;-1;-1;-1;;Arstotzka
+912;1919;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1972;104;impassable;-1;-1;-1;-1;-1;;Arstotzka
+104;1310;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1309;1310;impassable;-1;-1;-1;-1;-1;;Arstotzka
+951;1310;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1047;1310;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1047;1994;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1047;79;impassable;-1;-1;-1;-1;-1;;Arstotzka
+2024;79;impassable;-1;-1;-1;-1;-1;;Arstotzka
+334;79;impassable;-1;-1;-1;-1;-1;;Arstotzka
+334;641;impassable;-1;-1;-1;-1;-1;;Arstotzka
+641;2023;impassable;-1;-1;-1;-1;-1;;Arstotzka
+641;2012;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1302;2012;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1302;401;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1062;401;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1062;1996;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1062;775;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1967;775;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1965;775;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1185;1965;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1185;1258;impassable;-1;-1;-1;-1;-1;;Arstotzka
+677;1258;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1961;1975;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1270;1975;impassable;-1;-1;-1;-1;-1;;Arstotzka
+911;1975;impassable;-1;-1;-1;-1;-1;;Arstotzka
+15;911;impassable;-1;-1;-1;-1;-1;;Arstotzka
+15;1316;impassable;-1;-1;-1;-1;-1;;Arstotzka
+15;1998;impassable;-1;-1;-1;-1;-1;;Arstotzka
+######
+1954;1939;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1931;1939;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1931;357;impassable;-1;-1;-1;-1;-1;;Arstotzka
+357;56;impassable;-1;-1;-1;-1;-1;;Arstotzka
+465;56;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1048;56;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1876;56;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1876;1863;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1848;1863;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1848;670;impassable;-1;-1;-1;-1;-1;;Arstotzka
+######
+1006;1133;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1006;1830;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1006;1810;impassable;-1;-1;-1;-1;-1;;Arstotzka
+711;1810;impassable;-1;-1;-1;-1;-1;;Arstotzka
+711;1010;impassable;-1;-1;-1;-1;-1;;Arstotzka
+711;1784;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1776;1784;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1776;450;impassable;-1;-1;-1;-1;-1;;Arstotzka
+722;450;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1738;450;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1738;1032;impassable;-1;-1;-1;-1;-1;;Arstotzka
+970;1032;impassable;-1;-1;-1;-1;-1;;Arstotzka
+115;1032;impassable;-1;-1;-1;-1;-1;;Arstotzka
+115;1158;impassable;-1;-1;-1;-1;-1;;Arstotzka
+115;175;impassable;-1;-1;-1;-1;-1;;Arstotzka
+267;175;impassable;-1;-1;-1;-1;-1;;Arstotzka
+######
+1783;52;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1783;607;impassable;-1;-1;-1;-1;-1;;Arstotzka
+731;607;impassable;-1;-1;-1;-1;-1;;Arstotzka
+731;331;impassable;-1;-1;-1;-1;-1;;Arstotzka
+1740;331;impassable;-1;-1;-1;-1;-1;;Arstotzka
+485;331;impassable;-1;-1;-1;-1;-1;;Arstotzka
+485;1732;impassable;-1;-1;-1;-1;-1;;Arstotzka
+485;1158;impassable;-1;-1;-1;-1;-1;;Arstotzka
+485;93;impassable;-1;-1;-1;-1;-1;;Arstotzka
+192;93;impassable;-1;-1;-1;-1;-1;;Arstotzka
+######
+175;1661;impassable;-1;-1;-1;-1;-1;;Arstotzka - Obristan
+175;1136;impassable;-1;-1;-1;-1;-1;;Arstotzka - Obristan
+175;1182;impassable;-1;-1;-1;-1;-1;;Arstotzka - Obristan
+93;1182;impassable;-1;-1;-1;-1;-1;;Arstotzka - Obristan
+93;1679;impassable;-1;-1;-1;-1;-1;;Arstotzka - Obristan
+######
+282;1521;impassable;-1;-1;-1;-1;-1;;Semistan
+282;1507;impassable;-1;-1;-1;-1;-1;;Semistan
+282;1199;impassable;-1;-1;-1;-1;-1;;Semistan
+1512;1199;impassable;-1;-1;-1;-1;-1;;Semistan
+######
+513;674;impassable;-1;-1;-1;-1;-1;;Skoatia
+913;674;impassable;-1;-1;-1;-1;-1;;Skoatia
+913;452;impassable;-1;-1;-1;-1;-1;;Skoatia
+796;452;impassable;-1;-1;-1;-1;-1;;Skoatia
+796;642;impassable;-1;-1;-1;-1;-1;;Skoatia
+1720;642;impassable;-1;-1;-1;-1;-1;;Skoatia
+1720;808;impassable;-1;-1;-1;-1;-1;;Skoatia
+1703;808;impassable;-1;-1;-1;-1;-1;;Skoatia
+678;808;impassable;-1;-1;-1;-1;-1;;Skoatia
+######
+1209;173;impassable;-1;-1;-1;-1;-1;;Skoatia
+468;173;impassable;-1;-1;-1;-1;-1;;Skoatia
+468;1690;impassable;-1;-1;-1;-1;-1;;Skoatia
+509;1690;impassable;-1;-1;-1;-1;-1;;Skoatia
+509;622;impassable;-1;-1;-1;-1;-1;;Skoatia
+451;622;impassable;-1;-1;-1;-1;-1;;Skoatia
+1654;622;impassable;-1;-1;-1;-1;-1;;Skoatia
+1654;1411;impassable;-1;-1;-1;-1;-1;;Skoatia
+1009;1411;impassable;-1;-1;-1;-1;-1;;Skoatia
+1390;1411;impassable;-1;-1;-1;-1;-1;;Skoatia
+1390;537;impassable;-1;-1;-1;-1;-1;;Skoatia
 -1;-1;;-1;-1;-1;-1;-1;-1
+#Start province ID;End province ID;Adjacency type;Through province ID;Starting X position;Starting Y position;Ending X position;Ending Y position;Adjacency rule;Comment

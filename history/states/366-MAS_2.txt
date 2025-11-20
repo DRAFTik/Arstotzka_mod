@@ -1,0 +1,18 @@
+state={
+	id=366
+	name="STATE_366"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = MAS
+		add_core_of = MAS
+	}
+	provinces={
+		4845 4871 4881 4900 4928 4933  
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,18 @@
+state={
+	id=353
+	name="STATE_353"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = BRV
+		add_core_of = BRV
+	}
+	provinces={
+		4656 4676 4684 4703 4717 4738 4752 4778 4785 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

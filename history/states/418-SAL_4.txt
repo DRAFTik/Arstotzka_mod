@@ -1,0 +1,18 @@
+state={
+	id=418
+	name="STATE_418"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = SAL
+		add_core_of = SAL
+	}
+	provinces={
+		6145 6173 6181 6191 6192 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

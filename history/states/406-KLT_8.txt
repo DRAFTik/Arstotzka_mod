@@ -1,0 +1,18 @@
+state={
+	id=406
+	name="STATE_406"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = KLT
+		add_core_of = KLT
+	}
+	provinces={
+		6077 6079 6095 6103 6108 6127 6134 6155 6168 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

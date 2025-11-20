@@ -1,0 +1,19 @@
+state={
+	id=255
+	name="STATE_255"
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		owner = FAL
+		add_core_of = FAL
+	}
+	provinces={
+		3908 3909 3911 3912 3914 3918 3927 3929 3930 3932 3935 3943 3948 3951 3952
+	}
+	manpower=652946
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

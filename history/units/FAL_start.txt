@@ -1,0 +1,412 @@
+﻿## notes ##
+# priority = 0 #low priority
+# priority = 1 #med priority
+# priority = 2 #high priority
+
+## Units stuff ##
+# start_equipment_factor = 0.00 - 1.00	#(percentage of equipment unit has in begining)
+# start_manpower_factor = 0.00 - 1.00 	#(percentage of manpower unit has in begining)
+# start_experience_factor = 0.000 -1.000	#(level of experience unit has in begining (in percentage))
+
+### training percentage ###
+## 0.000 - 0.099					#green (percentage from 0% #0.000 to 99% #0.099)		#add 1% training with 0.001
+## 0.100 - 0.298					#trained (percentage from 0% #0.100 to 99% #0.298)		#add 1% training with 0.002
+## 0.300 - 0.746  					#regular (percentage from 0% #0.300 to 99% #0.746)		#add 2% training with 0.009
+## 0.750 - 0.899					#experient (percentage from 0% #0.750 to 99% #0.899)	#add 2% training with 0.003
+## 0.900 - 1.000					#veteran (percentage from 0% #0.900 to 99% #1.000)		#add 1% training with 0.001
+
+
+division_template = {
+	name = "Falcornian Guard"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 1 }
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "National Militia"
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 0
+}
+
+division_template = {
+	name = "Falcornian Artillery Brigade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }
+		artillery_brigade = { x = 1 y = 4 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Falcornian Mobile Brigade"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Mountain Stormtroopers"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+
+### unit positions ###
+units = {
+	division = {
+		name = "1st Falcornian Guard regiment"
+		location = 3874
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Falcornian Guard regiment"
+		location = 3886
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "3rd Falcornian Guard regiment"
+		location = 3903
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "4th Falcornian Guard regiment"
+		location = 2974
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "5th Falcornian Guard regiment"
+		location = 3924
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "6th Falcornian Guard regiment"
+		location = 3925
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "7th Falcornian Guard regiment"
+		location = 3995
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "8th Falcornian Guard regiment"
+		location = 4008
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "9th Falcornian Guard regiment"
+		location = 4020
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "10th Falcornian Guard regiment"
+		location = 4070
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "11th Falcornian Guard regiment"
+		location = 4103
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "12th Falcornian Guard regiment"
+		location = 4165
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "13th Falcornian Guard regiment"
+		location = 4203
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "14th Falcornian Guard regiment"
+		location = 4313
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "15th Falcornian Guard regiment"
+		location = 2491
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "16th Falcornian Guard regiment"
+		location = 4288
+		division_template = "Falcornian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "1st Falcornian Militia"
+		location = 4078
+		division_template = "National Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Falcornian Militia"
+		location = 4062
+		division_template = "National Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "1st Mountain Stormtroopers"
+		location = 4230
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Mountain Stormtroopers"
+		location = 4235
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	division = {
+		name = "3th Mountain Stormtroopers"
+		location = 4241
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "1st Falcornian artillery regiment"
+		location = 4154
+		division_template = "Falcornian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Falcornian artillery regiment"
+		location = 4036
+		division_template = "Falcornian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "3th Falcornian artillery regiment"
+		location = 3978
+		division_template = "Falcornian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "4th Falcornian artillery regiment"
+		location = 4312
+		division_template = "Falcornian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "5th Falcornian artillery regiment"
+		location = 3940
+		division_template = "Falcornian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "1st Falcornian mobile brigade"
+		location = 2633
+		division_template = "Falcornian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Falcornian mobile brigade"
+		location = 4147
+		division_template = "Falcornian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "3th Falcornian mobile brigade"
+		location = 4173
+		division_template = "Falcornian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "FAL"
+		}
+		requested_factories = 3
+		progress = 0.55
+		efficiency = 100
+		industrial_manufacturer = mio:generic_infantry_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "FAL"
+		}
+		requested_factories = 2
+		progress = 0.7
+		efficiency = 100
+		industrial_manufacturer = mio:generic_artillery_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "FAL"
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 100
+		industrial_manufacturer = mio:generic_support_equipment_organization
+	}
+}

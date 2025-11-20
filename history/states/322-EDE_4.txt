@@ -1,0 +1,18 @@
+state={
+	id=322
+	name="STATE_322"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = EDE
+		add_core_of = EDE
+	}
+	provinces={
+		4620 4622 4623 4625 4632 4634 4638 4650 4659 4666 4687 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

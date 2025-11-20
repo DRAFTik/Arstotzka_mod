@@ -1,0 +1,18 @@
+state={
+	id=498
+	name="STATE_498"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = MRK
+		add_core_of = MRK
+	}
+	provinces={
+		5498 5506 5515 5540 5552 5562 5584 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

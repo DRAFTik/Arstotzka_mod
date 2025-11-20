@@ -2166,7 +2166,7 @@
 2165;68;0;18;land;false;plains;2
 2166;9;10;39;sea;false;ocean;0
 2167;11;66;3;sea;false;ocean;0
-2168;9;15;6;sea;false;ocean;0
+2168;9;15;6;land;false;unknown;2
 2169;10;20;53;land;false;plains;2
 2170;35;7;23;sea;false;ocean;0
 2171;15;14;55;sea;false;ocean;0
@@ -2196,7 +2196,7 @@
 2195;15;41;3;sea;false;ocean;0
 2196;14;66;4;sea;false;ocean;0
 2197;7;30;27;sea;true;ocean;0
-2198;28;25;16;sea;false;ocean;0
+2198;28;25;16;land;false;unknown;2
 2199;49;5;4;sea;false;ocean;0
 2200;11;9;76;sea;false;ocean;0
 2201;30;4;9;sea;false;ocean;0
@@ -2215,7 +2215,7 @@
 2214;36;51;3;sea;true;ocean;0
 2215;13;48;7;sea;false;ocean;0
 2216;36;38;16;sea;true;ocean;0
-2217;40;33;15;sea;false;ocean;0
+2217;40;33;15;land;false;unknown;2
 2218;3;0;32;sea;false;ocean;0
 2219;6;14;62;sea;false;ocean;0
 2220;50;32;12;sea;false;ocean;0
@@ -2245,7 +2245,7 @@
 2244;2;18;9;sea;false;ocean;0
 2245;16;9;57;sea;false;ocean;0
 2246;29;52;11;sea;true;ocean;0
-2247;5;0;71;sea;false;ocean;0
+2247;5;0;71;land;true;plains;4
 2248;67;25;6;sea;false;ocean;0
 2249;4;0;62;sea;false;ocean;0
 2250;16;5;38;land;false;plains;2
@@ -2263,7 +2263,7 @@
 2262;5;56;23;sea;false;ocean;0
 2263;16;44;29;sea;false;ocean;0
 2264;39;18;18;land;false;plains;2
-2265;14;24;31;sea;false;ocean;0
+2265;14;24;31;land;true;plains;4
 2266;54;6;7;sea;false;ocean;0
 2267;48;0;49;sea;false;ocean;0
 2268;2;14;37;sea;false;ocean;0
@@ -2284,7 +2284,7 @@
 2283;42;30;19;sea;false;ocean;0
 2284;55;33;5;sea;false;ocean;0
 2285;11;21;43;sea;false;ocean;0
-2286;6;38;31;sea;false;ocean;0
+2286;6;38;31;land;true;plains;4
 2287;16;2;79;sea;false;ocean;0
 2288;16;1;18;sea;false;ocean;0
 2289;17;31;50;sea;false;ocean;0
@@ -2303,7 +2303,7 @@
 2302;28;49;7;sea;false;ocean;0
 2303;54;4;17;sea;false;ocean;0
 2304;8;6;11;sea;false;ocean;0
-2305;3;30;42;sea;false;ocean;0
+2305;3;30;42;land;true;plains;4
 2306;10;0;80;sea;false;ocean;0
 2307;2;60;33;sea;false;ocean;0
 2308;25;8;41;sea;false;ocean;0
@@ -2316,7 +2316,7 @@
 2315;5;7;81;sea;false;ocean;0
 2316;37;26;5;sea;false;ocean;0
 2317;56;1;7;sea;false;ocean;0
-2318;14;12;73;sea;false;ocean;0
+2318;14;12;73;land;true;plains;4
 2319;19;34;1;sea;false;ocean;0
 2320;12;68;16;sea;false;ocean;0
 2321;5;38;56;sea;false;ocean;0

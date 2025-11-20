@@ -1,0 +1,18 @@
+state={
+	id=522
+	name="STATE_522"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = TOT
+		add_core_of = TOT
+	}
+	provinces={
+		2247 2265 5414 5415 5417 5418 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

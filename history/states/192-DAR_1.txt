@@ -1,0 +1,21 @@
+state={
+	id=192
+	name="STATE_192"
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 2
+		}
+		owner = DAR
+		add_core_of = DAR
+	}
+	provinces={
+		2686 2776 2953 3526 3527 3529 3531 3532
+	}
+	manpower=1016787
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

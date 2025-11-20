@@ -1,4 +1,4 @@
-﻿capital = 181
+﻿capital = 319
 
 # oob = "EDE_start"
 

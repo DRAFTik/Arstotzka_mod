@@ -1,4 +1,4 @@
-﻿capital = 187
+﻿capital = 405
 
 # oob = "KLT_start"
 

@@ -1,0 +1,18 @@
+state={
+	id=500
+	name="STATE_500"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = MRK
+		add_core_of = MRK
+	}
+	provinces={
+		5441 5442 5450 5456 5459 5461 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

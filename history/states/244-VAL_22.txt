@@ -1,0 +1,19 @@
+state={
+	id=244
+	name="STATE_244"
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		owner = VAL
+		add_core_of = VAL
+	}
+	provinces={
+		3631 3635 3640 3645 3650 3651 3656 3662 3664 3667 3671   
+	}
+	manpower=1346485
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

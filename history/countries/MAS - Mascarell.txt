@@ -1,4 +1,4 @@
-﻿capital = 184
+﻿capital = 367
 
 # oob = "MAS_start"
 

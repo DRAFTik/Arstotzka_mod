@@ -1,0 +1,19 @@
+state={
+	id=206
+	name="STATE_206"
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		owner = VIR
+		add_core_of = VIR
+	}
+	provinces={
+		3461 3462 3463 3464 3468 3471 3473 3479
+	}
+	manpower=2005235
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

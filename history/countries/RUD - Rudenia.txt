@@ -1,6 +1,6 @@
-﻿capital = 176
+﻿capital = 251
 
-# oob = "RUD_start"
+oob = "RUD_start"
 
 
 # Starting tech

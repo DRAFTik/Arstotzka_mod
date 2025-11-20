@@ -1,0 +1,21 @@
+state={
+	id=290
+	name="STATE_290"
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 3
+			arms_factory = 2
+			dockyard = 2
+		}
+		owner = FAL
+		add_core_of = FAL
+	}
+	provinces={
+		4182 4188 4202 4206 4215 4221 4225 4236 4237 4245 4251 4252 4255 4263 4265 4266 4278 
+	}
+	manpower=2132733
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

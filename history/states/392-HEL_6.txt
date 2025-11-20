@@ -1,0 +1,18 @@
+state={
+	id=392
+	name="STATE_392"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = HEL
+		add_core_of = HEL
+	}
+	provinces={
+		5211 5229 5239 5259 5270 5273 5281 5284 5302 5305 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

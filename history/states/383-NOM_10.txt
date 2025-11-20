@@ -1,0 +1,18 @@
+state={
+	id=383
+	name="STATE_383"
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = NOM
+		add_core_of = NOM
+	}
+	provinces={
+		5283 5301 5304 5317 5328 5341 5344 5363 
+	}
+	manpower=11111111
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

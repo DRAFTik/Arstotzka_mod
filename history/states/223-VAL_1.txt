@@ -1,0 +1,19 @@
+state={
+	id=223
+	name="STATE_223"
+	history={
+		buildings = {
+			infrastructure = 1
+			dockyard = 1
+		}
+		owner = VAL
+		add_core_of = VAL
+	}
+	provinces={
+		2169 2470 2534 2617 2916 3805 3808 3817 3825 3834 3844 3845 3854 
+	}
+	manpower=1365617
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

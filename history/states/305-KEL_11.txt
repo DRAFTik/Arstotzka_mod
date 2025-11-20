@@ -1,0 +1,20 @@
+state={
+	id=305
+	name="STATE_305"
+	history={
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			dockyard = 1
+		}
+		owner = KEL
+		add_core_of = KEL
+	}
+	provinces={
+		4324 4326 4328 4330 4332 4333 4336 4344 4345 4357 
+	}
+	manpower=1518383
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

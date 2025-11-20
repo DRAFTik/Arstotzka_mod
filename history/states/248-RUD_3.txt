@@ -1,0 +1,19 @@
+state={
+	id=248
+	name="STATE_248"
+	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		owner = RUD
+		add_core_of = RUD
+	}
+	provinces={
+		3575 3577 3578 3584 3587 3592 3601
+	}
+	manpower=1109857
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

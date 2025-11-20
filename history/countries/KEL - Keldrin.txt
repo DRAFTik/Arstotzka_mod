@@ -1,6 +1,6 @@
-﻿capital = 179
+﻿capital = 306
 
-# oob = "KEL_start"
+oob = "KEL_start"
 
 
 # Starting tech
