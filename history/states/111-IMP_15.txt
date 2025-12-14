@@ -11,6 +11,7 @@ state={
 			infrastructure = 1
 			steel_mill = 1
 			agro_complex = 1
+			thermal_coal_power_plant = 1
 			2126 = {
 				naval_base = 1
 				coastal_bunker = 4
@@ -24,5 +25,6 @@ state={
 	}
 	manpower=6142716
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=small_island
+	local_supplies=0.000
+	state_category=small_island
 }

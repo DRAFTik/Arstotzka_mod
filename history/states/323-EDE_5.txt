@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 		}
 		owner = EDE
 		add_core_of = EDE
@@ -11,7 +12,7 @@ state={
 	provinces={
 		4663 4674 4678 4689 4707 4711 4715 4728 4758 
 	}
-	manpower=11111111
+	manpower=1458871
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

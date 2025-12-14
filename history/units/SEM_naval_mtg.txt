@@ -1,61 +1,61 @@
 ﻿
-units= {
+#units= {
 
-	##### Naval OOB #####
-	fleet = {
-		name = "National Defense Navy"			
-		naval_base = 1212
-		
-		task_force = {
-			name = "Submarine Fleet"
-			location = 370
-			
-			# Subs #
-			ship = { name = "1st ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
-			ship = { name = "2nd ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
-			ship = { name = "3rd ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
-			ship = { name = "4th ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
-			ship = { name = "5th ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
-			ship = { name = "6th ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
-			ship = { name = "7th ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
-			ship = { name = "8th ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
-		}
-		
-		task_force = {				
-			name = "Main fleet"			
-			location = 1212
-			
-			# Destroyers #
-			ship = { name = "1st SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
-			ship = { name = "2nd SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
-			ship = { name = "3rd SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
-			ship = { name = "4th SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
-			ship = { name = "5th SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
-			ship = { name = "6th SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
-		}
-	}
-}
+#	##### Naval OOB #####
+#	fleet = {
+#		name = "National Defense Navy"			
+#		naval_base = 1212
+#		
+#		task_force = {
+#			name = "Submarine Fleet"
+#			location = 370
+#			
+#			# Subs #
+#			ship = { name = "1st ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
+#			ship = { name = "2nd ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
+#			ship = { name = "3rd ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
+#			ship = { name = "4th ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
+#			ship = { name = "5th ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
+#			ship = { name = "6th ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
+#			ship = { name = "7th ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
+#			ship = { name = "8th ZZ class Torpedoe Submarine"   start_experience_factor = 0.1   definition = submarine   equipment = { ship_hull_submarine_2 = { amount = 1   owner = SEM   version_name = "ZZ Class Torpedoe" } } }
+#		}
+#		
+#		task_force = {				
+#			name = "Main fleet"			
+#			location = 1212
+#			
+#			# Destroyers #
+#			ship = { name = "1st SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
+#			ship = { name = "2nd SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
+#			ship = { name = "3rd SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
+#			ship = { name = "4th SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
+#			ship = { name = "5th SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
+#			ship = { name = "6th SE class 'Agunate' Destroyer"   start_experience_factor = 0.1   definition = destroyer   equipment = { ship_hull_light_1 = { amount = 1   owner = SEM   version_name = "SE Class 'Agunate'" } } }
+#		}
+#	}
+#}
 
 
 
-#########################
-## STARTING PRODUCTION ##
-#########################
+##########################
+### STARTING PRODUCTION ##
+##########################
 
-instant_effect = {
+#instant_effect = {
 
-	### Ships Under Contruction ###
-	
-	add_equipment_production = {
-		equipment = {
-			type = ship_hull_submarine_2
-			creator = "SEM"
-			version_name = "ZZ Class Torpedoe"
-		}
-		name = "9th ZZ class Torpedoe Submarine"
-		requested_factories = 1
-		progress = 0.8
-		amount = 1
-	}
-}
+#	### Ships Under Contruction ###
+#	
+#	add_equipment_production = {
+#		equipment = {
+#			type = ship_hull_submarine_2
+#			creator = "SEM"
+#			version_name = "ZZ Class Torpedoe"
+#		}
+#		name = "9th ZZ class Torpedoe Submarine"
+#		requested_factories = 1
+#		progress = 0.8
+#		amount = 1
+#	}
+#}
 

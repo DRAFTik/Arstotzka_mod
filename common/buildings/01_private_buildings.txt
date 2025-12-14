@@ -38,7 +38,7 @@ buildings = {
 		show_on_map = 0
 		base_cost = 10800
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 38
+		icon_frame = 41
 		value = 5
 		
 		is_buildable = no
@@ -64,7 +64,7 @@ buildings = {
 		show_on_map = 0
 		base_cost = 7200
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 39
+		icon_frame = 42
 		value = 8
 		
 		is_buildable = no
@@ -90,7 +90,7 @@ buildings = {
 		show_on_map = 0
 		base_cost = 6400
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 40
+		icon_frame = 43
 		value = 5
 		
 		is_buildable = no
@@ -116,7 +116,7 @@ buildings = {
 		show_on_map = 0
 		base_cost = 14500
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 41
+		icon_frame = 44
 		value = 5
 		
 		is_buildable = no
@@ -142,7 +142,7 @@ buildings = {
 		show_on_map = 0
 		base_cost = 6500
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 42
+		icon_frame = 45
 		value = 5
 		
 		is_buildable = no
@@ -168,7 +168,7 @@ buildings = {
 		show_on_map = 0
 		base_cost = 6500
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 43
+		icon_frame = 46
 		value = 4
 		
 		is_buildable = no
@@ -194,7 +194,7 @@ buildings = {
 		show_on_map = 0
 		base_cost = 3375
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 44
+		icon_frame = 47
 		value = 2
 		
 		is_buildable = no
@@ -216,11 +216,38 @@ buildings = {
 			}
 		}
 	}
+	private_thermal_coal_power_plant = {
+		show_on_map = 0
+		base_cost = 6000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 48
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		repair_speed_factor = @private_repair_speed_factor
+#		only_display_if_exists = yes
+		
+		always_shown = yes
+		show_modifier = yes
+		
+		level_cap = {
+			shares_slots = yes
+			state_max = 5
+			group_by = power_plants
+		}
+		country_modifiers = {
+			modifiers = {
+				num_proletariat_private_k				= -0.45
+				num_generation_electric_power_private	= 30
+			}
+		}
+	}
 	private_thermal_power_plant = {
 		show_on_map = 0
 		base_cost = 10000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 45
+		icon_frame = 49
 		value = 8
 		
 		is_buildable = no
@@ -233,7 +260,8 @@ buildings = {
 		
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			state_max = 5
+			group_by = power_plants
 		}
 		country_modifiers = {
 			modifiers = {

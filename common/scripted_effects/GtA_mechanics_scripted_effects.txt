@@ -61,10 +61,63 @@ default_party_popularity_PP_gain = {
 calculate_electric_power_effect = {
 
 ### ПРОИЗВОДСТВО ###
-	while_loop_effect			= { limit = { thermal_power_plant > var:thermal_power_plant_@THIS }	add_to_temp_variable = { thermal_power_plant_@THIS = 1 } }
-	while_loop_effect			= { limit = { hydro_power_plant > var:hydro_power_plant_@THIS }		add_to_temp_variable = { hydro_power_plant_@THIS = 1 } }
-	while_loop_effect			= { limit = { nuclear_power_plant > var:nuclear_power_plant_@THIS }	add_to_temp_variable = { nuclear_power_plant_@THIS = 1 } }
-	set_variable				= { thermal_power_plant_total = thermal_power_plant_@THIS }		# для текста
+	while_loop_effect			= { limit = { thermal_coal_power_plant > var:thermal_coal_power_plant_@THIS }	add_to_temp_variable = { thermal_coal_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { thermal_power_plant > var:thermal_power_plant_@THIS }				add_to_temp_variable = { thermal_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { hydro_power_plant > var:hydro_power_plant_@THIS }					add_to_temp_variable = { hydro_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { nuclear_power_plant > var:nuclear_power_plant_@THIS }				add_to_temp_variable = { nuclear_power_plant_@THIS = 1 } }
+	set_variable				= { thermal_coal_power_plant_total = thermal_coal_power_plant_@THIS }	# для текста
+	set_variable				= { thermal_power_plant_total = thermal_power_plant_@THIS }				# для текста
+	
+	# уголь для УТЭС
+	if = {
+		limit = { check_variable = { thermal_coal_power_plant_total > 0 } }
+		if = {
+			limit = {
+				check_variable			= { resource@coal < -2 }
+			}
+			set_temp_variable			= { thermal_coal_power_plant_not_ok_temp = resource@coal }
+			divide_temp_variable		= { thermal_coal_power_plant_not_ok_temp = 3 }
+			add_to_temp_variable		= { thermal_coal_power_plant_not_ok_temp = 0.5 }
+			round_temp_variable			= thermal_coal_power_plant_not_ok_temp
+			
+			set_temp_variable			= { coal_remains_temp = thermal_coal_power_plant_not_ok_temp }
+			multiply_temp_variable		= { coal_remains_temp = 3 }
+			subtract_from_temp_variable	= { coal_remains_temp = resource@coal }
+			if = {
+				limit = {
+					check_variable		= { coal_remains_temp > 0 }
+				}
+				set_temp_variable		= { thermal_coal_generation_minus_temp = coal_remains_temp }
+			}
+			log = "[GetDateText]: [This.GetName] ([This.GetTag]): !! resource@coal < -2 !! coal_remains_temp: [?coal_remains_temp]"
+
+			else_if = {
+				limit = {
+					check_variable = { resource@coal < 0 }
+				}
+				set_temp_variable = { thermal_coal_generation_minus_temp = resource@coal }
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): !! resource@coal < 0 !! thermal_coal_generation_minus_temp: [?thermal_coal_generation_minus_temp]"
+			}
+		}
+		set_variable = { thermal_coal_power_plant_ok = thermal_coal_power_plant_not_ok_temp }
+		add_to_variable = { thermal_coal_power_plant_ok = thermal_coal_power_plant_total }
+		
+		if = {
+			limit					= { NOT = { has_dynamic_modifier = { modifier = thermal_coal_generation_minus_dyn } } }
+			add_dynamic_modifier	= { modifier = thermal_coal_generation_minus_dyn }
+		}
+		multiply_temp_variable		= { thermal_coal_generation_minus_temp = -20 }
+		set_temp_variable			= { temp_coal = thermal_coal_power_plant_not_ok_temp }
+		multiply_temp_variable		= { temp_coal = 60 }
+		add_to_temp_variable		= { thermal_coal_generation_minus_temp = temp_coal }
+		set_variable				= { coal_generation_minus_var = thermal_coal_generation_minus_temp }
+#		log = "[GetDateText]: [This.GetName] ([This.GetTag]): coal_generation_minus_var: [?coal_generation_minus_var]"
+		
+		set_variable				= { electric_power_thermal_coal_generation_var = thermal_coal_power_plant_total }
+	}
+	
+	
+	# топливо для ТТЭС
 	set_temp_variable			= { electric_power_thermal_generation_fuel_need_var = thermal_power_plant_@THIS }
 	multiply_temp_variable		= { electric_power_thermal_generation_fuel_need_var = 24 }
 	set_temp_variable			= { total_fuel_temp = fuel_k }
@@ -88,11 +141,13 @@ calculate_electric_power_effect = {
 #			log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL SHORTAGE // thermal_power_plant OK: [?thermal_power_plant_ok]"
 		}
 	}
-	multiply_variable	= { electric_power_thermal_generation_var = 60 }						# для текста ТЭС
+	multiply_variable	= { electric_power_thermal_coal_generation_var = 60 }
+	add_to_variable		= { electric_power_thermal_coal_generation_var = coal_generation_minus_var }	# для текста УТЭС
+	multiply_variable	= { electric_power_thermal_generation_var = 30 }								# для текста ТТЭС
 	set_variable		= { electric_power_hydro_generation_var = hydro_power_plant_@THIS }
-	multiply_variable	= { electric_power_hydro_generation_var = 150 }							# для текста ГЭС
+	multiply_variable	= { electric_power_hydro_generation_var = 150 }									# для текста ГЭС
 	set_variable		= { electric_power_nuclear_generation_var = nuclear_power_plant_@THIS }
-	multiply_variable	= { electric_power_nuclear_generation_var = 500 }						# для текста АЭС
+	multiply_variable	= { electric_power_nuclear_generation_var = 500 }								# для текста АЭС
 
 
 	set_variable		= { num_generation_electric_power_factor = 1 }
@@ -278,9 +333,10 @@ calculate_electric_power_effect = {
 
 
 calculate_electric_power_LOG_effect = {
-	while_loop_effect			= { limit = { thermal_power_plant > var:thermal_power_plant_@THIS }	add_to_temp_variable = { thermal_power_plant_@THIS = 1 } }
-	while_loop_effect			= { limit = { hydro_power_plant > var:hydro_power_plant_@THIS }		add_to_temp_variable = { hydro_power_plant_@THIS = 1 } }
-	while_loop_effect			= { limit = { nuclear_power_plant > var:nuclear_power_plant_@THIS }	add_to_temp_variable = { nuclear_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { thermal_coal_power_plant > var:thermal_coal_power_plant_@THIS }	add_to_temp_variable = { thermal_coal_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { thermal_power_plant > var:thermal_power_plant_@THIS }				add_to_temp_variable = { thermal_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { hydro_power_plant > var:hydro_power_plant_@THIS }					add_to_temp_variable = { hydro_power_plant_@THIS = 1 } }
+	while_loop_effect			= { limit = { nuclear_power_plant > var:nuclear_power_plant_@THIS }				add_to_temp_variable = { nuclear_power_plant_@THIS = 1 } }
 	set_temp_variable			= { electric_power_thermal_generation_fuel_need_var = thermal_power_plant_@THIS }
 	multiply_temp_variable		= { electric_power_thermal_generation_fuel_need_var = 24 }
 	set_temp_variable			= { total_fuel_temp = fuel_k }
@@ -599,10 +655,10 @@ calculate_provision_daily_effect = {
 # ПОДСЧЕТ ДЛЯ СТАТЫ
 	while_loop_effect		= { limit = { agro_complex > var:agro_complex_@THIS }			add_to_temp_variable = { agro_complex_@THIS = 1 } }
 	while_loop_effect		= { limit = { livestock_complex > var:livestock_complex_@THIS }	add_to_temp_variable = { livestock_complex_@THIS = 1 } }
-	while_loop_effect		= { limit = { agro_silo > var:agro_silo }						add_to_temp_variable = { agro_silo = 1 } }
+	while_loop_effect		= { limit = { agro_silo > var:agro_silo_@THIS }						add_to_temp_variable = { agro_silo_@THIS = 1 } }
 	set_variable			= { agro_complex_total = agro_complex_@THIS }
 	set_variable			= { livestock_complex_total = livestock_complex_@THIS }
-	set_variable			= { agro_silo_total = agro_silo }
+	set_variable			= { agro_silo_total = agro_silo_@THIS }
 
 # ЖИВОТНАВОДСТВО
 #	set_temp_variable		= { weekly_income_provision_temp = livestock_complex_total }
@@ -1190,7 +1246,7 @@ calculate_steel_mill_effect = {
 			check_variable = { var = steel_mill_total	value = 0	compare = greater_than }
 		}
 		set_temp_variable			= { steel_temp = resource@iron }
-		divide_temp_variable		= { steel_temp = -8 }
+		divide_temp_variable		= { steel_temp = -5 }
 		set_temp_variable			= { steel_temp2 = steel_temp }	# десятичное
 		round_temp_variable			= steel_temp					# целое
 		subtract_from_temp_variable	= { steel_temp2 = steel_temp }
@@ -1204,7 +1260,7 @@ calculate_steel_mill_effect = {
 			add_to_temp_variable	= { ecs_temp = num_of_deactivated_mill_var }
 		}
 		set_variable				= { steel_minus_var = ecs_temp }												# сколько уже отрублено сталелитеек (+ число)
-		log = "[GetDateText]: [This.GetName] ([This.GetTag]): steel_minus_var [?steel_minus_var]			// TOTAL DEACTIVATED STEEL MILL"
+		log = "[GetDateText]: [This.GetName] ([This.GetTag]): steel_minus_var [?steel_minus_var]				// TOTAL DEACTIVATED STEEL MILL"
 		log = "[GetDateText]: [This.GetName] ([This.GetTag]): steel_mill_minus_temp [?steel_mill_minus_temp]	// TOTAL NEED DEACTIVATED STEEL MILL"
 		
 		if = {			# сталелитейни надо включать
@@ -2227,6 +2283,28 @@ private_building_add_effect = {
 		}
 		1 = {
 			if = {
+				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_thermal_coal_power_plant } } }
+				add_to_array	= { private_building_lines_ui_array = token:private_thermal_coal_power_plant }
+				set_variable	= { private_build_speed_@token:private_thermal_coal_power_plant = modifier@base_private_build_speed_modifier }
+			}
+			add_to_variable = { num_of_private_building_@token:private_thermal_coal_power_plant = 1 }
+			if = {
+				limit = { NOT = { has_variable = private_building_target_state_@token:private_thermal_coal_power_plant } }
+				random_core_state = {
+					limit = {
+						is_owned_by = PREV
+						free_building_slots = {
+							building = private_thermal_coal_power_plant
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { PREV.private_building_target_state_@token:private_thermal_coal_power_plant = THIS.id }
+				}
+			}
+		}
+		1 = {
+			if = {
 				limit = { NOT = { is_in_array = { private_building_lines_ui_array = token:private_thermal_power_plant } } }
 				add_to_array	= { private_building_lines_ui_array = token:private_thermal_power_plant }
 				set_variable	= { private_build_speed_@token:private_thermal_power_plant = modifier@base_private_build_speed_modifier }
@@ -2714,6 +2792,66 @@ calculate_private_building_progress_effect = {
 		}
 	}
 	if = {
+		limit = { check_variable = { num_of_private_building_@token:private_thermal_coal_power_plant > 0 } }
+		set_temp_variable			= { tp2 = 1 }
+		subtract_from_temp_variable	= { tp2 = private_electropower_supply_value }
+		set_temp_variable			= { tp1 = 1 }
+		add_to_temp_variable		= { tp1 = private_capital_activity_value }
+		subtract_from_temp_variable	= { tp1 = tp2 }
+		multiply_temp_variable		= { tp1 = global.private_build_growth_per_day_var }
+		multiply_temp_variable		= { tp1 = private_build_speed_@token:private_thermal_coal_power_plant }
+
+		add_to_variable				= { completion_private_building_@token:private_thermal_coal_power_plant = tp1 }
+		
+		set_variable				= {	GUI_completion_private_building_@token:private_thermal_coal_power_plant = completion_private_building_@token:private_thermal_coal_power_plant }
+		divide_variable				= {	GUI_completion_private_building_@token:private_thermal_coal_power_plant = global.private_build_cost_@token:private_thermal_coal_power_plant }
+		multiply_variable			= {	GUI_completion_private_building_@token:private_thermal_coal_power_plant = 100 }
+		
+		if = {
+			limit = { check_variable = { var = completion_private_building_@token:private_thermal_coal_power_plant value = global.private_build_cost_@token:private_thermal_coal_power_plant compare = greater_than_or_equals } }
+			
+			meta_effect = {
+				text = {
+					[TARGET_STATE]	= {
+						add_building_construction = {
+							type			= private_thermal_coal_power_plant
+							level			= 1
+							instant_build	= yes
+						}
+					}
+				}
+				TARGET_STATE = "[?var:private_building_target_state_@token:private_thermal_coal_power_plant.GetID]"
+			}
+			add_to_variable			= { num_of_private_building_@token:private_thermal_coal_power_plant = -1 }
+			add_to_variable			= { num_of_private_building_project = -1 }
+			add_to_variable			= { num_of_private_building_complete_project = 1 }
+			
+			clear_variable			= private_building_target_state_@token:private_thermal_coal_power_plant
+			clear_variable			= completion_private_building_@token:private_thermal_coal_power_plant
+			clear_variable			= GUI_completion_private_building_@token:private_thermal_coal_power_plant
+			if = {
+				limit = { check_variable = { num_of_private_building_@token:private_thermal_coal_power_plant > 0 } }
+				random_owned_state = {
+					limit = {
+						is_core_of = PREV
+						free_building_slots = {
+							building = private_thermal_coal_power_plant
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable	= { PREV.private_building_target_state_@token:private_thermal_coal_power_plant = THIS.id }
+				}
+				else = {
+					remove_from_array	= { private_building_lines_ui_array = token:private_thermal_coal_power_plant }
+					clear_variable		= private_build_speed_@token:private_thermal_coal_power_plant
+					clear_variable		= private_build_subsidies_to_@token:private_thermal_coal_power_plant
+					calculate_TOTAL_private_build_subsidies_effect = yes
+				}
+			}
+		}
+	}
+	if = {
 		limit = { check_variable = { num_of_private_building_@token:private_thermal_power_plant > 0 } }
 		set_temp_variable			= { tp2 = 1 }
 		subtract_from_temp_variable	= { tp2 = private_electropower_supply_value }
@@ -2783,6 +2921,7 @@ calculate_TOTAL_private_build_subsidies_effect = {
 	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_steel_mill }
 	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_agro_complex }
 	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_livestock_complex }
+	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_thermal_coal_power_plant }
 	add_to_variable					= { TOTAL_private_build_subsidies_to = private_build_subsidies_to_@token:private_thermal_power_plant }
 	force_update_dynamic_modifier	= yes
 }

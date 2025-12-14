@@ -4,6 +4,7 @@ state={
 	resources={
 		iron = 22
 		tungsten = 36
+		coal = 7
 	}
 	history={
 		victory_points = {
@@ -13,7 +14,7 @@ state={
 			infrastructure = 1
 			arms_factory = 1
 			steel_mill = 1
-			thermal_power_plant = 1
+			thermal_coal_power_plant = 1
 			air_base = 3
 		}
 		owner = REP
@@ -24,5 +25,6 @@ state={
 	}
 	manpower=5228393
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

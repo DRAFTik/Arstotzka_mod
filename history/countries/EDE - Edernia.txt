@@ -1,6 +1,6 @@
 ﻿capital = 319
 
-# oob = "EDE_start"
+oob = "EDE_start"
 
 
 # Starting tech
@@ -56,14 +56,14 @@ set_politics = {
 	ruling_party = market_liberal
 }
 set_popularities = {
-	totalist					= 0
-	syndicalist					= 3
-	communitarianist			= 6
-	market_liberal				= 15
-	social_conservative			= 11
-	stratocratic_apologetism	= 3
-	patrimonialist				= 46
-	national_populist			= 16
+	totalist					= 3
+	syndicalist					= 4
+	communitarianist			= 1
+	market_liberal				= 48
+	social_conservative			= 24
+	stratocratic_apologetism	= 2
+	patrimonialist				= 6
+	national_populist			= 12
 	national_radicalist			= 0
 	mysticist					= 0
 }

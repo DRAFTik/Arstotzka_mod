@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			thermal_coal_power_plant = 1
 		}
 		owner = NOM
 		add_core_of = NOM
@@ -11,7 +12,7 @@ state={
 	provinces={
 		5308 5310 5313 5326 5329 5330 5333 5338 5339 5345 5346 5356 
 	}
-	manpower=11111111
+	manpower=614293
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -13,10 +13,12 @@ technologies = {
 	@1992 = 18
 	@1993 = 20
 	
-	@marines_x = 0
-	@paratroopers_x = 1
-	@mountaineers_x = 2
-	@flamethrower_x = 3
+	@marines_x			= 0
+	@paratroopers_x		= 1
+	@mountaineers_x		= 2
+	@rangers_x			= 3
+	@flamethrower_x		= 4
+	@special_forces_x	= 5
 	
 	
 	marines = {
@@ -338,7 +340,7 @@ technologies = {
 		}
 	}
 	
-	tech_mountaineers3 = {	
+	tech_mountaineers3 = {
 		mountaineers = {
 			max_organisation = 5
 		}
@@ -353,6 +355,124 @@ technologies = {
 		categories = {
 			infantry_tech
 			mountaineers_tech
+			cat_special_forces_generic
+		}
+		
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
+	
+	rangers_tech = {
+
+		allow_branch = {
+#			has_dlc = "No Compromise, No Surrender"
+		}
+
+		enable_subunits = {
+			ranger_battalion
+		}
+		
+		on_research_complete_limit = {
+			NOT = {
+				has_template_containing_unit = ranger_battalion
+			}
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_rangers"
+			}			
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = rangers_tech2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1983
+		folder = {
+			name = special_infantry_folder
+			position = { x = @rangers_x y = @1983 }
+		}
+		
+		categories = {
+			infantry_tech
+			rangers_tech_cat
+			cat_special_forces_generic
+		}
+		
+		ai_will_do = {
+			factor = 0.7
+			
+			modifier = {
+				factor = 2
+				tag = USA
+			}
+			
+			modifier = {
+				factor = 5
+				tag = JAP
+			}
+
+			modifier = {
+				factor = 5
+				tag = BRA
+			}
+			
+			modifier = {
+				factor = 2
+				tag = ENG
+			}
+		}
+	}
+
+	rangers_tech2 = {
+
+		ranger_battalion = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+		path = {
+			leads_to_tech = rangers_tech3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1986
+		folder = {
+			name = special_infantry_folder
+			position = { x = @rangers_x y = @1986 }
+		}
+		
+		categories = {
+			infantry_tech
+			rangers_tech_cat
+			cat_special_forces_generic
+		}
+		
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
+
+	rangers_tech3 = {
+
+		ranger_battalion = {
+			max_organisation = 5
+		}
+		
+		research_cost = 1.5
+		start_year = 1990
+		folder = {
+			name = special_infantry_folder
+			position = { x = @rangers_x y = @1990 }
+		}
+		
+		categories = {
+			infantry_tech
+			rangers_tech_cat
 			cat_special_forces_generic
 		}
 		
@@ -527,7 +647,7 @@ technologies = {
 		start_year = 1983
 		folder = {
 			name = special_infantry_folder
-			position = { x = 4 y = @1983 }
+			position = { x = @special_forces_x y = @1983 }
 		}
 		
 		categories = {
@@ -573,7 +693,7 @@ technologies = {
 		start_year = 1984
 		folder = {
 			name = special_infantry_folder
-			position = { x = 4 y = @1985 }
+			position = { x = @special_forces_x y = @1985 }
 		}
 		
 		categories = {
@@ -636,7 +756,7 @@ technologies = {
 		start_year = 1985
 		folder = {
 			name = special_infantry_folder
-			position = { x = 3 y = @1986 }
+			position = { x = 4 y = @1986 }
 		}
 		
 		categories = {
@@ -683,7 +803,7 @@ technologies = {
 		start_year = 1985
 		folder = {
 			name = special_infantry_folder
-			position = { x = 5 y = @1986 }
+			position = { x = 6 y = @1986 }
 		}
 		
 		categories = {
@@ -759,7 +879,7 @@ technologies = {
 		start_year = 1986
 		folder = {
 			name = special_infantry_folder
-			position = { x = 4 y = @1987 }
+			position = { x = @special_forces_x y = @1987 }
 		}
 		
 		categories = {
@@ -835,7 +955,7 @@ technologies = {
 		start_year = 1986
 		folder = {
 			name = special_infantry_folder
-			position = { x = 4 y = @1988 }
+			position = { x = @special_forces_x y = @1988 }
 		}
 		
 		categories = {
@@ -881,7 +1001,7 @@ technologies = {
 		start_year = 1987
 		folder = {
 			name = special_infantry_folder
-			position = { x = 3 y = @1989 }
+			position = { x = 4 y = @1989 }
 		}
 		
 		categories = {
@@ -927,7 +1047,7 @@ technologies = {
 		start_year = 1987
 		folder = {
 			name = special_infantry_folder
-			position = { x = 5 y = @1989 }
+			position = { x = 6 y = @1989 }
 		}
 		
 		categories = {
@@ -999,7 +1119,7 @@ technologies = {
 		start_year = 1988
 		folder = {
 			name = special_infantry_folder
-			position = { x = 4 y = @1990 }
+			position = { x = @special_forces_x y = @1990 }
 		}
 		
 		path = {
@@ -1098,7 +1218,7 @@ technologies = {
 		start_year = 1988
 		folder = {
 			name = special_infantry_folder
-			position = { x = 4 y = @1991 }
+			position = { x = @special_forces_x y = @1991 }
 		}
 		
 		path = {
@@ -1284,7 +1404,7 @@ technologies = {
 		start_year = 1989
 		folder = {
 			name = special_infantry_folder
-			position = { x = 3 y = @1992 }
+			position = { x = 4 y = @1992 }
 		}
 		
 		categories = {
@@ -1329,7 +1449,7 @@ technologies = {
 		start_year = 1989
 		folder = {
 			name = special_infantry_folder
-			position = { x = 5 y = @1992 }
+			position = { x = 6 y = @1992 }
 		}
 		
 		categories = {
@@ -1384,7 +1504,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = special_infantry_folder
-			position = { x = 4 y = @1993 }
+			position = { x = @special_forces_x y = @1993 }
 		}
 		
 		categories = {

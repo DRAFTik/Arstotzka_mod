@@ -1,0 +1,398 @@
+﻿## notes ##
+# priority = 0 #low priority
+# priority = 1 #med priority
+# priority = 2 #high priority
+
+## Units stuff ##
+# start_equipment_factor = 0.00 - 1.00	#(percentage of equipment unit has in begining)
+# start_manpower_factor = 0.00 - 1.00 	#(percentage of manpower unit has in begining)
+# start_experience_factor = 0.000 -1.000	#(level of experience unit has in begining (in percentage))
+
+### training percentage ###
+## 0.000 - 0.099					#green (percentage from 0% #0.000 to 99% #0.099)		#add 1% training with 0.001
+## 0.100 - 0.298					#trained (percentage from 0% #0.100 to 99% #0.298)		#add 1% training with 0.002
+## 0.300 - 0.746  					#regular (percentage from 0% #0.300 to 99% #0.746)		#add 2% training with 0.009
+## 0.750 - 0.899					#experient (percentage from 0% #0.750 to 99% #0.899)	#add 2% training with 0.003
+## 0.900 - 1.000					#veteran (percentage from 0% #0.900 to 99% #1.000)		#add 1% training with 0.001
+
+
+division_template = {
+	name = "Halmirian Guard"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 1 }
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Halmirian Artillery Brigade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }
+		artillery_brigade = { x = 1 y = 4 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Halmirian Mobile Brigade"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Mountain Stormtroopers"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+
+### unit positions ###
+units = {
+	division = {
+		name = "1st Halmirian Guard regiment"
+		location = 5078
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Halmirian Guard regiment"
+		location = 5077
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "3rd Halmirian Guard regiment"
+		location = 5095
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "4th Halmirian Guard regiment"
+		location = 5098
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "5th Halmirian Guard regiment"
+		location = 5065
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "6th Halmirian Guard regiment"
+		location = 5121
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "7th Halmirian Guard regiment"
+		location = 4868
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "8th Halmirian Guard regiment"
+		location = 4843
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "9th Halmirian Guard regiment"
+		location = 4825
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "10th Halmirian Guard regiment"
+		location = 4834
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "11th Halmirian Guard regiment"
+		location = 4747
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "12th Halmirian Guard regiment"
+		location = 4756
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "13th Halmirian Guard regiment"
+		location = 5038
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "14th Halmirian Guard regiment"
+		location = 5030
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "15th Halmirian Guard regiment"
+		location = 5031
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "16th Halmirian Guard regiment"
+		location = 4934
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "17th Halmirian Guard regiment"
+		location = 4940
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "18th Halmirian Guard regiment"
+		location = 4910
+		division_template = "Halmirian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	
+	division = {
+		name = "1st Mountain Stormtroopers"
+		location = 5204
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Mountain Stormtroopers"
+		location = 5198
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "3th Mountain Stormtroopers"
+		location = 5171
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "4th Mountain Stormtroopers"
+		location = 4891
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "5th Mountain Stormtroopers"
+		location = 4865
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "6th Mountain Stormtroopers"
+		location = 4788
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	
+	division = {
+		name = "1st Halmirian artillery regiment"
+		location = 5124
+		division_template = "Halmirian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+
+	
+	division = {
+		name = "1st Halmirian mobile brigade"
+		location = 5206
+		division_template = "Halmirian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Halmirian mobile brigade"
+		location = 5172
+		division_template = "Halmirian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "3th Halmirian mobile brigade"
+		location = 4746
+		division_template = "Halmirian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "4th Halmirian mobile brigade"
+		location = 4705
+		division_template = "Halmirian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "HAL"
+		}
+		requested_factories = 3
+		progress = 0.55
+		efficiency = 100
+		industrial_manufacturer = mio:generic_infantry_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "HAL"
+		}
+		requested_factories = 2
+		progress = 0.7
+		efficiency = 100
+		industrial_manufacturer = mio:generic_artillery_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "HAL"
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 100
+		industrial_manufacturer = mio:generic_support_equipment_organization
+	}
+}

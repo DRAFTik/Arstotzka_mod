@@ -41,6 +41,7 @@ buildings = {
 
 	infrastructure = {
 		base_cost = 3000
+		per_level_extra_cost = 500
 		icon_frame = 3
 		infrastructure = yes
 		value = 1
@@ -270,11 +271,12 @@ buildings = {
 				num_use_electric_power = 7
 			}
 		}
+		tags = { naval_buildings_tag } 
 	}
 	
 	
 	empty_build_1 = {
-		icon_frame = 37
+		icon_frame = 40
 		level_cap = {
 			shares_slots = yes
 			state_max = 1
@@ -358,7 +360,7 @@ buildings = {
 		show_on_map = 1
 		base_cost = 6400
 		icon_frame = 12
-		rocket_production = 5
+		rocket_production = 0
 		rocket_launch_capacity = 1
 		value = 1
 		tags = {}
@@ -504,7 +506,7 @@ buildings = {
 			}
 		}
 		state_modifiers = {
-			state_resource_cost_iron = 8
+			state_resource_cost_iron = 5
 			state_resource_steel = 4
 		}
 		construction_speed_modifier = {
@@ -613,11 +615,11 @@ buildings = {
 
 ### ЭЛЕКТРИЧЕСТВО
 
-	thermal_power_plant = {
+	thermal_coal_power_plant = {
 		show_on_map = 0
 		base_cost = 10000
 		icon_frame = 34
-		value = 8
+		value = 5
 		
 		show_modifier = yes
 		infrastructure_construction_effect = yes
@@ -631,6 +633,31 @@ buildings = {
 			modifiers = {
 				num_proletariat_k = -0.75
 				num_generation_electric_power = 60
+			}
+		}
+		state_modifiers = {
+			state_resource_cost_coal = 3
+		}
+	}
+
+	thermal_power_plant = {
+		show_on_map = 0
+		base_cost = 6000
+		icon_frame = 37
+		value = 8
+		
+		show_modifier = yes
+		infrastructure_construction_effect = yes
+		
+		level_cap = {
+			shares_slots = yes
+			state_max = 10
+			group_by = power_plants
+		}
+		country_modifiers = {
+			modifiers = {
+				num_proletariat_k = -0.45
+				num_generation_electric_power = 30
 				fake_fuel_cost = 24
 #				fuel_cost = 1		#per hour
 			}
@@ -643,13 +670,13 @@ buildings = {
 		icon_frame = 35
 		value = 10
 		
-		only_costal = yes
+#		only_costal = yes
 		show_modifier = yes
 		infrastructure_construction_effect = yes
 		
 		level_cap = {
 			shares_slots = yes
-			state_max = 5
+			state_max = 1
 			group_by = power_plants
 		}
 		country_modifiers = {
@@ -713,6 +740,7 @@ buildings = {
 				num_use_electric_power = 2
 			}
 		}
+		tags = { supply_building }
 	}	
 	
 	rail_way = {
@@ -755,6 +783,7 @@ buildings = {
 				num_use_electric_power = 0.5
 			}
 		}
+		tags = { naval_buildings_tag }
 	}
 
 	bunker = {
@@ -803,6 +832,52 @@ buildings = {
 				num_proletariat_k = -0.1
 				num_use_electric_power = 0.1
 			}
+		}
+	}
+	
+	naval_supply_hub = {
+		show_on_map = 1
+		base_cost = 12500
+		icon_frame = 38
+		disabled_in_dmz = yes
+		naval_supply_hub = yes
+		infrastructure_construction_effect = yes
+		only_costal = yes
+		tags = { naval_buildings_tag }
+		building_prerequisite = {
+			building_dependency = {
+				building = naval_base
+				level = 8
+			}
+		}
+		level_cap = {
+			province_max = 1
+		}
+	}
+	
+	naval_headquarters = {
+		dlc_allowed = { has_dlc = "No Compromise, No Surrender" }
+		show_on_map = 1
+		base_cost = 10000
+		per_controlled_building_extra_cost = 5000
+		icon_frame = 39
+		value = 1
+		naval_headquarter = yes
+		disabled_in_dmz = yes
+		infrastructure_construction_effect = yes
+		only_costal = yes
+		tags = { naval_buildings_tag }
+		building_prerequisite = {
+			building_dependency = {
+				building = naval_base
+				level = 8
+			}
+		}
+		level_cap = {
+			province_max = 1
+		}
+		modules = {
+			naval_leader_module
 		}
 	}
 	
@@ -1016,15 +1091,15 @@ spawn_points = {
 		only_costal = yes
 	}
 
-#	dam_spawn = {
-#		type = province
-#		max = 1
-#		disable_auto_nudging = yes
-#	}
+	dam_spawn = {
+		type = province
+		max = 1
+		disable_auto_nudging = yes
+	}
 
-#	locks_spawn = {
-#		type = province
-#		max = 1
-#		disable_auto_nudging = yes
-#	}
+	locks_spawn = {
+		type = province
+		max = 1
+		disable_auto_nudging = yes
+	}
 }

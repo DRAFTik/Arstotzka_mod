@@ -5,12 +5,13 @@ state={
 	resources={
 		iron = 44
 		oil = 24
+		coal = 7
 	}
 	history={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
-			thermal_power_plant = 1
+			thermal_coal_power_plant = 1
 		}
 		owner = UNF
 		add_core_of = UNF
@@ -20,5 +21,6 @@ state={
 	}
 	manpower=3089660
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

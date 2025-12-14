@@ -5,7 +5,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
-			thermal_power_plant = 1
+			thermal_coal_power_plant = 1
 			steel_mill = 1
 		}
 		owner = OBR

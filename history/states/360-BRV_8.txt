@@ -2,8 +2,12 @@ state={
 	id=360
 	name="STATE_360"
 	history={
+		victory_points = {
+			4842 40
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
 		}
 		owner = BRV
 		add_core_of = BRV
@@ -11,7 +15,7 @@ state={
 	provinces={
 		4795 4796 4809 4842 4869 4872 4887 
 	}
-	manpower=11111111
+	manpower=850219
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -5,6 +5,8 @@ state={
 		buildings = {
 			infrastructure = 1
 			dockyard = 1
+			agro_silo = 1
+			thermal_coal_power_plant = 1
 		}
 		owner = NRD
 		add_core_of = NRD

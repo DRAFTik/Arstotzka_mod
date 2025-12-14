@@ -32,41 +32,41 @@ if = {
 		}
 	}
 }
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_naval_oob = "SEM_naval_mtg"
-	set_technology = {
-		basic_torpedo = 1
-		mtg_transport = 1
-		basic_naval_mines = 1
-		early_ship_hull_light = 1
-		sonar = 1
-		smoke_generator = 1
-		early_ship_hull_cruiser = 1
-		improved_airplane_launcher = 1
-		basic_ship_hull_cruiser = 1
-		basic_cruiser_armor_scheme = 1
-		early_ship_hull_heavy = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		improved_ship_torpedo_launcher = 1
-		magnetic_detonator = 1
-		basic_submarine_snorkel = 1
-		basic_battery = 1
-		basic_light_battery = 1
-	}
-	else = {
-		set_technology = {
-			early_destroyer = 1
-			early_light_cruiser = 1
-			early_heavy_cruiser = 1
-			early_submarine = 1
-			transport = 1
-		}
-	}
-}
+#if = {
+#	limit = {
+#		has_dlc = "Man the Guns"
+#	}
+#	set_naval_oob = "SEM_naval_mtg"
+#	set_technology = {
+#		basic_torpedo = 1
+#		mtg_transport = 1
+#		basic_naval_mines = 1
+#		early_ship_hull_light = 1
+#		sonar = 1
+#		smoke_generator = 1
+#		early_ship_hull_cruiser = 1
+#		improved_airplane_launcher = 1
+#		basic_ship_hull_cruiser = 1
+#		basic_cruiser_armor_scheme = 1
+#		early_ship_hull_heavy = 1
+#		early_ship_hull_submarine = 1
+#		basic_ship_hull_submarine = 1
+#		improved_ship_torpedo_launcher = 1
+#		magnetic_detonator = 1
+#		basic_submarine_snorkel = 1
+#		basic_battery = 1
+#		basic_light_battery = 1
+#	}
+#	else = {
+#		set_technology = {
+#			early_destroyer = 1
+#			early_light_cruiser = 1
+#			early_heavy_cruiser = 1
+#			early_submarine = 1
+#			transport = 1
+#		}
+#	}
+#}
 
 set_stability = 0.5
 set_war_support = 0.5
@@ -117,40 +117,40 @@ give_market_access = SKO
 
 ### FLEET ###
 
-if = {
-    limit = { has_dlc = "Man the Guns" }
-    create_equipment_variant = {
-        name = "ZZ Class Torpedoe"
-        type = ship_hull_submarine_2
-        parent_version = 0
-        modules = {
-            fixed_ship_engine_slot = sub_ship_engine_2
-            fixed_ship_torpedo_slot = ship_torpedo_sub_2
-            #front_1_custom_slot = 
-            #mid_1_custom_slot = 
-            #rear_1_custom_slot = 
-        }
-        obsolete = no
-    }
-    create_equipment_variant = {
-        name = "SE Class 'Agunate'"
-        type = ship_hull_light_1
-        parent_version = 0
-        modules = {
-            fixed_ship_engine_slot = light_ship_engine_1
-            fixed_ship_torpedo_slot = ship_torpedo_2
-            fixed_ship_radar_slot = ship_sonar_1
-            #fixed_ship_fire_control_system_slot = 
-            fixed_ship_anti_air_slot = ship_anti_air_1
-            fixed_ship_battery_slot = ship_light_battery_2
-            #front_1_custom_slot = 
-            #mid_1_custom_slot = 
-            #mid_2_custom_slot = 
-            #rear_1_custom_slot = 
-        }
-        obsolete = no
-    }
-}
+#if = {
+#    limit = { has_dlc = "Man the Guns" }
+#    create_equipment_variant = {
+#        name = "ZZ Class Torpedoe"
+#        type = ship_hull_submarine_2
+#        parent_version = 0
+#        modules = {
+#            fixed_ship_engine_slot = sub_ship_engine_2
+#            fixed_ship_torpedo_slot = ship_torpedo_sub_2
+#            #front_1_custom_slot = 
+#            #mid_1_custom_slot = 
+#            #rear_1_custom_slot = 
+#        }
+#        obsolete = no
+#    }
+#    create_equipment_variant = {
+#        name = "SE Class 'Agunate'"
+#        type = ship_hull_light_1
+#        parent_version = 0
+#        modules = {
+#            fixed_ship_engine_slot = light_ship_engine_1
+#            fixed_ship_torpedo_slot = ship_torpedo_2
+#            fixed_ship_radar_slot = ship_sonar_1
+#            #fixed_ship_fire_control_system_slot = 
+#            fixed_ship_anti_air_slot = ship_anti_air_1
+#            fixed_ship_battery_slot = ship_light_battery_2
+#            #front_1_custom_slot = 
+#            #mid_1_custom_slot = 
+#            #mid_2_custom_slot = 
+#            #rear_1_custom_slot = 
+#        }
+#        obsolete = no
+#    }
+#}
 
 
 

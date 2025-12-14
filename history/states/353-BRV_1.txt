@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			dockyard = 2
 		}
 		owner = BRV
 		add_core_of = BRV
@@ -11,7 +12,7 @@ state={
 	provinces={
 		4656 4676 4684 4703 4717 4738 4752 4778 4785 
 	}
-	manpower=11111111
+	manpower=1326486
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -1,6 +1,9 @@
 state={
 	id=83
 	name="STATE_83"
+	resources={
+		coal = 5
+	}
 	history={
 		victory_points = {
 			2063 45
@@ -37,5 +40,6 @@ state={
 	}
 	manpower=1208422
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

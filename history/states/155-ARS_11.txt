@@ -2,7 +2,7 @@ state={
 	id=155
 	name="STATE_155"
 	resources={
-		iron = 32
+		iron = 22
 		aluminium = 11
 		tungsten = 7
 	}
@@ -11,7 +11,7 @@ state={
 			516 30
 		}
 		buildings = {
-			thermal_power_plant = 1
+			thermal_coal_power_plant = 1
 			industrial_complex = 1
 			steel_mill = 1
 		}
@@ -23,5 +23,6 @@ state={
 	}
 	manpower=2758549
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

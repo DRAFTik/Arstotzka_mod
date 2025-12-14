@@ -5,6 +5,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+			agro_complex = 1
 		}
 		owner = VIR
 		add_core_of = VIR

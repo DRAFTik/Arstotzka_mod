@@ -1,0 +1,22 @@
+### AI Faction Theatres ###
+
+northern_arcanis = {
+	name = base_theatre_northern_arcanis
+	regions = {
+		67 # REV
+		68 # VIR
+		69 # DAR
+		
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		REV VIR DAR
+	}
+	cancel = {
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+

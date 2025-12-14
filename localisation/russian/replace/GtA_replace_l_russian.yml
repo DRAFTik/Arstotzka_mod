@@ -15,7 +15,7 @@
  light_tank_chassis_2: "Шасси улучшенного легкого танка"
  improved_light_tank_chassis: "Шасси улучшенного легкого танка"
  improved_light_tank_chassis_short: "Легкая модель II поколения"
- improved_light_tank_chassis_desc: "Это шасси — следующий цикл развития, основанный на предыдущих моделях легких танков. Отличается повышенной надежностью и ремонтопригодностью."
+ improved_light_tank_chassis_desc: "Это шасси – следующий цикл развития, основанный на предыдущих моделях легких танков. Отличается повышенной надежностью и ремонтопригодностью."
  light_tank_chassis_3: "Шасси модернизированного легкого танка"
  advanced_light_tank_chassis: "Шасси модернизированного легкого танка"
  advanced_light_tank_chassis_short: "Легкая модель III поколения"
@@ -28,7 +28,7 @@
  light_tank_amphibious_equipment_0: "Ранний лёгкий плавающий танк"
  light_tank_artillery_chassis_0: "Ранняя легкая САУ"
  light_tank_artillery_chassis: "Легкая САУ"
- light_tank_artillery_chassis_desc: "Небольшая и компактная боевая машина. Основная роль — огневая поддержка наступающей пехоты."
+ light_tank_artillery_chassis_desc: "Небольшая и компактная боевая машина. Основная роль – огневая поддержка наступающей пехоты."
  light_tank_artillery_chassis_1: "Базовая легкая САУ"
  light_tank_artillery_chassis_2: "Улучшенная легкая САУ"
  light_tank_artillery_chassis_3: "Модернизированная легкая САУ"
@@ -66,7 +66,7 @@
  medium_tank_chassis_desc: "Сбалансированное шасси среднего размера. Отличается гибкостью применения, подходит для большого ассортимента боевых машин."
  medium_tank_artillery_chassis_0: "Ранняя средняя САУ"
  medium_tank_artillery_chassis: "Средняя САУ"
- medium_tank_artillery_chassis_desc: "Хорошо сбалансированная боевая машина. Основная роль — огневая поддержка наступающей пехоты."
+ medium_tank_artillery_chassis_desc: "Хорошо сбалансированная боевая машина. Основная роль – огневая поддержка наступающей пехоты."
  medium_tank_artillery_chassis_1: "Базовая средняя САУ"
  medium_tank_artillery_chassis_2: "Улучшенная средняя САУ"
  medium_tank_artillery_chassis_3: "Модернизированная средняя САУ"
@@ -104,7 +104,7 @@
  heavy_tank_chassis_desc: "Крупное шасси, на которое можно установить тяжелое орудие, толстую броню или и то и другое."
  heavy_tank_artillery_chassis: "Тяжелая САУ"
  heavy_tank_artillery_chassis_0: "Ранняя тяжелая САУ"
- heavy_tank_artillery_chassis_desc: "Большая боевая машина. Основная роль — огневая поддержка наступающей пехоты."
+ heavy_tank_artillery_chassis_desc: "Большая боевая машина. Основная роль – огневая поддержка наступающей пехоты."
  heavy_tank_artillery_chassis_1: "Базовая тяжелая САУ"
  heavy_tank_artillery_chassis_2: "Улучшенная тяжелая САУ"
  heavy_tank_artillery_chassis_3: "Модернизированная тяжелая САУ"
@@ -193,4 +193,11 @@
  
  ### ЯО
  atomic_research: "Расщепление атомного ядра"
+ 
+ ### topbar_l_russian.yml
+ TOPBAR_ENERGY_DEMAND: ""
+ TOPBAR_ENERGY_GENERATED: ""
+ 
+ ### core_l_russian.yml
+ BASE_VALUE: ""
  

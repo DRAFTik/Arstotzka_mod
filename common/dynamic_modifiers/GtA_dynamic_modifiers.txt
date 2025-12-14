@@ -34,6 +34,12 @@
 		# list of modifiers
 		fuel_cost = fuel_cost_var		# в час
 	}
+	thermal_coal_generation_minus_dyn = {
+		enable = { check_variable = { resource@coal < 0 } }
+		
+		# list of modifiers
+		num_generation_electric_power = coal_generation_minus_var
+	}
 	electro_power_trade_cost_dyn = {
 		
 		# list of modifiers

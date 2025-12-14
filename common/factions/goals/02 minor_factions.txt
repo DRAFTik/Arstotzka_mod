@@ -1,0 +1,15 @@
+### THALASSGARD LAST STAND ###
+faction_manifest_thalassgard_defence = {
+	name = faction_manifest_thalassgard_defence_name
+	description = faction_manifest_thalassgard_defence_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:all_thalassgard_states
+		completed_amount_collection = collection:all_controlled_thalassgard_states
+		scale = {
+			army_attack_against_major_factor = 0.15
+			army_breakthrough_against_major_factor = 0.15
+			army_defence_against_major_factor = 0.15
+		}
+	}
+}

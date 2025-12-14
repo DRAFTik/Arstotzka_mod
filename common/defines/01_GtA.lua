@@ -8,6 +8,7 @@ NDefines.NGame.END_DATE = "2083.1.1.12"
 --NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60									-- Days of client lag for pause of gamespeed.
 NDefines.NGame.EVENT_TIMEOUT_DEFAULT = 7									-- Default days before an event times out if not scripted
 NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3					-- Default days before a mission is removed from the interface after having failed or completed
+NDefines.NGame.ENERGY_RESOURCE = "coal"											-- resource that will give country energy 
 
 -- Politics
 --NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.0						-- Weekly ?? (DAYLY!!) increase of PP.
@@ -28,6 +29,12 @@ NDefines.NMilitary.SLOWEST_SPEED = 1
 -- War Support
 NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = 0								-- Vanilla is -0.2
 NDefines.NCountry.WAR_SUPPORT_DEFENSIVE_WAR = 0								-- Vanilla is -0.2
+
+-- Production
+NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 0.00001				-- How much energy per coal produces
+NDefines.NProduction.BASE_COUNTRY_ENERGY_PRODUCTION = 100.0					-- The base energy production of a country
+NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.0				-- Scales energy cost based on the total number of factories
+NDefines.NProduction.BASE_ENERGY_COST = 0.00001								-- How much energy per factory consumes
 
 -- Diplomatic
 NDefines.NDiplomacy.MAX_TRUST_VALUE = 200									-- Vanilla is 100
@@ -58,12 +65,23 @@ NDefines.NTechnology.MAX_SUBTECHS = 4										-- Max number of sub technologies
 -- Buildings
 NDefines.NBuildings.MAX_SHARED_SLOTS = 36									-- Max slots shared by factories
 --для гибридов
-NDefines.NAI.BUILDING_TARGETS_BUILDING_PRIORITIES = {						 -- buildings in order of pirority when considering building targets strategies. First has the greatest priority, omitted has the lowest. NOTE: not all buildings are supported by building targets strategies.
+NDefines.NAI.BUILDING_TARGETS_BUILDING_PRIORITIES = {						-- buildings in order of pirority when considering building targets strategies. First has the greatest priority, omitted has the lowest. NOTE: not all buildings are supported by building targets strategies.
 	'synthetic_refinery',
 	'fuel_silo',
 	'industrial_complex',
 	'dockyard',
 	'arms_factory',
+}
+
+NDefines.NAI.MIN_FACTORIES_TO_WANT_TO_IMPORT = {							-- minimum number of civilian factories the AI must have to consider importing a resource - per strategic resource. Default 0, array -should- be updated with new resources, or if the order changes.
+	0, -- oil
+	0, -- aluminium
+	0, -- rubber
+	0, -- tungsten
+	0, -- steel
+	0, -- chromium
+	10, -- coal
+	0, -- iron
 }
 
 -- Operatives

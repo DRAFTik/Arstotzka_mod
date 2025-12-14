@@ -2,7 +2,7 @@ state={
 	id=156
 	name="STATE_156"
 	resources={
-		iron = 55
+		iron = 48
 		tungsten = 9
 		chromium = 14
 	}
@@ -28,5 +28,6 @@ state={
 	}
 	manpower=3529558
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

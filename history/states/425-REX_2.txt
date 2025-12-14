@@ -2,6 +2,9 @@ state={
 	id=425
 	name="STATE_425"
 	history={
+		victory_points = {
+			6277 40
+		}
 		buildings = {
 			infrastructure = 1
 		}

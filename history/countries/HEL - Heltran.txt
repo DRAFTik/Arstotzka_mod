@@ -1,6 +1,6 @@
 ﻿capital = 395
 
-# oob = "HEL_start"
+oob = "HEL_start"
 
 
 # Starting tech
@@ -53,17 +53,17 @@ add_ideas = {
 # recruit_character = REP_persius_lestrade
 
 set_politics = {
-	ruling_party = market_liberal
+	ruling_party = communitarianist
 }
 set_popularities = {
-	totalist					= 0
-	syndicalist					= 3
-	communitarianist			= 6
-	market_liberal				= 15
-	social_conservative			= 11
+	totalist					= 5
+	syndicalist					= 12
+	communitarianist			= 56
+	market_liberal				= 7
+	social_conservative			= 10
 	stratocratic_apologetism	= 3
-	patrimonialist				= 46
-	national_populist			= 16
+	patrimonialist				= 5
+	national_populist			= 2
 	national_radicalist			= 0
 	mysticist					= 0
 }

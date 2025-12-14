@@ -2,8 +2,12 @@ state={
 	id=363
 	name="STATE_363"
 	history={
+		victory_points = {
+			4992 40
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
 		}
 		owner = BRV
 		add_core_of = BRV
@@ -11,7 +15,7 @@ state={
 	provinces={
 		4992 5003 5020 5025 5056 5059 5079 5102 5103 5134 
 	}
-	manpower=11111111
+	manpower=1419659
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

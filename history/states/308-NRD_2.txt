@@ -1,7 +1,18 @@
 state={
 	id=308
 	name="STATE_308"
+	resources={
+		iron = 12
+		chromium = 0
+		tungsten = 0
+		aluminium = 14
+		oil = 12
+		coal = 34
+	}
 	history={
+		victory_points = {
+			4561 50
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 2

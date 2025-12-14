@@ -1,11 +1,23 @@
 state={
 	id=205
 	name="STATE_205"
+	resources={
+		iron = 52
+		chromium = 18
+		tungsten = 28
+		aluminium = 24
+		oil = 12
+		coal = 63
+	}
 	history={
+		victory_points = {
+			3486 40
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
 			dockyard = 2
+			livestock_complex = 1
 		}
 		owner = VIR
 		add_core_of = VIR

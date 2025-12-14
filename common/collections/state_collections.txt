@@ -1,0 +1,58 @@
+### Continent Collections ###
+every_state_in_arcanis = {
+	input = game:all_states
+	operators = {
+		limit = { is_on_continent = arcanis }
+	}
+	name = every_state_in_arcanis
+}
+every_state_in_thalassgard = {
+	input = game:all_states
+	operators = {
+		limit = { is_on_continent = thalassgard }
+	}
+	name = every_state_in_thalassgard
+}
+every_state_in_surland = {
+	input = game:all_states
+	operators = {
+		limit = { is_on_continent = surland }
+	}
+	name = every_state_in_surland
+}
+
+
+
+###############
+### FACTION ###
+###############
+
+faction_owned_states = {
+	input = game:scope
+	name = collection_faction_owned_states
+	operators = {
+		faction_members
+		owned_states
+	}
+}
+
+faction_owned_core_states = {
+	input = collection:faction_owned_states
+	operators = {
+		limit = { is_core_of = PREV }
+	}
+	name = COLLECTION_FACTION_OWNED_CORE_STATES
+}
+
+all_thalassgard_states = {
+	input = constant:state_groups.thalassgard_states
+	name = collection_all_thalassgard_states
+}
+
+all_controlled_thalassgard_states = {
+	input = collection:all_thalassgard_states
+	name = collection_all_controlled_baltic_states
+	operators = {
+		limit = { controller = { is_ally_with = ROOT } }
+	}
+}

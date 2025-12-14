@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 		}
 		owner = NOM
 		add_core_of = NOM
@@ -11,7 +12,7 @@ state={
 	provinces={
 		5266 5271 5274 5293 5294 5300 5307 5315 5318 5319 5335 
 	}
-	manpower=11111111
+	manpower=739969
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

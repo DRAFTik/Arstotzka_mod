@@ -5,6 +5,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 2
+			steel_mill = 1
 		}
 		owner = VAL
 		add_core_of = VAL

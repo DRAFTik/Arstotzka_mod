@@ -1,6 +1,9 @@
 state={
 	id=170
 	name="STATE_170"
+	resources={
+		iron = 7
+	}
 	history={
 		victory_points = {
 			588 20
@@ -8,7 +11,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
-			thermal_power_plant = 1
+			thermal_coal_power_plant = 1
 		}
 		owner = ARS
 		add_core_of = ARS
@@ -18,5 +21,6 @@ state={
 	}
 	manpower=1873961
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

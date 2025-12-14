@@ -1,0 +1,243 @@
+﻿## notes ##
+# priority = 0 #low priority
+# priority = 1 #med priority
+# priority = 2 #high priority
+
+## Units stuff ##
+# start_equipment_factor = 0.00 - 1.00	#(percentage of equipment unit has in begining)
+# start_manpower_factor = 0.00 - 1.00 	#(percentage of manpower unit has in begining)
+# start_experience_factor = 0.000 -1.000	#(level of experience unit has in begining (in percentage))
+
+### training percentage ###
+## 0.000 - 0.099					#green (percentage from 0% #0.000 to 99% #0.099)		#add 1% training with 0.001
+## 0.100 - 0.298					#trained (percentage from 0% #0.100 to 99% #0.298)		#add 1% training with 0.002
+## 0.300 - 0.746  					#regular (percentage from 0% #0.300 to 99% #0.746)		#add 2% training with 0.009
+## 0.750 - 0.899					#experient (percentage from 0% #0.750 to 99% #0.899)	#add 2% training with 0.003
+## 0.900 - 1.000					#veteran (percentage from 0% #0.900 to 99% #1.000)		#add 1% training with 0.001
+
+
+division_template = {
+	name = "Heltranian Guard"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+
+division_template = {
+	name = "Heltranian Mobile Brigade"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Mountain Stormtroopers"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 1 }
+	}
+	
+	priority = 1
+}
+
+
+### unit positions ###
+units = {
+	division = {
+		name = "1st Heltranian Guard regiment"
+		location = 5399
+		division_template = "Heltranian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Heltranian Guard regiment"
+		location = 5400
+		division_template = "Heltranian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "3rd Heltranian Guard regiment"
+		location = 5388
+		division_template = "Heltranian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "4th Heltranian Guard regiment"
+		location = 5374
+		division_template = "Heltranian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "5th Heltranian Guard regiment"
+		location = 5321
+		division_template = "Heltranian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "6th Heltranian Guard regiment"
+		location = 5262
+		division_template = "Heltranian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "7th Heltranian Guard regiment"
+		location = 5244
+		division_template = "Heltranian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "8th Heltranian Guard regiment"
+		location = 5260
+		division_template = "Heltranian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "9th Heltranian Guard regiment"
+		location = 5254
+		division_template = "Heltranian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	
+	division = {
+		name = "1st Mountain Stormtroopers"
+		location = 5239
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Mountain Stormtroopers"
+		location = 5210
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "3th Mountain Stormtroopers"
+		location = 5232
+		division_template = "Mountain Stormtroopers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	
+	division = {
+		name = "1st Heltranian mobile brigade"
+		location = 5337
+		division_template = "Heltranian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Heltranian mobile brigade"
+		location = 5384
+		division_template = "Heltranian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+		start_manpower_factor = 0.9
+	}
+}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "HEL"
+		}
+		requested_factories = 3
+		progress = 0.55
+		efficiency = 100
+		industrial_manufacturer = mio:generic_infantry_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "HEL"
+		}
+		requested_factories = 1
+		progress = 0.7
+		efficiency = 100
+		industrial_manufacturer = mio:generic_artillery_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "HEL"
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+		industrial_manufacturer = mio:generic_support_equipment_organization
+	}
+}

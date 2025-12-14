@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			livestock_complex = 3
 		}
 		owner = VAL
 		add_core_of = VAL

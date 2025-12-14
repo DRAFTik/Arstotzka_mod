@@ -30,7 +30,8 @@ on_actions = {
 				set_variable = { global.private_build_cost_@token:private_steel_mill							= 6500 }
 				set_variable = { global.private_build_cost_@token:private_agro_complex							= 10800 }
 				set_variable = { global.private_build_cost_@token:private_livestock_complex						= 3375 }
-				set_variable = { global.private_build_cost_@token:private_thermal_power_plant					= 10000 }
+				set_variable = { global.private_build_cost_@token:private_thermal_coal_power_plant				= 10000 }
+				set_variable = { global.private_build_cost_@token:private_thermal_power_plant					= 6000 }
 				
 				
 				effect_calculate_base_nof						= yes
@@ -71,7 +72,10 @@ on_actions = {
 			}
 			
 			KOL = {
-				country_event = { id = kolechia_CW.1 days = 2 random_days = 10 } # ГВ
+				country_event = { id = kolechia_CW.1 days = 10 random_days = 10 }	# ГВ
+			}
+			HAL = {
+				country_event = { id = test.201 days = 30 random_days = 10 }		# Резня в Талассгарде
 			}
 		}
 	}

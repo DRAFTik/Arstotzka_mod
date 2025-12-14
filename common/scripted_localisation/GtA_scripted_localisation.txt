@@ -90,6 +90,19 @@ defined_text = {
 
 
 defined_text = {
+	name = GET_THERMAL_COAL_POWER_PLANT_OK
+	text = {
+		trigger = {
+			check_variable = { thermal_coal_power_plant_ok = thermal_coal_power_plant_total }
+		}
+		localization_key = GET_THERMAL_COAL_POWER_PLANT_GREEN
+	}
+	text = {
+		localization_key = GET_THERMAL_COAL_POWER_PLANT_RED
+	}
+}
+
+defined_text = {
 	name = GET_THERMAL_POWER_PLANT_OK
 	text = {
 		trigger = {
@@ -795,6 +808,12 @@ defined_text = {		# CUSTOM private_building_icon IMAGE
 			check_variable = { v = token:private_livestock_complex }
 		}
 		localization_key = "GFX_private_livestock_complex"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = token:private_thermal_coal_power_plant }
+		}
+		localization_key = "GFX_private_thermal_coal_power_plant"
 	}
 	text = {
 		trigger = {

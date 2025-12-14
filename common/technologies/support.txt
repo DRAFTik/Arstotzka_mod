@@ -271,6 +271,31 @@ technologies = {
 			}
 		}
 		
+		light_flame_tank = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.10
+			}
+		}
+		medium_flame_tank = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.10
+			}
+		}
+		heavy_flame_tank = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.10
+			}
+		}
+		
 		path = {
 			leads_to_tech = tech_engineers4
 			research_cost_coeff = 1
@@ -330,6 +355,31 @@ technologies = {
 			urban = {
 				defence = 0.15
 				movement = 0.15
+			}
+		}
+		
+		light_flame_tank = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.10
+			}
+		}
+		medium_flame_tank = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.10
+			}
+		}
+		heavy_flame_tank = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.10
 			}
 		}
 
@@ -871,7 +921,7 @@ technologies = {
 		
 		armored_maintenance = {
 			reliability_factor = 0.02
-			recovery = 0.3
+			recovery = 0.03
 			
 			battalion_mult = {
 				category = category_all_armor
@@ -1175,11 +1225,11 @@ technologies = {
 				date > "1993.1.1"
 			}
 			modifier = {
-				factor = 2
+				factor = 1.2
 				date > "1994.1.1"
 			}
 			modifier = {
-				factor = 2
+				factor = 1.2
 				date > "1995.1.1"
 			}
 		}
@@ -1449,7 +1499,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 5
@@ -1465,6 +1515,13 @@ technologies = {
 			initiative = 0.12
 		}
 		
+		armored_signal = {
+			initiative = 0.08
+			battalion_mult = {
+				category = category_all_armor
+				breakthrough = 0.01
+			}
+		}
 		
 		path = {
 			leads_to_tech = tech_signal_company3
@@ -1485,7 +1542,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 			
 			modifier = {
 				factor = 1.2
@@ -1509,6 +1566,15 @@ technologies = {
 		signal_company = {
 			initiative = 0.12
 		}
+		
+		armored_signal = {
+			initiative = 0.08
+			battalion_mult = {
+				category = category_all_armor
+				breakthrough = 0.01
+			}
+		}
+		
 		path = {
 			leads_to_tech = tech_signal_company4
 			research_cost_coeff = 1
@@ -1528,7 +1594,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 			
 			modifier = {
 				factor = 1.2
@@ -1551,6 +1617,14 @@ technologies = {
 		signal_company = {
 			initiative = 0.12
 		}
+		
+		armored_signal = {
+			initiative = 0.08
+			battalion_mult = {
+				category = category_all_armor
+				breakthrough = 0.01
+			}
+		}
 
 		research_cost = 2.0
 		start_year = 1992
@@ -1566,7 +1640,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 			
 			modifier = {
 				factor = 1.2
@@ -1613,7 +1687,7 @@ technologies = {
 		special_project_specialization = { specialization_base }
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				num_of_factories > 25
 				factor = 100 #might wanna get on that
@@ -1746,7 +1820,7 @@ technologies = {
 		special_project_specialization = { specialization_land	specialization_base }
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 			
 			modifier = {
 				has_war = yes
@@ -1773,6 +1847,25 @@ technologies = {
 		}
 	}
 	
+	
+	tech_recon_focus_bonus = { #gained from Help from the Nagas
+
+		allow = {
+			always = no
+		}
+		category_recon = {
+			recon = 2
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	
 	
 	

@@ -141,82 +141,82 @@ give_market_access = ARS
 
 #### FLEET ####
 
-if = {
-    limit = { has_dlc = "Man the Guns" }
-    create_equipment_variant = {
-        name = "Arben"
-        type = ship_hull_submarine_2
-        parent_version = 0
-        modules = {
-            fixed_ship_engine_slot = sub_ship_engine_2
-            fixed_ship_torpedo_slot = ship_torpedo_sub_2
-            #front_1_custom_slot = 
-            #mid_1_custom_slot = 
-            #rear_1_custom_slot = 
-        }
-        obsolete = no
-    }
-    create_equipment_variant = {
-        name = "Lorndaz"
-        type = ship_hull_light_1
-        parent_version = 0
-        modules = {
-            fixed_ship_engine_slot = light_ship_engine_1
-            fixed_ship_torpedo_slot = ship_torpedo_2
-            fixed_ship_radar_slot = ship_sonar_1
-            fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-            fixed_ship_anti_air_slot = ship_anti_air_1
-            fixed_ship_battery_slot = ship_light_battery_2
-            #front_1_custom_slot = 
-            #mid_1_custom_slot = 
-            #mid_2_custom_slot = 
-            #rear_1_custom_slot = 
-        }
-        obsolete = no
-    }
-    create_equipment_variant = {
-        name = "Mergerous"
-        type = ship_hull_cruiser_2
-        parent_version = 0
-        modules = {
-            fixed_ship_armor_slot = ship_armor_cruiser_2
-            fixed_ship_secondaries_slot = ship_secondaries_2
-            fixed_ship_engine_slot = cruiser_ship_engine_2
-            fixed_ship_radar_slot = ship_sonar_1
-            fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-            fixed_ship_anti_air_slot = ship_anti_air_1
-            fixed_ship_battery_slot = ship_medium_battery_1
-            #front_1_custom_slot = 
-            #mid_1_custom_slot = 
-            #mid_2_custom_slot = 
-            rear_1_custom_slot = ship_medium_battery_1
-            #rear_2_custom_slot = 
-        }
-        obsolete = no
-    }
-    create_equipment_variant = {
-        name = "Skal"
-        type = ship_hull_heavy_1
-        parent_version = 0
-        modules = {
-            fixed_ship_armor_slot = ship_armor_bb_1
-            fixed_ship_secondaries_slot = ship_secondaries_2
-            fixed_ship_engine_slot = heavy_ship_engine_1
-            #fixed_ship_radar_slot = 
-            fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-            fixed_ship_anti_air_slot = ship_anti_air_2
-            fixed_ship_battery_slot = ship_heavy_battery_1
-            front_1_custom_slot = ship_anti_air_2
-            #front_2_custom_slot = 
-            #mid_1_custom_slot = 
-            #mid_2_custom_slot = 
-            #mid_3_custom_slot = 
-            rear_1_custom_slot = ship_heavy_battery_1
-            #rear_2_custom_slot = 
-        }
-        obsolete = no
-    }
-}
+#if = {
+#    limit = { has_dlc = "Man the Guns" }
+#    create_equipment_variant = {
+#        name = "Arben"
+#        type = ship_hull_submarine_2
+#        parent_version = 0
+#        modules = {
+#            fixed_ship_engine_slot = sub_ship_engine_2
+#            fixed_ship_torpedo_slot = ship_torpedo_sub_2
+#            #front_1_custom_slot = 
+#            #mid_1_custom_slot = 
+#            #rear_1_custom_slot = 
+#        }
+#        obsolete = no
+#    }
+#    create_equipment_variant = {
+#        name = "Lorndaz"
+#        type = ship_hull_light_1
+#        parent_version = 0
+#        modules = {
+#            fixed_ship_engine_slot = light_ship_engine_1
+#            fixed_ship_torpedo_slot = ship_torpedo_2
+#            fixed_ship_radar_slot = ship_sonar_1
+#            fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+#            fixed_ship_anti_air_slot = ship_anti_air_1
+#            fixed_ship_battery_slot = ship_light_battery_2
+#            #front_1_custom_slot = 
+#            #mid_1_custom_slot = 
+#            #mid_2_custom_slot = 
+#            #rear_1_custom_slot = 
+#        }
+#        obsolete = no
+#    }
+#    create_equipment_variant = {
+#        name = "Mergerous"
+#        type = ship_hull_cruiser_2
+#        parent_version = 0
+#        modules = {
+#            fixed_ship_armor_slot = ship_armor_cruiser_2
+#            fixed_ship_secondaries_slot = ship_secondaries_2
+#            fixed_ship_engine_slot = cruiser_ship_engine_2
+#            fixed_ship_radar_slot = ship_sonar_1
+#            fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+#            fixed_ship_anti_air_slot = ship_anti_air_1
+#            fixed_ship_battery_slot = ship_medium_battery_1
+#            #front_1_custom_slot = 
+#            #mid_1_custom_slot = 
+#            #mid_2_custom_slot = 
+#            rear_1_custom_slot = ship_medium_battery_1
+#            #rear_2_custom_slot = 
+#        }
+#        obsolete = no
+#    }
+#    create_equipment_variant = {
+#        name = "Skal"
+#        type = ship_hull_heavy_1
+#        parent_version = 0
+#        modules = {
+#            fixed_ship_armor_slot = ship_armor_bb_1
+#            fixed_ship_secondaries_slot = ship_secondaries_2
+#            fixed_ship_engine_slot = heavy_ship_engine_1
+#            #fixed_ship_radar_slot = 
+#            fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+#            fixed_ship_anti_air_slot = ship_anti_air_2
+#            fixed_ship_battery_slot = ship_heavy_battery_1
+#            front_1_custom_slot = ship_anti_air_2
+#            #front_2_custom_slot = 
+#            #mid_1_custom_slot = 
+#            #mid_2_custom_slot = 
+#            #mid_3_custom_slot = 
+#            rear_1_custom_slot = ship_heavy_battery_1
+#            #rear_2_custom_slot = 
+#        }
+#        obsolete = no
+#    }
+#}
 
 
 

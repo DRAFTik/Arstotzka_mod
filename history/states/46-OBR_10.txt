@@ -12,6 +12,7 @@ state={
 			infrastructure = 1
 			industrial_complex = 2
 			livestock_complex = 1
+			thermal_coal_power_plant = 1
 		}
 		owner = OBR
 		add_core_of = OBR
@@ -21,5 +22,6 @@ state={
 	}
 	manpower=4414367
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

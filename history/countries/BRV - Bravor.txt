@@ -1,6 +1,6 @@
 ﻿capital = 356
 
-# oob = "BRV_start"
+oob = "BRV_start"
 
 
 # Starting tech
@@ -56,14 +56,14 @@ set_politics = {
 	ruling_party = market_liberal
 }
 set_popularities = {
-	totalist					= 0
-	syndicalist					= 3
-	communitarianist			= 6
-	market_liberal				= 15
-	social_conservative			= 11
-	stratocratic_apologetism	= 3
-	patrimonialist				= 46
-	national_populist			= 16
+	totalist					= 2
+	syndicalist					= 5
+	communitarianist			= 3
+	market_liberal				= 62
+	social_conservative			= 13
+	stratocratic_apologetism	= 1
+	patrimonialist				= 5
+	national_populist			= 9
 	national_radicalist			= 0
 	mysticist					= 0
 }

@@ -1,0 +1,38 @@
+dismissal_rule_ideology_not_socialist = {
+	type = dismissal_rules
+	visible = {
+		is_communism_ideology = yes
+	}
+	dismiss_member_trigger = {
+		is_communism_ideology = no
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+dismissal_rule_ideology_socialist = {
+	type = dismissal_rules
+	visible = {
+		is_communism_ideology = no
+	}
+	dismiss_member_trigger = {
+		is_communism_ideology = yes
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+dismissal_rule_ideology_not_elected = {
+	type = dismissal_rules
+	visible = {
+		has_elections = yes
+	}
+	dismiss_member_trigger = {
+		has_elections = no
+	}
+	can_remove = {
+		always = no
+	}
+}

@@ -1,9 +1,22 @@
 state={
 	id=356
 	name="STATE_356"
+	resources={
+		iron = 12
+		chromium = 2
+		tungsten = 2
+		aluminium = 7
+		oil = 34
+		coal = 40
+	}
 	history={
+		victory_points = {
+			4633 50
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
+			dockyard = 1
 		}
 		owner = BRV
 		add_core_of = BRV
@@ -11,7 +24,7 @@ state={
 	provinces={
 		4633 4640 4643 4646 4660 4673 4675 4697 4701 
 	}
-	manpower=11111111
+	manpower=2164645
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

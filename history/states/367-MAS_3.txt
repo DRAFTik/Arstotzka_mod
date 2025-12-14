@@ -1,9 +1,21 @@
 state={
 	id=367
 	name="STATE_367"
+	resources={
+		iron = 4
+		chromium = 1
+		tungsten = 0
+		aluminium = 2
+		oil = 0
+		coal = 23
+	}
 	history={
+		victory_points = {
+			4906 50
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 		}
 		owner = MAS
 		add_core_of = MAS
@@ -11,7 +23,7 @@ state={
 	provinces={
 		4855 4857 4859 4860 4889 4894 4901 4906 4912 4923 4932 4945 4968
 	}
-	manpower=11111111
+	manpower=1335165
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

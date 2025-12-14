@@ -1,0 +1,63 @@
+#################
+### DIPLOMACY ###
+#################
+
+guarantors = {
+	input = game:all_countries
+	name = collection_guarantors
+	operators = {
+		limit = { has_guaranteed = ROOT }
+	}
+}
+
+################
+### IDEOLOGY ###
+################
+
+socialist_countries = {
+	input = game:all_countries
+	name = collection_socialist_countries
+	operators = {
+		limit = { has_socialist_government = yes }
+	}
+}
+
+non_socialist_countries = {
+	input = game:all_countries
+	name = collection_non_socialist_countries
+	operators = {
+		limit = { has_socialist_government = no }
+	}
+}
+
+democratic_countries = {
+	input = game:all_countries
+	name = collection_democratic_countries
+	operators = {
+		limit = { has_elected_government = yes }
+	}
+}
+
+non_democratic_countries = {
+	input = game:all_countries
+	name = collection_non_democratic_countries
+	operators = {
+		limit = { has_elected_government = no }
+	}
+}
+
+reactionary_countries = {
+	input = game:all_countries
+	name = collection_reactionary_countries
+	operators = {
+		limit = { has_authoritarian_government = yes }
+	}
+}
+
+non_reactionary_countries = {
+	input = game:all_countries
+	name = collection_non_reactionary_countries
+	operators = {
+		limit = { has_authoritarian_government = no }
+	}
+}

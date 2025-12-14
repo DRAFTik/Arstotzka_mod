@@ -3,6 +3,7 @@ state={
 	name="STATE_78"
 	resources={
 		tungsten = 41
+		coal = 15
 	}
 	history={
 		victory_points = {
@@ -23,5 +24,6 @@ state={
 	}
 	manpower=3135916
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

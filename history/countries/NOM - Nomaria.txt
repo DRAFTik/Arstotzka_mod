@@ -1,6 +1,6 @@
 ﻿capital = 379
 
-# oob = "NOM_start"
+oob = "NOM_start"
 
 
 # Starting tech
@@ -53,17 +53,24 @@ add_ideas = {
 # recruit_character = REP_persius_lestrade
 
 set_politics = {
-	ruling_party = market_liberal
+	ruling_party = social_conservative
 }
 set_popularities = {
-	totalist					= 0
-	syndicalist					= 3
-	communitarianist			= 6
-	market_liberal				= 15
-	social_conservative			= 11
-	stratocratic_apologetism	= 3
-	patrimonialist				= 46
-	national_populist			= 16
-	national_radicalist			= 0
+	totalist					= 3
+	syndicalist					= 1
+	communitarianist			= 5
+	market_liberal				= 9
+	social_conservative			= 47
+	stratocratic_apologetism	= 21
+	patrimonialist				= 7
+	national_populist			= 6
+	national_radicalist			= 1
 	mysticist					= 0
 }
+
+
+
+create_faction_from_template = faction_template_thalassgard_defence
+add_to_faction = NOM
+add_to_faction = MAS
+add_to_faction = BRV

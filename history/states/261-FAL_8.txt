@@ -2,8 +2,12 @@ state={
 	id=261
 	name="STATE_261"
 	history={
+		victory_points = {
+			3885 40
+		}
 		buildings = {
 			infrastructure = 1
+			livestock_complex = 2
 		}
 		owner = FAL
 		add_core_of = FAL

@@ -179,7 +179,7 @@ guiTypes = {
 		buttonType = {
 			name = "civil_production_open"
 			quadTextureSprite = "GFX_civ_production_button"
-			position = { x = 473 y = 79 }
+			position = { x = 486 y = 79 }
 			Orientation = "UPPER_LEFT"
 			shortcut = ""
 			pdx_tooltip = "civil_production_tt"

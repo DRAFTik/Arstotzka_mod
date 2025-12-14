@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			dockyard = 1
 		}
 		owner = HEL
 		add_core_of = HEL
@@ -11,7 +12,7 @@ state={
 	provinces={
 		5393 5395 5396 5401 5402 5403 5404 5405 
 	}
-	manpower=11111111
+	manpower=738858
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -6,6 +6,7 @@ state={
 			infrastructure = 1
 			arms_factory = 1
 			dockyard = 2
+			agro_silo = 1
 		}
 		owner = VAL
 		add_core_of = VAL

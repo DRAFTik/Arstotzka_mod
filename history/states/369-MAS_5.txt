@@ -2,8 +2,12 @@ state={
 	id=369
 	name="STATE_369"
 	history={
+		victory_points = {
+			5072 40
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 		}
 		owner = MAS
 		add_core_of = MAS
@@ -11,7 +15,7 @@ state={
 	provinces={
 		4971 4979 5004 5033 5039 5072 5083 5099 
 	}
-	manpower=11111111
+	manpower=580123
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

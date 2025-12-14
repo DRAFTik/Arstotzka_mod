@@ -108,6 +108,7 @@ leader_traits = {
 		random = no
 		num_generation_science_point				= 0.2
 		num_generation_electric_power_factor		= 0.05
+		production_speed_thermal_coal_power_plant_factor	= 0.03
 		production_speed_thermal_power_plant_factor	= 0.03
 		production_speed_hydro_power_plant_factor	= 0.03
 	}

@@ -4,6 +4,7 @@ state={
 	resources={
 		oil = 55
 		aluminium = 30
+		coal = 12
 	}
 	history={
 		victory_points = {
@@ -44,5 +45,6 @@ state={
 	}
 	manpower=4204443
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town		# TODO
+	local_supplies=0.000
+	state_category=town		# TODO
 }

@@ -1,11 +1,23 @@
 state={
 	id=305
 	name="STATE_305"
+	resources={
+		iron = 40
+		chromium = 12
+		tungsten = 16
+		aluminium = 10
+		oil = 6
+		coal = 110
+	}
 	history={
+		victory_points = {
+			4330 40
+		}
 		buildings = {
 			infrastructure = 1
 			arms_factory = 1
 			dockyard = 1
+			livestock_complex = 1
 		}
 		owner = KEL
 		add_core_of = KEL

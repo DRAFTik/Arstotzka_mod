@@ -204,4 +204,39 @@ dlcs = {
 		web_link = "https://store.steampowered.com/app/2695150/Country_Pack__Hearts_of_Iron_IV_Trial_of_Allegiance/"
 		localization_key = "TRIAL_OF_ALLEGIANCE"
 	}
+	dlc043 = {
+		name = "Gotterdammerung"
+		steam_id = "3152780"
+		career_profile_background_promotion = "GFX_bg_dlc043"
+		localization_key = "GOTTERDAMMERUNG"
+		description = "DLC_DESCRIPTION_dlc043"
+		major = no
+		web_link = {
+			"default" = "https://store.steampowered.com/app/3152780/Expansion__Hearts_of_Iron_IV_Gotterdammerung/"
+			"simp_chinese" = "https://cn.heartsofiron.com/add-ons/hearts-of-iron-iv-gotterdammerung"
+		}
+	}
+	dlc046 = {
+		name = "Graveyard of Empires"
+		steam_id = "3152790"
+		localization_key = "GRAVEYARD_OF_EMPIRES"
+		description = "DLC_DESCRIPTION_dlc046"
+		major = no
+		web_link = {
+			"default" = "https://store.steampowered.com/app/3152790/Country_Pack__Hearts_of_Iron_IV_Graveyard_of_Empires/"
+			"simp_chinese" = "https://cn.heartsofiron.com/add-ons/hearts-of-iron-iv-graveyard-of-empires"
+		}
+	}
+	dlc049 = {
+		name = "No Compromise, No Surrender"
+		steam_id = "3796260"
+		career_profile_background_promotion = "GFX_bg_dlc049"
+		localization_key = "NO_COMPROMISE_NO_SURRENDER"
+		description = "DLC_DESCRIPTION_dlc049"
+		major = no
+		web_link = {
+			"default" = "https://store.steampowered.com/app/3796260/Expansion__Hearts_of_Iron_IV_No_Compromise_No_Surrender/"
+			"simp_chinese" = "https://cn.heartsofiron.com/add-ons/hearts-of-iron-iv-no-compromise-no-surrender"
+		}
+	}
 }

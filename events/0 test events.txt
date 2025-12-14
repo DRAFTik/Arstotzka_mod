@@ -218,3 +218,21 @@ country_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = test.201
+	title = test.201.t
+	desc = test.201.desc
+	picture = GFX_report_event_defense_or_attack
+	is_triggered_only = yes
+
+	option = {
+		name = "ВОЙНА!"
+		random_list = {
+			50 = { NOM = { add_to_faction = EDE } }
+			50 = { }
+		}
+		declare_war_on = { target = NOM type = annex_everything }
+	}
+}

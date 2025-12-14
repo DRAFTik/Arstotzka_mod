@@ -2,8 +2,12 @@ state={
 	id=331
 	name="STATE_331"
 	history={
+		victory_points = {
+			4792 40
+		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
 		}
 		owner = EDE
 		add_core_of = EDE
@@ -11,7 +15,7 @@ state={
 	provinces={
 		4791 4792 4805 4817 4819 4838 4840 4841 4847 
 	}
-	manpower=11111111
+	manpower=1071775
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

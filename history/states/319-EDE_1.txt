@@ -1,9 +1,22 @@
 state={
 	id=319
 	name="STATE_319"
+	resources={
+		iron = 9
+		chromium = 1
+		tungsten = 0
+		aluminium = 9
+		oil = 0
+		coal = 24
+	}
 	history={
+		victory_points = {
+			4616 50
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
+			dockyard = 2
 		}
 		owner = EDE
 		add_core_of = EDE
@@ -11,7 +24,7 @@ state={
 	provinces={
 		4614 4615 4616 4617 4618 4619 4621 4624 4626 4627 4628 
 	}
-	manpower=11111111
+	manpower=1484597
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

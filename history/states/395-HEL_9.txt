@@ -2,8 +2,13 @@ state={
 	id=395
 	name="STATE_395"
 	history={
+		victory_points = {
+			5397 50
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
+			arms_factory = 1
 		}
 		owner = HEL
 		add_core_of = HEL
@@ -11,7 +16,7 @@ state={
 	provinces={
 		5352 5355 5360 5364 5367 5375 5383 5384 5385 5387 5392 5397 
 	}
-	manpower=11111111
+	manpower=983283
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

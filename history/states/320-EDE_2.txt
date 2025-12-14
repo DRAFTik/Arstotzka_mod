@@ -2,8 +2,12 @@ state={
 	id=320
 	name="STATE_320"
 	history={
+		victory_points = {
+			4750 40
+		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 1
 		}
 		owner = EDE
 		add_core_of = EDE
@@ -11,7 +15,7 @@ state={
 	provinces={
 		4637 4653 4665 4670 4671 4690 4696 4708 4721 4739 4750 
 	}
-	manpower=11111111
+	manpower=874177
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -1,7 +1,7 @@
 resources = {
 
 	iron = {
-		icon_frame = 7
+		icon_frame = 8
 		cic = 0.1
 		convoys = 0.1
 	}

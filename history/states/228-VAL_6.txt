@@ -1,10 +1,19 @@
 state={
 	id=228
 	name="STATE_228"
+	resources={
+		iron = 28
+		chromium = 2
+		tungsten = 0
+		aluminium = 42
+		oil = 10
+		coal = 30
+	}
 	history={
 		buildings = {
 			infrastructure = 1
 			dockyard = 2
+			hydro_power_plant = 1
 		}
 		owner = VAL
 		add_core_of = VAL

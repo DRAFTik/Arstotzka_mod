@@ -181,6 +181,7 @@ ideas = {
 				energetic_concern
 			}
 			modifier = {
+				production_speed_thermal_coal_power_plant_factor = 0.05
 				production_speed_thermal_power_plant_factor = 0.05
 				production_speed_hydro_power_plant_factor = 0.05
 			}

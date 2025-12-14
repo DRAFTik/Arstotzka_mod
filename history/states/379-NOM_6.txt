@@ -2,8 +2,15 @@ state={
 	id=379
 	name="STATE_379"
 	history={
+		victory_points = {
+			5217 50
+		}
+		victory_points = {
+			5285 40
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 3
 		}
 		owner = NOM
 		add_core_of = NOM
@@ -11,7 +18,7 @@ state={
 	provinces={
 		5201 5217 5242 5255 5263 5285 5289 
 	}
-	manpower=11111111
+	manpower=1746576
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

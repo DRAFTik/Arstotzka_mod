@@ -4,6 +4,8 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 2
+			thermal_coal_power_plant = 1
 		}
 		owner = HEL
 		add_core_of = HEL
@@ -11,7 +13,7 @@ state={
 	provinces={
 		5262 5291 5303 5316 5321 5324 5347 
 	}
-	manpower=11111111
+	manpower=967355
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

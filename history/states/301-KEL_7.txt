@@ -5,6 +5,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+			thermal_coal_power_plant = 1
 		}
 		owner = KEL
 		add_core_of = KEL

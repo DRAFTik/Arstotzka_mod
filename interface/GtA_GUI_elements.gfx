@@ -327,6 +327,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/GUI/private_buildings/private_livestock_complex.dds"
 	}
 	SpriteType = {
+		name = "GFX_private_thermal_coal_power_plant"
+		texturefile = "gfx/interface/GUI/private_buildings/private_thermal_coal_power_plant.dds"
+	}
+	SpriteType = {
 		name = "GFX_private_thermal_power_plant"
 		texturefile = "gfx/interface/GUI/private_buildings/private_thermal_power_plant.dds"
 	}

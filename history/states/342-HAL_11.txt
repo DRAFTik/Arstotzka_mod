@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 		}
 		owner = HAL
 		add_core_of = HAL
@@ -11,7 +12,7 @@ state={
 	provinces={
 		4989 5008 5012 5034 5047 5049 5057 5064 5065 5074 5086 5093 5094 5104 
 	}
-	manpower=11111111
+	manpower=3274372
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

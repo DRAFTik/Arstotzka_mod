@@ -2,8 +2,12 @@ state={
 	id=338
 	name="STATE_338"
 	history={
+		victory_points = {
+			4868 50
+		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 3
 		}
 		owner = HAL
 		add_core_of = HAL
@@ -11,7 +15,7 @@ state={
 	provinces={
 		4774 4825 4835 4843 4866 4868 4888 4896 
 	}
-	manpower=11111111
+	manpower=3793717
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

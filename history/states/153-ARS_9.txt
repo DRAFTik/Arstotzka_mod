@@ -1,6 +1,10 @@
 state={
 	id=153
 	name="STATE_153"
+	resources={
+		iron = 10
+		coal = 10
+	}
 	history={
 		buildings = {
 			infrastructure = 1

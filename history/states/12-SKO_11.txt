@@ -6,7 +6,7 @@ state={
 			infrastructure = 1
 			industrial_complex = 1
 			agro_silo = 1
-			thermal_power_plant = 1
+			thermal_coal_power_plant = 1
 		}
 		owner = SKO
 		add_core_of = SKO

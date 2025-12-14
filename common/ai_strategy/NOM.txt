@@ -1,0 +1,104 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+# building_target
+
+
+
+######## CONSTRUCTIONS ########
+
+
+######## END CONSTRUCTIONS ########
+
+
+NOM_ally_base = {
+	allowed = {
+		OR = {
+			tag = MAS
+			tag = BRV
+			tag = EDE
+		}
+	}
+	enable = {
+		OR = {
+			country_exists = HAL
+			HAL = { is_subject = no }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = befriend
+		id = "NOM"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "NOM"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "HAL"
+		value = 200
+	}
+}
+
+NOM_ally_base_2 = {
+	allowed = {
+		tag = NOM
+	}
+	enable = {
+		OR = {
+			country_exists = HAL
+			HAL = { is_subject = no }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = befriend
+		id = "MAS"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "MAS"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "BRV"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "BRV"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "EDE"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "EDE"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "HAL"
+		value = 200
+	}
+}

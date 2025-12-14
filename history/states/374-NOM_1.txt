@@ -1,6 +1,14 @@
 state={
 	id=374
 	name="STATE_374"
+	resources={
+		iron = 18
+		chromium = 10
+		tungsten = 8
+		aluminium = 3
+		oil = 0
+		coal = 19
+	}
 	history={
 		buildings = {
 			infrastructure = 1
@@ -11,7 +19,7 @@ state={
 	provinces={
 		5164 5176 5184 5200 5209 5219 5231 5236 5246 5257 5280 
 	}
-	manpower=11111111
+	manpower=1332244
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

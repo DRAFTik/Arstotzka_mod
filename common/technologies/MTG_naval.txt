@@ -14,6 +14,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			light_ship_engine_1
+			ship_seaplane_tender_1
 		}
 		path = {
 			leads_to_tech = basic_ship_hull_light
@@ -68,6 +69,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			light_ship_engine_2
+			ship_seaplane_tender_2
 		}
 		path = {
 			leads_to_tech = improved_ship_hull_light
@@ -470,6 +472,10 @@ technologies = {
 		on_research_complete = {
 			custom_effect_tooltip = sonar_advice_tt
 		}
+		path = {
+			leads_to_tech = advanced_sonar
+			research_cost_coeff = 1
+		}
 		research_cost = 1
 
 		start_year = 1983
@@ -485,6 +491,90 @@ technologies = {
 			modifier = {
 				factor = 4
 				has_war_with = KOL
+			}
+			modifier = {
+				factor = 2
+				anti_submarine_strategy_required_trigger = yes
+			}
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+			asw_tech
+			ship_modules_tech
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_destroyer_and_modules
+		}
+		special_project_specialization = { specialization_naval }
+	}
+	
+	advanced_sonar = {
+		enable_equipment_modules = {
+			ship_sonar_3
+		}
+		on_research_complete = {
+			custom_effect_tooltip = sonar_advice_tt
+		}
+		path = {
+			leads_to_tech = modern_sonar
+			research_cost_coeff = 1
+		}		
+		research_cost = 1
+
+		start_year = 1986
+
+		folder = {
+			name = mtgnavalfolder
+			position = { x = 2 y = 13 }
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 4
+				has_war_with = GER
+			}
+			modifier = {
+				factor = 2
+				anti_submarine_strategy_required_trigger = yes
+			}
+		}
+
+		categories = {
+			naval_equipment
+			dd_tech
+			asw_tech
+			ship_modules_tech
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_destroyer_and_modules
+		}
+		special_project_specialization = { specialization_naval }
+	}
+	
+	modern_sonar = {
+		enable_equipment_modules = {
+			ship_sonar_4
+		}
+		on_research_complete = {
+			custom_effect_tooltip = sonar_advice_tt
+		}
+		research_cost = 1
+
+		start_year = 1990
+
+		folder = {
+			name = mtgnavalfolder
+			position = { x = 2 y = 19 }
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 4
+				has_war_with = GER
 			}
 			modifier = {
 				factor = 2
@@ -525,10 +615,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		path = {
-			leads_to_tech = improved_airplane_launcher
-			research_cost_coeff = 1
-		}
+#		path = {
+#			leads_to_tech = improved_airplane_launcher
+#			research_cost_coeff = 1
+#		}
 
 		allow_branch = {
 			has_dlc = "Man the Guns"
@@ -564,7 +654,6 @@ technologies = {
 
 		categories = {
 			naval_equipment
-			cl_tech
 			ca_tech
 			mio_cat_tech_all_capital_ship_and_modules
 			mio_cat_tech_all_screen_ship_and_modules
@@ -611,7 +700,6 @@ technologies = {
 
 		categories = {
 			naval_equipment
-			cl_tech
 			ca_tech
 			mio_cat_tech_all_capital_ship_and_modules
 			mio_cat_tech_all_screen_ship_and_modules
@@ -656,7 +744,6 @@ technologies = {
 
 		categories = {
 			naval_equipment
-			cl_tech
 			ca_tech
 			mio_cat_tech_all_capital_ship_and_modules
 			mio_cat_tech_all_screen_ship_and_modules
@@ -693,7 +780,6 @@ technologies = {
 
 		categories = {
 			naval_equipment
-			cl_tech
 			ca_tech
 			mio_cat_tech_all_capital_ship_and_modules
 			mio_cat_tech_all_screen_ship_and_modules
@@ -702,53 +788,52 @@ technologies = {
 		special_project_specialization = { specialization_naval }
 	}
 
-	improved_airplane_launcher = {
+#	improved_airplane_launcher = {
 
 
-		enable_equipment_modules = {
-			ship_airplane_launcher_2
-		}
-		on_research_complete = {
-			custom_effect_tooltip = airplane_launcher_advice_tt
-		}
+#		enable_equipment_modules = {
+#			ship_airplane_launcher_2
+#		}
+#		on_research_complete = {
+#			custom_effect_tooltip = airplane_launcher_advice_tt
+#		}
 
 
-		research_cost = 0.75
+#		research_cost = 0.75
 
-		start_year = 1983
+#		start_year = 1983
 
-		folder = {
-			name = mtgnavalfolder
-			position = {  x = 0 y = 2 }
-		}
+#		folder = {
+#			name = mtgnavalfolder
+#			position = {  x = 0 y = 2 }
+#		}
 
-		ai_will_do = {
-			factor = 2
+#		ai_will_do = {
+#			factor = 2
 
-			modifier = {
-				has_navy_size = { size < 20 }
-				factor = 0.1
-			}
-			modifier = {
-				factor = 3.5
-				OR = {
-					tag = IMP
-					tag = UNF
-				}
-			}
-		}
+#			modifier = {
+#				has_navy_size = { size < 20 }
+#				factor = 0.1
+#			}
+#			modifier = {
+#				factor = 3.5
+#				OR = {
+#					tag = IMP
+#					tag = UNF
+#				}
+#			}
+#		}
 
-		categories = {
-			naval_equipment
-			cl_tech
-			ca_tech
-			ship_modules_tech
-			mio_cat_tech_all_capital_ship_and_modules
-			mio_cat_tech_all_screen_ship_and_modules
-			mio_cat_tech_all_cruiser_and_modules
-		}
-		special_project_specialization = { specialization_naval }
-	}
+#		categories = {
+#			naval_equipment
+#			ca_tech
+#			ship_modules_tech
+#			mio_cat_tech_all_capital_ship_and_modules
+#			mio_cat_tech_all_screen_ship_and_modules
+#			mio_cat_tech_all_cruiser_and_modules
+#		}
+#		special_project_specialization = { specialization_naval }
+#	}
 	basic_cruiser_armor_scheme = {
 
 		enable_equipment_modules = {
@@ -794,7 +879,6 @@ technologies = {
 		categories = {
 			naval_armor
 			naval_equipment
-			cl_tech
 			ca_tech
 			ship_modules_tech
 			mio_cat_tech_all_capital_ship_and_modules
@@ -901,9 +985,9 @@ technologies = {
 			name = mtgnavalfolder
 			position = {  x = 0 y = 8 }
 		}
-		sub_technologies = {
-			ship_hull_super_heavy
-		}
+#		sub_technologies = {
+#			ship_hull_super_heavy
+#		}
 
 		ai_will_do = {
 			factor = 1
@@ -1231,6 +1315,15 @@ technologies = {
 			leads_to_tech = improved_ship_hull_carrier
 			research_cost_coeff = 1
 		}
+		on_research_complete = {
+			if = {
+				limit = {has_dlc = "No Compromise, No Surrender"}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_escort_carrier	
+				}
+			}
+		}
 
 		research_cost = 1.5
 
@@ -1379,7 +1472,6 @@ technologies = {
 		}
 
 		enable_equipment_modules = {
-			ship_torpedo_sub_1
 			sub_ship_engine_1
 		}
 
@@ -1434,7 +1526,6 @@ technologies = {
 			ship_hull_submarine_2
 		}
 		enable_equipment_modules = {
-			ship_torpedo_sub_2
 			sub_ship_engine_2
 		}
 		on_research_complete = {
@@ -1496,7 +1587,6 @@ technologies = {
 			ship_hull_submarine_3
 		}
 		enable_equipment_modules = {
-			ship_torpedo_sub_3
 			sub_ship_engine_3
 		}
 
@@ -1545,7 +1635,6 @@ technologies = {
 			ship_hull_submarine_4
 		}
 		enable_equipment_modules = {
-			ship_torpedo_sub_4
 			sub_ship_engine_4
 		}
 
@@ -1629,18 +1718,13 @@ technologies = {
 		on_research_complete = {
 			custom_effect_tooltip = snorkel_advice_tt
 		}
-		path = {
-			leads_to_tech = improved_submarine_snorkel
-			research_cost_coeff = 1
-		}
-
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 2
-
+		
 		start_year = 1991
-
+		
 		folder = {
 			name = mtgnavalfolder
 			position = {  x = -1 y = 19 }
@@ -1922,6 +2006,65 @@ technologies = {
 		research_cost = 1
 		start_year = 1987
 
+		allow = {
+			always = no
+		}
+	}
+	
+	sp_naval_support_ships_pick_a = {
+		#HIDDEN EFFECT FOR REWARD CHOICE
+		research_cost = 1
+		start_year = 1987
+		naval_general_support_value_factor = 0.25
+		naval_general_support_factor = -0.1
+		allow = {
+			always = no
+		}
+	}
+	sp_naval_support_ships_pick_b = {
+		#HIDDEN EFFECT FOR REWARD CHOICE
+		research_cost = 1
+		start_year = 1987
+		naval_general_support_value_factor = 0.05
+		allow = {
+			always = no
+		}		
+	}
+	sp_naval_support_ships_pick_c = {
+		#HIDDEN EFFECT FOR REWARD CHOICE
+		research_cost = 1
+		start_year = 1987
+		naval_general_support_factor = 0.25
+		naval_general_support_value_factor = -0.15
+		allow = {
+			always = no
+		}
+	}
+	sp_naval_repair_ships_pick_a = {
+		#HIDDEN EFFECT FOR REWARD CHOICE
+		research_cost = 1
+		start_year = 1987
+		naval_repair_support_value_factor = 0.25
+		naval_repair_support_factor = -0.1
+		allow = {
+			always = no
+		}
+	}
+	sp_naval_repair_ships_pick_b = {
+		#HIDDEN EFFECT FOR REWARD CHOICE
+		research_cost = 1
+		start_year = 1987
+		naval_repair_support_value_factor = 0.05
+		allow = {
+			always = no
+		}
+	}
+	sp_naval_repair_ships_pick_c = {
+		#HIDDEN EFFECT FOR REWARD CHOICE
+		research_cost = 1
+		start_year = 1987
+		naval_repair_support_factor = 0.25
+		naval_repair_support_value_factor = -0.15
 		allow = {
 			always = no
 		}

@@ -1,10 +1,19 @@
 state={
 	id=283
 	name="STATE_283"
+	resources={
+		iron = 245
+		chromium = 22
+		tungsten = 32
+		aluminium = 48
+		oil = 28
+		coal = 210
+	}
 	history={
 		buildings = {
 			infrastructure = 1
 			dockyard = 1
+			livestock_complex = 2
 		}
 		owner = FAL
 		add_core_of = FAL
