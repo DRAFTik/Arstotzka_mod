@@ -1,0 +1,72 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Gihaya
+	319 = {
+		small_plane_airframe_0 = {
+			owner = "EDE" 
+			amount = 6
+			version_name = "ELF v1"
+		}
+		large_plane_airframe_0 = {
+			owner = "EDE" 
+			amount = 3
+			version_name = "EHB v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "EDE" 
+			amount = 1
+		}
+	}
+	# Nugast
+	328 = {
+		small_plane_airframe_0 = {
+			owner = "EDE" 
+			amount = 10
+			version_name = "ELF v1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "EDE" 
+			amount = 5
+			version_name = "EMC v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "EDE" 
+			amount = 1
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "EDE" 
+			version_name = "ELF v1"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "EDE" 
+			version_name = "EMC v1"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+}

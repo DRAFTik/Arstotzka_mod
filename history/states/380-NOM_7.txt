@@ -5,6 +5,9 @@ state={
 		buildings = {
 			infrastructure = 1
 			arms_factory = 1
+			livestock_complex = 1
+			agro_silo = 1
+			air_base = 1
 		}
 		owner = NOM
 		add_core_of = NOM

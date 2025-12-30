@@ -4,6 +4,8 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			steel_mill = 1
+			thermal_coal_power_plant = 1
 		}
 		owner = MRK
 		add_core_of = MRK
@@ -11,7 +13,7 @@ state={
 	provinces={
 		5547 5551 5581 5585 5596 
 	}
-	manpower=11111111
+	manpower=706926
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

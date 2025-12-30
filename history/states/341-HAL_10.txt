@@ -5,6 +5,8 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+			agro_complex = 2
+			air_base = 2
 		}
 		owner = HAL
 		add_core_of = HAL

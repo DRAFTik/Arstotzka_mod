@@ -1,0 +1,67 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Grummte
+	192 = {
+		small_plane_airframe_0 = {
+			owner = "DAR" 
+			amount = 5
+			version_name = "DLF v1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "DAR" 
+			amount = 4
+			version_name = "DMC v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "DAR" 
+			amount = 1
+		}
+	}
+	# 
+	197 = {
+		small_plane_airframe_0 = {
+			owner = "DAR" 
+			amount = 3
+			version_name = "DLF v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "DAR" 
+			amount = 1
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "DAR" 
+			version_name = "DLF v1"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "DAR" 
+			version_name = "DMC v1"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+}

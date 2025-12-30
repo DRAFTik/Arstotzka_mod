@@ -4,6 +4,8 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			thermal_coal_power_plant = 1
 		}
 		owner = GRT
 		add_core_of = GRT
@@ -11,7 +13,7 @@ state={
 	provinces={
 		5969 5970 5994 5996 5999 6015 6021 
 	}
-	manpower=11111111
+	manpower=1034472
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

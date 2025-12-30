@@ -6,7 +6,7 @@ state={
 			arms_factory = 1
 			livestock_complex = 1
 			960 = {
-				naval_base = 1
+				naval_base = 2
 			}
 		}
 		owner = ARS
@@ -17,5 +17,6 @@ state={
 	}
 	manpower=3335964
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=rural
+	local_supplies=0.000
+	state_category=rural
 }

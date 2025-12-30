@@ -13,6 +13,7 @@ state={
 			arms_factory = 1
 			agro_complex = 2
 			air_base = 2
+			oil_refinery = 1
 		}
 		owner = REP
 		add_core_of = REP
@@ -22,5 +23,6 @@ state={
 	}
 	manpower=1922053
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

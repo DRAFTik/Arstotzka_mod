@@ -8,7 +8,7 @@ state={
 			industrial_complex = 1
 			agro_complex = 1
 			2117 = {
-				naval_base = 1
+				naval_base = 3
 			}
 		}
 		owner = UNF
@@ -19,5 +19,6 @@ state={
 	}
 	manpower=2680914
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

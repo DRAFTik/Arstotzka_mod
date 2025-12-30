@@ -7,6 +7,10 @@ state={
 			arms_factory = 1
 			livestock_complex = 1
 			hydro_power_plant = 1
+			air_base = 2
+			4370 = {
+				naval_base = 3
+            }
 		}
 		owner = KEL
 		add_core_of = KEL

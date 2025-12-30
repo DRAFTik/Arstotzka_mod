@@ -1,0 +1,43 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Istengrad
+	251 = {
+		small_plane_airframe_0 = {
+			owner = "RUD" 
+			amount = 6
+			version_name = "RLF-1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "RUD" 
+			amount = 3
+			version_name = "RMC-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "RUD" 
+			amount = 1
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "RUD" 
+			version_name = "RLF-1"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+}

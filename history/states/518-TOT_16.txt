@@ -1,12 +1,29 @@
 state={
 	id=518
 	name="STATE_518"
+	resources={
+		iron = 130
+		chromium = 26
+		tungsten = 20
+		aluminium = 34
+		rubber = 210
+		oil = 92
+		coal = 64
+	}
 	history={
 		victory_points = {
 			5420 50
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 2
+			dockyard = 2
+			hydro_power_plant = 1
+			livestock_complex = 1
+			air_base = 5
+			5420 = {
+				naval_base = 5
+			}
 		}
 		owner = TOT
 		add_core_of = TOT
@@ -14,7 +31,7 @@ state={
 	provinces={
 		5416 5419 5420 5424 5425 5426 5427 
 	}
-	manpower=11111111
+	manpower=3189970
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -1,0 +1,106 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Caverilen
+	221 = {
+		small_plane_airframe_0 = {
+			owner = "VIR" 
+			amount = 20
+			version_name = "VLF v1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "VIR" 
+			amount = 8
+			version_name = "VMC v1"
+		}
+		large_plane_airframe_0 = {
+			owner = "VIR" 
+			amount = 10
+			version_name = "VHB v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "VIR" 
+			amount = 2
+		}
+	}
+	# Westag
+	206 = {
+		small_plane_airframe_0 = {
+			owner = "VIR" 
+			amount = 8
+			version_name = "VLF v1"
+		}
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "VIR" 
+			amount = 12
+			version_name = "VMP v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "VIR" 
+			amount = 2
+		}
+	}
+	# Begrone
+	216 = {
+		small_plane_airframe_0 = {
+			owner = "VIR" 
+			amount = 12
+			version_name = "VLF v1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "VIR" 
+			amount = 10
+			version_name = "VMC v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "VIR" 
+			amount = 1
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "VIR" 
+			version_name = "VLF v1"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "VIR" 
+			version_name = "VMC v1"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_airframe_0
+			creator = "VIR"
+			version_name = "VHB v1"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+		industrial_manufacturer = mio:generic_heavy_aircraft_organization
+	}
+}

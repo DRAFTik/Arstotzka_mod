@@ -10,6 +10,7 @@ state={
 			industrial_complex = 1
 			arms_factory = 2
 			livestock_complex = 1
+			oil_refinery = 1
 		}
 		owner = UNF
 		add_core_of = UNF

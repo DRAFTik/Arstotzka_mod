@@ -1,0 +1,80 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Perdera
+	380 = {
+		small_plane_airframe_0 = {
+			owner = "NOM" 
+			amount = 10
+			version_name = "NLF-1"
+		}
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "NOM" 
+			amount = 3
+			version_name = "NMP-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "NOM" 
+			amount = 1
+		}
+	}
+	# Liscor
+	375 = {
+		large_plane_airframe_0 = {
+			owner = "NOM" 
+			amount = 4
+			version_name = "NHB-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "NOM" 
+			amount = 1
+		}
+	}
+	# Heltran border
+	384 = {
+		small_plane_airframe_0 = {
+			owner = "NOM" 
+			amount = 10
+			version_name = "NLF-1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "NOM" 
+			amount = 7
+			version_name = "NMC-1"
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "NOM" 
+			version_name = "NLF-1"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "NOM" 
+			version_name = "NMC-1"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+}

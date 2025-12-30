@@ -7,6 +7,7 @@ state={
 			industrial_complex = 1
 			dockyard = 1
 			thermal_coal_power_plant = 1
+			air_base = 2
 		}
 		owner = KEL
 		add_core_of = KEL

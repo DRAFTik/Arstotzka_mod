@@ -7,6 +7,10 @@ state={
 			industrial_complex = 1
 			dockyard = 1
 			livestock_complex = 1
+			oil_refinery = 1
+			3537 = {
+				naval_base = 2
+            }
 		}
 		owner = DAR
 		add_core_of = DAR

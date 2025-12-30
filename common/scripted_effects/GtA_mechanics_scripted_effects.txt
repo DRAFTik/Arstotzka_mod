@@ -13,6 +13,7 @@
 #	clear_variable = radar_station
 #	clear_variable = rocket_site
 #	
+#	clear_variable = oil_refinery
 #	clear_variable = synthetic_refinery
 #	clear_variable = fuel_silo
 #	clear_variable = nuclear_reactor
@@ -70,25 +71,27 @@ calculate_electric_power_effect = {
 	
 	# уголь для УТЭС
 	if = {
-		limit = { check_variable = { thermal_coal_power_plant_total > 0 } }
+		limit = {
+			check_variable = { thermal_coal_power_plant_total > 0 }
+#			check_variable = { resource@coal < 0 }
+		}
 		if = {
 			limit = {
 				check_variable			= { resource@coal < -2 }
 			}
 			set_temp_variable			= { thermal_coal_power_plant_not_ok_temp = resource@coal }
+			
 			divide_temp_variable		= { thermal_coal_power_plant_not_ok_temp = 3 }
 			add_to_temp_variable		= { thermal_coal_power_plant_not_ok_temp = 0.5 }
-			round_temp_variable			= thermal_coal_power_plant_not_ok_temp
+			round_temp_variable			= thermal_coal_power_plant_not_ok_temp				# -число. вычисляем количество целых УТЭС с округлением вверх, не получающих уголь
+			log = "[GetDateText]: [This.GetName] ([This.GetTag]): thermal_coal_power_plant_not_ok_temp: [?thermal_coal_power_plant_not_ok_temp]"
 			
+			# остаток "не целого" угля < 3
 			set_temp_variable			= { coal_remains_temp = thermal_coal_power_plant_not_ok_temp }
 			multiply_temp_variable		= { coal_remains_temp = 3 }
-			subtract_from_temp_variable	= { coal_remains_temp = resource@coal }
-			if = {
-				limit = {
-					check_variable		= { coal_remains_temp > 0 }
-				}
-				set_temp_variable		= { thermal_coal_generation_minus_temp = coal_remains_temp }
-			}
+			subtract_from_temp_variable	= { coal_remains_temp = resource@coal }				# +число
+			
+			set_temp_variable			= { thermal_coal_generation_minus_temp = coal_remains_temp }
 			log = "[GetDateText]: [This.GetName] ([This.GetTag]): !! resource@coal < -2 !! coal_remains_temp: [?coal_remains_temp]"
 
 			else_if = {
@@ -99,21 +102,28 @@ calculate_electric_power_effect = {
 				log = "[GetDateText]: [This.GetName] ([This.GetTag]): !! resource@coal < 0 !! thermal_coal_generation_minus_temp: [?thermal_coal_generation_minus_temp]"
 			}
 		}
-		set_variable = { thermal_coal_power_plant_ok = thermal_coal_power_plant_not_ok_temp }
-		add_to_variable = { thermal_coal_power_plant_ok = thermal_coal_power_plant_total }
-		
+		set_variable	= { thermal_coal_power_plant_ok = thermal_coal_power_plant_not_ok_temp }		# для текста
+		add_to_variable	= { thermal_coal_power_plant_ok = thermal_coal_power_plant_total }			# для текста
+	
 		if = {
-			limit					= { NOT = { has_dynamic_modifier = { modifier = thermal_coal_generation_minus_dyn } } }
-			add_dynamic_modifier	= { modifier = thermal_coal_generation_minus_dyn }
+			limit						= { NOT = { has_dynamic_modifier = { modifier = thermal_coal_generation_minus_dyn } } }
+			add_dynamic_modifier		= { modifier = thermal_coal_generation_minus_dyn }
 		}
-		multiply_temp_variable		= { thermal_coal_generation_minus_temp = -20 }
-		set_temp_variable			= { temp_coal = thermal_coal_power_plant_not_ok_temp }
-		multiply_temp_variable		= { temp_coal = 60 }
-		add_to_temp_variable		= { thermal_coal_generation_minus_temp = temp_coal }
-		set_variable				= { coal_generation_minus_var = thermal_coal_generation_minus_temp }
-#		log = "[GetDateText]: [This.GetName] ([This.GetTag]): coal_generation_minus_var: [?coal_generation_minus_var]"
+		if = {
+			limit = {
+				check_variable = { resource@coal > 0 }
+			}
+			multiply_temp_variable		= { thermal_coal_generation_minus_temp = -20 }
+			else = { set_temp_variable	= { thermal_coal_generation_minus_temp = 0 } }
+		}
+		set_temp_variable				= { temp_coal = thermal_coal_power_plant_not_ok_temp }
+		multiply_temp_variable			= { temp_coal = 60 }
+		add_to_temp_variable			= { thermal_coal_generation_minus_temp = temp_coal }
+		set_variable					= { coal_generation_minus_var = thermal_coal_generation_minus_temp }
+		log = "[GetDateText]: [This.GetName] ([This.GetTag]): coal_generation_minus_var: [?coal_generation_minus_var]"
 		
-		set_variable				= { electric_power_thermal_coal_generation_var = thermal_coal_power_plant_total }
+		set_variable					= { electric_power_thermal_coal_generation_var = thermal_coal_power_plant_total }
+		log = "[GetDateText]: [This.GetName] ([This.GetTag]): electric_power_thermal_coal_generation_var: [?electric_power_thermal_coal_generation_var]"
 	}
 	
 	
@@ -121,9 +131,9 @@ calculate_electric_power_effect = {
 	set_temp_variable			= { electric_power_thermal_generation_fuel_need_var = thermal_power_plant_@THIS }
 	multiply_temp_variable		= { electric_power_thermal_generation_fuel_need_var = 24 }
 	set_temp_variable			= { total_fuel_temp = fuel_k }
-#	log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL TOTAL: [?total_fuel_temp]"
-	multiply_temp_variable		= { total_fuel_temp = 1000 }
 #	log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL TOTAL_K: [?total_fuel_temp]"
+	multiply_temp_variable		= { total_fuel_temp = 1000 }
+#	log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL TOTAL: [?total_fuel_temp]"
 	subtract_from_temp_variable	= { total_fuel_temp = electric_power_thermal_generation_fuel_need_var }
 	if = {
 		limit					= { check_variable = { total_fuel_temp > 0 } }
@@ -241,13 +251,11 @@ calculate_electric_power_effect = {
 	add_to_variable			= { electric_power_cost_army_var = radar_station_temp }
 
 # Другие
-	while_loop_effect		= { limit = { synthetic_refinery > var:synthetic_refinery_@THIS }	add_to_temp_variable = { synthetic_refinery_@THIS = 1 } }
 	while_loop_effect		= { limit = { fuel_silo > var:fuel_silo_@THIS }						add_to_temp_variable = { fuel_silo_@THIS = 1 } }
 	while_loop_effect		= { limit = { nuclear_reactor > var:nuclear_reactor_@THIS }			add_to_temp_variable = { nuclear_reactor_@THIS = 1 } }
 	while_loop_effect		= { limit = { agro_complex > var:agro_complex_@THIS }				add_to_temp_variable = { agro_complex_@THIS = 1 } }
 	while_loop_effect		= { limit = { livestock_complex > var:livestock_complex_@THIS }		add_to_temp_variable = { livestock_complex_@THIS = 1 } }
-	set_temp_variable		= { synthetic_refinery_temp = synthetic_refinery_@THIS }
-	multiply_temp_variable	= { synthetic_refinery_temp = 4 }
+	
 	set_temp_variable		= { fuel_silo_temp = fuel_silo_@THIS }
 	add_to_temp_variable	= { fuel_silo_temp = livestock_complex_@THIS }
 	multiply_temp_variable	= { fuel_silo_temp = 0.5 }
@@ -256,10 +264,27 @@ calculate_electric_power_effect = {
 	set_temp_variable		= { nuclear_reactor_temp = nuclear_reactor_@THIS }
 	multiply_temp_variable	= { nuclear_reactor_temp = 15 }
 	
-	set_variable			= { electric_power_cost_other_var = synthetic_refinery_temp }
-	add_to_variable			= { electric_power_cost_other_var = fuel_silo_temp }
+	set_variable			= { electric_power_cost_other_var = fuel_silo_temp }
 	add_to_variable			= { electric_power_cost_other_var = agro_complex_temp }
 	add_to_variable			= { electric_power_cost_other_var = nuclear_reactor_temp }
+	
+# Нефть
+	while_loop_effect		= { limit = { oil_refinery > var:oil_refinery_@THIS }				add_to_temp_variable = { oil_refinery_@THIS = 1 } }
+	while_loop_effect		= { limit = { synthetic_refinery > var:synthetic_refinery_@THIS }	add_to_temp_variable = { synthetic_refinery_@THIS = 1 } }
+	
+	set_temp_variable		= { oil_refinery_temp = oil_refinery_@THIS }
+	multiply_temp_variable	= { oil_refinery_temp = 8 }
+	add_to_temp_variable	= { oil_refinery_temp = oil_refinery_return_energy_var }
+	set_temp_variable		= { synthetic_refinery_temp = synthetic_refinery_@THIS }
+	multiply_temp_variable	= { synthetic_refinery_temp = 14 }
+	
+	set_variable			= { electric_power_cost_oil_var = oil_refinery_temp }
+	add_to_variable			= { electric_power_cost_oil_var = synthetic_refinery_temp }
+	
+	set_variable			= { oil_refinery_total = oil_refinery_@THIS }								# для текста
+	set_variable			= { synthetic_refinery_total = synthetic_refinery_@THIS }					# для текста
+	set_variable			= { electric_power_cost_oil_refinery_var = oil_refinery_temp }				# для текста
+	set_variable			= { electric_power_cost_synthetic_refinery_var = synthetic_refinery_temp }	# для текста
 
 # Сталь
 	while_loop_effect		= { limit = { steel_mill > var:steel_mill_@THIS }	add_to_temp_variable = { steel_mill_@THIS = 1 } }
@@ -297,8 +322,14 @@ calculate_electric_power_effect = {
 		limit					= { check_variable = { resource_produced@iron > 0 } }
 		add_to_temp_variable	= { resource_produced_power_cost_temp = resource_produced@iron }
 	}
+	if = {
+		limit					= { check_variable = { resource_produced@coal > 0 } }
+		add_to_temp_variable	= { resource_produced_coal_power_cost_temp = resource_produced@coal }
+		multiply_temp_variable	= { resource_produced_coal_power_cost_temp = 0.05 }
+	}
 #	add_to_temp_variable		= { resource_produced_power_cost_temp = resource_produced@steel }
 	multiply_temp_variable		= { resource_produced_power_cost_temp = 0.1 }
+	add_to_temp_variable		= { resource_produced_power_cost_temp = resource_produced_coal_power_cost_temp }
 	set_variable				= { electric_power_cost_resource_produced_var = resource_produced_power_cost_temp }
 
 # Частники // ушло в sell_private_electric_button_click
@@ -340,9 +371,9 @@ calculate_electric_power_LOG_effect = {
 	set_temp_variable			= { electric_power_thermal_generation_fuel_need_var = thermal_power_plant_@THIS }
 	multiply_temp_variable		= { electric_power_thermal_generation_fuel_need_var = 24 }
 	set_temp_variable			= { total_fuel_temp = fuel_k }
-	log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL TOTAL: [?total_fuel_temp]"
-	multiply_temp_variable		= { total_fuel_temp = 1000 }
 	log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL TOTAL_K: [?total_fuel_temp]"
+	multiply_temp_variable		= { total_fuel_temp = 1000 }
+	log = "[GetDateText]: [This.GetName] ([This.GetTag]): FUEL TOTAL: [?total_fuel_temp]"
 	subtract_from_temp_variable	= { total_fuel_temp = electric_power_thermal_generation_fuel_need_var }
 	if = {
 		limit					= { check_variable = { total_fuel_temp > 0 } }
@@ -438,9 +469,96 @@ calculate_electric_power_dyn = {
 		divide_temp_variable		= { RESOURCE_tumbler_7_debuff_temp2	= summ_tumbler_temp }
 		subtract_from_temp_variable	= { RESOURCE_tumbler_7_debuff_temp	= RESOURCE_tumbler_7_debuff_temp2 }
 		multiply_temp_variable		= { RESOURCE_tumbler_7_debuff_temp	= electric_power_debuff }						# ИТОГОВЫЙ ДЕБАФ (-число)
-		
+
 		set_variable				= { electric_power_local_resources_factor_var	= RESOURCE_tumbler_7_debuff_temp }
 		multiply_variable			= { electric_power_local_resources_factor_var	= 0.5 }
+		
+		
+		# fix на строгое число ресурса
+		if = {
+			limit					= { check_variable						= { resource_produced@aluminium > 0 } }
+			set_temp_variable		= { temp_res_aluminium					= resource_produced@aluminium }
+			multiply_temp_variable	= { temp_res_aluminium					= electric_power_local_resources_factor_var }
+			round_temp_variable		= temp_res_aluminium
+			
+			set_temp_variable		= { temp_res_aluminium_limit			= resource_produced@aluminium }
+			multiply_temp_variable	= { temp_res_aluminium_limit			= -1 }
+			set_variable			= { electric_power_aluminium_cost_var	= temp_res_aluminium }
+			clamp_variable			= { var = electric_power_aluminium_cost_var min = temp_res_aluminium_limit max = 0 }
+			else					= { clear_variable = electric_power_aluminium_cost_var }
+		}
+		if = {
+			limit					= { check_variable						= { resource_produced@oil > 0 } }
+			set_temp_variable		= { temp_res_oil						= resource_produced@oil }
+			multiply_temp_variable	= { temp_res_oil						= electric_power_local_resources_factor_var }
+			round_temp_variable		= temp_res_oil
+			
+			set_temp_variable		= { temp_res_oil_limit					= resource_produced@oil }
+			multiply_temp_variable	= { temp_res_oil_limit					= -1 }
+			set_variable			= { electric_power_oil_cost_var			= temp_res_oil }
+			clamp_variable			= { var = electric_power_oil_cost_var min = temp_res_oil_limit max = 0 }
+			else					= { clear_variable = electric_power_oil_cost_var }
+		}
+		if = {
+			limit					= { check_variable						= { resource_produced@tungsten > 0 } }
+			set_temp_variable		= { temp_res_tungsten					= resource_produced@tungsten }
+			multiply_temp_variable	= { temp_res_tungsten					= electric_power_local_resources_factor_var }
+			round_temp_variable		= temp_res_tungsten
+			
+			set_temp_variable		= { temp_res_tungsten_limit				= resource_produced@tungsten }
+			multiply_temp_variable	= { temp_res_tungsten_limit				= -1 }
+			set_variable			= { electric_power_tungsten_cost_var	= temp_res_tungsten }
+			clamp_variable			= { var = electric_power_tungsten_cost_var min = temp_res_tungsten_limit max = 0 }
+			else					= { clear_variable = electric_power_tungsten_cost_var }
+		}
+		if = {
+			limit					= { check_variable						= { resource_produced@rubber > 0 } }
+			set_temp_variable		= { temp_res_rubber						= resource_produced@rubber }
+			multiply_temp_variable	= { temp_res_rubber						= electric_power_local_resources_factor_var }
+			round_temp_variable		= temp_res_rubber
+			
+			set_temp_variable		= { temp_res_rubber_limit				= resource_produced@rubber }
+			multiply_temp_variable	= { temp_res_rubber_limit				= -1 }
+			set_variable			= { electric_power_rubber_cost_var		= temp_res_rubber }
+			clamp_variable			= { var = electric_power_rubber_cost_var min = temp_res_rubber_limit max = 0 }
+			else					= { clear_variable = electric_power_rubber_cost_var }
+		}
+		if = {
+			limit					= { check_variable						= { resource_produced@chromium > 0 } }
+			set_temp_variable		= { temp_res_chromium					= resource_produced@chromium }
+			multiply_temp_variable	= { temp_res_chromium					= electric_power_local_resources_factor_var }
+			round_temp_variable		= temp_res_chromium
+			
+			set_temp_variable		= { temp_res_chromium_limit				= resource_produced@chromium }
+			multiply_temp_variable	= { temp_res_chromium_limit				= -1 }
+			set_variable			= { electric_power_chromium_cost_var	= temp_res_chromium }
+			clamp_variable			= { var = electric_power_chromium_cost_var min = temp_res_chromium_limit max = 0 }
+			else					= { clear_variable = electric_power_chromium_cost_var }
+		}
+		if = {
+			limit					= { check_variable						= { resource_produced@iron > 0 } }
+			set_temp_variable		= { temp_res_iron						= resource_produced@iron }
+			multiply_temp_variable	= { temp_res_iron						= electric_power_local_resources_factor_var }
+			round_temp_variable		= temp_res_iron
+			
+			set_temp_variable		= { temp_res_iron_limit					= resource_produced@iron }
+			multiply_temp_variable	= { temp_res_iron_limit					= -1 }
+			set_variable			= { electric_power_iron_cost_var		= temp_res_iron }
+			clamp_variable			= { var = electric_power_iron_cost_var min = temp_res_iron_limit max = 0 }
+			else					= { clear_variable = electric_power_iron_cost_var }
+		}
+		if = {
+			limit					= { check_variable						= { resource_produced@coal > 0 } }
+			set_temp_variable		= { temp_res_coal						= resource_produced@coal }
+			multiply_temp_variable	= { temp_res_coal						= electric_power_local_resources_factor_var }
+			round_temp_variable		= temp_res_coal
+			
+			set_temp_variable		= { temp_res_coal_limit					= resource_produced@coal }
+			multiply_temp_variable	= { temp_res_coal_limit					= -1 }
+			set_variable			= { electric_power_coal_cost_var		= temp_res_coal }
+			clamp_variable			= { var = electric_power_coal_cost_var min = temp_res_coal_limit max = 0 }
+			else					= { clear_variable = electric_power_coal_cost_var }
+		}
 	}
 	else = {
 		clear_variable				= electric_power_planning_cryption_factor_var
@@ -1315,8 +1433,9 @@ calculate_steel_mill_effect = {
 				}
 			}
 		}
-		set_variable				= { steel_mill_ok = steel_mill }
+		set_variable				= { steel_mill_ok = steel_mill_total }
 		subtract_from_variable		= { steel_mill_ok = steel_mill_minus_temp }
+		clamp_variable				= { var = steel_mill_ok	min = 0	}
 		set_variable				= { steel_return_electric_power_var = steel_mill_minus_temp }
 		multiply_variable			= { steel_return_electric_power_var = -3.5 }
 		
@@ -1324,6 +1443,76 @@ calculate_steel_mill_effect = {
 			limit					= { NOT = { has_dynamic_modifier = { modifier = steel_mill_minus_dyn } } }
 			add_dynamic_modifier	= { modifier = steel_mill_minus_dyn }
 		}
+	}
+	else = {
+		set_variable				= { steel_mill_ok = steel_mill_total }
+		set_variable				= { steel_return_electric_power_var = 0 }
+	}
+}
+
+calculate_oil_refinery_effect = {
+	if = {
+		limit = {
+			check_variable = { var = oil_refinery_total	value = 0	compare = greater_than }
+			check_variable = { var = resource@oil		value = 0	compare = less_than }
+		}
+		if = {
+			limit = {
+				check_variable			= { resource@oil < -7 }
+			}
+			set_temp_variable			= { oil_refinery_not_ok_temp = resource@oil }
+
+			divide_temp_variable		= { oil_refinery_not_ok_temp = 8 }
+			add_to_temp_variable		= { oil_refinery_not_ok_temp = 0.5 }
+			round_temp_variable			= oil_refinery_not_ok_temp				# -число. вычисляем количество целых НПЗ с округлением вверх, не получающих нефть
+			log = "[GetDateText]: [This.GetName] ([This.GetTag]): oil_refinery_not_ok_temp: [?oil_refinery_not_ok_temp]"
+			
+			# остаток "не целой" нефти < 8
+			set_temp_variable			= { oil_remains_temp = oil_refinery_not_ok_temp }
+			multiply_temp_variable		= { oil_remains_temp = 8 }
+			subtract_from_temp_variable	= { oil_remains_temp = resource@oil }						# +число
+			
+			set_temp_variable			= { oil_refinery_minus_temp = oil_remains_temp }
+			log = "[GetDateText]: [This.GetName] ([This.GetTag]): !! resource@oil < -8 !! oil_remains_temp: [?oil_remains_temp]"
+
+			else_if = {
+				limit = {
+					check_variable		= { resource@oil < 0 }
+				}
+				set_temp_variable		= { oil_refinery_minus_temp = resource@oil }				# -число
+#				multiply_temp_variable	= { oil_refinery_minus_temp = -1 }							# +число
+				log = "[GetDateText]: [This.GetName] ([This.GetTag]): !! resource@oil < 0 !! oil_refinery_minus_temp: [?oil_refinery_minus_temp]"
+			}
+		}
+		set_variable	= { oil_refinery_ok = oil_refinery_not_ok_temp }							# для текста
+		add_to_variable	= { oil_refinery_ok = oil_refinery_total }									# для текста
+	
+		if = {
+			limit					= { NOT = { has_dynamic_modifier = { modifier = oil_refinery_minus_dyn } } }
+			add_dynamic_modifier	= { modifier = oil_refinery_minus_dyn }
+		}
+#		if = {
+#			limit = {
+#				check_variable = { resource@oil > 0 }
+#			}
+#			multiply_temp_variable		= { oil_refinery_minus_temp = -1 }
+#			else = { set_temp_variable	= { oil_refinery_minus_temp = 0 } }
+#		}
+		set_temp_variable			= { temp_oil = oil_refinery_not_ok_temp }
+		multiply_temp_variable		= { temp_oil = 8 }
+		add_to_temp_variable		= { oil_refinery_minus_temp = temp_oil }
+#		multiply_temp_variable		= { oil_refinery_minus_temp = -1 }
+		set_variable				= { oil_refinery_return_energy_var = oil_refinery_minus_temp }	# -число возвращаемой энергии
+		
+		set_variable				= { oil_refinery_return_fuel_var = oil_refinery_minus_temp }
+		multiply_variable			= { oil_refinery_return_fuel_var = 2 }							# -число вычитаемого прироста топлива
+		log = "[GetDateText]: [This.GetName] ([This.GetTag]): oil_refinery_return_energy_var: [?oil_refinery_return_energy_var]"
+		log = "[GetDateText]: [This.GetName] ([This.GetTag]): oil_refinery_return_fuel_var: [?oil_refinery_return_fuel_var]"
+	}
+	else = {
+		set_variable	= { oil_refinery_ok = oil_refinery_total }									# для текста
+		set_variable	= { oil_refinery_return_energy_var = 0 }
+		set_variable	= { oil_refinery_return_fuel_var = 0 }
 	}
 }
 

@@ -1,4 +1,5 @@
 ﻿l_russian:
+ 
  ### IDEA CATEGORIES
  laws: "Законы"
  political_advisors: "Правительство"
@@ -197,7 +198,68 @@
  ### topbar_l_russian.yml
  TOPBAR_ENERGY_DEMAND: ""
  TOPBAR_ENERGY_GENERATED: ""
+ TOPBAR_ENERGY_GENERATED: ""
+ TOPBAR_COAL_CURRENTLY_USED: ""
+ TOPBAR_MAXIMUM_ENERGY_GENERATED: ""
+ TOPBAR_TOTAL_COAL: ""
+
  
  ### core_l_russian.yml
  BASE_VALUE: ""
+ FUEL_DAILY_GAIN_BASE: "От нефтеперерабатывающих заводов: $NUM|H$"
+ FUEL_DAILY_GAIN_FROM_STATES: "От синтетических химзаводов: $NUM|H$"
+ 
+ 
+ ### buildings_l_russian.yml
+ synthetic_refinery: "Синтетический химзавод"
+ synthetic_refinery_plural: "Нефтеперерабатывающие заводы"
+ synthetic_refinery_desc: "Крупный промышленный комплекс, производящий топливо из угля без использования нефти. Крайне энергоёмок и менее эффективен, чем НПЗ, но позволяет поддерживать армию в условиях блокады и изоляции.\n\n$state_resource_cost_coal$: §R+2§!\n$MODIFIER_BASE_FUEL_GAIN_ADD$: §G+144§!\n$num_use_electric_power$: §R+14.0§!\n$num_proletariat_k$: §R-14.35§!"
+ 
+ 
+ ### modifiers_l_russian.yml
+ modifier_production_speed_synthetic_refinery_factor: "Скорость строительства §Yсинтетических химзаводов§!"
+ production_speed_synthetic_refinery_factor_tt: " $modifier_production_speed_synthetic_refinery_factor$: $RIGHT|+=%1$"
+ modifier_production_speed_synthetic_refinery_factor_desc: "Изменяет скорость строительства синтетических химзаводов."
+ modifier_state_production_speed_synthetic_refinery_factor: "§Y$synthetic_refinery$§! — скорость строительства"
+ modifier_state_production_speed_synthetic_refinery_factor_desc: "Изменяет скорость возведения следующей постройки в этом регионе: §Y$synthetic_refinery$§!."
+ 
+ MODIFIER_MAX_FUEL_FACTOR: "£GFX_fuel_state|1 Запас горючего"
+ max_fuel_factor_tt: " $MODIFIER_MAX_FUEL_FACTOR$: $RIGHT|+=%1$"
+ MODIFIER_MAX_FUEL_ADD: "£GFX_fuel_state|1 Запас горючего (К)"
+ MODIFIER_MAX_FUEL_ADD_FROM_STATES: "£GFX_fuel_state|1 Запас горючего (К)"
+ MODIFIER_BASE_FUEL_GAIN_FACTOR: "£GFX_fuel_state|2 Базовый прирост горючего"
+ MODIFIER_BASE_FUEL_GAIN_ADD: "£GFX_fuel_state|2 Прирост горючего"
+ MODIFIER_FUEL_COST: "£GFX_fuel_state|3 Стоимость горючего"
+ 
+ state_resource_oil: "£resources_strip|1 Нефть"
+ state_resource_aluminium: "£resources_strip|2 Алюминий"
+ state_resource_rubber: "£resources_strip|3 Каучук"
+ state_resource_tungsten: "£resources_strip|4 Вольфрам"
+ state_resource_steel: "£resources_strip|5 Сталь"
+ state_resource_chromium: "£resources_strip|6 Хром"
+ state_resource_coal: "£resources_strip|7 Уголь"
+ temporary_state_resource_oil: "$state_resource_oil$"
+ temporary_state_resource_aluminium: "$state_resource_aluminium$"
+ temporary_state_resource_rubber: "$state_resource_rubber$"
+ temporary_state_resource_tungsten: "$state_resource_tungsten$"
+ temporary_state_resource_steel: "$state_resource_steel$"
+ temporary_state_resource_chromium: "$state_resource_chromium$"
+ temporary_state_resource_coal: "$state_resource_coal$"
+ 
+ state_resource_cost_oil: "£resources_strip|1 Потребление нефти"
+ state_resource_cost_aluminium: "£resources_strip|2 Потребление алюминия"
+ state_resource_cost_rubber: "£resources_strip|3 Потребление каучука"
+ state_resource_cost_tungsten: "£resources_strip|4 Потребление вольфрама"
+ state_resource_cost_steel: "£resources_strip|5 Потребление стали"
+ state_resource_cost_chromium: "£resources_strip|6 Потребление хрома"
+ state_resource_cost_coal: "£resources_strip|7 Потребление угля"
+ country_resource_cost_oil: "$state_resource_cost_oil$"
+ country_resource_cost_aluminium: "$state_resource_cost_aluminium$"
+ country_resource_cost_rubber: "$state_resource_cost_rubber$"
+ country_resource_cost_tungsten: "$state_resource_cost_tungsten$"
+ country_resource_cost_steel: "$state_resource_cost_steel$"
+ country_resource_cost_chromium: "$state_resource_cost_chromium$"
+ country_resource_cost_coal: "$state_resource_cost_coal$"
+ 
+ 
  

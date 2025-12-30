@@ -18,6 +18,9 @@ state={
 			industrial_complex = 1
 			dockyard = 2
 			livestock_complex = 1
+			3495 = {
+				naval_base = 3
+            }
 		}
 		owner = VIR
 		add_core_of = VIR

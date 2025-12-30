@@ -5,6 +5,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+			air_base = 2
 		}
 		owner = EDE
 		add_core_of = EDE

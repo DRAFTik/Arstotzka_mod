@@ -1,12 +1,26 @@
 state={
 	id=495
 	name="STATE_495"
+	resources={
+		iron = 48
+		chromium = 5
+		tungsten = 4
+		aluminium = 16
+		oil = 9
+		coal = 22
+	}
 	history={
 		victory_points = {
 			5710 50
 		}
 		buildings = {
 			infrastructure = 1
+			agro_complex = 1
+			livestock_complex = 2
+			air_base = 3
+			5710 = {
+				naval_base = 3
+			}
 		}
 		owner = MRK
 		add_core_of = MRK
@@ -14,7 +28,7 @@ state={
 	provinces={
 		5645 5656 5661 5664 5672 5674 5683 5710 
 	}
-	manpower=11111111
+	manpower=2025606
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

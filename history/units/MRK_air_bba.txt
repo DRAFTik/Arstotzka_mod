@@ -1,0 +1,106 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Harkton
+	502 = {
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "MRK"
+			amount = 8
+			version_name = "MMP-1"
+		}
+		large_plane_airframe_0 = {
+			owner = "MRK"
+			amount = 8
+			version_name = "MHB-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "MRK"
+			amount = 1
+		}
+	}
+	# Lauvera
+	495 = {
+		small_plane_airframe_0 = {
+			owner = "MRK"
+			amount = 9
+			version_name = "MLF-1"
+		}
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "MRK"
+			amount = 10
+			version_name = "MMP-1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "MRK"
+			amount = 5
+			version_name = "MMC-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "MRK"
+			amount = 3
+		}
+	}
+	# Crosoven
+	480 = {
+		small_plane_airframe_0 = {
+			owner = "MRK"
+			amount = 9
+			version_name = "MLF-1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "MRK"
+			amount = 5
+			version_name = "MMC-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "MRK"
+			amount = 2
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "MRK" 
+			version_name = "MLF-1"
+		}
+		requested_factories = 2
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "MRK" 
+			version_name = "MMC-1"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_airframe_0
+			creator = "MRK" 
+			version_name = "MHB-1"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:mio:generic_heavy_aircraft_organization
+	}
+}

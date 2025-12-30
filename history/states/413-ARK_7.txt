@@ -7,6 +7,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			air_base = 2
 		}
 		owner = ARK
 		add_core_of = ARK
@@ -14,7 +16,7 @@ state={
 	provinces={
 		6269 6278 6292 6294 6303 6308 6313 
 	}
-	manpower=11111111
+	manpower=1194300
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

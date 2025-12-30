@@ -11,7 +11,7 @@ state={
 			hydro_power_plant = 1
 			air_base = 4
 			212 = {
-				naval_base = 1
+				naval_base = 4
 			}
 			2062 = {
                 naval_facility = 1
@@ -25,5 +25,6 @@ state={
 	}
 	manpower=3278067
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

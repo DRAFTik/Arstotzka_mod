@@ -1,12 +1,28 @@
 state={
 	id=434
 	name="STATE_434"
+	resources={
+		iron = 110
+		chromium = 22
+		tungsten = 18
+		aluminium = 28
+		oil = 46
+		coal = 72
+	}
 	history={
 		victory_points = {
 			6032 50
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
+			dockyard = 1
+			agro_complex = 1
+			steel_mill = 1
+			thermal_power_plant = 1
+			6009 = {
+				naval_base = 2
+			}
 		}
 		owner = NUV
 		add_core_of = NUV
@@ -14,7 +30,7 @@ state={
 	provinces={
 		6002 6003 6009 6012 6014 6026 6028 6029 6032 6040 6041 6050 
 	}
-	manpower=11111111
+	manpower=2430446
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

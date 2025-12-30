@@ -7,6 +7,9 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			1132 = {
+				naval_base = 2
+			}
 		}
 		owner = SKO
 		add_core_of = SKO
@@ -16,5 +19,6 @@ state={
 	}
 	manpower=730971
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

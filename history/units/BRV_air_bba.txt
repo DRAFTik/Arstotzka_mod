@@ -1,0 +1,72 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Iristila
+	356 = {
+		small_plane_airframe_0 = {
+			owner = "BRV" 
+			amount = 10
+			version_name = "BLF v1"
+		}
+		large_plane_airframe_0 = {
+			owner = "BRV" 
+			amount = 5
+			version_name = "BHB v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "BRV" 
+			amount = 2
+		}
+	}
+	# Girafol
+	363 = {
+		small_plane_airframe_0 = {
+			owner = "BRV" 
+			amount = 8
+			version_name = "BLF v1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "BRV" 
+			amount = 6
+			version_name = "BMC v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "BRV" 
+			amount = 1
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "BRV" 
+			version_name = "BLF v1"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "BRV" 
+			version_name = "BMC v1"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+}

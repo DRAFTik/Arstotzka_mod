@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			air_base = 3
 		}
 		owner = VIR
 		add_core_of = VIR

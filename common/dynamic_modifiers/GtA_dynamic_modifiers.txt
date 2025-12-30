@@ -57,16 +57,24 @@
 	
 	steel_mill_minus_dyn = {
 #		icon = GFX_hunger
-		enable = { always = yes }
+		enable = { check_variable = { resource@iron < 0 } }
 		# list of modifiers
 		num_use_electric_power = steel_return_electric_power_var
 	}
 	
 	steel_mill_minus_state_dyn = {
 #		icon = GFX_modifiers_increased_metal_production
-		enable = { always = yes }
+		enable = { owner = { check_variable = { resource@iron < 0 } } }
 		# list of modifiers
 		state_resource_cost_steel = steel_minus_state_var
+	}
+	
+	oil_refinery_minus_dyn = {
+		icon = GFX_hunger
+		enable = { check_variable = { resource@oil < 0 } }
+		# list of modifiers
+		num_use_electric_power = oil_refinery_return_energy_var
+		base_fuel_gain = oil_refinery_return_fuel_var
 	}
 	
 	
@@ -121,8 +129,17 @@
 		production_speed_buildings_factor	= electric_power_production_speed_buildings_factor_var
 		research_speed_factor				= electric_power_research_speed_factor_var
 		provision_weekly_factor				= electric_power_provision_weekly_factor_var
-		local_resources_factor				= electric_power_local_resources_factor_var
-		fuel_gain_factor					= electric_power_fuel_gain_factor_var
+#		local_resources_factor				= electric_power_local_resources_factor_var
+		
+		country_resource_aluminium			= electric_power_aluminium_cost_var
+		country_resource_oil				= electric_power_oil_cost_var
+		country_resource_tungsten			= electric_power_tungsten_cost_var
+		country_resource_rubber				= electric_power_rubber_cost_var
+		country_resource_chromium			= electric_power_chromium_cost_var
+		country_resource_iron				= electric_power_iron_cost_var
+		country_resource_coal				= electric_power_coal_cost_var
+		
+		base_fuel_gain_factor				= electric_power_fuel_gain_factor_var
 		encryption_factor					= electric_power_planning_cryption_factor_var
 		decryption_factor					= electric_power_planning_cryption_factor_var
 		planning_speed						= electric_power_planning_cryption_factor_var

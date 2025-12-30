@@ -4,6 +4,9 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			steel_mill = 2
+			agro_complex = 1
+			oil_refinery = 1
 		}
 		owner = TOT
 		add_core_of = TOT
@@ -11,7 +14,7 @@ state={
 	provinces={
 		5505 5513 5520 5522 5542 5561 5563 5589 5593 
 	}
-	manpower=11111111
+	manpower=2764779
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -7,6 +7,11 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 2
+			livestock_complex = 1
+			5442 = {
+				naval_base = 2
+			}
 		}
 		owner = MRK
 		add_core_of = MRK
@@ -14,7 +19,7 @@ state={
 	provinces={
 		5441 5442 5450 5456 5459 5461 
 	}
-	manpower=11111111
+	manpower=932815
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

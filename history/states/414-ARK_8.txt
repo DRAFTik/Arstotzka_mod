@@ -4,6 +4,8 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
+			thermal_power_plant = 1
 		}
 		owner = ARK
 		add_core_of = ARK
@@ -11,7 +13,7 @@ state={
 	provinces={
 		6270 6271 6276 6307 6311 6315 6327 
 	}
-	manpower=11111111
+	manpower=635560
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

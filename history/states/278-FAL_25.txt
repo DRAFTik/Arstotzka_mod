@@ -6,6 +6,9 @@ state={
 			infrastructure = 1
 			livestock_complex = 2
 			hydro_power_plant = 1
+			4311 = {
+				naval_base = 3
+            }
 		}
 		owner = FAL
 		add_core_of = FAL

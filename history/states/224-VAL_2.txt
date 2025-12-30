@@ -4,6 +4,8 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			oil_refinery = 1
+			air_base = 2
 		}
 		owner = VAL
 		add_core_of = VAL

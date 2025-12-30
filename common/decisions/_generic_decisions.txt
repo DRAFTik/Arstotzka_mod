@@ -1340,3 +1340,346 @@ economy_decisions = {
 foreign_support = {
 
 }
+
+
+GtA_ai_decisions = {
+	
+	create_import_iron = {
+		icon = ger_military_buildup
+		allowed = {
+		}
+		visible = {
+#			is_ai = yes
+			has_capitulated = no
+			country_exists = FROM
+			NOT = { has_war_with = FROM }
+		}
+
+		target_root_trigger = {
+#			is_ai = yes
+			num_of_available_civilian_factories > 1
+			has_capitulated = no
+			NOT = { has_war_with = FROM }
+			check_variable = { resource@iron < 0 }
+		}
+		
+		target_trigger = {
+			FROM = {
+				has_capitulated = no
+				NOT = {
+					tag = SAI
+					has_war_with = ROOT
+				}
+				check_variable = { resource_exported@iron > 9 }
+			}
+		}
+		
+		fire_only_once = no
+		cost = 0
+		
+		complete_effect = {
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Decision complete create_import_iron +10 from [From.GetName] ([From.GetTag]"
+			set_temp_variable		= { amount_iron_temp = ROOT.num_of_exports_iron_@FROM }
+			add_to_temp_variable	= { amount_iron_temp = 10 }
+			meta_effect = {
+				text = {
+					create_import	= { resource = iron amount = [AMOUNT_IRON_TEMP] exporter = [TAG] }
+				}
+				TAG					= "[From.GetTag]"
+				AMOUNT_IRON_TEMP	= "[?amount_iron_temp]"
+			}
+			add_to_array			= { ROOT.iron_exporters = FROM }
+			add_to_variable			= { ROOT.num_of_exports_iron_@FROM = 10 }
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0
+				OR = {
+					num_of_available_civilian_factories < 10
+					has_opinion = { target = FROM value < 0 }
+				}
+			}
+			modifier = {
+				add = 2
+				check_variable = { resource@iron < 0 }
+			}
+			modifier = {
+				factor = 2
+				has_opinion = { target = FROM value > 65 }
+			}
+			modifier = {
+				factor = 2
+				has_opinion = { target = FROM value > 35 }
+			}
+			modifier = {
+				factor = 2
+				is_on_same_continent_as = FROM
+			}
+			modifier = {
+				factor = 3
+				is_in_faction_with = FROM
+			}
+			modifier = { factor = 1.1 FROM = { distance_to = { value < 900 target = capital } } }
+			modifier = { factor = 1.2 FROM = { distance_to = { value < 800 target = capital } } }
+			modifier = { factor = 1.3 FROM = { distance_to = { value < 700 target = capital } } }
+			modifier = { factor = 1.4 FROM = { distance_to = { value < 600 target = capital } } }
+			modifier = { factor = 1.5 FROM = { distance_to = { value < 500 target = capital } } }
+			modifier = { factor = 1.6 FROM = { distance_to = { value < 400 target = capital } } }
+			modifier = { factor = 1.7 FROM = { distance_to = { value < 300 target = capital } } }
+			modifier = { factor = 1.8 FROM = { distance_to = { value < 200 target = capital } } }
+		}
+	}
+
+
+	remove_import_iron = {
+		icon = ger_military_buildup
+		allowed = {
+		}
+		visible = {
+#			is_ai = yes
+			country_exists = FROM
+			NOT = { has_war_with = FROM }
+			check_variable = { ROOT.num_of_exports_iron_@FROM > 0 }
+		}
+		target_array = ROOT.iron_exporters
+		targets_dynamic = yes
+		
+		target_root_trigger = {
+#			is_ai = yes
+			has_capitulated = no
+			check_variable = { resource_imported@iron > 0 }
+		}
+		
+		target_trigger = {
+			FROM = {
+				NOT = {
+					tag = SAI
+				}
+			}
+		}
+		
+		fire_only_once = no
+		cost = 0
+		
+		complete_effect = {
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Decision complete remove_import_iron -10 from [From.GetName] ([From.GetTag]"
+			set_temp_variable			= { remove_amount_iron_temp = ROOT.num_of_exports_iron_@FROM }
+			subtract_from_temp_variable	= { remove_amount_iron_temp = 10 }
+			meta_effect = {
+				text = {
+					create_import		= { resource = iron amount = [REMOVE_AMOUNT_IRON_TEMP] exporter = [TAG] }
+				}
+				TAG						= "[From.GetTag]"
+				REMOVE_AMOUNT_IRON_TEMP	= "[?remove_amount_iron_temp]"
+			}
+			subtract_from_variable		= { ROOT.num_of_exports_iron_@FROM = 10 }
+			if = {
+				limit = { check_variable = { ROOT.num_of_exports_iron_@FROM = 0 } }
+				remove_from_array = { ROOT.iron_exporters = FROM }
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 3
+				OR = {
+					num_of_available_civilian_factories < 2
+					check_variable = { resource@iron > 9 }
+					FROM = { has_capitulated = yes }
+					has_capitulated = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = { target = FROM value < 0 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = FROM value > 65 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = FROM value > 35 }
+			}
+			modifier = {
+				factor = 0.5
+				is_on_same_continent_as = FROM
+			}
+			modifier = {
+				factor = 0.25
+				is_in_faction_with = FROM
+			}
+		}
+	}
+	
+	
+	create_import_coal = {
+		icon = ger_military_buildup
+		allowed = {
+		}
+		visible = {
+#			is_ai = yes
+			has_capitulated = no
+			country_exists = FROM
+			NOT = { has_war_with = FROM }
+		}
+
+		target_root_trigger = {
+#			is_ai = yes
+			num_of_available_civilian_factories > 1
+			has_capitulated = no
+			NOT = { has_war_with = FROM }
+			check_variable = { resource@coal < 0 }
+		}
+		
+		target_trigger = {
+			FROM = {
+				has_capitulated = no
+				NOT = {
+					tag = SAI
+					has_war_with = ROOT
+				}
+				check_variable = { resource_exported@coal > 7 }
+			}
+		}
+		
+		fire_only_once = no
+		cost = 0
+		
+		complete_effect = {
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Decision complete create_import_coal +8 from [From.GetName] ([From.GetTag]"
+			set_temp_variable		= { amount_coal_temp = ROOT.num_of_exports_coal_@FROM }
+			add_to_temp_variable	= { amount_coal_temp = 8 }
+			meta_effect = {
+				text = {
+					create_import	= { resource = coal amount = [AMOUNT_COAL_TEMP] exporter = [TAG] }
+				}
+				TAG					= "[From.GetTag]"
+				AMOUNT_COAL_TEMP	= "[?amount_coal_temp]"
+			}
+			add_to_array			= { ROOT.coal_exporters = FROM }
+			add_to_variable			= { ROOT.num_of_exports_coal_@FROM = 8 }
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0
+				OR = {
+					num_of_available_civilian_factories < 1
+					has_opinion = { target = FROM value < 0 }
+				}
+			}
+			modifier = {
+				add = 2
+				check_variable = { resource@coal < 0 }
+			}
+			modifier = {
+				factor = 2
+				has_opinion = { target = FROM value > 65 }
+			}
+			modifier = {
+				factor = 2
+				has_opinion = { target = FROM value > 35 }
+			}
+			modifier = {
+				factor = 2
+				is_on_same_continent_as = FROM
+			}
+			modifier = {
+				factor = 3
+				is_in_faction_with = FROM
+			}
+			modifier = { factor = 1.1 FROM = { distance_to = { value < 900 target = capital } } }
+			modifier = { factor = 1.2 FROM = { distance_to = { value < 800 target = capital } } }
+			modifier = { factor = 1.3 FROM = { distance_to = { value < 700 target = capital } } }
+			modifier = { factor = 1.4 FROM = { distance_to = { value < 600 target = capital } } }
+			modifier = { factor = 1.5 FROM = { distance_to = { value < 500 target = capital } } }
+			modifier = { factor = 1.6 FROM = { distance_to = { value < 400 target = capital } } }
+			modifier = { factor = 1.7 FROM = { distance_to = { value < 300 target = capital } } }
+			modifier = { factor = 1.8 FROM = { distance_to = { value < 200 target = capital } } }
+		}
+	}
+
+
+	remove_import_coal = {
+		icon = ger_military_buildup
+		allowed = {
+		}
+		visible = {
+#			is_ai = yes
+			country_exists = FROM
+			NOT = { has_war_with = FROM }
+			check_variable = { ROOT.num_of_exports_coal_@FROM > 0 }
+		}
+		target_array = ROOT.coal_exporters
+		targets_dynamic = yes
+		
+		target_root_trigger = {
+#			is_ai = yes
+			has_capitulated = no
+			check_variable = { resource_imported@coal > 0 }
+		}
+		
+		target_trigger = {
+			FROM = {
+				NOT = {
+					tag = SAI
+				}
+			}
+		}
+		
+		fire_only_once = no
+		cost = 0
+		
+		complete_effect = {
+			log = "[GetDateText] [Root.GetName] ([Root.GetTag]): Decision complete remove_import_coal -8 from [From.GetName] ([From.GetTag]"
+			set_temp_variable			= { remove_amount_coal_temp = ROOT.num_of_exports_coal_@FROM }
+			subtract_from_temp_variable	= { remove_amount_coal_temp = 8 }
+			meta_effect = {
+				text = {
+					create_import		= { resource = coal amount = [REMOVE_AMOUNT_COAL_TEMP] exporter = [TAG] }
+				}
+				TAG						= "[From.GetTag]"
+				REMOVE_AMOUNT_COAL_TEMP	= "[?remove_amount_coal_temp]"
+			}
+			subtract_from_variable		= { ROOT.num_of_exports_coal_@FROM = 8 }
+			if = {
+				limit = { check_variable = { ROOT.num_of_exports_coal_@FROM = 0 } }
+				remove_from_array = { ROOT.coal_exporters = FROM }
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 3
+				OR = {
+					num_of_available_civilian_factories < 1
+					check_variable = { resource@coal > 7 }
+					FROM = { has_capitulated = yes }
+					has_capitulated = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = { target = FROM value < 0 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = FROM value > 65 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = FROM value > 35 }
+			}
+			modifier = {
+				factor = 0.5
+				is_on_same_continent_as = FROM
+			}
+			modifier = {
+				factor = 0.25
+				is_in_faction_with = FROM
+			}
+		}
+	}
+}

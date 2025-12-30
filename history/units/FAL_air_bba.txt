@@ -1,0 +1,141 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Serong
+	290 = {
+		small_plane_airframe_0 = {
+			owner = "FAL" 
+			amount = 25
+			version_name = "FLF-1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "FAL" 
+			amount = 15
+			version_name = "FMC-1"
+		}
+		large_plane_airframe_0 = {
+			owner = "FAL" 
+			amount = 10
+			version_name = "FHB-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "FAL" 
+			amount = 2
+		}
+	}
+	# Tannerburg
+	279 = {
+		small_plane_airframe_0 = {
+			owner = "FAL" 
+			amount = 8
+			version_name = "FLF-1"
+		}
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "FAL" 
+			amount = 15
+			version_name = "FMP-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "FAL" 
+			amount = 1
+		}
+	}
+	# Hindel
+	275 = {
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "FAL" 
+			amount = 7
+			version_name = "FMP-1"
+		}
+		large_plane_airframe_0 = {
+			owner = "FAL" 
+			amount = 5
+			version_name = "FHB-1"
+		}
+	}
+	# Donbun
+	267 = {
+		small_plane_airframe_0 = {
+			owner = "FAL" 
+			amount = 10
+			version_name = "FLF-1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "FAL" 
+			amount = 10
+			version_name = "FMC-1"
+		}
+		large_plane_airframe_0 = {
+			owner = "FAL" 
+			amount = 5
+			version_name = "FHB-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "FAL" 
+			amount = 1
+		}
+	}
+	# Ursila
+	263 = {
+		small_plane_airframe_0 = {
+			owner = "FAL" 
+			amount = 10
+			version_name = "FLF-1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "FAL" 
+			amount = 10
+			version_name = "FMC-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "FAL" 
+			amount = 2
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "FAL" 
+			version_name = "FLF-1"
+		}
+		requested_factories = 3
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "FAL" 
+			version_name = "FMC-1"
+		}
+		requested_factories = 2
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_airframe_0
+			creator = "FAL"
+			version_name = "FHB-1"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+		industrial_manufacturer = mio:generic_heavy_aircraft_organization
+	}
+}

@@ -6,6 +6,7 @@ state={
 			infrastructure = 1
 			arms_factory = 2
 			steel_mill = 2
+			air_base = 2
 		}
 		owner = FAL
 		add_core_of = FAL

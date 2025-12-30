@@ -1,12 +1,28 @@
 state={
 	id=428
 	name="STATE_428"
+	resources={
+		iron = 55
+		chromium = 18
+		tungsten = 10
+		aluminium = 14
+		oil = 14
+		coal = 24
+	}
 	history={
 		victory_points = {
-			6153 40
+			6153 50
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 2
+			dockyard = 2
+			hydro_power_plant = 1
+			livestock_complex = 1
+			air_base = 5
+			6197 = {
+				naval_base = 3
+			}
 		}
 		owner = REX
 		add_core_of = REX
@@ -14,7 +30,7 @@ state={
 	provinces={
 		6147 6153 6154 6161 6167 6170 6183 6188 6197 6199 6205 6217 6225 
 	}
-	manpower=11111111
+	manpower=2354687
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

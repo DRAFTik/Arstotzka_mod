@@ -5,6 +5,10 @@ state={
 		buildings = {
 			infrastructure = 1
 			dockyard = 1
+			livestock_complex = 1
+			5167 = {
+				naval_base = 3
+			}
 		}
 		owner = NOM
 		add_core_of = NOM

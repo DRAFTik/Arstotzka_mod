@@ -1,12 +1,25 @@
 state={
 	id=475
 	name="STATE_475"
+	resources={
+		iron = 95
+		chromium = 14
+		tungsten = 9
+		aluminium = 10
+		oil = 18
+		coal = 84
+	}
 	history={
 		victory_points = {
 			5871 50
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 1
+			hydro_power_plant = 1
+			5871 = {
+				naval_base = 4
+			}
 		}
 		owner = GRT
 		add_core_of = GRT
@@ -14,7 +27,7 @@ state={
 	provinces={
 		5861 5871 5875 5886 5896 5899 5914 
 	}
-	manpower=11111111
+	manpower=2047774
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

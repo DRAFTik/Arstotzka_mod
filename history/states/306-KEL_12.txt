@@ -10,6 +10,9 @@ state={
 			industrial_complex = 2
 			arms_factory = 2
 			dockyard = 1
+			4317 = {
+				naval_base = 2
+            }
 		}
 		owner = KEL
 		add_core_of = KEL

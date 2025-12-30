@@ -1,12 +1,24 @@
 state={
 	id=408
 	name="STATE_408"
+	resources={
+		iron = 18
+		chromium = 0
+		tungsten = 2
+		aluminium = 4
+		oil = 0
+		coal = 12
+	}
 	history={
 		victory_points = {
 			6360 50
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 2
+			6354 = {
+				naval_base = 2
+			}
 		}
 		owner = ARK
 		add_core_of = ARK
@@ -14,7 +26,7 @@ state={
 	provinces={
 		6346 6347 6349 6350 6351 6354 6355 6356 6360 6361 6363 
 	}
-	manpower=11111111
+	manpower=1446774
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

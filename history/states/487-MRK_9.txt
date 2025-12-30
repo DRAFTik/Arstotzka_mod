@@ -7,6 +7,10 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			agro_silo = 1
+			5725 = {
+				naval_base = 2
+			}
 		}
 		owner = MRK
 		add_core_of = MRK
@@ -14,7 +18,7 @@ state={
 	provinces={
 		5634 5639 5660 5671 5693 5699 5725 
 	}
-	manpower=11111111
+	manpower=661620
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

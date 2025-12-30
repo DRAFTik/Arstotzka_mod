@@ -129,6 +129,32 @@ defined_text = {
 }
 
 defined_text = {
+	name = GET_OIL_REFINERY_OK
+	text = {
+		trigger = {
+			check_variable = { oil_refinery_ok = oil_refinery_total }
+		}
+		localization_key = GET_OIL_REFINERY_GREEN
+	}
+	text = {
+		localization_key = GET_OIL_REFINERY_RED
+	}
+}
+
+defined_text = {
+	name = GET_SYNTHETIC_REFINERY_OK
+	text = {
+		trigger = {
+			check_variable = { synthetic_refinery_ok = synthetic_refinery_total }
+		}
+		localization_key = GET_SYNTHETIC_REFINERY_GREEN
+	}
+	text = {
+		localization_key = GET_SYNTHETIC_REFINERY_RED
+	}
+}
+
+defined_text = {
 	name = GET_PROVISIONS_TEXT				# включая GET_PROVISIONS_FORMAT_TEXT
 	text = {
 		trigger = {

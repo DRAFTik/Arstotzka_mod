@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			agro_complex = 1
 		}
 		owner = NOM
 		add_core_of = NOM

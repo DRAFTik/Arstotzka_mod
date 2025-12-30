@@ -4,6 +4,8 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			livestock_complex = 1
+			agro_silo = 1
 		}
 		owner = HAL
 		add_core_of = HAL

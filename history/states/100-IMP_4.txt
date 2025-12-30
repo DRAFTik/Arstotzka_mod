@@ -16,7 +16,7 @@ state={
 			agro_complex = 1
 			air_base = 5
 			1124 = {
-				naval_base = 1
+				naval_base = 2
 			}
 		}
 		owner = IMP

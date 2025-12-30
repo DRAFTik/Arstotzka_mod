@@ -17,6 +17,8 @@ state={
 			infrastructure = 1
 			industrial_complex = 2
 			dockyard = 1
+			livestock_complex = 2
+			air_base = 1
 		}
 		owner = BRV
 		add_core_of = BRV

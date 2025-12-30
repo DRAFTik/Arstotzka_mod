@@ -5,6 +5,9 @@ state={
 		buildings = {
 			agro_complex = 1
 			livestock_complex = 1
+			818 = {
+				naval_base = 1
+			}
 		}
 		owner = SKO
 		add_core_of = SKO
@@ -14,5 +17,6 @@ state={
 	}
 	manpower=143031
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=rural
+	local_supplies=0.000
+	state_category=rural
 }

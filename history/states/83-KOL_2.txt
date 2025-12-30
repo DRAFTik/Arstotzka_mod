@@ -21,7 +21,7 @@ state={
                 coastal_bunker = 2
             }
 			844 = {
-				naval_base = 1
+				naval_base = 2
 				coastal_bunker = 2
 			}
 			2063 = {

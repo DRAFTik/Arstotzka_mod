@@ -1,0 +1,111 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Messint
+	437 = {
+		small_plane_airframe_0 = {
+			owner = "NUV"
+			amount = 8
+			version_name = "NLF I"
+		}
+		medium_plane_airframe_0 = {
+			owner = "NUV"
+			amount = 7
+			version_name = "NMC I"
+		}
+		large_plane_airframe_0 = {
+			owner = "NUV"
+			amount = 8
+			version_name = "NHB I"
+		}
+		transport_plane_equipment_1 = {
+			owner = "NUV"
+			amount = 4
+		}
+	}
+	# Dijuna
+	444 = {
+		small_plane_airframe_0 = {
+			owner = "NUV"
+			amount = 8
+			version_name = "NLF I"
+		}
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "NUV"
+			amount = 10
+			version_name = "NMP I"
+		}
+		large_plane_airframe_0 = {
+			owner = "NUV"
+			amount = 8
+			version_name = "NHB I"
+		}
+		transport_plane_equipment_1 = {
+			owner = "NUV"
+			amount = 2
+		}
+	}
+	# Grontia border
+	451 = {
+		small_plane_airframe_0 = {
+			owner = "NUV"
+			amount = 6
+			version_name = "NLF I"
+		}
+		medium_plane_airframe_0 = {
+			owner = "NUV"
+			amount = 7
+			version_name = "NMC I"
+		}
+		transport_plane_equipment_1 = {
+			owner = "NUV"
+			amount = 2
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "NUV" 
+			version_name = "NLF I"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "NUV" 
+			version_name = "NMC I"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_airframe_0
+			creator = "NUV" 
+			version_name = "NHB I"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:mio:generic_heavy_aircraft_organization
+	}
+}

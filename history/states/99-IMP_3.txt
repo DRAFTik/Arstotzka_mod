@@ -13,8 +13,9 @@ state={
 			dockyard = 1
 			hydro_power_plant = 1
 			agro_complex = 1
+			oil_refinery = 1
 			1067 = {
-				naval_base = 1
+				naval_base = 4
 			}
 		}
 		owner = IMP

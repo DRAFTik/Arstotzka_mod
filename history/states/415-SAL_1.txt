@@ -1,12 +1,23 @@
 state={
 	id=415
 	name="STATE_415"
+	resources={
+		iron = 42
+		chromium = 7
+		tungsten = 6
+		aluminium = 12
+		oil = 6
+		coal = 38
+	}
 	history={
 		victory_points = {
 			6242 50
 		}
 		buildings = {
 			infrastructure = 1
+			thermal_coal_power_plant = 1
+			livestock_complex = 1
+			air_base = 3
 		}
 		owner = SAL
 		add_core_of = SAL
@@ -14,7 +25,7 @@ state={
 	provinces={
 		6242 6245 6261 6262 6264 6279 6287 
 	}
-	manpower=11111111
+	manpower=1921253
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -12,6 +12,7 @@ state={
 			infrastructure = 1
 			industrial_complex = 1
 			thermal_coal_power_plant = 1
+			oil_refinery = 1
 		}
 		owner = UNF
 		add_core_of = UNF

@@ -4,6 +4,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			oil_refinery = 1
 		}
 		owner = NOM
 		add_core_of = NOM

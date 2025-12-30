@@ -18,6 +18,10 @@ state={
 			industrial_complex = 1
 			arms_factory = 2
 			dockyard = 3
+			air_base = 3
+			3147 = {
+				naval_base = 4
+            }
 		}
 		owner = REV
 		add_core_of = REV

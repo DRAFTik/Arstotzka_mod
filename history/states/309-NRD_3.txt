@@ -7,6 +7,9 @@ state={
 			dockyard = 1
 			agro_silo = 1
 			thermal_coal_power_plant = 1
+			4486 = {
+				naval_base = 2
+            }
 		}
 		owner = NRD
 		add_core_of = NRD

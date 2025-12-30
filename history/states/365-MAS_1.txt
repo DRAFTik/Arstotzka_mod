@@ -4,6 +4,10 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			livestock_complex = 2
+			4829 = {
+				naval_base = 1
+			}
 		}
 		owner = MAS
 		add_core_of = MAS

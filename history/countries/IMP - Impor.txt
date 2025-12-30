@@ -29,6 +29,7 @@ if = {
 		aa_lmg = 1
 		engines_1 = 1
 		bba_early_transport_plane = 1
+		air_torpedoe_1 = 1
 	}
 	else = {
 		set_technology = {
@@ -77,7 +78,7 @@ if = {
 
 set_stability = 0.5
 set_war_support = 0.5
-set_convoys = 20
+set_convoys = 25
 
 starting_train_buffer = 2
 set_fuel_ratio = 1.0

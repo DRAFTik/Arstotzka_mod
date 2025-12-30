@@ -4,7 +4,7 @@
     surland: "Сурландия"
     
     GtA_debug_decisions: "DEBUG"
-    GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]\n\nprovision_total_var: [?ROOT.provision_total_var]\nprovision_delta_var:[?ROOT.provision_delta_var]\nprovision_percent_to_max_var: [?provision_percent_to_max_var]\n\nprovision_total_var: [?ROOT.provision_total_var|+1]\n\nhunger_dyn: [?hunger_dyn]\n\nГОЛОД\nnum_change_population_weekly: [?modifier@num_change_population_weekly]\nmax_manpower_k: [?max_manpower_k]\nnum_controlled_states: [?num_controlled_states]\npercent_change_population_weekly: [?percent_change_population_weekly]\n\n resource iron: [?resource@iron]\n resource_produced iron: [?resource_produced@iron]\n resource_exported iron: [?resource_exported@iron]\n\n steel_minus_var!!!: [?steel_minus_var]\n steel_return_electric_power_var: [?steel_return_electric_power_var]\n steel_minus_state_total_1: [?steel_minus_state_total_1]\n\n mobilization_speed_proletariat_var: [?mobilization_speed_proletariat_var|4]\n modifier_mobilization_speed_proletariat: [?modifier@mobilization_speed_proletariat]\n\n target_proletariat: [?target_proletariat]\n target_proletariat_percent_var: [?target_proletariat_percent_var|4]\n num_of_days_mobilization_proletariat: [?num_of_days_mobilization_proletariat|5]\n TOTAL_num_proletariat_add_k: [?TOTAL_num_proletariat_add_k]\n SUM_check_min_pulse_proletariat: [?SUM_check_min_pulse_proletariat]\n target_min_pulse_proletariat: [?target_min_pulse_proletariat]\n\n max_manpower_k: [?max_manpower_k]\n\n num_of_factories: [?num_of_factories]\n\nagency_upgrade_number: [?ROOT.agency_upgrade_number]\nnof: [?global.nof]\n\namount_research_slots: [?amount_research_slots]\nnum_science_minus_var: [?num_science_minus_var]\nmodifier@num_generation_science_point: [?modifier@num_generation_science_point]\nmodifier@num_use_science_point_factor: [?modifier@num_use_science_point_factor]\nnum_science_plus_var: [?num_science_plus_var]\n\n num_of_factories: [?num_of_factories]\n num_of_civilian_factories: [?num_of_civilian_factories]\n num_of_available_civilian_factories: [?num_of_available_civilian_factories]\n num_of_civilian_factories_available_for_projects: [?num_of_civilian_factories_available_for_projects]\n total_constructed_civilian_factory: [?total_constructed_civilian_factory]\n consumer_goods_expected_value: [?modifier@consumer_goods_expected_value]\n consumer_goods_factor: [?modifier@consumer_goods_factor]\n num_of_factories_cgff_var: [?num_of_factories_cgff_var]\n\nresource_coal:[?resource@coal]\nthermal_coal_power_plant_total: [?thermal_coal_power_plant_total]\ncoal_generation_minus_var: [?coal_generation_minus_var]"
+    GtA_debug_decisions_desc: "[?modifier@fuel_cost]\n[?modifier@fuel_gain]\n[?electric_power_total_var]\n\nprovision_total_var: [?ROOT.provision_total_var]\nprovision_delta_var:[?ROOT.provision_delta_var]\nprovision_percent_to_max_var: [?provision_percent_to_max_var]\n\nprovision_total_var: [?ROOT.provision_total_var|+1]\n\nhunger_dyn: [?hunger_dyn]\n\nГОЛОД\nnum_change_population_weekly: [?modifier@num_change_population_weekly]\nmax_manpower_k: [?max_manpower_k]\nnum_controlled_states: [?num_controlled_states]\npercent_change_population_weekly: [?percent_change_population_weekly]\n\n resource iron: [?resource@iron]\n resource_produced iron: [?resource_produced@iron]\n resource_exported iron: [?resource_exported@iron]\n\n steel_minus_var!!!: [?steel_minus_var]\n steel_return_electric_power_var: [?steel_return_electric_power_var]\n steel_minus_state_total_1: [?steel_minus_state_total_1]\n\n mobilization_speed_proletariat_var: [?mobilization_speed_proletariat_var|4]\n modifier_mobilization_speed_proletariat: [?modifier@mobilization_speed_proletariat]\n\n target_proletariat: [?target_proletariat]\n target_proletariat_percent_var: [?target_proletariat_percent_var|4]\n num_of_days_mobilization_proletariat: [?num_of_days_mobilization_proletariat|5]\n TOTAL_num_proletariat_add_k: [?TOTAL_num_proletariat_add_k]\n SUM_check_min_pulse_proletariat: [?SUM_check_min_pulse_proletariat]\n target_min_pulse_proletariat: [?target_min_pulse_proletariat]\n\n max_manpower_k: [?max_manpower_k]\n\n num_of_factories: [?num_of_factories]\n\nagency_upgrade_number: [?ROOT.agency_upgrade_number]\nnof: [?global.nof]\n\namount_research_slots: [?amount_research_slots]\nnum_science_minus_var: [?num_science_minus_var]\nmodifier@num_generation_science_point: [?modifier@num_generation_science_point]\nmodifier@num_use_science_point_factor: [?modifier@num_use_science_point_factor]\nnum_science_plus_var: [?num_science_plus_var]\n\n num_of_factories: [?num_of_factories]\n num_of_civilian_factories: [?num_of_civilian_factories]\n num_of_available_civilian_factories: [?num_of_available_civilian_factories]\n num_of_civilian_factories_available_for_projects: [?num_of_civilian_factories_available_for_projects]\n total_constructed_civilian_factory: [?total_constructed_civilian_factory]\n consumer_goods_expected_value: [?modifier@consumer_goods_expected_value]\n consumer_goods_factor: [?modifier@consumer_goods_factor]\n num_of_factories_cgff_var: [?num_of_factories_cgff_var]\n\nresource_coal:[?resource@coal]\nthermal_coal_power_plant_total: [?thermal_coal_power_plant_total]\ncoal_generation_minus_var: [?coal_generation_minus_var]\n\noil_refinery_total: [?oil_refinery_total]\noil_refinery_return_energy_var: [?oil_refinery_return_energy_var]"
     empty_text: ""
 
 ########################
@@ -51,7 +51,7 @@
 ### ELECTRIC POWER ###
 ######################
 
-    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.electric_power_total_generation_var|1+]\n    - УТЭС: [?ROOT.electric_power_thermal_coal_generation_var|1+] ([GET_THERMAL_COAL_POWER_PLANT_OK] из [?ROOT.thermal_coal_power_plant_total|H0])\n    - ТТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\nКоэффициент выработки: [?ROOT.num_generation_electric_power_factor|1+%]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-] [get_electric_power_cost_private_text]"
+    gta_electric_power_tooltip: "§HОбеспеченность электроэнергией (МВт)§!\nТекущий баланс электроэнергии: [?ROOT.electric_power_total_var|1+]\n\nТекущая выработка электроэнергии: [?ROOT.electric_power_total_generation_var|1+]\n    - УТЭС: [?ROOT.electric_power_thermal_coal_generation_var|1+] ([GET_THERMAL_COAL_POWER_PLANT_OK] из [?ROOT.thermal_coal_power_plant_total|H0])\n    - ТТЭС: [?ROOT.electric_power_thermal_generation_var|1+] ([GET_THERMAL_POWER_PLANT_OK] из [?ROOT.thermal_power_plant_total|H0])\n    - ГЭС: [?ROOT.electric_power_hydro_generation_var|1+]\n    - АЭС: [?ROOT.electric_power_nuclear_generation_var|1+]\n    - Импорт/Экспорт: [?ROOT.num_generation_electric_power_cost_var|1+]\nКоэффициент выработки: [?ROOT.num_generation_electric_power_factor|1+%]\n\nТекущие затраты электроэнергии: [?ROOT.electric_power_cost_var|1-]\n    - Госаппарат: [?ROOT.electric_power_cost_state_var|1-]\n    - Инфраструктура (вкл. социальную): [?ROOT.electric_power_cost_infrastructure_var|1-]\n    - Фабрики (все виды): [?ROOT.electric_power_cost_factory_var|1-]\n    - Снабжение (узлы и морбазы): [?ROOT.electric_power_cost_supply_var|1-]\n    - Сооружения военного назначения: [?ROOT.electric_power_cost_army_var|1-]\n    - Другие: [?ROOT.electric_power_cost_other_var|1-]\n    - Переработка нефти: [?ROOT.electric_power_cost_oil_var|1-], из них:\n        - НПЗ: [?ROOT.electric_power_cost_oil_refinery_var|1-] ([GET_OIL_REFINERY_OK] из [?ROOT.oil_refinery_total|H0])\n        - СХЗ: [?ROOT.electric_power_cost_synthetic_refinery_var|1-] ([GET_SYNTHETIC_REFINERY_OK] из [?ROOT.synthetic_refinery_total|H0])\n    - Выплавка стали: [?ROOT.electric_power_cost_mill_var|1-] ([GET_STEEL_MILL_OK] из [?ROOT.steel_mill_total|H0])\n    - Добыча ресурсов: [?ROOT.electric_power_cost_resource_produced_var|1-] [get_electric_power_cost_private_text]"
     gta_electric_power_delayed_tooltip: "§LОбеспеченность электроэнергией отображает потребность вашей страны в электроэнергии.§!\n\n§GНажмите§!, для открытия §Hпанели распределения электроэнергии§!.\nНажмите §Gправой кнопкой§!, чтобы начать §Hторговлю электроэнергией§!.[GET_ELECTRIC_POWER_CRISIS_LOC]"
     GET_ELECTRIC_POWER_CRISIS_TEXT: "\n$SEPARATION_LINE$$electric_power_title_bad_debuff_text$$electric_power_debuff_text$"
     
@@ -63,8 +63,16 @@
     GET_THERMAL_POWER_PLANT_GREEN: "[?ROOT.thermal_power_plant_ok|0+]"
     thermal_power_plant_fuel_cost_dyn: "Потребление ТТЭС"
     
-    GET_STEEL_MILL_RED: "[?ROOT.steel_mill_ok|0-]"
+    GET_STEEL_MILL_RED: "[?ROOT.steel_mill_ok|0R]"
     GET_STEEL_MILL_GREEN: "[?ROOT.steel_mill_ok|0+]"
+    
+    GET_OIL_REFINERY_RED: "[?ROOT.oil_refinery_ok|0R]"
+    GET_OIL_REFINERY_GREEN: "[?ROOT.oil_refinery_ok|0+]"
+    oil_refinery_minus_dyn: "Недостаток нефти"
+    
+    GET_SYNTHETIC_REFINERY_RED: "[?ROOT.synthetic_refinery_ok|0R]"
+    GET_SYNTHETIC_REFINERY_GREEN: "[?ROOT.synthetic_refinery_ok|0+]"
+    
     
     electric_power_cost_private_text: "\n    - Частный сектор: [?modifier@num_use_electric_power_private|1-]"
     
@@ -92,7 +100,7 @@
     electric_panel_title_text: "£electric_power_pure_icon §YПАНЕЛЬ РАСПРЕДЕЛЕНИЯ ЭЛЕКТРОЭНЕРГИИ§! £electric_power_pure_icon "
     electric_power_title_good_text: "§GПРОБЛЕМЫ СО СНАБЖЕНИЕМ ЭЛЕКТРОЭНЕРГИЕЙ ОТСУТСТВУЮТ§!"
     electric_power_title_bad_debuff_text: "§HТекущие эффекты от нехватки электроэнергии:§!"
-    electric_power_debuff_text: "\n$MODIFIER_ENCRYPTION_FACTOR$: [?electric_power_planning_cryption_factor_var|+=%2]\n$MODIFIER_DECRYPTION_FACTOR$: [?electric_power_planning_cryption_factor_var|+=%2]\n$MODIFIER_COORDINATION_BONUS$: [?electric_power_coordination_bonus_var|+=%1]\n$MODIFIER_PLANNING_SPEED$: [?electric_power_planning_cryption_factor_var|+=%1]\n$MODIFIER_MOBILIZATION_SPEED$: [?electric_power_mobilization_speed_var|+=%1]\n$provision_weekly_factor$: [?electric_power_provision_weekly_factor_var|+=%1]\n$MODIFIER_RESEARCH_SPEED_FACTOR$: [?electric_power_research_speed_factor_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?electric_power_industrial_capacity_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: [?electric_power_industrial_capacity_var|+=%2]\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: [?electric_power_production_speed_buildings_factor_var|+=%2]\n$MODIFIER_FUEL_GAIN_FACTOR$: [?electric_power_fuel_gain_factor_var|+=%2]\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?electric_power_local_resources_factor_var|+=%2]"
+    electric_power_debuff_text: "\n$MODIFIER_ENCRYPTION_FACTOR$: [?electric_power_planning_cryption_factor_var|+=%2]\n$MODIFIER_DECRYPTION_FACTOR$: [?electric_power_planning_cryption_factor_var|+=%2]\n$MODIFIER_COORDINATION_BONUS$: [?electric_power_coordination_bonus_var|+=%1]\n$MODIFIER_PLANNING_SPEED$: [?electric_power_planning_cryption_factor_var|+=%1]\n$MODIFIER_MOBILIZATION_SPEED$: [?electric_power_mobilization_speed_var|+=%1]\n$provision_weekly_factor$: [?electric_power_provision_weekly_factor_var|+=%1]\n$MODIFIER_RESEARCH_SPEED_FACTOR$: [?electric_power_research_speed_factor_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?electric_power_industrial_capacity_var|+=%2]\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: [?electric_power_industrial_capacity_var|+=%2]\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: [?electric_power_production_speed_buildings_factor_var|+=%2]\n$MODIFIER_BASE_FUEL_GAIN_FACTOR$: [?electric_power_fuel_gain_factor_var|+=%2]\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?electric_power_local_resources_factor_var|+=%2]"
     electric_power_dyn: "£electric_power_pure_icon §RНехватка электроэнергии§!"
     
 ##################
@@ -176,13 +184,12 @@
 
 ### MODIFIERS ###
 
-    fake_fuel_cost: "£fuel_texticon Потребление топлива"
+    fake_fuel_cost: "£GFX_fuel_state|3 Потребление топлива"
     num_generation_electric_power: "£electric_power_pure_icon Производство электроэнергии (МВт*ч)"
     num_generation_electric_power_private: "£electric_power_pure_icon Частное производство электроэнергии (МВт*ч)"
     num_generation_electric_power_factor: "£electric_power_pure_icon Выработка электроэнергии"
     num_use_electric_power: "£electric_power_pure_icon Потребление электроэнергии (МВт*ч)"
     num_use_electric_power_private: "£electric_power_pure_icon Частное потребление электроэнергии (МВт*ч)"
-    num_use_electric_power_4_tt: "£electric_power_pure_icon Потребление электроэнергии (МВт*ч): +4"
     max_provision: "£provisions_icon Максимум провизии (K)"
     num_generation_provision_weekly: "£provisions_icon Провиант еженедельно"
     provision_weekly_factor: "$num_generation_provision_weekly$"
@@ -202,13 +209,21 @@
     num_use_science_point_factor: "£science_texticon Расход очков науки"
     capitalist_activity_modifier: "£ETH_imperial_treasury Активность капиталистов"
     
-    state_resource_cost_iron: "Расход железа"
+    state_resource_cost_iron: "£resources_strip|8 Потребление железа"
     base_private_build_speed_law_tt_base: "Скорость строительства частных сооружений"
     base_private_build_speed_law_epic_tt: "$base_private_build_speed_law_tt_base$: §Gочень высокая§!"
     base_private_build_speed_law_good_tt: "$base_private_build_speed_law_tt_base$: §Sвысокая§!"
     base_private_build_speed_law_normal_tt: "$base_private_build_speed_law_tt_base$: §Yобычная§!"
     base_private_build_speed_law_low_tt: "$base_private_build_speed_law_tt_base$: §Oнизкая§!"
     base_private_build_speed_law_bad_tt: "$base_private_build_speed_law_tt_base$: §Rочень низкая§!"
+    
+    
+    modifier_production_speed_oil_refinery_factor: "Скорость строительства §Yнефтеперерабатывающих заводов§!"
+    production_speed_oil_refinery_factor_tt: " $modifier_production_speed_oil_refinery_factor$: $RIGHT|+=%1$"
+    modifier_production_speed_oil_refinery_factor_desc: "Изменяет скорость строительства нефтеперерабатывающих заводов."
+    modifier_state_production_speed_oil_refinery_factor: "§Y$oil_refinery$§! — скорость строительства"
+    modifier_state_production_speed_oil_refinery_factor_desc: "Изменяет скорость возведения следующей постройки в этом регионе: §Y$oil_refinery$§!."
+ 
     
 
 ### RESOURCES ###

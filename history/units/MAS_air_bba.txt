@@ -1,0 +1,43 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Midcole
+	367 = {
+		small_plane_airframe_0 = {
+			owner = "MAS"
+			amount = 6
+			version_name = "MLF v1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "MAS"
+			amount = 1
+			version_name = "MMC v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "MAS"
+			amount = 1
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "MAS" 
+			version_name = "MLF v1"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+}

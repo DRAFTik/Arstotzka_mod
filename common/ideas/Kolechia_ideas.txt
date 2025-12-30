@@ -2,7 +2,7 @@ ideas = {
 
 	country = {
 		KOL_greshtin_peace_treaty_idea = {
-			on_add = { log = "[GetLogRoot]: add idea KOL_greshtin_peace_treaty_idea" }
+			on_add = { log = "[GetDateText]: [This.GetName] ([This.GetTag]): add idea KOL_greshtin_peace_treaty_idea" }
 			picture = generic_constitutional_guarantees
 			allowed = { always = no }
 			available = {
@@ -33,7 +33,7 @@ ideas = {
 			}
 		}
 		KOL_international_inspectors_idea = {
-			on_add = { log = "[GetLogRoot]: add idea KOL_international_inspectors_idea" }
+			on_add = { log = "[GetDateText]: [This.GetName] ([This.GetTag]): add idea KOL_international_inspectors_idea" }
 			picture = ETH_corrupt_bureaucracy
 			allowed = { always = no }
 			available = {
@@ -46,7 +46,7 @@ ideas = {
 			}
 		}
 		KOL_national_disaster_idea = {
-			on_add = { log = "[GetLogRoot]: add idea KOL_national_disaster_idea" }
+			on_add = { log = "[GetDateText]: [This.GetName] ([This.GetTag]): add idea KOL_national_disaster_idea" }
 			picture = KOL_national_disaster
 			allowed = { always = no }
 			available = {
@@ -61,7 +61,7 @@ ideas = {
 			}
 		}
 		KOL_patchwork_economy_idea = {
-			on_add = { log = "[GetLogRoot]: add idea KOL_patchwork_economy_idea" }
+			on_add = { log = "[GetDateText]: [This.GetName] ([This.GetTag]): add idea KOL_patchwork_economy_idea" }
 			picture = bad_economic
 			allowed = { always = no }
 			available = {
@@ -79,7 +79,7 @@ ideas = {
 			}
 		}
 		KOL_technological_gap_idea = {
-			on_add = { log = "[GetLogRoot]: add idea KOL_technological_gap_idea" }
+			on_add = { log = "[GetDateText]: [This.GetName] ([This.GetTag]): add idea KOL_technological_gap_idea" }
 			picture = science_base_bad
 			allowed = { always = no }
 			available = {
@@ -98,7 +98,7 @@ ideas = {
 	
 	
 		KOL_CW_idea = {
-			on_add = { log = "[GetLogRoot]: add idea KOL_CW_idea" }
+			on_add = { log = "[GetDateText]: [This.GetName] ([This.GetTag]): add idea KOL_CW_idea" }
 			picture = FRA_national_mobilization_focus
 			allowed = { always = no }
 			available = {

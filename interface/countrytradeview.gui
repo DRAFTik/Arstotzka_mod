@@ -110,7 +110,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "resources"
 			position = { x = 11 y = 115 }	
-			size = { width = 655 height = 210 }
+			size = { width = 755 height = 210 }	#655*210
 			verticalScrollbar = "right_vertical_slider"
 
 			background = {
@@ -123,7 +123,7 @@ guiTypes = {
 				position = { x = 101 y = 0 }
 				size = { width = 422 height = 100%% }
 				slotsize = { width = 79 height = 156 }
-				max_slots = { x = 7 y = 1 }
+				max_slots = { x = 8 y = 1 }
 				format = "UPPER_LEFT"
 			}
 		}

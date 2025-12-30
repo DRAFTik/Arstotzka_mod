@@ -4,6 +4,9 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
+			thermal_power_plant = 1
+			agro_complex = 1
 		}
 		owner = REX
 		add_core_of = REX
@@ -11,7 +14,7 @@ state={
 	provinces={
 		6057 6072 6078 6088 6096 6105 6116 6118 6128 6139 6149 
 	}
-	manpower=11111111
+	manpower=971902
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

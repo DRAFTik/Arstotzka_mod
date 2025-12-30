@@ -5,6 +5,10 @@ state={
 		buildings = {
 			infrastructure = 1
 			dockyard = 1
+			oil_refinery = 1
+			4672 = {
+				naval_base = 4
+			}
 		}
 		owner = HAL
 		add_core_of = HAL

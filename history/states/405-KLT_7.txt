@@ -1,12 +1,25 @@
 state={
 	id=405
 	name="STATE_405"
+	resources={
+		iron = 27
+		chromium = 6
+		tungsten = 4
+		aluminium = 3
+		oil = 4
+		coal = 18
+	}
 	history={
 		victory_points = {
 			6198 50
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 1
+			livestock_complex = 2
+			6212 = {
+				naval_base = 1
+			}
 		}
 		owner = KLT
 		add_core_of = KLT
@@ -14,7 +27,7 @@ state={
 	provinces={
 		6115 6123 6126 6146 6151 6176 6184 6198 6212 
 	}
-	manpower=11111111
+	manpower=1511262
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -7,6 +7,9 @@ state={
 			industrial_complex = 1
 			livestock_complex = 2
 			steel_mill = 1
+			4587 = {
+				naval_base = 2
+            }
 		}
 		owner = NRD
 		add_core_of = NRD

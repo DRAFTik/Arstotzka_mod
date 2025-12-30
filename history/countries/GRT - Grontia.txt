@@ -1,6 +1,6 @@
 ﻿capital = 475
 
-# oob = "GRT_start"
+oob = "GRT_start"
 
 
 # Starting tech
@@ -17,13 +17,15 @@ set_technology = {
 }
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-#	set_air_oob = "GRT_air_bba"
+	set_air_oob = "GRT_air_bba"
 	set_technology = {
 		iw_small_airframe = 1
 		iw_medium_airframe = 1
+		iw_large_airframe = 1
 		aa_lmg = 1
 		engines_1 = 1
 		bba_early_transport_plane = 1
+		air_torpedoe_1 = 1
 	}
 	else = {
 		set_technology = {
@@ -53,17 +55,69 @@ add_ideas = {
 # recruit_character = REP_persius_lestrade
 
 set_politics = {
-	ruling_party = market_liberal
+	ruling_party = social_conservative
 }
 set_popularities = {
-	totalist					= 0
-	syndicalist					= 3
+	totalist					= 3
+	syndicalist					= 4
 	communitarianist			= 6
-	market_liberal				= 15
-	social_conservative			= 11
-	stratocratic_apologetism	= 3
-	patrimonialist				= 46
-	national_populist			= 16
+	market_liberal				= 12
+	social_conservative			= 44
+	stratocratic_apologetism	= 17
+	patrimonialist				= 14
+	national_populist			= 0
 	national_radicalist			= 0
 	mysticist					= 0
+}
+
+
+
+### AIR ###
+
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "GLF v1"
+		type = small_plane_airframe_0
+		design_team = mio:generic_light_aircraft_organization
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "GMP v1"
+		type = small_plane_naval_bomber_airframe_0
+		design_team = mio:generic_light_aircraft_organization
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "GMC v1"
+		type = medium_plane_airframe_0
+		design_team = mio:generic_medium_aircraft_organization
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+	create_equipment_variant = {
+		name = "GHB v1"
+		type = large_plane_airframe_0
+		design_team = mio:generic_heavy_aircraft_organization
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_1_4x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+	}
 }

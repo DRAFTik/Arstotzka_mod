@@ -1,0 +1,106 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Sheperden
+	335 = {
+		small_plane_airframe_0 = {
+			owner = "HAL" 
+			amount = 12
+			version_name = "HLF v1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "HAL" 
+			amount = 8
+			version_name = "HMC v1"
+		}
+		large_plane_airframe_0 = {
+			owner = "HAL" 
+			amount = 10
+			version_name = "HHB v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "HAL" 
+			amount = 2
+		}
+	}
+	# Pensullaca
+	348 = {
+		small_plane_airframe_0 = {
+			owner = "HAL" 
+			amount = 10
+			version_name = "HLF v1"
+		}
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "HAL" 
+			amount = 14
+			version_name = "HMP v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "HAL" 
+			amount = 1
+		}
+	}
+	# Javelinfield
+	352 = {
+		small_plane_airframe_0 = {
+			owner = "HAL" 
+			amount = 10
+			version_name = "HLF v1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "HAL" 
+			amount = 4
+			version_name = "HMC v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "HAL" 
+			amount = 1
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "HAL" 
+			version_name = "HLF v1"
+		}
+		requested_factories = 2
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "HAL" 
+			version_name = "HMC v1"
+		}
+		requested_factories = 2
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_airframe_0
+			creator = "HAL"
+			version_name = "HHB v1"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+		industrial_manufacturer = mio:generic_heavy_aircraft_organization
+	}
+}

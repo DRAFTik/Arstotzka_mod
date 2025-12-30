@@ -9,6 +9,7 @@ state={
 			infrastructure = 1
 			thermal_coal_power_plant = 1
 			steel_mill = 2
+			air_base = 2
 		}
 		owner = VAL
 		add_core_of = VAL

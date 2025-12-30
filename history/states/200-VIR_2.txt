@@ -6,6 +6,12 @@ state={
 			infrastructure = 1
 			dockyard = 1
 			livestock_complex = 2
+			3503 = {
+				naval_base = 2
+            }
+			3512 = {
+				naval_base = 2
+            }
 		}
 		owner = VIR
 		add_core_of = VIR

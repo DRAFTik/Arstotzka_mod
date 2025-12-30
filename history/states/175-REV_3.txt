@@ -6,6 +6,7 @@ state={
 			infrastructure = 1
 			industrial_complex = 1
 			agro_complex = 1
+			oil_refinery = 1
 		}
 		owner = REV
 		add_core_of = REV

@@ -7,6 +7,7 @@ state={
 			arms_factory = 1
 			agro_complex = 1
 			steel_mill = 1
+			air_base = 1
 		}
 		owner = FAL
 		add_core_of = FAL

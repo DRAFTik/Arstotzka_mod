@@ -1,0 +1,82 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Downor
+	406 = {
+		small_plane_airframe_0 = {
+			owner = "KLT"
+			amount = 6
+			version_name = "KLF-1"
+		}
+		medium_plane_airframe_0 = {
+			owner = "KLT"
+			amount = 6
+			version_name = "KMC-1"
+		}
+		large_plane_airframe_0 = {
+			owner = "KLT"
+			amount = 2
+			version_name = "KHB-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "KLT"
+			amount = 1
+		}
+	}
+	# Naxington
+	399 = {
+		small_plane_airframe_0 = {
+			owner = "KLT"
+			amount = 6
+			version_name = "KLF-1"
+		}
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "KLT"
+			amount = 8
+			version_name = "KMP-1"
+		}
+		large_plane_airframe_0 = {
+			owner = "KLT"
+			amount = 2
+			version_name = "KHB-1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "KLT"
+			amount = 2
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "KLT" 
+			version_name = "KLF-1"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "KLT" 
+			version_name = "KMC-1"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+}

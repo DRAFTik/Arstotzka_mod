@@ -19,6 +19,7 @@ state={
 			arms_factory = 1
 			dockyard = 2
 			agro_silo = 1
+			air_base = 1
 		}
 		owner = DAR
 		add_core_of = DAR

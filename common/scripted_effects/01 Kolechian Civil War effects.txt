@@ -122,9 +122,9 @@ create_WGF_militia_template = {
 			division_template = {
 				name = "Greshtin Stormtroopers"
 				regiments = {
-					paratrooper = { x = 0 y = 0 }
-					paratrooper = { x = 0 y = 1 }
-					paratrooper = { x = 0 y = 2 }
+					ranger_battalion = { x = 0 y = 0 }
+					ranger_battalion = { x = 0 y = 1 }
+					ranger_battalion = { x = 0 y = 2 }
 				}
 				priority = 2
 			}

@@ -1,0 +1,67 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Stiffid
+	407 = {
+		medium_plane_airframe_0 = {
+			owner = "ARK"
+			amount = 4
+			version_name = "AMC v1"
+		}
+		large_plane_airframe_0 = {
+			owner = "ARK"
+			amount = 3
+			version_name = "AHB v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "ARK"
+			amount = 2
+		}
+	}
+	# Wiberdia
+	413 = {
+		small_plane_airframe_0 = {
+			owner = "ARK"
+			amount = 8
+			version_name = "ALF v1"
+		}
+		transport_plane_equipment_1 = {
+			owner = "ARK"
+			amount = 2
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "ARK" 
+			version_name = "ALF v1"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "ARK" 
+			version_name = "AMC v1"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+}

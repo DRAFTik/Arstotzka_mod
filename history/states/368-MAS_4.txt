@@ -5,6 +5,9 @@ state={
 		buildings = {
 			infrastructure = 1
 			dockyard = 1
+			4915 = {
+				naval_base = 2
+			}
 		}
 		owner = MAS
 		add_core_of = MAS

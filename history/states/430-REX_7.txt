@@ -7,6 +7,9 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
+			agro_complex = 1
+			oil_refinery = 1
 		}
 		owner = REX
 		add_core_of = REX
@@ -14,7 +17,7 @@ state={
 	provinces={
 		5390 6100 6117 6132 6133 6143 6152 6156 
 	}
-	manpower=11111111
+	manpower=900581
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

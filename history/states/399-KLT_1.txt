@@ -7,6 +7,13 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 1
+			thermal_coal_power_plant = 1
+			livestock_complex = 1
+			air_base = 2
+			6342 = {
+				naval_base = 2
+			}
 		}
 		owner = KLT
 		add_core_of = KLT
@@ -14,7 +21,7 @@ state={
 	provinces={
 		6281 6301 6305 6306 6319 6324 6332 6333 6342 
 	}
-	manpower=11111111
+	manpower=626316
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

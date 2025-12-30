@@ -9,6 +9,7 @@ state={
 			infrastructure = 1
 			industrial_complex = 1
 			dockyard = 1
+			livestock_complex = 3
 		}
 		owner = HAL
 		add_core_of = HAL

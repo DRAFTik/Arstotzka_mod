@@ -15,6 +15,7 @@ state={
 			dockyard = 1
 			agro_complex = 1
 			air_base = 3
+			oil_refinery = 2
 			230 = {
 				naval_base = 1
 			}
@@ -27,5 +28,6 @@ state={
 	}
 	manpower=4509993
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=town
+	local_supplies=0.000
+	state_category=town
 }

@@ -7,6 +7,9 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 2
+			agro_complex = 1
+			steel_mill = 1
 		}
 		owner = NUV
 		add_core_of = NUV
@@ -14,7 +17,7 @@ state={
 	provinces={
 		5919 5939 5951 5955 5961 5963 5979 5982 5984 5985 
 	}
-	manpower=11111111
+	manpower=1104202
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -7,6 +7,12 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			dockyard = 2
+			thermal_power_plant = 1
+			oil_refinery = 1
+			5458 = {
+				naval_base = 2
+			}
 		}
 		owner = TOT
 		add_core_of = TOT
@@ -14,7 +20,7 @@ state={
 	provinces={
 		5445 5446 5449 5458 5464 5467 5487 
 	}
-	manpower=11111111
+	manpower=1837015
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

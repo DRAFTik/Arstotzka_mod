@@ -5,6 +5,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			thermal_coal_power_plant = 1
+			livestock_complex = 2
 		}
 		owner = NOM
 		add_core_of = NOM

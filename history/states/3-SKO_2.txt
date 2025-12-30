@@ -9,6 +9,9 @@ state={
 		buildings = {
 			agro_complex = 1
 			livestock_complex = 2
+			1433 = {
+				naval_base = 2
+			}
 		}
 		owner = SKO
 		add_core_of = SKO

@@ -7,6 +7,9 @@ state={
 			arms_factory = 1
 			dockyard = 2
 			agro_silo = 1
+			3799 = {
+				naval_base = 3
+            }
 		}
 		owner = VAL
 		add_core_of = VAL

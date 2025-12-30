@@ -5,6 +5,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+			oil_refinery = 1
 		}
 		owner = BRV
 		add_core_of = BRV

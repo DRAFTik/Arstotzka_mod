@@ -23,6 +23,9 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 36								-- You can have a minimum o
 NDefines.NCountry.MIN_FOCUSES_FOR_CONTINUOUS = 0							-- Focuses needed to unlock continuous focuses
 NDefines.NCountry.MAJOR_MIN_FACTORIES = 75									-- need at least these many factories to become a major
 NDefines.NCountry.MIN_MAJOR_COUNTRIES = 0									-- MIN_MAJOR_COUNTRIES countries with most factories will be considered as major countries
+NDefines.NCountry.STARTING_FUEL_RATIO = 0.30								-- base amount of fuel gained hourly per excess oil
+NDefines.NCountry.BASE_FUEL_GAIN_PER_OIL = 0								-- base amount of fuel gained hourly per excess oil
+NDefines.NCountry.BASE_FUEL_GAIN = 0										-- base amount of fuel gained hourly, independent of excess oil
 NDefines.NMilitary.MIN_DIVISION_DEPLOYMENT_TRAINING = 0.3					-- Min level of division training
 NDefines.NMilitary.SLOWEST_SPEED = 1
 
@@ -66,7 +69,7 @@ NDefines.NTechnology.MAX_SUBTECHS = 4										-- Max number of sub technologies
 NDefines.NBuildings.MAX_SHARED_SLOTS = 36									-- Max slots shared by factories
 --для гибридов
 NDefines.NAI.BUILDING_TARGETS_BUILDING_PRIORITIES = {						-- buildings in order of pirority when considering building targets strategies. First has the greatest priority, omitted has the lowest. NOTE: not all buildings are supported by building targets strategies.
-	'synthetic_refinery',
+	'oil_refinery',
 	'fuel_silo',
 	'industrial_complex',
 	'dockyard',

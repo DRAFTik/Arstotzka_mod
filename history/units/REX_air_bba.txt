@@ -1,0 +1,106 @@
+﻿
+### Air Wings
+
+air_wings = {
+	# Heshurda
+	428 = {
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "REX"
+			amount = 8
+			version_name = "RMP I"
+		}
+		medium_plane_airframe_0 = {
+			owner = "REX"
+			amount = 5
+			version_name = "RMC I"
+		}
+		large_plane_airframe_0 = {
+			owner = "REX"
+			amount = 5
+			version_name = "RHB I"
+		}
+		transport_plane_equipment_1 = {
+			owner = "REX"
+			amount = 2
+		}
+	}
+	# Saldia border
+	426 = {
+		small_plane_airframe_0 = {
+			owner = "REX"
+			amount = 13
+			version_name = "RLF I"
+		}
+		large_plane_airframe_0 = {
+			owner = "REX"
+			amount = 4
+			version_name = "RHB I"
+		}
+		transport_plane_equipment_1 = {
+			owner = "REX"
+			amount = 1
+		}
+	}
+	# Smeijyck
+	432 = {
+		small_plane_airframe_0 = {
+			owner = "REX"
+			amount = 13
+			version_name = "RLF I"
+		}
+		medium_plane_airframe_0 = {
+			owner = "REX"
+			amount = 5
+			version_name = "RMC I"
+		}
+		transport_plane_equipment_1 = {
+			owner = "REX"
+			amount = 1
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+	
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "REX" 
+			version_name = "RLF I"
+		}
+		requested_factories = 2
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:generic_light_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_0
+			creator = "REX" 
+			version_name = "RMC I"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:generic_medium_aircraft_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_airframe_0
+			creator = "REX" 
+			version_name = "RMC I"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+		industrial_manufacturer = mio:mio:generic_heavy_aircraft_organization
+	}
+}

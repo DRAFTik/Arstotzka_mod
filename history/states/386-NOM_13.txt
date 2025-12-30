@@ -4,6 +4,11 @@ state={
 	history={
 		buildings = {
 			infrastructure = 1
+			livestock_complex = 2
+			air_base = 2
+			5371 = {
+				naval_base = 4
+			}
 		}
 		owner = NOM
 		add_core_of = NOM

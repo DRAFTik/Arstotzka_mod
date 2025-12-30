@@ -3,12 +3,17 @@
     hospital_desc: "Это сооружение позволяет улучшать социальную инфраструктуру региона, влияя на многие показатели."
     hospital_plural: "Социальная инфраструктура"
     
+    oil_refinery: "Нефтеперерабатывающий завод"
+    oil_refinery_plural: "Нефтеперерабатывающие заводы"
+    oil_refinery_desc: "Крупный промышленный комплекс, превращающий сырую нефть в топливо."
+ 
+    
     universal_factory: "Унифицированная фабрика"
     universal_factory_desc: "Это сооружение совмещает в себе функции §YВоенного завода§! и §YФабрики§!."
     universal_factory_plural: "Унифицированные фабрики"
     
     steel_mill: "Сталеплавильня"
-    steel_mill_desc: "$synthetic_refinery_desc$"
+    steel_mill_desc: "Это сооружение производит в регионе"
     steel_mill_plural: "Сталеплавильни"
     universal_factory_dyn: "$universal_factory_plural$"
     

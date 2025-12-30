@@ -1,0 +1,273 @@
+﻿## notes ##
+# priority = 0 #low priority
+# priority = 1 #med priority
+# priority = 2 #high priority
+
+## Units stuff ##
+# start_equipment_factor = 0.00 - 1.00	#(percentage of equipment unit has in begining)
+# start_manpower_factor = 0.00 - 1.00 	#(percentage of manpower unit has in begining)
+# start_experience_factor = 0.000 -1.000	#(level of experience unit has in begining (in percentage))
+
+### training percentage ###
+## 0.000 - 0.099					#green (percentage from 0% #0.000 to 99% #0.099)		#add 1% training with 0.001
+## 0.100 - 0.298					#trained (percentage from 0% #0.100 to 99% #0.298)		#add 1% training with 0.002
+## 0.300 - 0.746  					#regular (percentage from 0% #0.300 to 99% #0.746)		#add 2% training with 0.009
+## 0.750 - 0.899					#experient (percentage from 0% #0.750 to 99% #0.899)	#add 2% training with 0.003
+## 0.900 - 1.000					#veteran (percentage from 0% #0.900 to 99% #1.000)		#add 1% training with 0.001
+
+
+division_template = {
+	name = "Grontian Guard"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "National Militia"
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 0
+}
+
+division_template = {
+	name = "Grontian Artillery Brigade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }
+		artillery_brigade = { x = 1 y = 4 }
+	}
+	
+	support = {
+	}
+	
+	priority = 1
+}
+
+division_template = {
+	name = "Grontian Mobile Brigade"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	
+	priority = 1
+}
+
+
+
+### unit positions ###
+units = {
+	division = {
+		name = "1st Grontian Guard regiment"
+		location = 6104
+		division_template = "Grontian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "2nd Grontian Guard regiment"
+		location = 6058
+		division_template = "Grontian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "3rd Grontian Guard regiment"
+		location = 6005
+		division_template = "Grontian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "4th Grontian Guard regiment"
+		location = 5864
+		division_template = "Grontian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "5th Grontian Guard regiment"
+		location = 5768
+		division_template = "Grontian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "6th Grontian Guard regiment"
+		location = 5707
+		division_template = "Grontian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "7th Grontian Guard regiment"
+		location = 5714
+		division_template = "Grontian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "8th Grontian Guard regiment"
+		location = 5779
+		division_template = "Grontian Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	
+	division = {
+		name = "1st Grontian Militia"
+		location = 6110
+		division_template = "National Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+		start_manpower_factor = 0.8
+	}
+	division = {
+		name = "2nd Grontian Militia"
+		location = 5749
+		division_template = "National Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+		start_manpower_factor = 0.8
+	}
+	
+	division = {
+		name = "1st Grontian artillery regiment"
+		location = 6013
+		division_template = "Grontian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+		start_manpower_factor = 0.8
+	}
+	
+	division = {
+		name = "2nd Grontian artillery regiment"
+		location = 5831
+		division_template = "Grontian Artillery Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+		start_manpower_factor = 0.8
+	}
+
+	division = {
+		name = "1st Grontian mobile brigade"
+		location = 5986
+		division_template = "Grontian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	division = {
+		name = "2nd Grontian mobile brigade"
+		location = 5879
+		division_template = "Grontian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+	division = {
+		name = "3rd Grontian mobile brigade"
+		location = 5822
+		division_template = "Grontian Mobile Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+		start_manpower_factor = 0.9
+	}
+}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GRT"
+		}
+		requested_factories = 2
+		progress = 0.55
+		efficiency = 100
+		industrial_manufacturer = mio:generic_infantry_equipment_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "GRT"
+		}
+		requested_factories = 1
+		progress = 0.7
+		efficiency = 100
+		industrial_manufacturer = mio:generic_artillery_organization
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GRT"
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+		industrial_manufacturer = mio:generic_support_equipment_organization
+	}
+}

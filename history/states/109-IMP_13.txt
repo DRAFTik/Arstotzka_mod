@@ -19,7 +19,7 @@ state={
                 coastal_bunker = 4
             }
 			1108 = {
-				naval_base = 1
+				naval_base = 2
 				coastal_bunker = 4
 			}
 		}
@@ -31,5 +31,6 @@ state={
 	}
 	manpower=2719392
 	buildings_max_level_factor=1.000
-	local_supplies=0.000	state_category=city		# TODO
+	local_supplies=0.000
+	state_category=city		# TODO
 }

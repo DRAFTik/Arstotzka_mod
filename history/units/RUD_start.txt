@@ -158,31 +158,9 @@ instant_effect = {
 			type = infantry_equipment_1
 			creator = "RUD"
 		}
-		requested_factories = 3
+		requested_factories = 1
 		progress = 0.55
 		efficiency = 100
 		industrial_manufacturer = mio:generic_infantry_equipment_organization
-	}
-	
-	add_equipment_production = {
-		equipment = {
-			type = artillery_equipment_1
-			creator = "RUD"
-		}
-		requested_factories = 2
-		progress = 0.7
-		efficiency = 100
-		industrial_manufacturer = mio:generic_artillery_organization
-	}
-	
-	add_equipment_production = {
-		equipment = {
-			type = support_equipment_1
-			creator = "RUD"
-		}
-		requested_factories = 2
-		progress = 0.4
-		efficiency = 100
-		industrial_manufacturer = mio:generic_support_equipment_organization
 	}
 }

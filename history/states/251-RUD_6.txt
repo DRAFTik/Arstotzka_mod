@@ -11,6 +11,7 @@ state={
 			arms_factory = 1
 			thermal_coal_power_plant = 1
 			agro_silo = 1
+			air_base = 2
 		}
 		owner = RUD
 		add_core_of = RUD

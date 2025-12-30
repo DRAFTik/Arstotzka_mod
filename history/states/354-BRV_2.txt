@@ -6,6 +6,10 @@ state={
 			infrastructure = 1
 			arms_factory = 1
 			dockyard = 1
+			livestock_complex = 2
+			4629 = {
+				naval_base = 2
+			}
 		}
 		owner = BRV
 		add_core_of = BRV

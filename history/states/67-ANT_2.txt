@@ -15,6 +15,7 @@ state={
 			thermal_coal_power_plant = 1
 			agro_complex = 2
 			air_base = 2
+			oil_refinery = 2
 		}
 		owner = ANT
 		add_core_of = ANT

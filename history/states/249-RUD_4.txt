@@ -5,6 +5,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			agro_complex = 2
+			air_base = 1
 		}
 		owner = RUD
 		add_core_of = RUD

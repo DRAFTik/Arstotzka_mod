@@ -7,6 +7,7 @@ state={
 			industrial_complex = 1
 			arms_factory = 1
 			livestock_complex = 2
+			air_base = 2
 		}
 		owner = VAL
 		add_core_of = VAL

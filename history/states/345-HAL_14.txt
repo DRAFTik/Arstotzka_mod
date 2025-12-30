@@ -15,6 +15,7 @@ state={
 			industrial_complex = 2
 			arms_factory = 2
 			thermal_coal_power_plant = 1
+			livestock_complex = 2
 		}
 		owner = HAL
 		add_core_of = HAL

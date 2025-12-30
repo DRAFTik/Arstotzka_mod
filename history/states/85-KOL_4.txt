@@ -9,6 +9,7 @@ state={
 			infrastructure = 1
 			industrial_complex = 1
 			livestock_complex = 2
+			oil_refinery = 1
 		}
 		owner = KOL
 		add_core_of = KOL

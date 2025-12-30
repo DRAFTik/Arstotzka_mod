@@ -29,6 +29,7 @@ if = {
 		aa_lmg = 1
 		engines_1 = 1
 		bba_early_transport_plane = 1
+		air_torpedoe_1 = 1
 	}
 	else = {
 		set_technology = {
